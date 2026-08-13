@@ -30,5 +30,5 @@ pnpm test
 pnpm typecheck
 pnpm lint
 pnpm build
-pnpm deploy
+pnpm run deploy
 ```

@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outDir = path.join(root, 'public', 'audio')
-const sampleDir = path.join(outDir, 'voice-tests')
+const sampleDir = path.join(root, 'demo', 'voice-tests')
 
 const VOICES = {
   george: 'JBFqnCBsd6RMkjVDRZzb',

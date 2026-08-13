@@ -19,7 +19,7 @@ demo/*.webm
 demo/*.wav
 demo/*.jpg
 demo/frames
-public/audio/voice-tests/
+demo/voice-tests/
 public/audio/.tmp.mp3
 
 .vscode/*

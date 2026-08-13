@@ -32,7 +32,7 @@ Faith: `/faith`
 Cloudflare Worker + static assets on **helives.dev** (BarnLabs account). See `RUNBOOK.md`.
 
 ```bash
-pnpm deploy
+pnpm run deploy
 ```
 
 Origin, the ΛCDM visualizer, stays at [neorome/big-bang](https://github.com/neorome/big-bang). It is a different work.
