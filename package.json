@@ -1,0 +1,45 @@
+{
+  "name": "helives",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://helives.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neorome/helives"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint src worker",
+    "test": "vitest run",
+    "typecheck": "tsc -b --pretty false",
+    "preview": "vite preview",
+    "deploy": "pnpm build && wrangler deploy",
+    "audio": "node scripts/generate-audio.mjs",
+    "record": "node scripts/record-demo.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "@react-three/postprocessing": "^3.0.5",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260813.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.185.4",
+    "@vitejs/plugin-react": "^6.0.4",
+    "jsdom": "^30.0.1",
+    "oxlint": "^1.75.0",
+    "playwright": "^1.55.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.81.0"
+  }
+}
