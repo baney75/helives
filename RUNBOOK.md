@@ -40,3 +40,4 @@ Writes `demo/genesis-16x9.mp4` (gitignored) and copies to `~/Downloads/Genesis-H
 4. Do not add greyed-out forthcoming cards for books that are not built.
 5. Load `AGENTS.md` skill table: helives-design, helives-three, helives-models, helives-voice, helives-gauntlet. Voice and 3D are required, not polish-later.
 6. Put Grok Imagine stills in `docs/targets/<book>/` before calling the mesh done.
+7. Ship path is implement → independent critic → merge. The implementer does not grade itself.

@@ -39,6 +39,20 @@ Load **`gold-standard`** first. Then **one overlay per phase**. Do not invent a 
 
 **3D and voice are essential, not polish-later.** A later book that ships mute, or as a card grid with a nebula blob, is unfinished.
 
+## Critics (mandatory, not polish)
+
+The implementer **never** grades its own work as the critic. This is a hard gate, not a preference.
+
+Ship path: **implement → independent critic → only then merge/ship.**
+
+| Rule | Meaning |
+|------|---------|
+| Separate agent | Critic is a distinct subagent/pass. Different model when available. At minimum a fresh independent review with **no implementer conversation**. |
+| Separate judge | gloop-style: verifier-first, separate judge, max loops. Builder writes evidence; judge reads GOAL + artifacts + `git diff` only. |
+| Forbidden | Implementer self-approving screenshots. “Looks good to me.” Same agent writing then rubber-stamping. Same-context self-grade. |
+
+Critics: `code-reviewer` (diff), `check-work` (did the request land), visual judge (`gs-design` + still-vs-target). `VERDICT: SHIP` from the critic is required for material UI, 3D, voice, or security work. See `.cursor/skills/helives-gauntlet`.
+
 ## Rules
 
 - R3F/drei first. No new raw Three.js loops in React components unless justified (shaders, instancing).
@@ -73,4 +87,4 @@ There is no standalone `grok imagine` CLI on this Mac. `which grok` is `/Users/b
 
 ## Verify
 
-Before claiming done: `pnpm test && pnpm typecheck && pnpm lint && pnpm build`. UI/3D work also needs 375 and 1280 screenshots and the gauntlet verifiers. Independent critic pass for material visual or security work (`code-reviewer` / `check-work`). Same-context self-grade does not count.
+Before claiming done: `pnpm test && pnpm typecheck && pnpm lint && pnpm build`. UI/3D work also needs 375 and 1280 screenshots and the gauntlet verifiers. Then an **independent critic** (`code-reviewer` / `check-work` / visual judge) with no implementer context. The implementer may not ship on its own screenshots or a same-session “looks good.”

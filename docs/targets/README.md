@@ -26,4 +26,4 @@ Copy the output into this folder as webp. Record the prompt.
 
 ## Compare
 
-See `.cursor/skills/helives-gauntlet` and `.cursor/skills/helives-models`. Screenshot the live canvas; judge silhouette, light, palette, reverence.
+See `.cursor/skills/helives-gauntlet` and `.cursor/skills/helives-models`. The implementer captures the canvas shot. An **independent critic** (not the same agent) judges silhouette, light, palette, reverence against the still. The implementer may not self-approve the comparison.

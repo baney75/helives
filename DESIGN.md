@@ -101,7 +101,10 @@ When Exodus (or any book) ships:
 3. Scriptures row flips to live (fire link) only when the route works.
 4. Interactive books follow Genesis: canvas + HUD + KJV + voice. Reading books may be type-first; they still use this type, this night, this mark.
 5. Prove with 375 and 1280 screenshots against `docs/targets/` if a still exists.
+6. Visual ship requires an independent visual judge (not the implementer). See AGENTS.md critics and `.cursor/skills/helives-gauntlet`.
 
 ## Proof
 
 `device-verification`: 375 and 1280, console 0. Home must still read as He Lives with the nav removed. Scriptures must remain a list, not a grid of cards.
+
+The implementer captures screenshots as evidence. The **visual critic** (separate subagent, different model when available, no implementer chat) compares them to this thesis and to `docs/targets/`. “Looks good to me” from the agent that designed the page is not proof.

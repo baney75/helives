@@ -61,6 +61,6 @@ Garden trees, two figures, serpent/Fall, living creatures: raise from primitives
 
 - [ ] GLB loads without console errors
 - [ ] Low/medium/high still run
-- [ ] Target still exists and screenshot is compared
+- [ ] Target still exists and screenshot is compared **by an independent critic** (`helives-gauntlet`), not the modeler
 - [ ] License/originality noted
 - [ ] No secrets, no paid-pack dumps

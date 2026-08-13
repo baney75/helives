@@ -43,3 +43,5 @@ Change the mark only in BrandMark + `public/favicon.svg`, then `pnpm brand`. og.
 ## Proof
 
 `device-verification` at 375 and 1280. Console 0. Contrast AA for ink and fire on void. Reduced-motion: no essential info in motion only.
+
+The implementer does not approve its own UI. After screenshots exist, spawn an independent visual critic (`helives-gauntlet`). Same agent writing then rubber-stamping is forbidden.

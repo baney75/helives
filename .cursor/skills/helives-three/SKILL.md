@@ -55,3 +55,4 @@ Do not raise particle counts without measuring. InstancedMesh for repeated objec
 - [ ] Mobile: low tier path actually used
 - [ ] Unmount does not leak geometries
 - [ ] Still-vs-target if `docs/targets/` has a frame for this scene (`helives-gauntlet`)
+- [ ] Independent critic SHIP before merge (implementer does not self-approve)
