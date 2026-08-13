@@ -16,6 +16,8 @@ Mark: original Latin cross with a point of light (empty tomb / resurrection). No
 Favicon: `/favicon.svg` (also `/favicon-32.png`, `/apple-touch-icon.png`, `/mask-icon.svg`). Share image: `/og.png`.
 The 66-book index is `/scriptures`. Only Genesis is a live book route.
 
+Agents: read `AGENTS.md` and `DESIGN.md`. Overlays live in `.cursor/skills/helives-*` (three, design, models, voice, gauntlet). Visual loop targets: `docs/targets/`.
+
 ## Run
 
 ```bash

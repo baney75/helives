@@ -1,26 +1,56 @@
 # He Lives (helives)
 
-3D Genesis meditation and Scripture site. Home `Claude.md` does not apply here.
+Operating contract for agents. Home `Claude.md` does not apply here.
+
+Canonical repo: [neorome/helives](https://github.com/neorome/helives). Live: [helives.dev](https://helives.dev). Local: `~/Documents/Software/helives`.
+
+This is a ministry site, not a SaaS product. Quoted Bible is KJV (public domain in the US). Original copy is exhortation, never presented as Scripture. The site is not a church, not a sacrament, and not a claim that God endorsed the software.
+
+## Product
+
+- Phase one is live: Genesis 1–3 through the Fall, invitation to church and to live for Jesus Christ, then **Got doubt?** (sourced cosmology afterword).
+- The calling is the whole Protestant canon, cover to cover, including law, genealogies, and the books people skip. Same beauty bar as Genesis. No empty book routes. `/scriptures` names every book; only live books get a URL.
+- Adding a later book: slug in `src/canon/types.ts`, live `BookRecord` in `src/canon/catalog.ts`, route in `src/site/router.ts`. See `RUNBOOK.md`.
 
 ## Stack
 
-- React 19 + TypeScript (strict)
-- Vite
+- React 19 + TypeScript (strict) + Vite
 - `@react-three/fiber` + `@react-three/drei` + `@react-three/postprocessing`
-- Cloudflare Workers + static assets (`helives.dev`)
-- Vitest for canon routing, cosmology sources, and scene math
+- Cloudflare Worker + static assets (`worker/`, `wrangler.jsonc`)
+- Vitest for canon routing, cosmology sources, scene math, voice inventory
+
+## Skill routing
+
+Load **`gold-standard`** first. Then **one overlay per phase**. Do not invent a second Three.js or design skill.
+
+| Work | Load | Overlay (this repo) |
+|------|------|---------------------|
+| Any non-trivial ship | `~/.cursor/skills/gold-standard` | — |
+| UI, brand, type, home, Scriptures | `~/.cursor/skills/gs-design` | `.cursor/skills/helives-design` |
+| Canvas, R3F, particles, disposal | `~/.cursor/skills/three-js` (+ `particle-systems`) | `.cursor/skills/helives-three` |
+| Meshes, glTF, Blender, target stills | `~/.cursor/skills/blender-3d`, `three-js` GLTF section, `assets` | `.cursor/skills/helives-models` |
+| Narration, ElevenLabs, mp3 cache | — | `.cursor/skills/helives-voice` |
+| Fix-until-pass, visual loops | `~/.cursor/skills/gloop` | `.cursor/skills/helives-gauntlet` |
+| Theology, verse handling | `~/.cursor/skills/bible-reasoning` | — |
+| Headers, secrets, threat model | `~/.cursor/skills/gs-security` | — |
+| Copy, docs, anti-slop | `~/.cursor/skills/communication-writing` + `gs-content` | — |
+| Visual proof 375 + 1280 | `~/.cursor/skills/device-verification` | helives-gauntlet |
+| Independent review | `~/.cursor/skills/code-reviewer`, `check-work` | helives-gauntlet critics |
+
+**3D and voice are essential, not polish-later.** A later book that ships mute, or as a card grid with a nebula blob, is unfinished.
 
 ## Rules
 
 - R3F/drei first. No new raw Three.js loops in React components unless justified (shaders, instancing).
 - HUD text wins. Canvas is the simulation; HUD stays readable.
-- Quoted Bible is KJV only. Do not paste NIV/ESV/NASB/NLT.
-- Epoch times and scene copy live in `src/genesis/`. Do not invent cosmology numbers without a source in `src/genesis/sources.ts`.
+- Quoted Bible is KJV only. Do not paste NIV/ESV/NASB/NLT. Original lines stay in `kind: 'exhortation'` (see `src/genesis/scenes.ts`).
+- Epoch times and scene copy live in `src/genesis/` (later books: `src/<book>/`). Do not invent cosmology numbers without a source in `src/genesis/sources.ts`.
 - `?cinematic=1` on `/genesis` is the video pass: captions only, locked camera.
-- Phase one ships Genesis only as a live book. `/scriptures` names the whole Protestant canon as forthcoming. Do not add 66 empty book routes.
 - Dispose manual geometries/materials.
-- Mobile: fewer particles, no bloom.
-- Never commit `.env.local` or API keys.
+- Mobile: fewer particles, no bloom. Quality tiers in `src/lib/budget.ts` and `src/lib/quality.ts`.
+- Never commit `.env.local`, `ELEVENLABS_API_KEY`, or any secret. Keys live in `.env.local` only (see `.env.example`).
+- Voice fails closed: if the mp3 is not in `public/audio/` and listed in `VOICED_IDS`, do not request it. Silence must not pretend to be narration.
+- Security: Worker headers in `worker/headers.ts` (CSP, COOP, CORP, HSTS, blocked probes). The enemy will attack. Do not weaken headers, leak keys, or serve HTML as missing audio.
 
 ## Commands
 
@@ -31,4 +61,16 @@ pnpm typecheck
 pnpm lint
 pnpm build
 pnpm run deploy
+pnpm audio          # ElevenLabs → public/audio/ (needs .env.local)
+pnpm record         # cinematic trailer (gitignored demo/)
 ```
+
+## Models and stills
+
+Grok Imagine is a **visual target**, not a mesh. Pipeline: blockout → target still → model/sculpt/texture → screenshot/compare → iterate. Stills live under `docs/targets/`. See `.cursor/skills/helives-models` and `.cursor/skills/helives-gauntlet`.
+
+There is no standalone `grok imagine` CLI on this Mac. `which grok` is `/Users/baney/.grok/bin/grok` (Grok Build TUI). Generate stills inside Grok Build with `/imagine` or the `image_gen` / `image_edit` tools (`~/.grok/bundled/skills/imagine/SKILL.md`). Do not invent a REST API.
+
+## Verify
+
+Before claiming done: `pnpm test && pnpm typecheck && pnpm lint && pnpm build`. UI/3D work also needs 375 and 1280 screenshots and the gauntlet verifiers. Independent critic pass for material visual or security work (`code-reviewer` / `check-work`). Same-context self-grade does not count.
