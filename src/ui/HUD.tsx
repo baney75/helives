@@ -1,4 +1,5 @@
 import type { ChangeEvent } from 'react'
+import { hasVoice } from '../genesis/voiced.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 import { Timeline } from './Timeline.tsx'
 
@@ -9,6 +10,7 @@ type HUDProps = {
 export function HUD({ clock }: HUDProps) {
   const scene = clock.scene
   const science = scene.kind === 'science'
+  const voiced = hasVoice(scene.id)
 
   return (
     <div className="hud">
@@ -23,8 +25,8 @@ export function HUD({ clock }: HUDProps) {
             <dd>{scene.kicker}</dd>
           </div>
           <div>
-            <dt>{scene.kind === 'scripture' ? 'Text' : 'Voice'}</dt>
-            <dd>{scene.kind === 'scripture' ? 'KJV' : 'Original'}</dd>
+            <dt>Text</dt>
+            <dd>{scene.kind === 'scripture' ? 'KJV' : voiced ? 'Spoken' : 'On screen'}</dd>
           </div>
           <div>
             <dt>Cite</dt>
@@ -72,8 +74,8 @@ export function HUD({ clock }: HUDProps) {
         </div>
         <Timeline progress={clock.progress} sceneId={scene.id} onScrub={clock.setProgress} />
         <p className="disclaimer">
-          A visual meditation on Genesis 1–3. Scripture is the King James Version, public domain. This is not a
-          documentary and not a science disproof.
+          A visual meditation on Genesis 1–3. Scripture is the King James Version, public domain. Spoken KJV
+          covers Days 1–5 and Got doubt?; later scenes stay on screen. This is not a documentary.
         </p>
       </footer>
     </div>

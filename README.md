@@ -35,8 +35,6 @@ Cloudflare Worker + static assets on **helives.dev** (BarnLabs account). See `RU
 pnpm run deploy
 ```
 
-Origin, the ΛCDM visualizer, stays at [neorome/big-bang](https://github.com/neorome/big-bang). It is a different work.
-
 ## Audio
 
 Narration is generated with ElevenLabs. Put `ELEVENLABS_API_KEY` in `.env.local` (never commit it). Then:
@@ -45,4 +43,4 @@ Narration is generated with ElevenLabs. Put `ELEVENLABS_API_KEY` in `.env.local`
 pnpm audio
 ```
 
-If generation fails, do not ship silence as if there were a voice. A first pass hit the ElevenLabs 10k-credit cap after Days 1–5 plus “Got doubt?”. Remaining scenes (Day 6 through the trailer) need more credits before they have voice.
+If generation fails, do not ship silence as if there were a voice. Days 1–5 and “Got doubt?” have spoken KJV. Day 6 through the closing invitation stay on screen until credits allow more voice. There is no trailer audio yet.

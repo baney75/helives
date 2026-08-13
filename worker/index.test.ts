@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CSP, isBlockedPath, withSecurityHeaders } from './headers.ts'
+import { CSP, isBlockedPath, isMissingStaticAsset, withSecurityHeaders } from './headers.ts'
 
 describe('isBlockedPath', () => {
   it('blocks secret and scanner bait', () => {
@@ -15,6 +15,14 @@ describe('isBlockedPath', () => {
     expect(isBlockedPath('/faith')).toBe(false)
     expect(isBlockedPath('/genesis/afterword')).toBe(false)
     expect(isBlockedPath('/audio/day1.mp3')).toBe(false)
+  })
+})
+
+describe('isMissingStaticAsset', () => {
+  it('rejects SPA HTML served as an mp3', () => {
+    expect(isMissingStaticAsset('/audio/day6.mp3', 'text/html')).toBe(true)
+    expect(isMissingStaticAsset('/audio/day1.mp3', 'audio/mpeg')).toBe(false)
+    expect(isMissingStaticAsset('/genesis', 'text/html')).toBe(false)
   })
 })
 

@@ -1,4 +1,4 @@
-import { isBlockedPath, withSecurityHeaders } from './headers.ts'
+import { isBlockedPath, isMissingStaticAsset, withSecurityHeaders } from './headers.ts'
 
 export interface Env {
   ASSETS: Fetcher
@@ -14,6 +14,9 @@ export default {
       return withSecurityHeaders(new Response('Not found', { status: 404 }))
     }
     const asset = await env.ASSETS.fetch(request)
+    if (isMissingStaticAsset(url.pathname, asset.headers.get('content-type'))) {
+      return withSecurityHeaders(new Response('Not found', { status: 404 }))
+    }
     return withSecurityHeaders(asset)
   },
 }

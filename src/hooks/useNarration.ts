@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import type { SceneId } from '../genesis/scenes.ts'
+import { narrationFile } from '../genesis/voiced.ts'
 
 type NarrationOpts = {
   sceneId: SceneId
@@ -19,13 +20,16 @@ export function useNarration({ sceneId, playing, cinematic, reducedMotion }: Nar
 
   useEffect(() => {
     const key = cinematic ? 'trailer' : sceneId
-    const file = cinematic ? 'trailer.mp3' : `${sceneId}.mp3`
+    const file = narrationFile(key)
     if (lastKey.current !== key) {
       lastKey.current = key
       audioRef.current?.pause()
-      const audio = new Audio(audioUrl(file))
-      audio.preload = 'auto'
-      audioRef.current = audio
+      audioRef.current = null
+      if (file) {
+        const audio = new Audio(audioUrl(file))
+        audio.preload = 'auto'
+        audioRef.current = audio
+      }
     }
     const audio = audioRef.current
     if (!audio) return

@@ -42,6 +42,14 @@ export function isBlockedPath(pathname: string): boolean {
   return BLOCKED_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 
+/** SPA fallback must not impersonate missing narration files. */
+export function isMissingStaticAsset(pathname: string, contentType: string | null): boolean {
+  const path = pathname.toLowerCase()
+  if (!path.startsWith('/audio/') || !path.endsWith('.mp3')) return false
+  const type = contentType ?? ''
+  return type.includes('text/html')
+}
+
 export function withSecurityHeaders(response: Response): Response {
   const headers = new Headers(response.headers)
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {

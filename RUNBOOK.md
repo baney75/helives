@@ -5,8 +5,6 @@ Live site: `https://helives.dev`
 Cloudflare account: BarnLabs (`f28b2a55054cbc8d998c5963ed34a0a7`)  
 Worker name: `helives`
 
-Origin (`neorome/big-bang`) is a separate ΛCDM visualizer. Do not rename it to helives.
-
 ## First deploy
 
 ```bash
