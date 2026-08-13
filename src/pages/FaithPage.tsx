@@ -4,7 +4,7 @@ import { SiteNav } from '../site/SiteNav.tsx'
 export function FaithPage() {
   return (
     <div className="site">
-      <SiteNav />
+      <SiteNav current="faith" />
       <main className="doc">
         <p className="hero-kicker">Confession</p>
         <h1>Faith</h1>
@@ -19,9 +19,9 @@ export function FaithPage() {
           copyrighted translations are not used. Words that are not Scripture are marked as such.
         </p>
         <p>
-          Phase one is Genesis 1–3 through the Fall, with a closing invitation to church and to live for Jesus
-          Christ, then an afterword on modern cosmology. The calling is the whole canon. This release is
-          Genesis. We will not pretend the other books are already here.
+          This release is Genesis 1–3 through the Fall, with a closing invitation to church and to live for
+          Jesus Christ, then an afterword on modern cosmology. The Scriptures page names the whole Protestant
+          canon. Only Genesis is built. The other books are forthcoming, not pretend pages.
         </p>
         <p>
           This site is not a church, not a sacrament, and not a claim that God endorsed the software. Go to

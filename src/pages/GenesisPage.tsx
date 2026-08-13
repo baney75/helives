@@ -31,7 +31,6 @@ export function GenesisPage() {
 
   useEffect(() => {
     document.body.dataset.mode = mode.cinematic ? 'cinematic' : 'interactive'
-    document.title = 'Genesis — He Lives'
   }, [mode.cinematic])
 
   usePlaybackKeys(clock.toggle, clock.reset, clock.setProgress)

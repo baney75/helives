@@ -17,7 +17,7 @@
 - Quoted Bible is KJV only. Do not paste NIV/ESV/NASB/NLT.
 - Epoch times and scene copy live in `src/genesis/`. Do not invent cosmology numbers without a source in `src/genesis/sources.ts`.
 - `?cinematic=1` on `/genesis` is the video pass: captions only, locked camera.
-- Phase one ships Genesis only. Domain model in `src/canon/` is the expansion path. Do not add a fake library of unread books.
+- Phase one ships Genesis only as a live book. `/scriptures` names the whole Protestant canon as forthcoming. Do not add 66 empty book routes.
 - Dispose manual geometries/materials.
 - Mobile: fewer particles, no bloom.
 - Never commit `.env.local` or API keys.

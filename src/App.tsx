@@ -4,7 +4,8 @@ import { AfterwordPage } from './pages/AfterwordPage.tsx'
 import { FaithPage } from './pages/FaithPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
-import { pageFor } from './site/router.ts'
+import { ScripturesPage } from './pages/ScripturesPage.tsx'
+import { pageFor, titleFor } from './site/router.ts'
 import { Calibrating } from './ui/Calibrating.tsx'
 
 const GenesisPage = lazy(async () => {
@@ -24,10 +25,15 @@ export function App() {
   const url = new URL(href, window.location.origin)
   const page = pageFor(parsePath(url.pathname))
 
+  useEffect(() => {
+    document.title = titleFor(page)
+  }, [page])
+
   return (
     <div onClick={(event) => handleSiteClick(event, setHref)}>
       {page === 'home' ? <HomePage /> : null}
       {page === 'faith' ? <FaithPage /> : null}
+      {page === 'scriptures' ? <ScripturesPage /> : null}
       {page === 'genesis' ? (
         <Suspense fallback={<Calibrating />}>
           <GenesisPage />
@@ -43,7 +49,8 @@ function handleSiteClick(event: MouseEvent<HTMLDivElement>, setHref: (href: stri
   const target = event.target
   if (!(target instanceof Element)) return
   const anchor = target.closest('a')
-  if (!anchor || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+  if (!(anchor instanceof HTMLAnchorElement)) return
+  if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
     return
   }
   if (anchor.target && anchor.target !== '_self') return

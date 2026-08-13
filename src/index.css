@@ -1,11 +1,54 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-latin-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-latin-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-latin-600.woff2') format('woff2');
+}
+
 :root {
   --void: #07060a;
-  --ink: #e8e4dc;
-  --muted: #9a948a;
-  --fire: #ffb56b;
+  --ink: #ece6d8;
+  --muted: #9a9184;
+  --fire: #e8b86d;
+  --dawn: #fff4d6;
+  --ground: #1a1008;
   --glass: rgba(7, 6, 10, 0.62);
-  --line: rgba(232, 228, 220, 0.14);
-  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Times New Roman', serif;
+  --line: rgba(236, 230, 216, 0.14);
+  --display: 'Cormorant Garamond', 'Palatino Linotype', Palatino, 'Times New Roman', serif;
+  --serif: 'Source Serif 4', 'Iowan Old Style', Palatino, 'Times New Roman', serif;
   --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --space-1: 4px;
   --space-2: 8px;
@@ -30,10 +73,11 @@ body,
 }
 
 body {
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.5;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
   text-rendering: optimizeLegibility;
+  color-scheme: dark;
 }
 
 button,
@@ -76,6 +120,7 @@ a {
   pointer-events: none;
   padding: var(--space-5);
   overflow: hidden;
+  font-size: 14px;
 }
 
 .hud::before {
@@ -122,9 +167,9 @@ a {
 
 .wordmark {
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 400;
+  font-family: var(--display);
+  font-size: clamp(32px, 3.6vw, 44px);
+  font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 0.9;
   text-shadow: 0 2px 18px rgba(7, 6, 10, 0.85);
@@ -136,6 +181,7 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 11px;
+  font-family: var(--mono);
 }
 
 .readouts {
@@ -147,6 +193,8 @@ a {
   background: var(--glass);
   border: 1px solid var(--line);
   backdrop-filter: blur(14px);
+  font-family: var(--mono);
+  font-size: 13px;
 }
 
 .readouts dt {
@@ -183,9 +231,9 @@ a {
 
 .narration h1 {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(32px, 4.6vw, 52px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.05;
 }
 
@@ -237,7 +285,7 @@ a {
 
 .icon-btn.primary {
   background: var(--fire);
-  color: #1a1008;
+  color: var(--ground);
   border-color: transparent;
   font-weight: 500;
 }
@@ -245,7 +293,7 @@ a {
 .icon-btn:hover,
 .tick:hover,
 .speed select:hover {
-  border-color: rgba(255, 181, 107, 0.55);
+  border-color: rgba(232, 184, 109, 0.55);
 }
 
 .icon-btn:focus-visible,
@@ -341,7 +389,7 @@ a {
 
 .tick.is-current .tick-dot {
   background: var(--fire);
-  box-shadow: 0 0 0 4px rgba(255, 181, 107, 0.18);
+  box-shadow: 0 0 0 4px rgba(232, 184, 109, 0.18);
 }
 
 .tick-label {
@@ -375,8 +423,9 @@ a {
   top: 36px;
   left: 48px;
   margin: 0;
-  font-family: var(--serif);
-  font-size: 28px;
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 500;
   letter-spacing: -0.03em;
   text-shadow: 0 2px 18px rgba(7, 6, 10, 0.9);
 }
@@ -423,9 +472,9 @@ a {
 .cine-end h2,
 .cine-doubt h2 {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(64px, 9vw, 128px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 0.9;
   text-shadow: 0 4px 40px rgba(7, 6, 10, 0.85);
 }
@@ -457,9 +506,9 @@ a {
 
 .cine-epoch h2 {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(36px, 5vw, 56px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.05;
 }
 
@@ -479,9 +528,9 @@ a {
 }
 
 .calibrating {
-  font-family: var(--serif);
-  font-size: 18px;
-  letter-spacing: 0.06em;
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.04em;
 }
 
 .sr-only {
@@ -504,19 +553,33 @@ a {
   margin: 0 auto;
 }
 
+.site.wide {
+  max-width: 68rem;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: var(--space-5);
   padding-bottom: var(--space-6);
 }
 
 .nav-mark {
-  font-family: var(--serif);
-  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 500;
   color: var(--ink);
   text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.nav-mark .brand-mark {
+  color: var(--fire);
+  flex-shrink: 0;
 }
 
 .nav nav {
@@ -530,13 +593,34 @@ a {
   text-decoration: none;
 }
 
-.nav nav a:hover {
+.nav nav a:hover,
+.nav nav a[aria-current='page'],
+.nav-mark[aria-current='page'] {
   color: var(--ink);
 }
 
 .hero,
 .doc {
   padding: var(--space-7) 0;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -12% -20% auto -30%;
+  height: 70%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 18% 40%, rgba(232, 184, 109, 0.16), transparent 62%);
+}
+
+.hero-mark {
+  position: relative;
+  margin: 0 0 var(--space-5);
+  color: var(--fire);
 }
 
 .hero-kicker {
@@ -549,18 +633,25 @@ a {
 
 .hero h1,
 .doc h1 {
+  position: relative;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--display);
+  font-size: clamp(64px, 14vw, 120px);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+}
+
+.doc h1 {
   font-size: clamp(48px, 9vw, 88px);
-  font-weight: 400;
-  line-height: 0.95;
 }
 
 .hero-verse {
   margin: var(--space-5) 0 var(--space-2);
-  font-family: var(--serif);
-  font-size: clamp(20px, 3vw, 28px);
+  font-family: var(--display);
+  font-size: clamp(22px, 3vw, 30px);
   font-style: italic;
+  font-weight: 500;
 }
 
 .hero-cite,
@@ -572,7 +663,7 @@ a {
 
 .hero-lead,
 .doc p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.65;
 }
 
@@ -589,7 +680,7 @@ a {
   min-height: 44px;
   padding: 0 var(--space-5);
   background: var(--fire);
-  color: #1a1008;
+  color: var(--ground);
   text-decoration: none;
   border: 1px solid transparent;
 }
@@ -602,9 +693,78 @@ a {
 
 .doc h2 {
   margin: var(--space-7) 0 var(--space-3);
-  font-family: var(--serif);
-  font-size: 28px;
-  font-weight: 400;
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.doc h2.canon-testament {
+  margin: var(--space-7) 0 var(--space-4);
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.canon-division {
+  display: grid;
+  grid-template-columns: minmax(7rem, 12rem) 1fr;
+  gap: var(--space-4) var(--space-6);
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--line);
+}
+
+.canon-division h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--fire);
+}
+
+.canon-books {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.canon-book {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--space-4);
+  align-items: baseline;
+  padding: 0.35rem 0;
+}
+
+.canon-book-title {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.canon-book.is-live .canon-book-title {
+  color: var(--fire);
+}
+
+.canon-book.is-live .canon-book-title:hover {
+  color: var(--dawn);
+}
+
+.canon-status {
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.canon-note {
+  grid-column: 1 / -1;
+  margin: 0.1rem 0 0.35rem;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
 .sources {
@@ -701,6 +861,16 @@ a {
 
   .nav {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .canon-division {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .hero h1 {
+    font-size: clamp(56px, 18vw, 88px);
   }
 }
 

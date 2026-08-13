@@ -15,6 +15,7 @@
     "test": "vitest run",
     "typecheck": "tsc -b --pretty false",
     "preview": "vite preview",
+    "brand": "node scripts/render-brand.mjs",
     "deploy": "pnpm build && wrangler deploy",
     "audio": "node scripts/generate-audio.mjs",
     "record": "node scripts/record-demo.mjs"

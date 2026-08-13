@@ -13,6 +13,7 @@ describe('isBlockedPath', () => {
     expect(isBlockedPath('/')).toBe(false)
     expect(isBlockedPath('/genesis')).toBe(false)
     expect(isBlockedPath('/faith')).toBe(false)
+    expect(isBlockedPath('/scriptures')).toBe(false)
     expect(isBlockedPath('/genesis/afterword')).toBe(false)
     expect(isBlockedPath('/audio/day1.mp3')).toBe(false)
   })

@@ -16,8 +16,8 @@ export function HUD({ clock }: HUDProps) {
     <div className="hud">
       <header className="topbar">
         <div className="brand">
-          <p className="wordmark">Genesis</p>
-          <p className="tag">He Lives</p>
+          <p className="wordmark">He Lives</p>
+          <p className="tag">Genesis</p>
         </div>
         <dl className="readouts">
           <div>

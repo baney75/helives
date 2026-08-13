@@ -8,7 +8,7 @@ export function AfterwordPage() {
 
   return (
     <div className="site">
-      <SiteNav />
+      <SiteNav current="afterword" />
       <main className="doc">
         <p className="hero-kicker">After Genesis</p>
         <h1>Got doubt?</h1>

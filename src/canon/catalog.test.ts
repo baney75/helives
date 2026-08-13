@@ -12,6 +12,7 @@ describe('parsePath', () => {
   it('routes the site surfaces', () => {
     expect(parsePath('/')).toEqual({ kind: 'home' })
     expect(parsePath('/faith')).toEqual({ kind: 'faith' })
+    expect(parsePath('/scriptures')).toEqual({ kind: 'scriptures' })
     expect(parsePath('/genesis')).toEqual({ kind: 'book', slug: 'genesis' })
     expect(parsePath('/genesis/afterword')).toEqual({ kind: 'afterword', slug: 'genesis' })
     expect(parsePath('/genesis/')).toEqual({ kind: 'book', slug: 'genesis' })
@@ -19,6 +20,7 @@ describe('parsePath', () => {
 
   it('does not invent unread books', () => {
     expect(parsePath('/exodus')).toEqual({ kind: 'not-found' })
+    expect(parsePath('/leviticus')).toEqual({ kind: 'not-found' })
     expect(parsePath('/revelation')).toEqual({ kind: 'not-found' })
     expect(parsePath('/genesis/chapter/1')).toEqual({ kind: 'not-found' })
     expect(parsePath('/genesis/1')).toEqual({ kind: 'not-found' })

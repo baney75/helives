@@ -1,4 +1,4 @@
-/** Grow this union when a book ships. Do not pre-list unread canon. */
+/** Grow this union when a book ships. Unread canon is named on /scriptures, not routed. */
 export type BookSlug = 'genesis'
 
 export type BookKind = 'interactive' | 'reading'
@@ -19,6 +19,7 @@ export type BookRecord = {
 export type SiteRoute =
   | { kind: 'home' }
   | { kind: 'faith' }
+  | { kind: 'scriptures' }
   | { kind: 'book'; slug: BookSlug }
   | { kind: 'chapter'; slug: BookSlug; chapter: number }
   | { kind: 'afterword'; slug: BookSlug }

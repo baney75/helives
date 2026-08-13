@@ -12,8 +12,8 @@ export function CinematicOverlay({ clock }: CinematicOverlayProps) {
 
   return (
     <div className="cine" aria-hidden="true">
-      <p className="cine-brand">Genesis</p>
-      <p className="cine-host">He Lives</p>
+      <p className="cine-brand">He Lives</p>
+      <p className="cine-host">Genesis</p>
       <div className={opening ? 'cine-title is-on' : 'cine-title'}>
         <p className="cine-kicker">He Lives</p>
         <h1>Genesis</h1>

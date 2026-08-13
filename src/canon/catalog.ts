@@ -1,8 +1,8 @@
 import type { BookRecord, BookSlug, SiteRoute } from './types.ts'
 
 /**
- * Phase one ships Genesis only. Later books join this list as live records.
- * Do not add greyed-out stubs for the unread canon.
+ * Live books only. The Protestant 66 live in scriptures.ts for the index.
+ * Do not add /exodus-style routes until that book is actually playable.
  */
 export const BOOKS: readonly BookRecord[] = [
   {
@@ -31,6 +31,7 @@ export function parsePath(pathname: string): SiteRoute {
   const path = normalizePath(pathname)
   if (path === '/') return { kind: 'home' }
   if (path === '/faith') return { kind: 'faith' }
+  if (path === '/scriptures') return { kind: 'scriptures' }
   const parts = path.slice(1).split('/')
   const slug = parts[0]
   if (!slug || !isBookSlug(slug)) return { kind: 'not-found' }
