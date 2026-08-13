@@ -58,6 +58,7 @@ export function GenesisPage() {
           isMobile,
           cinematic: mode.cinematic,
           quality: gate.quality,
+          playing: clock.playing,
         }}
       />
       {mode.cinematic ? <CinematicOverlay clock={clock} /> : <HUD clock={clock} />}

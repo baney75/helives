@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { findSceneAt, presenceById, SCENES, scenePresence } from './scenes.ts'
-import { cameraDistance, visualScale } from './time.ts'
+import { cameraDistance, framedCamera, visualScale } from './time.ts'
 
 describe('findSceneAt', () => {
   it('starts in the beginning', () => {
@@ -48,6 +48,15 @@ describe('presenceById', () => {
 describe('visual helpers', () => {
   it('pulls the camera back for the heavens', () => {
     expect(cameraDistance(0.4)).toBeGreaterThan(cameraDistance(0.05))
+  })
+
+  it('frames garden and fall from above the planted floor', () => {
+    const garden = framedCamera(0.65)
+    const fall = framedCamera(0.745)
+    expect(garden.y).toBeGreaterThan(1.2)
+    expect(fall.y).toBeGreaterThan(1.2)
+    expect(garden.z).toBeGreaterThan(4)
+    expect(fall.z).toBeGreaterThan(4)
   })
 
   it('grows scale through the creation week', () => {

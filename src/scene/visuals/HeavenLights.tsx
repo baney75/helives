@@ -2,13 +2,15 @@ import { Stars } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useMemo, useRef } from 'react'
 import type { Points } from 'three'
-import { AdditiveBlending } from 'three'
+import { AdditiveBlending, DoubleSide } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
 import { fillSpiral } from '../../lib/rng.ts'
 import type { SceneClock } from '../types.ts'
 
 export function HeavenLights({ clock }: { clock: SceneClock }) {
-  const strength = Math.max(clock.presence.day4, clock.presence.day5 * 0.35, clock.presence.day7 * 0.5)
+  const garden = Math.max(clock.presence.garden, clock.presence.fall)
+  const strength =
+    Math.max(clock.presence.day4, clock.presence.day5 * 0.35, clock.presence.day7 * 0.5) * (1 - garden * 0.55)
   const points = useRef<Points>(null)
   const count = BUDGET[clock.quality].spiral
   const positions = useMemo(() => fillSpiral(count, 4.4, 128, 3), [count])
@@ -23,14 +25,33 @@ export function HeavenLights({ clock }: { clock: SceneClock }) {
 
   return (
     <group>
-      <mesh position={[6.2, 3.4, -4.2]}>
-        <sphereGeometry args={[0.55, 20, 20]} />
-        <meshBasicMaterial color="#fff1c2" toneMapped={false} />
-      </mesh>
-      <mesh position={[-5.4, 2.6, -5.8]}>
-        <sphereGeometry args={[0.22, 16, 16]} />
-        <meshStandardMaterial color="#dce6f5" emissive="#8aa0c4" emissiveIntensity={0.4} />
-      </mesh>
+      <group position={[6.2, 3.4, -4.2]}>
+        <mesh>
+          <sphereGeometry args={[0.55, 20, 20]} />
+          <meshBasicMaterial color="#fff1c2" toneMapped={false} />
+        </mesh>
+        <mesh rotation={[0.4, 0.2, 0]}>
+          <ringGeometry args={[0.68, 0.86, 28]} />
+          <meshBasicMaterial
+            color="#e8b86d"
+            side={DoubleSide}
+            transparent
+            opacity={0.55 * strength}
+            toneMapped={false}
+          />
+        </mesh>
+        <pointLight intensity={2.2 * strength} color="#fff4d6" distance={18} />
+      </group>
+      <group position={[-5.4, 2.6, -5.8]}>
+        <mesh>
+          <sphereGeometry args={[0.22, 16, 16]} />
+          <meshStandardMaterial color="#dce6f5" emissive="#8aa0c4" emissiveIntensity={0.45} />
+        </mesh>
+        <mesh position={[0.12, 0.04, 0.08]}>
+          <sphereGeometry args={[0.2, 14, 14]} />
+          <meshStandardMaterial color="#07060a" roughness={1} />
+        </mesh>
+      </group>
       <points ref={points} position={[0, 1.4, 0]} rotation={[0.5, 0.2, 0.1]}>
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[positions, 3]} />

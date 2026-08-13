@@ -1,24 +1,36 @@
 import { useFrame } from '@react-three/fiber'
-import { useLayoutEffect, useMemo, useRef } from 'react'
-import type { InstancedMesh } from 'three'
+import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
+import { DoubleSide, type InstancedMesh } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
 import { writeInstanceMatrices } from '../../lib/instances.ts'
 import { fillDisk, fillHemisphere } from '../../lib/rng.ts'
+import { createBirdGeometry, createFishGeometry } from '../models/creatures.ts'
 import type { SceneClock } from '../types.ts'
 
 export function LivingCreatures({ clock }: { clock: SceneClock }) {
   const fish = useRef<InstancedMesh>(null)
   const birds = useRef<InstancedMesh>(null)
-  const fishStrength = Math.max(clock.presence.day5, clock.presence.day6 * 0.35)
-  const birdStrength = Math.max(clock.presence.day5, clock.presence.day6 * 0.4)
+  const garden = Math.max(clock.presence.garden, clock.presence.fall)
+  const fishStrength = Math.max(clock.presence.day5, clock.presence.day6 * 0.35) * (1 - garden * 0.85)
+  const birdStrength = Math.max(clock.presence.day5, clock.presence.day6 * 0.4) * (1 - garden * 0.75)
   const fishCount = BUDGET[clock.quality].fish
   const birdCount = BUDGET[clock.quality].birds
   const fishPos = useMemo(() => fillDisk(fishCount, 2.4, 71, -0.4), [fishCount])
   const birdPos = useMemo(() => fillHemisphere(birdCount, 4.2, 83), [birdCount])
+  const fishGeo = useMemo(() => createFishGeometry(), [])
+  const birdGeo = useMemo(() => createBirdGeometry(), [])
+
+  useEffect(
+    () => () => {
+      fishGeo.dispose()
+      birdGeo.dispose()
+    },
+    [birdGeo, fishGeo],
+  )
 
   useLayoutEffect(() => {
-    if (fish.current) writeInstanceMatrices(fish.current, fishPos, fishCount, () => 0.045)
-    if (birds.current) writeInstanceMatrices(birds.current, birdPos, birdCount, () => 0.06)
+    if (fish.current) writeInstanceMatrices(fish.current, fishPos, fishCount, () => 0.16)
+    if (birds.current) writeInstanceMatrices(birds.current, birdPos, birdCount, () => 0.22)
   }, [birdCount, birdPos, fishCount, fishPos])
 
   useFrame(({ clock: r3f }) => {
@@ -37,13 +49,11 @@ export function LivingCreatures({ clock }: { clock: SceneClock }) {
 
   return (
     <group>
-      <instancedMesh ref={fish} args={[undefined, undefined, fishCount]} position={[0, -0.6, 0]}>
-        <sphereGeometry args={[1, 6, 4]} />
-        <meshStandardMaterial color="#7eb0c9" roughness={0.35} />
+      <instancedMesh ref={fish} args={[fishGeo, undefined, fishCount]} position={[0, -0.55, 0]}>
+        <meshStandardMaterial color="#7eb0c9" roughness={0.32} metalness={0.12} />
       </instancedMesh>
-      <instancedMesh ref={birds} args={[undefined, undefined, birdCount]} position={[0, 1.6, 0]}>
-        <coneGeometry args={[0.6, 1.6, 3]} />
-        <meshStandardMaterial color="#d8c4a0" roughness={0.6} />
+      <instancedMesh ref={birds} args={[birdGeo, undefined, birdCount]} position={[0, 1.6, 0]}>
+        <meshStandardMaterial color="#d8c4a0" roughness={0.58} side={DoubleSide} />
       </instancedMesh>
     </group>
   )

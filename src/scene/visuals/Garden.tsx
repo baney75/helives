@@ -1,79 +1,96 @@
-import { useLayoutEffect, useMemo, useRef } from 'react'
-import { Color, InstancedMesh } from 'three'
-import { BUDGET } from '../../lib/budget.ts'
-import { writeInstanceMatrices } from '../../lib/instances.ts'
-import { fillDisk, mulberry32 } from '../../lib/rng.ts'
+import { useEffect, useMemo } from 'react'
+import { CatmullRomCurve3, ExtrudeGeometry, Shape, Vector3 } from 'three'
+import { Figure, type FigurePoseId } from '../models/Figure.tsx'
+import { EDEN } from '../models/eden.ts'
+import { Grove, Herbs, TreeOfKnowledge, TreeOfLife } from '../models/Trees.tsx'
 import type { SceneClock } from '../types.ts'
-
-const bark = new Color('#4a3420')
-const leaf = new Color('#5f8a48')
-const color = new Color()
 
 export function Garden({ clock }: { clock: SceneClock }) {
   const strength = Math.max(clock.presence.garden, clock.presence.day6 * 0.45)
   const fall = clock.presence.fall
-  const count = BUDGET[clock.quality].trees
-  const positions = useMemo(() => fillDisk(count, 3.4, 19, 0), [count])
-  const kinds = useMemo(() => {
-    const rng = mulberry32(27)
-    return Float32Array.from({ length: count }, () => rng())
-  }, [count])
-  const trunks = useRef<InstancedMesh>(null)
-  const canopies = useRef<InstancedMesh>(null)
-
-  useLayoutEffect(() => {
-    if (trunks.current) {
-      writeInstanceMatrices(trunks.current, positions, count, (i) => 0.08 + (kinds[i] ?? 0) * 0.05)
-    }
-    if (canopies.current) {
-      writeInstanceMatrices(canopies.current, positions, count, (i) => 0.28 + (kinds[i] ?? 0) * 0.22)
-      for (let i = 0; i < count; i += 1) {
-        color.copy(leaf).lerp(bark, fall * 0.55)
-        canopies.current.setColorAt(i, color)
-      }
-      if (canopies.current.instanceColor) canopies.current.instanceColor.needsUpdate = true
-    }
-  }, [count, fall, kinds, positions])
+  const pairFade = 1 - Math.min(1, Math.max(0, (fall - 0.45) / 0.4))
+  const womanPose: FigurePoseId = fall > 0.55 ? 'eat' : fall > 0.18 ? 'reach' : 'stand'
+  const manPose: FigurePoseId = fall > 0.35 ? 'offer' : 'stand'
 
   if (strength <= 0) return null
 
   return (
-    <group position={[0, -0.15, 0]} visible={strength > 0.04}>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
-        <circleGeometry args={[4.2, 40]} />
-        <meshStandardMaterial color={fall > 0.4 ? '#3a2a18' : '#2f4a28'} roughness={0.92} />
-      </mesh>
-      <mesh position={[0.2, 0.04, 0]} rotation={[-Math.PI / 2, 0, 0.2]}>
-        <ringGeometry args={[0.12, 0.38, 24]} />
-        <meshStandardMaterial color="#3a6a88" roughness={0.4} metalness={0.05} />
-      </mesh>
-      <instancedMesh ref={trunks} args={[undefined, undefined, count]}>
-        <cylinderGeometry args={[0.35, 0.45, 2.4, 6]} />
-        <meshStandardMaterial color="#4a3420" roughness={0.9} />
-      </instancedMesh>
-      <group position={[0, 1.4, 0]}>
-        <instancedMesh ref={canopies} args={[undefined, undefined, count]}>
-          <icosahedronGeometry args={[1, 1]} />
-          <meshStandardMaterial vertexColors roughness={0.75} />
-        </instancedMesh>
-      </group>
-      <Figure x={-0.55} hue="#c9a882" />
-      <Figure x={0.55} hue="#d4b494" />
+    <group position={EDEN.origin} visible={strength > 0.04} scale={1.12}>
+      <PlantedGround fall={fall} />
+      <River />
+      <TreeOfLife fall={fall} />
+      <TreeOfKnowledge fall={fall} />
+      <Grove quality={clock.quality} fall={fall} />
+      <Herbs quality={clock.quality} />
+      <Figure
+        role="man"
+        pose={manPose}
+        position={EDEN.man.garden}
+        rotationY={0.55}
+        fade={pairFade * strength}
+      />
+      <Figure
+        role="woman"
+        pose={womanPose}
+        position={fall > 0.12 ? EDEN.woman.reach : EDEN.woman.garden}
+        rotationY={-0.85}
+        fade={pairFade * strength}
+        holdFruit={fall > 0.22}
+        fruitColor={EDEN.knowledge.fruitColor}
+      />
     </group>
   )
 }
 
-function Figure({ x, hue }: { x: number; hue: string }) {
+function PlantedGround({ fall }: { fall: number }) {
+  const soil = fall > 0.4 ? '#3a2a18' : '#2c3d22'
+  const bed = fall > 0.4 ? '#2a2214' : '#35502a'
   return (
-    <group position={[x, 0.55, 1.4]}>
-      <mesh position={[0, 0.35, 0]}>
-        <capsuleGeometry args={[0.12, 0.42, 4, 8]} />
-        <meshStandardMaterial color={hue} roughness={0.7} />
+    <group>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
+        <circleGeometry args={[EDEN.groundRadius, 48]} />
+        <meshStandardMaterial color={soil} roughness={0.94} />
       </mesh>
-      <mesh position={[0, 0.78, 0]}>
-        <sphereGeometry args={[0.11, 12, 12]} />
-        <meshStandardMaterial color={hue} roughness={0.65} />
+      <mesh position={[-1.7, 0.035, 1.35]} rotation={[-Math.PI / 2, 0, 0.35]}>
+        <planeGeometry args={[1.35, 0.7]} />
+        <meshStandardMaterial color={bed} roughness={0.9} />
+      </mesh>
+      <mesh position={[2.05, 0.035, -1.15]} rotation={[-Math.PI / 2, 0, -0.4]}>
+        <planeGeometry args={[1.2, 0.62]} />
+        <meshStandardMaterial color={bed} roughness={0.9} />
+      </mesh>
+      <mesh position={[-2.2, 0.035, -1.4]} rotation={[-Math.PI / 2, 0, 0.15]}>
+        <planeGeometry args={[0.95, 0.55]} />
+        <meshStandardMaterial color={bed} roughness={0.9} />
       </mesh>
     </group>
+  )
+}
+
+function River() {
+  const geometry = useMemo(() => {
+    const shape = new Shape()
+    const half = EDEN.river.width / 2
+    shape.moveTo(-half, 0)
+    shape.lineTo(half, 0)
+    shape.lineTo(half, 0.035)
+    shape.lineTo(-half, 0.035)
+    shape.closePath()
+    const path = new CatmullRomCurve3(EDEN.river.points.map((p) => new Vector3(...p)))
+    return new ExtrudeGeometry(shape, { steps: 36, bevelEnabled: false, extrudePath: path })
+  }, [])
+
+  useEffect(() => () => geometry.dispose(), [geometry])
+
+  return (
+    <mesh geometry={geometry}>
+      <meshStandardMaterial
+        color="#3a6a88"
+        roughness={0.22}
+        metalness={0.18}
+        emissive="#1a3044"
+        emissiveIntensity={0.2}
+      />
+    </mesh>
   )
 }

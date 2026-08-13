@@ -63,7 +63,7 @@ Multi-shot visual, 3D, voice, or “make this book as good as Genesis” work. O
 
 Visual rows are equal to tests. Green tests + unread HUD = fail. Rows 1–11 without row 12 = **not shipped**.
 
-Screenshots: `device-verification` (375 + 1280). Prefer Chrome DevTools MCP; Playwright fallback (`pnpm exec playwright`). The implementer **captures**; the critic **judges**.
+Screenshots: `device-verification` (375 + 1280). Prefer Chrome DevTools MCP; Playwright fallback (`pnpm capture --out <dir>` after `pnpm build`, or `pnpm exec playwright`). Beats: `/genesis?pause=1&progress=0.02|0.65|0.745`. The implementer **captures**; the critic **judges**.
 
 ## Grok stills as targets
 

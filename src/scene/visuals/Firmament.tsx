@@ -5,6 +5,7 @@ import type { SceneClock } from '../types.ts'
 
 export function Firmament({ clock }: { clock: SceneClock }) {
   const mesh = useRef<Mesh>(null)
+  const bowl = useRef<Mesh>(null)
   const strength = Math.max(clock.presence.day2, clock.presence.day4 * 0.4)
   const segs = clock.quality === 'low' ? 24 : 40
   const material = useMemo(
@@ -32,7 +33,8 @@ export function Firmament({ clock }: { clock: SceneClock }) {
           varying vec3 vPos;
           void main() {
             float h = normalize(vPos).y;
-            float band = smoothstep(-0.15, 0.05, h) * smoothstep(0.85, 0.2, h);
+            float band = smoothstep(-0.15, 0.05, h) * smoothstep(0.85, 0.2, h)
+              + smoothstep(0.02, 0, abs(h)) * 0.55;
             float wave = 0.5 + 0.5 * sin(vPos.x * 1.4 + uTime * 0.35);
             float alpha = band * (0.18 + wave * 0.12) * uIntensity;
             gl_FragColor = vec4(uColor, alpha);
@@ -49,16 +51,35 @@ export function Firmament({ clock }: { clock: SceneClock }) {
     const uIntensity = material.uniforms.uIntensity
     if (uTime) uTime.value = r3f.elapsedTime
     if (uIntensity) uIntensity.value = strength
-    if (!mesh.current) return
-    mesh.current.visible = strength > 0.03
-    mesh.current.scale.setScalar(8.5 + clock.scale * 0.4)
+    if (mesh.current) {
+      mesh.current.visible = strength > 0.03
+      mesh.current.scale.setScalar(8.5 + clock.scale * 0.4)
+    }
+    if (bowl.current) {
+      bowl.current.visible = strength > 0.03
+      bowl.current.scale.setScalar(5.6 + clock.presence.day2 * 0.4)
+    }
   })
 
   if (strength <= 0) return null
 
   return (
-    <mesh ref={mesh} material={material}>
-      <sphereGeometry args={[1, segs, segs]} />
-    </mesh>
+    <group>
+      <mesh ref={mesh} material={material}>
+        <sphereGeometry args={[1, segs, segs]} />
+      </mesh>
+      <mesh ref={bowl} position={[0, -0.4, 0]} rotation={[Math.PI, 0, 0]}>
+        <sphereGeometry args={[1, segs, Math.max(8, Math.floor(segs / 2)), 0, Math.PI * 2, 0, Math.PI / 2]} />
+        <meshStandardMaterial
+          color="#1a3048"
+          transparent
+          opacity={0.22 * strength}
+          roughness={0.25}
+          metalness={0.12}
+          side={DoubleSide}
+          depthWrite={false}
+        />
+      </mesh>
+    </group>
   )
 }

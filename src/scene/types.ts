@@ -10,4 +10,5 @@ export type SceneClock = {
   isMobile: boolean
   cinematic: boolean
   quality: Quality
+  playing: boolean
 }

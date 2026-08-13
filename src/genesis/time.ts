@@ -18,9 +18,18 @@ export function cameraDistance(progress: number): number {
   if (p < 0.17) return 4.2 + (p - 0.08) * 18
   if (p < 0.36) return 5.8 + (p - 0.17) * 8
   if (p < 0.46) return 8.2
-  if (p < 0.7) return 6.4
-  if (p < 0.855) return 4.6
+  if (p < 0.7) return 6.6
+  if (p < 0.855) return 6.2
   return 9.2
+}
+
+/** Composed garden/fall viewpoint. Used when paused so the heroes stay on camera. */
+export function framedCamera(progress: number): { x: number; y: number; z: number } {
+  const p = clamp01(progress)
+  if (p >= 0.6 && p < 0.7) return { x: 2.15, y: 1.85, z: 5.35 }
+  if (p >= 0.7 && p < 0.86) return { x: 2.55, y: 1.7, z: 5.05 }
+  const dist = cameraDistance(p)
+  return { x: 0, y: 0.35 + p * 0.4, z: dist }
 }
 
 export function fogFar(progress: number): number {

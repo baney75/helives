@@ -21,7 +21,7 @@ const VOICES = {
 /** Keep in sync with src/genesis/script.ts */
 const NARRATION = {
   beginning:
-    'In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep.',
+    'In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.',
   day1: 'And God said, Let there be light: and there was light. And God saw the light, that it was good.',
   day2: 'And God said, Let there be a firmament in the midst of the waters. And God called the firmament Heaven.',
   day3: 'And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so. And God said, Let the earth bring forth grass. And God saw that it was good.',

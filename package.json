@@ -18,7 +18,9 @@
     "brand": "node scripts/render-brand.mjs",
     "deploy": "pnpm build && wrangler deploy",
     "audio": "node scripts/generate-audio.mjs",
-    "record": "node scripts/record-demo.mjs"
+    "record": "node scripts/record-demo.mjs",
+    "targets": "node scripts/compress-target.mjs",
+    "capture": "node scripts/capture-genesis.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",
