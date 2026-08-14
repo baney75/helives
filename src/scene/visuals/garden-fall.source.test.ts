@@ -14,7 +14,15 @@ describe('shipping Garden and Fall source', () => {
     expect(garden).toMatch(/function River/)
     expect(garden).toMatch(/role="man"/)
     expect(garden).toMatch(/role="woman"/)
+    expect(readFileSync(join(here, '../models/Figure.tsx'), 'utf8')).toMatch(/models\/genesis\/man\.png/)
     expect(garden).toMatch(/from '\.\.\/models\/eden\.ts'/)
+  })
+
+  it('uses flat leaves on the hero trees instead of sphere canopies', () => {
+    const trees = readFileSync(join(here, '../models/Trees.tsx'), 'utf8')
+    expect(trees).toMatch(/createLeafGeometry/)
+    expect(trees).toMatch(/LeafCanopy/)
+    expect(trees).not.toMatch(/sphereGeometry args=\{\[0\.22, 8, 8\]\}/)
   })
 
   it('does not ship the lone tube-curve plus red orb', () => {
@@ -23,6 +31,7 @@ describe('shipping Garden and Fall source', () => {
     expect(fall).toMatch(/function TakenFruit/)
     expect(fall).toMatch(/pose="depart"/)
     expect(fall).toMatch(/function EastFlame/)
+    expect(fall).toMatch(/createTaperedTube/)
     expect(fall).not.toMatch(/TubeGeometry\(curve, 32, 0\.035/)
     expect(fall).not.toMatch(/sphereGeometry args=\{\[0\.09, 10, 10\]\}/)
   })

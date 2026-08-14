@@ -10,7 +10,7 @@ import type { SceneClock } from '../types.ts'
 export function HeavenLights({ clock }: { clock: SceneClock }) {
   const garden = Math.max(clock.presence.garden, clock.presence.fall)
   const strength =
-    Math.max(clock.presence.day4, clock.presence.day5 * 0.35, clock.presence.day7 * 0.5) * (1 - garden * 0.55)
+    Math.max(clock.presence.day4, clock.presence.day5 * 0.35, clock.presence.day7 * 0.5) * (1 - garden * 0.92)
   const points = useRef<Points>(null)
   const count = BUDGET[clock.quality].spiral
   const positions = useMemo(() => fillSpiral(count, 4.4, 128, 3), [count])

@@ -8,34 +8,34 @@ import type { SceneClock } from '../types.ts'
 export function Garden({ clock }: { clock: SceneClock }) {
   const strength = Math.max(clock.presence.garden, clock.presence.day6 * 0.45)
   const fall = clock.presence.fall
-  const pairFade = 1 - Math.min(1, Math.max(0, (fall - 0.45) / 0.4))
-  const womanPose: FigurePoseId = fall > 0.55 ? 'eat' : fall > 0.18 ? 'reach' : 'stand'
-  const manPose: FigurePoseId = fall > 0.35 ? 'offer' : 'stand'
+  const pairFade = 1 - Math.min(1, Math.max(0, (fall - 0.78) / 0.22))
+  const womanPose: FigurePoseId = fall > 0.45 ? 'eat' : fall > 0.12 ? 'reach' : 'stand'
+  const manPose: FigurePoseId = fall > 0.28 ? 'offer' : 'stand'
 
   if (strength <= 0) return null
 
   return (
-    <group position={EDEN.origin} visible={strength > 0.04} scale={1.12}>
+    <group position={EDEN.origin} visible={strength > 0.04}>
       <PlantedGround fall={fall} />
       <River />
-      <TreeOfLife fall={fall} />
-      <TreeOfKnowledge fall={fall} />
+      <TreeOfLife fall={fall} quality={clock.quality} />
+      <TreeOfKnowledge fall={fall} quality={clock.quality} />
       <Grove quality={clock.quality} fall={fall} />
       <Herbs quality={clock.quality} />
       <Figure
         role="man"
         pose={manPose}
         position={EDEN.man.garden}
-        rotationY={0.55}
+        rotationY={Math.PI + 0.42}
         fade={pairFade * strength}
       />
       <Figure
         role="woman"
         pose={womanPose}
-        position={fall > 0.12 ? EDEN.woman.reach : EDEN.woman.garden}
-        rotationY={-0.85}
+        position={fall > 0.1 ? EDEN.woman.reach : EDEN.woman.garden}
+        rotationY={Math.PI - 0.42}
         fade={pairFade * strength}
-        holdFruit={fall > 0.22}
+        holdFruit={fall > 0.18}
         fruitColor={EDEN.knowledge.fruitColor}
       />
     </group>

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { InstancedMesh, Matrix4, MeshBasicMaterial, SphereGeometry } from 'three'
-import { writeInstanceMatrices } from './instances.ts'
+import { writeInstanceMatrices, writeOrientedInstances } from './instances.ts'
 
 describe('writeInstanceMatrices', () => {
   it('fills every instance from packed positions', () => {
@@ -15,6 +15,21 @@ describe('writeInstanceMatrices', () => {
     expect(matrix.elements[13]).toBeCloseTo(2)
     mesh.getMatrixAt(2, matrix)
     expect(matrix.elements[14]).toBeCloseTo(3)
+    mesh.dispose()
+  })
+})
+
+describe('writeOrientedInstances', () => {
+  it('writes non-uniform scale and yaw into the instance matrix', () => {
+    const mesh = new InstancedMesh(new SphereGeometry(1, 4, 4), new MeshBasicMaterial(), 1)
+    writeOrientedInstances(mesh, new Float32Array([2, 0, 0]), 1, () => ({
+      scale: [1, 2, 1],
+      rotation: [0, Math.PI / 2, 0],
+    }))
+    const matrix = new Matrix4()
+    mesh.getMatrixAt(0, matrix)
+    expect(matrix.elements[12]).toBeCloseTo(2)
+    expect(matrix.elements[5]).toBeCloseTo(2)
     mesh.dispose()
   })
 })

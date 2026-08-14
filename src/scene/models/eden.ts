@@ -35,45 +35,45 @@ export const EDEN = {
   groundRadius: 4.35,
   life: {
     id: 'tree-of-life' as const,
-    position: [-1.28, 0, -0.72] as const satisfies Vec3,
+    position: [-1.72, 0, 0.08] as const satisfies Vec3,
     height: 2.9,
-    trunkColor: '#6a4e28',
-    canopyColor: '#7a8f3c',
+    trunkColor: '#8a6a32',
+    canopyColor: '#c4b85a',
     fruitColor: '#fff4d6',
   },
   knowledge: {
     id: 'tree-of-knowledge' as const,
-    position: [1.32, 0, 0.08] as const satisfies Vec3,
+    position: [1.48, 0, 0.22] as const satisfies Vec3,
     height: 2.38,
     trunkColor: '#3a2818',
-    canopyColor: '#4a3a22',
+    canopyColor: '#5a3a28',
     fruitColor: '#8a2a22',
-    fruitLocal: [0.62, 1.18, 0.22] as const satisfies Vec3,
+    fruitLocal: [-0.18, 1.58, 0.32] as const satisfies Vec3,
   },
   river: {
     id: 'river' as const,
-    width: 0.4,
+    width: 0.46,
     points: [
-      [-3.1, 0.028, 1.55],
-      [-1.55, 0.028, 0.72],
-      [-0.05, 0.028, 0.18],
-      [1.55, 0.028, -0.28],
-      [3.35, 0.028, 0.05],
+      [-2.9, 0.028, 2.35],
+      [-1.7, 0.028, 1.45],
+      [-0.35, 0.028, 0.95],
+      [0.55, 0.028, 0.48],
+      [1.85, 0.028, -0.35],
     ] as const satisfies readonly Vec3[],
   },
   man: {
     id: 'man' as const,
-    garden: [0.28, 0, 1.18] as const satisfies Vec3,
-    depart: [2.48, 0, 1.28] as const satisfies Vec3,
+    garden: [0.22, 0, 1.38] as const satisfies Vec3,
+    depart: [2.85, 0, 1.55] as const satisfies Vec3,
   },
   woman: {
     id: 'woman' as const,
-    garden: [0.82, 0, 1.02] as const satisfies Vec3,
-    reach: [0.92, 0, 0.52] as const satisfies Vec3,
-    depart: [2.92, 0, 1.48] as const satisfies Vec3,
+    garden: [0.78, 0, 1.28] as const satisfies Vec3,
+    reach: [0.88, 0, 0.82] as const satisfies Vec3,
+    depart: [3.25, 0, 1.72] as const satisfies Vec3,
   },
   east: {
-    flame: [3.55, 0, 0.95] as const satisfies Vec3,
+    flame: [3.85, 0, 1.15] as const satisfies Vec3,
   },
 } as const
 
@@ -120,15 +120,22 @@ export function groveCount(quality: Quality): number {
 }
 
 export function herbCount(quality: Quality): number {
-  if (quality === 'low') return 18
-  if (quality === 'medium') return 36
-  return 56
+  if (quality === 'low') return 40
+  if (quality === 'medium') return 80
+  return 130
+}
+
+export function canopyLeafCount(quality: Quality, kind: 'life' | 'knowledge'): number {
+  const base = kind === 'life' ? 120 : 180
+  if (quality === 'low') return Math.floor(base * 0.5)
+  if (quality === 'medium') return Math.floor(base * 0.75)
+  return base
 }
 
 export function isNearHero(x: number, z: number): boolean {
   const life = Math.hypot(x - EDEN.life.position[0], z - EDEN.life.position[2])
   const knowledge = Math.hypot(x - EDEN.knowledge.position[0], z - EDEN.knowledge.position[2])
-  const pair = Math.hypot(x - 0.55, z - 1.05)
+  const pair = Math.hypot(x - 0.5, z - 1.3)
   if (life < 1.15 || knowledge < 1.2 || pair < 0.85) return true
   return riverDistance(x, z) < 0.55
 }

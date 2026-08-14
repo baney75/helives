@@ -24,7 +24,7 @@ function GuidedControls({ clock }: { clock: SceneClock }) {
     if (!clock.playing && clock.progress >= 0.6 && clock.progress < 0.86) {
       const framed = framedCamera(clock.progress)
       camera.position.lerp(camera.position.clone().set(framed.x, framed.y, framed.z), 0.12)
-      camera.lookAt(0.2, 0.7, 0.2)
+      camera.lookAt(0.45, 0.78, 0.85)
       return
     }
     const len = camera.position.length()

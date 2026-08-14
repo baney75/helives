@@ -20,7 +20,8 @@
     "audio": "node scripts/generate-audio.mjs",
     "record": "node scripts/record-demo.mjs",
     "targets": "node scripts/compress-target.mjs",
-    "capture": "node scripts/capture-genesis.mjs"
+    "capture": "node scripts/capture-genesis.mjs",
+    "figures": "blender --background --python scripts/build-figures.py"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",
