@@ -25,8 +25,28 @@ export const KJV = {
   gen2_8: 'And the Lord God planted a garden eastward in Eden; and there he put the man whom he had formed.',
   gen2_16_17:
     'And the Lord God commanded the man, saying, Of every tree of the garden thou mayest freely eat: But of the tree of the knowledge of good and evil, thou shalt not eat of it.',
-  gen3_1: 'Now the serpent was more subtil than any beast of the field which the Lord God had made.',
+  gen3_1:
+    'Now the serpent was more subtil than any beast of the field which the Lord God had made. And he said unto the woman, Yea, hath God said, Ye shall not eat of every tree of the garden?',
+  gen3_1_narrator: 'Now the serpent was more subtil than any beast of the field which the Lord God had made.',
+  gen3_1_serpent: 'Yea, hath God said, Ye shall not eat of every tree of the garden?',
+  gen3_2_3:
+    'And the woman said unto the serpent, We may eat of the fruit of the trees of the garden: But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall ye touch it, lest ye die.',
   gen3_4: 'And the serpent said unto the woman, Ye shall not surely die.',
+  gen3_5:
+    'For God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil.',
   gen3_6: 'And when the woman saw that the tree was good for food, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat.',
+  gen3_8_9:
+    'And they heard the voice of the Lord God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the Lord God amongst the trees of the garden. And the Lord God called unto Adam, and said unto him, Where art thou?',
+  gen3_8_9_narrator:
+    'And they heard the voice of the Lord God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the Lord God amongst the trees of the garden. And the Lord God called unto Adam, and said unto him,',
+  gen3_9_god: 'Where art thou?',
+  gen3_10: 'I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.',
+  gen3_11:
+    'Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?',
+  gen3_12: 'The woman whom thou gavest to be with me, she gave me of the tree, and I did eat.',
+  gen3_13_narrator: 'And the Lord God said unto the woman, What is this that thou hast done?',
+  gen3_13_intro: 'And the Lord God said unto the woman,',
+  gen3_13_god: 'What is this that thou hast done?',
+  gen3_13_woman: 'The serpent beguiled me, and I did eat.',
   gen3_23: 'Therefore the Lord God sent him forth from the garden of Eden, to till the ground from whence he was taken.',
 } as const

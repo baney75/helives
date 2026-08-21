@@ -5,14 +5,15 @@ import { AdditiveBlending } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
 import { fillSphere } from '../../lib/rng.ts'
 import type { SceneClock } from '../types.ts'
+import { OceanSurface } from './OceanSurface.tsx'
 
 export function VoidWaters({ clock }: { clock: SceneClock }) {
-  const strength = Math.max(clock.presence.beginning, clock.presence.day2 * 0.35)
+  const garden = Math.max(clock.presence.garden, clock.presence.fall)
+  const strength = Math.max(clock.presence.beginning, clock.presence.day2 * 0.92) * (1 - garden)
   const points = useRef<Points>(null)
   const waters = useRef<Group>(null)
   const count = BUDGET[clock.quality].void
   const positions = useMemo(() => fillSphere(count, 6.2, 19), [count])
-  const segs = clock.quality === 'low' ? 24 : 40
 
   useFrame(({ clock: r3f }) => {
     if (points.current) {
@@ -47,26 +48,12 @@ export function VoidWaters({ clock }: { clock: SceneClock }) {
         />
       </points>
       <group ref={waters}>
-        <mesh rotation={[-Math.PI / 2, 0, 0]}>
-          <circleGeometry args={[5.4, segs]} />
-          <meshStandardMaterial
-            color="#0c1420"
-            roughness={0.18}
-            metalness={0.22}
-            transparent
-            opacity={0.72 * strength}
-          />
+        <OceanSurface strength={strength} y={0} reducedMotion={clock.reducedMotion} quality={clock.quality} />
+        <mesh position={[0, 0.12, -3.8]} rotation={[-Math.PI / 2, 0, 0]}>
+          <ringGeometry args={[1.1, 4.8, 96]} />
+          <meshBasicMaterial color="#9cd9e5" transparent opacity={0.085 * strength} blending={AdditiveBlending} depthWrite={false} />
         </mesh>
-        <mesh position={[0, 0.35, 0]}>
-          <sphereGeometry args={[0.18, 12, 12]} />
-          <meshBasicMaterial
-            color="#fff4d6"
-            transparent
-            opacity={0.22 * strength}
-            toneMapped={false}
-          />
-        </mesh>
-        <pointLight position={[0, 0.6, 0]} intensity={1.4 * strength} color="#c9d6ea" distance={10} />
+        <pointLight position={[0, 0.45, 0]} intensity={1.1 * strength} color="#8aa0c4" distance={12} />
       </group>
     </group>
   )

@@ -3,10 +3,10 @@ import { BrandMark } from './BrandMark.tsx'
 export type NavId = 'home' | 'genesis' | 'scriptures' | 'afterword' | 'faith'
 
 const LINKS: readonly { id: NavId; href: string; label: string }[] = [
-  { id: 'genesis', href: '/genesis', label: 'Genesis' },
   { id: 'scriptures', href: '/scriptures', label: 'Scriptures' },
-  { id: 'afterword', href: '/genesis/afterword', label: 'Afterword' },
   { id: 'faith', href: '/faith', label: 'Faith' },
+  { id: 'afterword', href: '/genesis/afterword', label: 'Afterword' },
+  { id: 'genesis', href: '/genesis', label: 'Genesis' },
 ]
 
 export function SiteNav({ current }: { current?: NavId }) {

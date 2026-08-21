@@ -11,10 +11,16 @@ export const VOICED_IDS = [
   'day3',
   'day4',
   'day5',
+  'day6',
+  'day7',
+  'garden',
+  'fall',
+  'closing',
   'doubt',
+  'measure',
 ] as const satisfies readonly SceneId[]
 
-const VOICED = new Set<string>(VOICED_IDS)
+const VOICED = new Set<string>([...VOICED_IDS, 'trailer'])
 
 export function hasVoice(id: SceneId | 'trailer'): boolean {
   return VOICED.has(id)

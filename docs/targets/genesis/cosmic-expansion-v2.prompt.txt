@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: non-shipping visual target for the opening of a cinematic React Three Fiber Genesis experience
+Primary request: the first expansion of light and created order, an astonishing “big bang” visual translated into authored real-time 3D language without depicting God.
+Scene/backdrop: absolute black void gives way to one compact white-gold origin point erupting into asymmetrical translucent shock shells, filament webs, incandescent plasma ribbons, newborn star-motes, deep indigo ionized haze, and immense parallax depth.
+Composition/framing: ultra-wide 16:9; origin is slightly off-center, not a centered logo; camera appears to move through the expanding shells; foreground filaments cross frame edges while the core remains readable; scale feels cosmic rather than like an atom or solar system.
+Motion implication: multiple expansion velocities, light fronts overtaking particulate matter, curling turbulence, coherent radial momentum.
+Lighting/mood: overwhelming holy awe, brilliant white-gold core against blue-violet darkness, high dynamic range but retained detail.
+Style/medium: premium cinematic 3D concept render feasible as procedural Three.js geometry and particles, physically suggestive but explicitly a visual meditation.
+Constraints: no people, no deity, no hands, no text, no logos, no watermark, no literal explosion smoke, no planets, no orbit rings, no centered sphere floating alone.
+Avoid: atom diagram, lens-flare wallpaper, particle soup, stock galaxy spiral, fireball, flat radial lines, muddy black frame.

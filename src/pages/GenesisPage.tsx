@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { useAutoQuality } from '../hooks/useAutoQuality.ts'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { useGenesisClock } from '../hooks/useGenesisClock.ts'
@@ -7,7 +7,6 @@ import { useNarration } from '../hooks/useNarration.ts'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
 import { readAppMode } from '../lib/mode.ts'
 import { GenesisCanvas } from '../scene/GenesisCanvas.tsx'
-import { Calibrating } from '../ui/Calibrating.tsx'
 import { CinematicOverlay } from '../ui/CinematicOverlay.tsx'
 import { HUD } from '../ui/HUD.tsx'
 
@@ -22,26 +21,31 @@ export function GenesisPage() {
     pause: mode.pause,
   })
 
-  useNarration({
+  const narration = useNarration({
     sceneId: clock.scene.id,
     playing: clock.playing,
     cinematic: mode.cinematic,
-    reducedMotion,
+    speed: clock.speed,
   })
+  const soundWasBlocked = useRef(false)
+
+  useEffect(() => {
+    if (narration.blocked) {
+      soundWasBlocked.current = true
+      clock.pause()
+      return
+    }
+    if (soundWasBlocked.current) {
+      soundWasBlocked.current = false
+      clock.play()
+    }
+  }, [narration.blocked, clock.pause, clock.play])
 
   useEffect(() => {
     document.body.dataset.mode = mode.cinematic ? 'cinematic' : 'interactive'
   }, [mode.cinematic])
 
   usePlaybackKeys(clock.toggle, clock.reset, clock.setProgress)
-
-  if (gate.status !== 'ready') {
-    return (
-      <div className="app">
-        <Calibrating />
-      </div>
-    )
-  }
 
   return (
     <div className={mode.cinematic ? 'app is-cinematic' : 'app'}>
@@ -61,6 +65,11 @@ export function GenesisPage() {
           playing: clock.playing,
         }}
       />
+      {narration.blocked ? (
+        <button type="button" className="sound-gate" onClick={() => void narration.retry()}>
+          Begin with sound
+        </button>
+      ) : null}
       {mode.cinematic ? <CinematicOverlay clock={clock} /> : <HUD clock={clock} />}
     </div>
   )

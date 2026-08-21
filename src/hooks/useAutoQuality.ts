@@ -11,7 +11,7 @@ import {
 } from '../lib/quality.ts'
 
 export type QualityGate =
-  | { status: 'pending' }
+  | { status: 'pending'; quality: Quality }
   | { status: 'ready'; quality: Quality }
 
 export function useAutoQuality(
@@ -46,14 +46,14 @@ function initialGate(search: string, reducedMotion: boolean): QualityGate {
   const override = qualityFromSearch(search)
   if (override) return { status: 'ready', quality: override }
   if (reducedMotion) return { status: 'ready', quality: 'low' }
-  if (typeof window === 'undefined') return { status: 'pending' }
+  if (typeof window === 'undefined') return { status: 'pending', quality: 'medium' }
   const stored = readReusableQuality(
     window.localStorage.getItem(STORAGE_KEY),
     Date.now(),
     hashUa(window.navigator.userAgent),
   )
   if (stored) return { status: 'ready', quality: stored.tier }
-  return { status: 'pending' }
+  return { status: 'pending', quality: 'medium' }
 }
 
 async function measureAndStore(

@@ -20,3 +20,12 @@ describe('createBirdGeometry', () => {
     geometry.dispose()
   })
 })
+
+describe('authored hero creature GLBs', () => {
+  it('ships articulated fish and bird assets with nontrivial geometry', () => {
+    expect(statSync(resolve('public/models/genesis/fish.glb')).size).toBeGreaterThan(60_000)
+    expect(statSync(resolve('public/models/genesis/bird.glb')).size).toBeGreaterThan(35_000)
+  })
+})
+import { statSync } from 'node:fs'
+import { resolve } from 'node:path'

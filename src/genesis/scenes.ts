@@ -1,4 +1,5 @@
 import { KJV } from './kjv.ts'
+import { INTERACTIVE_SECONDS, sceneBounds } from './sceneTiming.ts'
 
 export type SceneId =
   | 'beginning'
@@ -33,13 +34,11 @@ export type Scene = {
   tick: string
 }
 
-export const SCENES: readonly Scene[] = [
+const SCENE_DATA: readonly Omit<Scene, 'start' | 'end'>[] = [
   {
     id: 'beginning',
     name: 'In the beginning',
     kicker: 'Genesis 1',
-    start: 0,
-    end: 0.055,
     persistAfter: false,
     color: '#6b7a99',
     headline: KJV.gen1_1,
@@ -53,8 +52,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day1',
     name: 'Let there be light',
     kicker: 'First day',
-    start: 0.055,
-    end: 0.14,
     persistAfter: true,
     color: '#fff4d6',
     headline: KJV.gen1_3,
@@ -68,8 +65,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day2',
     name: 'The firmament',
     kicker: 'Second day',
-    start: 0.14,
-    end: 0.215,
     persistAfter: true,
     color: '#8eb4e8',
     headline: KJV.gen1_6,
@@ -83,8 +78,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day3',
     name: 'Earth and seas',
     kicker: 'Third day',
-    start: 0.215,
-    end: 0.3,
     persistAfter: true,
     color: '#7a9e6a',
     headline: KJV.gen1_9,
@@ -98,8 +91,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day4',
     name: 'Lights in heaven',
     kicker: 'Fourth day',
-    start: 0.3,
-    end: 0.385,
     persistAfter: true,
     color: '#ffd28a',
     headline: KJV.gen1_16,
@@ -113,8 +104,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day5',
     name: 'Fish and fowl',
     kicker: 'Fifth day',
-    start: 0.385,
-    end: 0.46,
     persistAfter: true,
     color: '#6ea8c9',
     headline: KJV.gen1_20,
@@ -128,8 +117,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day6',
     name: 'Man and woman',
     kicker: 'Sixth day',
-    start: 0.46,
-    end: 0.555,
     persistAfter: true,
     color: '#e8c27a',
     headline: KJV.gen1_27,
@@ -143,8 +130,6 @@ export const SCENES: readonly Scene[] = [
     id: 'day7',
     name: 'God rested',
     kicker: 'Seventh day',
-    start: 0.555,
-    end: 0.605,
     persistAfter: false,
     color: '#f0d9a8',
     headline: KJV.gen2_2,
@@ -158,8 +143,6 @@ export const SCENES: readonly Scene[] = [
     id: 'garden',
     name: 'A garden in Eden',
     kicker: 'Genesis 2',
-    start: 0.605,
-    end: 0.7,
     persistAfter: true,
     color: '#9cbf7a',
     headline: KJV.gen2_8,
@@ -173,8 +156,6 @@ export const SCENES: readonly Scene[] = [
     id: 'fall',
     name: 'The Fall',
     kicker: 'Genesis 3',
-    start: 0.7,
-    end: 0.79,
     persistAfter: true,
     color: '#c45a3a',
     headline: KJV.gen3_6,
@@ -188,12 +169,10 @@ export const SCENES: readonly Scene[] = [
     id: 'closing',
     name: 'Live for Jesus Christ',
     kicker: 'An invitation',
-    start: 0.79,
-    end: 0.855,
     persistAfter: false,
     color: '#e8e4dc',
-    headline: 'Go to church. Live for Jesus Christ.',
-    body: 'This is a visual meditation on Genesis 1 through 3, not a documentary. Hear the Word. Worship with the church. Follow Jesus.',
+    headline: 'Follow Jesus Christ.',
+    body: 'Begin with one of the Gospels. Pray honestly. Find a faithful local church that teaches Scripture and takes your questions seriously.',
     citation: 'Not Scripture',
     kind: 'exhortation',
     audio: 'closing.mp3',
@@ -202,13 +181,11 @@ export const SCENES: readonly Scene[] = [
   {
     id: 'doubt',
     name: 'Got doubt?',
-    kicker: 'A quiet question',
-    start: 0.855,
-    end: 0.9,
+    kicker: 'An honest question',
     persistAfter: false,
     color: '#9bb4d4',
-    headline: 'Got doubt?',
-    body: 'That is allowed. Measurement is not unbelief. Look at what physics can describe. Then read. Then go to church anyway.',
+    headline: 'You do not have to pretend certainty.',
+    body: 'Ask what Genesis says and what the evidence can show. Bring both questions to Christians who will listen before they answer.',
     citation: 'Not Scripture',
     kind: 'science',
     audio: 'doubt.mp3',
@@ -217,19 +194,22 @@ export const SCENES: readonly Scene[] = [
   {
     id: 'measure',
     name: 'What we can measure',
-    kicker: 'ΛCDM, after the Word',
-    start: 0.9,
-    end: 1,
+    kicker: 'What instruments can observe',
     persistAfter: true,
     color: '#c9d6ea',
-    headline: 'The sky still holds a faint heat.',
-    body: 'Physicists describe an expanding universe, leftover microwave light, and an age near 13.8 billion years. That account does not dethrone Genesis. It is what instruments can see.',
-    citation: 'NASA / ESA Planck — not Scripture',
+    headline: 'The sky still carries ancient light.',
+    body: 'Measurements support an expanding universe about 13.8 billion years old and record the cosmic microwave background. These findings describe the physical history we can observe. They do not settle every question Genesis asks.',
+    citation: 'NASA / ESA Planck | not Scripture',
     kind: 'science',
     audio: 'measure.mp3',
     tick: 'Sky',
   },
-] as const
+]
+
+export const SCENES: readonly Scene[] = SCENE_DATA.map((scene) => ({
+  ...scene,
+  ...sceneBounds(scene.id),
+}))
 
 export function findSceneAt(progress: number): Scene {
   const last = SCENES[SCENES.length - 1]
@@ -242,7 +222,7 @@ export function findSceneAt(progress: number): Scene {
   return current
 }
 
-export function scenePresence(progress: number, scene: Scene, fade = 0.035): number {
+export function scenePresence(progress: number, scene: Scene, fade = 1.2 / INTERACTIVE_SECONDS): number {
   const p = clamp01(progress)
   if (p < scene.start - fade) return 0
   if (scene.persistAfter && p >= scene.start) {

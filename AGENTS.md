@@ -62,8 +62,9 @@ Critics: `code-reviewer` (diff), `check-work` (did the request land), visual jud
 - `?cinematic=1` on `/genesis` is the video pass: captions only, locked camera.
 - Dispose manual geometries/materials.
 - Mobile: fewer particles, no bloom. Quality tiers in `src/lib/budget.ts` and `src/lib/quality.ts`.
-- Never commit `.env.local`, `ELEVENLABS_API_KEY`, or any secret. Keys live in `.env.local` only (see `.env.example`).
+- Never commit `.env.local`, `ELEVENLABS_API_KEY`, `ONE_MIN_AI_API_KEY`, or any secret. Keys live in `.env.local` only (see `.env.example`). Do not put keys in README.
 - Voice fails closed: if the mp3 is not in `public/audio/` and listed in `VOICED_IDS`, do not request it. Silence must not pretend to be narration.
+- Narration cache: `pnpm audio` writes `public/audio/<id>.mp3`. Prefer `ONE_MIN_AI_API_KEY` (1min.ai `TEXT_TO_SPEECH`) when ElevenLabs is out of quota. Do not invent spoken files.
 - Security: Worker headers in `worker/headers.ts` (CSP, COOP, CORP, HSTS, blocked probes). The enemy will attack. Do not weaken headers, leak keys, or serve HTML as missing audio.
 
 ## Commands
@@ -75,7 +76,7 @@ pnpm typecheck
 pnpm lint
 pnpm build
 pnpm run deploy
-pnpm audio          # ElevenLabs → public/audio/ (needs .env.local)
+pnpm audio          # 1min.ai or ElevenLabs → public/audio/ (needs .env.local)
 pnpm record         # cinematic trailer (gitignored demo/)
 ```
 

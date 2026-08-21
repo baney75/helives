@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>He Lives — three directions</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      var k = 'helives-three-theme';
+      var s = localStorage.getItem(k);
+      if (s === 'dark' || (!s && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('dark');
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #f6f4ef; --surface: #fff; --border: #ddd8ce; --text: #1a1814; --muted: #5c564c;
+      --accent: #2563eb; --green: #059669; --amber: #d97706; --red: #dc2626;
+      --void: #07060a; --ink: #ece6d8; --fire: #e8b86d; --dawn: #fff4d6; --ground: #1a1008;
+      --font: "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    html.dark {
+      --bg: #0f1117; --surface: #1a1d27; --border: #2a2f3d; --text: #e8eaef; --muted: #9aa3b5;
+      --accent: #6ea8fe; --green: #3dd68c; --amber: #f5c542; --red: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.65; font-size: 17px; }
+    .theme-btn { position: fixed; top: 1rem; right: 1rem; z-index: 20; padding: 0.4rem 0.75rem; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; font-size: 0.8rem; }
+    header { padding: 2.5rem 1.5rem 2rem; border-bottom: 1px solid var(--border); }
+    header h1 { margin: 0 0 0.5rem; font-size: 1.75rem; font-weight: 600; }
+    header .outcome { margin: 0; color: var(--green); font-weight: 500; max-width: 52rem; }
+    header .meta { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9rem; }
+    nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.875rem; }
+    nav a { color: var(--accent); text-decoration: none; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.35rem; margin: 0 0 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    h3 { font-size: 1.1rem; margin: 0 0 0.6rem; color: var(--accent); }
+    p { margin: 0 0 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+    th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+    th { background: var(--surface); }
+    ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.15rem 1.25rem; margin: 1.25rem 0; }
+    .card.rec { border-color: color-mix(in srgb, var(--green) 45%, var(--border)); }
+    .tag { display: inline-block; font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--green); margin-bottom: 0.4rem; }
+    .mock {
+      background: var(--void); color: var(--ink); border-radius: 10px; padding: 1.1rem 1.2rem; margin: 0.75rem 0 0;
+      font-family: Georgia, "Source Serif 4", serif; max-width: 22rem;
+    }
+    .mock .k { color: var(--fire); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mock h4 { margin: 0.35rem 0 0.4rem; font-size: 1.35rem; font-weight: 500; color: var(--dawn); }
+    .mock .v { font-style: italic; margin: 0 0 0.35rem; }
+    .mock .c { color: #9a9184; font-size: 0.78rem; margin: 0 0 0.8rem; }
+    .mock .a { color: var(--fire); font-size: 0.85rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; color: var(--muted); font-size: 0.85rem; max-width: 52rem; margin: 0 auto; }
+    a { color: var(--accent); }
+    code { font-family: var(--mono); font-size: 0.85rem; }
+    .killed { border-left: 4px solid var(--red); }
+  </style>
+</head>
+<body>
+  <button class="theme-btn" type="button" onclick="var d=document.documentElement;d.classList.toggle('dark');localStorage.setItem('helives-three-theme',d.classList.contains('dark')?'dark':'light');">Theme</button>
+
+  <header>
+    <h1>He Lives — three directions</h1>
+    <p class="outcome"><strong>Pick one.</strong> The end is the glory of God, not a feature. The study-music product is dead.</p>
+    <p class="meta">Exploration for Donovan · 2026-08-15 · <code>~/Documents/Software/helives</code></p>
+  </header>
+
+  <nav>
+    <a href="#frame">Frame</a>
+    <a href="#a">A · Witness</a>
+    <a href="#b">B · Word</a>
+    <a href="#c">C · Canon</a>
+    <a href="#compare">Compare</a>
+    <a href="#pick">How to pick</a>
+    <a href="#sources">Sources</a>
+  </nav>
+
+  <main>
+    <section id="frame">
+      <h2>Frame</h2>
+      <p>The site already confesses Nicene faith, quotes the KJV, and says it is not a church. Home already bears John 14:19. The name is a resurrection claim: He lives.</p>
+      <p>Westminster’s first question is settled doctrine: man’s chief end is to glorify God and enjoy him forever. Matthew 5:16 (KJV): “Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.” A website is a work. If the work points at itself — 3D flex, a music service, a login — it is not doing that job.</p>
+      <div class="card killed">
+        <strong>Deleted:</strong> study / background-music app, Spotify/YouTube stream research, $5/month catalog, Clerk-as-the-product, “Genesis bs” replacement-by-player. File removed: <code>docs/plans/study-music-pwa.html</code>.
+      </div>
+    </section>
+
+    <article class="card rec" id="a">
+      <p class="tag">Recommended</p>
+      <h3>A — Witness: He lives. Go to church.</h3>
+      <p>The whole public site is one proclamation. Resurrection, the verse you already chose, a short gospel, the Nicene paragraph you already wrote, a clear “find a church / go on Sunday.” No player. No 3D on the home path. Genesis can stay in the repo, unlinked, or sit as a quiet “meditation” link in the footer — not the product.</p>
+      <div class="mock">
+        <div class="k">He Lives</div>
+        <h4>He is risen.</h4>
+        <p class="v">because I live, ye shall live also.</p>
+        <p class="c">John 14:19 · King James Version</p>
+        <p class="a">Read why · Go to church</p>
+      </div>
+      <p><strong>Why this is strong.</strong> It matches the name. It uses copy you already believe (<code>FaithPage.tsx</code>). It cannot be confused with YouVersion, Spotify, or a Bible video game. Craft still matters — type, space, the mark — but the visitor leaves knowing Christ lives and that they should sit under the Word in a real congregation.</p>
+      <p><strong>Cost.</strong> Weeks, not a year of books. Clerk and PWA are optional later, not the point.</p>
+      <p><strong>Risk.</strong> Looks “too small.” That is the point. A thin page that tells the truth beats a thick one that entertains.</p>
+    </article>
+
+    <article class="card" id="b">
+      <h3>B — Word: one passage, then church</h3>
+      <p>A daily (or on-open) KJV passage with a short exhortation you write, never mixed into the verse. One prayer line. The same church invitation. No music. No infinite feed. Not a Bible app — YouVersion already exists. He Lives would be a lamp, not a library.</p>
+      <div class="mock">
+        <div class="k">Today</div>
+        <h4>Psalm 27:4</h4>
+        <p class="v">One thing have I desired of the Lord…</p>
+        <p class="c">King James Version · not a sermon</p>
+        <p class="a">Amen · The Scriptures · Church</p>
+      </div>
+      <p><strong>Why this is strong.</strong> Glory attaches to the Word, not the engine. You already store canon types and KJV text. No license mess. Scales without a 3D pipeline.</p>
+      <p><strong>Cost.</strong> Medium. Need an editorial rule: who picks the passage, how you keep exhortation from sounding like Scripture.</p>
+      <p><strong>Risk.</strong> Becomes a generic reader. If you pick this, the design and the “go to church” line have to stay louder than the archive.</p>
+    </article>
+
+    <article class="card" id="c">
+      <h3>C — Canon: keep building the rooms</h3>
+      <p>The original contract in <code>AGENTS.md</code>: the whole Protestant canon, same beauty bar as Genesis, no empty book routes. Genesis stays live. The next book is the next offering. 3D and voice stay essential for those rooms, not for the marketing page.</p>
+      <div class="mock">
+        <div class="k">The Scriptures</div>
+        <h4>Genesis is open.</h4>
+        <p class="v">The law and the prophets wait their turn. They are not skipped.</p>
+        <p class="c">Only live books have a door</p>
+        <p class="a">Enter Genesis · The index</p>
+      </div>
+      <p><strong>Why this is strong.</strong> It is the only idea that uses the work already shipped. It treats craft as an offering, not a toy — if you still believe that. No other ministry site is doing the canon this way.</p>
+      <p><strong>Cost.</strong> Years. Each book is a production. You already felt the Genesis room as weight, not worship.</p>
+      <p><strong>Risk.</strong> Spectacle eats the message again. Only pick C if you want to walk back into the rooms on purpose, not because the code is there.</p>
+    </article>
+
+    <section id="compare">
+      <h2>Compare</h2>
+      <table>
+        <thead>
+          <tr><th></th><th>A Witness</th><th>B Word</th><th>C Canon</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Points at</td><td>Christ risen, church</td><td>Today’s Scripture</td><td>The whole Bible, book by book</td></tr>
+          <tr><td>Uses existing site</td><td>Faith + home verse</td><td>KJV + scriptures index</td><td>Genesis + 3D + voice</td></tr>
+          <tr><td>Clerk / PWA</td><td>Not needed</td><td>Optional later</td><td>Not the point</td></tr>
+          <tr><td>Music / stream</td><td>None</td><td>None</td><td>None</td></tr>
+          <tr><td>Time to a true home</td><td>Short</td><td>Medium</td><td>Already live, next book long</td></tr>
+          <tr><td>Failure mode</td><td>Looks too plain</td><td>Becomes YouVersion</td><td>Becomes a demo reel</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pick">
+      <h2>How to pick</h2>
+      <p>If the site exists so a stranger glorifies the Father, pick <strong>A</strong>. If you want them to meet the text every visit, pick <strong>B</strong>. If you still want to spend years making rooms for each book, pick <strong>C</strong>.</p>
+      <p>Reply with <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>. I will write the full implementation plan for that one only.</p>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <table>
+        <thead><tr><th>Claim</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td>Chief end: glorify God and enjoy him forever</td><td>Westminster Shorter Catechism Q1 (public domain)</td></tr>
+          <tr><td>Good works so men glorify the Father</td><td>Matthew 5:16 KJV</td></tr>
+          <tr><td>Nicene confession, KJV only, not a church</td><td><code>src/pages/FaithPage.tsx</code>, <code>AGENTS.md</code></td></tr>
+          <tr><td>Home verse John 14:19; canon index; Genesis only live book</td><td><code>HomePage.tsx</code>, <code>README.md</code></td></tr>
+          <tr><td>Whole-canon calling, 3D essential if books continue</td><td><code>AGENTS.md</code></td></tr>
+          <tr><td>Music / unpaid stream / $5 catalog</td><td>Killed this session. Not a direction.</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Saved: <code>/Users/baney/Documents/Software/helives/docs/plans/three-directions.html</code></p>
+    <p>The music plan file is gone. Nothing has been built. Wait for A, B, or C.</p>
+  </footer>
+</body>
+</html>

@@ -19,13 +19,13 @@ export function FaithPage() {
           copyrighted translations are not used. Words that are not Scripture are marked as such.
         </p>
         <p>
-          This release is Genesis 1–3 through the Fall, with a closing invitation to church and to live for
-          Jesus Christ, then an afterword on modern cosmology. The Scriptures page names the whole Protestant
-          canon. Only Genesis is built. The other books are forthcoming, not pretend pages.
+          The home lamp shows one King James passage each hour. Genesis 1–3 remains a meditation. The
+          Scriptures page names the whole Protestant canon. Unbuilt books are forthcoming, not pretend pages.
         </p>
         <p>
-          This site is not a church, not a sacrament, and not a claim that God endorsed the software. Go to
-          church. Hear the Word. Live for Jesus Christ.
+          He Lives is a reading project. It is not a church, a sacrament, or a claim that God endorsed this
+          software. If you want to follow Christ, begin with one of the Gospels and find a faithful local church
+          where Scripture is taught and honest questions receive patient attention.
         </p>
       </main>
       <SiteFooter />

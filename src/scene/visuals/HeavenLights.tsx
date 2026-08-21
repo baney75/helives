@@ -6,11 +6,14 @@ import { AdditiveBlending, DoubleSide } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
 import { fillSpiral } from '../../lib/rng.ts'
 import type { SceneClock } from '../types.ts'
+import { findSceneAt } from '../../genesis/scenes.ts'
 
 export function HeavenLights({ clock }: { clock: SceneClock }) {
   const garden = Math.max(clock.presence.garden, clock.presence.fall)
+  const current = findSceneAt(clock.progress).id
   const strength =
-    Math.max(clock.presence.day4, clock.presence.day5 * 0.35, clock.presence.day7 * 0.5) * (1 - garden * 0.92)
+    (current === 'day4' ? clock.presence.day4 : current === 'day5' ? 0.16 : current === 'day7' ? 0.14 : 0) *
+    (1 - garden)
   const points = useRef<Points>(null)
   const count = BUDGET[clock.quality].spiral
   const positions = useMemo(() => fillSpiral(count, 4.4, 128, 3), [count])
@@ -57,10 +60,10 @@ export function HeavenLights({ clock }: { clock: SceneClock }) {
           <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         </bufferGeometry>
         <pointsMaterial
-          size={clock.quality === 'low' ? 0.04 : 0.03}
+          size={clock.quality === 'low' ? 0.034 : 0.022}
           color="#ffe7c2"
           transparent
-          opacity={0.9 * strength}
+          opacity={0.58 * strength}
           sizeAttenuation
           depthWrite={false}
           blending={AdditiveBlending}

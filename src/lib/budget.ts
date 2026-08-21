@@ -17,7 +17,7 @@ export const BUDGET: Record<Quality, ParticleBudget> = {
   low: {
     void: 160,
     light: 420,
-    earth: 240,
+    earth: 180,
     stars: 320,
     spiral: 700,
     sparkles: 28,
@@ -29,7 +29,7 @@ export const BUDGET: Record<Quality, ParticleBudget> = {
   medium: {
     void: 320,
     light: 900,
-    earth: 480,
+    earth: 320,
     stars: 800,
     spiral: 1600,
     sparkles: 56,
@@ -41,7 +41,7 @@ export const BUDGET: Record<Quality, ParticleBudget> = {
   high: {
     void: 720,
     light: 2800,
-    earth: 1100,
+    earth: 520,
     stars: 3200,
     spiral: 5200,
     sparkles: 90,

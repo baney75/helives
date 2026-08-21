@@ -7,61 +7,81 @@ export function AfterwordPage() {
   const commentary = COSMOLOGY_SOURCES.filter((source) => source.kind === 'commentary')
 
   return (
-    <div className="site">
+    <div className="site wide afterword">
       <SiteNav current="afterword" />
-      <main className="doc">
-        <p className="hero-kicker">After Genesis</p>
-        <h1>Got doubt?</h1>
-        <p>
-          Genesis remains first here. “In the beginning God created the heaven and the earth.” What follows is
-          not a replacement for that sentence, and not a dunk on scientists. It is a look at what physics can
-          currently describe.
-        </p>
-        <p>
-          In 1927 Georges Lemaître, a Belgian priest and physicist, argued that the universe expands from an
-          early dense state. NASA’s public pages still name him when they explain the Big Bang in plain words.
-          Hubble then showed that distant galaxies recede. That is history of measurement, not a slogan that
-          “the Church invented the Big Bang.”
-        </p>
-        <p>
-          In 1964–65 Arno Penzias and Robert Wilson found leftover microwave noise with a Bell Labs horn in
-          New Jersey. It was the cosmic microwave background: heat from when the universe first became
-          transparent, now about 2.7 K. They received the Nobel Prize in Physics in 1978. ESA’s Planck later
-          mapped that glow in fine detail. Under the standard ΛCDM model, the age is near 13.8 billion years.
-          NASA states that figure in its education pages. Much remains unknown: inflation’s cause, dark matter,
-          dark energy.
-        </p>
-        <p>
-          A Christian may read those pages without treating Genesis as a lab notebook, and without treating
-          the lab as a god. Measurement is a gift. It does not dethrone the Word.
-        </p>
-        <h2>Primary pages</h2>
-        <ul className="sources">
-          {primary.map((source) => (
-            <li key={source.id}>
-              <a href={source.href} rel="noopener noreferrer">
-                {source.title}
-              </a>
-              <span> — {source.note}</span>
-            </li>
-          ))}
-        </ul>
-        <h2>Commentary, not a paper</h2>
-        <ul className="sources">
-          {commentary.map((source) => (
-            <li key={source.id}>
-              <a href={source.href} rel="noopener noreferrer">
-                {source.title}
-              </a>
-              <span> — {source.note}</span>
-            </li>
-          ))}
-        </ul>
-        <p>
+      <main>
+        <section className="doubt-hero" aria-labelledby="doubt-title">
+          <div className="doubt-aperture" aria-hidden="true" />
+          <p className="hero-kicker">An honest question</p>
+          <h1 id="doubt-title">Got doubt?</h1>
+          <p className="doubt-lead">
+            You do not have to pretend certainty. Name the question clearly, read Scripture carefully, and
+            examine the evidence. Speak with Christians who will listen before they answer.
+          </p>
+          <nav className="doubt-paths" aria-label="Ways to continue">
+            <a href="/scriptures"><span>01</span> Read Genesis</a>
+            <a href="#measure"><span>02</span> Examine evidence</a>
+            <a href="/faith"><span>03</span> What Christians confess</a>
+          </nav>
+        </section>
+
+        <section className="doubt-essay" id="measure">
+          <div>
+            <p className="hero-kicker">Scripture and measurement</p>
+            <h2>Read the text. Examine the evidence.</h2>
+          </div>
+          <div className="doubt-copy">
+            <p>
+              Genesis opens with a claim about God: “In the beginning God created the heaven and the earth.”
+              Science studies measurable features of the physical world. These are different kinds of inquiry,
+              and both deserve careful reading.
+            </p>
+            <p>
+              Georges Lemaître, a Belgian priest and physicist, argued for an expanding universe from an early
+              dense state. Penzias and Wilson later detected the cosmic microwave background. ESA’s Planck
+              mission mapped that ancient light in fine detail. The standard ΛCDM model places the universe’s
+              age near 13.8 billion years.
+            </p>
+            <p>
+              These measurements describe the physical history we can observe. They do not settle the
+              theological questions Genesis asks about God, creation, human beings, sin, and responsibility.
+            </p>
+          </div>
+        </section>
+
+        <section className="source-ledger" aria-labelledby="source-title">
+          <p className="hero-kicker">Read beyond this page</p>
+          <h2 id="source-title">Sources and further reading</h2>
+          <div className="source-columns">
+            <SourceList title="Primary pages" sources={primary} />
+            <SourceList title="Commentary" sources={commentary} />
+          </div>
+        </section>
+
+        <div className="doubt-return">
           <a href="/genesis">Return to Genesis</a>
-        </p>
+          <a href="/scriptures">Open the Scriptures</a>
+        </div>
       </main>
       <SiteFooter />
     </div>
+  )
+}
+
+function SourceList({ title, sources }: { title: string; sources: typeof COSMOLOGY_SOURCES }) {
+  return (
+    <section>
+      <h3>{title}</h3>
+      <ul className="sources">
+        {sources.map((source) => (
+          <li key={source.id}>
+            <a href={source.href} rel="noopener noreferrer">
+              {source.title}
+            </a>
+            <span>{source.note}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }

@@ -18,7 +18,9 @@ Mood: reverent, quiet, specific. Not cute. Not cinematic-trailer chrome on the m
 | `--ink` | `#ece6d8` | Primary text (parchment, not pure white) |
 | `--muted` | `#9a9184` | Secondary text |
 | `--fire` | `#e8b86d` | Accent, links, live book titles, mark, primary button |
-| `--dawn` | `#fff4d6` | Point of light in the mark; Day 1 highlights |
+| `--dawn` | `#fff4d6` | Point of light in the mark; set-apart words |
+| `--speech` | `#d06050` | Words of Christ (red letter) |
+| `--speech-lit` | `#e07a6a` | Set-apart words inside speech |
 | `--ground` | `#1a1008` | Text on gold buttons |
 | `--glass` | `rgba(7, 6, 10, 0.62)` | HUD readouts only |
 | `--line` | `rgba(236, 230, 216, 0.14)` | Hairline rules |
@@ -27,9 +29,11 @@ Mood: reverent, quiet, specific. Not cute. Not cinematic-trailer chrome on the m
 | `--mono` | ui-monospace | Kickers, quality readouts |
 | Spacing | 4 / 8 / 12 / 16 / 24 / 32 / 48 | `--space-1` … `--space-7` |
 
-Two families. Gold is the only accent. Self-hosted woffs in `public/fonts/` (OFL). Do not call Google Fonts.
+Two families. Gold is the only chrome accent. Liturgical red is reserved for the words of Christ. Self-hosted woffs in `public/fonts/` (OFL). Do not call Google Fonts.
 
-Contrast: ink on void and fire on void must stay WCAG AA. Do not drop body to `--muted` at small sizes on busy 3D.
+Do not install Canvas UI (`npx shadcn add @canvas-ui/*`). Experimental HTML-in-canvas, Commons Clause. Take pause-offscreen and reduced-motion discipline only.
+
+Contrast: ink on void, fire on void, and `--speech` on void must stay WCAG AA. Do not drop body to `--muted` at small sizes on busy 3D.
 
 ## Mark
 
@@ -43,7 +47,7 @@ Latin cross with a point of light at the crossing: empty tomb / resurrection, no
 ## Type
 
 - Home H1 is the brand name at display size (`clamp(64px, 14vw, 120px)`), not a slogan that overpowers it.
-- Verse under the name: Cormorant italic. Citation in muted kicker case.
+- Verse under the name: Cormorant italic (hosted 500/600 italic woffs, not a faux oblique). Citation in muted kicker case.
 - Body 17–18px, line-height ~1.55–1.65, measure ~42em on docs, ~52rem site column, ~68rem on `/scriptures`.
 - Kickers: uppercase, wide tracking, `--fire`, 10–11px. One kicker per section.
 - If deleting 30% of the copy improves the page, keep deleting.
@@ -52,7 +56,7 @@ Latin cross with a point of light at the crossing: empty tomb / resurrection, no
 
 | Surface | Pattern |
 |---------|---------|
-| Home | Full-bleed night, radial gold wash, mark, name, John 14:19, two buttons. No cards. |
+| Home | Full-bleed night, mark, He Lives, this hour’s KJV (words of Christ in red), a motif sign beside the type, Explore more, new scripture every hour. No cards. No wash. No church button. |
 | Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
 | Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
 | Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
@@ -90,7 +94,7 @@ Do not point og:image at a CDN or a generated Imagine file. Public share art is 
 - No stock crosses, doves, or sunrise photographs as the brand.
 - No “unlock your potential” ministry slogans. Invitation is: go to church, hear the Word, live for Jesus Christ.
 - No fake 66-book library of empty tiles.
-- Particle fields and bloom never win over the verse.
+- Particle fields and bloom never win over the verse. Hour transitions leave no wash, card, or leftover motion.
 
 ## Later books
 

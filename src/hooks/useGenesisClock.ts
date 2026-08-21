@@ -1,13 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { findSceneAt, presenceById, type Scene } from '../genesis/scenes.ts'
-import {
-  cameraDistance,
-  CINEMATIC_HOLD_SECONDS,
-  CINEMATIC_SECONDS,
-  INTERACTIVE_SECONDS,
-  OPENING_HOLD_SECONDS,
-  visualScale,
-} from '../genesis/time.ts'
+import { advanceProgress, cameraDistance, clampedFrameDelta, visualScale } from '../genesis/time.ts'
 
 export type GenesisClock = {
   progress: number
@@ -31,17 +24,13 @@ type ClockStart = {
 }
 
 export function useGenesisClock(
-  reducedMotion: boolean,
+  _reducedMotion: boolean,
   cinematic = false,
   start: ClockStart = {},
 ): GenesisClock {
   const [progress, setProgressState] = useState(start.progress ?? 0)
-  const [playing, setPlaying] = useState(!reducedMotion && !start.pause)
+  const [playing, setPlaying] = useState(!start.pause)
   const [speed, setSpeed] = useState(1)
-
-  useEffect(() => {
-    if (reducedMotion) setPlaying(false)
-  }, [reducedMotion])
 
   const setProgress = useCallback((value: number | ((current: number) => number)) => {
     setProgressState((current) => {
@@ -57,7 +46,7 @@ export function useGenesisClock(
     let frame = 0
     let last = performance.now()
     const tick = (now: number) => {
-      const dt = (now - last) / 1000
+      const dt = clampedFrameDelta(now, last)
       last = now
       setProgressState((current) =>
         advanceProgress(current, dt, cinematic, speed, holdRef, () => setPlaying(false)),
@@ -83,8 +72,8 @@ export function useGenesisClock(
   const reset = useCallback(() => {
     holdRef.current = 0
     setProgressState(0)
-    setPlaying(!reducedMotion)
-  }, [reducedMotion])
+    setPlaying(true)
+  }, [])
 
   return {
     progress,
@@ -98,26 +87,4 @@ export function useGenesisClock(
     setSpeed,
     ...derived,
   }
-}
-
-function advanceProgress(
-  current: number,
-  dt: number,
-  cinematic: boolean,
-  speed: number,
-  holdRef: { current: number },
-  stop: () => void,
-): number {
-  if (current <= 0) {
-    holdRef.current += dt
-    const hold = cinematic ? CINEMATIC_HOLD_SECONDS : OPENING_HOLD_SECONDS
-    if (holdRef.current < hold) return 0
-  }
-  const journey = cinematic ? CINEMATIC_SECONDS : INTERACTIVE_SECONDS
-  const next = current + dt / (journey / speed)
-  if (next >= 1) {
-    stop()
-    return 1
-  }
-  return next
 }

@@ -3,9 +3,9 @@ import { BufferGeometry, CatmullRomCurve3, Float32BufferAttribute, Vector3 } fro
 /** Flat pointed leaf in XY. Thickness is on Z so a canopy of these reads as foliage, not balls. */
 export function createLeafGeometry(): BufferGeometry {
   const positions = [
-    0, 0.11, 0, -0.045, 0.02, 0.006, 0.045, 0.02, 0.006, -0.038, -0.05, 0.004, 0.038, -0.05, 0.004,
-    0, -0.1, 0, -0.045, 0.02, -0.006, 0.045, 0.02, -0.006, -0.038, -0.05, -0.004, 0.038, -0.05,
-    -0.004,
+    0, 0.14, 0.012, -0.06, 0.025, 0, 0.06, 0.025, 0, -0.052, -0.065, 0, 0.052, -0.065, 0,
+    0, -0.125, 0.008, -0.06, 0.025, -0.008, 0.06, 0.025, -0.008, -0.052, -0.065, -0.006, 0.052, -0.065,
+    -0.006,
   ]
   const idx = [
     0, 1, 2, 1, 3, 2, 2, 3, 4, 3, 5, 4, 0, 2, 7, 0, 6, 1, 6, 8, 1, 1, 8, 3, 7, 2, 9, 2, 4, 9, 8,

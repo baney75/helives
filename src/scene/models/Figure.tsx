@@ -1,26 +1,34 @@
-import { useTexture } from '@react-three/drei'
+import { Clone, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { useLayoutEffect, useRef } from 'react'
-import { DoubleSide, SRGBColorSpace, type Mesh } from 'three'
+import { useRef } from 'react'
+import type { Group } from 'three'
 import type { Vec3 } from './eden.ts'
 
 export type FigureRole = 'man' | 'woman'
 export type FigurePoseId = 'stand' | 'reach' | 'eat' | 'offer' | 'depart'
 
-const MAPS = {
-  man: '/models/genesis/man.png',
-  woman: '/models/genesis/woman.png',
+const SRC = {
+  man: '/models/genesis/man.glb',
+  woman: '/models/genesis/woman.glb',
 } as const
 
-const SIZE: Record<FigureRole, readonly [number, number]> = {
-  man: [0.58, 1.62],
-  woman: [0.54, 1.54],
+const LEAN: Record<FigurePoseId, number> = {
+  stand: 0,
+  offer: 0.06,
+  reach: 0.16,
+  eat: 0.22,
+  depart: 0.08,
 }
 
 export function Figure({
   role,
+  pose,
   position,
+  rotationY = 0,
   fade = 1,
+  holdFruit = false,
+  fruitColor = '#8a2a22',
+  reducedMotion = false,
 }: {
   role: FigureRole
   pose: FigurePoseId
@@ -29,35 +37,38 @@ export function Figure({
   fade?: number
   holdFruit?: boolean
   fruitColor?: string
+  reducedMotion?: boolean
 }) {
+  const root = useRef<Group>(null)
+  const gltf = useGLTF(SRC[role])
   if (fade < 0.04) return null
-  return <PhotoPerson role={role} position={position} />
-}
-
-function PhotoPerson({ role, position }: { role: FigureRole; position: Vec3 }) {
-  const map = useTexture(MAPS[role])
-  const mesh = useRef<Mesh>(null)
-  const [width, height] = SIZE[role]
-
-  useLayoutEffect(() => {
-    map.colorSpace = SRGBColorSpace
-    map.anisotropy = 8
-    map.needsUpdate = true
-  }, [map])
-
-  useFrame(({ camera }) => {
-    const node = mesh.current
-    if (!node) return
-    node.rotation.y = Math.atan2(camera.position.x - node.position.x, camera.position.z - node.position.z)
+  const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
+  const figureScale = role === 'man' ? 0.9 : 0.88
+  useFrame(({ clock }) => {
+    const group = root.current
+    if (!group) return
+    const t = reducedMotion ? 0 : clock.elapsedTime
+    const phase = role === 'man' ? 0 : Math.PI * 0.7
+    const walking = pose === 'depart'
+    const breath = Math.sin(t * 1.15 + phase) * 0.006
+    const step = walking ? Math.abs(Math.sin(t * 3.2 + phase)) * 0.028 : 0
+    group.position.set(position[0], position[1] + breath + step, position[2])
+    group.rotation.set(0, rotationY + (walking ? Math.sin(t * 1.6 + phase) * 0.035 : 0), lean + Math.sin(t * 0.9 + phase) * 0.012)
   })
-
   return (
-    <mesh ref={mesh} position={[position[0], position[1] + height * 0.5, position[2]]}>
-      <planeGeometry args={[width, height]} />
-      <meshBasicMaterial map={map} transparent alphaTest={0.28} side={DoubleSide} toneMapped={false} />
-    </mesh>
+    <group ref={root} position={position} rotation={[0, rotationY, lean]} scale={figureScale}>
+      <group scale={fade}>
+        <Clone object={gltf.scene} />
+      </group>
+      {holdFruit ? (
+        <mesh position={[role === 'woman' ? 0.16 : 0.18, 0.92, 0.1]}>
+          <sphereGeometry args={[0.045, 12, 12]} />
+          <meshStandardMaterial color={fruitColor} roughness={0.42} />
+        </mesh>
+      ) : null}
+    </group>
   )
 }
 
-useTexture.preload(MAPS.man)
-useTexture.preload(MAPS.woman)
+useGLTF.preload(SRC.man)
+useGLTF.preload(SRC.woman)

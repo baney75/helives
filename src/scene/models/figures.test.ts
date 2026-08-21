@@ -1,6 +1,8 @@
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
+import { sceneBounds } from '../../genesis/sceneTiming.ts'
+import { edenPairStory } from './eden.ts'
 
 function gltfNodeNames(path: string): string[] {
   const buf = readFileSync(path)
@@ -10,14 +12,56 @@ function gltfNodeNames(path: string): string[] {
 }
 
 describe('authored figure GLBs', () => {
+  it('keeps the single pair visible through the Fall and expulsion beats', () => {
+    const fall = sceneBounds('fall')
+    const atFall = (local: number) => fall.start + (fall.end - fall.start) * local
+    expect(edenPairStory(atFall(0.5))).toMatchObject({ leave: 0, fade: 1 })
+    expect(edenPairStory(atFall(0.9)).leave).toBeGreaterThan(0.8)
+    expect(edenPairStory(atFall(0.9)).fade).toBe(1)
+    const closing = sceneBounds('closing')
+    expect(edenPairStory(closing.end).fade).toBeCloseTo(0)
+  })
+
+  it('draws the GLB, not the photo plane', () => {
+    const src = readFileSync(resolve('src/scene/models/Figure.tsx'), 'utf8')
+    expect(src).toContain('useGLTF')
+    expect(src).toContain('/models/genesis/man.glb')
+    expect(src).toContain('/models/genesis/woman.glb')
+    expect(src).not.toContain('PhotoPerson')
+    expect(src).not.toContain('man.png')
+    expect(src).not.toContain('woman.png')
+  })
+
   it('ships man and woman meshes with a human hierarchy, not a single bean', () => {
     for (const role of ['man', 'woman'] as const) {
-      const cutout = readFileSync(resolve(`public/models/genesis/${role}.png`))
-      expect(cutout.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))
-      expect(cutout.byteLength).toBeGreaterThan(20_000)
+      expect(existsSync(resolve(`public/models/genesis/${role}.png`))).toBe(false)
       const path = resolve(`public/models/genesis/${role}.glb`)
+      expect(readFileSync(path).byteLength).toBeGreaterThan(80_000)
       const names = gltfNodeNames(path)
-      expect(names).toEqual(expect.arrayContaining(['Root', 'Head', 'Neck', 'Robe']))
+      expect(names).toEqual(
+        expect.arrayContaining([
+          'Root',
+          'Head',
+          'Neck',
+          'Robe',
+          'Sash',
+          'LEye',
+          'REye',
+          'LEar',
+          'REar',
+          'LLowerLeg',
+          'RLowerLeg',
+        ]),
+      )
     }
+    const figureSource = readFileSync(resolve('src/scene/models/Figure.tsx'), 'utf8')
+    expect(figureSource).not.toMatch(/\.png/)
+  })
+
+  it('keeps the six-angle acceptance renderer in the repository', () => {
+    const renderer = readFileSync(resolve('scripts/render-figure-turntables.py'), 'utf8')
+    expect(renderer).toContain('ANGLES = (0, 60, 120, 180, 240, 300)')
+    expect(renderer).toContain('man')
+    expect(renderer).toContain('woman')
   })
 })

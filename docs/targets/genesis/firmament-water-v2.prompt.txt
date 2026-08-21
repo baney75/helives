@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: non-shipping visual target for a cinematic React Three Fiber Genesis sequence
+Primary request: Genesis 1 firmament and divided waters, rendered as a breathtaking living 3D environment to guide a real-time WebGL implementation.
+Scene/backdrop: immense primordial ocean extending to the horizon; lower waters have translucent rolling swells, foam lace, deep teal variation, subsurface light, mist, and believable wave rhythm; upper waters form a vast luminous suspended ocean canopy separated by a majestic open firmament.
+Composition/framing: ultra-wide 16:9 low camera skimming just above the water, strong foreground-to-horizon depth, clear visual separation between waters below, open sky, and waters above.
+Lighting/mood: holy awe without depicting God; dawn-white and pale gold shafts opening through indigo storm mist.
+Style/medium: premium authored 3D cinematic concept render, physically coherent water, painterly restraint, suitable for Three.js translation.
+Constraints: no people, no animals, no text, no logos, no watermark, no planets, no literal deity, no flat rings, no plastic water, no game UI.
+Avoid: muddy blackness, featureless blue plane, noisy particle soup, stock fantasy portal, photobashed seams.

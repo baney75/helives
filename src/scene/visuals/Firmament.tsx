@@ -2,11 +2,13 @@ import { useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef } from 'react'
 import { Color, DoubleSide, ShaderMaterial, type Mesh } from 'three'
 import type { SceneClock } from '../types.ts'
+import { OceanSurface } from './OceanSurface.tsx'
 
 export function Firmament({ clock }: { clock: SceneClock }) {
   const mesh = useRef<Mesh>(null)
   const bowl = useRef<Mesh>(null)
-  const strength = Math.max(clock.presence.day2, clock.presence.day4 * 0.4)
+  const garden = Math.max(clock.presence.garden, clock.presence.fall)
+  const strength = Math.max(clock.presence.day2, clock.presence.day4 * 0.4) * (1 - garden)
   const segs = clock.quality === 'low' ? 24 : 40
   const material = useMemo(
     () =>
@@ -34,7 +36,7 @@ export function Firmament({ clock }: { clock: SceneClock }) {
           void main() {
             float h = normalize(vPos).y;
             float band = smoothstep(-0.15, 0.05, h) * smoothstep(0.85, 0.2, h)
-              + smoothstep(0.02, 0, abs(h)) * 0.55;
+              + smoothstep(0.02, 0.0, abs(h)) * 0.55;
             float wave = 0.5 + 0.5 * sin(vPos.x * 1.4 + uTime * 0.35);
             float alpha = band * (0.18 + wave * 0.12) * uIntensity;
             gl_FragColor = vec4(uColor, alpha);
@@ -80,6 +82,14 @@ export function Firmament({ clock }: { clock: SceneClock }) {
           depthWrite={false}
         />
       </mesh>
+      <OceanSurface
+        strength={clock.presence.day2 * (1 - garden) * 0.88}
+        y={4.2}
+        overhead
+        reducedMotion={clock.reducedMotion}
+        quality={clock.quality}
+        scale={1.12}
+      />
     </group>
   )
 }

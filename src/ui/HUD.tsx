@@ -74,8 +74,9 @@ export function HUD({ clock }: HUDProps) {
         </div>
         <Timeline progress={clock.progress} sceneId={scene.id} onScrub={clock.setProgress} />
         <p className="disclaimer">
-          A visual meditation on Genesis 1–3. Scripture is the King James Version, public domain. Spoken KJV
-          covers Days 1–5 and Got doubt?; later scenes stay on screen. This is not a documentary.
+          A visual meditation on Genesis 1–3. Scripture is the King James Version, public domain. Spoken
+          narration covers the days of creation, Eden, the Fall, and the invitation. This is not a
+          documentary.
         </p>
       </footer>
     </div>

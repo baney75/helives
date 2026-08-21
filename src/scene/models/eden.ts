@@ -1,4 +1,5 @@
 import type { Quality } from '../../lib/budget.ts'
+import { sceneBounds } from '../../genesis/sceneTiming.ts'
 import { fillDisk, mulberry32 } from '../../lib/rng.ts'
 
 export type Vec3 = readonly [number, number, number]
@@ -27,6 +28,7 @@ export const FALL_REQUIRED: readonly FallPartId[] = [
   'eaten',
   'expulsion-man',
   'expulsion-woman',
+  'east-flame',
 ]
 
 /** Shared world layout. Garden and Fall both read these positions. */
@@ -64,16 +66,16 @@ export const EDEN = {
   man: {
     id: 'man' as const,
     garden: [0.22, 0, 1.38] as const satisfies Vec3,
-    depart: [2.85, 0, 1.55] as const satisfies Vec3,
+    depart: [3.02, 0, 1.76] as const satisfies Vec3,
   },
   woman: {
     id: 'woman' as const,
     garden: [0.78, 0, 1.28] as const satisfies Vec3,
     reach: [0.88, 0, 0.82] as const satisfies Vec3,
-    depart: [3.25, 0, 1.72] as const satisfies Vec3,
+    depart: [3.48, 0, 1.94] as const satisfies Vec3,
   },
   east: {
-    flame: [3.85, 0, 1.15] as const satisfies Vec3,
+    flame: [2.72, 0, 0.72] as const satisfies Vec3,
   },
 } as const
 
@@ -81,8 +83,68 @@ export function add3(a: Vec3, b: Vec3): Vec3 {
   return [a[0] + b[0], a[1] + b[1], a[2] + b[2]]
 }
 
+export function lerp3(a: Vec3, b: Vec3, t: number): Vec3 {
+  const u = Math.min(1, Math.max(0, t))
+  return [a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u]
+}
+
 export function knowledgeFruitWorld(): Vec3 {
   return add3(EDEN.knowledge.position, EDEN.knowledge.fruitLocal)
+}
+
+export const FALL_HANDS = {
+  woman: [EDEN.woman.reach[0] + 0.13, 0.67, EDEN.woman.reach[2] + 0.12] as const satisfies Vec3,
+  man: [EDEN.man.garden[0] + 0.17, 0.65, EDEN.man.garden[2] + 0.1] as const satisfies Vec3,
+}
+
+export function fallFruitStory(beat: number): {
+  visible: boolean
+  from: Vec3
+  to: Vec3
+  phase: number
+  eatenScale: number
+} {
+  const b = Math.min(1, Math.max(0, beat))
+  let from: Vec3 = knowledgeFruitWorld()
+  let to: Vec3 = FALL_HANDS.woman
+  let phase = smoothstep((b - 0.12) / 0.2)
+  if (b >= 0.32 && b < 0.5) {
+    from = FALL_HANDS.woman
+    to = FALL_HANDS.woman
+    phase = 1
+  } else if (b >= 0.5) {
+    from = FALL_HANDS.woman
+    to = FALL_HANDS.man
+    phase = smoothstep((b - 0.5) / 0.18)
+  }
+  return {
+    visible: b >= 0.12 && b < 0.74,
+    from,
+    to,
+    phase,
+    eatenScale: b > 0.68 ? Math.max(0.02, 1 - (b - 0.68) / 0.06) : 1,
+  }
+}
+
+function smoothstep(value: number): number {
+  const t = Math.min(1, Math.max(0, value))
+  return t * t * (3 - 2 * t)
+}
+
+/**
+ * Pair timing from clock progress. Do not key this off presence.fall:
+ * persistAfter holds that at 1 for the rest of the journey, which hid
+ * Adam and Eve for the entire Fall beat.
+ */
+export function edenPairStory(progress: number): { beat: number; leave: number; fade: number } {
+  const p = Math.min(1, Math.max(0, progress))
+  const fall = sceneBounds('fall')
+  const closing = sceneBounds('closing')
+  const beat = Math.min(1, Math.max(0, (p - fall.start) / (fall.end - fall.start)))
+  const leave = Math.min(1, Math.max(0, (beat - 0.72) / 0.18))
+  const fadeWindow = Math.max(0.001, (closing.end - closing.start) * 0.55)
+  const fade = p < fall.end ? 1 : Math.min(1, Math.max(0, 1 - (p - fall.end) / fadeWindow))
+  return { beat, leave, fade }
 }
 
 export function gardenParts(): readonly { id: GardenPartId; position: Vec3 }[] {
@@ -126,7 +188,7 @@ export function herbCount(quality: Quality): number {
 }
 
 export function canopyLeafCount(quality: Quality, kind: 'life' | 'knowledge'): number {
-  const base = kind === 'life' ? 120 : 180
+  const base = kind === 'life' ? 520 : 760
   if (quality === 'low') return Math.floor(base * 0.5)
   if (quality === 'medium') return Math.floor(base * 0.75)
   return base

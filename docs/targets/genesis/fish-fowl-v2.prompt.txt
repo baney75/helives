@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: non-shipping visual target for a cinematic React Three Fiber Genesis sequence
+Primary request: Genesis 1 fish and fowl newly alive, designed to guide expressive low-poly but premium real-time WebGL models and animation.
+Scene/backdrop: rich living ocean with refracted sunbeams, schools of anatomically readable fish at different depths, rays and small sea life; above, elegant birds with convincing wing anatomy bank and cross the open firmament.
+Composition/framing: cinematic 16:9 split-level waterline composition; one hero fish in near foreground with tapered body, fins, gills and tail motion; one hero bird banking toward camera with layered wing feathers; coherent migration arcs rather than random clutter.
+Lighting/mood: joyful first-life energy, luminous gold-blue daylight, expansive and graceful.
+Style/medium: premium stylized 3D concept art, organic silhouettes, handcrafted low-poly facets with sophisticated materials, feasible in React Three Fiber.
+Constraints: no people, no text, no logos, no watermark, no capsules, no spheres used as animals, no repeated identical clones, no aquarium glass.
+Avoid: toy fish, paper birds, stiff T poses, particle swarms substituting for creatures, muddy silhouettes.

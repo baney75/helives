@@ -13,9 +13,10 @@ Voice is essential. A book that only shows text while Genesis speaks is unfinish
 ## Provider
 
 - Script: `scripts/generate-audio.mjs` (`pnpm audio`)
-- Key: `ELEVENLABS_API_KEY` in `.env.local` only. Never print it. Never commit it.
-- Default voice: **George** (`JBFqnCBsd6RMkjVDRZzb` in `VOICES.george`). Override with `ELEVENLABS_VOICE_ID` locally if testing; do not change production without an explicit request.
-- Model: `eleven_multilingual_v2`. Settings in the script (stability 0.72, low style). ffmpeg loudnorm + short echo when ffmpeg exists.
+- Keys in `.env.local` only. Never print them. Never commit them. Never put them in README.
+- Prefer `ONE_MIN_AI_API_KEY` (1min.ai `POST /api/features`, type `TEXT_TO_SPEECH`, model `tts-1-hd`, voice `onyx`) when ElevenLabs quota is empty.
+- Direct ElevenLabs fallback: `ELEVENLABS_API_KEY`. Default voice **George** (`JBFqnCBsd6RMkjVDRZzb`). Model `eleven_multilingual_v2`.
+- ffmpeg loudnorm + short echo when ffmpeg exists.
 
 `pnpm audio --voices` writes A/B tests to `demo/voice-tests/` (gitignored). Do not publish those.
 

@@ -22,7 +22,7 @@ Tokens in `src/index.css`. Mark in `src/site/BrandMark.tsx`. If the first viewpo
 
 ## Layout rules
 
-- Home is not a card grid. Brand, verse (John 14:19 KJV), one lead sentence, Enter Genesis + The Scriptures.
+- Home is not a card grid. Brand, this hour’s KJV (words of Christ in red), a relevant SVG sign beside the verse, Explore more, new scripture every hour. Genesis is not the primary CTA. No church button on the lamp.
 - `/scriptures` is a typographic canon index (`canon-division` / `canon-book`). Forthcoming books are named rows, not disabled cards.
 - Docs (Faith, afterword) are a narrow reading column.
 - Primary button is fire on ground. Quiet button is hairline. 44px min height.

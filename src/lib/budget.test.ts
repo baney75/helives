@@ -14,7 +14,7 @@ describe('BUDGET', () => {
   it('keeps high desktop counts explicit', () => {
     expect(BUDGET.high.void).toBe(720)
     expect(BUDGET.high.light).toBe(2800)
-    expect(BUDGET.high.earth).toBe(1100)
+    expect(BUDGET.high.earth).toBe(520)
     expect(BUDGET.high.stars).toBe(3200)
     expect(BUDGET.high.spiral).toBe(5200)
   })

@@ -1,0 +1,10 @@
+Use case: ui-mockup
+Asset type: non-shipping visual target for the HeLives “Got doubt?” page
+Primary request: a dignified, emotionally direct Christian inquiry page that welcomes honest doubt and leads toward Scripture, church, and thoughtful evidence without looking like marketing.
+Scene/backdrop: near-black warm charcoal page with a single distant dawn aperture over quiet water, subtle gold rule and paper-grain atmosphere.
+Composition/framing: refined responsive website hero in a 16:9 desktop frame; spare editorial typography hierarchy; central question area, concise supportive copy, three restrained pathways represented as simple editorial links rather than cards; abundant negative space.
+Text (verbatim): "Got doubt?"
+Style/medium: premium web design concept, literary editorial restraint, Cormorant-like serif mood with legible supporting sans, sacred but not ornamental.
+Lighting/mood: honest, calm, intellectually serious, hopeful.
+Constraints: render only the exact title text clearly if text is shown; no fake testimonials, no gradients everywhere, no glass cards, no stock photography, no crosses as decoration overload, no logos, no watermark.
+Avoid: SaaS landing page, sermon poster, manipulative fear, crowded resource directory, neon cyber style.

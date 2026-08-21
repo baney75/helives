@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Generate narration mp3s with ElevenLabs.
- * Requires ELEVENLABS_API_KEY in .env.local. Never prints the key.
+ * Generate reverent, role-aware narration. Never prints provider keys.
  */
 import { spawn } from 'node:child_process'
-import { mkdir, readFile, writeFile, access } from 'node:fs/promises'
+import { mkdir, readFile, writeFile, access, rm } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { NARRATION, SCENE_VOICE_CUES } from '../src/genesis/script.ts'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const outDir = path.join(root, 'public', 'audio')
@@ -18,28 +18,12 @@ const VOICES = {
   brian: 'nPczCjzI2devNBz1zQrb',
 }
 
-/** Keep in sync with src/genesis/script.ts */
-const NARRATION = {
-  beginning:
-    'In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.',
-  day1: 'And God said, Let there be light: and there was light. And God saw the light, that it was good.',
-  day2: 'And God said, Let there be a firmament in the midst of the waters. And God called the firmament Heaven.',
-  day3: 'And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so. And God said, Let the earth bring forth grass. And God saw that it was good.',
-  day4: 'And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also. And God saw that it was good.',
-  day5: 'And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth. And God saw that it was good.',
-  day6:
-    'And God said, Let us make man in our image, after our likeness. So God created man in his own image, in the image of God created he him; male and female created he them. And God saw every thing that he had made, and, behold, it was very good.',
-  day7: 'And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made. And God blessed the seventh day, and sanctified it.',
-  garden:
-    'And the Lord God planted a garden eastward in Eden; and there he put the man whom he had formed. And the Lord God commanded the man, saying, Of every tree of the garden thou mayest freely eat: but of the tree of the knowledge of good and evil, thou shalt not eat of it.',
-  fall: 'Now the serpent was more subtil than any beast of the field. And the serpent said unto the woman, Ye shall not surely die. And when the woman saw that the tree was good for food, she took of the fruit thereof, and did eat. Therefore the Lord God sent him forth from the garden of Eden.',
-  closing:
-    'This is a visual meditation on Genesis, not a documentary. Go to church. Hear the Word. Live for Jesus Christ.',
-  doubt: 'Got doubt?',
-  measure:
-    'Physicists describe an expanding universe, and a faint microwave glow left from early light. That is what we can measure. It does not replace the Word. Read the NASA and Planck pages. Then go to church.',
-  trailer:
-    'In the beginning God created the heaven and the earth. And God said, Let there be light: and there was light. And God saw every thing that he had made, and, behold, it was very good. And the serpent said unto the woman, Ye shall not surely die. And she took of the fruit thereof, and did eat. Go to church. Live for Jesus Christ. Got doubt?',
+const VOICE_PROFILES = {
+  narrator: { oneMin: 'echo', speed: 0.96, eleven: VOICES.george },
+  god: { oneMin: 'onyx', speed: 0.82, eleven: VOICES.george },
+  serpent: { oneMin: 'fable', speed: 0.82, eleven: VOICES.brian },
+  woman: { oneMin: 'nova', speed: 0.94, eleven: VOICES.george },
+  man: { oneMin: 'echo', speed: 0.9, eleven: VOICES.adam },
 }
 
 function loadEnvLocal(text) {
@@ -62,7 +46,7 @@ function loadEnvLocal(text) {
   return env
 }
 
-async function tts(apiKey, voiceId, text) {
+async function ttsEleven(apiKey, voiceId, text) {
   const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`
   const response = await fetch(url, {
     method: 'POST',
@@ -89,6 +73,120 @@ async function tts(apiKey, voiceId, text) {
   return Buffer.from(await response.arrayBuffer())
 }
 
+function assetUrl(result) {
+  if (typeof result === 'string' && result.startsWith('http')) return result
+  if (typeof result === 'string') return `https://s3.us-east-1.amazonaws.com/asset.1min.ai/${result}`
+  return null
+}
+
+async function ttsOneMin(apiKey, text, profile) {
+  const response = await fetch('https://api.1min.ai/api/features', {
+    method: 'POST',
+    headers: {
+      'API-KEY': apiKey,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'TEXT_TO_SPEECH',
+      model: 'tts-1-hd',
+      conversationId: 'TEXT_TO_SPEECH',
+      promptObject: {
+        text,
+        voice: profile.oneMin,
+        response_format: 'mp3',
+        speed: profile.speed,
+      },
+    }),
+  })
+  const raw = await response.text()
+  if (!response.ok) {
+    throw new Error(`1min.ai ${response.status}: ${raw.slice(0, 240)}`)
+  }
+  const payload = JSON.parse(raw)
+  const record = payload.aiRecord
+  const href =
+    record?.temporaryUrl ||
+    assetUrl(record?.aiRecordDetail?.resultObject?.[0])
+  if (!href) {
+    throw new Error('1min.ai returned no audio URL')
+  }
+  const audio = await fetch(href)
+  if (!audio.ok) {
+    throw new Error(`1min.ai asset ${audio.status}`)
+  }
+  return Buffer.from(await audio.arrayBuffer())
+}
+
+function assertMpegAudio(buffer, label) {
+  const id3 = buffer.subarray(0, 3).toString('ascii') === 'ID3'
+  const frame = buffer[0] === 0xff && ((buffer[1] ?? 0) & 0xe0) === 0xe0
+  if (buffer.byteLength < 8_000 || (!id3 && !frame)) {
+    throw new Error(`${label} returned invalid MPEG audio`)
+  }
+  return buffer
+}
+
+async function tts(env, text, role = 'narrator') {
+  const profile = VOICE_PROFILES[role]
+  if (!profile) throw new Error(`Unknown voice role: ${role}`)
+  const oneMin = process.env.ONE_MIN_AI_API_KEY || env.ONE_MIN_AI_API_KEY
+  if (oneMin) return assertMpegAudio(await ttsOneMin(oneMin, text, profile), `1min.ai ${role}`)
+  const eleven = process.env.ELEVENLABS_API_KEY || env.ELEVENLABS_API_KEY
+  const voice = process.env.ELEVENLABS_VOICE_ID || env.ELEVENLABS_VOICE_ID || profile.eleven
+  if (eleven) return assertMpegAudio(await ttsEleven(eleven, voice, text), `ElevenLabs ${role}`)
+  throw new Error('Missing ONE_MIN_AI_API_KEY or ELEVENLABS_API_KEY in .env.local')
+}
+
+async function compositeCues(env, id, cues, dest) {
+  const cueDir = path.join(outDir, `.${id}-cues`)
+  await rm(cueDir, { recursive: true, force: true })
+  await mkdir(cueDir, { recursive: true })
+  const parts = []
+  for (const [index, cue] of cues.entries()) {
+    const prefix = String(index + 1).padStart(2, '0')
+    const raw = path.join(cueDir, `${prefix}-${cue.role}-raw.mp3`)
+    const part = path.join(cueDir, `${prefix}-${cue.role}.mp3`)
+    await writeFile(raw, await tts(env, cue.text, cue.role))
+    await soften(raw, part, cue.role)
+    parts.push(part)
+    console.log(`wrote ${id} cue ${prefix} (${cue.role})`)
+  }
+  const list = path.join(cueDir, 'concat.txt')
+  await writeFile(list, parts.map((part) => `file '${part.replaceAll("'", "'\\''")}'`).join('\n'))
+  await run('ffmpeg', ['-y', '-f', 'concat', '-safe', '0', '-i', list, '-c:a', 'libmp3lame', '-b:a', '128k', dest])
+  await rm(cueDir, { recursive: true, force: true })
+}
+
+function runCapture(cmd, args) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(cmd, args, { stdio: ['ignore', 'pipe', 'ignore'] })
+    let stdout = ''
+    child.stdout.on('data', (chunk) => { stdout += chunk })
+    child.on('exit', (code) => code === 0 ? resolve(stdout.trim()) : reject(new Error(`${cmd} exited ${code}`)))
+    child.on('error', reject)
+  })
+}
+
+async function refreshDurations() {
+  const timingPath = path.join(root, 'src', 'genesis', 'sceneTiming.ts')
+  let source = await readFile(timingPath, 'utf8')
+  for (const id of Object.keys(SCENE_VOICE_CUES).concat(Object.keys(NARRATION))) {
+    if (id === 'trailer' || !NARRATION[id]) continue
+    const file = path.join(outDir, `${id}.mp3`)
+    try {
+      await access(file)
+    } catch {
+      continue
+    }
+    const raw = await runCapture('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', file])
+    const duration = Number(raw)
+    if (!Number.isFinite(duration) || duration <= 0) throw new Error(`Invalid duration for ${id}.mp3`)
+    source = source.replace(new RegExp(`(\\s${id}: )\\d+(?:\\.\\d+)?(,)`), `$1${duration.toFixed(3)}$2`)
+  }
+  await writeFile(timingPath, source)
+  console.log('refreshed scene audio durations')
+}
+
 function run(cmd, args) {
   return new Promise((resolve, reject) => {
     const child = spawn(cmd, args, { stdio: 'ignore' })
@@ -100,14 +198,17 @@ function run(cmd, args) {
   })
 }
 
-async function soften(input, output) {
+async function soften(input, output, role = 'narrator') {
   try {
+    const filter = role === 'god'
+      ? 'bass=g=4:f=110:w=0.6,aecho=0.8:0.9:48:0.14,loudnorm=I=-15:LRA=9:TP=-1.2'
+      : 'aecho=0.8:0.9:40:0.12,loudnorm=I=-16:LRA=11:TP=-1.5'
     await run('ffmpeg', [
       '-y',
       '-i',
       input,
       '-af',
-      'aecho=0.8:0.9:40:0.12,loudnorm=I=-16:LRA=11:TP=-1.5',
+      filter,
       '-c:a',
       'libmp3lame',
       '-b:a',
@@ -123,41 +224,49 @@ async function soften(input, output) {
 
 async function main() {
   const local = loadEnvLocal(await readFile(path.join(root, '.env.local'), 'utf8'))
-  const apiKey = process.env.ELEVENLABS_API_KEY || local.ELEVENLABS_API_KEY
-  if (!apiKey) {
-    throw new Error('Missing ELEVENLABS_API_KEY in .env.local')
-  }
-  const chosen =
-    process.env.ELEVENLABS_VOICE_ID || local.ELEVENLABS_VOICE_ID || VOICES.george
   await mkdir(outDir, { recursive: true })
   const runVoices = process.argv.includes('--voices')
   if (runVoices) {
+    const eleven = process.env.ELEVENLABS_API_KEY || local.ELEVENLABS_API_KEY
+    if (!eleven) throw new Error('Voice A/B needs ELEVENLABS_API_KEY')
     await mkdir(sampleDir, { recursive: true })
     const probe = NARRATION.day1
     for (const [name, id] of Object.entries(VOICES)) {
       const raw = path.join(sampleDir, `${name}-raw.mp3`)
       const out = path.join(sampleDir, `${name}.mp3`)
-      await writeFile(raw, await tts(apiKey, id, probe))
+      await writeFile(raw, await ttsEleven(eleven, id, probe))
       await soften(raw, out)
       console.log(`wrote voice test ${name}`)
     }
   }
 
+  const wanted = new Set(process.argv.slice(2).filter((arg) => !arg.startsWith('-')))
+  const force = process.argv.includes('--force')
   const tmp = path.join(outDir, '.tmp.mp3')
   const pending = Object.entries(NARRATION).sort((a, b) => a[1].length - b[1].length)
   for (const [id, text] of pending) {
+    if (wanted.size > 0 && !wanted.has(id)) continue
     const dest = path.join(outDir, `${id}.mp3`)
     try {
       await access(dest)
-      console.log(`skip ${id}.mp3 (exists)`)
-      continue
+      if (!force) {
+        console.log(`skip ${id}.mp3 (exists)`)
+        continue
+      }
     } catch {
       // generate
     }
-    await writeFile(tmp, await tts(apiKey, chosen, text))
+    const cues = SCENE_VOICE_CUES[id]
+    if (cues) {
+      await compositeCues(local, id, cues, dest)
+      console.log(`wrote ${id}.mp3 (${[...new Set(cues.map((cue) => cue.role))].join(' + ')})`)
+      continue
+    }
+    await writeFile(tmp, await tts(local, text))
     const softened = await soften(tmp, dest)
     console.log(`wrote ${id}.mp3${softened ? '' : ' (no ffmpeg soften)'}`)
   }
+  await refreshDurations()
 }
 
 main().catch((error) => {

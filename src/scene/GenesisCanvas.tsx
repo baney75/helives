@@ -1,9 +1,10 @@
 import { AdaptiveDpr, OrbitControls, PerspectiveCamera, Preload } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
+import { Vector3 } from 'three'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { DPR } from '../lib/budget.ts'
-import { fogFar, framedCamera } from '../genesis/time.ts'
+import { cameraPose, fogFar, framedCamera } from '../genesis/time.ts'
 import type { SceneClock } from './types.ts'
 import { SceneEffects } from './SceneEffects.tsx'
 import { DryLand } from './visuals/DryLand.tsx'
@@ -17,37 +18,44 @@ import { TheFall } from './visuals/TheFall.tsx'
 import { VoidWaters } from './visuals/VoidWaters.tsx'
 
 function GuidedControls({ clock }: { clock: SceneClock }) {
-  const camera = useThree((state) => state.camera)
-
-  useFrame(() => {
-    if (clock.cinematic) return
-    if (!clock.playing && clock.progress >= 0.6 && clock.progress < 0.86) {
-      const framed = framedCamera(clock.progress)
-      camera.position.lerp(camera.position.clone().set(framed.x, framed.y, framed.z), 0.12)
-      camera.lookAt(0.45, 0.78, 0.85)
-      return
-    }
-    const len = camera.position.length()
-    if (len < 0.2) return
-    const scale = 1 + (clock.distance / len - 1) * 0.035
-    camera.position.multiplyScalar(scale)
-  })
-
-  const gardenStill = !clock.playing && clock.progress >= 0.6 && clock.progress < 0.86
-
   return (
     <OrbitControls
-      enabled={!clock.cinematic && !gardenStill}
+      enabled={!clock.cinematic && !clock.playing && !clock.isMobile}
       enablePan={false}
       enableDamping
       dampingFactor={0.08}
       minDistance={clock.distance * 0.4}
       maxDistance={clock.distance * 2.1}
-      autoRotate={!clock.reducedMotion && !clock.cinematic && clock.playing}
-      autoRotateSpeed={0.16}
+      autoRotate={false}
       makeDefault
     />
   )
+}
+
+const railPosition = new Vector3()
+const railTarget = new Vector3()
+
+function JourneyCameraRig({ clock }: { clock: SceneClock }) {
+  const width = useThree((state) => state.size.width)
+  const camera = useThree((state) => state.camera)
+
+  useEffect(() => {
+    if (clock.cinematic || clock.playing) return
+    const pose = cameraPose(clock.progress, width < 700)
+    camera.position.set(...pose.position)
+    camera.lookAt(...pose.target)
+    camera.updateMatrixWorld()
+  }, [camera, clock.cinematic, clock.playing, clock.progress, width])
+
+  useFrame(({ camera: frameCamera }, delta) => {
+    if (clock.cinematic || !clock.playing) return
+    const pose = cameraPose(clock.progress, width < 700)
+    railPosition.set(...pose.position)
+    railTarget.set(...pose.target)
+    frameCamera.position.lerp(railPosition, 1 - Math.exp(-delta * 1.75))
+    frameCamera.lookAt(railTarget)
+  })
+  return null
 }
 
 function CinematicRig({ clock }: { clock: SceneClock }) {
@@ -65,7 +73,16 @@ function CinematicRig({ clock }: { clock: SceneClock }) {
 
 function Creation({ clock }: { clock: SceneClock }) {
   const fog = fogFar(clock.progress)
-  const gardenLit = Math.max(clock.presence.garden, clock.presence.fall)
+  const gardenLit = Math.max(clock.presence.garden, clock.presence.fall, clock.presence.day6 * 0.34)
+  const creationLit =
+    Math.max(
+      clock.presence.day3,
+      clock.presence.day4,
+      clock.presence.day5,
+      clock.presence.day6,
+      clock.presence.day7,
+    ) * (1 - gardenLit)
+  const fall = clock.presence.fall
   const gardenFogNear = gardenLit > 0.25 ? 14 : 8
   const startCam = framedCamera(clock.progress)
   return (
@@ -78,18 +95,21 @@ function Creation({ clock }: { clock: SceneClock }) {
         far={220}
       />
       <GuidedControls clock={clock} />
+      <JourneyCameraRig clock={clock} />
       <CinematicRig clock={clock} />
       <fog attach="fog" args={['#07060a', gardenFogNear, fog]} />
-      <ambientLight intensity={0.28 + clock.presence.day1 * 0.2 + gardenLit * 0.35} />
-      <hemisphereLight args={['#2a3a58', '#07060a', 0.42 + gardenLit * 0.2]} />
-      <pointLight position={[0, 0.4, 0]} intensity={3.2 + clock.presence.day1 * 4} color="#ffd28a" distance={28} />
+      <ambientLight intensity={0.27 + clock.presence.day1 * 0.18 + gardenLit * 0.24 - fall * 0.04} />
+      <hemisphereLight args={['#7185a0', '#211b10', 0.38 + gardenLit * 0.34 - fall * 0.06]} />
+      <pointLight position={[0, 0.4, 0]} intensity={2.4 + clock.presence.day1 * 1.8} color="#ffd28a" distance={28} />
       <pointLight position={[6, 8, 12]} intensity={0.9} color="#7a90b8" distance={48} />
       <directionalLight
-        position={[4.2, 5.4, 3.2]}
-        intensity={1.15 * gardenLit}
+        position={[-4.2, 6.8, 4.8]}
+        intensity={(1.75 - fall * 0.52) * gardenLit}
         color="#ffe7b8"
       />
-      <pointLight position={[1.4, 2.2, 1.1]} intensity={2.4 * clock.presence.fall} color="#e8b86d" distance={10} />
+      <directionalLight position={[5.5, 3.4, -4]} intensity={0.42 * gardenLit} color="#9caf93" />
+      <directionalLight position={[-3.8, 5.2, 5.5]} intensity={0.88 * creationLit} color="#d7e1cb" />
+      <pointLight position={[1.4, 2.2, 1.1]} intensity={1.9 * fall} color="#d6974c" distance={10} />
       <VoidWaters clock={clock} />
       <LetThereBeLight clock={clock} />
       <Firmament clock={clock} />

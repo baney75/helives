@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: non-shipping real-time 3D art-direction reference for the opening Genesis and cosmic-origin sequence on HeLives.dev
+Primary request: Create a single 16:9 cinematic real-time 3D concept sheet showing a progression from formless near-black deep waters and sparse particles into an awe-inspiring birth of light and expanding ordered cosmos. The visual may evoke cosmic inflation and the Big Bang through expanding filaments, shockwave shells, hot plasma, dust, and star formation, but must remain a reverent visual meditation accompanying Genesis rather than a scientific diagram.
+Style/medium: premium stylized PBR and volumetric Blender concept art feasible in optimized WebGL and React Three Fiber; elegant particle fields, translucent energy shells, flowing water membrane, volumetric rays, fine sparks, and deep spatial scale. Authored and cinematic, not photoreal and not an abstract screensaver.
+Composition/framing: one wide panoramic sequence flowing from deep void at left, first light at center, firmament and nascent galaxies at right; a smaller bottom strip with clear unlabelled reference states for Void, First Light, Firmament, Dry Land, Lights, and living sea and sky. Strong silhouettes and depth at desktop and phone crop.
+Lighting/mood: immense sacred awe; near-total darkness yielding to restrained fire-gold and dawn-cream light; readable detail without blown-out white.
+Color palette: near-black #07060a, deep water blue-black, fire gold #e8b86d, dawn cream #fff4d6, restrained cool firmament blue.
+Constraints: no text, no labels, no logos, no watermark, no depiction of God, no person, no hands, no giant featureless white sphere, no literal explosion fireball, no UI. Preserve black levels and visible energy detail.
+Avoid: flat gradients, stock galaxy wallpaper, overexposure, planet-sized billiard balls, blocky vegetation, excessive bloom, scientific labels, generic nebula wallpaper.

@@ -14,13 +14,17 @@ export function createFishGeometry(): BufferGeometry {
   return mesh(positions, idx)
 }
 
-/** Gull silhouette with a body and two wings — not a cone. */
+/** Gull with a head, breast, tail, and two wings — not a paper plane. */
 export function createBirdGeometry(): BufferGeometry {
   const positions = [
-    0.08, 0, 0, -0.12, 0.02, 0, 0.02, 0.04, 0.05, 0.02, 0.04, -0.05, -0.02, 0.02, 0.55, 0.18, 0.16,
-    0.18, -0.02, 0.02, -0.55, 0.18, 0.16, -0.18,
+    0.34, 0.05, 0, 0.22, 0.07, 0.03, 0.22, 0.07, -0.03, 0.04, 0.09, 0.05, 0.04, 0.09, -0.05, 0.06,
+    -0.03, 0.04, 0.06, -0.03, -0.04, -0.22, 0.06, 0.03, -0.22, 0.06, -0.03, -0.38, 0.1, 0.07, -0.38,
+    0.1, -0.07, 0.06, 0.14, 0.28, 0.02, 0.1, 0.55, 0.06, 0.14, -0.28, 0.02, 0.1, -0.55,
   ]
-  const idx = [0, 1, 2, 0, 3, 1, 0, 2, 3, 2, 4, 5, 2, 5, 0, 3, 0, 7, 3, 7, 6]
+  const idx = [
+    0, 1, 2, 1, 3, 2, 1, 5, 3, 2, 4, 6, 3, 5, 7, 4, 8, 6, 5, 6, 8, 5, 8, 7, 7, 9, 8, 8, 10, 7, 3, 11,
+    1, 3, 12, 11, 4, 2, 13, 4, 13, 14,
+  ]
   return mesh(positions, idx)
 }
 

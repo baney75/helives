@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>He Lives — hourly Word design plan</title>
+  <!-- Hallmark · macrostructure: Split lamp · tone: austere/editorial · theme: He Lives DESIGN.md (void/fire/dawn) · nav: edge wordmark · footer: statement · enrichment: Tier-B motif beside type -->
+  <style>
+    :root {
+      --void: #07060a;
+      --ink: #ece6d8;
+      --muted: #9a9184;
+      --fire: #e8b86d;
+      --dawn: #fff4d6;
+      --ground: #1a1008;
+      --line: rgba(236, 230, 216, 0.14);
+      --glass: rgba(7, 6, 10, 0.62);
+      --display: "Iowan Old Style", Palatino, "Times New Roman", serif;
+      --serif: "Iowan Old Style", Palatino, "Times New Roman", serif;
+      --mono: ui-monospace, Menlo, Consolas, monospace;
+      --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+      --space-5: 24px; --space-6: 32px; --space-7: 48px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--void); color: var(--ink); }
+    html, body { overflow-x: clip; }
+    body { font-family: var(--serif); font-size: 17px; line-height: 1.6; }
+    a { color: var(--fire); }
+    .wrap { max-width: 52rem; margin: 0 auto; padding: var(--space-6) var(--space-5) 5rem; }
+    header.plan { padding: var(--space-7) 0 var(--space-5); border-bottom: 1px solid var(--line); }
+    header.plan h1 {
+      font-family: var(--display); font-weight: 500; font-style: normal;
+      font-size: clamp(2.4rem, 8vw, 4rem); line-height: 0.92; letter-spacing: -0.03em; margin: 0 0 var(--space-4);
+    }
+    .lede { color: var(--muted); max-width: 40em; margin: 0; }
+    nav.toc {
+      position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--void) 92%, transparent);
+      backdrop-filter: blur(8px); display: flex; flex-wrap: wrap; gap: var(--space-4);
+      padding: var(--space-3) 0; border-bottom: 1px solid var(--line); font-size: 13px;
+    }
+    nav.toc a { color: var(--muted); text-decoration: none; }
+    nav.toc a:hover, nav.toc a:focus-visible { color: var(--ink); }
+    section { margin: var(--space-7) 0; }
+    h2 {
+      font-family: var(--display); font-weight: 500; font-style: normal;
+      font-size: 1.7rem; margin: 0 0 var(--space-4);
+    }
+    h3 { font-family: var(--display); font-weight: 500; font-style: normal; font-size: 1.2rem; color: var(--fire); margin: var(--space-6) 0 var(--space-3); }
+    p { margin: 0 0 var(--space-4); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: var(--space-4) 0; }
+    th, td { border: 1px solid var(--line); padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-weight: 500; }
+    pre, code { font-family: var(--mono); font-size: 0.82rem; }
+    pre { border: 1px solid var(--line); padding: var(--space-4); overflow-x: auto; white-space: pre-wrap; color: var(--ink); }
+    ul { margin: 0 0 var(--space-4); padding-left: 1.2rem; }
+    .note { border-left: 3px solid var(--fire); padding: 0.2rem 0 0.2rem var(--space-4); color: var(--muted); }
+    footer.plan { border-top: 1px solid var(--line); padding: var(--space-6) 0; color: var(--muted); font-size: 0.88rem; }
+
+    /* Lamp stage — product mock, not a fake phone chrome */
+    .lamp {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: var(--space-6);
+      align-items: center;
+      min-height: 22rem;
+      padding: var(--space-6) var(--space-5);
+      border: 1px solid var(--line);
+      background: var(--void);
+      margin: var(--space-5) 0;
+    }
+    .lamp-copy { min-width: 0; }
+    .kicker {
+      margin: 0 0 var(--space-3);
+      color: var(--fire);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-family: var(--mono);
+    }
+    .verse {
+      font-family: var(--display);
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+      line-height: 1.35;
+      margin: 0 0 var(--space-3);
+    }
+    .cite { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 var(--space-5); }
+    .acts { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+    .btn {
+      display: inline-flex; align-items: center; min-height: 44px;
+      padding: 0 var(--space-5); background: var(--fire); color: var(--ground); text-decoration: none;
+    }
+    .btn.quiet { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .remain { margin: var(--space-5) 0 0; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .sign {
+      min-width: 0;
+      aspect-ratio: 1;
+      max-width: 16rem;
+      justify-self: end;
+      width: 100%;
+    }
+    .sign svg { display: block; width: 100%; height: auto; }
+    @media (max-width: 700px) {
+      .lamp { grid-template-columns: 1fr; }
+      .sign { justify-self: start; max-width: 12rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .anim, .anim * { animation: none !important; }
+    }
+
+    @keyframes dawn-grow { from { transform: scaleX(0.12); opacity: 0.3; } to { transform: scaleX(1); opacity: 1; } }
+    @keyframes water { 0%, 100% { d: path("M8 72 Q 40 68 72 72 T 136 72"); } 50% { d: path("M8 72 Q 40 76 72 72 T 136 72"); } }
+    @keyframes wick { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.08); } }
+    @keyframes vine { from { stroke-dashoffset: 180; } to { stroke-dashoffset: 0; } }
+    @keyframes spark { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+
+    .dawn-line { transform-origin: 12px 72px; animation: dawn-grow 8s ease-out both; }
+    .water-path { animation: water 9s ease-in-out infinite; }
+    .flame { transform-origin: 72px 48px; animation: wick 3.6s ease-in-out infinite; }
+    .vine-path { stroke-dasharray: 180; animation: vine 10s ease-out both; }
+    .spark-rect { animation: spark 4s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="plan">
+      <p class="kicker">Plan · not built</p>
+      <h1>The Word, one hour.</h1>
+      <p class="lede">Audience: a stranger who will sit still. Use: read this hour’s Scripture, then go deeper or go to church. Tone: austere. Tokens stay He Lives. The picture beside the verse must be that verse, or it does not ship.</p>
+    </header>
+
+    <nav class="toc" aria-label="Plan">
+      <a href="#preflight">Pre-flight</a>
+      <a href="#shape">Shape</a>
+      <a href="#signs">Signs</a>
+      <a href="#clock">Clock</a>
+      <a href="#prompt">Prompt</a>
+      <a href="#verify">Verify</a>
+      <a href="#review">Review</a>
+    </nav>
+
+    <section id="preflight">
+      <h2>Pre-flight</h2>
+      <p><code>DESIGN.md</code> is locked. Hallmark catalog theme is off. Genre is editorial on a night paper. Motion-cut unless a sign needs one slow loop.</p>
+      <ul>
+        <li>Fonts: Cormorant Garamond + Source Serif 4, self-hosted (<code>src/index.css</code>)</li>
+        <li>Palette: void / ink / muted / fire / dawn / ground — no new hue</li>
+        <li>Spacing: 4-pt scale already named</li>
+        <li>Framework: Vite + React 19. No motion library.</li>
+        <li>Preserve: BrandMark, Faith, Scriptures index, Genesis code (parked off home)</li>
+      </ul>
+      <p class="note">Hallmark stamp: Split lamp · nav edge wordmark (two destinations on the lamp: Explore more, Faith) · footer one statement line · enrichment Tier-B SVG sign beside type, never under it.</p>
+    </section>
+
+    <section id="shape">
+      <h2>Shape</h2>
+      <p>Not a hero stack. Not rays behind type. Two columns on a wide pane: the verse is the left measure; the sign is a square on the right. On a phone the sign drops under the verse, still the same drawing, smaller. Countdown is a mono line, not a timer toy.</p>
+      <p>Home no longer leads with Enter Genesis. Genesis may stay one quiet footer word.</p>
+    </section>
+
+    <section id="signs">
+      <h2>Signs — relevant, not gimmick</h2>
+      <p>Each passage carries one motif. The drawing is that motif. Hash of the reference only changes rest, density, and which way the line leans — never swaps water for a vine. No faces. No clipart crosses except the existing mark when the verse is resurrection.</p>
+
+      <article class="lamp" aria-label="Light motif with Genesis 1:1">
+        <div class="lamp-copy">
+          <p class="kicker">This hour</p>
+          <p class="verse">In the beginning God created the heaven and the earth.</p>
+          <p class="cite">Genesis 1:1 · King James Version</p>
+          <p class="acts"><a class="btn" href="https://www.biblegateway.com/passage/?search=Genesis+1%3A1&amp;version=KJV" target="_blank" rel="noopener">Explore more</a><a class="btn quiet" href="#">Faith</a></p>
+          <p class="remain">Next Word in 41:12</p>
+        </div>
+        <div class="sign anim" aria-hidden="true">
+          <svg viewBox="0 0 144 144" role="img">
+            <title>A single dawn line opening across the void</title>
+            <rect width="144" height="144" fill="var(--void)"/>
+            <line class="dawn-line" x1="12" y1="72" x2="132" y2="72" stroke="var(--fire)" stroke-width="1.25"/>
+            <rect x="70" y="70" width="4" height="4" fill="var(--dawn)"/>
+          </svg>
+        </div>
+      </article>
+      <p class="note">Light. One line. The void is the paper. If you need more marks, it is already too much.</p>
+
+      <article class="lamp" aria-label="Water motif with Psalm 23:2">
+        <div class="lamp-copy">
+          <p class="kicker">This hour</p>
+          <p class="verse">He maketh me to lie down in green pastures: he leadeth me beside the still waters.</p>
+          <p class="cite">Psalm 23:2 · King James Version</p>
+          <p class="acts"><a class="btn" href="https://www.biblegateway.com/passage/?search=Psalm+23%3A2&amp;version=KJV" target="_blank" rel="noopener">Explore more</a><a class="btn quiet" href="#">Faith</a></p>
+          <p class="remain">Next Word in 18:04</p>
+        </div>
+        <div class="sign anim" aria-hidden="true">
+          <svg viewBox="0 0 144 144" role="img">
+            <title>Still water — one slow horizon</title>
+            <rect width="144" height="144" fill="var(--void)"/>
+            <path class="water-path" d="M8 72 Q 40 68 72 72 T 136 72" fill="none" stroke="var(--fire)" stroke-width="1.25"/>
+          </svg>
+        </div>
+      </article>
+      <p class="note">Water. A horizon that barely moves. Not waves. Not a lake illustration.</p>
+
+      <article class="lamp" aria-label="Lamp motif with Psalm 119:105">
+        <div class="lamp-copy">
+          <p class="kicker">This hour</p>
+          <p class="verse">Thy word is a lamp unto my feet, and a light unto my path.</p>
+          <p class="cite">Psalm 119:105 · King James Version</p>
+          <p class="acts"><a class="btn" href="https://www.biblegateway.com/passage/?search=Psalm+119%3A105&amp;version=KJV" target="_blank" rel="noopener">Explore more</a><a class="btn quiet" href="#">Faith</a></p>
+          <p class="remain">Next Word in 03:51</p>
+        </div>
+        <div class="sign anim" aria-hidden="true">
+          <svg viewBox="0 0 144 144" role="img">
+            <title>A wick and a small flame</title>
+            <rect width="144" height="144" fill="var(--void)"/>
+            <line x1="72" y1="118" x2="72" y2="62" stroke="var(--ink)" stroke-width="1.25"/>
+            <ellipse class="flame" cx="72" cy="48" rx="5" ry="11" fill="none" stroke="var(--fire)" stroke-width="1.25"/>
+            <rect x="70" y="46" width="4" height="4" fill="var(--dawn)"/>
+          </svg>
+        </div>
+      </article>
+      <p class="note">Lamp. Vertical. The flame is an outline, not a cartoon fire.</p>
+
+      <article class="lamp" aria-label="Vine motif with John 15:5">
+        <div class="lamp-copy">
+          <p class="kicker">This hour</p>
+          <p class="verse">I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit.</p>
+          <p class="cite">John 15:5 · King James Version</p>
+          <p class="acts"><a class="btn" href="https://www.biblegateway.com/passage/?search=John+15%3A5&amp;version=KJV" target="_blank" rel="noopener">Explore more</a><a class="btn quiet" href="#">Faith</a></p>
+          <p class="remain">Next Word in 52:08</p>
+        </div>
+        <div class="sign anim" aria-hidden="true">
+          <svg viewBox="0 0 144 144" role="img">
+            <title>One vine line with two branches</title>
+            <rect width="144" height="144" fill="var(--void)"/>
+            <path class="vine-path" d="M28 120 C 40 80, 48 70, 72 52 C 88 40, 96 36, 116 28 M72 52 C 80 70, 92 78, 110 86 M72 52 C 60 64, 52 86, 44 104" fill="none" stroke="var(--fire)" stroke-width="1.25"/>
+          </svg>
+        </div>
+      </article>
+      <p class="note">Vine. One stroke family. It grows once, then rests.</p>
+
+      <article class="lamp" aria-label="Life motif with John 14:19">
+        <div class="lamp-copy">
+          <p class="kicker">This hour</p>
+          <p class="verse">because I live, ye shall live also.</p>
+          <p class="cite">John 14:19 · King James Version</p>
+          <p class="acts"><a class="btn" href="https://www.biblegateway.com/passage/?search=John+14%3A19&amp;version=KJV" target="_blank" rel="noopener">Explore more</a><a class="btn quiet" href="#">Faith</a></p>
+          <p class="remain">Next Word in 11:40</p>
+        </div>
+        <div class="sign anim" aria-hidden="true">
+          <svg viewBox="0 0 144 144" role="img">
+            <title>The He Lives mark — dawn at the crossing</title>
+            <rect width="144" height="144" fill="var(--void)"/>
+            <rect x="68" y="28" width="8" height="88" fill="var(--fire)"/>
+            <rect x="36" y="68" width="72" height="8" fill="var(--fire)"/>
+            <rect class="spark-rect" x="68" y="68" width="8" height="8" fill="var(--dawn)"/>
+          </svg>
+        </div>
+      </article>
+      <p class="note">Life. The mark you already own. Do not invent another cross.</p>
+
+      <table>
+        <thead><tr><th>Motif</th><th>When the passage is about</th><th>Motion</th></tr></thead>
+        <tbody>
+          <tr><td>Light</td><td>creation, glory, appearing</td><td>Line opens once</td></tr>
+          <tr><td>Water</td><td>shepherd, still, wash, river</td><td>Horizon breathes</td></tr>
+          <tr><td>Lamp</td><td>word, path, feet, lamp</td><td>Flame scaleY</td></tr>
+          <tr><td>Vine</td><td>abide, branch, fruit</td><td>Stroke draws once</td></tr>
+          <tr><td>Life</td><td>live, rise, resurrection</td><td>Dawn square pulse</td></tr>
+        </tbody>
+      </table>
+      <p>If a verse does not map cleanly, use Light. Never invent a sixth cute object to fill a gap.</p>
+    </section>
+
+    <section id="clock">
+      <h2>Clock and pool</h2>
+      <p>UTC hour. One index for the whole church. <code>index = (hour × 31) % pool.length</code>. Pool is curated KJV that can bear a motif and confess God. Not a roll over every verse in the canon.</p>
+      <p>Explore more: <code>https://www.biblegateway.com/passage/?search=REF&amp;version=KJV</code>, new tab, <code>rel="noopener"</code>. No scrape. No iframe.</p>
+    </section>
+
+    <section id="prompt">
+      <h2>Prime prompt — after you authorize</h2>
+      <pre>Goal: Ship He Lives home as the Split lamp: this hour’s KJV on the left, a relevant procedural SVG sign on the right, countdown, Explore more to Bible Gateway KJV, Faith for church. TypeScript end to end. Tests for clock, pool walk, motif map, and Gateway URL. Genesis stays in the repo, off the home CTA.
+
+Context: /Users/baney/Documents/Software/helives
+Plan: /Users/baney/Documents/Software/helives/docs/plans/word-hourly.html
+DESIGN.md and .cursor/skills/helives-design/SKILL.md win over any extra chrome.
+
+Constraints:
+- Locked tokens only. No Inter, no cards, no rays behind type, no faces, no stock religion, no music, no Clerk, no deploy.
+- Motif is semantic (light / water / lamp / vine / life). Hash only perturbs rest. Life uses BrandMark geometry.
+- 2 motions max on the page. prefers-reduced-motion = still frames.
+- Verse is display italic (product rule). UI headings roman.
+- Curated pool. UTC hour. Same verse for every visitor.
+- Independent visual critic after screenshots. Implementer does not grade the UI.
+
+Done when: pnpm test, typecheck, lint, build exit 0; home is the lamp; Explore more hits KJV; 375 and 1280 readable.
+
+Load: AGENTS.md, DESIGN.md, gs-design, helives-design, firm-method.
+
+Stop when: Done when, or Donovan says pause.</pre>
+    </section>
+
+    <section id="verify">
+      <h2>Verify</h2>
+      <table>
+        <thead><tr><th>Check</th><th>Pass</th></tr></thead>
+        <tbody>
+          <tr><td>Same UTC hour → same ref (unit)</td><td>exit 0</td></tr>
+          <tr><td>Ref → one motif, stable (unit)</td><td>exit 0</td></tr>
+          <tr><td>Gateway URL includes version=KJV</td><td>exit 0</td></tr>
+          <tr><td>Home has no primary Enter Genesis</td><td>read</td></tr>
+          <tr><td>Sign is a sibling of the verse, not a background</td><td>layout</td></tr>
+          <tr><td>pnpm typecheck && lint && build</td><td>exit 0</td></tr>
+          <tr><td>375 + 1280, no horizontal clip of verse</td><td>after build</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="review">
+      <h2>Adversarial review</h2>
+      <p>This section is filled after an independent pass. Do not treat the mocks as shipped UI until that pass lands below.</p>
+      <p id="review-body">Independent review: <strong>BLOCK</strong>, then fixed in the shipped lamp.</p>
+      <ul>
+        <li>No card border. Brand + He Lives stay in the first viewport.</li>
+        <li>Pool is 48 typed rows with a motif on each row. No keyword engine. No Gen 1:1 dawn dump.</li>
+        <li>John 14:19 is the full verse. Life is BrandMark, still.</li>
+        <li>Quiet button is Go to church. Footer names KJV PD and not-a-church.</li>
+        <li>Clock: UTC hour × 31 mod 48 (coprime). Tests lock hour 0/23, length 1, and a bad gcd.</li>
+        <li>Phone: sign between cite and actions. Explore more announces a new tab.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
