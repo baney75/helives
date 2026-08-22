@@ -6,77 +6,70 @@ type SignProps = {
   reducedMotion: boolean
 }
 
-/** Lucide static 0.544.0 (ISC). Life stays the brand mark. */
+/**
+ * One-line motif for this hour’s verse. Authored marks, not Lucide clipart.
+ * Life stays the brand mark. No furniture lamp, sunburst, or sprout.
+ */
 export function Sign({ motif, reducedMotion }: SignProps) {
-  const motion = reducedMotion ? undefined : 'in'
+  const live = reducedMotion ? undefined : 'is-live'
   return (
     <div className="word-sign" data-motif={motif} aria-hidden="true">
       {motif === 'life' ? (
         <BrandMark size={96} />
       ) : (
         <svg
-          className={motion ? 'word-sign-icon' : undefined}
-          viewBox="0 0 24 24"
+          className={live ? 'word-sign-icon is-live' : 'word-sign-icon'}
+          viewBox="0 0 144 144"
           width="112"
           height="112"
           fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         >
-          {motif === 'light' ? <LucideSun /> : null}
-          {motif === 'water' ? <LucideWaves /> : null}
-          {motif === 'lamp' ? <LucideLamp /> : null}
-          {motif === 'vine' ? <LucideSprout /> : null}
+          <title>{SIGN_TITLE[motif]}</title>
+          {motif === 'light' ? <LightSign /> : null}
+          {motif === 'water' ? <WaterSign /> : null}
+          {motif === 'lamp' ? <LampSign /> : null}
+          {motif === 'vine' ? <VineSign /> : null}
         </svg>
       )}
     </div>
   )
 }
 
-function LucideSun() {
+const SIGN_TITLE: Record<Exclude<Motif, 'life'>, string> = {
+  light: 'A single dawn line opening across the void',
+  water: 'Still water — one slow horizon',
+  lamp: 'A wick and a small flame',
+  vine: 'One vine line with two branches',
+}
+
+function LightSign() {
   return (
     <>
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2" />
-      <path d="M12 20v2" />
-      <path d="m4.93 4.93 1.41 1.41" />
-      <path d="m17.66 17.66 1.41 1.41" />
-      <path d="M2 12h2" />
-      <path d="M20 12h2" />
-      <path d="m6.34 17.66-1.41 1.41" />
-      <path d="m19.07 4.93-1.41 1.41" />
+      <line className="sign-dawn" x1="12" y1="72" x2="132" y2="72" />
+      <rect className="sign-spark" x="69" y="69" width="6" height="6" />
     </>
   )
 }
 
-function LucideWaves() {
+function WaterSign() {
+  return <path className="sign-water" d="M8 72 Q 40 68 72 72 T 136 72" />
+}
+
+function LampSign() {
   return (
     <>
-      <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
-      <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
-      <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+      <line className="sign-wick" x1="72" y1="118" x2="72" y2="62" />
+      <ellipse className="sign-flame" cx="72" cy="48" rx="5" ry="11" />
+      <rect className="sign-spark" x="69" y="45" width="6" height="6" />
     </>
   )
 }
 
-function LucideLamp() {
+function VineSign() {
   return (
-    <>
-      <path d="M12 12v6" />
-      <path d="M4.077 10.615A1 1 0 0 0 5 12h14a1 1 0 0 0 .923-1.385l-3.077-7.384A2 2 0 0 0 15 2H9a2 2 0 0 0-1.846 1.23Z" />
-      <path d="M8 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z" />
-    </>
-  )
-}
-
-function LucideSprout() {
-  return (
-    <>
-      <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
-      <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
-      <path d="M5 21h14" />
-    </>
+    <path
+      className="sign-vine"
+      d="M28 120 C 40 80, 48 70, 72 52 C 88 40, 96 36, 116 28 M72 52 C 80 70, 92 78, 110 86 M72 52 C 60 64, 52 86, 44 104"
+    />
   )
 }
