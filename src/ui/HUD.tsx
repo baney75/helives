@@ -35,18 +35,19 @@ export function HUD({ clock }: HUDProps) {
         </dl>
       </header>
 
+      <section className="narration" aria-live="polite">
+        <p className="epoch-kicker">{scene.kicker}</p>
+        <h1>{scene.name}</h1>
+        <p className="headline">{scene.headline}</p>
+        <p className="body">{scene.body}</p>
+        {science ? (
+          <p className="afterword-link">
+            <a href="/genesis/afterword">Read the sources</a>
+          </p>
+        ) : null}
+      </section>
+
       <footer className="dock">
-        <section className="narration" aria-live="polite">
-          <p className="epoch-kicker">{scene.kicker}</p>
-          <h1>{scene.name}</h1>
-          <p className="headline">{scene.headline}</p>
-          <p className="body">{scene.body}</p>
-          {science ? (
-            <p className="afterword-link">
-              <a href="/genesis/afterword">Read the sources</a>
-            </p>
-          ) : null}
-        </section>
         <div className="transport">
           <button type="button" className="icon-btn" onClick={clock.reset}>
             Reset

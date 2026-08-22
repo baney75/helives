@@ -53,7 +53,7 @@ export function Figure({
   const clone = useRef<Group>(null)
   const gltf = useGLTF(SRC[role])
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
-  const figureScale = role === 'man' ? 0.9 : 0.88
+  const figureScale = role === 'man' ? 1.02 : 0.98
 
   useFrame(({ clock }) => {
     const group = root.current

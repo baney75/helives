@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
 import { Figure, type FigurePoseId } from '../models/Figure.tsx'
 import { EDEN, edenPairStory, lerp3 } from '../models/eden.ts'
-import { createPlantedIsland, createPlantedMeadow } from '../models/gardenTerrain.ts'
+import { createPlantedIsland } from '../models/gardenTerrain.ts'
 import { Grove, Herbs, TreeOfKnowledge, TreeOfLife } from '../models/Trees.tsx'
 import type { SceneClock } from '../types.ts'
 
@@ -52,37 +52,27 @@ export function Garden({ clock }: { clock: SceneClock }) {
 
 function PlantedGround({ fall }: { fall: number }) {
   const island = useMemo(() => createPlantedIsland(), [])
-  const meadow = useMemo(() => createPlantedMeadow(), [])
-  useEffect(
-    () => () => {
-      island.dispose()
-      meadow.dispose()
-    },
-    [island, meadow],
-  )
-  const soil = new Color('#2c3d22').lerp(new Color('#352619'), fall * 0.82)
-  const grass = new Color('#3a5330').lerp(new Color('#2c2114'), fall * 0.86)
-  const bank = new Color('#4a5c32').lerp(new Color('#3a2a16'), fall * 0.8)
+  useEffect(() => () => island.dispose(), [island])
+  const grass = new Color('#35502a').lerp(new Color('#352619'), fall * 0.82)
+  const soil = new Color('#2a1c10').lerp(new Color('#1a120c'), fall * 0.5)
+  const bed = new Color('#4a5c32').lerp(new Color('#3a2a16'), fall * 0.8)
   return (
     <group>
-      <mesh geometry={island} rotation={[Math.PI / 2, 0, 0]} position={[0, -0.26, 0]}>
-        <meshStandardMaterial attach="material-0" color={soil} roughness={0.96} />
-        <meshStandardMaterial attach="material-1" color="#2a1c10" roughness={0.98} />
+      <mesh geometry={island} rotation={[Math.PI / 2, 0, 0]} position={[0, -0.04, 0]}>
+        <meshStandardMaterial attach="material-0" color={grass} roughness={0.96} emissive="#10160d" emissiveIntensity={0.07} />
+        <meshStandardMaterial attach="material-1" color={soil} roughness={0.98} />
       </mesh>
-      <mesh geometry={meadow} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
-        <meshStandardMaterial color={grass} roughness={0.98} emissive="#10160d" emissiveIntensity={0.06} />
-      </mesh>
-      <mesh position={[-1.7, 0.06, 1.35]} rotation={[-Math.PI / 2, 0, 0.35]}>
+      <mesh position={[-1.7, 0.08, 1.35]} rotation={[-Math.PI / 2, 0, 0.35]}>
         <planeGeometry args={[1.35, 0.7]} />
-        <meshStandardMaterial color={bank} roughness={0.96} />
+        <meshStandardMaterial color={bed} roughness={0.96} />
       </mesh>
-      <mesh position={[2.05, 0.06, -1.15]} rotation={[-Math.PI / 2, 0, -0.4]}>
+      <mesh position={[2.05, 0.08, -1.15]} rotation={[-Math.PI / 2, 0, -0.4]}>
         <planeGeometry args={[1.2, 0.62]} />
-        <meshStandardMaterial color={bank} roughness={0.96} />
+        <meshStandardMaterial color={bed} roughness={0.96} />
       </mesh>
-      <mesh position={[-2.2, 0.06, -1.4]} rotation={[-Math.PI / 2, 0, 0.15]}>
+      <mesh position={[-2.2, 0.08, -1.4]} rotation={[-Math.PI / 2, 0, 0.15]}>
         <planeGeometry args={[0.95, 0.55]} />
-        <meshStandardMaterial color={bank} roughness={0.96} />
+        <meshStandardMaterial color={bed} roughness={0.96} />
       </mesh>
     </group>
   )

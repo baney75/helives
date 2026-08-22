@@ -21,7 +21,7 @@ describe('shipping Garden and Fall source', () => {
     expect(figure).not.toMatch(/man\.png/)
     expect(garden).toMatch(/from '\.\.\/models\/eden\.ts'/)
     expect(garden).toMatch(/createPlantedIsland/)
-    expect(garden).toMatch(/createPlantedMeadow/)
+    expect(garden).not.toMatch(/createPlantedMeadow/)
     expect(garden).toMatch(/holdFruit/)
   })
 
@@ -29,6 +29,7 @@ describe('shipping Garden and Fall source', () => {
     const trees = readFileSync(join(here, '../models/Trees.tsx'), 'utf8')
     expect(trees).toMatch(/createLeafGeometry/)
     expect(trees).toMatch(/LeafCanopy/)
+    expect(trees).toMatch(/leafClusters/)
     expect(trees).not.toMatch(/sphereGeometry args=\{\[0\.22, 8, 8\]\}/)
   })
 
@@ -61,9 +62,12 @@ describe('shipping Garden and Fall source', () => {
 
   it('keeps HUD copy inside the padded HUD, not clipped by overflow hidden', () => {
     const css = readFileSync(join(here, '../../index.css'), 'utf8')
+    const hud = readFileSync(join(here, '../../ui/HUD.tsx'), 'utf8')
     expect(css).toMatch(/\.hud \{[\s\S]*?overflow: visible/)
     expect(css).toMatch(/\.narration \{[\s\S]*?position: absolute/)
     expect(css).toMatch(/safe-area-inset-left/)
+    expect(hud.indexOf('className="narration"')).toBeLessThan(hud.indexOf('className="dock"'))
+    expect(hud).not.toMatch(/<footer className="dock">[\s\S]*className="narration"/)
   })
 
   it('uses authored fish and bird meshes instead of sphere/cone stand-ins', () => {

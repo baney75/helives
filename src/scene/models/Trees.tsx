@@ -22,8 +22,8 @@ export function TreeOfLife({
   quality?: Quality
   reducedMotion?: boolean
 }) {
-  const leaves = useMemo(() => leafField(canopyLeafCount(quality, 'life'), 0.78, 2.05, 41, 1.15), [quality])
-  const fruit = useMemo(() => hangingFruit(6, 0.42, 17, 1.85), [])
+  const leaves = useMemo(() => leafClusters(lifeTips(), canopyLeafCount(quality, 'life'), 0.42, 41), [quality])
+  const fruit = useMemo(() => hangingFruit(8, 0.38, 17, 2.15), [])
   const branches = useMemo(() => lifeBranches(), [])
   useEffect(() => () => branches.forEach((geometry) => geometry.dispose()), [branches])
 
@@ -66,8 +66,8 @@ export function TreeOfKnowledge({
   reducedMotion?: boolean
 }) {
   const count = canopyLeafCount(quality, 'knowledge')
-  const leaves = useMemo(() => leafField(count, 1.15, 1.72, 63, 0.95), [count])
-  const inner = useMemo(() => leafField(Math.floor(count * 0.7), 0.72, 1.62, 71, 0.8), [count])
+  const leaves = useMemo(() => leafClusters(knowledgeTips(), count, 0.55, 63), [count])
+  const inner = useMemo(() => leafClusters(knowledgeTips(), Math.floor(count * 0.55), 0.32, 71), [count])
   const branches = useMemo(() => knowledgeBranches(), [])
   useEffect(() => () => branches.forEach((geometry) => geometry.dispose()), [branches])
   const reach = EDEN.knowledge.fruitLocal
@@ -338,27 +338,50 @@ type LeafField = {
   poseAt: (index: number) => InstancePose
 }
 
-function leafField(count: number, radius: number, y: number, seed: number, stretchY: number): LeafField {
+function lifeTips(): Array<[number, number, number]> {
+  return [
+    [0.38, 2.45, 0.08],
+    [-0.36, 2.5, 0.16],
+    [0.14, 2.68, -0.28],
+    [-0.16, 2.62, -0.22],
+    [0.32, 2.2, 0.34],
+    [-0.34, 2.18, -0.26],
+    [0.04, 2.82, 0.06],
+    [0.22, 2.05, -0.32],
+  ]
+}
+
+function knowledgeTips(): Array<[number, number, number]> {
+  return [
+    [-0.75, 1.72, 0.45],
+    [0.72, 1.88, 0.18],
+    [0.48, 1.95, -0.48],
+    [-0.58, 1.7, 0.22],
+    [-0.42, 1.92, -0.38],
+    [0.12, 2.18, 0.58],
+    [-0.22, 2.05, 0.62],
+    [0.55, 1.55, 0.52],
+    [-0.62, 1.48, -0.28],
+  ]
+}
+
+function leafClusters(tips: Array<[number, number, number]>, count: number, radius: number, seed: number): LeafField {
   const rng = mulberry32(seed)
   const positions = new Float32Array(count * 3)
   const poses: Array<{ scale: readonly [number, number, number]; rotation: readonly [number, number, number] }> = []
   for (let i = 0; i < count; i += 1) {
-    const u = rng()
-    const v = rng()
-    const theta = u * Math.PI * 2
-    const phi = Math.acos(Math.max(-1, Math.min(1, 2 * v - 1))) * 0.42
-    const r = radius * (0.62 + rng() * 0.4)
+    const tip = tips[i % tips.length] ?? [0, 2, 0]
+    const theta = rng() * Math.PI * 2
+    const phi = rng() * 0.95
+    const r = radius * (0.2 + rng() * 0.85)
     const i3 = i * 3
-    const x = Math.sin(phi) * Math.cos(theta) * r
-    const yy = y + Math.abs(Math.cos(phi)) * r * stretchY * 0.32
-    const z = Math.sin(phi) * Math.sin(theta) * r
-    positions[i3] = x
-    positions[i3 + 1] = yy
-    positions[i3 + 2] = z
-    const s = 0.82 + rng() * 0.48
+    positions[i3] = tip[0] + Math.sin(phi) * Math.cos(theta) * r
+    positions[i3 + 1] = tip[1] + Math.cos(phi) * r * 0.45
+    positions[i3 + 2] = tip[2] + Math.sin(phi) * Math.sin(theta) * r
+    const s = 0.85 + rng() * 0.5
     poses.push({
-      scale: [s, s * 1.12, s],
-      rotation: [phi + rng() * 0.28, theta + rng() * 0.4, rng() * Math.PI],
+      scale: [s, s * 1.15, s],
+      rotation: [phi + rng() * 0.3, theta, rng() * Math.PI],
     })
   }
   return { positions, count, poseAt: (i) => poses[i] ?? { scale: [1, 1, 1], rotation: [0, 0, 0] } }
@@ -406,30 +429,11 @@ function hangingFruit(count: number, radius: number, seed: number, y: number): F
 }
 
 function lifeBranches(): TubeGeometry[] {
-  const tips: Array<[number, number, number]> = [
-    [0.38, 2.45, 0.08],
-    [-0.36, 2.5, 0.16],
-    [0.14, 2.68, -0.28],
-    [-0.16, 2.62, -0.22],
-    [0.32, 2.2, 0.34],
-    [-0.34, 2.18, -0.26],
-    [0.04, 2.82, 0.06],
-    [0.22, 2.05, -0.32],
-  ]
-  return tips.map((tip) => tube([[0, 1.25, 0], [tip[0] * 0.35, 1.85, tip[2] * 0.35], tip], 0.022))
+  return lifeTips().map((tip) => tube([[0, 1.25, 0], [tip[0] * 0.35, 1.85, tip[2] * 0.35], tip], 0.022))
 }
 
 function knowledgeBranches(): TubeGeometry[] {
-  const tips: Array<[number, number, number]> = [
-    [-0.75, 1.72, 0.45],
-    [0.72, 1.88, 0.18],
-    [0.48, 1.95, -0.48],
-    [-0.58, 1.7, 0.22],
-    [-0.42, 1.92, -0.38],
-    [0.12, 2.18, 0.58],
-    [-0.22, 2.05, 0.62],
-  ]
-  return tips.map((tip) => tube([[0.04, 1.12, 0], [tip[0] * 0.4, 1.48, tip[2] * 0.4], tip], 0.03))
+  return knowledgeTips().map((tip) => tube([[0.04, 1.12, 0], [tip[0] * 0.4, 1.48, tip[2] * 0.4], tip], 0.03))
 }
 
 function tube(points: Array<readonly [number, number, number]>, radius: number): TubeGeometry {

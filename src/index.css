@@ -235,10 +235,10 @@ a {
 
 .narration {
   position: absolute;
-  top: 96px;
+  top: 92px;
   left: 0;
   max-width: 28rem;
-  padding: 0 0.2em 0 0.12em;
+  padding: 0 1rem 0 0.18em;
   background: transparent;
   border: 0;
   overflow: visible;
@@ -278,9 +278,9 @@ a {
 
 .dock {
   position: absolute;
-  left: var(--space-5);
-  right: var(--space-5);
-  bottom: var(--space-5);
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: grid;
   gap: var(--space-3);
 }
@@ -1379,9 +1379,9 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .dock {
-    left: var(--space-4);
-    right: var(--space-4);
-    bottom: var(--space-4);
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .tick-label {
