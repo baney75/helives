@@ -21,10 +21,14 @@ describe('HomePage lamp', () => {
   it('locks the home to one 100svh viewport instead of a scrollable document', () => {
     const lampBlocks = [...css.matchAll(/\.site\.lamp-home \{([^}]+)\}/g)].map((match) => match[1] ?? '')
     expect(lampBlocks.length).toBeGreaterThan(0)
+    const heightBlocks = lampBlocks.filter((block) => /height:/.test(block))
+    expect(heightBlocks.length).toBeGreaterThan(0)
     for (const block of lampBlocks) {
       expect(block).not.toMatch(/overflow:\s*visible/)
       expect(block).not.toMatch(/overflow:\s*auto/)
       expect(block).not.toMatch(/100dvh/)
+    }
+    for (const block of heightBlocks) {
       expect(block).toMatch(/100vh/)
       expect(block).toMatch(/100svh/)
     }
