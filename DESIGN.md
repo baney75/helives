@@ -56,7 +56,7 @@ Latin cross with a point of light at the crossing: empty tomb / resurrection, no
 
 | Surface | Pattern |
 |---------|---------|
-| Home | Full-bleed night, mark, He Lives, this hour’s KJV (words of Christ in red), a motif sign beside the type, Explore more, new scripture every hour. No cards. No wash. No church button. |
+| Home | Full-bleed night, mark, He Lives, this hour’s KJV (words of Christ in red), an authored one-line motif beside the type (dawn line, still water, wick, vine; life uses the brand mark), Explore more, new scripture every hour. No Lucide furniture. No cards. No wash. No church button. |
 | Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
 | Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
 | Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
