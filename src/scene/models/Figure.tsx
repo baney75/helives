@@ -28,6 +28,10 @@ function applyJoints(root: Object3D, pose: FigurePoseId, role: FigureRole, time:
     if (!node) continue
     node.rotation.set(rot.x, rot.y, rot.z)
   }
+  const head = root.getObjectByName('Head')
+  if (head) head.scale.setScalar(0.84)
+  const mouth = root.getObjectByName('Mouth')
+  if (mouth) mouth.visible = false
 }
 
 export function Figure({
@@ -68,8 +72,13 @@ export function Figure({
     const step = walking ? Math.abs(Math.sin(t * 3.05 + phase)) * 0.03 : 0
     group.position.set(position[0], position[1] + breath + step, position[2])
     group.rotation.set(0, rotationY + (walking ? Math.sin(t * 1.55 + phase) * 0.04 : 0), lean)
-    if (clone.current && !reducedMotion) applyJoints(clone.current, pose, role, t)
+    if (clone.current) applyJoints(clone.current, pose, role, t)
   })
+
+  const fruit =
+    pose === 'eat'
+      ? ([role === 'woman' ? 0.12 : 0.1, 1.28, 0.16] as const)
+      : ([role === 'woman' ? 0.22 : 0.2, 0.98, 0.22] as const)
 
   return (
     <group ref={root} position={position} rotation={[0, rotationY, lean]} scale={figureScale} visible={fade >= 0.04}>
@@ -77,9 +86,9 @@ export function Figure({
         <Clone object={gltf.scene} />
       </group>
       {holdFruit ? (
-        <mesh position={[role === 'woman' ? 0.16 : 0.18, pose === 'eat' ? 1.12 : 0.92, 0.1]}>
-          <sphereGeometry args={[0.045, 12, 12]} />
-          <meshStandardMaterial color={fruitColor} roughness={0.42} />
+        <mesh position={fruit}>
+          <sphereGeometry args={[0.05, 12, 12]} />
+          <meshStandardMaterial color={fruitColor} roughness={0.38} emissive="#3a0c08" emissiveIntensity={0.35} />
         </mesh>
       ) : null}
     </group>

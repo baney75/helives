@@ -185,9 +185,9 @@ export function groveCount(quality: Quality): number {
 }
 
 export function herbCount(quality: Quality): number {
-  if (quality === 'low') return 40
-  if (quality === 'medium') return 80
-  return 130
+  if (quality === 'low') return 90
+  if (quality === 'medium') return 160
+  return 240
 }
 
 export function canopyLeafCount(quality: Quality, kind: 'life' | 'knowledge'): number {

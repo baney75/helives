@@ -225,8 +225,8 @@ export function Herbs({ quality }: { quality: Quality }) {
   useLayoutEffect(() => {
     if (!mesh.current) return
     writeOrientedInstances(mesh.current, positions, used, (i) => ({
-      scale: [0.7 + (kinds[i] ?? 0) * 0.8, 0.9 + (kinds[i] ?? 0) * 1.1, 1],
-      rotation: [0.15, (kinds[i] ?? 0) * Math.PI * 2, 0.08],
+      scale: [0.85 + (kinds[i] ?? 0) * 1.1, 1.35 + (kinds[i] ?? 0) * 1.6, 1],
+      rotation: [0.2, (kinds[i] ?? 0) * Math.PI * 2, 0.1],
     }))
   }, [kinds, positions, used])
 

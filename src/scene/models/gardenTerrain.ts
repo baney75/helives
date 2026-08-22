@@ -24,12 +24,12 @@ export function createPlantedIsland(): ExtrudeGeometry {
   ISLAND.forEach(([x, z], index) => (index === 0 ? shape.moveTo(x, z) : shape.lineTo(x, z)))
   shape.closePath()
   const geometry = new ExtrudeGeometry(shape, {
-    depth: 0.28,
+    depth: 0.22,
     bevelEnabled: true,
-    bevelSegments: 3,
-    bevelSize: 0.16,
-    bevelThickness: 0.1,
-    curveSegments: 2,
+    bevelSegments: 1,
+    bevelSize: 0.04,
+    bevelThickness: 0.03,
+    curveSegments: 3,
   })
   geometry.computeVertexNormals()
   return geometry

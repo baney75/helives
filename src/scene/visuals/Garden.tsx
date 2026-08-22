@@ -74,6 +74,12 @@ function PlantedGround({ fall }: { fall: number }) {
         <planeGeometry args={[0.95, 0.55]} />
         <meshStandardMaterial color={bed} roughness={0.96} />
       </mesh>
+      {EDEN.river.points.slice(0, -1).map((point, index) => (
+        <mesh key={index} position={[point[0], 0.05, point[2]]} rotation={[-Math.PI / 2, 0, index * 0.2]}>
+          <planeGeometry args={[0.72, 0.28]} />
+          <meshStandardMaterial color="#3a4a28" roughness={0.97} />
+        </mesh>
+      ))}
     </group>
   )
 }
