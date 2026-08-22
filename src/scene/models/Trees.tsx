@@ -346,19 +346,19 @@ function leafField(count: number, radius: number, y: number, seed: number, stret
     const u = rng()
     const v = rng()
     const theta = u * Math.PI * 2
-    const phi = Math.acos(2 * v - 1) * 0.72
-    const r = radius * (0.55 + rng() * 0.5)
+    const phi = Math.acos(Math.max(-1, Math.min(1, 2 * v - 1))) * 0.42
+    const r = radius * (0.62 + rng() * 0.4)
     const i3 = i * 3
     const x = Math.sin(phi) * Math.cos(theta) * r
-    const yy = y + Math.abs(Math.cos(phi)) * r * stretchY * 0.55
+    const yy = y + Math.abs(Math.cos(phi)) * r * stretchY * 0.32
     const z = Math.sin(phi) * Math.sin(theta) * r
     positions[i3] = x
     positions[i3 + 1] = yy
     positions[i3 + 2] = z
-    const s = 0.78 + rng() * 0.52
+    const s = 0.82 + rng() * 0.48
     poses.push({
-      scale: [s, s, s],
-      rotation: [phi + rng() * 0.4, theta + rng() * 0.5, rng() * Math.PI],
+      scale: [s, s * 1.12, s],
+      rotation: [phi + rng() * 0.28, theta + rng() * 0.4, rng() * Math.PI],
     })
   }
   return { positions, count, poseAt: (i) => poses[i] ?? { scale: [1, 1, 1], rotation: [0, 0, 0] } }

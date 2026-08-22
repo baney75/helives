@@ -3,17 +3,19 @@ import { useEffect, useMemo, useRef } from 'react'
 import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
 import { Figure, type FigurePoseId } from '../models/Figure.tsx'
 import { EDEN, edenPairStory, lerp3 } from '../models/eden.ts'
+import { createPlantedIsland, createPlantedMeadow } from '../models/gardenTerrain.ts'
 import { Grove, Herbs, TreeOfKnowledge, TreeOfLife } from '../models/Trees.tsx'
 import type { SceneClock } from '../types.ts'
 
 export function Garden({ clock }: { clock: SceneClock }) {
-  const strength = Math.max(clock.presence.garden, clock.presence.day6 * 0.45)
+  const after = Math.max(clock.presence.closing, clock.presence.doubt, clock.presence.measure)
+  const strength = Math.max(clock.presence.garden, clock.presence.day6 * 0.45) * (1 - after)
   const creationPair = Math.max(clock.presence.day6, clock.presence.day7 * 0.72) * (1 - clock.presence.garden)
   const fall = clock.presence.fall
   const { beat, leave, fade } = edenPairStory(clock.progress)
   const pairFade = fade
   const womanPose: FigurePoseId = leave > 0.2 ? 'depart' : beat > 0.32 ? 'eat' : beat > 0.06 ? 'reach' : 'stand'
-  const manPose: FigurePoseId = leave > 0.2 ? 'depart' : beat > 0.18 ? 'offer' : 'stand'
+  const manPose: FigurePoseId = leave > 0.2 ? 'depart' : beat > 0.42 ? 'eat' : beat > 0.18 ? 'offer' : 'stand'
   const womanHome = beat > 0.06 ? EDEN.woman.reach : EDEN.woman.garden
 
   if (strength <= 0) return null
@@ -32,6 +34,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         position={creationPair > 0.08 ? [-0.42, 0, 1.82] : lerp3(EDEN.man.garden, EDEN.man.depart, leave)}
         rotationY={Math.PI + 0.42 + leave * 0.35}
         fade={Math.max(creationPair, pairFade * strength)}
+        holdFruit={manPose === 'eat' || manPose === 'offer'}
         reducedMotion={clock.reducedMotion}
       />
       <Figure
@@ -40,6 +43,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         position={creationPair > 0.08 ? [0.42, 0, 1.82] : lerp3(womanHome, EDEN.woman.depart, leave)}
         rotationY={Math.PI - 0.42 + leave * 0.55}
         fade={Math.max(creationPair, pairFade * strength)}
+        holdFruit={womanPose === 'eat' || womanPose === 'reach'}
         reducedMotion={clock.reducedMotion}
       />
     </group>
@@ -47,25 +51,38 @@ export function Garden({ clock }: { clock: SceneClock }) {
 }
 
 function PlantedGround({ fall }: { fall: number }) {
+  const island = useMemo(() => createPlantedIsland(), [])
+  const meadow = useMemo(() => createPlantedMeadow(), [])
+  useEffect(
+    () => () => {
+      island.dispose()
+      meadow.dispose()
+    },
+    [island, meadow],
+  )
   const soil = new Color('#2c3d22').lerp(new Color('#352619'), fall * 0.82)
-  const bed = new Color('#35502a').lerp(new Color('#2c2114'), fall * 0.86)
+  const grass = new Color('#3a5330').lerp(new Color('#2c2114'), fall * 0.86)
+  const bank = new Color('#4a5c32').lerp(new Color('#3a2a16'), fall * 0.8)
   return (
     <group>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
-        <circleGeometry args={[EDEN.groundRadius, 48]} />
-        <meshStandardMaterial color={soil} roughness={0.98} emissive="#10160d" emissiveIntensity={0.08} />
+      <mesh geometry={island} rotation={[Math.PI / 2, 0, 0]} position={[0, -0.26, 0]}>
+        <meshStandardMaterial attach="material-0" color={soil} roughness={0.96} />
+        <meshStandardMaterial attach="material-1" color="#2a1c10" roughness={0.98} />
       </mesh>
-      <mesh position={[-1.7, 0.035, 1.35]} rotation={[-Math.PI / 2, 0, 0.35]}>
+      <mesh geometry={meadow} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
+        <meshStandardMaterial color={grass} roughness={0.98} emissive="#10160d" emissiveIntensity={0.06} />
+      </mesh>
+      <mesh position={[-1.7, 0.06, 1.35]} rotation={[-Math.PI / 2, 0, 0.35]}>
         <planeGeometry args={[1.35, 0.7]} />
-        <meshStandardMaterial color={bed} roughness={0.96} />
+        <meshStandardMaterial color={bank} roughness={0.96} />
       </mesh>
-      <mesh position={[2.05, 0.035, -1.15]} rotation={[-Math.PI / 2, 0, -0.4]}>
+      <mesh position={[2.05, 0.06, -1.15]} rotation={[-Math.PI / 2, 0, -0.4]}>
         <planeGeometry args={[1.2, 0.62]} />
-        <meshStandardMaterial color={bed} roughness={0.96} />
+        <meshStandardMaterial color={bank} roughness={0.96} />
       </mesh>
-      <mesh position={[-2.2, 0.035, -1.4]} rotation={[-Math.PI / 2, 0, 0.15]}>
+      <mesh position={[-2.2, 0.06, -1.4]} rotation={[-Math.PI / 2, 0, 0.15]}>
         <planeGeometry args={[0.95, 0.55]} />
-        <meshStandardMaterial color={bed} roughness={0.96} />
+        <meshStandardMaterial color={bank} roughness={0.96} />
       </mesh>
     </group>
   )

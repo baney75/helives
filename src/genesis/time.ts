@@ -13,6 +13,22 @@ export function clampedFrameDelta(now: number, previous: number): number {
   return Math.min(MAX_FRAME_DELTA_SECONDS, Math.max(0, (now - previous) / 1000))
 }
 
+export function sceneHoldCap(progress: number): number {
+  const scene = findSceneAt(progress)
+  return Math.min(0.999999, Math.max(0, scene.end - 1e-6))
+}
+
+/**
+ * Keep the clock on the current beat while MPEG is still speaking.
+ * Manual scrubbing bypasses this — only the rAF tick passes `audioHold`.
+ */
+export function holdAtSceneEnd(current: number, next: number, audioHold: boolean): number {
+  if (!audioHold) return next
+  const cap = sceneHoldCap(current)
+  if (next > cap) return Math.max(current, cap)
+  return next
+}
+
 export function advanceProgress(
   current: number,
   dt: number,
@@ -20,6 +36,7 @@ export function advanceProgress(
   speed: number,
   holdRef: { current: number },
   stop: () => void,
+  audioHold = false,
 ): number {
   if (current <= 0) {
     holdRef.current += dt
@@ -27,7 +44,7 @@ export function advanceProgress(
     if (holdRef.current < hold) return 0
   }
   const journey = cinematic ? CINEMATIC_SECONDS : INTERACTIVE_SECONDS
-  const next = current + dt / (journey / speed)
+  const next = holdAtSceneEnd(current, current + dt / (journey / speed), audioHold)
   if (next >= 1) {
     stop()
     return 1

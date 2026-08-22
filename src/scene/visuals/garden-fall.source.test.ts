@@ -20,6 +20,9 @@ describe('shipping Garden and Fall source', () => {
     expect(figure).toMatch(/models\/genesis\/man\.glb/)
     expect(figure).not.toMatch(/man\.png/)
     expect(garden).toMatch(/from '\.\.\/models\/eden\.ts'/)
+    expect(garden).toMatch(/createPlantedIsland/)
+    expect(garden).toMatch(/createPlantedMeadow/)
+    expect(garden).toMatch(/holdFruit/)
   })
 
   it('uses flat leaves on the hero trees instead of sphere canopies', () => {
@@ -45,6 +48,22 @@ describe('shipping Garden and Fall source', () => {
     expect(fall).toMatch(/createTaperedTube/)
     expect(fall).not.toMatch(/TubeGeometry\(curve, 32, 0\.035/)
     expect(fall).not.toMatch(/sphereGeometry args=\{\[0\.09, 10, 10\]\}/)
+    expect(fall).not.toMatch(/function animateTube/)
+    expect(fall).toMatch(/function Cherubim/)
+    expect(fall).toMatch(/function SeatedGuard/)
+  })
+
+  it('does not plant day-three crowns as icosahedrons', () => {
+    const dry = readFileSync(join(here, 'DryLand.tsx'), 'utf8')
+    expect(dry).toMatch(/createLeafGeometry/)
+    expect(dry).not.toMatch(/icosahedronGeometry/)
+  })
+
+  it('keeps HUD copy inside the padded HUD, not clipped by overflow hidden', () => {
+    const css = readFileSync(join(here, '../../index.css'), 'utf8')
+    expect(css).toMatch(/\.hud \{[\s\S]*?overflow: visible/)
+    expect(css).toMatch(/\.narration \{[\s\S]*?position: absolute/)
+    expect(css).toMatch(/safe-area-inset-left/)
   })
 
   it('uses authored fish and bird meshes instead of sphere/cone stand-ins', () => {

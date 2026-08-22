@@ -7,11 +7,12 @@ import {
   Preload,
 } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Suspense, useEffect, useRef } from 'react'
+import { Component, Suspense, useEffect, useRef, useState, type ReactNode } from 'react'
 import { Vector3 } from 'three'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { DPR, type Quality } from '../lib/budget.ts'
 import { demoteQuality } from '../lib/quality.ts'
+import { guardWebGLContext } from '../lib/webglSafety.ts'
 import { cameraPose, fogFar, framedCamera } from '../genesis/time.ts'
 import type { SceneClock } from './types.ts'
 import { SceneEffects } from './SceneEffects.tsx'
@@ -124,15 +125,43 @@ function Creation({ clock }: { clock: SceneClock }) {
       <DryLand clock={clock} />
       <HeavenLights clock={clock} />
       <LivingCreatures clock={clock} />
-      <Garden clock={clock} />
-      <TheFall clock={clock} />
+      <SceneGate>
+        <Garden clock={clock} />
+      </SceneGate>
+      <SceneGate>
+        <TheFall clock={clock} />
+      </SceneGate>
       <MeasureSky clock={clock} />
       <SceneEffects clock={clock} />
       <AdaptiveDpr />
       <AdaptiveEvents />
-      <Preload all />
+      {clock.quality === 'high' ? <Preload all /> : <Preload />}
     </>
   )
+}
+
+class SceneGate extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false }
+
+  static getDerivedStateFromError(): { failed: boolean } {
+    return { failed: true }
+  }
+
+  render(): ReactNode {
+    return this.state.failed ? null : this.props.children
+  }
+}
+
+function WebGLGuard({
+  onLost,
+  onRestored,
+}: {
+  onLost: () => void
+  onRestored: () => void
+}) {
+  const canvas = useThree((state) => state.gl.domElement)
+  useEffect(() => guardWebGLContext(canvas, onLost, onRestored), [canvas, onLost, onRestored])
+  return null
 }
 
 function LiveQuality({
@@ -187,18 +216,22 @@ export function GenesisCanvas({
   onPerformanceFactor?: (factor: number) => void
 }) {
   const visible = useDocumentVisible()
+  const [epoch, setEpoch] = useState(0)
+  const lost = useRef(onQualityFallback)
+  lost.current = onQualityFallback
 
   return (
     <div className="stage" aria-hidden="true">
       <Canvas
+        key={epoch}
         dpr={DPR[clock.quality]}
         frameloop={visible ? 'always' : 'never'}
         gl={{
           antialias: clock.quality === 'high',
           alpha: false,
-          powerPreference: 'high-performance',
+          powerPreference: clock.isMobile ? 'default' : 'high-performance',
           stencil: false,
-          preserveDrawingBuffer: true,
+          preserveDrawingBuffer: false,
         }}
         camera={{
           position: [framedCamera(clock.progress).x, framedCamera(clock.progress).y, framedCamera(clock.progress).z],
@@ -207,6 +240,10 @@ export function GenesisCanvas({
         fallback={<Fallback />}
       >
         <color attach="background" args={['#07060a']} />
+        <WebGLGuard
+          onLost={() => lost.current?.('low')}
+          onRestored={() => setEpoch((value) => value + 1)}
+        />
         <Suspense fallback={null}>
           <Creation clock={clock} />
           <LiveQuality

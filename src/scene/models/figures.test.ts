@@ -3,6 +3,7 @@ import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { sceneBounds } from '../../genesis/sceneTiming.ts'
 import { edenPairStory } from './eden.ts'
+import { figureJointPose } from './figurePose.ts'
 
 function gltfNodeNames(path: string): string[] {
   const buf = readFileSync(path)
@@ -56,6 +57,20 @@ describe('authored figure GLBs', () => {
     }
     const figureSource = readFileSync(resolve('src/scene/models/Figure.tsx'), 'utf8')
     expect(figureSource).not.toMatch(/\.png/)
+  })
+
+  it('moves named joints as people in the story, not as a lean-only capsule', () => {
+    const reach = figureJointPose('reach', 'woman', 0)
+    const eat = figureJointPose('eat', 'woman', 0)
+    const walkA = figureJointPose('depart', 'man', 0.4)
+    const walkB = figureJointPose('depart', 'man', 0.4 + Math.PI / 3.05)
+    expect(Math.abs(reach.LForearm?.z ?? 0)).toBeGreaterThan(0.6)
+    expect(eat.Head?.x ?? 0).toBeGreaterThan(reach.Head?.x ?? 0)
+    expect(walkA.LLowerLeg?.x ?? 0).not.toBeCloseTo(walkB.LLowerLeg?.x ?? 0, 2)
+    expect((walkA.LLowerLeg?.x ?? 0) * (walkA.RLowerLeg?.x ?? 0)).toBeLessThan(0)
+    const src = readFileSync(resolve('src/scene/models/Figure.tsx'), 'utf8')
+    expect(src).toMatch(/useFrame/)
+    expect(src).not.toMatch(/if \(fade < 0\.04\) return null/)
   })
 
   it('keeps the six-angle acceptance renderer in the repository', () => {

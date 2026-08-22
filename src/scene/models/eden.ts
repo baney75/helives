@@ -188,9 +188,9 @@ export function herbCount(quality: Quality): number {
 }
 
 export function canopyLeafCount(quality: Quality, kind: 'life' | 'knowledge'): number {
-  const base = kind === 'life' ? 520 : 760
-  if (quality === 'low') return Math.floor(base * 0.5)
-  if (quality === 'medium') return Math.floor(base * 0.75)
+  const base = kind === 'life' ? 280 : 420
+  if (quality === 'low') return Math.floor(base * 0.45)
+  if (quality === 'medium') return Math.floor(base * 0.72)
   return base
 }
 

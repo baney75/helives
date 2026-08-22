@@ -15,6 +15,16 @@ describe('device-aware Genesis canvas', () => {
     expect(canvas).toMatch(/demoteQuality/)
     expect(page).toMatch(/effectsAllowed/)
     expect(page).toMatch(/onQualityFallback/)
+    expect(page).toMatch(/audioHold/)
+    expect(page).toMatch(/narration\.hold/)
+  })
+
+  it('guards WebGL context loss and does not keep the drawing buffer', () => {
+    expect(canvas).toMatch(/guardWebGLContext/)
+    expect(canvas).toMatch(/webglcontextlost|onLost/)
+    expect(canvas).toMatch(/preserveDrawingBuffer: false/)
+    expect(canvas).toMatch(/class SceneGate/)
+    expect(canvas).not.toMatch(/preserveDrawingBuffer: true/)
   })
 
   it('does not add scroll, debug, or icon-font libraries', () => {
