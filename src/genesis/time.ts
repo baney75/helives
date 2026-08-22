@@ -108,7 +108,7 @@ export function cameraPose(progress: number, mobile = false): CameraPose {
     day5: { position: [-1.25 + t * 1.7, 0.35 + t * 0.48, 6.15 - t * 0.35], target: [0, 0.5, 0.9] },
     day6: { position: [0.85 - t * 0.5, 1.24 + t * 0.16, 5.25], target: [0.1, 0.62, 1.08] },
     day7: { position: [-0.6 + side, 1.55, 6.4], target: [0, 0.45, 0] },
-    garden: { position: [1.35 + side * 0.2, 1.28, 4.15 - t * 0.2], target: [0.15, 0.92, 0.35] },
+    garden: { position: [2.05 + side * 0.15, 1.32, 4.35 - t * 0.15], target: [-0.05, 0.88, 0.15] },
     fall: mobile
       ? {
           position: [0.32 + fallFollow * 2.16, 1.3 + fallFollow * 0.12, 4.75 + fallFollow * 0.25],

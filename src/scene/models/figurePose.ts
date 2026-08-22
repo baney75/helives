@@ -16,17 +16,17 @@ export function figureJointPose(
   const offer = pose === 'offer' ? 1 : 0
   const woman = role === 'woman' ? 1 : -1
   return {
-    Head: { x: 0.06 + eat * 0.42 + (pose === 'depart' ? 0.16 : 0), y: woman * (offer * -0.18 + reach * 0.12), z: woman * reach * -0.14 },
-    Neck: { x: eat * 0.16, y: 0, z: 0 },
-    LForearm: { x: -walk * 0.42 - offer * 0.2 - eat * 0.85, y: eat * 0.35, z: woman * (reach * -1.45 - eat * -0.7) },
-    RForearm: { x: walk * 0.42 - offer * 1.15 - eat * 0.95, y: offer * 0.4 + eat * 0.2, z: woman * (reach * 0.2) },
-    LHand: { x: eat * 0.55 + reach * 0.2, y: 0, z: reach * -0.35 },
-    RHand: { x: offer * 0.35 + eat * 0.4, y: 0, z: 0 },
-    LLowerLeg: { x: walk * 0.78, y: 0, z: 0 },
-    RLowerLeg: { x: -walk * 0.78, y: 0, z: 0 },
-    LKnee: { x: Math.max(0, walk) * 0.62, y: 0, z: 0 },
-    RKnee: { x: Math.max(0, -walk) * 0.62, y: 0, z: 0 },
-    LFoot: { x: walk * 0.16, y: 0, z: 0 },
-    RFoot: { x: -walk * 0.16, y: 0, z: 0 },
+    Head: { x: 0.05 + eat * 0.18 + (pose === 'depart' ? 0.1 : 0), y: woman * offer * -0.1, z: woman * reach * -0.06 },
+    Neck: { x: eat * 0.08, y: 0, z: 0 },
+    LForearm: { x: -walk * 0.28 - eat * 0.35, y: 0, z: woman * (reach * -0.72) },
+    RForearm: { x: walk * 0.28 - offer * 0.55 - eat * 0.4, y: offer * 0.18, z: 0 },
+    LHand: { x: eat * 0.2, y: 0, z: reach * -0.12 },
+    RHand: { x: offer * 0.15 + eat * 0.12, y: 0, z: 0 },
+    LLowerLeg: { x: walk * 0.42, y: 0, z: 0 },
+    RLowerLeg: { x: -walk * 0.42, y: 0, z: 0 },
+    LKnee: { x: Math.max(0, walk) * 0.28, y: 0, z: 0 },
+    RKnee: { x: Math.max(0, -walk) * 0.28, y: 0, z: 0 },
+    LFoot: { x: walk * 0.08, y: 0, z: 0 },
+    RFoot: { x: -walk * 0.08, y: 0, z: 0 },
   }
 }

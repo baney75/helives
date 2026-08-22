@@ -236,7 +236,7 @@ a {
 .narration {
   position: absolute;
   top: 92px;
-  left: 0;
+  left: max(2.25rem, env(safe-area-inset-left));
   max-width: 28rem;
   padding: 0 1rem 0 0.18em;
   background: transparent;
@@ -278,9 +278,9 @@ a {
 
 .dock {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: max(2.25rem, env(safe-area-inset-left));
+  right: max(var(--space-5), env(safe-area-inset-right));
+  bottom: max(var(--space-5), env(safe-area-inset-bottom));
   display: grid;
   gap: var(--space-3);
 }
@@ -1379,9 +1379,9 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .dock {
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: max(var(--space-5), env(safe-area-inset-left));
+    right: max(var(--space-4), env(safe-area-inset-right));
+    bottom: max(var(--space-4), env(safe-area-inset-bottom));
   }
 
   .tick-label {

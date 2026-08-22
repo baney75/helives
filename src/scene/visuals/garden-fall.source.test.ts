@@ -50,8 +50,8 @@ describe('shipping Garden and Fall source', () => {
     expect(fall).not.toMatch(/TubeGeometry\(curve, 32, 0\.035/)
     expect(fall).not.toMatch(/sphereGeometry args=\{\[0\.09, 10, 10\]\}/)
     expect(fall).not.toMatch(/function animateTube/)
-    expect(fall).toMatch(/function Cherubim/)
-    expect(fall).toMatch(/function SeatedGuard/)
+    expect(fall).not.toMatch(/function Cherubim/)
+    expect(fall).not.toMatch(/function SeatedGuard/)
   })
 
   it('does not plant day-three crowns as icosahedrons', () => {
@@ -64,7 +64,8 @@ describe('shipping Garden and Fall source', () => {
     const css = readFileSync(join(here, '../../index.css'), 'utf8')
     const hud = readFileSync(join(here, '../../ui/HUD.tsx'), 'utf8')
     expect(css).toMatch(/\.hud \{[\s\S]*?overflow: visible/)
-    expect(css).toMatch(/\.narration \{[\s\S]*?position: absolute/)
+    expect(css).toMatch(/\.narration \{[\s\S]*?left: max\(2\.25rem/)
+    expect(css).toMatch(/\.dock \{[\s\S]*?left: max\(2\.25rem/)
     expect(css).toMatch(/safe-area-inset-left/)
     expect(hud.indexOf('className="narration"')).toBeLessThan(hud.indexOf('className="dock"'))
     expect(hud).not.toMatch(/<footer className="dock">[\s\S]*className="narration"/)

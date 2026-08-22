@@ -1,5 +1,4 @@
-import { BufferAttribute, CircleGeometry, ExtrudeGeometry, Shape } from 'three'
-import { EDEN, riverDistance } from './eden.ts'
+import { ExtrudeGeometry, Shape } from 'three'
 
 const ISLAND: readonly (readonly [number, number])[] = [
   [-4.05, -0.35],
@@ -31,25 +30,6 @@ export function createPlantedIsland(): ExtrudeGeometry {
     bevelThickness: 0.03,
     curveSegments: 3,
   })
-  geometry.computeVertexNormals()
-  return geometry
-}
-
-/** Circle in XY; local Z becomes world Y after a -PI/2 pitch. Banks rise; the river cuts a bed. */
-export function createPlantedMeadow(): CircleGeometry {
-  const geometry = new CircleGeometry(EDEN.groundRadius, 64)
-  const position = geometry.getAttribute('position') as BufferAttribute
-  for (let i = 0; i < position.count; i += 1) {
-    const x = position.getX(i)
-    const y = position.getY(i)
-    const radius = Math.hypot(x, y) / EDEN.groundRadius
-    const river = riverDistance(x, y)
-    let height = (1 - radius * radius) * 0.11 + Math.sin(x * 1.3) * Math.cos(y * 1.1) * 0.045
-    if (river < 0.62) height -= (0.62 - river) * 0.22
-    if (river > 0.28 && river < 0.72) height += 0.035
-    position.setZ(i, height)
-  }
-  position.needsUpdate = true
   geometry.computeVertexNormals()
   return geometry
 }

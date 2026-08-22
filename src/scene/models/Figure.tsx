@@ -28,10 +28,6 @@ function applyJoints(root: Object3D, pose: FigurePoseId, role: FigureRole, time:
     if (!node) continue
     node.rotation.set(rot.x, rot.y, rot.z)
   }
-  const head = root.getObjectByName('Head')
-  if (head) head.scale.setScalar(0.84)
-  const mouth = root.getObjectByName('Mouth')
-  if (mouth) mouth.visible = false
 }
 
 export function Figure({

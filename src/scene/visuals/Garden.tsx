@@ -34,7 +34,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         position={creationPair > 0.08 ? [-0.42, 0, 1.82] : lerp3(EDEN.man.garden, EDEN.man.depart, leave)}
         rotationY={Math.PI + 0.42 + leave * 0.35}
         fade={Math.max(creationPair, pairFade * strength)}
-        holdFruit={manPose === 'eat' || manPose === 'offer'}
+        holdFruit={manPose === 'eat'}
         reducedMotion={clock.reducedMotion}
       />
       <Figure
@@ -43,7 +43,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         position={creationPair > 0.08 ? [0.42, 0, 1.82] : lerp3(womanHome, EDEN.woman.depart, leave)}
         rotationY={Math.PI - 0.42 + leave * 0.55}
         fade={Math.max(creationPair, pairFade * strength)}
-        holdFruit={womanPose === 'eat' || womanPose === 'reach'}
+        holdFruit={womanPose === 'eat'}
         reducedMotion={clock.reducedMotion}
       />
     </group>
@@ -91,11 +91,11 @@ function River({ reducedMotion }: { reducedMotion: boolean }) {
     const half = EDEN.river.width / 2
     shape.moveTo(-half, 0)
     shape.lineTo(half, 0)
-    shape.lineTo(half, 0.035)
-    shape.lineTo(-half, 0.035)
+    shape.lineTo(half, 0.016)
+    shape.lineTo(-half, 0.016)
     shape.closePath()
     const path = new CatmullRomCurve3(EDEN.river.points.map((p) => new Vector3(...p)))
-    return new ExtrudeGeometry(shape, { steps: 36, bevelEnabled: false, extrudePath: path })
+    return new ExtrudeGeometry(shape, { steps: 48, bevelEnabled: false, extrudePath: path })
   }, [])
 
   useEffect(() => () => geometry.dispose(), [geometry])

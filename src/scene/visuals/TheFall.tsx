@@ -19,7 +19,6 @@ export function TheFall({ clock }: { clock: SceneClock }) {
       <Serpent strength={storyStrength} beat={beat} reducedMotion={clock.reducedMotion} />
       <TakenFruit strength={storyStrength} beat={beat} reducedMotion={clock.reducedMotion} />
       <EastFlame strength={storyStrength} beat={beat} reducedMotion={clock.reducedMotion} />
-      <Cherubim strength={storyStrength} beat={beat} />
       <pointLight position={[0.55, 1.32, 2.25]} intensity={1.25 * storyStrength} color="#d8e6ff" distance={6.5} />
       <pointLight position={[2.65, 1.05, 1.35]} intensity={1.45 * storyStrength} color="#f0a35e" distance={5.5} />
     </group>
@@ -166,7 +165,7 @@ function TakenFruit({
     if (!group) return
     const story = fallFruitStory(beat)
     const { from, to, phase } = story
-    group.visible = story.visible
+    group.visible = story.visible && beat < 0.34
     group.position.set(
       from[0] + (to[0] - from[0]) * phase,
       from[1] + (to[1] - from[1]) * phase + (reducedMotion ? 0 : Math.sin(phase * Math.PI) * 0.1),
@@ -245,32 +244,3 @@ function EastFlame({ strength, beat, reducedMotion }: { strength: number; beat: 
   )
 }
 
-function Cherubim({ strength, beat }: { strength: number; beat: number }) {
-  const reveal = Math.min(1, Math.max(0, (beat - 0.7) / 0.12))
-  if (reveal <= 0.02) return null
-  return (
-    <group visible={strength > 0.18} scale={reveal}>
-      <SeatedGuard position={[2.28, 0, 0.22]} yaw={-0.55} />
-      <SeatedGuard position={[3.12, 0, 1.18]} yaw={0.35} />
-    </group>
-  )
-}
-
-function SeatedGuard({ position, yaw }: { position: [number, number, number]; yaw: number }) {
-  return (
-    <group position={position} rotation={[0, yaw, 0]}>
-      <mesh position={[0, 0.28, 0.04]} rotation={[0.55, 0, 0]}>
-        <boxGeometry args={[0.22, 0.34, 0.42]} />
-        <meshStandardMaterial color="#161310" roughness={0.96} />
-      </mesh>
-      <mesh position={[0, 0.62, 0.02]}>
-        <boxGeometry args={[0.34, 0.48, 0.2]} />
-        <meshStandardMaterial color="#1b1712" roughness={0.94} />
-      </mesh>
-      <mesh position={[0, 0.96, 0.03]}>
-        <boxGeometry args={[0.16, 0.16, 0.16]} />
-        <meshStandardMaterial color="#12100c" roughness={0.9} />
-      </mesh>
-    </group>
-  )
-}
