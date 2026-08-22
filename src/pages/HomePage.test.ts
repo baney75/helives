@@ -18,12 +18,15 @@ describe('HomePage lamp', () => {
     expect(html).toContain('not a church, not a sacrament')
   })
 
-  it('locks the home to one 100dvh viewport instead of a scrollable document', () => {
+  it('locks the home to one 100svh viewport instead of a scrollable document', () => {
     const lampBlocks = [...css.matchAll(/\.site\.lamp-home \{([^}]+)\}/g)].map((match) => match[1] ?? '')
     expect(lampBlocks.length).toBeGreaterThan(0)
     for (const block of lampBlocks) {
       expect(block).not.toMatch(/overflow:\s*visible/)
       expect(block).not.toMatch(/overflow:\s*auto/)
+      expect(block).not.toMatch(/100dvh/)
+      expect(block).toMatch(/100vh/)
+      expect(block).toMatch(/100svh/)
     }
     const hero =
       css.match(/\.site\.lamp-home \.hero,\s*\.site\.lamp-home \.word-hero \{([^}]+)\}/)?.[1] ??

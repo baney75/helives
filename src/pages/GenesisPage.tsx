@@ -1,11 +1,13 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAutoQuality } from '../hooks/useAutoQuality.ts'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { useGenesisClock } from '../hooks/useGenesisClock.ts'
 import { useIsMobile } from '../hooks/useIsMobile.ts'
 import { useNarration } from '../hooks/useNarration.ts'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
+import type { Quality } from '../lib/budget.ts'
 import { readAppMode } from '../lib/mode.ts'
+import { effectsAllowed, persistQualityRecord, qualityFromSearch, stricterQuality } from '../lib/quality.ts'
 import { GenesisCanvas } from '../scene/GenesisCanvas.tsx'
 import { CinematicOverlay } from '../ui/CinematicOverlay.tsx'
 import { HUD } from '../ui/HUD.tsx'
@@ -15,11 +17,33 @@ export function GenesisPage() {
   const reducedMotion = usePrefersReducedMotion()
   const isMobile = useIsMobile()
   const visible = useDocumentVisible()
-  const gate = useAutoQuality(reducedMotion, visible, window.location.search)
+  const search = window.location.search
+  const gate = useAutoQuality(reducedMotion, visible, search)
+  const qualityLocked = Boolean(qualityFromSearch(search) || reducedMotion)
+  const [liveQuality, setLiveQuality] = useState<Quality | null>(null)
+  const [factor, setFactor] = useState(1)
+  const quality = liveQuality ? stricterQuality(liveQuality, gate.quality) : gate.quality
+  const effects = effectsAllowed(quality, factor)
   const clock = useGenesisClock(reducedMotion, mode.cinematic, {
     progress: mode.progress,
     pause: mode.pause,
   })
+
+  const onQualityFallback = useCallback(
+    (next: Quality) => {
+      if (qualityLocked) return
+      setLiveQuality((current) => (current ? stricterQuality(current, next) : next))
+      persistQualityRecord(next, Date.now(), window.navigator.userAgent, window.localStorage)
+    },
+    [qualityLocked],
+  )
+
+  const onPerformanceFactor = useCallback(
+    (next: number) => {
+      setFactor((current) => (effectsAllowed(quality, current) === effectsAllowed(quality, next) ? current : next))
+    },
+    [quality],
+  )
 
   const narration = useNarration({
     sceneId: clock.scene.id,
@@ -61,9 +85,13 @@ export function GenesisPage() {
           reducedMotion,
           isMobile,
           cinematic: mode.cinematic,
-          quality: gate.quality,
+          quality,
           playing: clock.playing,
+          effects,
         }}
+        qualityLocked={qualityLocked}
+        onQualityFallback={onQualityFallback}
+        onPerformanceFactor={onPerformanceFactor}
       />
       {narration.blocked ? (
         <button type="button" className="sound-gate" onClick={() => void narration.retry()}>

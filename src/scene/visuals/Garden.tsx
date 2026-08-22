@@ -1,5 +1,6 @@
-import { useEffect, useMemo } from 'react'
-import { CatmullRomCurve3, Color, ExtrudeGeometry, Shape, Vector3 } from 'three'
+import { useFrame } from '@react-three/fiber'
+import { useEffect, useMemo, useRef } from 'react'
+import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
 import { Figure, type FigurePoseId } from '../models/Figure.tsx'
 import { EDEN, edenPairStory, lerp3 } from '../models/eden.ts'
 import { Grove, Herbs, TreeOfKnowledge, TreeOfLife } from '../models/Trees.tsx'
@@ -20,10 +21,10 @@ export function Garden({ clock }: { clock: SceneClock }) {
   return (
     <group position={EDEN.origin} visible={strength > 0.04}>
       <PlantedGround fall={fall} />
-      <River />
-      <TreeOfLife fall={fall} quality={clock.quality} />
-      <TreeOfKnowledge fall={fall} quality={clock.quality} fruitTaken={beat > 0.12} />
-      <Grove quality={clock.quality} fall={fall} />
+      <River reducedMotion={clock.reducedMotion} />
+      <TreeOfLife fall={fall} quality={clock.quality} reducedMotion={clock.reducedMotion} />
+      <TreeOfKnowledge fall={fall} quality={clock.quality} fruitTaken={beat > 0.12} reducedMotion={clock.reducedMotion} />
+      <Grove quality={clock.quality} fall={fall} reducedMotion={clock.reducedMotion} />
       <Herbs quality={clock.quality} />
       <Figure
         role="man"
@@ -70,7 +71,8 @@ function PlantedGround({ fall }: { fall: number }) {
   )
 }
 
-function River() {
+function River({ reducedMotion }: { reducedMotion: boolean }) {
+  const material = useRef<MeshPhysicalMaterial>(null)
   const geometry = useMemo(() => {
     const shape = new Shape()
     const half = EDEN.river.width / 2
@@ -85,9 +87,15 @@ function River() {
 
   useEffect(() => () => geometry.dispose(), [geometry])
 
+  useFrame(({ clock: r3f }) => {
+    if (!material.current || reducedMotion) return
+    material.current.emissiveIntensity = 0.12 + Math.sin(r3f.elapsedTime * 0.65) * 0.045
+  })
+
   return (
     <mesh geometry={geometry}>
       <meshPhysicalMaterial
+        ref={material}
         color="#3a6a88"
         roughness={0.18}
         metalness={0.02}

@@ -83,6 +83,61 @@ export function readReusableQuality(
   return record
 }
 
+export type DeviceHint = {
+  deviceMemory?: number
+  hardwareConcurrency?: number
+  maxTouchPoints?: number
+  saveData?: boolean
+  coarsePointer?: boolean
+  narrowViewport?: boolean
+}
+
+/** Pending start only. Never begin on high; the GPU bench may promote later. */
+export function pendingQualityFromDevice(hint: DeviceHint): Quality {
+  if (hint.saveData) return 'low'
+  const memory = hint.deviceMemory ?? 8
+  const cores = hint.hardwareConcurrency ?? 8
+  if (memory <= 2 || cores <= 2) return 'low'
+  if (hint.coarsePointer && hint.narrowViewport) return 'medium'
+  if (memory <= 4 || cores <= 4) return 'medium'
+  return 'medium'
+}
+
+/** PerformanceMonitor factor is 0–1. Decline only; never climb here. */
+export function demoteQuality(current: Quality, factor: number): Quality {
+  if (!Number.isFinite(factor) || factor < 0.35) return 'low'
+  if (factor < 0.65) {
+    if (current === 'high') return 'medium'
+    return 'low'
+  }
+  return current
+}
+
+export function effectsAllowed(quality: Quality, factor = 1): boolean {
+  if (quality === 'low') return false
+  return Number.isFinite(factor) && factor >= 0.45
+}
+
+export function stricterQuality(a: Quality, b: Quality): Quality {
+  const rank: Record<Quality, number> = { low: 0, medium: 1, high: 2 }
+  return rank[a] <= rank[b] ? a : b
+}
+
+export function persistQualityRecord(
+  quality: Quality,
+  now: number,
+  ua: string,
+  storage: Pick<Storage, 'setItem'>,
+): QualityRecord {
+  const record = makeQualityRecord(quality, now, ua)
+  try {
+    storage.setItem(STORAGE_KEY, JSON.stringify(record))
+  } catch {
+    // private mode / quota
+  }
+  return record
+}
+
 function asQualityRecord(data: unknown): QualityRecord | null {
   if (typeof data !== 'object' || data === null) return null
   if (!('tier' in data) || !('dpr' in data) || !('ts' in data) || !('uaHash' in data)) {

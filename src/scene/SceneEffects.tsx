@@ -2,7 +2,7 @@ import { Bloom, EffectComposer } from '@react-three/postprocessing'
 import type { SceneClock } from './types.ts'
 
 export function SceneEffects({ clock }: { clock: SceneClock }) {
-  if (clock.quality === 'low') return null
+  if (!clock.effects) return null
   const fire = clock.presence.day1 + clock.presence.day4 * 0.6 + clock.presence.closing * 0.25
   if (fire < 0.22) return null
   const richer = clock.quality === 'high' ? 0.18 : 0

@@ -91,10 +91,16 @@ describe('home viewport', () => {
   })
 
   it.each([
-    { width: 1280, height: 800, now: new Date('2026-08-15T13:18:48.000Z') },
+    { width: 360, height: 740, now: new Date('2026-08-15T13:18:48.000Z') },
+    { width: 360, height: 740, now: longestVerseAt() },
     { width: 375, height: 812, now: new Date('2026-08-15T13:18:48.000Z') },
     { width: 375, height: 812, now: longestVerseAt() },
+    { width: 390, height: 844, now: new Date('2026-08-15T13:18:48.000Z') },
+    { width: 768, height: 1024, now: new Date('2026-08-15T13:18:48.000Z') },
+    { width: 1024, height: 768, now: new Date('2026-08-15T13:18:48.000Z') },
+    { width: 1280, height: 800, now: new Date('2026-08-15T13:18:48.000Z') },
     { width: 1280, height: 800, now: longestVerseAt() },
+    { width: 1440, height: 900, now: new Date('2026-08-15T13:18:48.000Z') },
   ])('fits one viewport at $width×$height', { timeout: 20_000 }, async ({ width, height, now }) => {
     const page = await opened.newPage({ viewport: { width, height } })
     await page.emulateMedia({ reducedMotion: 'reduce' })
