@@ -16,6 +16,7 @@ describe('HourLamp', () => {
     expect(html).toContain('41:12')
     expect(html).toContain('word-remain-rail')
     expect(html).toContain('word-sign')
+    expect(html).toMatch(/data-length="(?:short|long)"/)
     expect(html).not.toContain('M4.077 10.615')
   })
 
