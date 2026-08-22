@@ -1534,9 +1534,13 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .word-hero {
-    align-items: stretch;
+    align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .site.lamp-home .word-lamp {
+    width: 100%;
   }
 
   .word-lamp {

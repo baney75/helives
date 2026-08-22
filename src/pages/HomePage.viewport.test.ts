@@ -52,22 +52,25 @@ async function measure(page: Page) {
     ) {
       throw new Error('lamp pieces missing')
     }
-    const read = (el: Element) => {
-      const r = el.getBoundingClientRect()
-      return { top: r.top, bottom: r.bottom, height: r.height }
-    }
+    const brandBox = brand.getBoundingClientRect()
+    const verseBox = verse.getBoundingClientRect()
+    const citeBox = cite.getBoundingClientRect()
+    const signBox = sign.getBoundingClientRect()
+    const actionsBox = actions.getBoundingClientRect()
+    const remainBox = remain.getBoundingClientRect()
+    const footBox = foot.getBoundingClientRect()
     return {
       inner: window.innerHeight,
       scroll: Math.max(root.scrollHeight, body.scrollHeight, lamp.scrollHeight),
       overflowY: getComputedStyle(body).overflowY,
       siteOverflow: getComputedStyle(lamp).overflow,
-      brand: read(brand),
-      verse: read(verse),
-      cite: read(cite),
-      sign: read(sign),
-      actions: read(actions),
-      remain: read(remain),
-      foot: read(foot),
+      brand: { top: brandBox.top, bottom: brandBox.bottom, height: brandBox.height },
+      verse: { top: verseBox.top, bottom: verseBox.bottom, height: verseBox.height },
+      cite: { top: citeBox.top, bottom: citeBox.bottom, height: citeBox.height },
+      sign: { top: signBox.top, bottom: signBox.bottom, height: signBox.height },
+      actions: { top: actionsBox.top, bottom: actionsBox.bottom, height: actionsBox.height },
+      remain: { top: remainBox.top, bottom: remainBox.bottom, height: remainBox.height },
+      foot: { top: footBox.top, bottom: footBox.bottom, height: footBox.height },
       footerText: foot.textContent ?? '',
     }
   })
