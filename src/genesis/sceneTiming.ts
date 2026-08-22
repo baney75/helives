@@ -5,19 +5,19 @@ import type { SceneId } from './scenes.ts'
  * `scripts/generate-audio.mjs` rewrites these values after voice generation.
  */
 export const SCENE_AUDIO_SECONDS: Record<SceneId, number> = {
-  beginning: 12.592,
-  day1: 9.272,
-  day2: 13.976,
-  day3: 28.224,
-  day4: 10.264,
-  day5: 14.144,
-  day6: 21.912,
-  day7: 11.920,
-  garden: 18.568,
-  fall: 102.632,
-  closing: 10.000,
-  doubt: 11.296,
-  measure: 19.120,
+  beginning: 12.624,
+  day1: 9.312,
+  day2: 14.016,
+  day3: 28.248,
+  day4: 10.296,
+  day5: 14.184,
+  day6: 21.936,
+  day7: 11.952,
+  garden: 18.6,
+  fall: 102.672,
+  closing: 10.032,
+  doubt: 11.328,
+  measure: 19.152,
 }
 
 export const SCENE_ORDER: readonly SceneId[] = [
@@ -37,6 +37,8 @@ export const SCENE_ORDER: readonly SceneId[] = [
 ]
 
 export const SCENE_PAD_SECONDS = 4.5
+/** Breath after `audio.ended` before the clock may leave the scene. */
+export const AUDIO_BREATH_SECONDS = 0.8
 
 export function sceneSeconds(id: SceneId): number {
   const minimum = id === 'doubt' ? 7 : 0

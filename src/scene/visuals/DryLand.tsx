@@ -4,6 +4,7 @@ import { Color, ExtrudeGeometry, InstancedMesh, Shape, type Group } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
 import { writeOrientedInstances } from '../../lib/instances.ts'
 import { fillDisk, mulberry32 } from '../../lib/rng.ts'
+import { createLeafGeometry } from '../models/geometry.ts'
 import type { SceneClock } from '../types.ts'
 import { findSceneAt } from '../../genesis/scenes.ts'
 import { OceanSurface } from './OceanSurface.tsx'
@@ -60,8 +61,8 @@ export function DryLand({ clock }: { clock: SceneClock }) {
     writeOrientedInstances(canopy, positions, count, (i) => {
       const scale = 0.55 + (kinds[i] ?? 0) * 0.7
       return {
-        scale: [scale * 0.24, scale * 0.32, scale * 0.24],
-        rotation: [0, (kinds[i] ?? 0) * Math.PI * 2, 0],
+        scale: [scale * 1.55, scale * 1.9, scale * 1.55],
+        rotation: [0.2, (kinds[i] ?? 0) * Math.PI * 2, 0.08],
       }
     })
     for (let i = 0; i < count; i += 1) {
@@ -81,6 +82,7 @@ export function DryLand({ clock }: { clock: SceneClock }) {
     })
   }, [count, kinds, positions])
 
+  const crownGeo = useMemo(() => createLeafGeometry(), [])
   const islandGeometry = useMemo(() => createIslandGeometry([
     [-2.65, -0.2], [-2.25, -1.0], [-1.5, -1.38], [-0.65, -1.26], [0.2, -1.48],
     [1.05, -1.16], [1.72, -0.72], [2.42, -0.48], [2.68, 0.15], [2.18, 0.62],
@@ -95,7 +97,8 @@ export function DryLand({ clock }: { clock: SceneClock }) {
   useEffect(() => () => {
     islandGeometry.dispose()
     shelfGeometry.dispose()
-  }, [islandGeometry, shelfGeometry])
+    crownGeo.dispose()
+  }, [crownGeo, islandGeometry, shelfGeometry])
 
   useFrame(({ clock: r3f }) => {
     if (terrain.current) {
@@ -137,8 +140,7 @@ export function DryLand({ clock }: { clock: SceneClock }) {
           <cylinderGeometry args={[0.018, 0.026, 0.25, 5]} />
           <meshStandardMaterial color="#493922" roughness={0.95} />
         </instancedMesh>
-        <instancedMesh ref={crowns} args={[undefined, undefined, count]} position={[0, 0.55, 0]}>
-          <icosahedronGeometry args={[1, 2]} />
+        <instancedMesh ref={crowns} args={[crownGeo, undefined, count]} position={[0, 0.55, 0]}>
           <meshStandardMaterial vertexColors color="#e4eccb" roughness={0.82} emissive="#445b2c" emissiveIntensity={0.25} />
         </instancedMesh>
         <instancedMesh ref={fruit} args={[undefined, undefined, count]} position={[0.05, 0.58, 0.06]}>

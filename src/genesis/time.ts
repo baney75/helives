@@ -13,6 +13,22 @@ export function clampedFrameDelta(now: number, previous: number): number {
   return Math.min(MAX_FRAME_DELTA_SECONDS, Math.max(0, (now - previous) / 1000))
 }
 
+export function sceneHoldCap(progress: number): number {
+  const scene = findSceneAt(progress)
+  return Math.min(0.999999, Math.max(0, scene.end - 1e-6))
+}
+
+/**
+ * Keep the clock on the current beat while MPEG is still speaking.
+ * Manual scrubbing bypasses this — only the rAF tick passes `audioHold`.
+ */
+export function holdAtSceneEnd(current: number, next: number, audioHold: boolean): number {
+  if (!audioHold) return next
+  const cap = sceneHoldCap(current)
+  if (next > cap) return Math.max(current, cap)
+  return next
+}
+
 export function advanceProgress(
   current: number,
   dt: number,
@@ -20,6 +36,7 @@ export function advanceProgress(
   speed: number,
   holdRef: { current: number },
   stop: () => void,
+  audioHold = false,
 ): number {
   if (current <= 0) {
     holdRef.current += dt
@@ -27,7 +44,7 @@ export function advanceProgress(
     if (holdRef.current < hold) return 0
   }
   const journey = cinematic ? CINEMATIC_SECONDS : INTERACTIVE_SECONDS
-  const next = current + dt / (journey / speed)
+  const next = holdAtSceneEnd(current, current + dt / (journey / speed), audioHold)
   if (next >= 1) {
     stop()
     return 1
@@ -91,7 +108,7 @@ export function cameraPose(progress: number, mobile = false): CameraPose {
     day5: { position: [-1.25 + t * 1.7, 0.35 + t * 0.48, 6.15 - t * 0.35], target: [0, 0.5, 0.9] },
     day6: { position: [0.85 - t * 0.5, 1.24 + t * 0.16, 5.25], target: [0.1, 0.62, 1.08] },
     day7: { position: [-0.6 + side, 1.55, 6.4], target: [0, 0.45, 0] },
-    garden: { position: [0.2 + side * 0.35, 1.45, 5.2 - t * 0.25], target: [0.55, 0.72, 0.85] },
+    garden: { position: [2.05 + side * 0.15, 1.32, 4.35 - t * 0.15], target: [-0.05, 0.88, 0.15] },
     fall: mobile
       ? {
           position: [0.32 + fallFollow * 2.16, 1.3 + fallFollow * 0.12, 4.75 + fallFollow * 0.25],

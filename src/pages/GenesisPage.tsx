@@ -24,9 +24,11 @@ export function GenesisPage() {
   const [factor, setFactor] = useState(1)
   const quality = liveQuality ? stricterQuality(liveQuality, gate.quality) : gate.quality
   const effects = effectsAllowed(quality, factor)
+  const holdRef = useRef(false)
   const clock = useGenesisClock(reducedMotion, mode.cinematic, {
     progress: mode.progress,
     pause: mode.pause,
+    audioHold: holdRef.current,
   })
 
   const onQualityFallback = useCallback(
@@ -51,6 +53,7 @@ export function GenesisPage() {
     cinematic: mode.cinematic,
     speed: clock.speed,
   })
+  holdRef.current = narration.hold
   const soundWasBlocked = useRef(false)
 
   useEffect(() => {

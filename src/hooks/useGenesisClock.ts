@@ -21,6 +21,7 @@ export type GenesisClock = {
 type ClockStart = {
   progress?: number | null
   pause?: boolean
+  audioHold?: boolean
 }
 
 export function useGenesisClock(
@@ -40,6 +41,8 @@ export function useGenesisClock(
   }, [])
 
   const holdRef = useRef(0)
+  const audioHoldRef = useRef(Boolean(start.audioHold))
+  audioHoldRef.current = Boolean(start.audioHold)
 
   useEffect(() => {
     if (!playing) return
@@ -49,7 +52,15 @@ export function useGenesisClock(
       const dt = clampedFrameDelta(now, last)
       last = now
       setProgressState((current) =>
-        advanceProgress(current, dt, cinematic, speed, holdRef, () => setPlaying(false)),
+        advanceProgress(
+          current,
+          dt,
+          cinematic,
+          speed,
+          holdRef,
+          () => setPlaying(false),
+          audioHoldRef.current,
+        ),
       )
       frame = requestAnimationFrame(tick)
     }

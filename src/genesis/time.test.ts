@@ -3,11 +3,13 @@ import { findSceneAt, SCENES } from './scenes.ts'
 import {
   advanceProgress,
   clampedFrameDelta,
+  holdAtSceneEnd,
   INTERACTIVE_SECONDS,
   MAX_FRAME_DELTA_SECONDS,
   OPENING_HOLD_SECONDS,
+  sceneHoldCap,
 } from './time.ts'
-import { SCENE_AUDIO_SECONDS, sceneSeconds } from './sceneTiming.ts'
+import { AUDIO_BREATH_SECONDS, SCENE_AUDIO_SECONDS, sceneSeconds } from './sceneTiming.ts'
 
 describe('Genesis clock start', () => {
   it('opens on beginning, not the garden or the fall', () => {
@@ -47,6 +49,18 @@ describe('Genesis clock start', () => {
     for (const [id, duration] of Object.entries(SCENE_AUDIO_SECONDS)) {
       expect(sceneSeconds(id as keyof typeof SCENE_AUDIO_SECONDS)).toBeGreaterThan(duration)
     }
+  })
+
+  it('holds the clock on the current scene while MPEG is still speaking', () => {
+    const garden = SCENES.find((scene) => scene.id === 'garden')!
+    const cap = sceneHoldCap((garden.start + garden.end) / 2)
+    expect(findSceneAt(cap).id).toBe('garden')
+    expect(holdAtSceneEnd(garden.end - 0.01, garden.end + 0.02, true)).toBeLessThan(garden.end)
+    expect(holdAtSceneEnd(0.2, 0.4, false)).toBe(0.4)
+    expect(AUDIO_BREATH_SECONDS).toBeGreaterThan(0)
+    const hold = { current: OPENING_HOLD_SECONDS }
+    const held = advanceProgress(garden.end - 0.002, 2, false, 1, hold, () => undefined, true)
+    expect(findSceneAt(held).id).toBe('garden')
   })
 
   it('does not skip voice or animation beats after a slow render frame', () => {

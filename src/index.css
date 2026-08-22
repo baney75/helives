@@ -136,8 +136,11 @@ a {
   inset: 0;
   z-index: 10;
   pointer-events: none;
-  padding: var(--space-5);
-  overflow: hidden;
+  padding: max(var(--space-5), env(safe-area-inset-top))
+    max(var(--space-5), env(safe-area-inset-right))
+    max(var(--space-5), env(safe-area-inset-bottom))
+    max(2.25rem, env(safe-area-inset-left));
+  overflow: visible;
   font-size: 14px;
 }
 
@@ -186,6 +189,7 @@ a {
 
 .wordmark {
   margin: 0;
+  padding-left: 0.12em;
   font-family: var(--display);
   font-size: clamp(32px, 3.6vw, 44px);
   font-weight: 500;
@@ -230,13 +234,14 @@ a {
 }
 
 .narration {
-  position: fixed;
-  top: 96px;
-  left: var(--space-5);
+  position: absolute;
+  top: 92px;
+  left: max(2.25rem, env(safe-area-inset-left));
   max-width: 28rem;
-  padding: 0;
+  padding: 0 1rem 0 0.18em;
   background: transparent;
   border: 0;
+  overflow: visible;
   text-shadow: 0 2px 22px rgba(7, 6, 10, 0.92);
 }
 
@@ -273,9 +278,9 @@ a {
 
 .dock {
   position: absolute;
-  left: var(--space-5);
-  right: var(--space-5);
-  bottom: var(--space-5);
+  left: max(2.25rem, env(safe-area-inset-left));
+  right: max(var(--space-5), env(safe-area-inset-right));
+  bottom: max(var(--space-5), env(safe-area-inset-bottom));
   display: grid;
   gap: var(--space-3);
 }
@@ -1336,7 +1341,11 @@ body:has(.lamp-home)::-webkit-scrollbar {
 
 @media (max-width: 699px) {
   .hud {
-    padding: var(--space-4);
+    padding: max(var(--space-4), env(safe-area-inset-top))
+      max(var(--space-4), env(safe-area-inset-right))
+      max(var(--space-4), env(safe-area-inset-bottom))
+      max(var(--space-5), env(safe-area-inset-left));
+    overflow: visible;
   }
 
   .topbar {
@@ -1370,9 +1379,9 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .dock {
-    left: var(--space-4);
-    right: var(--space-4);
-    bottom: var(--space-4);
+    left: max(var(--space-5), env(safe-area-inset-left));
+    right: max(var(--space-4), env(safe-area-inset-right));
+    bottom: max(var(--space-4), env(safe-area-inset-bottom));
   }
 
   .tick-label {
