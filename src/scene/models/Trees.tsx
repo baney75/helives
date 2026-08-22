@@ -1,5 +1,6 @@
-import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
-import { CatmullRomCurve3, Color, DoubleSide, InstancedMesh, TubeGeometry, Vector2, Vector3 } from 'three'
+import { useFrame } from '@react-three/fiber'
+import { useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from 'react'
+import { CatmullRomCurve3, Color, DoubleSide, type Group, InstancedMesh, TubeGeometry, Vector2, Vector3 } from 'three'
 import type { Quality } from '../../lib/budget.ts'
 import {
   writeInstanceMatrices,
@@ -12,7 +13,15 @@ import { createLeafGeometry } from './geometry.ts'
 
 const leafTint = new Color()
 
-export function TreeOfLife({ fall = 0, quality = 'high' }: { fall?: number; quality?: Quality }) {
+export function TreeOfLife({
+  fall = 0,
+  quality = 'high',
+  reducedMotion = false,
+}: {
+  fall?: number
+  quality?: Quality
+  reducedMotion?: boolean
+}) {
   const leaves = useMemo(() => leafField(canopyLeafCount(quality, 'life'), 0.78, 2.05, 41, 1.15), [quality])
   const fruit = useMemo(() => hangingFruit(6, 0.42, 17, 1.85), [])
   const branches = useMemo(() => lifeBranches(), [])
@@ -30,7 +39,15 @@ export function TreeOfLife({ fall = 0, quality = 'high' }: { fall?: number; qual
           <meshStandardMaterial color={EDEN.life.trunkColor} roughness={0.86} />
         </mesh>
       ))}
-      <LeafCanopy field={leaves} color={EDEN.life.canopyColor} emissive="#b88a36" emit={0.34} fall={fall * 0.2} />
+      <LeafCanopy
+        field={leaves}
+        color={EDEN.life.canopyColor}
+        emissive="#b88a36"
+        emit={0.34}
+        fall={fall * 0.2}
+        quality={quality}
+        reducedMotion={reducedMotion}
+      />
       <HangingFruit positions={fruit} color={EDEN.life.fruitColor} emissive="#fff4d6" />
       <pointLight position={[0, 1.9, 0.2]} intensity={1.8 * (1 - fall * 0.55)} color="#fff0c2" distance={7} />
     </group>
@@ -41,10 +58,12 @@ export function TreeOfKnowledge({
   fall = 0,
   quality = 'high',
   fruitTaken = false,
+  reducedMotion = false,
 }: {
   fall?: number
   quality?: Quality
   fruitTaken?: boolean
+  reducedMotion?: boolean
 }) {
   const count = canopyLeafCount(quality, 'knowledge')
   const leaves = useMemo(() => leafField(count, 1.15, 1.72, 63, 0.95), [count])
@@ -65,8 +84,24 @@ export function TreeOfKnowledge({
           <meshStandardMaterial color={EDEN.knowledge.trunkColor} roughness={0.92} />
         </mesh>
       ))}
-      <LeafCanopy field={leaves} color={EDEN.knowledge.canopyColor} emissive="#2a1810" emit={0.08} fall={fall} />
-      <LeafCanopy field={inner} color="#3a2818" emissive="#1a1008" emit={0.04} fall={fall} />
+      <LeafCanopy
+        field={leaves}
+        color={EDEN.knowledge.canopyColor}
+        emissive="#2a1810"
+        emit={0.08}
+        fall={fall}
+        quality={quality}
+        reducedMotion={reducedMotion}
+      />
+      <LeafCanopy
+        field={inner}
+        color="#3a2818"
+        emissive="#1a1008"
+        emit={0.04}
+        fall={fall}
+        quality={quality}
+        reducedMotion={reducedMotion}
+      />
       <group position={reach} visible={!fruitTaken}>
         <AppleFruit scale={1.55} glow={0.45 + fall * 0.35} />
       </group>
@@ -135,7 +170,15 @@ function TreeRoots({ color, radius }: { color: string; radius: number }) {
   )
 }
 
-export function Grove({ quality, fall }: { quality: Quality; fall: number }) {
+export function Grove({
+  quality,
+  fall,
+  reducedMotion = false,
+}: {
+  quality: Quality
+  fall: number
+  reducedMotion?: boolean
+}) {
   const count = groveCount(quality)
   const positions = useMemo(() => grovePositions(count, 27), [count])
   const used = positions.length / 3
@@ -156,7 +199,7 @@ export function Grove({ quality, fall }: { quality: Quality; fall: number }) {
   const canopy = new Color('#3d5a30').lerp(new Color('#574023'), fall * 0.8)
 
   return (
-    <group>
+    <BreathingGroup reducedMotion={reducedMotion} quality={quality} amount={0.01}>
       <instancedMesh ref={trunks} args={[undefined, undefined, used]}>
         <cylinderGeometry args={[0.03, 0.045, 0.45, 5]} />
         <meshStandardMaterial color="#4a3420" roughness={0.92} />
@@ -164,7 +207,7 @@ export function Grove({ quality, fall }: { quality: Quality; fall: number }) {
       <instancedMesh ref={shrubs} args={[leafGeo, undefined, field.count]}>
         <meshStandardMaterial color={canopy} roughness={0.78} side={DoubleSide} />
       </instancedMesh>
-    </group>
+    </BreathingGroup>
   )
 }
 
@@ -204,12 +247,16 @@ function LeafCanopy({
   emissive,
   emit,
   fall,
+  quality,
+  reducedMotion,
 }: {
   field: LeafField
   color: string
   emissive: string
   emit: number
   fall: number
+  quality: Quality
+  reducedMotion: boolean
 }) {
   const mesh = useRef<InstancedMesh>(null)
   const geometry = useMemo(() => createLeafGeometry(), [])
@@ -227,17 +274,40 @@ function LeafCanopy({
   }, [field, tint])
 
   return (
-    <instancedMesh ref={mesh} args={[geometry, undefined, field.count]}>
-      <meshStandardMaterial
-        vertexColors
-        roughness={0.62}
-        metalness={0.04}
-        emissive={emissive}
-        emissiveIntensity={emit}
-        side={DoubleSide}
-      />
-    </instancedMesh>
+    <BreathingGroup reducedMotion={reducedMotion} quality={quality} amount={0.014}>
+      <instancedMesh ref={mesh} args={[geometry, undefined, field.count]}>
+        <meshStandardMaterial
+          vertexColors
+          roughness={0.62}
+          metalness={0.04}
+          emissive={emissive}
+          emissiveIntensity={emit}
+          side={DoubleSide}
+        />
+      </instancedMesh>
+    </BreathingGroup>
   )
+}
+
+function BreathingGroup({
+  reducedMotion,
+  quality,
+  amount,
+  children,
+}: {
+  reducedMotion: boolean
+  quality: Quality
+  amount: number
+  children: ReactNode
+}) {
+  const root = useRef<Group>(null)
+  useFrame(({ clock }) => {
+    if (!root.current || reducedMotion || quality === 'low') return
+    const t = clock.elapsedTime
+    root.current.rotation.y = Math.sin(t * 0.22) * amount
+    root.current.position.y = Math.sin(t * 0.35) * amount
+  })
+  return <group ref={root}>{children}</group>
 }
 
 function HangingFruit({

@@ -602,14 +602,27 @@ a {
 
 .site.lamp-home {
   max-width: min(76rem, 100%);
-  height: 100dvh;
-  max-height: 100dvh;
+  min-height: 0;
+  height: 100vh;
+  height: 100svh;
+  max-height: 100vh;
+  max-height: 100svh;
   overflow: hidden;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+html:has(.lamp-home),
+body:has(.lamp-home),
+body:has(.lamp-home) #root {
+  height: 100vh;
+  height: 100svh;
+  max-height: 100vh;
+  max-height: 100svh;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 body:has(.lamp-home) {
-  height: 100dvh;
-  overflow: hidden;
   scrollbar-width: none;
 }
 
@@ -619,17 +632,54 @@ body:has(.lamp-home)::-webkit-scrollbar {
 }
 
 .site.lamp-home .nav {
-  padding-bottom: var(--space-4);
+  padding-bottom: clamp(8px, 1.4vh, 16px);
 }
 
-.site.lamp-home .hero {
+.site.lamp-home .hero,
+.site.lamp-home .word-hero {
   padding: 0;
   min-height: 0;
-  overflow: auto;
+  overflow: hidden;
+}
+
+.site.lamp-home .word-lamp {
+  min-height: 0;
+  max-height: 100%;
+  align-content: start;
+}
+
+.site.lamp-home .hero-mark {
+  margin-bottom: clamp(8px, 1.6vh, 24px);
+}
+
+.site.lamp-home .hero h1 {
+  font-size: clamp(48px, 8.5vh, 120px);
+}
+
+.site.lamp-home .hero-verse {
+  margin: clamp(8px, 1.6vh, 24px) 0 clamp(6px, 1vh, 12px);
+  font-size: clamp(18px, 3vh, 34px);
+}
+
+.site.lamp-home .word-lamp[data-length='long'] .hero-verse {
+  font-size: clamp(16px, 2.4vh, 28px);
+  line-height: 1.32;
+}
+
+.site.lamp-home .hero-actions {
+  margin-top: clamp(12px, 2vh, 32px);
+}
+
+.site.lamp-home .word-remain {
+  margin-top: clamp(10px, 1.6vh, 24px);
+}
+
+.site.lamp-home .word-remain-time {
+  font-size: clamp(24px, 3.6vh, 40px);
 }
 
 .site.lamp-home .foot {
-  padding-top: var(--space-5);
+  padding-top: clamp(8px, 1.5vh, 24px);
   position: relative;
   z-index: 1;
   background: var(--void);
@@ -869,6 +919,7 @@ body:has(.lamp-home)::-webkit-scrollbar {
   min-height: 44px;
   color: var(--muted);
   text-decoration: none;
+  transition: color 160ms ease;
 }
 
 .nav nav a:hover,
@@ -1179,6 +1230,7 @@ body:has(.lamp-home)::-webkit-scrollbar {
   color: var(--ground);
   text-decoration: none;
   border: 1px solid transparent;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .btn.quiet {
@@ -1359,27 +1411,113 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .site.lamp-home {
-    height: auto;
-    max-height: none;
-    min-height: 100dvh;
-    overflow: visible;
+    height: 100vh;
+    height: 100svh;
+    max-height: 100vh;
+    max-height: 100svh;
+    overflow: hidden;
     padding-top: max(var(--space-3), env(safe-area-inset-top));
     padding-bottom: max(var(--space-2), env(safe-area-inset-bottom));
+    grid-template-rows: auto minmax(0, 1fr) auto;
   }
 
-  body:has(.lamp-home) {
-    height: auto;
-    min-height: 100dvh;
-    overflow-x: hidden;
-    overflow-y: auto;
+  html:has(.lamp-home),
+  body:has(.lamp-home),
+  body:has(.lamp-home) #root {
+    height: 100vh;
+    height: 100svh;
+    max-height: 100vh;
+    max-height: 100svh;
+    overflow: hidden;
   }
 
   .site.lamp-home .nav {
-    padding-bottom: var(--space-3);
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--space-2);
+    padding-bottom: 4px;
+  }
+
+  .site.lamp-home .nav-mark {
+    font-size: 22px;
+    gap: var(--space-2);
+  }
+
+  .site.lamp-home .nav nav {
+    justify-content: flex-end;
+    gap: 0 8px;
+  }
+
+  .site.lamp-home .nav nav a {
+    font-size: 13px;
+  }
+
+  .site.lamp-home .hero-mark {
+    margin-bottom: 4px;
+  }
+
+  .site.lamp-home .hero-mark .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .site.lamp-home .hero h1 {
+    font-size: clamp(40px, 6.2vh, 56px);
+  }
+
+  .site.lamp-home .hero-kicker {
+    margin-bottom: 4px;
+  }
+
+  .site.lamp-home .hero-verse {
+    margin: 6px 0 4px;
+    font-size: clamp(16px, 2.1vh, 20px);
+    line-height: 1.32;
+  }
+
+  .site.lamp-home .word-lamp[data-length='long'] .hero-verse {
+    font-size: clamp(15px, 1.85vh, 16px);
+    line-height: 1.28;
+  }
+
+  .site.lamp-home .word-lamp {
+    row-gap: 4px;
+  }
+
+  .site.lamp-home .hero-actions {
+    margin-top: 8px;
+  }
+
+  .site.lamp-home .word-remain {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    align-items: baseline;
+    margin-top: 8px;
+    max-width: none;
+  }
+
+  .site.lamp-home .word-remain-time {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .site.lamp-home .word-remain-rail {
+    grid-column: 1 / -1;
+    margin-top: 6px;
   }
 
   .site.lamp-home .foot {
-    padding-top: var(--space-5);
+    padding-top: 8px;
+    line-height: 1.35;
+  }
+
+  .site.lamp-home .foot p {
+    margin: 0 0 2px;
   }
 
   .site.lamp-home .foot p:last-child {
@@ -1406,9 +1544,13 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .word-hero {
-    align-items: stretch;
+    align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .site.lamp-home .word-lamp {
+    width: 100%;
   }
 
   .word-lamp {
@@ -1480,6 +1622,39 @@ body:has(.lamp-home)::-webkit-scrollbar {
 
   .word-remain-time {
     font-size: 48px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: color-mix(in srgb, var(--fire) 88%, var(--dawn));
+  }
+
+  .btn.quiet:hover {
+    background: transparent;
+    border-color: rgba(232, 184, 109, 0.55);
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --ink: #f6f1e6;
+    --muted: #c4bbae;
+    --fire: #f0c27a;
+  }
+}
+
+@media (max-height: 740px) {
+  .site.lamp-home .hero-mark {
+    margin-bottom: 4px;
+  }
+
+  .site.lamp-home .hero h1 {
+    font-size: clamp(36px, 6vh, 56px);
+  }
+
+  .site.lamp-home .hero-verse {
+    font-size: clamp(15px, 2vh, 18px);
   }
 }
 

@@ -22,7 +22,7 @@ Tokens in `src/index.css`. Mark in `src/site/BrandMark.tsx`. If the first viewpo
 
 ## Layout rules
 
-- Home is not a card grid. Brand, this hour’s KJV (words of Christ in red), an authored one-line motif beside the verse (not Lucide), Explore more, new scripture every hour. Genesis is not the primary CTA. No church button on the lamp.
+- Home is one 100svh lamp (100vh fallback), not a card grid and not a scrollable document. Brand, this hour’s KJV (words of Christ in red), an authored one-line motif beside the verse (not Lucide), Explore more, new scripture every hour, footer. No page scroll. No clipped footer. Genesis is not the primary CTA. No church button on the lamp.
 - `/scriptures` is a typographic canon index (`canon-division` / `canon-book`). Forthcoming books are named rows, not disabled cards.
 - Docs (Faith, afterword) are a narrow reading column.
 - Primary button is fire on ground. Quiet button is hairline. 44px min height.

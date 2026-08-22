@@ -1,9 +1,17 @@
-import { AdaptiveDpr, OrbitControls, PerspectiveCamera, Preload } from '@react-three/drei'
+import {
+  AdaptiveDpr,
+  AdaptiveEvents,
+  OrbitControls,
+  PerformanceMonitor,
+  PerspectiveCamera,
+  Preload,
+} from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { Vector3 } from 'three'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
-import { DPR } from '../lib/budget.ts'
+import { DPR, type Quality } from '../lib/budget.ts'
+import { demoteQuality } from '../lib/quality.ts'
 import { cameraPose, fogFar, framedCamera } from '../genesis/time.ts'
 import type { SceneClock } from './types.ts'
 import { SceneEffects } from './SceneEffects.tsx'
@@ -121,8 +129,40 @@ function Creation({ clock }: { clock: SceneClock }) {
       <MeasureSky clock={clock} />
       <SceneEffects clock={clock} />
       <AdaptiveDpr />
+      <AdaptiveEvents />
       <Preload all />
     </>
+  )
+}
+
+function LiveQuality({
+  quality,
+  locked,
+  onFactor,
+  onFallback,
+}: {
+  quality: Quality
+  locked: boolean
+  onFactor?: (factor: number) => void
+  onFallback?: (quality: Quality) => void
+}) {
+  const qualityRef = useRef(quality)
+  qualityRef.current = quality
+
+  if (locked) return null
+
+  return (
+    <PerformanceMonitor
+      flipflops={3}
+      onDecline={(api) => {
+        const next = demoteQuality(qualityRef.current, api.factor)
+        if (next !== qualityRef.current) onFallback?.(next)
+      }}
+      onFallback={() => {
+        if (qualityRef.current !== 'low') onFallback?.('low')
+      }}
+      onChange={(api) => onFactor?.(api.factor)}
+    />
   )
 }
 
@@ -135,7 +175,17 @@ function Fallback() {
   )
 }
 
-export function GenesisCanvas({ clock }: { clock: SceneClock }) {
+export function GenesisCanvas({
+  clock,
+  qualityLocked = false,
+  onQualityFallback,
+  onPerformanceFactor,
+}: {
+  clock: SceneClock
+  qualityLocked?: boolean
+  onQualityFallback?: (quality: Quality) => void
+  onPerformanceFactor?: (factor: number) => void
+}) {
   const visible = useDocumentVisible()
 
   return (
@@ -159,6 +209,12 @@ export function GenesisCanvas({ clock }: { clock: SceneClock }) {
         <color attach="background" args={['#07060a']} />
         <Suspense fallback={null}>
           <Creation clock={clock} />
+          <LiveQuality
+            quality={clock.quality}
+            locked={qualityLocked}
+            onFallback={onQualityFallback}
+            onFactor={onPerformanceFactor}
+          />
         </Suspense>
       </Canvas>
     </div>

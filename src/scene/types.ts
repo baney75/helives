@@ -11,4 +11,5 @@ export type SceneClock = {
   cinematic: boolean
   quality: Quality
   playing: boolean
+  effects: boolean
 }

@@ -29,6 +29,13 @@ describe('shipping Garden and Fall source', () => {
     expect(trees).not.toMatch(/sphereGeometry args=\{\[0\.22, 8, 8\]\}/)
   })
 
+  it('keeps the river alive without a per-vertex animation loop', () => {
+    const garden = readFileSync(join(here, 'Garden.tsx'), 'utf8')
+    expect(garden).toMatch(/useFrame/)
+    expect(garden).toMatch(/emissiveIntensity/)
+    expect(garden).toMatch(/reducedMotion/)
+  })
+
   it('does not ship the lone tube-curve plus red orb', () => {
     const fall = readFileSync(join(here, 'TheFall.tsx'), 'utf8')
     expect(fall).toMatch(/function Serpent/)

@@ -27,6 +27,7 @@ export function HourLamp({ now }: { now?: Date }) {
     <div
       className={reduced ? 'word-lamp' : 'word-lamp is-enter'}
       data-motif={passage.motif}
+      data-length={passage.text.length > 220 ? 'long' : 'short'}
       data-paused={visible ? undefined : 'true'}
       key={passage.ref}
     >

@@ -4,10 +4,12 @@ import { runGpuBench } from '../lib/bench.ts'
 import {
   chooseTier,
   hashUa,
-  makeQualityRecord,
+  pendingQualityFromDevice,
+  persistQualityRecord,
   qualityFromSearch,
   readReusableQuality,
   STORAGE_KEY,
+  type DeviceHint,
 } from '../lib/quality.ts'
 
 export type QualityGate =
@@ -53,7 +55,23 @@ function initialGate(search: string, reducedMotion: boolean): QualityGate {
     hashUa(window.navigator.userAgent),
   )
   if (stored) return { status: 'ready', quality: stored.tier }
-  return { status: 'pending', quality: 'medium' }
+  return { status: 'pending', quality: pendingQualityFromDevice(readDeviceHint()) }
+}
+
+export function readDeviceHint(): DeviceHint {
+  if (typeof window === 'undefined') return {}
+  const nav = window.navigator as Navigator & {
+    deviceMemory?: number
+    connection?: { saveData?: boolean }
+  }
+  return {
+    deviceMemory: nav.deviceMemory,
+    hardwareConcurrency: nav.hardwareConcurrency,
+    maxTouchPoints: nav.maxTouchPoints,
+    saveData: nav.connection?.saveData,
+    coarsePointer: window.matchMedia('(pointer: coarse)').matches,
+    narrowViewport: window.innerWidth < 700,
+  }
 }
 
 async function measureAndStore(
@@ -74,12 +92,7 @@ async function measureAndStore(
 }
 
 function writeQuality(quality: Quality): void {
-  const record = makeQualityRecord(quality, Date.now(), window.navigator.userAgent)
-  try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(record))
-  } catch {
-    // private mode / quota
-  }
+  persistQualityRecord(quality, Date.now(), window.navigator.userAgent, window.localStorage)
 }
 
 function isAbort(error: unknown): boolean {
