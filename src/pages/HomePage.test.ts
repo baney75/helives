@@ -25,10 +25,14 @@ describe('HomePage lamp', () => {
       expect(block).not.toMatch(/overflow:\s*visible/)
       expect(block).not.toMatch(/overflow:\s*auto/)
     }
-    const hero = css.match(/\.site\.lamp-home \.hero \{([^}]+)\}/)?.[1] ?? ''
+    const hero =
+      css.match(/\.site\.lamp-home \.hero,\s*\.site\.lamp-home \.word-hero \{([^}]+)\}/)?.[1] ??
+      css.match(/\.site\.lamp-home \.hero \{([^}]+)\}/)?.[1] ??
+      ''
     expect(hero).toMatch(/overflow:\s*hidden/)
     expect(hero).not.toMatch(/overflow:\s*auto/)
     expect(css).not.toMatch(/overflow-y:\s*auto/)
     expect(css).toMatch(/html:has\(\.lamp-home\),/)
+    expect(css).toMatch(/grid-template-rows:\s*auto minmax\(0,\s*1fr\) auto/)
   })
 })

@@ -35,21 +35,39 @@ async function measure(page: Page) {
     const foot = document.querySelector('.foot')
     const cite = document.querySelector('.hero-cite')
     const brand = document.querySelector('.nav-mark')
+    const verse = document.querySelector('.hero-verse')
+    const sign = document.querySelector('.word-sign')
+    const actions = document.querySelector('.hero-actions')
+    const remain = document.querySelector('.word-remain')
     if (!(lamp instanceof HTMLElement) || !(foot instanceof HTMLElement)) {
       throw new Error('lamp or footer missing')
     }
-    const footBox = foot.getBoundingClientRect()
-    const citeBox = cite?.getBoundingClientRect()
-    const brandBox = brand?.getBoundingClientRect()
+    if (
+      !(verse instanceof HTMLElement) ||
+      !(sign instanceof HTMLElement) ||
+      !(actions instanceof HTMLElement) ||
+      !(remain instanceof HTMLElement) ||
+      !(cite instanceof HTMLElement) ||
+      !(brand instanceof HTMLElement)
+    ) {
+      throw new Error('lamp pieces missing')
+    }
+    const read = (el: Element) => {
+      const r = el.getBoundingClientRect()
+      return { top: r.top, bottom: r.bottom, height: r.height }
+    }
     return {
       inner: window.innerHeight,
       scroll: Math.max(root.scrollHeight, body.scrollHeight, lamp.scrollHeight),
       overflowY: getComputedStyle(body).overflowY,
       siteOverflow: getComputedStyle(lamp).overflow,
-      footTop: footBox.top,
-      footBottom: footBox.bottom,
-      citeBottom: citeBox?.bottom ?? 0,
-      brandTop: brandBox?.top ?? 0,
+      brand: read(brand),
+      verse: read(verse),
+      cite: read(cite),
+      sign: read(sign),
+      actions: read(actions),
+      remain: read(remain),
+      foot: read(foot),
       footerText: foot.textContent ?? '',
     }
   })
@@ -73,8 +91,10 @@ describe('home viewport', () => {
     { width: 1280, height: 800, now: new Date('2026-08-15T13:18:48.000Z') },
     { width: 375, height: 812, now: new Date('2026-08-15T13:18:48.000Z') },
     { width: 375, height: 812, now: longestVerseAt() },
-  ])('fits one viewport at $width×$height', async ({ width, height, now }) => {
+    { width: 1280, height: 800, now: longestVerseAt() },
+  ])('fits one viewport at $width×$height', { timeout: 20_000 }, async ({ width, height, now }) => {
     const page = await opened.newPage({ viewport: { width, height } })
+    await page.emulateMedia({ reducedMotion: 'reduce' })
     const markup = renderToStaticMarkup(createElement(HomePage, { now }))
     await page.setContent(
       `<!doctype html><html lang="en"><head><style>${css}</style></head><body><div id="root">${markup}</div></body></html>`,
@@ -89,11 +109,18 @@ describe('home viewport', () => {
     expect(fit.overflowY).toBe('hidden')
     expect(fit.siteOverflow).toBe('hidden')
     expect(fit.scroll).toBeLessThanOrEqual(fit.inner + 1)
-    expect(fit.brandTop).toBeGreaterThanOrEqual(0)
-    expect(fit.citeBottom).toBeGreaterThan(0)
-    expect(fit.citeBottom).toBeLessThanOrEqual(fit.inner)
-    expect(fit.footTop).toBeGreaterThan(0)
-    expect(fit.footBottom).toBeLessThanOrEqual(fit.inner + 1)
+    expect(fit.brand.top).toBeGreaterThanOrEqual(0)
+    expect(fit.verse.height).toBeGreaterThan(20)
+    expect(fit.cite.bottom).toBeGreaterThan(fit.verse.top)
+    expect(fit.sign.height).toBeGreaterThan(20)
+    expect(fit.actions.height).toBeGreaterThan(20)
+    expect(fit.remain.height).toBeGreaterThan(16)
+    for (const piece of [fit.brand, fit.verse, fit.cite, fit.sign, fit.actions, fit.remain, fit.foot]) {
+      expect(piece.top).toBeGreaterThanOrEqual(-1)
+      expect(piece.bottom).toBeLessThanOrEqual(fit.inner + 1)
+    }
+    expect(fit.remain.bottom).toBeLessThanOrEqual(fit.foot.top + 1)
+    expect(fit.actions.bottom).toBeLessThanOrEqual(fit.remain.top + 1)
     expect(fit.footerText).toContain('He Lives · NeoRome')
     expect(fit.footerText).toContain('King James Version, public domain')
   })
