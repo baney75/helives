@@ -48,7 +48,9 @@ describe('fallParts', () => {
     }
     expect(ids).toContain('east-flame')
     const fruit = fallParts().find((part) => part.id === 'fruit-taken')
+    const eaten = fallParts().find((part) => part.id === 'eaten')
     expect(fruit?.position).toEqual(knowledgeFruitWorld())
+    expect(eaten?.position[1]).toBeGreaterThan(0.9)
     expect(EDEN.man.depart[0]).toBeGreaterThan(EDEN.man.garden[0])
     expect(EDEN.woman.depart[0]).toBeGreaterThan(EDEN.woman.garden[0])
   })
@@ -71,11 +73,22 @@ describe('fallParts', () => {
 
   it('keeps the fruit on a continuous tree to woman to man arc before it is eaten', () => {
     expect(fallFruitStory(0.11).visible).toBe(false)
+    expect(fallFruitStory(0.11).holder).toBe('tree')
+    expect(fallFruitStory(0.2).holder).toBe('air')
+    expect(fallFruitStory(0.2).visible).toBe(true)
     expect(fallFruitStory(0.32).to).toEqual(FALL_HANDS.woman)
+    expect(fallFruitStory(0.32).holder).toBe('woman')
+    expect(fallFruitStory(0.32).visible).toBe(false)
     expect(fallFruitStory(0.49).from).toEqual(FALL_HANDS.woman)
+    expect(fallFruitStory(0.49).holder).toBe('woman')
+    expect(fallFruitStory(0.5).holder).toBe('woman')
     expect(fallFruitStory(0.68).to).toEqual(FALL_HANDS.man)
+    expect(fallFruitStory(0.68).holder).toBe('man')
     expect(fallFruitStory(0.7).eatenScale).toBeLessThan(1)
     expect(fallFruitStory(0.74).visible).toBe(false)
+    expect(fallFruitStory(0.74).holder).toBe('none')
+    expect(FALL_HANDS.woman[1]).toBeGreaterThan(0.9)
+    expect(FALL_HANDS.man[1]).toBeGreaterThan(0.9)
   })
 })
 

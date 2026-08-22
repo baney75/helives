@@ -96,12 +96,15 @@ export function knowledgeFruitWorld(): Vec3 {
 }
 
 export const FALL_HANDS = {
-  woman: [EDEN.woman.reach[0] + 0.13, 0.67, EDEN.woman.reach[2] + 0.12] as const satisfies Vec3,
-  man: [EDEN.man.garden[0] + 0.17, 0.65, EDEN.man.garden[2] + 0.1] as const satisfies Vec3,
+  woman: [EDEN.woman.reach[0] + 0.08, 1.02, EDEN.woman.reach[2] - 0.08] as const satisfies Vec3,
+  man: [EDEN.man.garden[0] + 0.03, 1.08, EDEN.man.garden[2] - 0.08] as const satisfies Vec3,
 }
+
+export type FruitHolder = 'none' | 'tree' | 'air' | 'woman' | 'man'
 
 export function fallFruitStory(beat: number): {
   visible: boolean
+  holder: FruitHolder
   from: Vec3
   to: Vec3
   phase: number
@@ -110,22 +113,33 @@ export function fallFruitStory(beat: number): {
   const b = Math.min(1, Math.max(0, beat))
   let from: Vec3 = knowledgeFruitWorld()
   let to: Vec3 = FALL_HANDS.woman
-  let phase = smoothstep((b - 0.12) / 0.2)
-  if (b >= 0.32 && b < 0.5) {
+  let phase = smoothstep((b - 0.12) / 0.18)
+  let holder: FruitHolder = 'tree'
+  if (b >= 0.12 && b < 0.3) {
+    holder = 'air'
+  } else if (b >= 0.3 && b < 0.52) {
     from = FALL_HANDS.woman
     to = FALL_HANDS.woman
     phase = 1
-  } else if (b >= 0.5) {
+    holder = 'woman'
+  } else if (b >= 0.52 && b < 0.72) {
     from = FALL_HANDS.woman
     to = FALL_HANDS.man
-    phase = smoothstep((b - 0.5) / 0.18)
+    phase = smoothstep((b - 0.52) / 0.12)
+    holder = 'man'
+  } else if (b >= 0.72) {
+    from = FALL_HANDS.man
+    to = FALL_HANDS.man
+    phase = 1
+    holder = 'none'
   }
   return {
-    visible: b >= 0.12 && b < 0.74,
+    visible: holder === 'air',
+    holder,
     from,
     to,
     phase,
-    eatenScale: b > 0.68 ? Math.max(0.02, 1 - (b - 0.68) / 0.06) : 1,
+    eatenScale: holder === 'man' && b > 0.66 ? Math.max(0.02, 1 - (b - 0.66) / 0.06) : 1,
   }
 }
 
@@ -164,7 +178,7 @@ export function fallParts(): readonly { id: FallPartId; position: Vec3 }[] {
   return [
     { id: 'serpent', position: EDEN.knowledge.position },
     { id: 'fruit-taken', position: knowledgeFruitWorld() },
-    { id: 'eaten', position: add3(EDEN.woman.reach, [0.12, 0.92, 0.08]) },
+    { id: 'eaten', position: FALL_HANDS.woman },
     { id: 'expulsion-man', position: EDEN.man.depart },
     { id: 'expulsion-woman', position: EDEN.woman.depart },
     { id: 'east-flame', position: EDEN.east.flame },

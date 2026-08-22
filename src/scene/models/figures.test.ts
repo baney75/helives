@@ -3,7 +3,7 @@ import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { sceneBounds } from '../../genesis/sceneTiming.ts'
 import { edenPairStory } from './eden.ts'
-import { figureJointPose } from './figurePose.ts'
+import { figureJointPose, figureJointShift, heldFruitJoint } from './figurePose.ts'
 
 function gltfNodeNames(path: string): string[] {
   const buf = readFileSync(path)
@@ -67,11 +67,21 @@ describe('authored figure GLBs', () => {
     expect(Math.abs(reach.LForearm?.z ?? 0)).toBeGreaterThan(0.4)
     expect(eat.Head?.x ?? 0).toBeGreaterThan(reach.Head?.x ?? 0)
     expect(eat.LForearm?.x ?? 0).toBeLessThan(-0.2)
+    const eatShift = figureJointShift('eat', 'woman')
+    const reachShift = figureJointShift('reach', 'woman')
+    expect(eatShift.LHand?.y ?? 0).toBeGreaterThan(0.4)
+    expect(reachShift.LHand?.y ?? 0).toBeGreaterThan(0.4)
+    expect(figureJointShift('eat', 'man').RHand?.y ?? 0).toBeGreaterThan(0.4)
+    expect(heldFruitJoint('woman')).toBe('LHand')
+    expect(heldFruitJoint('man')).toBe('RHand')
     expect(walkA.LLowerLeg?.x ?? 0).not.toBeCloseTo(walkB.LLowerLeg?.x ?? 0, 2)
     expect((walkA.LLowerLeg?.x ?? 0) * (walkA.RLowerLeg?.x ?? 0)).toBeLessThan(0)
     const src = readFileSync(resolve('src/scene/models/Figure.tsx'), 'utf8')
     expect(src).toMatch(/useFrame/)
     expect(src).not.toMatch(/if \(fade < 0\.04\) return null/)
+    expect(src).toMatch(/heldFruitJoint/)
+    expect(src).toMatch(/getWorldPosition/)
+    expect(src).not.toMatch(/1\.28/)
   })
 
   it('keeps the six-angle acceptance renderer in the repository', () => {

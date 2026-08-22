@@ -2,7 +2,7 @@ import { useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef } from 'react'
 import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
 import { Figure, type FigurePoseId } from '../models/Figure.tsx'
-import { EDEN, edenPairStory, lerp3 } from '../models/eden.ts'
+import { EDEN, edenPairStory, fallFruitStory, lerp3 } from '../models/eden.ts'
 import { createPlantedIsland } from '../models/gardenTerrain.ts'
 import { Grove, Herbs, TreeOfKnowledge, TreeOfLife } from '../models/Trees.tsx'
 import type { SceneClock } from '../types.ts'
@@ -14,8 +14,9 @@ export function Garden({ clock }: { clock: SceneClock }) {
   const fall = clock.presence.fall
   const { beat, leave, fade } = edenPairStory(clock.progress)
   const pairFade = fade
-  const womanPose: FigurePoseId = leave > 0.2 ? 'depart' : beat > 0.32 ? 'eat' : beat > 0.06 ? 'reach' : 'stand'
-  const manPose: FigurePoseId = leave > 0.2 ? 'depart' : beat > 0.42 ? 'eat' : beat > 0.18 ? 'offer' : 'stand'
+  const fruit = fallFruitStory(beat)
+  const womanPose: FigurePoseId = leave > 0.2 ? 'depart' : fruit.holder === 'woman' ? 'eat' : beat > 0.06 ? 'reach' : 'stand'
+  const manPose: FigurePoseId = leave > 0.2 ? 'depart' : fruit.holder === 'man' ? 'eat' : beat > 0.18 ? 'offer' : 'stand'
   const womanHome = beat > 0.06 ? EDEN.woman.reach : EDEN.woman.garden
 
   if (strength <= 0) return null
@@ -34,7 +35,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         position={creationPair > 0.08 ? [-0.42, 0, 1.82] : lerp3(EDEN.man.garden, EDEN.man.depart, leave)}
         rotationY={Math.PI + 0.42 + leave * 0.35}
         fade={Math.max(creationPair, pairFade * strength)}
-        holdFruit={manPose === 'eat'}
+        holdFruit={fruit.holder === 'man'}
         reducedMotion={clock.reducedMotion}
       />
       <Figure
@@ -43,7 +44,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         position={creationPair > 0.08 ? [0.42, 0, 1.82] : lerp3(womanHome, EDEN.woman.depart, leave)}
         rotationY={Math.PI - 0.42 + leave * 0.55}
         fade={Math.max(creationPair, pairFade * strength)}
-        holdFruit={womanPose === 'eat'}
+        holdFruit={fruit.holder === 'woman'}
         reducedMotion={clock.reducedMotion}
       />
     </group>

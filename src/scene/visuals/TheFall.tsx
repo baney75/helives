@@ -165,7 +165,7 @@ function TakenFruit({
     if (!group) return
     const story = fallFruitStory(beat)
     const { from, to, phase } = story
-    group.visible = story.visible && beat < 0.34
+    group.visible = story.visible
     group.position.set(
       from[0] + (to[0] - from[0]) * phase,
       from[1] + (to[1] - from[1]) * phase + (reducedMotion ? 0 : Math.sin(phase * Math.PI) * 0.1),

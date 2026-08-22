@@ -22,7 +22,9 @@ describe('shipping Garden and Fall source', () => {
     expect(garden).toMatch(/from '\.\.\/models\/eden\.ts'/)
     expect(garden).toMatch(/createPlantedIsland/)
     expect(garden).not.toMatch(/createPlantedMeadow/)
-    expect(garden).toMatch(/holdFruit/)
+    expect(garden).toMatch(/holdFruit=\{fruit\.holder === 'man'\}/)
+    expect(garden).toMatch(/holdFruit=\{fruit\.holder === 'woman'\}/)
+    expect(garden).toMatch(/fallFruitStory/)
   })
 
   it('uses flat leaves on the hero trees instead of sphere canopies', () => {

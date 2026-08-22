@@ -1,12 +1,18 @@
 import { Clone, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import type { Group, Object3D } from 'three'
+import { Vector3, type Group, type Object3D } from 'three'
 import type { Vec3 } from './eden.ts'
-import { figureJointPose, type FigurePoseId, type FigureRole } from './figurePose.ts'
+import {
+  figureJointPose,
+  figureJointShift,
+  heldFruitJoint,
+  type FigurePoseId,
+  type FigureRole,
+} from './figurePose.ts'
 
 export type { FigurePoseId, FigureRole } from './figurePose.ts'
-export { figureJointPose } from './figurePose.ts'
+export { figureJointPose, figureJointShift, heldFruitJoint } from './figurePose.ts'
 
 const SRC = {
   man: '/models/genesis/man.glb',
@@ -21,12 +27,24 @@ const LEAN: Record<FigurePoseId, number> = {
   depart: 0.05,
 }
 
+const REST = new WeakMap<Object3D, Vector3>()
+const WORLD = new Vector3()
+
 function applyJoints(root: Object3D, pose: FigurePoseId, role: FigureRole, time: number): void {
   const joints = figureJointPose(pose, role, time)
+  const shifts = figureJointShift(pose, role)
   for (const [name, rot] of Object.entries(joints)) {
     const node = root.getObjectByName(name)
     if (!node) continue
     node.rotation.set(rot.x, rot.y, rot.z)
+    let rest = REST.get(node)
+    if (!rest) {
+      rest = node.position.clone()
+      REST.set(node, rest)
+    }
+    const shift = shifts[name]
+    if (shift) node.position.set(rest.x + shift.x, rest.y + shift.y, rest.z + shift.z)
+    else node.position.copy(rest)
   }
 }
 
@@ -51,6 +69,7 @@ export function Figure({
 }) {
   const root = useRef<Group>(null)
   const clone = useRef<Group>(null)
+  const fruit = useRef<Group>(null)
   const gltf = useGLTF(SRC[role])
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
@@ -69,24 +88,31 @@ export function Figure({
     group.position.set(position[0], position[1] + breath + step, position[2])
     group.rotation.set(0, rotationY + (walking ? Math.sin(t * 1.55 + phase) * 0.04 : 0), lean)
     if (clone.current) applyJoints(clone.current, pose, role, t)
+    const held = fruit.current
+    if (held) {
+      held.visible = holdFruit
+      const hand = clone.current?.getObjectByName(heldFruitJoint(role))
+      if (holdFruit && hand) {
+        hand.getWorldPosition(WORLD)
+        group.worldToLocal(WORLD)
+        WORLD.y += pose === 'eat' ? 0.04 : 0.055
+        if (pose === 'eat') WORLD.z -= 0.03
+        held.position.copy(WORLD)
+      }
+    }
   })
-
-  const fruit =
-    pose === 'eat'
-      ? ([role === 'woman' ? 0.12 : 0.1, 1.28, 0.16] as const)
-      : ([role === 'woman' ? 0.22 : 0.2, 0.98, 0.22] as const)
 
   return (
     <group ref={root} position={position} rotation={[0, rotationY, lean]} scale={figureScale} visible={fade >= 0.04}>
       <group ref={clone} scale={fade}>
         <Clone object={gltf.scene} />
       </group>
-      {holdFruit ? (
-        <mesh position={fruit}>
-          <sphereGeometry args={[0.05, 12, 12]} />
-          <meshStandardMaterial color={fruitColor} roughness={0.38} emissive="#3a0c08" emissiveIntensity={0.35} />
+      <group ref={fruit} visible={holdFruit}>
+        <mesh>
+          <sphereGeometry args={[0.045, 12, 12]} />
+          <meshStandardMaterial color={fruitColor} roughness={0.38} emissive="#3a0c08" emissiveIntensity={0.42} />
         </mesh>
-      ) : null}
+      </group>
     </group>
   )
 }

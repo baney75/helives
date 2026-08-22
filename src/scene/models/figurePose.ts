@@ -2,6 +2,7 @@ export type FigureRole = 'man' | 'woman'
 export type FigurePoseId = 'stand' | 'reach' | 'eat' | 'offer' | 'depart'
 
 export type JointEuler = { x: number; y: number; z: number }
+export type JointShift = { x: number; y: number; z: number }
 
 /** Story poses for the named GLB joints. Not a bounce-orb or capsule walk. */
 export function figureJointPose(
@@ -29,4 +30,33 @@ export function figureJointPose(
     LFoot: { x: walk * 0.08, y: 0, z: 0 },
     RFoot: { x: -walk * 0.08, y: 0, z: 0 },
   }
+}
+
+/**
+ * Hands are siblings of the forearms in the authored GLBs, so a forearm
+ * rotation does not carry the hand. Shift the hand itself to the fruit,
+ * then to the mouth.
+ */
+export function figureJointShift(pose: FigurePoseId, role: FigureRole): Record<string, JointShift> {
+  const eat = pose === 'eat' ? 1 : 0
+  const reach = pose === 'reach' ? 1 : 0
+  const offer = pose === 'offer' ? 1 : 0
+  const woman = role === 'woman' ? 1 : 0
+  const man = role === 'man' ? 1 : 0
+  return {
+    LHand: {
+      x: woman * (reach * 0.16 + eat * 0.1),
+      y: woman * (reach * 0.46 + eat * 0.46),
+      z: woman * (reach * -0.16 + eat * -0.04),
+    },
+    RHand: {
+      x: man * (offer * 0.05 + eat * -0.1),
+      y: man * (offer * 0.22 + eat * 0.48),
+      z: man * (offer * 0.08 + eat * -0.04),
+    },
+  }
+}
+
+export function heldFruitJoint(role: FigureRole): 'LHand' | 'RHand' {
+  return role === 'woman' ? 'LHand' : 'RHand'
 }
