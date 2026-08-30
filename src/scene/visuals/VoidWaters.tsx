@@ -38,10 +38,10 @@ export function VoidWaters({ clock }: { clock: SceneClock }) {
           <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         </bufferGeometry>
         <pointsMaterial
-          size={0.05}
-          color="#2a4058"
+          size={0.03}
+          color="#3a4258"
           transparent
-          opacity={0.5 * strength}
+          opacity={0.3 * strength}
           sizeAttenuation
           depthWrite={false}
           blending={AdditiveBlending}
@@ -49,11 +49,7 @@ export function VoidWaters({ clock }: { clock: SceneClock }) {
       </points>
       <group ref={waters}>
         <OceanSurface strength={strength} y={0} reducedMotion={clock.reducedMotion} quality={clock.quality} />
-        <mesh position={[0, 0.12, -3.8]} rotation={[-Math.PI / 2, 0, 0]}>
-          <ringGeometry args={[1.1, 4.8, 96]} />
-          <meshBasicMaterial color="#9cd9e5" transparent opacity={0.085 * strength} blending={AdditiveBlending} depthWrite={false} />
-        </mesh>
-        <pointLight position={[0, 0.45, 0]} intensity={1.1 * strength} color="#8aa0c4" distance={12} />
+        <pointLight position={[0, 0.45, 0]} intensity={0.5 * strength} color="#6a7690" distance={12} />
       </group>
     </group>
   )
