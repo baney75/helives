@@ -95,8 +95,8 @@ export function Figure({
       if (holdFruit && hand) {
         hand.getWorldPosition(WORLD)
         group.worldToLocal(WORLD)
-        WORLD.y += pose === 'eat' ? 0.04 : 0.055
-        if (pose === 'eat') WORLD.z -= 0.03
+        WORLD.y += pose === 'eat' ? -0.035 : 0.055
+        if (pose === 'eat') WORLD.z += 0.06
         held.position.copy(WORLD)
       }
     }
@@ -109,7 +109,7 @@ export function Figure({
       </group>
       <group ref={fruit} visible={holdFruit}>
         <mesh>
-          <sphereGeometry args={[0.045, 12, 12]} />
+          <sphereGeometry args={[0.03, 12, 12]} />
           <meshStandardMaterial color={fruitColor} roughness={0.38} emissive="#3a0c08" emissiveIntensity={0.42} />
         </mesh>
       </group>

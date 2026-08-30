@@ -90,26 +90,26 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
     <group ref={mesh}>
       <mesh geometry={geometry}>
         <meshPhysicalMaterial
-          color="#26301c"
-          roughness={0.3}
-          metalness={0.16}
-          emissive="#2f2a12"
-          emissiveIntensity={0.12 + strength * 0.12}
-          clearcoat={0.6}
-          clearcoatRoughness={0.28}
-          sheen={0.7}
-          sheenColor="#9a8442"
-          sheenRoughness={0.5}
+          color="#1f2717"
+          roughness={0.34}
+          metalness={0.1}
+          emissive="#241f10"
+          emissiveIntensity={0.1 + strength * 0.1}
+          clearcoat={0.5}
+          clearcoatRoughness={0.32}
+          sheen={0.32}
+          sheenColor="#5a4e2a"
+          sheenRoughness={0.55}
         />
       </mesh>
       <mesh geometry={dorsal}>
-        <meshStandardMaterial color="#8a6a32" emissive="#3a2b13" emissiveIntensity={0.2} roughness={0.5} />
+        <meshStandardMaterial color="#4a3a1e" emissive="#2a1f0e" emissiveIntensity={0.12} roughness={0.55} />
       </mesh>
       <instancedMesh ref={scales} args={[undefined, undefined, scalePos.length / 3]}>
         <sphereGeometry args={[1, 7, 5]} />
-        <meshStandardMaterial color="#2c2818" roughness={0.36} metalness={0.12} emissive="#e8b86d" emissiveIntensity={0.08} />
+        <meshStandardMaterial color="#262215" roughness={0.4} metalness={0.14} emissive="#5a4a24" emissiveIntensity={0.05} />
       </instancedMesh>
-      <group ref={head} position={[fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38]} rotation={[0.02, -0.45, -0.08]} scale={1.28}>
+      <group ref={head} position={[fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38]} rotation={[0.34, -0.5, -0.06]} scale={1.28}>
         <mesh scale={[1.3, 0.62, 0.84]}>
           <sphereGeometry args={[0.1, 16, 12]} />
           <meshPhysicalMaterial color="#2c2816" roughness={0.32} clearcoat={0.45} clearcoatRoughness={0.38} />
