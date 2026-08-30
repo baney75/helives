@@ -275,16 +275,22 @@ export function herbPositions(count: number, seed: number): Float32Array {
   return out.subarray(0, written * 3)
 }
 
-export function serpentPoints(turns = 2.35, samples = 28): Vec3[] {
+export function serpentPoints(turns = 3, samples = 60): Vec3[] {
   const [cx, , cz] = EDEN.knowledge.position
   const fruit = knowledgeFruitWorld()
   const pts: Vec3[] = []
   for (let i = 0; i < samples; i += 1) {
     const t = i / (samples - 1)
+    const climb = t * t * (3 - 2 * t)
     const angle = t * turns * Math.PI * 2 + 0.4
-    const radius = 0.22 + (1 - t) * 0.16
-    const y = 0.12 + t * 1.55
-    pts.push([cx + Math.cos(angle) * radius, y, cz + Math.sin(angle) * radius])
+    const radius = 0.2 + (1 - t) * 0.16
+    const y = 0.1 + climb * 1.5
+    const coilX = cx + Math.cos(angle) * radius
+    const coilZ = cz + Math.sin(angle) * radius
+    const reach = smoothstep((t - 0.76) / 0.24)
+    const headX = fruit[0] - 0.1
+    const headZ = fruit[2] + 0.16
+    pts.push([coilX + (headX - coilX) * reach, y + reach * 0.2, coilZ + (headZ - coilZ) * reach])
   }
   pts[pts.length - 1] = [fruit[0] - 0.08, fruit[1] + 0.06, fruit[2] + 0.04]
   return pts

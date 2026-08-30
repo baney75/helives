@@ -30,8 +30,8 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
   const head = useRef<Group>(null)
   const tongue = useRef<Group>(null)
   const scales = useRef<InstancedMesh>(null)
-  const pts = useMemo(() => serpentPoints(2.85, 40).map((p) => new Vector3(...p)), [])
-  const geometry = useMemo(() => createTaperedTube(pts, 0.09, 0.03, 8), [pts])
+  const pts = useMemo(() => serpentPoints(3, 60).map((p) => new Vector3(...p)), [])
+  const geometry = useMemo(() => createTaperedTube(pts, 0.1, 0.022, 12), [pts])
   const dorsal = useMemo(() => {
     const lifted = pts.map((p) => new Vector3(p.x, p.y + 0.05, p.z))
     return createTaperedTube(lifted, 0.02, 0.006, 6)
@@ -90,13 +90,16 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
     <group ref={mesh}>
       <mesh geometry={geometry}>
         <meshPhysicalMaterial
-          color="#202719"
-          roughness={0.38}
-          metalness={0.08}
-          emissive="#3a2e14"
-          emissiveIntensity={0.14 + strength * 0.12}
-          clearcoat={0.42}
-          clearcoatRoughness={0.4}
+          color="#26301c"
+          roughness={0.3}
+          metalness={0.16}
+          emissive="#2f2a12"
+          emissiveIntensity={0.12 + strength * 0.12}
+          clearcoat={0.6}
+          clearcoatRoughness={0.28}
+          sheen={0.7}
+          sheenColor="#9a8442"
+          sheenRoughness={0.5}
         />
       </mesh>
       <mesh geometry={dorsal}>
