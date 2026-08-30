@@ -28,24 +28,32 @@ export function Timeline({ progress, sceneId, onScrub }: TimelineProps) {
         }}
       />
       <ol className="ticks">
-        {SCENES.map((scene) => {
-          const left = ((scene.start + scene.end) / 2) * 100
-          const labeled = LABELED.has(scene.id) || scene.id === sceneId
-          return (
-            <li key={scene.id} style={{ left: `${left}%` }}>
-              <button
-                type="button"
-                className={scene.id === sceneId ? 'tick is-current' : 'tick'}
-                aria-label={scene.name}
-                aria-current={scene.id === sceneId ? 'true' : undefined}
-                onClick={() => onScrub(scene.start)}
-              >
-                <span className="tick-dot" />
-                {labeled ? <span className="tick-label">{scene.tick}</span> : null}
-              </button>
-            </li>
-          )
-        })}
+        {(() => {
+          let labeledSeen = 0
+          return SCENES.map((scene) => {
+            const left = ((scene.start + scene.end) / 2) * 100
+            const labeled = LABELED.has(scene.id) || scene.id === sceneId
+            const row = labeled ? labeledSeen++ % 2 : 0
+            return (
+              <li key={scene.id} style={{ left: `${left}%` }}>
+                <button
+                  type="button"
+                  className={scene.id === sceneId ? 'tick is-current' : 'tick'}
+                  aria-label={scene.name}
+                  aria-current={scene.id === sceneId ? 'true' : undefined}
+                  onClick={() => onScrub(scene.start)}
+                >
+                  <span className="tick-dot" />
+                  {labeled ? (
+                    <span className="tick-label" data-row={row}>
+                      {scene.tick}
+                    </span>
+                  ) : null}
+                </button>
+              </li>
+            )
+          })
+        })()}
       </ol>
     </div>
   )

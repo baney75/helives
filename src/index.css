@@ -445,7 +445,7 @@ a {
 .tick-label {
   display: block;
   white-space: nowrap;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
 }
 
@@ -1388,11 +1388,16 @@ body:has(.lamp-home)::-webkit-scrollbar {
   }
 
   .tick-label {
-    display: none !important;
+    display: block !important;
+    font-size: 9px;
   }
 
-  .tick.is-current .tick-label {
-    display: block !important;
+  .tick-label[data-row='1'] {
+    transform: translateY(13px);
+  }
+
+  .ticks {
+    height: 3.6rem;
   }
 
   .cine-brand,
