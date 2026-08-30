@@ -31,6 +31,7 @@ export function HourLamp({ now }: { now?: Date }) {
       data-paused={visible ? undefined : 'true'}
       key={passage.ref}
     >
+      <div className="lamp-glow" aria-hidden="true" />
       <div className="word-copy">
         <p className="hero-mark">
           <BrandMark size={48} framed />
