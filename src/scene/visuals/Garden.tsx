@@ -116,20 +116,20 @@ function River({ reducedMotion }: { reducedMotion: boolean }) {
 
   useFrame(({ clock: r3f }) => {
     if (!material.current || reducedMotion) return
-    material.current.emissiveIntensity = 0.12 + Math.sin(r3f.elapsedTime * 0.65) * 0.045
+    material.current.emissiveIntensity = 0.05 + Math.sin(r3f.elapsedTime * 0.65) * 0.03
   })
 
   return (
     <mesh geometry={geometry}>
       <meshPhysicalMaterial
         ref={material}
-        color="#3a6a88"
-        roughness={0.18}
+        color="#1e3242"
+        roughness={0.1}
         metalness={0.02}
         clearcoat={0.72}
         clearcoatRoughness={0.2}
-        emissive="#1a3044"
-        emissiveIntensity={0.14}
+        emissive="#132234"
+        emissiveIntensity={0.06}
       />
     </mesh>
   )

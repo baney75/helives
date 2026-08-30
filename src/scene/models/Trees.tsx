@@ -48,8 +48,8 @@ export function TreeOfLife({
         quality={quality}
         reducedMotion={reducedMotion}
       />
-      <HangingFruit positions={fruit} color={EDEN.life.fruitColor} emissive="#fff4d6" />
-      <pointLight position={[0, 1.9, 0.2]} intensity={1.8 * (1 - fall * 0.55)} color="#fff0c2" distance={7} />
+      <HangingFruit positions={fruit} color={EDEN.life.fruitColor} emissive="#ffe29a" />
+      <pointLight position={[0, 1.9, 0.2]} intensity={1.8 * (1 - fall * 0.55)} color="#ffe29a" distance={7} />
     </group>
   )
 }
@@ -236,7 +236,7 @@ export function Herbs({ quality }: { quality: Quality }) {
 
   return (
     <instancedMesh ref={mesh} args={[geometry, undefined, used]}>
-      <meshStandardMaterial color="#3d5c32" roughness={0.86} side={DoubleSide} />
+      <meshStandardMaterial color="#3e4e2a" roughness={0.86} side={DoubleSide} />
     </instancedMesh>
   )
 }

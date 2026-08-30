@@ -19,7 +19,7 @@ export function SceneEffects({ clock }: { clock: SceneClock }) {
       ) : (
         <></>
       )}
-      <Vignette offset={0.32} darkness={0.58} eskil={false} />
+      <Vignette offset={0.36} darkness={0.5} eskil={false} />
     </EffectComposer>
   )
 }
