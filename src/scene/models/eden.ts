@@ -283,7 +283,7 @@ export function serpentPoints(turns = 3, samples = 60): Vec3[] {
     const t = i / (samples - 1)
     const climb = t * t * (3 - 2 * t)
     const angle = t * turns * Math.PI * 2 + 0.4
-    const radius = 0.14 + (1 - t) * 0.09
+    const radius = (0.13 + (1 - t) * 0.085) * (1 + Math.sin(t * Math.PI * 4) * 0.14)
     const y = 0.1 + climb * 1.5
     const coilX = cx + Math.cos(angle) * radius
     const coilZ = cz + Math.sin(angle) * radius

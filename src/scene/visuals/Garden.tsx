@@ -55,7 +55,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         role="woman"
         pose={womanPose}
         position={creationPair > 0.08 ? [0.42, 0, 1.82] : lerp3(womanHome, EDEN.woman.depart, leave)}
-        rotationY={Math.PI - 0.42 + leave * 0.55}
+        rotationY={Math.PI - 0.95 + leave * 0.55}
         fade={Math.max(creationPair, pairFade * strength)}
         holdFruit={fruit.holder === 'woman'}
         reducedMotion={clock.reducedMotion}

@@ -109,6 +109,7 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
         <sphereGeometry args={[1, 7, 5]} />
         <meshStandardMaterial color="#262215" roughness={0.4} metalness={0.14} emissive="#5a4a24" emissiveIntensity={0.05} />
       </instancedMesh>
+      <pointLight position={[fruit[0] + 0.34, fruit[1] + 0.24, fruit[2] - 0.22]} intensity={1 * strength} color="#ffcf8a" distance={3.2} />
       <group ref={head} position={[fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38]} rotation={[0.34, -0.5, -0.06]} scale={[1.9, 1.42, 1.7]}>
         <mesh scale={[1.3, 0.62, 0.84]}>
           <sphereGeometry args={[0.1, 16, 12]} />
