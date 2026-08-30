@@ -55,6 +55,9 @@ export function HourLamp({ now }: { now?: Date }) {
             Explore more
             <span className="sr-only"> on Bible Gateway, opens in a new tab</span>
           </a>
+          <a className="btn quiet" href="/scriptures">
+            The Scriptures
+          </a>
         </p>
         <div className="word-remain">
           <p className="word-remain-label">New scripture every hour</p>

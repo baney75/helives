@@ -14,7 +14,7 @@ export function SiteNav({ current }: { current?: NavId }) {
     <header className="nav">
       <a className="nav-mark" href="/" aria-current={current === 'home' ? 'page' : undefined}>
         <BrandMark size={22} framed />
-        He Lives
+        <span className="nav-mark-label">He Lives</span>
       </a>
       <nav>
         {LINKS.map((link) => (
