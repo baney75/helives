@@ -1773,7 +1773,7 @@ body:has(.lamp-home)::-webkit-scrollbar {
 }
 
 .hero-mark .brand-mark {
-  filter: drop-shadow(0 0 16px rgba(232, 184, 109, 0.28));
+  filter: drop-shadow(0 0 8px rgba(232, 184, 109, 0.18));
 }
 
 /* Countdown in clean tabular figures, not scattered Cormorant lining glyphs. */

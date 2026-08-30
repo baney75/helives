@@ -80,7 +80,8 @@ export function Figure({
         mat.color.set(role === 'man' ? '#362b1b' : '#443626')
         mat.roughness = 0.96
       } else if (mat.name.includes('skin')) {
-        mat.roughness = 0.72
+        mat.roughness = 0.84
+        mat.metalness = 0
       }
     })
   }, [gltf, role])

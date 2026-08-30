@@ -68,7 +68,7 @@ export const EDEN = {
   },
   man: {
     id: 'man' as const,
-    garden: [0.22, 0, 1.38] as const satisfies Vec3,
+    garden: [0.06, 0, 1.62] as const satisfies Vec3,
     depart: [3.02, 0, 1.76] as const satisfies Vec3,
   },
   woman: {
