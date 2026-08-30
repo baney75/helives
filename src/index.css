@@ -1774,21 +1774,23 @@ body:has(.lamp-home)::-webkit-scrollbar {
 }
 
 @media (min-width: 700px) {
-  /* Verse in a warm field of light, the lamp as the light source. */
+  /* Verse in a warm field of light, the lamp as the light source. The lamp
+     reaches into the right third instead of hugging the verse. */
   .word-lamp {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: clamp(24px, 4vw, 64px);
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    column-gap: clamp(24px, 5vw, 88px);
     align-items: center;
   }
 
   .word-lamp .lamp-glow {
-    left: 70%;
-    width: min(50vw, 620px);
+    left: 74%;
+    width: min(50vw, 640px);
   }
 
   .word-lamp .word-sign {
     justify-self: center;
-    transform: translateX(clamp(0px, 4vw, 96px));
+    transform: translateX(clamp(0px, 5vw, 130px));
   }
 
   .word-lamp .word-sign svg {
