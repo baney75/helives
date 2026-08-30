@@ -23,7 +23,7 @@ export function VoidWaters({ clock }: { clock: SceneClock }) {
   return (
     <group ref={waters}>
       <OceanSurface strength={strength} y={0} reducedMotion={clock.reducedMotion} quality={clock.quality} />
-      <pointLight position={[0, 0.45, 0]} intensity={0.42 * strength} color="#6a7690" distance={12} />
+      <pointLight position={[0, 0.45, 0]} intensity={0.4 * strength} color="#7a5a3a" distance={12} />
     </group>
   )
 }

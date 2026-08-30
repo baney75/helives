@@ -443,7 +443,7 @@ a {
 }
 
 .tick-label {
-  display: none;
+  display: block;
   white-space: nowrap;
   font-size: 10px;
   color: var(--muted);
@@ -1847,6 +1847,11 @@ body:has(.lamp-home)::-webkit-scrollbar {
 
 @media (max-width: 420px) {
   .nav-mark-label {
+    display: none;
+  }
+
+  /* The framed hero mark already carries the brand; don't repeat the cross. */
+  .word-sign[data-motif='life'] {
     display: none;
   }
 }
