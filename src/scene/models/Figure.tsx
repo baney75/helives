@@ -1,7 +1,7 @@
 import { Clone, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
-import { Vector3, type Group, type Object3D } from 'three'
+import { useEffect, useRef } from 'react'
+import { type Group, type Mesh, type MeshStandardMaterial, type Object3D, Vector3 } from 'three'
 import type { Vec3 } from './eden.ts'
 import {
   figureJointPose,
@@ -71,6 +71,20 @@ export function Figure({
   const clone = useRef<Group>(null)
   const fruit = useRef<Group>(null)
   const gltf = useGLTF(SRC[role])
+
+  useEffect(() => {
+    gltf.scene.traverse((obj) => {
+      const mat = (obj as Mesh).material as MeshStandardMaterial | undefined
+      if (!mat?.name) return
+      if (mat.name.includes('robe-edge')) {
+        mat.color.set(role === 'man' ? '#362b1b' : '#443626')
+        mat.roughness = 0.96
+      } else if (mat.name.includes('skin')) {
+        mat.roughness = 0.72
+      }
+    })
+  }, [gltf, role])
+
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
 
