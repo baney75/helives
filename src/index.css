@@ -1850,3 +1850,60 @@ body:has(.lamp-home)::-webkit-scrollbar {
     display: none;
   }
 }
+
+/* ---- jury round 2 ---- */
+
+.hero-motif {
+  margin: var(--space-3) 0 0;
+  color: var(--muted);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.site.lamp-home .hero-motif {
+  margin-top: clamp(6px, 1vh, 12px);
+  font-size: clamp(0.95rem, 1.6vh, 1.1rem);
+}
+
+/* Life motif is the framed brand mark; it needs no big lamp halo. */
+.word-sign[data-motif='life'] {
+  filter: drop-shadow(0 0 12px rgba(232, 184, 109, 0.22));
+}
+
+/* Transport as one restrained editorial rail, not separate glass boxes. */
+.transport-rail {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+}
+
+.transport-rail .icon-btn {
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.transport-rail .icon-btn:last-child {
+  border-right: 0;
+}
+
+.transport-rail .icon-btn.primary {
+  background: var(--fire);
+}
+
+.transport-rail .speed-cycle {
+  min-width: 60px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Demote minor timeline beats; keep presence for labeled and current beats. */
+.tick:not(.is-current):not(:has(.tick-label)) .tick-dot {
+  width: 3px;
+  height: 3px;
+  opacity: 0.32;
+}

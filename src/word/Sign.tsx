@@ -15,7 +15,7 @@ export function Sign({ motif, reducedMotion }: SignProps) {
   return (
     <div className="word-sign" data-motif={motif} aria-hidden="true">
       {motif === 'life' ? (
-        <BrandMark size={132} />
+        <BrandMark size={132} framed />
       ) : (
         <svg
           className={live ? 'word-sign-icon is-live' : 'word-sign-icon'}
