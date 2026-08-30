@@ -1,3 +1,4 @@
+import { ContactShadows } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef } from 'react'
 import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
@@ -23,6 +24,18 @@ export function Garden({ clock }: { clock: SceneClock }) {
 
   return (
     <group position={EDEN.origin} visible={strength > 0.04}>
+      {clock.quality !== 'low' ? (
+        <ContactShadows
+          position={[0, 0.05, 0.4]}
+          scale={13}
+          resolution={512}
+          blur={2.8}
+          opacity={0.52}
+          far={3.2}
+          color="#050308"
+          frames={clock.reducedMotion ? 1 : Infinity}
+        />
+      ) : null}
       <PlantedGround fall={fall} />
       <River reducedMotion={clock.reducedMotion} />
       <TreeOfLife fall={fall} quality={clock.quality} reducedMotion={clock.reducedMotion} />
