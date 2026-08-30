@@ -1,3 +1,4 @@
+import { ContactShadows } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef } from 'react'
 import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
@@ -23,6 +24,18 @@ export function Garden({ clock }: { clock: SceneClock }) {
 
   return (
     <group position={EDEN.origin} visible={strength > 0.04}>
+      {clock.quality !== 'low' ? (
+        <ContactShadows
+          position={[0, 0.05, 0.4]}
+          scale={13}
+          resolution={512}
+          blur={2.8}
+          opacity={0.52}
+          far={3.2}
+          color="#050308"
+          frames={clock.reducedMotion ? 1 : Infinity}
+        />
+      ) : null}
       <PlantedGround fall={fall} />
       <River reducedMotion={clock.reducedMotion} />
       <TreeOfLife fall={fall} quality={clock.quality} reducedMotion={clock.reducedMotion} />
@@ -42,7 +55,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
         role="woman"
         pose={womanPose}
         position={creationPair > 0.08 ? [0.42, 0, 1.82] : lerp3(womanHome, EDEN.woman.depart, leave)}
-        rotationY={Math.PI - 0.42 + leave * 0.55}
+        rotationY={Math.PI + 0.32 + leave * 0.55}
         fade={Math.max(creationPair, pairFade * strength)}
         holdFruit={fruit.holder === 'woman'}
         reducedMotion={clock.reducedMotion}
@@ -103,20 +116,20 @@ function River({ reducedMotion }: { reducedMotion: boolean }) {
 
   useFrame(({ clock: r3f }) => {
     if (!material.current || reducedMotion) return
-    material.current.emissiveIntensity = 0.12 + Math.sin(r3f.elapsedTime * 0.65) * 0.045
+    material.current.emissiveIntensity = 0.05 + Math.sin(r3f.elapsedTime * 0.65) * 0.03
   })
 
   return (
     <mesh geometry={geometry}>
       <meshPhysicalMaterial
         ref={material}
-        color="#3a6a88"
-        roughness={0.18}
+        color="#1e3242"
+        roughness={0.1}
         metalness={0.02}
         clearcoat={0.72}
         clearcoatRoughness={0.2}
-        emissive="#1a3044"
-        emissiveIntensity={0.14}
+        emissive="#132234"
+        emissiveIntensity={0.06}
       />
     </mesh>
   )

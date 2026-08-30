@@ -29,8 +29,8 @@ export function OceanSurface({
         uniforms: {
           uTime: { value: 0 },
           uStrength: { value: strength },
-          uDeep: { value: new Color(overhead ? '#092946' : '#061929') },
-          uLight: { value: new Color(overhead ? '#80d9e7' : '#2381a0') },
+          uDeep: { value: new Color(overhead ? '#092946' : '#050409') },
+          uLight: { value: new Color(overhead ? '#80d9e7' : '#171319') },
           uGold: { value: new Color('#f4ddb0') },
         },
         vertexShader: `

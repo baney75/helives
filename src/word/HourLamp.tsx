@@ -5,7 +5,17 @@ import { BrandMark } from '../site/BrandMark.tsx'
 import { formatCountdown, msUntilNextHour, passageAt } from './clock.ts'
 import { bibleGatewayHref } from './gateway.ts'
 import { Sign } from './Sign.tsx'
+import type { Motif } from './types.ts'
 import { VerseText } from './VerseText.tsx'
+
+/** Authored exhortation, one line per motif. Never presented as Scripture. */
+const MOTIF_LINE: Record<Motif, string> = {
+  light: 'Even now, light is breaking in.',
+  water: 'Be still; the deep is not without God.',
+  lamp: 'His word lights the next step.',
+  vine: 'Stay near the vine, and grow.',
+  life: 'The tomb is empty. He lives.',
+}
 
 export function HourLamp({ now }: { now?: Date }) {
   const reduced = usePrefersReducedMotion()
@@ -31,6 +41,7 @@ export function HourLamp({ now }: { now?: Date }) {
       data-paused={visible ? undefined : 'true'}
       key={passage.ref}
     >
+      <div className="lamp-glow" aria-hidden="true" />
       <div className="word-copy">
         <p className="hero-mark">
           <BrandMark size={48} framed />
@@ -41,6 +52,7 @@ export function HourLamp({ now }: { now?: Date }) {
           <VerseText spans={passage.spans} />
         </p>
         <p className="hero-cite">{passage.ref} · King James Version</p>
+        <p className="hero-motif">{MOTIF_LINE[passage.motif]}</p>
       </div>
       <Sign motif={passage.motif} reducedMotion={reduced} />
       <div className="word-acts">
@@ -53,6 +65,9 @@ export function HourLamp({ now }: { now?: Date }) {
           >
             Explore more
             <span className="sr-only"> on Bible Gateway, opens in a new tab</span>
+          </a>
+          <a className="btn quiet" href="/scriptures">
+            The Scriptures
           </a>
         </p>
         <div className="word-remain">

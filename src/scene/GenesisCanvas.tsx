@@ -107,16 +107,26 @@ function Creation({ clock }: { clock: SceneClock }) {
       <JourneyCameraRig clock={clock} />
       <CinematicRig clock={clock} />
       <fog attach="fog" args={['#07060a', gardenFogNear, fog]} />
-      <ambientLight intensity={0.27 + clock.presence.day1 * 0.18 + gardenLit * 0.24 - fall * 0.04} />
-      <hemisphereLight args={['#7185a0', '#211b10', 0.38 + gardenLit * 0.34 - fall * 0.06]} />
+      <ambientLight intensity={0.24 + clock.presence.day1 * 0.16 + gardenLit * 0.2 - fall * 0.12} />
+      <hemisphereLight args={['#6a6672', '#241c10', 0.32 + gardenLit * 0.28 - fall * 0.08]} />
       <pointLight position={[0, 0.4, 0]} intensity={2.4 + clock.presence.day1 * 1.8} color="#ffd28a" distance={28} />
-      <pointLight position={[6, 8, 12]} intensity={0.9} color="#7a90b8" distance={48} />
+      <pointLight position={[6, 8, 12]} intensity={0.4} color="#6f84aa" distance={48} />
       <directionalLight
         position={[-4.2, 6.8, 4.8]}
-        intensity={(1.75 - fall * 0.52) * gardenLit}
+        intensity={(3.1 - fall * 0.9) * gardenLit}
         color="#ffe7b8"
       />
-      <directionalLight position={[5.5, 3.4, -4]} intensity={0.42 * gardenLit} color="#9caf93" />
+      <pointLight
+        position={[0.4, 3.4, 2.6]}
+        intensity={2.6 * gardenLit * (1 - fall * 0.4)}
+        color="#ffdca0"
+        distance={24}
+      />
+      <directionalLight
+        position={[3.4, 3.2, -4.6]}
+        intensity={(1.3 - fall * 0.4) * gardenLit}
+        color="#ffcf8a"
+      />
       <directionalLight position={[-3.8, 5.2, 5.5]} intensity={0.88 * creationLit} color="#d7e1cb" />
       <pointLight position={[1.4, 2.2, 1.1]} intensity={1.9 * fall} color="#d6974c" distance={10} />
       <VoidWaters clock={clock} />

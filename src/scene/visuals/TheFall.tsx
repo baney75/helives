@@ -30,8 +30,8 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
   const head = useRef<Group>(null)
   const tongue = useRef<Group>(null)
   const scales = useRef<InstancedMesh>(null)
-  const pts = useMemo(() => serpentPoints(2.85, 40).map((p) => new Vector3(...p)), [])
-  const geometry = useMemo(() => createTaperedTube(pts, 0.09, 0.03, 8), [pts])
+  const pts = useMemo(() => serpentPoints(3, 60).map((p) => new Vector3(...p)), [])
+  const geometry = useMemo(() => createTaperedTube(pts, 0.1, 0.022, 12), [pts])
   const dorsal = useMemo(() => {
     const lifted = pts.map((p) => new Vector3(p.x, p.y + 0.05, p.z))
     return createTaperedTube(lifted, 0.02, 0.006, 6)
@@ -77,7 +77,7 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
     }
     if (head.current) {
       const strike = Math.sin(Math.min(1, beat / 0.34) * Math.PI)
-      head.current.position.set(fruit[0] - 0.24 - strike * 0.08, fruit[1] - 0.08 + Math.sin(t * 0.85) * 0.03, fruit[2] + 0.38)
+      head.current.position.set(fruit[0] - 0.5 - strike * 0.08, fruit[1] - 0.18 + Math.sin(t * 0.85) * 0.03, fruit[2] + 0.55)
       if (!reducedMotion) head.current.rotation.z = Math.sin(t * 1.05) * 0.1
     }
     if (tongue.current) {
@@ -90,23 +90,27 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
     <group ref={mesh}>
       <mesh geometry={geometry}>
         <meshPhysicalMaterial
-          color="#202719"
-          roughness={0.38}
-          metalness={0.08}
-          emissive="#3a2e14"
-          emissiveIntensity={0.14 + strength * 0.12}
-          clearcoat={0.42}
-          clearcoatRoughness={0.4}
+          color="#1f2717"
+          roughness={0.34}
+          metalness={0.1}
+          emissive="#241f10"
+          emissiveIntensity={0.1 + strength * 0.1}
+          clearcoat={0.5}
+          clearcoatRoughness={0.32}
+          sheen={0.32}
+          sheenColor="#5a4e2a"
+          sheenRoughness={0.55}
         />
       </mesh>
       <mesh geometry={dorsal}>
-        <meshStandardMaterial color="#8a6a32" emissive="#3a2b13" emissiveIntensity={0.2} roughness={0.5} />
+        <meshStandardMaterial color="#4a3a1e" emissive="#2a1f0e" emissiveIntensity={0.12} roughness={0.55} />
       </mesh>
       <instancedMesh ref={scales} args={[undefined, undefined, scalePos.length / 3]}>
         <sphereGeometry args={[1, 7, 5]} />
-        <meshStandardMaterial color="#2c2818" roughness={0.36} metalness={0.12} emissive="#e8b86d" emissiveIntensity={0.08} />
+        <meshStandardMaterial color="#262215" roughness={0.4} metalness={0.14} emissive="#5a4a24" emissiveIntensity={0.05} />
       </instancedMesh>
-      <group ref={head} position={[fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38]} rotation={[0.02, -0.45, -0.08]} scale={1.28}>
+      <pointLight position={[fruit[0] + 0.34, fruit[1] + 0.24, fruit[2] - 0.22]} intensity={1 * strength} color="#ffcf8a" distance={3.2} />
+      <group ref={head} position={[fruit[0] - 0.5, fruit[1] - 0.18, fruit[2] + 0.55]} rotation={[0.34, -0.5, -0.06]} scale={[1.9, 1.42, 1.7]}>
         <mesh scale={[1.3, 0.62, 0.84]}>
           <sphereGeometry args={[0.1, 16, 12]} />
           <meshPhysicalMaterial color="#2c2816" roughness={0.32} clearcoat={0.45} clearcoatRoughness={0.38} />

@@ -1,7 +1,7 @@
 import { Clone, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
-import { Vector3, type Group, type Object3D } from 'three'
+import { useEffect, useRef } from 'react'
+import { type Group, type Mesh, type MeshStandardMaterial, type Object3D, Vector3 } from 'three'
 import type { Vec3 } from './eden.ts'
 import {
   figureJointPose,
@@ -71,6 +71,21 @@ export function Figure({
   const clone = useRef<Group>(null)
   const fruit = useRef<Group>(null)
   const gltf = useGLTF(SRC[role])
+
+  useEffect(() => {
+    gltf.scene.traverse((obj) => {
+      const mat = (obj as Mesh).material as MeshStandardMaterial | undefined
+      if (!mat?.name) return
+      if (mat.name.includes('robe-edge')) {
+        mat.color.set(role === 'man' ? '#362b1b' : '#443626')
+        mat.roughness = 0.96
+      } else if (mat.name.includes('skin')) {
+        mat.roughness = 0.84
+        mat.metalness = 0
+      }
+    })
+  }, [gltf, role])
+
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
 
@@ -95,8 +110,8 @@ export function Figure({
       if (holdFruit && hand) {
         hand.getWorldPosition(WORLD)
         group.worldToLocal(WORLD)
-        WORLD.y += pose === 'eat' ? 0.04 : 0.055
-        if (pose === 'eat') WORLD.z -= 0.03
+        WORLD.y += pose === 'eat' ? -0.035 : 0.055
+        if (pose === 'eat') WORLD.z += 0.06
         held.position.copy(WORLD)
       }
     }
@@ -109,7 +124,7 @@ export function Figure({
       </group>
       <group ref={fruit} visible={holdFruit}>
         <mesh>
-          <sphereGeometry args={[0.045, 12, 12]} />
+          <sphereGeometry args={[0.03, 12, 12]} />
           <meshStandardMaterial color={fruitColor} roughness={0.38} emissive="#3a0c08" emissiveIntensity={0.42} />
         </mesh>
       </group>

@@ -1,7 +1,13 @@
-import type { ChangeEvent } from 'react'
 import { hasVoice } from '../genesis/voiced.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 import { Timeline } from './Timeline.tsx'
+
+const SPEEDS = [0.5, 1, 2, 4] as const
+
+function nextSpeed(current: number): number {
+  const index = SPEEDS.indexOf(current as (typeof SPEEDS)[number])
+  return SPEEDS[(index + 1) % SPEEDS.length] ?? 1
+}
 
 type HUDProps = {
   clock: GenesisClock
@@ -49,26 +55,22 @@ export function HUD({ clock }: HUDProps) {
 
       <footer className="dock">
         <div className="transport">
-          <button type="button" className="icon-btn" onClick={clock.reset}>
-            Reset
-          </button>
-          <button type="button" className="icon-btn primary" onClick={clock.toggle}>
-            {clock.playing ? 'Pause' : 'Play'}
-          </button>
-          <label className="speed">
-            Speed
-            <select
-              value={String(clock.speed)}
-              onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                clock.setSpeed(Number(event.target.value))
-              }}
+          <div className="transport-rail">
+            <button type="button" className="icon-btn" onClick={clock.reset}>
+              Reset
+            </button>
+            <button type="button" className="icon-btn primary" onClick={clock.toggle}>
+              {clock.playing ? 'Pause' : 'Play'}
+            </button>
+            <button
+              type="button"
+              className="icon-btn speed-cycle"
+              onClick={() => clock.setSpeed(nextSpeed(clock.speed))}
+              aria-label={`Speed ${clock.speed} times, tap to change`}
             >
-              <option value="0.5">0.5×</option>
-              <option value="1">1×</option>
-              <option value="2">2×</option>
-              <option value="4">4×</option>
-            </select>
-          </label>
+              {clock.speed}×
+            </button>
+          </div>
           <a className="text-link" href="/">
             He Lives
           </a>
