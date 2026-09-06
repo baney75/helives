@@ -1,11 +1,11 @@
 import { Clone, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import { Vector3, type Group, type Object3D } from 'three'
+import { MathUtils, Vector3, type Group, type Object3D } from 'three'
 import type { Vec3 } from './eden.ts'
+import { AppleFruit } from './Trees.tsx'
 import {
   figureJointPose,
-  figureJointShift,
   heldFruitJoint,
   type FigurePoseId,
   type FigureRole,
@@ -27,24 +27,17 @@ const LEAN: Record<FigurePoseId, number> = {
   depart: 0.05,
 }
 
-const REST = new WeakMap<Object3D, Vector3>()
 const WORLD = new Vector3()
 
-function applyJoints(root: Object3D, pose: FigurePoseId, role: FigureRole, time: number): void {
-  const joints = figureJointPose(pose, role, time)
-  const shifts = figureJointShift(pose, role)
-  for (const [name, rot] of Object.entries(joints)) {
+function applyJoints(root: Object3D, pose: FigurePoseId, role: FigureRole, time: number, delta: number): void {
+  for (const [name, rot] of Object.entries(figureJointPose(pose, role, time))) {
     const node = root.getObjectByName(name)
     if (!node) continue
-    node.rotation.set(rot.x, rot.y, rot.z)
-    let rest = REST.get(node)
-    if (!rest) {
-      rest = node.position.clone()
-      REST.set(node, rest)
-    }
-    const shift = shifts[name]
-    if (shift) node.position.set(rest.x + shift.x, rest.y + shift.y, rest.z + shift.z)
-    else node.position.copy(rest)
+    node.rotation.set(
+      MathUtils.damp(node.rotation.x, rot.x, 9, delta),
+      MathUtils.damp(node.rotation.y, rot.y, 9, delta),
+      MathUtils.damp(node.rotation.z, rot.z, 9, delta),
+    )
   }
 }
 
@@ -55,7 +48,6 @@ export function Figure({
   rotationY = 0,
   fade = 1,
   holdFruit = false,
-  fruitColor = '#8a2a22',
   reducedMotion = false,
 }: {
   role: FigureRole
@@ -64,7 +56,6 @@ export function Figure({
   rotationY?: number
   fade?: number
   holdFruit?: boolean
-  fruitColor?: string
   reducedMotion?: boolean
 }) {
   const root = useRef<Group>(null)
@@ -74,7 +65,7 @@ export function Figure({
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
 
-  useFrame(({ clock }) => {
+  useFrame(({ clock }, delta) => {
     const group = root.current
     if (!group) return
     const hidden = fade < 0.04
@@ -87,12 +78,13 @@ export function Figure({
     const step = walking ? Math.abs(Math.sin(t * 3.05 + phase)) * 0.03 : 0
     group.position.set(position[0], position[1] + breath + step, position[2])
     group.rotation.set(0, rotationY + (walking ? Math.sin(t * 1.55 + phase) * 0.04 : 0), lean)
-    if (clone.current) applyJoints(clone.current, pose, role, t)
+    if (clone.current) applyJoints(clone.current, pose, role, t, reducedMotion ? 1 : delta)
     const held = fruit.current
     if (held) {
       held.visible = holdFruit
       const hand = clone.current?.getObjectByName(heldFruitJoint(role))
       if (holdFruit && hand) {
+        group.updateWorldMatrix(true, true)
         hand.getWorldPosition(WORLD)
         group.worldToLocal(WORLD)
         WORLD.y += pose === 'eat' ? 0.04 : 0.055
@@ -105,13 +97,10 @@ export function Figure({
   return (
     <group ref={root} position={position} rotation={[0, rotationY, lean]} scale={figureScale} visible={fade >= 0.04}>
       <group ref={clone} scale={fade}>
-        <Clone object={gltf.scene} />
+        <Clone object={gltf.scene} castShadow receiveShadow />
       </group>
       <group ref={fruit} visible={holdFruit}>
-        <mesh>
-          <sphereGeometry args={[0.045, 12, 12]} />
-          <meshStandardMaterial color={fruitColor} roughness={0.38} emissive="#3a0c08" emissiveIntensity={0.42} />
-        </mesh>
+        <AppleFruit scale={0.58} glow={0.05} />
       </group>
     </group>
   )

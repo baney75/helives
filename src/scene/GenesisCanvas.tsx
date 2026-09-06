@@ -112,6 +112,14 @@ function Creation({ clock }: { clock: SceneClock }) {
       <pointLight position={[0, 0.4, 0]} intensity={2.4 + clock.presence.day1 * 1.8} color="#ffd28a" distance={28} />
       <pointLight position={[6, 8, 12]} intensity={0.9} color="#7a90b8" distance={48} />
       <directionalLight
+        castShadow={clock.quality !== 'low'}
+        shadow-mapSize={[1024, 1024]}
+        shadow-camera-left={-5}
+        shadow-camera-right={5}
+        shadow-camera-top={5}
+        shadow-camera-bottom={-5}
+        shadow-bias={-0.0003}
+        shadow-normalBias={0.025}
         position={[-4.2, 6.8, 4.8]}
         intensity={(1.75 - fall * 0.52) * gardenLit}
         color="#ffe7b8"
@@ -224,6 +232,7 @@ export function GenesisCanvas({
     <div className="stage" aria-hidden="true">
       <Canvas
         key={epoch}
+        shadows={clock.quality !== 'low'}
         dpr={DPR[clock.quality]}
         frameloop={visible ? 'always' : 'never'}
         gl={{

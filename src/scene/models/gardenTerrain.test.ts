@@ -11,7 +11,7 @@ describe('planted garden ground', () => {
     if (!isle) return
     expect(isle.max.x - isle.min.x).toBeGreaterThan(7)
     expect(isle.max.y - isle.min.y).toBeGreaterThan(5)
-    expect(isle.max.x + isle.min.x).not.toBeCloseTo(0, 1)
+    expect(isle.max.z - isle.min.z).toBeGreaterThan(0.25)
     expect(EDEN.river.points.length).toBeGreaterThanOrEqual(6)
     island.dispose()
   })

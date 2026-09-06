@@ -58,7 +58,7 @@ describe('shipping Garden and Fall source', () => {
 
   it('does not plant day-three crowns as icosahedrons', () => {
     const dry = readFileSync(join(here, 'DryLand.tsx'), 'utf8')
-    expect(dry).toMatch(/createLeafGeometry/)
+    expect(dry).toMatch(/createPlantGeometry/)
     expect(dry).not.toMatch(/icosahedronGeometry/)
   })
 

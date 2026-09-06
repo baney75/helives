@@ -49,12 +49,12 @@ describe('first Genesis voice', () => {
     expect(generator).toContain('assertMpegAudio')
   })
 
-  it('uses a male narrator and a slower bass-shaped God voice', () => {
+  it('uses a male narrator and a distinct God voice with intelligible dry mastering', () => {
     const generator = readFileSync(resolve('scripts/generate-audio.mjs'), 'utf8')
     expect(generator).toContain("narrator: { oneMin: 'echo'")
-    expect(generator).toContain("god: { oneMin: 'onyx', speed: 0.82")
-    expect(generator).toContain("role === 'god'")
-    expect(generator).toContain('bass=g=4:f=110')
+    expect(generator).toContain("god: { oneMin: 'onyx', speed: 0.94")
+    expect(generator).not.toContain('aecho=')
+    expect(generator).toContain('loudnorm=I=-16')
   })
 
   it('autoplays narration independently of reduced-motion visuals', () => {

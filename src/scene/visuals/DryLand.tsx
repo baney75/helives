@@ -1,10 +1,10 @@
 import { useFrame } from '@react-three/fiber'
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
-import { Color, ExtrudeGeometry, InstancedMesh, Shape, type Group } from 'three'
+import { Color, DoubleSide, ExtrudeGeometry, InstancedMesh, Shape, type Group } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
 import { writeOrientedInstances } from '../../lib/instances.ts'
 import { fillDisk, mulberry32 } from '../../lib/rng.ts'
-import { createLeafGeometry } from '../models/geometry.ts'
+import { createPlantGeometry } from '../models/geometry.ts'
 import type { SceneClock } from '../types.ts'
 import { findSceneAt } from '../../genesis/scenes.ts'
 import { OceanSurface } from './OceanSurface.tsx'
@@ -82,7 +82,7 @@ export function DryLand({ clock }: { clock: SceneClock }) {
     })
   }, [count, kinds, positions])
 
-  const crownGeo = useMemo(() => createLeafGeometry(), [])
+  const crownGeo = useMemo(() => createPlantGeometry(), [])
   const islandGeometry = useMemo(() => createIslandGeometry([
     [-2.65, -0.2], [-2.25, -1.0], [-1.5, -1.38], [-0.65, -1.26], [0.2, -1.48],
     [1.05, -1.16], [1.72, -0.72], [2.42, -0.48], [2.68, 0.15], [2.18, 0.62],
@@ -141,7 +141,7 @@ export function DryLand({ clock }: { clock: SceneClock }) {
           <meshStandardMaterial color="#493922" roughness={0.95} />
         </instancedMesh>
         <instancedMesh ref={crowns} args={[crownGeo, undefined, count]} position={[0, 0.55, 0]}>
-          <meshStandardMaterial vertexColors color="#e4eccb" roughness={0.82} emissive="#445b2c" emissiveIntensity={0.25} />
+          <meshStandardMaterial side={DoubleSide} vertexColors color="#e4eccb" roughness={0.82} emissive="#445b2c" emissiveIntensity={0.25} />
         </instancedMesh>
         <instancedMesh ref={fruit} args={[undefined, undefined, count]} position={[0.05, 0.58, 0.06]}>
           <sphereGeometry args={[0.045, 7, 5]} />

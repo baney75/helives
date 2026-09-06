@@ -2,10 +2,12 @@
 /**
  * Generate reverent, role-aware narration. Never prints provider keys.
  */
+import { createHash } from 'node:crypto'
 import { spawn } from 'node:child_process'
-import { mkdir, readFile, writeFile, access, rm } from 'node:fs/promises'
+import { mkdir, readFile, writeFile, access, rename } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { mpegDurationSeconds } from '../src/genesis/mpegDuration.ts'
 import { NARRATION, SCENE_VOICE_CUES } from '../src/genesis/script.ts'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -20,8 +22,8 @@ const VOICES = {
 
 const VOICE_PROFILES = {
   narrator: { oneMin: 'echo', speed: 0.96, eleven: VOICES.george },
-  god: { oneMin: 'onyx', speed: 0.82, eleven: VOICES.george },
-  serpent: { oneMin: 'fable', speed: 0.82, eleven: VOICES.brian },
+  god: { oneMin: 'onyx', speed: 0.94, eleven: VOICES.george },
+  serpent: { oneMin: 'fable', speed: 0.94, eleven: VOICES.brian },
   woman: { oneMin: 'nova', speed: 0.94, eleven: VOICES.george },
   man: { oneMin: 'echo', speed: 0.9, eleven: VOICES.adam },
 }
@@ -138,30 +140,30 @@ async function tts(env, text, role = 'narrator') {
 }
 
 async function compositeCues(env, id, cues, dest) {
-  const cueDir = path.join(outDir, `.${id}-cues`)
-  await rm(cueDir, { recursive: true, force: true })
+  const cueDir = path.join(root, 'demo', 'audio-cache', id)
   await mkdir(cueDir, { recursive: true })
   const parts = []
   for (const [index, cue] of cues.entries()) {
     const prefix = String(index + 1).padStart(2, '0')
     const raw = path.join(cueDir, `${prefix}-${cue.role}-raw.mp3`)
     const part = path.join(cueDir, `${prefix}-${cue.role}.mp3`)
-    await writeFile(raw, await tts(env, cue.text, cue.role))
+    await cachedVoice(env, cue.text, cue.role, raw)
     await soften(raw, part, cue.role)
     parts.push(part)
     console.log(`wrote ${id} cue ${prefix} (${cue.role})`)
   }
   const list = path.join(cueDir, 'concat.txt')
   await writeFile(list, parts.map((part) => `file '${part.replaceAll("'", "'\\''")}'`).join('\n'))
-  await run('ffmpeg', ['-y', '-f', 'concat', '-safe', '0', '-i', list, '-c:a', 'libmp3lame', '-b:a', '128k', dest])
-  await rm(cueDir, { recursive: true, force: true })
+  await run('ffmpeg', ['-y', '-f', 'concat', '-safe', '0', '-i', list, '-c:a', 'libmp3lame', '-b:a', '192k', dest])
+  // Retain paid source audio so interrupted runs can resume without another charge.
 }
 
-function runCapture(cmd, args) {
+function runCapture(cmd, args, stderr = false) {
   return new Promise((resolve, reject) => {
-    const child = spawn(cmd, args, { stdio: ['ignore', 'pipe', 'ignore'] })
+    const child = spawn(cmd, args, { stdio: ['ignore', 'pipe', stderr ? 'pipe' : 'ignore'] })
     let stdout = ''
-    child.stdout.on('data', (chunk) => { stdout += chunk })
+    const stream = stderr ? child.stderr : child.stdout
+    stream.on('data', (chunk) => { stdout += chunk })
     child.on('exit', (code) => code === 0 ? resolve(stdout.trim()) : reject(new Error(`${cmd} exited ${code}`)))
     child.on('error', reject)
   })
@@ -179,7 +181,7 @@ async function refreshDurations() {
       continue
     }
     const raw = await runCapture('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', file])
-    const duration = Number(raw)
+    const duration = Math.max(Number(raw), mpegDurationSeconds(new Uint8Array(await readFile(file))))
     if (!Number.isFinite(duration) || duration <= 0) throw new Error(`Invalid duration for ${id}.mp3`)
     source = source.replace(new RegExp(`(\\s${id}: )\\d+(?:\\.\\d+)?(,)`), `$1${duration.toFixed(3)}$2`)
   }
@@ -198,33 +200,46 @@ function run(cmd, args) {
   })
 }
 
-async function soften(input, output, role = 'narrator') {
-  try {
-    const filter = role === 'god'
-      ? 'bass=g=4:f=110:w=0.6,aecho=0.8:0.9:48:0.14,loudnorm=I=-15:LRA=9:TP=-1.2'
-      : 'aecho=0.8:0.9:40:0.12,loudnorm=I=-16:LRA=11:TP=-1.5'
-    await run('ffmpeg', [
-      '-y',
-      '-i',
-      input,
-      '-af',
-      filter,
-      '-c:a',
-      'libmp3lame',
-      '-b:a',
-      '128k',
-      output,
-    ])
-    return true
-  } catch {
-    await writeFile(output, await readFile(input))
-    return false
+async function cachedVoice(env, text, role, dest) {
+  const profile = VOICE_PROFILES[role]
+  const hash = createHash('sha256').update(JSON.stringify({ text, profile, model: 'tts-1-hd' })).digest('hex')
+  const cache = path.join(root, 'demo', 'audio-cache', `${hash}.mp3`)
+  await mkdir(path.dirname(cache), { recursive: true })
+  let bytes
+  try { bytes = assertMpegAudio(await readFile(cache), role) }
+  catch {
+    bytes = await tts(env, text, role)
+    await writeFile(cache, bytes)
   }
+  await writeFile(dest, bytes)
+}
+
+async function soften(input, output) {
+  // Two-pass mastering keeps levels stable without a reverberant tail on every word.
+  const clean = 'highpass=f=65,lowpass=f=14500,acompressor=threshold=0.125:ratio=2:attack=10:release=100'
+  const report = await runCapture('ffmpeg', ['-hide_banner', '-i', input, '-af',
+    `${clean},loudnorm=I=-16:LRA=9:TP=-1.5:print_format=json`, '-f', 'null', '-'], true)
+  const match = report.match(/\{\s*"input_i"[\s\S]*?\}/)
+  if (!match) throw new Error('Audio loudness measurement failed')
+  const measured = JSON.parse(match[0])
+  const normalize = `loudnorm=I=-16:LRA=9:TP=-1.5:measured_I=${measured.input_i}:measured_LRA=${measured.input_lra}:measured_TP=${measured.input_tp}:measured_thresh=${measured.input_thresh}:offset=${measured.target_offset}:linear=true`
+  await run('ffmpeg', ['-y', '-i', input, '-af', `${clean},${normalize}`,
+    '-ar', '48000', '-c:a', 'libmp3lame', '-b:a', '192k', output])
+  return true
 }
 
 async function main() {
   const local = loadEnvLocal(await readFile(path.join(root, '.env.local'), 'utf8'))
   await mkdir(outDir, { recursive: true })
+  if (process.argv.includes('--timing-only')) { await refreshDurations(); return }
+  if (process.argv.includes('--sample')) {
+    await mkdir(sampleDir, { recursive: true })
+    const raw = path.join(sampleDir, '1min-narrator-raw.mp3')
+    await cachedVoice(local, NARRATION.day1, 'narrator', raw)
+    await soften(raw, path.join(sampleDir, '1min-narrator.mp3'))
+    console.log('1min.ai sample ready in demo/voice-tests/1min-narrator.mp3')
+    return
+  }
   const runVoices = process.argv.includes('--voices')
   if (runVoices) {
     const eleven = process.env.ELEVENLABS_API_KEY || local.ELEVENLABS_API_KEY
@@ -242,7 +257,9 @@ async function main() {
 
   const wanted = new Set(process.argv.slice(2).filter((arg) => !arg.startsWith('-')))
   const force = process.argv.includes('--force')
-  const tmp = path.join(outDir, '.tmp.mp3')
+  const staging = path.join(root, 'demo', 'audio-staging')
+  await mkdir(staging, { recursive: true })
+  const tmp = path.join(staging, 'raw.mp3')
   const pending = Object.entries(NARRATION).sort((a, b) => a[1].length - b[1].length)
   for (const [id, text] of pending) {
     if (wanted.size > 0 && !wanted.has(id)) continue
@@ -258,12 +275,16 @@ async function main() {
     }
     const cues = SCENE_VOICE_CUES[id]
     if (cues) {
-      await compositeCues(local, id, cues, dest)
+      const staged = path.join(staging, `${id}.mp3`)
+      await compositeCues(local, id, cues, staged)
+      await rename(staged, dest)
       console.log(`wrote ${id}.mp3 (${[...new Set(cues.map((cue) => cue.role))].join(' + ')})`)
       continue
     }
-    await writeFile(tmp, await tts(local, text))
-    const softened = await soften(tmp, dest)
+    await cachedVoice(local, text, 'narrator', tmp)
+    const staged = path.join(staging, `${id}.mp3`)
+    const softened = await soften(tmp, staged)
+    await rename(staged, dest)
     console.log(`wrote ${id}.mp3${softened ? '' : ' (no ffmpeg soften)'}`)
   }
   await refreshDurations()

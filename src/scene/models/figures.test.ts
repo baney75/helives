@@ -64,14 +64,11 @@ describe('authored figure GLBs', () => {
     const eat = figureJointPose('eat', 'woman', 0)
     const walkA = figureJointPose('depart', 'man', 0.4)
     const walkB = figureJointPose('depart', 'man', 0.4 + Math.PI / 3.05)
-    expect(Math.abs(reach.LForearm?.z ?? 0)).toBeGreaterThan(0.4)
+    expect(reach.LUpperArm?.x ?? 0).toBeGreaterThan(1)
     expect(eat.Head?.x ?? 0).toBeGreaterThan(reach.Head?.x ?? 0)
-    expect(eat.LForearm?.x ?? 0).toBeLessThan(-0.2)
-    const eatShift = figureJointShift('eat', 'woman')
-    const reachShift = figureJointShift('reach', 'woman')
-    expect(eatShift.LHand?.y ?? 0).toBeGreaterThan(0.4)
-    expect(reachShift.LHand?.y ?? 0).toBeGreaterThan(0.4)
-    expect(figureJointShift('eat', 'man').RHand?.y ?? 0).toBeGreaterThan(0.4)
+    expect(eat.LForearm?.x ?? 0).toBeGreaterThan(reach.LForearm?.x ?? 0)
+    expect(figureJointShift('eat', 'woman')).toEqual({})
+    expect(figureJointShift('reach', 'man')).toEqual({})
     expect(heldFruitJoint('woman')).toBe('LHand')
     expect(heldFruitJoint('man')).toBe('RHand')
     expect(walkA.LLowerLeg?.x ?? 0).not.toBeCloseTo(walkB.LLowerLeg?.x ?? 0, 2)
@@ -82,6 +79,28 @@ describe('authored figure GLBs', () => {
     expect(src).toMatch(/heldFruitJoint/)
     expect(src).toMatch(/getWorldPosition/)
     expect(src).not.toMatch(/1\.28/)
+  })
+
+  it('keeps wrist and elbow transforms connected and geometry within browser budgets', () => {
+    for (const role of ['man', 'woman', 'bird', 'fish']) {
+      const bytes = readFileSync(resolve(`public/models/genesis/${role}.glb`))
+      const gltf = JSON.parse(bytes.subarray(20, 20 + bytes.readUInt32LE(12)).toString()) as {
+        nodes: Array<{ name: string; children?: number[] }>
+        meshes: Array<{ primitives: Array<{ indices: number }> }>
+        accessors: Array<{ count: number }>
+        extensionsRequired?: string[]
+      }
+      expect(bytes.byteLength).toBeLessThan(5_000_000)
+      expect(gltf.meshes.length).toBeLessThan(30)
+      expect(gltf.extensionsRequired ?? []).toEqual([])
+      const triangles = gltf.meshes.reduce((sum, mesh) => sum + mesh.primitives.reduce((n, p) => n + gltf.accessors[p.indices]!.count / 3, 0), 0)
+      expect(triangles).toBeLessThan(100_000)
+      if (role === 'man' || role === 'woman') for (const side of ['L', 'R']) {
+        const index = (name: string) => gltf.nodes.findIndex((node) => node.name === name)
+        expect(gltf.nodes[index(side + 'UpperArm')]?.children).toContain(index(side + 'Forearm'))
+        expect(gltf.nodes[index(side + 'Forearm')]?.children).toContain(index(side + 'Hand'))
+      }
+    }
   })
 
   it('keeps the six-angle acceptance renderer in the repository', () => {

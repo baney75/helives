@@ -1,17 +1,44 @@
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js'
 import { BufferGeometry, CatmullRomCurve3, Float32BufferAttribute, Vector3 } from 'three'
 
 /** Flat pointed leaf in XY. Thickness is on Z so a canopy of these reads as foliage, not balls. */
 export function createLeafGeometry(): BufferGeometry {
-  const positions = [
-    0, 0.14, 0.012, -0.06, 0.025, 0, 0.06, 0.025, 0, -0.052, -0.065, 0, 0.052, -0.065, 0,
-    0, -0.125, 0.008, -0.06, 0.025, -0.008, 0.06, 0.025, -0.008, -0.052, -0.065, -0.006, 0.052, -0.065,
-    -0.006,
-  ]
-  const idx = [
-    0, 1, 2, 1, 3, 2, 2, 3, 4, 3, 5, 4, 0, 2, 7, 0, 6, 1, 6, 8, 1, 1, 8, 3, 7, 2, 9, 2, 4, 9, 8,
-    5, 3, 9, 4, 5, 0, 7, 6, 6, 7, 9, 6, 9, 8,
-  ]
-  return mesh(positions, idx)
+  const positions: number[] = []
+  const indices: number[] = []
+  const colors: number[] = []
+  const rows = 12
+  for (let i = 0; i <= rows; i += 1) {
+    const t = i / rows
+    const width = Math.pow(Math.sin(t * Math.PI), 0.9) * 0.055
+    for (let side = -1; side <= 1; side += 1) {
+      positions.push(side * width, t * 0.265 - 0.125, Math.sin(t * Math.PI) * 0.008 + Math.abs(side) * 0.010 + t * t * 0.008)
+      const tint = side === 0 ? 0.93 : 0.72 + Math.sin(t * Math.PI) * 0.14
+      colors.push(tint, tint, tint * 0.86)
+    }
+  }
+  for (let i = 0; i < rows; i += 1) for (let j = 0; j < 2; j += 1) {
+    const a = i * 3 + j
+    indices.push(a, a + 1, a + 3, a + 1, a + 4, a + 3)
+  }
+  const leaf = mesh(positions, indices)
+  leaf.setAttribute('color', new Float32BufferAttribute(colors, 3))
+  return leaf
+}
+
+/** A radial rosette, authored once and instanced across the meadow. */
+export function createPlantGeometry(): BufferGeometry {
+  const leaves = Array.from({ length: 9 }, (_, i) => {
+    const leaf = createLeafGeometry()
+    leaf.translate(0, 0.125, 0)
+    leaf.scale(0.72, 0.75 + (i % 3) * 0.18, 1)
+    leaf.rotateZ(0.45 + (i % 3) * 0.25)
+    leaf.rotateY(i * 2.39996)
+    leaf.translate(0, 0.015, 0)
+    return leaf
+  })
+  const plant = mergeGeometries(leaves)
+  leaves.forEach((leaf) => leaf.dispose())
+  return plant
 }
 
 export function leafAspect(geometry: BufferGeometry): { length: number; width: number; thick: number } {

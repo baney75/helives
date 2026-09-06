@@ -1,7 +1,7 @@
 import { useFrame, useThree } from '@react-three/fiber'
-import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
-import { AdditiveBlending, type Group, InstancedMesh, Vector3 } from 'three'
-import { writeOrientedInstances } from '../../lib/instances.ts'
+import { useEffect, useMemo, useRef } from 'react'
+import { AdditiveBlending, type Group, Float32BufferAttribute, Vector3 } from 'three'
+import { createScaleTexture } from '../models/natural.ts'
 import { EDEN, edenPairStory, fallFruitStory, knowledgeFruitWorld, serpentPoints } from '../models/eden.ts'
 import { createTaperedTube } from '../models/geometry.ts'
 import { AppleFruit } from '../models/Trees.tsx'
@@ -29,41 +29,18 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
   const mesh = useRef<Group>(null)
   const head = useRef<Group>(null)
   const tongue = useRef<Group>(null)
-  const scales = useRef<InstancedMesh>(null)
-  const pts = useMemo(() => serpentPoints(2.85, 40).map((p) => new Vector3(...p)), [])
-  const geometry = useMemo(() => createTaperedTube(pts, 0.09, 0.03, 8), [pts])
-  const dorsal = useMemo(() => {
-    const lifted = pts.map((p) => new Vector3(p.x, p.y + 0.05, p.z))
-    return createTaperedTube(lifted, 0.02, 0.006, 6)
-  }, [pts])
-  const scalePos = useMemo(() => {
-    const out = new Float32Array((pts.length - 2) * 3)
-    for (let i = 1; i < pts.length - 1; i += 1) {
-      const p = pts[i]
-      if (!p) continue
-      const i3 = (i - 1) * 3
-      out[i3] = p.x
-      out[i3 + 1] = p.y
-      out[i3 + 2] = p.z
-    }
-    return out
-  }, [pts])
-
-  useEffect(
-    () => () => {
-      geometry.dispose()
-      dorsal.dispose()
-    },
-    [dorsal, geometry],
-  )
-
-  useLayoutEffect(() => {
-    if (!scales.current) return
-    writeOrientedInstances(scales.current, scalePos, scalePos.length / 3, (i) => ({
-      scale: [0.085, 0.035, 0.07],
-      rotation: [0.4, i * 0.55, 0.15],
-    }))
-  }, [scalePos])
+  const scaleMap = useMemo(() => createScaleTexture(), [])
+  const geometry = useMemo(() => {
+    const points = serpentPoints(2.85, 56).map((p) => new Vector3(...p))
+    const fruit = knowledgeFruitWorld()
+    points[points.length - 1] = new Vector3(fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38)
+    const body = createTaperedTube(points, 0.014, 0.045, 20)
+    const count = body.getAttribute('position').count
+    const uv = Array.from({ length: count }, (_, i) => [(i % 20) / 20, Math.floor(i / 20) / (count / 20 - 1) * 10]).flat()
+    body.setAttribute('uv', new Float32BufferAttribute(uv, 2))
+    return body
+  }, [])
+  useEffect(() => () => { geometry.dispose(); scaleMap.dispose() }, [geometry, scaleMap])
 
   const fruit = knowledgeFruitWorld()
 
@@ -76,8 +53,6 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
       mesh.current.position.y = Math.sin(t * 0.9) * 0.012
     }
     if (head.current) {
-      const strike = Math.sin(Math.min(1, beat / 0.34) * Math.PI)
-      head.current.position.set(fruit[0] - 0.24 - strike * 0.08, fruit[1] - 0.08 + Math.sin(t * 0.85) * 0.03, fruit[2] + 0.38)
       if (!reducedMotion) head.current.rotation.z = Math.sin(t * 1.05) * 0.1
     }
     if (tongue.current) {
@@ -90,38 +65,32 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
     <group ref={mesh}>
       <mesh geometry={geometry}>
         <meshPhysicalMaterial
-          color="#202719"
-          roughness={0.38}
+          map={scaleMap}
+          color="#77764e"
+          roughness={0.52}
           metalness={0.08}
           emissive="#3a2e14"
-          emissiveIntensity={0.14 + strength * 0.12}
+          emissiveIntensity={0.04}
           clearcoat={0.42}
           clearcoatRoughness={0.4}
         />
       </mesh>
-      <mesh geometry={dorsal}>
-        <meshStandardMaterial color="#8a6a32" emissive="#3a2b13" emissiveIntensity={0.2} roughness={0.5} />
-      </mesh>
-      <instancedMesh ref={scales} args={[undefined, undefined, scalePos.length / 3]}>
-        <sphereGeometry args={[1, 7, 5]} />
-        <meshStandardMaterial color="#2c2818" roughness={0.36} metalness={0.12} emissive="#e8b86d" emissiveIntensity={0.08} />
-      </instancedMesh>
       <group ref={head} position={[fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38]} rotation={[0.02, -0.45, -0.08]} scale={1.28}>
         <mesh scale={[1.3, 0.62, 0.84]}>
-          <sphereGeometry args={[0.1, 16, 12]} />
+          <sphereGeometry args={[0.1, 32, 20]} />
           <meshPhysicalMaterial color="#2c2816" roughness={0.32} clearcoat={0.45} clearcoatRoughness={0.38} />
         </mesh>
         <mesh position={[0.078, -0.02, 0]} scale={[0.95, 0.38, 0.68]}>
-          <sphereGeometry args={[0.07, 14, 10]} />
+          <sphereGeometry args={[0.07, 24, 16]} />
           <meshPhysicalMaterial color="#16180f" roughness={0.4} />
         </mesh>
         <mesh position={[0.083, 0.024, 0.046]}>
           <sphereGeometry args={[0.016, 10, 8]} />
-          <meshStandardMaterial color="#d8c46f" emissive="#b88932" emissiveIntensity={0.72} />
+          <meshStandardMaterial color="#d8c46f" emissive="#b88932" emissiveIntensity={0.15} />
         </mesh>
         <mesh position={[0.083, 0.024, -0.041]}>
           <sphereGeometry args={[0.016, 10, 8]} />
-          <meshStandardMaterial color="#d8c46f" emissive="#b88932" emissiveIntensity={0.72} />
+          <meshStandardMaterial color="#d8c46f" emissive="#b88932" emissiveIntensity={0.15} />
         </mesh>
         <mesh position={[0.098, 0.024, 0.048]} scale={[0.35, 1.1, 0.3]}>
           <sphereGeometry args={[0.012, 8, 8]} />

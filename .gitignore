@@ -32,3 +32,10 @@ public/audio/.tmp.mp3
 *.sln
 *.sw?
 worker-configuration.d.ts
+
+# Local production sources, paid voice cache, and visual evidence.
+demo/audio-cache/
+demo/audio-staging/
+demo/audio-v2/
+demo/models-v2/
+__pycache__/

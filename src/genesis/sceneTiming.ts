@@ -5,19 +5,19 @@ import type { SceneId } from './scenes.ts'
  * `scripts/generate-audio.mjs` rewrites these values after voice generation.
  */
 export const SCENE_AUDIO_SECONDS: Record<SceneId, number> = {
-  beginning: 12.624,
-  day1: 9.312,
-  day2: 14.016,
-  day3: 28.248,
-  day4: 10.296,
-  day5: 14.184,
-  day6: 21.936,
-  day7: 11.952,
-  garden: 18.6,
-  fall: 102.672,
-  closing: 10.032,
-  doubt: 11.328,
-  measure: 19.152,
+  beginning: 12.720,
+  day1: 8.856,
+  day2: 12.864,
+  day3: 25.800,
+  day4: 10.248,
+  day5: 12.024,
+  day6: 20.448,
+  day7: 11.904,
+  garden: 17.376,
+  fall: 97.656,
+  closing: 9.984,
+  doubt: 11.304,
+  measure: 19.056,
 }
 
 export const SCENE_ORDER: readonly SceneId[] = [

@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef } from 'react'
-import { CatmullRomCurve3, Color, ExtrudeGeometry, type MeshPhysicalMaterial, Shape, Vector3 } from 'three'
+import { BufferGeometry, CatmullRomCurve3, Color, Float32BufferAttribute, type MeshPhysicalMaterial, Vector3 } from 'three'
 import { Figure, type FigurePoseId } from '../models/Figure.tsx'
 import { EDEN, edenPairStory, fallFruitStory, lerp3 } from '../models/eden.ts'
 import { createPlantedIsland } from '../models/gardenTerrain.ts'
@@ -56,31 +56,13 @@ function PlantedGround({ fall }: { fall: number }) {
   useEffect(() => () => island.dispose(), [island])
   const grass = new Color('#35502a').lerp(new Color('#352619'), fall * 0.82)
   const soil = new Color('#2a1c10').lerp(new Color('#1a120c'), fall * 0.5)
-  const bed = new Color('#4a5c32').lerp(new Color('#3a2a16'), fall * 0.8)
+
   return (
     <group>
-      <mesh geometry={island} rotation={[Math.PI / 2, 0, 0]} position={[0, -0.04, 0]}>
+      <mesh receiveShadow geometry={island} rotation={[Math.PI / 2, 0, 0]} position={[0, -0.04, 0]}>
         <meshStandardMaterial attach="material-0" color={grass} roughness={0.96} emissive="#10160d" emissiveIntensity={0.07} />
         <meshStandardMaterial attach="material-1" color={soil} roughness={0.98} />
       </mesh>
-      <mesh position={[-1.7, 0.08, 1.35]} rotation={[-Math.PI / 2, 0, 0.35]}>
-        <planeGeometry args={[1.35, 0.7]} />
-        <meshStandardMaterial color={bed} roughness={0.96} />
-      </mesh>
-      <mesh position={[2.05, 0.08, -1.15]} rotation={[-Math.PI / 2, 0, -0.4]}>
-        <planeGeometry args={[1.2, 0.62]} />
-        <meshStandardMaterial color={bed} roughness={0.96} />
-      </mesh>
-      <mesh position={[-2.2, 0.08, -1.4]} rotation={[-Math.PI / 2, 0, 0.15]}>
-        <planeGeometry args={[0.95, 0.55]} />
-        <meshStandardMaterial color={bed} roughness={0.96} />
-      </mesh>
-      {EDEN.river.points.slice(0, -1).map((point, index) => (
-        <mesh key={index} position={[point[0], 0.05, point[2]]} rotation={[-Math.PI / 2, 0, index * 0.2]}>
-          <planeGeometry args={[0.72, 0.28]} />
-          <meshStandardMaterial color="#3a4a28" roughness={0.97} />
-        </mesh>
-      ))}
     </group>
   )
 }
@@ -88,15 +70,21 @@ function PlantedGround({ fall }: { fall: number }) {
 function River({ reducedMotion }: { reducedMotion: boolean }) {
   const material = useRef<MeshPhysicalMaterial>(null)
   const geometry = useMemo(() => {
-    const shape = new Shape()
-    const half = EDEN.river.width / 2
-    shape.moveTo(-half, 0)
-    shape.lineTo(half, 0)
-    shape.lineTo(half, 0.016)
-    shape.lineTo(-half, 0.016)
-    shape.closePath()
     const path = new CatmullRomCurve3(EDEN.river.points.map((p) => new Vector3(...p)))
-    return new ExtrudeGeometry(shape, { steps: 48, bevelEnabled: false, extrudePath: path })
+    const positions: number[] = []
+    const indices: number[] = []
+    for (let i = 0; i <= 96; i += 1) {
+      const t = i / 96, p = path.getPoint(t), tangent = path.getTangent(t)
+      const half = EDEN.river.width * (0.5 + Math.sin(t * 18) * 0.055)
+      const length = Math.hypot(tangent.x, tangent.z)
+      for (const side of [-1, 1]) positions.push(p.x - tangent.z / length * half * side, p.y + 0.012, p.z + tangent.x / length * half * side)
+      if (i < 96) { const a = i * 2; indices.push(a, a + 1, a + 2, a + 1, a + 3, a + 2) }
+    }
+    const ribbon = new BufferGeometry()
+    ribbon.setAttribute('position', new Float32BufferAttribute(positions, 3))
+    ribbon.setIndex(indices)
+    ribbon.computeVertexNormals()
+    return ribbon
   }, [])
 
   useEffect(() => () => geometry.dispose(), [geometry])
@@ -110,9 +98,9 @@ function River({ reducedMotion }: { reducedMotion: boolean }) {
     <mesh geometry={geometry}>
       <meshPhysicalMaterial
         ref={material}
-        color="#3a6a88"
+        color="#668579"
         roughness={0.18}
-        metalness={0.02}
+        metalness={0.28}
         clearcoat={0.72}
         clearcoatRoughness={0.2}
         emissive="#1a3044"

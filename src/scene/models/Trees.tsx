@@ -1,6 +1,8 @@
 import { useFrame } from '@react-three/fiber'
 import { useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from 'react'
-import { CatmullRomCurve3, Color, DoubleSide, type Group, InstancedMesh, TubeGeometry, Vector2, Vector3 } from 'three'
+import { BufferGeometry, Color, DoubleSide, type Group, InstancedMesh, MeshStandardMaterial, Vector2 } from 'three'
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js'
+import { createBarkTexture, organicBranch } from './natural.ts'
 import type { Quality } from '../../lib/budget.ts'
 import {
   writeInstanceMatrices,
@@ -9,7 +11,7 @@ import {
 } from '../../lib/instances.ts'
 import { mulberry32 } from '../../lib/rng.ts'
 import { EDEN, canopyLeafCount, groveCount, grovePositions, herbCount, herbPositions } from './eden.ts'
-import { createLeafGeometry } from './geometry.ts'
+import { createLeafGeometry, createPlantGeometry } from './geometry.ts'
 
 const leafTint = new Color()
 
@@ -22,6 +24,9 @@ export function TreeOfLife({
   quality?: Quality
   reducedMotion?: boolean
 }) {
+  const bark = useBark(EDEN.life.trunkColor)
+  const trunk = useMemo(() => organicBranch([[0, 0, 0], [-0.04, 0.5, 0.015], [0.02, 1.1, -0.025], [0, 1.9, 0]], 0.12), [])
+  useEffect(() => () => trunk.dispose(), [trunk])
   const leaves = useMemo(() => leafClusters(lifeTips(), canopyLeafCount(quality, 'life'), 0.42, 41), [quality])
   const fruit = useMemo(() => hangingFruit(8, 0.38, 17, 2.15), [])
   const branches = useMemo(() => lifeBranches(), [])
@@ -29,21 +34,14 @@ export function TreeOfLife({
 
   return (
     <group position={EDEN.life.position}>
-      <TreeRoots color={EDEN.life.trunkColor} radius={0.42} />
-      <mesh position={[0, 0.95, 0]}>
-        <cylinderGeometry args={[0.045, 0.09, 1.9, 16]} />
-        <meshStandardMaterial color={EDEN.life.trunkColor} roughness={0.9} emissive="#241d0b" emissiveIntensity={0.1} />
-      </mesh>
-      {branches.map((geometry, index) => (
-        <mesh key={index} geometry={geometry}>
-          <meshStandardMaterial color={EDEN.life.trunkColor} roughness={0.86} />
-        </mesh>
-      ))}
+      <TreeRoots material={bark} radius={0.55} />
+      <mesh castShadow receiveShadow geometry={trunk} material={bark} />
+      {branches.map((geometry, index) => <mesh castShadow key={index} geometry={geometry} material={bark} />)}
       <LeafCanopy
         field={leaves}
         color={EDEN.life.canopyColor}
         emissive="#b88a36"
-        emit={0.34}
+        emit={0.18}
         fall={fall * 0.2}
         quality={quality}
         reducedMotion={reducedMotion}
@@ -65,6 +63,9 @@ export function TreeOfKnowledge({
   fruitTaken?: boolean
   reducedMotion?: boolean
 }) {
+  const bark = useBark('#8b7352')
+  const trunk = useMemo(() => organicBranch([[0, 0, 0], [0.06, 0.4, 0.04], [-0.015, 0.95, 0.025], [0.04, 1.55, 0]], 0.17), [])
+  useEffect(() => () => trunk.dispose(), [trunk])
   const count = canopyLeafCount(quality, 'knowledge')
   const leaves = useMemo(() => leafClusters(knowledgeTips(), count, 0.55, 63), [count])
   const inner = useMemo(() => leafClusters(knowledgeTips(), Math.floor(count * 0.55), 0.32, 71), [count])
@@ -74,19 +75,12 @@ export function TreeOfKnowledge({
 
   return (
     <group position={EDEN.knowledge.position}>
-      <TreeRoots color={EDEN.knowledge.trunkColor} radius={0.48} />
-      <mesh position={[0.04, 0.78, 0]} rotation={[0.06, 0.15, 0.05]}>
-        <cylinderGeometry args={[0.07, 0.13, 1.55, 16]} />
-        <meshStandardMaterial color={EDEN.knowledge.trunkColor} roughness={0.94} />
-      </mesh>
-      {branches.map((geometry, index) => (
-        <mesh key={index} geometry={geometry}>
-          <meshStandardMaterial color={EDEN.knowledge.trunkColor} roughness={0.92} />
-        </mesh>
-      ))}
+      <TreeRoots material={bark} radius={0.62} />
+      <mesh castShadow receiveShadow geometry={trunk} material={bark} />
+      {branches.map((geometry, index) => <mesh castShadow key={index} geometry={geometry} material={bark} />)}
       <LeafCanopy
         field={leaves}
-        color={EDEN.knowledge.canopyColor}
+        color="#718049"
         emissive="#2a1810"
         emit={0.08}
         fall={fall}
@@ -95,7 +89,7 @@ export function TreeOfKnowledge({
       />
       <LeafCanopy
         field={inner}
-        color="#3a2818"
+        color="#42552d"
         emissive="#1a1008"
         emit={0.04}
         fall={fall}
@@ -149,25 +143,24 @@ export function AppleFruit({ scale = 1, glow = 0.36 }: { scale?: number; glow?: 
   )
 }
 
-function TreeRoots({ color, radius }: { color: string; radius: number }) {
-  return (
-    <group>
-      {Array.from({ length: 7 }, (_, index) => {
-        const angle = (index / 7) * Math.PI * 2 + 0.2
-        return (
-          <mesh
-            key={index}
-            position={[Math.cos(angle) * radius * 0.46, 0.055, Math.sin(angle) * radius * 0.46]}
-            rotation={[0, -angle, Math.PI / 2 - 0.12]}
-            scale={[1, 0.72 + (index % 3) * 0.08, 0.8]}
-          >
-            <coneGeometry args={[0.065, radius, 7]} />
-            <meshStandardMaterial color={color} roughness={0.94} />
-          </mesh>
-        )
-      })}
-    </group>
-  )
+function useBark(color: string): MeshStandardMaterial {
+  const material = useMemo(() => new MeshStandardMaterial({ color, map: createBarkTexture(), roughness: 0.91 }), [color])
+  useEffect(() => () => { material.map?.dispose(); material.dispose() }, [material])
+  return material
+}
+
+function TreeRoots({ material, radius }: { material: MeshStandardMaterial; radius: number }) {
+  const geometry = useMemo(() => {
+    const parts = Array.from({ length: 7 }, (_, i) => {
+      const a = i / 7 * Math.PI * 2 + 0.2
+      return organicBranch([[0, 0.18, 0], [Math.cos(a) * radius * 0.48, 0.035, Math.sin(a) * radius * 0.48], [Math.cos(a) * radius, 0, Math.sin(a) * radius]], 0.055)
+    })
+    const merged = mergeGeometries(parts)
+    parts.forEach((part) => part.dispose())
+    return merged
+  }, [radius])
+  useEffect(() => () => geometry.dispose(), [geometry])
+  return <mesh geometry={geometry} material={material} />
 }
 
 export function Grove({
@@ -216,7 +209,7 @@ export function Herbs({ quality }: { quality: Quality }) {
   const positions = useMemo(() => herbPositions(count, 88), [count])
   const used = positions.length / 3
   const mesh = useRef<InstancedMesh>(null)
-  const geometry = useMemo(() => createLeafGeometry(), [])
+  const geometry = useMemo(() => createPlantGeometry(), [])
   const kinds = useMemo(() => {
     const rng = mulberry32(88)
     return Float32Array.from({ length: used }, () => rng())
@@ -225,7 +218,7 @@ export function Herbs({ quality }: { quality: Quality }) {
   useLayoutEffect(() => {
     if (!mesh.current) return
     writeOrientedInstances(mesh.current, positions, used, (i) => ({
-      scale: [0.85 + (kinds[i] ?? 0) * 1.1, 1.35 + (kinds[i] ?? 0) * 1.6, 1],
+      scale: [0.85 + (kinds[i] ?? 0) * 1.1, 0.85 + (kinds[i] ?? 0) * 0.8, 1],
       rotation: [0.2, (kinds[i] ?? 0) * Math.PI * 2, 0.1],
     }))
   }, [kinds, positions, used])
@@ -275,11 +268,11 @@ function LeafCanopy({
 
   return (
     <BreathingGroup reducedMotion={reducedMotion} quality={quality} amount={0.014}>
-      <instancedMesh ref={mesh} args={[geometry, undefined, field.count]}>
+      <instancedMesh castShadow receiveShadow ref={mesh} args={[geometry, undefined, field.count]}>
         <meshStandardMaterial
           vertexColors
-          roughness={0.62}
-          metalness={0.04}
+          roughness={0.82}
+          metalness={0}
           emissive={emissive}
           emissiveIntensity={emit}
           side={DoubleSide}
@@ -372,13 +365,13 @@ function leafClusters(tips: Array<[number, number, number]>, count: number, radi
   for (let i = 0; i < count; i += 1) {
     const tip = tips[i % tips.length] ?? [0, 2, 0]
     const theta = rng() * Math.PI * 2
-    const phi = rng() * 0.95
+    const phi = Math.acos(2 * rng() - 1)
     const r = radius * (0.2 + rng() * 0.85)
     const i3 = i * 3
     positions[i3] = tip[0] + Math.sin(phi) * Math.cos(theta) * r
-    positions[i3 + 1] = tip[1] + Math.cos(phi) * r * 0.45
+    positions[i3 + 1] = tip[1] + Math.cos(phi) * r * 0.65
     positions[i3 + 2] = tip[2] + Math.sin(phi) * Math.sin(theta) * r
-    const s = 0.85 + rng() * 0.5
+    const s = 0.7 + rng() * 0.55
     poses.push({
       scale: [s, s * 1.15, s],
       rotation: [phi + rng() * 0.3, theta, rng() * Math.PI],
@@ -428,18 +421,22 @@ function hangingFruit(count: number, radius: number, seed: number, y: number): F
   return pos
 }
 
-function lifeBranches(): TubeGeometry[] {
-  return lifeTips().map((tip) => tube([[0, 1.25, 0], [tip[0] * 0.35, 1.85, tip[2] * 0.35], tip], 0.022))
+function branching(tips: Array<[number, number, number]>, base: number, radius: number): BufferGeometry[] {
+  const parts: BufferGeometry[] = []
+  for (const [i, tip] of tips.entries()) {
+    parts.push(organicBranch([[0, base, 0], [tip[0] * 0.45, (base + tip[1]) / 2, tip[2] * 0.4], tip], radius))
+    for (let j = 0; j < 4; j += 1) {
+      const a = i * 2.4 + j * Math.PI / 2
+      const endpoint: [number, number, number] = [tip[0] + Math.cos(a) * 0.28, tip[1] + 0.12 + (j % 2) * 0.12, tip[2] + Math.sin(a) * 0.26]
+      parts.push(organicBranch([[tip[0] * 0.72, tip[1] - 0.24, tip[2] * 0.72], tip, endpoint], radius * 0.30))
+    }
+  }
+  const combined = mergeGeometries(parts)
+  parts.forEach((part) => part.dispose())
+  return [combined]
 }
-
-function knowledgeBranches(): TubeGeometry[] {
-  return knowledgeTips().map((tip) => tube([[0.04, 1.12, 0], [tip[0] * 0.4, 1.48, tip[2] * 0.4], tip], 0.03))
-}
-
-function tube(points: Array<readonly [number, number, number]>, radius: number): TubeGeometry {
-  const curve = new CatmullRomCurve3(points.map((p) => new Vector3(...p)))
-  return new TubeGeometry(curve, 12, radius, 6, false)
-}
+function lifeBranches(): BufferGeometry[] { return branching(lifeTips(), 1.1, 0.052) }
+function knowledgeBranches(): BufferGeometry[] { return branching(knowledgeTips(), 0.9, 0.067) }
 
 function lift(positions: Float32Array, y: number): Float32Array {
   const next = positions.slice()

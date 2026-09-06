@@ -91,6 +91,7 @@ export function LivingCreatures({ clock }: { clock: SceneClock }) {
           <HeroFish
             key={x}
             index={index}
+            reducedMotion={clock.reducedMotion}
             position={[x, index * 0.18 - 0.12, 1.25 + (index % 2) * 0.32]}
             rotation={[0, index % 2 ? 0.25 : -0.2, (index - 2) * 0.05]}
             scale={0.48 + index * 0.035}
@@ -102,6 +103,7 @@ export function LivingCreatures({ clock }: { clock: SceneClock }) {
           <HeroBird
             key={x}
             index={index}
+            reducedMotion={clock.reducedMotion}
             position={[x, 0.58 + (index % 3) * 0.34, 0.35 + (index % 2) * 0.34]}
             rotation={[index % 2 ? 0.48 : -0.42, index % 2 ? 0.22 : -0.2, (index - 2) * 0.04]}
             scale={0.48 + index * 0.04}
@@ -114,11 +116,13 @@ export function LivingCreatures({ clock }: { clock: SceneClock }) {
 
 function HeroFish({
   index,
+  reducedMotion,
   position,
   rotation,
   scale,
 }: {
   index: number
+  reducedMotion: boolean
   position: [number, number, number]
   rotation: [number, number, number]
   scale: number
@@ -128,7 +132,7 @@ function HeroFish({
   const model = useMemo(() => scene.clone(true), [scene])
   const tail = useMemo(() => model.getObjectByName('Tail'), [model])
   useFrame(({ clock }) => {
-    const t = clock.elapsedTime
+    const t = reducedMotion ? 0 : clock.elapsedTime
     const phase = index * 1.37
     if (root.current) {
       root.current.position.x = position[0] + Math.sin(t * 0.34 + phase) * 0.24
@@ -147,11 +151,13 @@ function HeroFish({
 
 function HeroBird({
   index,
+  reducedMotion,
   position,
   rotation,
   scale,
 }: {
   index: number
+  reducedMotion: boolean
   position: [number, number, number]
   rotation: [number, number, number]
   scale: number
@@ -162,7 +168,7 @@ function HeroBird({
   const leftWing = useMemo(() => model.getObjectByName('LeftWing'), [model])
   const rightWing = useMemo(() => model.getObjectByName('RightWing'), [model])
   useFrame(({ clock }) => {
-    const t = clock.elapsedTime
+    const t = reducedMotion ? 0 : clock.elapsedTime
     const phase = index * 1.61
     const flap = Math.sin(t * 3.15 + phase) * 0.52
     if (leftWing) leftWing.rotation.x = -0.18 + flap
