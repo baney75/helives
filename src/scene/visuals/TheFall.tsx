@@ -1,4 +1,5 @@
-import { useFrame, useThree } from '@react-three/fiber'
+import { useThree } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useMemo, useRef } from 'react'
 import { AdditiveBlending, type Group, Float32BufferAttribute, Vector3 } from 'three'
 import { createScaleTexture } from '../models/natural.ts'
@@ -33,7 +34,7 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
   const geometry = useMemo(() => {
     const points = serpentPoints(2.85, 56).map((p) => new Vector3(...p))
     const fruit = knowledgeFruitWorld()
-    points[points.length - 1] = new Vector3(fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38)
+    points[points.length - 1] = new Vector3(fruit[0] + 0.45, fruit[1] + 0.48, fruit[2] - 0.12)
     const body = createTaperedTube(points, 0.014, 0.045, 20)
     const count = body.getAttribute('position').count
     const uv = Array.from({ length: count }, (_, i) => [(i % 20) / 20, Math.floor(i / 20) / (count / 20 - 1) * 10]).flat()
@@ -44,10 +45,10 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
 
   const fruit = knowledgeFruitWorld()
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (!mesh.current) return
     mesh.current.visible = strength > 0.05
-    const t = reducedMotion ? 0 : r3f.elapsedTime
+    const t = reducedMotion ? 0 : seconds
     if (!reducedMotion) {
       mesh.current.rotation.y = Math.sin(t * 0.38) * 0.05
       mesh.current.position.y = Math.sin(t * 0.9) * 0.012
@@ -75,10 +76,10 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
           clearcoatRoughness={0.4}
         />
       </mesh>
-      <group ref={head} position={[fruit[0] - 0.24, fruit[1] - 0.08, fruit[2] + 0.38]} rotation={[0.02, -0.45, -0.08]} scale={1.28}>
+      <group ref={head} position={[fruit[0] + 0.45, fruit[1] + 0.48, fruit[2] - 0.12]} rotation={[0.02, -0.45, -0.08]} scale={0.72}>
         <mesh scale={[1.3, 0.62, 0.84]}>
           <sphereGeometry args={[0.1, 32, 20]} />
-          <meshPhysicalMaterial color="#2c2816" roughness={0.32} clearcoat={0.45} clearcoatRoughness={0.38} />
+          <meshPhysicalMaterial color="#2c2816" roughness={0.62} clearcoat={0.12} clearcoatRoughness={0.38} />
         </mesh>
         <mesh position={[0.078, -0.02, 0]} scale={[0.95, 0.38, 0.68]}>
           <sphereGeometry args={[0.07, 24, 16]} />
@@ -118,7 +119,6 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
 }
 
 function TakenFruit({
-  strength,
   beat,
   reducedMotion,
 }: {
@@ -129,7 +129,7 @@ function TakenFruit({
   const fruit = knowledgeFruitWorld()
   const root = useRef<Group>(null)
 
-  useFrame(({ clock }) => {
+  useStoryFrame((seconds) => {
     const group = root.current
     if (!group) return
     const story = fallFruitStory(beat)
@@ -141,12 +141,11 @@ function TakenFruit({
       from[2] + (to[2] - from[2]) * phase,
     )
     group.scale.setScalar(story.eatenScale)
-    if (!reducedMotion) group.rotation.y = clock.elapsedTime * 0.7
+    if (!reducedMotion) group.rotation.y = seconds * 0.7
   })
   return (
     <group ref={root} position={fruit}>
-      <AppleFruit scale={0.68} glow={0.28 + strength * 0.34} />
-      <pointLight intensity={0.52 * strength} color="#c45a3a" distance={2.4} />
+      <AppleFruit scale={0.75} glow={0.015} />
     </group>
   )
 }
@@ -158,9 +157,9 @@ function EastFlame({ strength, beat, reducedMotion }: { strength: number; beat: 
   const fire = useRef<Group>(null)
   const reveal = Math.min(1, Math.max(0, (beat - 0.68) / 0.12))
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (!guard.current) return
-    const t = reducedMotion ? 0 : r3f.elapsedTime
+    const t = reducedMotion ? 0 : seconds
     guard.current.rotation.y = -0.22 + Math.sin(t * 0.72) * 0.18
     if (fire.current) {
       fire.current.scale.y = 0.9 + Math.sin(t * 4.1) * 0.1

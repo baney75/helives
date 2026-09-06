@@ -5,6 +5,7 @@ export type VoiceRole = 'narrator' | 'god' | 'serpent' | 'woman' | 'man'
 
 export type VoiceCue = {
   role: VoiceRole
+  action?: 'look' | 'take' | 'give' | 'depart'
   text: string
 }
 
@@ -17,7 +18,9 @@ export const FALL_VOICE_CUES: readonly VoiceCue[] = [
   { role: 'serpent', text: KJV.gen3_1_serpent },
   { role: 'woman', text: KJV.gen3_2_3 },
   { role: 'serpent', text: `${KJV.gen3_4} ${KJV.gen3_5}` },
-  { role: 'narrator', text: KJV.gen3_6 },
+  { role: 'narrator', action: 'look', text: KJV.gen3_6.split('she took')[0]!.trim() },
+  { role: 'narrator', action: 'take', text: 'she took' + KJV.gen3_6.split('she took')[1]!.split('and gave')[0]!.trimEnd() },
+  { role: 'narrator', action: 'give', text: 'and gave' + KJV.gen3_6.split('and gave')[1]! },
   { role: 'narrator', text: KJV.gen3_8_9_narrator },
   { role: 'god', text: KJV.gen3_9_god },
   { role: 'man', text: KJV.gen3_10 },
@@ -26,7 +29,7 @@ export const FALL_VOICE_CUES: readonly VoiceCue[] = [
   { role: 'narrator', text: KJV.gen3_13_intro },
   { role: 'god', text: KJV.gen3_13_god },
   { role: 'woman', text: KJV.gen3_13_woman },
-  { role: 'narrator', text: KJV.gen3_23 },
+  { role: 'narrator', action: 'depart', text: KJV.gen3_23 },
 ]
 
 export const NARRATION: Record<SceneId | 'trailer', string> = {

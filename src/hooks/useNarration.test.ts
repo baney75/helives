@@ -2,16 +2,21 @@
 import { act, createElement, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { afterEach, expect, it, vi } from 'vitest'
+import { INTERACTIVE_SECONDS, sceneBounds } from '../genesis/sceneTiming.ts'
+import type { NarrationControl } from './useNarration.ts'
 import { useNarration } from './useNarration.ts'
 
-const clips: { paused: boolean; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }[] = []
+const clips: { currentTime: number; duration: number; readyState: number; playbackRate: number; dispatchEvent: (event: Event) => boolean; paused: boolean; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }[] = []
 function AudioMock() {
+  const events = new EventTarget()
   const clip = {
+    currentTime: 0, duration: 12, readyState: 1, playbackRate: 1,
+    dispatchEvent: events.dispatchEvent.bind(events),
     paused: true,
     play: vi.fn(async () => { clip.paused = false }),
     pause: vi.fn(() => { clip.paused = true }),
     setAttribute: vi.fn(),
-    addEventListener: vi.fn(),
+    addEventListener: events.addEventListener.bind(events),
   }
   clips.push(clip)
   return clip
@@ -52,5 +57,42 @@ it('does not show an autoplay gate when pausing interrupts an outstanding play r
   await act(async () => root.render(createElement(Player, { playing: false })))
   await act(async () => interrupt(new DOMException('Interrupted by pause', 'AbortError')))
   expect(host.textContent).toBe('ready')
+  await act(async () => root.unmount())
+})
+
+it('seeks within the same scene, follows media time during stalls, and resumes at the muted position', async () => {
+  vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true)
+  vi.stubGlobal('Audio', AudioMock)
+  let control: NarrationControl | undefined
+  function Probe({ progress, seekVersion, muted = false, speed = 1 }: { progress: number; seekVersion: number; muted?: boolean; speed?: number }) {
+    control = useNarration({ sceneId: 'fall', playing: true, cinematic: false, progress, seekVersion, muted, speed })
+    return null
+  }
+  const root = createRoot(document.createElement('div'))
+  const start = sceneBounds('fall').start
+  const render = async (seconds: number, version: number, muted = false, speed = 1) => {
+    await act(async () => root.render(createElement(Probe, { progress: start + seconds / INTERACTIVE_SECONDS, seekVersion: version, muted, speed })))
+  }
+  await render(4, 0)
+  const audio = clips.at(-1)!
+  expect(audio.currentTime).toBeCloseTo(4)
+  audio.currentTime = 6
+  expect(control!.readProgress()).toBeCloseTo(start + 6 / INTERACTIVE_SECONDS)
+  // Wall time and render frequency cannot advance a buffering clip.
+  expect(control!.readProgress()).toBe(control!.readProgress())
+  await render(2, 1)
+  expect(clips.at(-1)).toBe(audio)
+  expect(audio.currentTime).toBeCloseTo(2)
+  await render(2, 1, false, 2)
+  expect(audio.playbackRate).toBe(2)
+  await render(2, 1, true)
+  expect(control!.readProgress()).toBeNull()
+  await render(9, 1, false)
+  expect(audio.currentTime).toBeCloseTo(9)
+  await act(async () => audio.dispatchEvent(new Event('ended')))
+  expect(control!.readProgress()).toBeGreaterThanOrEqual(start + audio.duration / INTERACTIVE_SECONDS)
+  await render(0, 2)
+  expect(audio.currentTime).toBe(0)
+  expect(control!.readProgress()).toBeCloseTo(start)
   await act(async () => root.unmount())
 })

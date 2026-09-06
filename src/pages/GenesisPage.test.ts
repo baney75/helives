@@ -54,7 +54,7 @@ describe('Genesis first paint', () => {
     )
     expect(html).not.toContain('Calibrating')
     expect(useNarration).toHaveBeenCalledWith(
-      expect.objectContaining({ sceneId: 'beginning', playing: true }),
+      expect.objectContaining({ sceneId: 'beginning', playing: false }),
     )
   })
 })

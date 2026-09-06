@@ -1,3 +1,4 @@
+import { cueAt } from '../genesis/choreography.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 
 type CinematicOverlayProps = {
@@ -31,7 +32,7 @@ export function CinematicOverlay({ clock }: CinematicOverlayProps) {
       <section className={dim ? 'cine-epoch is-dim' : 'cine-epoch'}>
         <p className="cine-kicker">{clock.scene.kicker}</p>
         <h2>{clock.scene.name}</h2>
-        <p>{clock.scene.headline}</p>
+        <p>{cueAt(clock.scene.id, clock.progress)?.text ?? clock.scene.headline}</p>
       </section>
     </div>
   )

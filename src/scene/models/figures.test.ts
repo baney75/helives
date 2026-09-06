@@ -17,7 +17,7 @@ describe('authored figure GLBs', () => {
     const fall = sceneBounds('fall')
     const atFall = (local: number) => fall.start + (fall.end - fall.start) * local
     expect(edenPairStory(atFall(0.5))).toMatchObject({ leave: 0, fade: 1 })
-    expect(edenPairStory(atFall(0.9)).leave).toBeGreaterThan(0.8)
+    expect(edenPairStory(atFall(0.97)).leave).toBeGreaterThan(0.8)
     expect(edenPairStory(atFall(0.9)).fade).toBe(1)
     const closing = sceneBounds('closing')
     expect(edenPairStory(closing.end).fade).toBeCloseTo(0)
@@ -74,7 +74,7 @@ describe('authored figure GLBs', () => {
     expect(walkA.LLowerLeg?.x ?? 0).not.toBeCloseTo(walkB.LLowerLeg?.x ?? 0, 2)
     expect((walkA.LLowerLeg?.x ?? 0) * (walkA.RLowerLeg?.x ?? 0)).toBeLessThan(0)
     const src = readFileSync(resolve('src/scene/models/Figure.tsx'), 'utf8')
-    expect(src).toMatch(/useFrame/)
+    expect(src).toMatch(/useStoryFrame/)
     expect(src).not.toMatch(/if \(fade < 0\.04\) return null/)
     expect(src).toMatch(/heldFruitJoint/)
     expect(src).toMatch(/getWorldPosition/)

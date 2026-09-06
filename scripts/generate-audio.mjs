@@ -23,7 +23,7 @@ const VOICES = {
 const VOICE_PROFILES = {
   narrator: { oneMin: 'echo', speed: 0.96, eleven: VOICES.george },
   god: { oneMin: 'onyx', speed: 0.94, eleven: VOICES.george },
-  serpent: { oneMin: 'fable', speed: 0.94, eleven: VOICES.brian },
+  serpent: { oneMin: 'echo', speed: 0.94, eleven: VOICES.brian },
   woman: { oneMin: 'nova', speed: 0.94, eleven: VOICES.george },
   man: { oneMin: 'echo', speed: 0.9, eleven: VOICES.adam },
 }
@@ -143,18 +143,24 @@ async function compositeCues(env, id, cues, dest) {
   const cueDir = path.join(root, 'demo', 'audio-cache', id)
   await mkdir(cueDir, { recursive: true })
   const parts = []
+  const timings = []
+  let elapsed = 0
   for (const [index, cue] of cues.entries()) {
     const prefix = String(index + 1).padStart(2, '0')
     const raw = path.join(cueDir, `${prefix}-${cue.role}-raw.mp3`)
-    const part = path.join(cueDir, `${prefix}-${cue.role}.mp3`)
+    const part = path.join(cueDir, `${prefix}-${cue.role}.wav`)
     await cachedVoice(env, cue.text, cue.role, raw)
     await soften(raw, part, cue.role)
     parts.push(part)
+    const duration = Number(await runCapture('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', part]))
+    timings.push({ ...cue, start: elapsed, end: elapsed + duration })
+    elapsed += duration
     console.log(`wrote ${id} cue ${prefix} (${cue.role})`)
   }
   const list = path.join(cueDir, 'concat.txt')
   await writeFile(list, parts.map((part) => `file '${part.replaceAll("'", "'\\''")}'`).join('\n'))
   await run('ffmpeg', ['-y', '-f', 'concat', '-safe', '0', '-i', list, '-c:a', 'libmp3lame', '-b:a', '192k', dest])
+  await writeFile(path.join(cueDir, 'timing.json'), JSON.stringify(timings))
   // Retain paid source audio so interrupted runs can resume without another charge.
 }
 
@@ -186,7 +192,17 @@ async function refreshDurations() {
     source = source.replace(new RegExp(`(\\s${id}: )\\d+(?:\\.\\d+)?(,)`), `$1${duration.toFixed(3)}$2`)
   }
   await writeFile(timingPath, source)
-  console.log('refreshed scene audio durations')
+  const manifest = {}
+  for (const id of Object.keys(NARRATION).filter((id) => id !== 'trailer')) {
+    if (SCENE_VOICE_CUES[id]) {
+      try { manifest[id] = JSON.parse(await readFile(path.join(root, 'demo', 'audio-cache', id, 'timing.json'), 'utf8')) } catch { continue }
+    } else {
+      const seconds = Number(await runCapture('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', path.join(outDir, `${id}.mp3`)]))
+      manifest[id] = [{ role: 'narrator', text: NARRATION[id], start: 0, end: seconds }]
+    }
+  }
+  await writeFile(path.join(root, 'src', 'genesis', 'audioCues.ts'), '// Generated from the exact mastered cue files. Do not estimate these offsets.\nexport const AUDIO_CUES = ' + JSON.stringify(manifest, null, 2) + ' as const\n')
+  console.log('refreshed scene audio durations and cue offsets')
 }
 
 function run(cmd, args) {
@@ -224,7 +240,7 @@ async function soften(input, output) {
   const measured = JSON.parse(match[0])
   const normalize = `loudnorm=I=-16:LRA=9:TP=-1.5:measured_I=${measured.input_i}:measured_LRA=${measured.input_lra}:measured_TP=${measured.input_tp}:measured_thresh=${measured.input_thresh}:offset=${measured.target_offset}:linear=true`
   await run('ffmpeg', ['-y', '-i', input, '-af', `${clean},${normalize}`,
-    '-ar', '48000', '-c:a', 'libmp3lame', '-b:a', '192k', output])
+    '-ar', '48000', ...(output.endsWith('.wav') ? ['-c:a', 'pcm_s16le'] : ['-c:a', 'libmp3lame', '-b:a', '192k']), output])
   return true
 }
 

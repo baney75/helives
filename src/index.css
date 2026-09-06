@@ -1110,48 +1110,27 @@ body:has(.lamp-home)::-webkit-scrollbar {
 
 .word-sign-icon {
   display: block;
-  animation: word-sign-in 0.9s ease both;
   overflow: visible;
 }
 
-.word-sign-icon line,
-.word-sign-icon path,
-.word-sign-icon ellipse {
+.word-sign-icon path {
   stroke: currentColor;
-  stroke-width: 1.35;
+  stroke-width: 1.4;
   stroke-linecap: round;
   stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
 }
 
-.word-sign-icon .sign-spark {
-  fill: var(--dawn);
-  stroke: none;
+.word-sign-icon .sign-fine {
+  stroke-width: 0.8;
+  opacity: 0.65;
 }
 
-.word-sign-icon.is-live .sign-dawn {
-  transform-origin: 12px 72px;
-  animation: sign-dawn 1.2s ease-out both;
+.word-sign-icon .sign-body {
+  fill: color-mix(in srgb, var(--fire) 7%, transparent);
 }
 
-.word-sign-icon.is-live .sign-water {
-  transform-origin: 72px 72px;
-  animation: sign-water 9s ease-in-out infinite;
-}
-
-.word-sign-icon.is-live .sign-flame {
-  transform-origin: 72px 48px;
-  animation: sign-flame 3.6s ease-in-out infinite;
-}
-
-.word-sign-icon.is-live .sign-vine {
-  stroke-dasharray: 180;
-  stroke-dashoffset: 180;
-  animation: sign-vine 1.4s ease-out both;
-}
-
-.word-lamp.is-enter .word-sign[data-motif='life'] .brand-mark rect:last-of-type {
-  animation: sign-spark 4s ease-in-out infinite;
+.word-sign-icon .sign-flame {
+  fill: color-mix(in srgb, var(--fire) 20%, transparent);
 }
 
 @keyframes word-enter {
@@ -1757,3 +1736,5 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
   .site.lamp-home .hero h1 { font-size: clamp(64px, 10vh, 112px); }
   .site.lamp-home .hero-verse { font-size: clamp(24px, 3.5vh, 34px); }
 }
+
+.scene-loading { position: fixed; left: 50%; top: 52%; transform: translate(-50%, -50%); color: #c7bdab; font-size: 0.9rem; letter-spacing: 0.04em; pointer-events: none; }

@@ -1,8 +1,8 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useMemo, useRef } from 'react'
 import { BufferGeometry, CatmullRomCurve3, Color, Float32BufferAttribute, type MeshPhysicalMaterial, Vector3 } from 'three'
 import { Figure, type FigurePoseId } from '../models/Figure.tsx'
-import { EDEN, edenPairStory, fallFruitStory, lerp3 } from '../models/eden.ts'
+import { EDEN, edenPairStory, fallFruitStory, knowledgeFruitWorld, lerp3 } from '../models/eden.ts'
 import { createPlantedIsland } from '../models/gardenTerrain.ts'
 import { Grove, Herbs, TreeOfKnowledge, TreeOfLife } from '../models/Trees.tsx'
 import type { SceneClock } from '../types.ts'
@@ -15,9 +15,9 @@ export function Garden({ clock }: { clock: SceneClock }) {
   const { beat, leave, fade } = edenPairStory(clock.progress)
   const pairFade = fade
   const fruit = fallFruitStory(beat)
-  const womanPose: FigurePoseId = leave > 0.2 ? 'depart' : fruit.holder === 'woman' ? 'eat' : beat > 0.06 ? 'reach' : 'stand'
-  const manPose: FigurePoseId = leave > 0.2 ? 'depart' : fruit.holder === 'man' ? 'eat' : beat > 0.18 ? 'offer' : 'stand'
-  const womanHome = beat > 0.06 ? EDEN.woman.reach : EDEN.woman.garden
+  const womanPose: FigurePoseId = leave > 0.2 ? 'depart' : fruit.holder === 'woman' ? 'eat' : beat > 0.06 && beat < 0.3 ? 'reach' : 'stand'
+  const manPose: FigurePoseId = leave > 0.2 ? 'depart' : fruit.holder === 'man' ? 'eat' : beat > 0.3 && beat < 0.52 ? 'offer' : 'stand'
+  const womanHome = lerp3(EDEN.woman.garden, EDEN.woman.reach, Math.min(1, Math.max(0, (beat - 0.06) / 0.06)))
 
   if (strength <= 0) return null
 
@@ -40,6 +40,7 @@ export function Garden({ clock }: { clock: SceneClock }) {
       />
       <Figure
         role="woman"
+        reachTarget={knowledgeFruitWorld()}
         pose={womanPose}
         position={creationPair > 0.08 ? [0.42, 0, 1.82] : lerp3(womanHome, EDEN.woman.depart, leave)}
         rotationY={Math.PI - 0.42 + leave * 0.55}
@@ -89,9 +90,9 @@ function River({ reducedMotion }: { reducedMotion: boolean }) {
 
   useEffect(() => () => geometry.dispose(), [geometry])
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (!material.current || reducedMotion) return
-    material.current.emissiveIntensity = 0.12 + Math.sin(r3f.elapsedTime * 0.65) * 0.045
+    material.current.emissiveIntensity = 0.12 + Math.sin(seconds * 0.65) * 0.045
   })
 
   return (

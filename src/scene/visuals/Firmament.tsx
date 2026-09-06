@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useMemo, useRef } from 'react'
 import { Color, DoubleSide, ShaderMaterial, type Mesh } from 'three'
 import type { SceneClock } from '../types.ts'
@@ -48,10 +48,10 @@ export function Firmament({ clock }: { clock: SceneClock }) {
 
   useEffect(() => () => material.dispose(), [material])
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     const uTime = material.uniforms.uTime
     const uIntensity = material.uniforms.uIntensity
-    if (uTime) uTime.value = r3f.elapsedTime
+    if (uTime) uTime.value = seconds
     if (uIntensity) uIntensity.value = strength
     if (mesh.current) {
       mesh.current.visible = strength > 0.03

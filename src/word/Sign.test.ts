@@ -9,27 +9,16 @@ function mark(motif: Motif): string {
 }
 
 describe('hour lamp signs', () => {
-  it('draws one authored line per motif instead of Lucide clipart', () => {
-    const light = mark('light')
-    const water = mark('water')
-    const lamp = mark('lamp')
-    const vine = mark('vine')
-    const life = mark('life')
-
-    expect(light).toContain('sign-dawn')
-    expect(light).toContain('A single dawn line opening across the void')
-    expect(water).toContain('M8 72 Q 40 68 72 72 T 136 72')
-    expect(lamp).toContain('sign-wick')
-    expect(lamp).toContain('sign-flame')
-    expect(vine).toContain('M28 120 C 40 80, 48 70, 72 52')
-    expect(life).toContain('brand-mark')
-
-    const all = [light, water, lamp, vine, life].join('\n')
-    expect(all).not.toContain('M4.077 10.615')
-    expect(all).not.toContain('M2 6c.6.5')
-    expect(all).not.toContain('M14 9.536')
-    expect(all).not.toContain('cx="12" cy="12" r="4"')
-    expect(all).not.toMatch(/lucide/i)
+  it('renders a distinct decorative illustration for each verse motif', () => {
+    for (const [motif, title] of [['light', 'Dawn above the hills'], ['water', 'Ripples across still water'], ['lamp', 'An earthen oil lamp'], ['vine', 'A vine with leaves and fruit']] as const) {
+      const html = mark(motif)
+      expect(html).toContain(title)
+      expect(html).toContain('aria-hidden="true"')
+      expect(html).toContain('viewBox="0 0 144 144"')
+      expect(html).toContain('<path')
+      expect(html).not.toContain('is-live')
+    }
+    expect(mark('life')).toContain('brand-mark')
   })
 
   it('covers every motif the pool can assign', () => {

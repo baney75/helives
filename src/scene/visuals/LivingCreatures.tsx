@@ -1,5 +1,5 @@
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import { DoubleSide, type Group, type InstancedMesh } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
@@ -52,8 +52,8 @@ export function LivingCreatures({ clock }: { clock: SceneClock }) {
     }
   }, [birdCount, birdPos, fishCount, fishPos])
 
-  useFrame(({ clock: r3f }) => {
-    const t = clock.reducedMotion ? 0 : r3f.elapsedTime
+  useStoryFrame((seconds) => {
+    const t = clock.reducedMotion ? 0 : seconds
     if (fish.current) {
       fish.current.visible = fishStrength > 0.04
       fish.current.rotation.y = t * 0.12
@@ -131,8 +131,8 @@ function HeroFish({
   const { scene } = useGLTF('/models/genesis/fish.glb', false, false)
   const model = useMemo(() => scene.clone(true), [scene])
   const tail = useMemo(() => model.getObjectByName('Tail'), [model])
-  useFrame(({ clock }) => {
-    const t = reducedMotion ? 0 : clock.elapsedTime
+  useStoryFrame((seconds) => {
+    const t = reducedMotion ? 0 : seconds
     const phase = index * 1.37
     if (root.current) {
       root.current.position.x = position[0] + Math.sin(t * 0.34 + phase) * 0.24
@@ -167,8 +167,8 @@ function HeroBird({
   const model = useMemo(() => scene.clone(true), [scene])
   const leftWing = useMemo(() => model.getObjectByName('LeftWing'), [model])
   const rightWing = useMemo(() => model.getObjectByName('RightWing'), [model])
-  useFrame(({ clock }) => {
-    const t = reducedMotion ? 0 : clock.elapsedTime
+  useStoryFrame((seconds) => {
+    const t = reducedMotion ? 0 : seconds
     const phase = index * 1.61
     const flap = Math.sin(t * 3.15 + phase) * 0.52
     if (leftWing) leftWing.rotation.x = -0.18 + flap

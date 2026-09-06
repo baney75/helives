@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useMemo, useRef } from 'react'
 import { Color, DoubleSide, ShaderMaterial, type Mesh } from 'three'
 
@@ -74,10 +74,10 @@ export function OceanSurface({
 
   useEffect(() => () => material.dispose(), [material])
 
-  useFrame(({ clock }) => {
+  useStoryFrame((seconds) => {
     const time = material.uniforms.uTime
     const intensity = material.uniforms.uStrength
-    if (time) time.value = reducedMotion ? 0 : clock.elapsedTime
+    if (time) time.value = reducedMotion ? 0 : seconds
     if (intensity) intensity.value = strength
     if (mesh.current) mesh.current.visible = strength > 0.025
   })

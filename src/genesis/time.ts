@@ -1,9 +1,11 @@
+import { fallStoryBeat } from './choreography.ts'
+import { sceneSeconds } from './sceneTiming.ts'
 import { clamp01 } from './scenes.ts'
 import { findSceneAt, SCENES } from './scenes.ts'
 import { INTERACTIVE_SECONDS } from './sceneTiming.ts'
 
 export { INTERACTIVE_SECONDS } from './sceneTiming.ts'
-export const CINEMATIC_SECONDS = 48
+export const CINEMATIC_SECONDS = INTERACTIVE_SECONDS
 export const OPENING_HOLD_SECONDS = 0.6
 export const CINEMATIC_HOLD_SECONDS = 0.8
 export const MAX_FRAME_DELTA_SECONDS = 1 / 20
@@ -98,7 +100,8 @@ export function cameraPose(progress: number, mobile = false): CameraPose {
   const scene = findSceneAt(progress)
   const t = sceneLocalProgress(progress)
   const side = Math.sin(t * Math.PI) * (mobile ? 0.28 : 0.7)
-  const fallFollow = Math.min(1, Math.max(0, (t - 0.58) / 0.38))
+  const fallBeat = fallStoryBeat(t * sceneSeconds('fall'))
+  const fallFollow = Math.min(1, Math.max(0, (fallBeat - 0.72) / 0.18))
   const poses: Record<string, CameraPose> = {
     beginning: { position: [-0.35 + side, 0.22 + t * 0.18, 4.6 - t * 0.3], target: [0, -0.25, 0] },
     day1: { position: [1.1 - t * 1.8, 0.5 + t * 0.35, 5.5], target: [0, 0.15, 0] },
@@ -116,7 +119,7 @@ export function cameraPose(progress: number, mobile = false): CameraPose {
         }
       : {
           position: [0.42 + t * 2.2, 1.38 + t * 0.16, 5.15 + t * 0.3],
-          target: [0.62 + Math.max(0, t - 0.58) * 6.7, 0.7, 1.02 + Math.max(0, t - 0.58) * 1.12],
+          target: [0.62 + fallFollow * 2.8, 0.7, 1.02 + fallFollow * 0.47],
         },
     closing: { position: [-0.8 + side, 1.1, 7.7], target: [0, 0.35, 0] },
     doubt: { position: [0.9 - t * 0.5, 1.65, 8.4], target: [0, 0.6, 0] },

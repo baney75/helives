@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useRef } from 'react'
 import { DoubleSide, type Mesh } from 'three'
 import type { SceneClock } from '../types.ts'
@@ -9,16 +9,16 @@ export function MeasureSky({ clock }: { clock: SceneClock }) {
   const band = useRef<Mesh>(null)
   const segs = clock.quality === 'low' ? 16 : 28
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (mesh.current) {
       mesh.current.visible = strength > 0.03
-      const pulse = clock.reducedMotion ? 0 : Math.sin(r3f.elapsedTime * 0.25) * 0.04
+      const pulse = clock.reducedMotion ? 0 : Math.sin(seconds * 0.25) * 0.04
       mesh.current.scale.setScalar(6.4 + pulse)
-      if (!clock.reducedMotion) mesh.current.rotation.y = r3f.elapsedTime * 0.02
+      if (!clock.reducedMotion) mesh.current.rotation.y = seconds * 0.02
     }
     if (band.current) {
       band.current.visible = strength > 0.03
-      if (!clock.reducedMotion) band.current.rotation.z = r3f.elapsedTime * 0.015
+      if (!clock.reducedMotion) band.current.rotation.z = seconds * 0.015
     }
   })
 

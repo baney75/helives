@@ -21,14 +21,19 @@ def person(role):
     root=joint('Root',(0,0,0))
     # Continuous cloth follows the waist, shoulder slope and neckline. Fine folds
     # are part of the silhouette, with no stuck-on rectangular strips.
-    profile=[(.12,.135,.085),(.18,.149,.088),(.35,.144,.083),(.50,.13,.08),(.68,.108,.069),(.78,.10,.066),(.86,.14,.075),(.95,.174 if man else .152,.081),(.988,.145,.069),(1.025,.044,.039)]
+    profile=[(.12,.135,.085),(.18,.149,.088),(.35,.144,.083),(.50,.13,.08),(.68,.108,.069),(.78,.10,.066),(.86,.14,.075),(.94,.151 if man else .139,.080),(.975,.129,.065),(.999,.085,.051),(1.025,.044,.039)]
     rings=[]
     for k in range(len(profile)-1):
         a,b=profile[k],profile[k+1]
         for j in range(5):
-            t=j/5;z=a[0]*(1-t)+b[0]*t; rings.append((z*scale,(a[1]*(1-t)+b[1]*t)*scale,(a[2]*(1-t)+b[2]*t)*scale,0,.003*math.sin(z*5)))
+            t=j/5;z=a[0]*(1-t)+b[0]*t
+            previous=profile[max(0,k-1)];following=profile[min(len(profile)-1,k+2)]
+            def curve(index):
+                p0,p1,p2,p3=previous[index],a[index],b[index],following[index]
+                return .5*((2*p1)+(-p0+p2)*t+(2*p0-5*p1+4*p2-p3)*t*t+(-p0+3*p1-3*p2+p3)*t*t*t)
+            rings.append((z*scale,curve(1)*scale,curve(2)*scale,0,.003*math.sin(z*5)))
     a=profile[-1];rings.append((a[0]*scale,a[1]*scale,a[2]*scale,0,0))
-    loft('Robe',rings,linen,root,segments=64,folds=.065)
+    loft('Robe',rings,linen,root,segments=64,folds=.035)
     # Belt and a draped end in the same cloth language.
     belt=[]
     for i in range(65):
@@ -56,7 +61,7 @@ def person(role):
     vs=[];fs=[]
     for k in range(15):
         for j in range(48):
-            a=j*math.tau/48; end=1.34+.42*(1-math.sin(a))/2;ph=.02+(end-.02)*k/14
+            a=j*math.tau/48; end=1.12+.68*(1-math.sin(a))/2;ph=.02+(end-.02)*k/14
             r=1+.028*math.sin(a*15+ph*7)
             vs.append((.077*math.cos(a)*math.sin(ph)*r,-.004+.074*math.sin(a)*math.sin(ph)*r,1.127+.092*math.cos(ph)*r))
     for k in range(14):
@@ -78,11 +83,11 @@ def person(role):
         upper=joint(code+'UpperArm',shoulder,root)
         elbow=(x,.0,.769*scale); fore=joint(code+'Forearm',elbow,upper)
         wrist=(x,0,.590*scale); hand=joint(code+'Hand',wrist,fore)
-        sleeveRings=[(.993*scale,.005,.005,x,0),(.987*scale,.029,.027,x,0),(.976*scale,.046,.043,x,0)]
+        sleeveRings=[(.985*scale,.004,.004,x,0),(.978*scale,.021,.022,x,0),(.963*scale,.037,.036,x,0)]
         for i in range(16):
-            t=i/15;z=(.963-.204*t)*scale;r=(.050*(1-t)+.036*t)*scale
+            t=i/15;z=(.950-.191*t)*scale;r=(.043*(1-t)+.034*t+.003*math.sin(t*math.pi))*scale
             sleeveRings.append((z,r,r*.88,x,0))
-        loft(code+'Sleeve',sleeveRings,linen,upper,segments=32,folds=.065)
+        loft(code+'Sleeve',sleeveRings,linen,upper,segments=32,folds=.028)
         tube(code+'ArmSkin',[elbow,(x,.006,.70*scale),wrist],[.030,.031,.020],skin,fore,16)
         ellipsoid(code+'Palm',(x,.003,.570*scale),(.023,.014,.033),skin,hand,24,16)
         for f in range(4):

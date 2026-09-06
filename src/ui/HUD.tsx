@@ -1,3 +1,4 @@
+import { cueAt } from '../genesis/choreography.ts'
 import type { ChangeEvent } from 'react'
 import { SCENES } from '../genesis/scenes.ts'
 import { hasVoice } from '../genesis/voiced.ts'
@@ -12,6 +13,7 @@ type HUDProps = {
 
 export function HUD({ clock, muted, onMute }: HUDProps) {
   const scene = clock.scene
+  const cue = cueAt(scene.id, clock.progress)
   const science = scene.kind === 'science'
   const voiced = hasVoice(scene.id)
 
@@ -38,11 +40,11 @@ export function HUD({ clock, muted, onMute }: HUDProps) {
         </dl>
       </header>
 
-      <section className="narration" aria-live="polite">
+      <section className="narration" aria-live="off">
         <p className="epoch-kicker">{scene.kicker}</p>
         <h1>{scene.name}</h1>
-        <p className="headline">{scene.headline}</p>
-        <p className="body">{scene.body}</p>
+        <p className="headline">{cue?.text ?? scene.headline}</p>
+        {!cue && <p className="body">{scene.body}</p>}
         {science ? (
           <p className="afterword-link">
             <a href="/genesis/afterword">Read the sources</a>

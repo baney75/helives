@@ -1,3 +1,5 @@
+import { fallStoryBeat } from '../../genesis/choreography.ts'
+import { INTERACTIVE_SECONDS } from '../../genesis/sceneTiming.ts'
 import type { Quality } from '../../lib/budget.ts'
 import { sceneBounds } from '../../genesis/sceneTiming.ts'
 import { fillDisk, mulberry32 } from '../../lib/rng.ts'
@@ -50,7 +52,7 @@ export const EDEN = {
     trunkColor: '#3a2818',
     canopyColor: '#5a3a28',
     fruitColor: '#8a2a22',
-    fruitLocal: [-0.18, 1.58, 0.32] as const satisfies Vec3,
+    fruitLocal: [-0.37, 1.22, 0.76] as const satisfies Vec3,
   },
   river: {
     id: 'river' as const,
@@ -157,7 +159,7 @@ export function edenPairStory(progress: number): { beat: number; leave: number; 
   const p = Math.min(1, Math.max(0, progress))
   const fall = sceneBounds('fall')
   const closing = sceneBounds('closing')
-  const beat = Math.min(1, Math.max(0, (p - fall.start) / (fall.end - fall.start)))
+  const beat = fallStoryBeat((p - fall.start) * INTERACTIVE_SECONDS)
   const leave = Math.min(1, Math.max(0, (beat - 0.72) / 0.18))
   const fadeWindow = Math.max(0.001, (closing.end - closing.start) * 0.55)
   const fade = p < fall.end ? 1 : Math.min(1, Math.max(0, 1 - (p - fall.end) / fadeWindow))

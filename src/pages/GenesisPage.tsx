@@ -24,12 +24,18 @@ export function GenesisPage() {
   const [factor, setFactor] = useState(1)
   const quality = liveQuality ? stricterQuality(liveQuality, gate.quality) : gate.quality
   const effects = effectsAllowed(quality, factor)
+  const [sceneReady, setSceneReady] = useState(false)
+  const lastProgress = useRef(mode.progress ?? 0)
   const holdRef = useRef(false)
+  const mediaClockRef = useRef<() => number | null>(() => null)
   const clock = useGenesisClock(reducedMotion, mode.cinematic, {
     progress: mode.progress,
     pause: mode.pause,
     audioHold: holdRef.current,
+    mediaClock: () => !sceneReady || !visible ? lastProgress.current : mediaClockRef.current(),
   })
+
+  lastProgress.current = clock.progress
 
   const onQualityFallback = useCallback(
     (next: Quality) => {
@@ -50,12 +56,15 @@ export function GenesisPage() {
   const [muted, setMuted] = useState(false)
   const narration = useNarration({
     muted,
+    progress: clock.progress,
+    seekVersion: clock.seekVersion,
     sceneId: clock.scene.id,
-    playing: clock.playing,
+    playing: clock.playing && sceneReady && visible,
     cinematic: mode.cinematic,
     speed: clock.speed,
   })
   holdRef.current = narration.hold
+  mediaClockRef.current = narration.readProgress
   const soundWasBlocked = useRef(false)
 
   useEffect(() => {
@@ -83,6 +92,7 @@ export function GenesisPage() {
         Skip to timeline
       </a>
       <GenesisCanvas
+        onReady={setSceneReady}
         clock={{
           progress: clock.progress,
           presence: clock.presence,
@@ -99,6 +109,7 @@ export function GenesisPage() {
         onQualityFallback={onQualityFallback}
         onPerformanceFactor={onPerformanceFactor}
       />
+      {!sceneReady && <p className="scene-loading" role="status">Loading scene…</p>}
       {narration.blocked ? (
         <button type="button" className="sound-gate" onClick={() => void narration.retry()}>
           Begin with sound

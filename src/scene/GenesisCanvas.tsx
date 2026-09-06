@@ -15,6 +15,8 @@ import { demoteQuality } from '../lib/quality.ts'
 import { guardWebGLContext } from '../lib/webglSafety.ts'
 import { cameraPose, fogFar, framedCamera } from '../genesis/time.ts'
 import type { SceneClock } from './types.ts'
+import { INTERACTIVE_SECONDS } from '../genesis/sceneTiming.ts'
+import { StoryTimeProvider } from './StoryTime.tsx'
 import { SceneEffects } from './SceneEffects.tsx'
 import { DryLand } from './visuals/DryLand.tsx'
 import { Firmament } from './visuals/Firmament.tsx'
@@ -212,13 +214,20 @@ function Fallback() {
   )
 }
 
+function Readiness({ ready, onReady }: { ready: boolean; onReady?: (ready: boolean) => void }) {
+  useEffect(() => { onReady?.(ready) }, [ready, onReady])
+  return null
+}
+
 export function GenesisCanvas({
   clock,
   qualityLocked = false,
   onQualityFallback,
   onPerformanceFactor,
+  onReady,
 }: {
   clock: SceneClock
+  onReady?: (ready: boolean) => void
   qualityLocked?: boolean
   onQualityFallback?: (quality: Quality) => void
   onPerformanceFactor?: (factor: number) => void
@@ -253,7 +262,9 @@ export function GenesisCanvas({
           onLost={() => lost.current?.('low')}
           onRestored={() => setEpoch((value) => value + 1)}
         />
-        <Suspense fallback={null}>
+        <StoryTimeProvider seconds={clock.progress * INTERACTIVE_SECONDS}>
+        <Suspense fallback={<Readiness ready={false} onReady={onReady} />}>
+          <Readiness ready onReady={onReady} />
           <Creation clock={clock} />
           <LiveQuality
             quality={clock.quality}
@@ -262,6 +273,7 @@ export function GenesisCanvas({
             onFactor={onPerformanceFactor}
           />
         </Suspense>
+        </StoryTimeProvider>
       </Canvas>
     </div>
   )

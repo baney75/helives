@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useMemo, useRef } from 'react'
 import type { Group, Points } from 'three'
 import { AdditiveBlending } from 'three'
@@ -15,17 +15,17 @@ export function VoidWaters({ clock }: { clock: SceneClock }) {
   const count = BUDGET[clock.quality].void
   const positions = useMemo(() => fillSphere(count, 6.2, 19), [count])
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (points.current) {
       points.current.visible = strength > 0.03
       points.current.scale.setScalar(0.85 + clock.scale * 0.18)
-      if (!clock.reducedMotion) points.current.rotation.y = r3f.elapsedTime * 0.04
+      if (!clock.reducedMotion) points.current.rotation.y = seconds * 0.04
     }
     if (waters.current) {
       waters.current.visible = strength > 0.03
-      const wave = clock.reducedMotion ? 0 : Math.sin(r3f.elapsedTime * 0.35) * 0.03
+      const wave = clock.reducedMotion ? 0 : Math.sin(seconds * 0.35) * 0.03
       waters.current.position.y = -1.15 + wave
-      if (!clock.reducedMotion) waters.current.rotation.y = r3f.elapsedTime * 0.02
+      if (!clock.reducedMotion) waters.current.rotation.y = seconds * 0.02
     }
   })
 

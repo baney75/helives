@@ -4,6 +4,7 @@ import { advanceProgress, cameraDistance, clampedFrameDelta, visualScale } from 
 
 export type GenesisClock = {
   progress: number
+  seekVersion: number
   setProgress: (value: number | ((current: number) => number)) => void
   playing: boolean
   play: () => void
@@ -22,6 +23,7 @@ type ClockStart = {
   progress?: number | null
   pause?: boolean
   audioHold?: boolean
+  mediaClock?: () => number | null
 }
 
 export function useGenesisClock(
@@ -31,9 +33,12 @@ export function useGenesisClock(
 ): GenesisClock {
   const [progress, setProgressState] = useState(start.progress ?? 0)
   const [playing, setPlaying] = useState(!start.pause)
+  const [seekVersion, setSeekVersion] = useState(0)
   const [speed, setSpeed] = useState(1)
 
   const setProgress = useCallback((value: number | ((current: number) => number)) => {
+    setSeekVersion((version) => version + 1)
+    holdRef.current = 0
     setProgressState((current) => {
       const next = typeof value === 'function' ? value(current) : value
       return Math.min(1, Math.max(0, next))
@@ -41,6 +46,8 @@ export function useGenesisClock(
   }, [])
 
   const holdRef = useRef(0)
+  const mediaClockRef = useRef(start.mediaClock)
+  mediaClockRef.current = start.mediaClock
   const audioHoldRef = useRef(Boolean(start.audioHold))
   audioHoldRef.current = Boolean(start.audioHold)
 
@@ -51,8 +58,10 @@ export function useGenesisClock(
     const tick = (now: number) => {
       const dt = clampedFrameDelta(now, last)
       last = now
+      const mediaProgress = mediaClockRef.current?.()
+      if (mediaProgress != null && mediaProgress >= 1) setPlaying(false)
       setProgressState((current) =>
-        advanceProgress(
+        mediaProgress ?? advanceProgress(
           current,
           dt,
           cinematic,
@@ -82,12 +91,14 @@ export function useGenesisClock(
   const toggle = useCallback(() => setPlaying((value) => !value), [])
   const reset = useCallback(() => {
     holdRef.current = 0
+    setSeekVersion((version) => version + 1)
     setProgressState(0)
     setPlaying(true)
   }, [])
 
   return {
     progress,
+    seekVersion,
     setProgress,
     playing,
     play,

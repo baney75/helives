@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import { Color, DoubleSide, ExtrudeGeometry, InstancedMesh, Shape, type Group } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
@@ -100,11 +100,11 @@ export function DryLand({ clock }: { clock: SceneClock }) {
     crownGeo.dispose()
   }, [crownGeo, islandGeometry, shelfGeometry])
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (terrain.current) {
       terrain.current.visible = strength > 0.03 && garden < 0.28
       terrain.current.position.y = -0.15 + Math.min(1, clock.presence.day3 * 1.7) * 0.34
-      terrain.current.rotation.y = clock.reducedMotion ? -0.08 : -0.08 + Math.sin(r3f.elapsedTime * 0.12) * 0.018
+      terrain.current.rotation.y = clock.reducedMotion ? -0.08 : -0.08 + Math.sin(seconds * 0.12) * 0.018
     }
     const inst = plants.current
     if (!inst) return

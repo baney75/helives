@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useLayoutEffect, useMemo, useRef, type ReactNode } from 'react'
 import { BufferGeometry, Color, DoubleSide, type Group, InstancedMesh, MeshStandardMaterial, Vector2 } from 'three'
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js'
@@ -97,7 +97,7 @@ export function TreeOfKnowledge({
         reducedMotion={reducedMotion}
       />
       <group position={reach} visible={!fruitTaken}>
-        <AppleFruit scale={1.55} glow={0.45 + fall * 0.35} />
+        <AppleFruit scale={0.75} glow={0.015} />
       </group>
     </group>
   )
@@ -294,9 +294,9 @@ function BreathingGroup({
   children: ReactNode
 }) {
   const root = useRef<Group>(null)
-  useFrame(({ clock }) => {
+  useStoryFrame((seconds) => {
     if (!root.current || reducedMotion || quality === 'low') return
-    const t = clock.elapsedTime
+    const t = seconds
     root.current.rotation.y = Math.sin(t * 0.22) * amount
     root.current.position.y = Math.sin(t * 0.35) * amount
   })

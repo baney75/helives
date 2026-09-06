@@ -1,5 +1,5 @@
 import { Stars } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useMemo, useRef } from 'react'
 import type { Points } from 'three'
 import { AdditiveBlending, DoubleSide } from 'three'
@@ -18,10 +18,10 @@ export function HeavenLights({ clock }: { clock: SceneClock }) {
   const count = BUDGET[clock.quality].spiral
   const positions = useMemo(() => fillSpiral(count, 4.4, 128, 3), [count])
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (!points.current) return
     points.current.visible = strength > 0.04
-    if (!clock.reducedMotion) points.current.rotation.y = r3f.elapsedTime * 0.035
+    if (!clock.reducedMotion) points.current.rotation.y = seconds * 0.035
   })
 
   if (strength <= 0) return null

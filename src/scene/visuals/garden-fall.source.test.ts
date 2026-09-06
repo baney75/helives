@@ -37,7 +37,7 @@ describe('shipping Garden and Fall source', () => {
 
   it('keeps the river alive without a per-vertex animation loop', () => {
     const garden = readFileSync(join(here, 'Garden.tsx'), 'utf8')
-    expect(garden).toMatch(/useFrame/)
+    expect(garden).toMatch(/useStoryFrame/)
     expect(garden).toMatch(/emissiveIntensity/)
     expect(garden).toMatch(/reducedMotion/)
   })

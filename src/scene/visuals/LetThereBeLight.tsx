@@ -1,5 +1,5 @@
 import { Line, Sparkles } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useMemo, useRef } from 'react'
 import { AdditiveBlending, BackSide, type Group, type Points } from 'three'
 import { BUDGET } from '../../lib/budget.ts'
@@ -36,11 +36,11 @@ export function LetThereBeLight({ clock }: { clock: SceneClock }) {
     [],
   )
 
-  useFrame(({ clock: r3f }) => {
+  useStoryFrame((seconds) => {
     if (!mesh.current) return
-    const s = 0.9 + strength * 0.28 + Math.sin(r3f.elapsedTime * 1.4) * 0.025 * pulse
+    const s = 0.9 + strength * 0.28 + Math.sin(seconds * 1.4) * 0.025 * pulse
     mesh.current.scale.setScalar(s)
-    if (motes.current && !clock.reducedMotion) motes.current.rotation.z = r3f.elapsedTime * 0.035
+    if (motes.current && !clock.reducedMotion) motes.current.rotation.z = seconds * 0.035
   })
 
   if (strength <= 0) return null

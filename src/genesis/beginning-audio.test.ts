@@ -28,6 +28,8 @@ describe('first Genesis voice', () => {
       'serpent',
       'narrator',
       'narrator',
+      'narrator',
+      'narrator',
       'god',
       'man',
       'god',
@@ -37,6 +39,7 @@ describe('first Genesis voice', () => {
       'woman',
       'narrator',
     ])
+    expect(FALL_VOICE_CUES.filter((cue) => ['look', 'take', 'give'].includes(cue.action ?? '')).map((cue) => cue.text).join(' ')).toBe(KJV.gen3_6)
     expect(FALL_VOICE_CUES.find((cue) => cue.role === 'serpent')?.text).toBe(KJV.gen3_1_serpent)
     expect(NARRATION.fall).not.toContain('Go to church')
     const generator = readFileSync(resolve('scripts/generate-audio.mjs'), 'utf8')
@@ -64,8 +67,8 @@ describe('first Genesis voice', () => {
     expect(clock).toContain('useState(!start.pause)')
     expect(clock).not.toContain('!reducedMotion && !start.pause')
     // Playback, pause and mute behavior are exercised in useNarration.test.ts.
-    expect(narration).toContain("audio.addEventListener('ended'")
-    expect(narration).toContain('AUDIO_BREATH_SECONDS')
+    expect(narration).toContain("current.addEventListener('ended'")
+    expect(narration).toContain('readProgress')
     expect(narration).toContain('hold')
     expect(narration).not.toContain('playing && !reducedMotion')
     expect(narration).not.toMatch(/else\s*\{\s*audio\.pause\(\)\s*setBlocked\(false\)/)

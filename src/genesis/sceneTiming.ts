@@ -14,7 +14,7 @@ export const SCENE_AUDIO_SECONDS: Record<SceneId, number> = {
   day6: 20.448,
   day7: 11.904,
   garden: 17.376,
-  fall: 97.656,
+  fall: 97.704,
   closing: 9.984,
   doubt: 11.304,
   measure: 19.056,

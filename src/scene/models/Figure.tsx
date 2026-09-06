@@ -1,8 +1,9 @@
 import { Clone, useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useStoryFrame } from '../StoryTime.tsx'
 import { useRef } from 'react'
 import { MathUtils, Vector3, type Group, type Object3D } from 'three'
 import type { Vec3 } from './eden.ts'
+import { solveReach } from './reach.ts'
 import { AppleFruit } from './Trees.tsx'
 import {
   figureJointPose,
@@ -49,6 +50,7 @@ export function Figure({
   fade = 1,
   holdFruit = false,
   reducedMotion = false,
+  reachTarget,
 }: {
   role: FigureRole
   pose: FigurePoseId
@@ -57,6 +59,7 @@ export function Figure({
   fade?: number
   holdFruit?: boolean
   reducedMotion?: boolean
+  reachTarget?: Vec3
 }) {
   const root = useRef<Group>(null)
   const clone = useRef<Group>(null)
@@ -65,13 +68,13 @@ export function Figure({
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
 
-  useFrame(({ clock }, delta) => {
+  useStoryFrame((seconds, delta) => {
     const group = root.current
     if (!group) return
     const hidden = fade < 0.04
     group.visible = !hidden
     if (hidden) return
-    const t = reducedMotion ? 0 : clock.elapsedTime
+    const t = reducedMotion ? 0 : seconds
     const phase = role === 'man' ? 0 : Math.PI * 0.7
     const walking = pose === 'depart'
     const breath = Math.sin(t * 1.15 + phase) * 0.006
@@ -79,6 +82,11 @@ export function Figure({
     group.position.set(position[0], position[1] + breath + step, position[2])
     group.rotation.set(0, rotationY + (walking ? Math.sin(t * 1.55 + phase) * 0.04 : 0), lean)
     if (clone.current) applyJoints(clone.current, pose, role, t, reducedMotion ? 1 : delta)
+    if (pose === 'reach' && reachTarget && clone.current && group.parent) {
+      group.parent.updateWorldMatrix(true, false)
+      WORLD.set(...reachTarget).applyMatrix4(group.parent.matrixWorld)
+      solveReach(clone.current, role === 'woman' ? 'L' : 'R', WORLD)
+    }
     const held = fruit.current
     if (held) {
       held.visible = holdFruit
@@ -100,7 +108,7 @@ export function Figure({
         <Clone object={gltf.scene} castShadow receiveShadow />
       </group>
       <group ref={fruit} visible={holdFruit}>
-        <AppleFruit scale={0.58} glow={0.05} />
+        <AppleFruit scale={0.75} glow={0.015} />
       </group>
     </group>
   )

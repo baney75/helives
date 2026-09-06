@@ -79,7 +79,7 @@ describe('visual helpers', () => {
     const fall = SCENES.find((scene) => scene.id === 'fall')
     expect(fall).toBeTruthy()
     if (!fall) return
-    const late = fall.start + (fall.end - fall.start) * 0.86
+    const late = fall.start + (fall.end - fall.start) * 0.97
     expect(cameraPose(late, true).target[0]).toBeGreaterThan(cameraPose(late, false).target[0])
     expect(cameraPose(late, true).target[0]).toBeGreaterThan(1.4)
   })

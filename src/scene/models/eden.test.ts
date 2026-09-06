@@ -106,14 +106,14 @@ describe('edenPairStory', () => {
 
   it('holds Adam and Eve in frame for the Fall capture beat', () => {
     const story = edenPairStory(atFall(0.5))
-    expect(story.beat).toBeGreaterThan(0.4)
-    expect(story.beat).toBeLessThan(0.6)
+    expect(story.beat).toBeGreaterThanOrEqual(0.72)
+    expect(story.beat).toBeLessThanOrEqual(0.72)
     expect(story.leave).toBe(0)
     expect(story.fade).toBe(1)
   })
 
   it('sends them east before they fade', () => {
-    const walking = edenPairStory(atFall(0.92))
+    const walking = edenPairStory(atFall(0.97))
     expect(walking.leave).toBeGreaterThan(0.9)
     expect(walking.fade).toBe(1)
     const closing = sceneBounds('closing')
