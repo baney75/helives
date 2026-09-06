@@ -63,9 +63,7 @@ describe('first Genesis voice', () => {
     const page = readFileSync(resolve('src/pages/GenesisPage.tsx'), 'utf8')
     expect(clock).toContain('useState(!start.pause)')
     expect(clock).not.toContain('!reducedMotion && !start.pause')
-    expect(narration).toContain('audio.autoplay = true')
-    expect(narration).toContain('if (playing)')
-    expect(narration).toContain('if (audio.paused) void retry()')
+    // Playback, pause and mute behavior are exercised in useNarration.test.ts.
     expect(narration).toContain("audio.addEventListener('ended'")
     expect(narration).toContain('AUDIO_BREATH_SECONDS')
     expect(narration).toContain('hold')

@@ -130,7 +130,7 @@ describe('home viewport', () => {
     }
     expect(fit.remain.bottom).toBeLessThanOrEqual(fit.foot.top + 1)
     expect(fit.actions.bottom).toBeLessThanOrEqual(fit.remain.top + 1)
-    expect(fit.footerText).toContain('He Lives · NeoRome')
+    expect(fit.footerText).toContain('He Lives')
     expect(fit.footerText).toContain('King James Version, public domain')
   })
 })

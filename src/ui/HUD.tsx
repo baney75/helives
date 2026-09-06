@@ -1,13 +1,16 @@
 import type { ChangeEvent } from 'react'
+import { SCENES } from '../genesis/scenes.ts'
 import { hasVoice } from '../genesis/voiced.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 import { Timeline } from './Timeline.tsx'
 
 type HUDProps = {
   clock: GenesisClock
+  muted: boolean
+  onMute: () => void
 }
 
-export function HUD({ clock }: HUDProps) {
+export function HUD({ clock, muted, onMute }: HUDProps) {
   const scene = clock.scene
   const science = scene.kind === 'science'
   const voiced = hasVoice(scene.id)
@@ -16,7 +19,7 @@ export function HUD({ clock }: HUDProps) {
     <div className="hud">
       <header className="topbar">
         <div className="brand">
-          <p className="wordmark">He Lives</p>
+          <a className="wordmark" href="/">He Lives</a>
           <p className="tag">Genesis</p>
         </div>
         <dl className="readouts">
@@ -48,12 +51,25 @@ export function HUD({ clock }: HUDProps) {
       </section>
 
       <footer className="dock">
+        <label className="scene-picker">
+          <span>Scene</span>
+          <select value={scene.id} onChange={(event) => {
+            const selected = SCENES.find((item) => item.id === event.target.value)
+            if (selected) clock.setProgress(selected.start)
+          }}>
+            {SCENES.map((item, index) => <option key={item.id} value={item.id}>{String(index + 1).padStart(2, '0')} · {item.name}</option>)}
+          </select>
+          <span className="scene-count">{SCENES.findIndex((item) => item.id === scene.id) + 1} / {SCENES.length}</span>
+        </label>
         <div className="transport">
           <button type="button" className="icon-btn" onClick={clock.reset}>
             Reset
           </button>
           <button type="button" className="icon-btn primary" onClick={clock.toggle}>
             {clock.playing ? 'Pause' : 'Play'}
+          </button>
+          <button type="button" className="icon-btn" aria-pressed={muted} onClick={onMute}>
+            {muted ? 'Sound off' : 'Sound on'}
           </button>
           <label className="speed">
             Speed
@@ -69,8 +85,8 @@ export function HUD({ clock }: HUDProps) {
               <option value="4">4×</option>
             </select>
           </label>
-          <a className="text-link" href="/">
-            He Lives
+          <a className="text-link" href="/scriptures">
+            Scriptures
           </a>
         </div>
         <Timeline progress={clock.progress} sceneId={scene.id} onScrub={clock.setProgress} />

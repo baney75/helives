@@ -5,7 +5,7 @@ export function FaithPage() {
   return (
     <div className="site">
       <SiteNav current="faith" />
-      <main className="doc">
+      <main id="main-content" className="doc">
         <p className="hero-kicker">Confession</p>
         <h1>Faith</h1>
         <p>

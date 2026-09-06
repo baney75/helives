@@ -47,7 +47,9 @@ export function GenesisPage() {
     [quality],
   )
 
+  const [muted, setMuted] = useState(false)
   const narration = useNarration({
+    muted,
     sceneId: clock.scene.id,
     playing: clock.playing,
     cinematic: mode.cinematic,
@@ -70,6 +72,7 @@ export function GenesisPage() {
 
   useEffect(() => {
     document.body.dataset.mode = mode.cinematic ? 'cinematic' : 'interactive'
+    return () => { delete document.body.dataset.mode }
   }, [mode.cinematic])
 
   usePlaybackKeys(clock.toggle, clock.reset, clock.setProgress)
@@ -101,7 +104,7 @@ export function GenesisPage() {
           Begin with sound
         </button>
       ) : null}
-      {mode.cinematic ? <CinematicOverlay clock={clock} /> : <HUD clock={clock} />}
+      {mode.cinematic ? <CinematicOverlay clock={clock} /> : <HUD clock={clock} muted={muted} onMute={() => setMuted((value) => !value)} />}
     </div>
   )
 }
@@ -114,7 +117,8 @@ function usePlaybackKeys(
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       const target = event.target
-      if (target instanceof HTMLInputElement || target instanceof HTMLSelectElement) {
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey ||
+        (target instanceof Element && target.closest('input, select, textarea, button, a, [contenteditable]'))) {
         return
       }
       handlePlaybackKey(event, toggle, reset, setProgress)
@@ -136,14 +140,17 @@ function handlePlaybackKey(
     return
   }
   if (event.key === 'Home') {
+    event.preventDefault()
     reset()
     return
   }
   if (event.key === 'ArrowRight') {
+    event.preventDefault()
     setProgress((current) => current + 0.015)
     return
   }
   if (event.key === 'ArrowLeft') {
+    event.preventDefault()
     setProgress((current) => current - 0.015)
   }
 }

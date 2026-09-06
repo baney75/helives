@@ -8,6 +8,7 @@ type NarrationOpts = {
   playing: boolean
   cinematic: boolean
   speed: number
+  muted?: boolean
 }
 
 export type NarrationControl = {
@@ -22,9 +23,11 @@ function audioUrl(file: string): string {
   return `${base}audio/${file}`
 }
 
-export function useNarration({ sceneId, playing, cinematic, speed }: NarrationOpts): NarrationControl {
+export function useNarration({ sceneId, playing, cinematic, speed, muted = false }: NarrationOpts): NarrationControl {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const lastKey = useRef('')
+  const canPlay = useRef(playing && !muted)
+  canPlay.current = playing && !muted
   const breathRef = useRef<number>(0)
   const [blocked, setBlocked] = useState(false)
   const [hold, setHold] = useState(false)
@@ -41,10 +44,15 @@ export function useNarration({ sceneId, playing, cinematic, speed }: NarrationOp
     if (!audio) return false
     try {
       await audio.play()
+      if (audioRef.current !== audio) {
+        audio.pause()
+        return false
+      }
+      if (!canPlay.current) audio.pause()
       setBlocked(false)
       return true
     } catch {
-      setBlocked(true)
+      if (audioRef.current === audio && canPlay.current) setBlocked(true)
       return false
     }
   }, [])
@@ -61,7 +69,6 @@ export function useNarration({ sceneId, playing, cinematic, speed }: NarrationOp
       if (file) {
         const audio = new Audio(audioUrl(file))
         audio.preload = 'auto'
-        audio.autoplay = true
         audio.setAttribute('playsinline', '')
         const finish = () => {
           clearBreath()
@@ -84,31 +91,22 @@ export function useNarration({ sceneId, playing, cinematic, speed }: NarrationOp
     const audio = audioRef.current
     if (!audio) return
     audio.playbackRate = cinematic ? 1 : speed
-    if (playing) {
+    if (muted) setBlocked(false)
+    if (playing && !muted) {
       if (audio.paused) void retry()
     } else {
       audio.pause()
     }
-  }, [sceneId, playing, cinematic, speed, retry, clearBreath])
-
-  useEffect(() => {
-    if (!blocked) return
-    const unlock = () => void retry()
-    window.addEventListener('pointerdown', unlock, { once: true, capture: true })
-    window.addEventListener('keydown', unlock, { once: true, capture: true })
-    return () => {
-      window.removeEventListener('pointerdown', unlock, { capture: true })
-      window.removeEventListener('keydown', unlock, { capture: true })
-    }
-  }, [blocked, retry])
+  }, [sceneId, playing, cinematic, speed, muted, retry, clearBreath])
 
   useEffect(() => {
     return () => {
       clearBreath()
       audioRef.current?.pause()
       audioRef.current = null
+      lastKey.current = ''
     }
   }, [clearBreath])
 
-  return { blocked, hold, retry }
+  return { blocked, hold: hold && !muted, retry }
 }

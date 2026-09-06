@@ -5,7 +5,7 @@ export function NotFoundPage() {
   return (
     <div className="site">
       <SiteNav />
-      <main className="doc">
+      <main id="main-content" className="doc">
         <h1>Not found</h1>
         <p>
           That page is not here. Genesis is the book that is live.{' '}

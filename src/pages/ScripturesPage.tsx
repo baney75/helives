@@ -6,19 +6,23 @@ export function ScripturesPage() {
   return (
     <div className="site wide">
       <SiteNav current="scriptures" />
-      <main className="doc canon">
+      <main id="main-content" className="doc canon">
         <p className="hero-kicker">The whole canon</p>
         <h1>The Scriptures</h1>
-        <p>
-          Cover to cover. Genesis is the book that is live. Every other book is named here because it is
-          Scripture: the law, the genealogies, the minor prophets. None of it is filler. None of it is skipped.
+        <p className="canon-intro">
+          The whole Protestant canon, from Genesis to Revelation. Begin with Genesis 1–3,
+          a narrated visual meditation. The remaining books are forthcoming.
         </p>
-        <p>King James titles. Forthcoming means not built yet, not optional.</p>
-        <h2 className="canon-testament">Old Testament</h2>
+        <a className="btn" href="/genesis">Enter Genesis <span aria-hidden="true">↗</span></a>
+        <nav className="canon-jump" aria-label="Testaments">
+          <a href="#old-testament">Old Testament <span aria-hidden="true">↓</span></a>
+          <a href="#new-testament">New Testament <span aria-hidden="true">↓</span></a>
+        </nav>
+        <h2 id="old-testament" className="canon-testament">Old Testament</h2>
         {OLD_TESTAMENT.map((division) => (
           <CanonSection key={division.id} division={division} />
         ))}
-        <h2 className="canon-testament">New Testament</h2>
+        <h2 id="new-testament" className="canon-testament">New Testament</h2>
         {NEW_TESTAMENT.map((division) => (
           <CanonSection key={division.id} division={division} />
         ))}

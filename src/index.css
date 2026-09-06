@@ -1682,3 +1682,78 @@ body:has(.lamp-home)::-webkit-scrollbar {
     animation: none;
   }
 }
+
+/* Shared reading rhythm and predictable keyboard/touch controls. */
+:focus-visible { outline: 2px solid var(--fire); outline-offset: 4px; }
+main:focus { outline: none; }
+::selection { background: var(--fire); color: var(--ground); }
+[id] { scroll-margin-top: var(--space-6); }
+.nav { border-bottom: 1px solid var(--line); }
+.nav nav { gap: var(--space-5); }
+.nav nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 8px; text-decoration-color: var(--fire); }
+.nav-mark { white-space: nowrap; min-height: 44px; }
+.site:not(.lamp-home) .foot { border-top: 1px solid var(--line); padding-top: var(--space-5); margin-top: var(--space-5); }
+.site:not(.lamp-home) .foot a { display: inline-block; padding-block: 8px; text-underline-offset: 4px; }
+.btn { gap: var(--space-5); transition: background 160ms ease; }
+.btn:hover { background: var(--dawn); }
+.btn.quiet:hover { background: var(--ground); }
+.doc { padding-block: clamp(40px, 7vw, 80px); }
+.doc > p { color: var(--ink); }
+.doc > h1 + p { margin-top: var(--space-6); }
+.canon-intro { max-width: 38rem; }
+.canon-jump { display: flex; flex-wrap: wrap; gap: var(--space-6); margin-top: var(--space-7); }
+.canon-jump a { min-height: 44px; text-underline-offset: 6px; }
+.canon-jump span { margin-left: var(--space-3); }
+.canon-book { padding-block: 8px; }
+.canon-book-title { line-height: 1.5; }
+a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center; }
+.canon-note { font-size: 16px; }
+.wordmark { color: var(--ink); text-decoration: none; }
+.scene-picker { display: flex; align-items: center; gap: var(--space-3); max-width: 32rem; pointer-events: auto; }
+.scene-picker > span { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.scene-picker select { min-width: 0; flex: 1; min-height: 44px; padding: 8px 12px; background: var(--void); border: 1px solid var(--line); }
+.scene-count { white-space: nowrap; }
+.timeline { padding-bottom: 0; }
+.timeline input[type='range'] { height: 24px; background: transparent; margin: 0; cursor: pointer; }
+.timeline input[type='range']::-webkit-slider-runnable-track { height: 2px; background: var(--line); }
+.timeline input[type='range']::-webkit-slider-thumb { margin-top: -7px; }
+.timeline input[type='range']::-moz-range-track { height: 2px; background: var(--line); }
+.tick { min-width: 24px; }
+.ticks { margin-top: 0; height: 32px; }
+.hud .topbar, .hud .dock { z-index: 1; position: relative; }
+.hud .dock { position: absolute; }
+@media (max-width: 699px) {
+  .nav nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 16px; }
+  .word-remain-label { font-size: 9px; letter-spacing: 0.06em; }
+  .word-remain-time { font-size: 28px; }
+  .hero-verse { margin-top: var(--space-4); }
+  .hero-cite { font-size: 14px; }
+  .hud .topbar { flex-direction: row; align-items: start; }
+  .readouts { width: auto; padding: 8px 12px; grid-template-columns: 1fr; font-size: 11px; }
+  .readouts div:not(:first-child) { display: none; }
+  .narration .body { display: block; font-size: 13px; line-height: 1.5; max-height: 18vh; overflow-y: auto; }
+  .narration h1 { font-size: 30px; }
+  .headline { margin-top: 8px; }
+  .dock { gap: 8px; padding-bottom: env(safe-area-inset-bottom); }
+  .transport { gap: 8px; }
+  .icon-btn { padding-inline: 12px; font-size: 13px; }
+  .speed { font-size: 12px; }
+  .speed select { padding-inline: 8px; }
+  .transport .text-link { margin-left: 0; min-height: 44px; display: inline-flex; align-items: center; }
+  .ticks { display: none; }
+  .scene-picker { width: 100%; }
+  .hud::before { background: linear-gradient(180deg, rgba(7,6,10,.65), transparent 24%, rgba(7,6,10,.85) 65%, var(--void)); }
+  .sound-gate { top: 100px; }
+}
+@media (max-height: 580px) {
+  .hud { overflow-y: auto; pointer-events: auto; }
+  .hud .dock { position: relative; inset: auto; margin-top: 24px; }
+  .narration { position: static; max-width: 36rem; }
+  .narration .body { max-height: none; }
+  .readouts { display: none; }
+  .disclaimer { display: none; }
+}
+@media (min-width: 700px) and (min-height: 740px) {
+  .site.lamp-home .hero h1 { font-size: clamp(64px, 10vh, 112px); }
+  .site.lamp-home .hero-verse { font-size: clamp(24px, 3.5vh, 34px); }
+}

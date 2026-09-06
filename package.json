@@ -6,7 +6,7 @@
   "homepage": "https://helives.dev/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/neorome/helives"
+    "url": "https://github.com/baney75/helives"
   },
   "scripts": {
     "dev": "vite",

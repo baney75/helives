@@ -27,6 +27,11 @@ export function App() {
 
   useEffect(() => {
     document.title = titleFor(page)
+    const main = document.querySelector<HTMLElement>('main')
+    if (main) {
+      main.tabIndex = -1
+      main.focus({ preventScroll: true })
+    }
   }, [page])
 
   return (
@@ -53,11 +58,14 @@ function handleSiteClick(event: MouseEvent<HTMLDivElement>, setHref: (href: stri
   if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
     return
   }
-  if (anchor.target && anchor.target !== '_self') return
+  if (anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return
   const next = new URL(anchor.href, window.location.origin)
   if (next.origin !== window.location.origin) return
+  // Keep native fragment navigation, including skip links and essay sections.
+  if (next.hash) return
   event.preventDefault()
   const href = `${next.pathname}${next.search}`
   window.history.pushState({}, '', href)
   setHref(href)
+  window.scrollTo(0, 0)
 }

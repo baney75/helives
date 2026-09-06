@@ -2,7 +2,7 @@
 
 Operating contract for agents. Home `Claude.md` does not apply here.
 
-Canonical repo: [neorome/helives](https://github.com/neorome/helives). Live: [helives.dev](https://helives.dev). Local: `~/Documents/Software/helives`.
+Canonical repo: [baney75/helives](https://github.com/baney75/helives). Live: [helives.dev](https://helives.dev). Local: `~/Documents/Software/helives`.
 
 This is a ministry site, not a SaaS product. Quoted Bible is KJV (public domain in the US). Original copy is exhortation, never presented as Scripture. The site is not a church, not a sacrament, and not a claim that God endorsed the software.
 

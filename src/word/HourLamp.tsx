@@ -17,9 +17,11 @@ export function HourLamp({ now }: { now?: Date }) {
       setAt(now)
       return
     }
+    if (!visible) return
+    setAt(new Date())
     const id = window.setInterval(() => setAt(new Date()), 1000)
     return () => window.clearInterval(id)
-  }, [now])
+  }, [now, visible])
 
   const passage = passageAt(at)
   const remain = msUntilNextHour(at)
@@ -51,7 +53,7 @@ export function HourLamp({ now }: { now?: Date }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Explore more
+            Explore more <span aria-hidden="true">↗</span>
             <span className="sr-only"> on Bible Gateway, opens in a new tab</span>
           </a>
         </p>

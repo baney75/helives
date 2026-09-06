@@ -8,12 +8,12 @@ import { HomePage } from './HomePage.tsx'
 const css = readFileSync(resolve('src/index.css'), 'utf8')
 
 describe('HomePage lamp', () => {
-  it('keeps the hourly Word and the NeoRome footer on one lamp', () => {
+  it('keeps the hourly Word and the site footer on one lamp', () => {
     const html = renderToStaticMarkup(createElement(HomePage, { now: new Date('2026-08-15T13:18:48.000Z') }))
     expect(html).toContain('lamp-home')
     expect(html).toContain('This hour')
     expect(html).toContain('Explore more')
-    expect(html).toContain('He Lives · NeoRome')
+    expect(html).toContain('He Lives')
     expect(html).toContain('King James Version, public domain')
     expect(html).toContain('not a church, not a sacrament')
   })
@@ -38,7 +38,7 @@ describe('HomePage lamp', () => {
       ''
     expect(hero).toMatch(/overflow:\s*hidden/)
     expect(hero).not.toMatch(/overflow:\s*auto/)
-    expect(css).not.toMatch(/overflow-y:\s*auto/)
+    // Actual home overflow is measured in HomePage.viewport.test.ts; other pages may scroll.
     expect(css).toMatch(/html:has\(\.lamp-home\),/)
     expect(css).toMatch(/grid-template-rows:\s*auto minmax\(0,\s*1fr\) auto/)
   })

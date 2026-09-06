@@ -1,6 +1,6 @@
 # He Lives runbook
 
-Canonical GitHub: `neorome/helives`  
+Canonical GitHub: `baney75/helives`
 Live site: `https://helives.dev`  
 Cloudflare account: BarnLabs (`f28b2a55054cbc8d998c5963ed34a0a7`)  
 Worker name: `helives`
@@ -41,3 +41,7 @@ Writes `demo/genesis-16x9.mp4` (gitignored) and copies to `~/Downloads/Genesis-H
 5. Load `AGENTS.md` skill table: helives-design, helives-three, helives-models, helives-voice, helives-gauntlet. Voice and 3D are required, not polish-later.
 6. Put Grok Imagine stills in `docs/targets/<book>/` before calling the mesh done.
 7. Ship path is implement → independent critic → merge. The implementer does not grade itself.
+
+## Interface checks
+
+With `pnpm dev` running, `node scripts/verify-refresh.mjs` checks navigation and playback and saves responsive screenshots in `demo/refresh/`. Set `HELIVES_PREVIEW_URL` to verify another deployment.

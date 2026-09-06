@@ -9,7 +9,7 @@ export function AfterwordPage() {
   return (
     <div className="site wide afterword">
       <SiteNav current="afterword" />
-      <main>
+      <main id="main-content">
         <section className="doubt-hero" aria-labelledby="doubt-title">
           <div className="doubt-aperture" aria-hidden="true" />
           <p className="hero-kicker">An honest question</p>

@@ -10,7 +10,7 @@ export function HomePage({ now }: HomePageProps) {
   return (
     <div className="site lamp-home">
       <SiteNav current="home" />
-      <main className="hero word-hero">
+      <main id="main-content" className="hero word-hero">
         <HourLamp now={now} />
       </main>
       <SiteFooter />
