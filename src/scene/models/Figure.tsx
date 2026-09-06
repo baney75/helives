@@ -70,7 +70,7 @@ export function Figure({
   const root = useRef<Group>(null)
   const clone = useRef<Group>(null)
   const fruit = useRef<Group>(null)
-  const gltf = useGLTF(SRC[role])
+  const gltf = useGLTF(SRC[role], false, false)
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
 
@@ -117,5 +117,5 @@ export function Figure({
   )
 }
 
-useGLTF.preload(SRC.man)
-useGLTF.preload(SRC.woman)
+useGLTF.preload(SRC.man, false, false)
+useGLTF.preload(SRC.woman, false, false)

@@ -1,7 +1,7 @@
 import { chromium } from 'playwright'
 import { mkdir, writeFile } from 'node:fs/promises'
 import assert from 'node:assert/strict'
-const base = process.env.HELIVES_PREVIEW_URL || 'http://127.0.0.1:5173'
+const base = process.env.HELIVES_PREVIEW_URL || 'http://127.0.0.1:8787'
 const out = 'demo/refresh'
 await mkdir(out, { recursive: true })
 const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--ignore-gpu-blocklist', '--autoplay-policy=no-user-gesture-required'] })

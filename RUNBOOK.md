@@ -44,4 +44,6 @@ Writes `demo/genesis-16x9.mp4` (gitignored) and copies to `~/Downloads/Genesis-H
 
 ## Interface checks
 
-With `pnpm dev` running, `node scripts/verify-refresh.mjs` checks navigation and playback and saves responsive screenshots in `demo/refresh/`. Set `HELIVES_PREVIEW_URL` to verify another deployment.
+After `pnpm build`, run `pnpm exec wrangler dev --port 8787`. Then `node scripts/verify-refresh.mjs` checks navigation and playback and saves responsive screenshots in `demo/refresh/`. Set `HELIVES_PREVIEW_URL` to verify another deployment.
+
+Use the Worker preview for release checks so the browser receives production security headers. The shipped GLB models use no Draco or Meshopt compression; keep those optional decoders disabled in both loading and preloading. Their unused WebAssembly initialization otherwise violates the site CSP.

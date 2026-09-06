@@ -124,7 +124,7 @@ function HeroFish({
   scale: number
 }) {
   const root = useRef<Group>(null)
-  const { scene } = useGLTF('/models/genesis/fish.glb')
+  const { scene } = useGLTF('/models/genesis/fish.glb', false, false)
   const model = useMemo(() => scene.clone(true), [scene])
   const tail = useMemo(() => model.getObjectByName('Tail'), [model])
   useFrame(({ clock }) => {
@@ -157,7 +157,7 @@ function HeroBird({
   scale: number
 }) {
   const root = useRef<Group>(null)
-  const { scene } = useGLTF('/models/genesis/bird.glb')
+  const { scene } = useGLTF('/models/genesis/bird.glb', false, false)
   const model = useMemo(() => scene.clone(true), [scene])
   const leftWing = useMemo(() => model.getObjectByName('LeftWing'), [model])
   const rightWing = useMemo(() => model.getObjectByName('RightWing'), [model])
@@ -181,5 +181,5 @@ function HeroBird({
   )
 }
 
-useGLTF.preload('/models/genesis/fish.glb')
-useGLTF.preload('/models/genesis/bird.glb')
+useGLTF.preload('/models/genesis/fish.glb', false, false)
+useGLTF.preload('/models/genesis/bird.glb', false, false)
