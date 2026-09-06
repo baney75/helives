@@ -39,3 +39,13 @@ describe('withSecurityHeaders', () => {
     expect(CSP).toContain("form-action 'none'")
   })
 })
+
+it('prevents injected HTML scripts while preserving existing cache semantics', () => {
+  const html = withSecurityHeaders(new Response('html', { headers: { 'content-type': 'text/html', 'cache-control': 'private, max-age=0' } }))
+  expect(html.headers.get('cache-control')).toBe('private, max-age=0, no-transform')
+  expect(html.headers.get('content-security-policy')).toBe(CSP)
+  const twice = withSecurityHeaders(html)
+  expect(twice.headers.get('cache-control')).toBe('private, max-age=0, no-transform')
+  const audio = withSecurityHeaders(new Response('audio', { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=3600' } }))
+  expect(audio.headers.get('cache-control')).toBe('public, max-age=3600')
+})

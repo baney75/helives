@@ -55,6 +55,13 @@ export function withSecurityHeaders(response: Response): Response {
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     headers.set(key, value)
   }
+  // Preserve our reviewed HTML: edge analytics injection conflicts with self-only CSP.
+  if (headers.get('content-type')?.includes('text/html')) {
+    const cache = headers.get('cache-control') ?? 'public, max-age=0, must-revalidate'
+    if (!cache.split(',').some((directive) => directive.trim().toLowerCase() === 'no-transform')) {
+      headers.set('cache-control', `${cache}, no-transform`)
+    }
+  }
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
