@@ -1882,3 +1882,6 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
 @media (max-height: 580px) and (min-width: 550px) {
   .site.lamp-home .hero-cite { margin: 4px 0; }
 }
+.faith-doc { max-width: 42rem; }
+.doc .faith-lead { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); line-height: 1.2; color: var(--fire); }
+.faith-reading-link { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 6px; }

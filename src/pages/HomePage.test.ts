@@ -15,7 +15,8 @@ describe('HomePage lamp', () => {
     expect(html).toContain('Explore more')
     expect(html).toContain('He Lives')
     expect(html).toContain('King James Version, public domain')
-    expect(html).toContain('not a church, not a sacrament')
+    // The user's editorial revision removes software disclaimers from public copy.
+    expect(html).not.toContain('God endorsed')
   })
 
   it('locks the home to one 100svh viewport instead of a scrollable document', () => {
