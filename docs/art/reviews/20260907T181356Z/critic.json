@@ -1,0 +1,24 @@
+{
+  "summary": "The proposal fails to address critical performance and accessibility risks associated with the current implementation of the art viewer and its transition logic.",
+  "verdict": "REVISE",
+  "items": [
+    {
+      "issue": "Potential memory leak and performance degradation due to uncontrolled interval timers in ArtViewer.",
+      "evidence": "src/art/ArtViewer.tsx: The setInterval for the 60-second rotation depends on [playing, paused, visible, failed, loaded, selected.id]. Frequent state updates to these dependencies will repeatedly clear and restart the interval, resetting the 250ms tick and potentially causing jitter in elapsed time calculation.",
+      "change": "Move the timing logic into a dedicated useInterval hook or use a requestAnimationFrame loop to ensure smooth time accumulation independent of React render cycles.",
+      "check": "Verify that elapsed.current increments linearly without jumps during state updates to other viewer properties."
+    },
+    {
+      "issue": "Accessibility failure: The ArtViewer dialog lacks a proper focus trap and relies on autoFocus on a 'Close' button, which may disrupt screen reader navigation of the artwork content.",
+      "evidence": "src/art/ArtViewer.tsx: <dialog ... onCancel={onClose} onClose={onClose}> ... <button type=\"button\" onClick={onClose} autoFocus>Close artwork</button></dialog>",
+      "change": "Implement a robust focus trap that allows navigation through the controls (Previous, Next, Select) before hitting the Close button, and ensure the dialog is correctly labeled for assistive technology.",
+      "check": "Test with a screen reader to ensure the user is not immediately forced to the Close button upon opening the viewer."
+    },
+    {
+      "issue": "Fragile image event handling: The 'ready' state depends on the onLoad event, which may not fire for cached images in some browser environments, leading to a stale image or a stuck transition.",
+      "evidence": "src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />",
+      "change": "Check the .complete property of the image element inside a useEffect hook immediately after mounting to handle cached images that have already loaded.",
+      "check": "Verify that artworks load and transition immediately when served from the browser cache."
+    }
+  ]
+}

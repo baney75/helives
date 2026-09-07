@@ -1,0 +1,24 @@
+{
+  "summary": "Resolve race conditions in artwork transitions, prevent memory leaks during playback, and synchronize auto-advance timers with manual navigation.",
+  "verdict": "PROPOSE",
+  "items": [
+    {
+      "issue": "Race condition in ArtBackdrop settle timer allows incorrect images to become the base layer during rapid switching.",
+      "evidence": "src/art/ArtBackdrop.tsx: setTimeout(() => dispatch({ type: 'settle', id }), 2400) is not tied to the current artwork prop.",
+      "change": "Update the settle useEffect to include 'artwork.id' in the dependency array and ensure the cleanup function clears the timeout.",
+      "check": "Rapidly switch artworks and verify the final displayed image matches the selected artwork ID."
+    },
+    {
+      "issue": "Accumulation of ArtScene components and image buffers during 'Play collection' sessions.",
+      "evidence": "src/art/ArtBackdrop.tsx: Maps over [state.base, state.incoming] without a mechanism to purge the base layer after settling.",
+      "change": "Modify the artTransition reducer to explicitly nullify the previous base layer once the incoming artwork is settled.",
+      "check": "Inspect DOM during playback to ensure only the active ArtScene remains after transition completion."
+    },
+    {
+      "issue": "Manual navigation in ArtViewer conflicts with the auto-advance interval, causing potential double-skips.",
+      "evidence": "src/art/ArtViewer.tsx: move() resets elapsed.current but does not clear or reset the active setInterval.",
+      "change": "Wrap the auto-advance logic in a useEffect that depends on selected.id, effectively resetting the interval on every manual move.",
+      "check": "Click 'Next' rapidly and verify the auto-advance timer restarts from zero for each new artwork."
+    }
+  ]
+}

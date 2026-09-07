@@ -1,0 +1,115 @@
+{
+  "model": "gemma-4-31b",
+  "roles": [
+    {
+      "role": "creator",
+      "report": {
+        "summary": "Improve scene variation and immersive viewing by refining movement logic and transition timing.",
+        "verdict": "PROPOSE",
+        "items": [
+          {
+            "issue": "Limited scene variation: movement is based on a simple parity check of the artwork ID sum, leading to only two possible directions.",
+            "evidence": "src/art/ArtScene.tsx: const direction = artwork.id.split('').reduce((sum, letter) => sum + letter.charCodeAt(0), 0) % 2 ? 1 : -1",
+            "change": "Introduce more varied movement vectors (e.g., using modulo 4 for X/Y directions) and vary the scale range based on artwork properties to create more distinct 'camera' feels per scene.",
+            "check": "Verify that different artworks exhibit distinct movement patterns beyond simple left/right mirroring."
+          },
+          {
+            "issue": "Abrupt transition timing: the settle timer is fixed at 2400ms, which may not align with the 2200ms CSS opacity transition for a seamless crossfade.",
+            "evidence": "src/art/ArtBackdrop.tsx: const timer = setTimeout(() => dispatch({ type: 'settle', id }), 2400); src/index.css: .art-scene { transition:opacity 2200ms ease; }",
+            "change": "Synchronize the settle timeout with the CSS transition duration or implement a slight overlap to ensure the base layer is not removed before the incoming layer is fully opaque.",
+            "check": "Observe the transition between artworks to ensure no flickering or abrupt disappearance of the base layer."
+          },
+          {
+            "issue": "Static atmosphere: SceneAir elements use fixed animation durations regardless of the artwork's specific mood or palette.",
+            "evidence": "src/index.css: @keyframes art-light-breathe { ... } animation:art-light-breathe 24s ease-in-out infinite alternate;",
+            "change": "Pass artwork-specific timing modifiers (e.g., from catalog.ts) to the SceneAir component to vary the 'breath' and 'drift' speeds based on the scene's palette or weather.",
+            "check": "Confirm that 'stars' or 'water' scenes have distinct atmospheric rhythms compared to standard scenes."
+          }
+        ]
+      }
+    },
+    {
+      "role": "critic",
+      "report": {
+        "summary": "The proposal fails to address critical performance and accessibility risks associated with the current implementation of the art viewer and its transition logic.",
+        "verdict": "REVISE",
+        "items": [
+          {
+            "issue": "Potential memory leak and performance degradation due to uncontrolled interval timers in ArtViewer.",
+            "evidence": "src/art/ArtViewer.tsx: The setInterval for the 60-second rotation depends on [playing, paused, visible, failed, loaded, selected.id]. Frequent state updates to these dependencies will repeatedly clear and restart the interval, resetting the 250ms tick and potentially causing jitter in elapsed time calculation.",
+            "change": "Move the timing logic into a dedicated useInterval hook or use a requestAnimationFrame loop to ensure smooth time accumulation independent of React render cycles.",
+            "check": "Verify that elapsed.current increments linearly without jumps during state updates to other viewer properties."
+          },
+          {
+            "issue": "Accessibility failure: The ArtViewer dialog lacks a proper focus trap and relies on autoFocus on a 'Close' button, which may disrupt screen reader navigation of the artwork content.",
+            "evidence": "src/art/ArtViewer.tsx: <dialog ... onCancel={onClose} onClose={onClose}> ... <button type=\"button\" onClick={onClose} autoFocus>Close artwork</button></dialog>",
+            "change": "Implement a robust focus trap that allows navigation through the controls (Previous, Next, Select) before hitting the Close button, and ensure the dialog is correctly labeled for assistive technology.",
+            "check": "Test with a screen reader to ensure the user is not immediately forced to the Close button upon opening the viewer."
+          },
+          {
+            "issue": "Fragile image event handling: The 'ready' state depends on the onLoad event, which may not fire for cached images in some browser environments, leading to a stale image or a stuck transition.",
+            "evidence": "src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />",
+            "change": "Check the .complete property of the image element inside a useEffect hook immediately after mounting to handle cached images that have already loaded.",
+            "check": "Verify that artworks load and transition immediately when served from the browser cache."
+          }
+        ]
+      }
+    },
+    {
+      "role": "revision",
+      "report": {
+        "summary": "Address critical reliability and accessibility gaps in the ArtViewer and ArtScene components, focusing on cached image handling and focus management.",
+        "verdict": "PROPOSE",
+        "items": [
+          {
+            "issue": "Cached images may not trigger onLoad, causing transitions to hang.",
+            "evidence": "src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />",
+            "change": "In ArtScene, add a useEffect that checks image.current.complete immediately after mount to call setLoaded(true) and onReady() if the image is already cached.",
+            "check": "Verify that artworks transition immediately when served from browser cache."
+          },
+          {
+            "issue": "Dialog focus management is disruptive; autoFocus on 'Close' bypasses artwork content and controls.",
+            "evidence": "src/art/ArtViewer.tsx: <button type=\"button\" onClick={onClose} autoFocus>Close artwork</button>",
+            "change": "Remove autoFocus from the Close button. Implement a focus trap or ensure the initial focus is set to the dialog container or the first navigation control (Previous).",
+            "check": "Confirm screen reader focus begins at the start of the dialog content rather than the Close button."
+          },
+          {
+            "issue": "Interval-based timing in ArtViewer is susceptible to jitter due to frequent dependency resets.",
+            "evidence": "src/art/ArtViewer.tsx: setInterval(() => { ... }, 250) depends on [playing, paused, visible, failed, loaded, selected.id]",
+            "change": "Refactor the 60-second rotation to use a single stable interval or requestAnimationFrame, calculating elapsed time based on a timestamp delta rather than a 250ms accumulator.",
+            "check": "Verify that the 60-second rotation remains accurate regardless of state updates to 'visible' or 'loaded'."
+          }
+        ]
+      }
+    },
+    {
+      "role": "final_critic",
+      "report": {
+        "summary": "The proposed revisions address critical race conditions in image loading, accessibility failures in focus management, and timing drift in the rotation logic.",
+        "verdict": "ACCEPT",
+        "items": [
+          {
+            "issue": "Cached images bypass onLoad, potentially hanging the transition state in ArtBackdrop.",
+            "evidence": "src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />",
+            "change": "Add a useEffect in ArtScene to check image.current.complete on mount and trigger onReady() if true.",
+            "check": "Test rapid navigation between previously viewed artworks to ensure immediate transition."
+          },
+          {
+            "issue": "Focus management in ArtViewer is suboptimal; autoFocus on the Close button skips the primary content.",
+            "evidence": "src/art/ArtViewer.tsx: <button type=\"button\" onClick={onClose} autoFocus>Close artwork</button>",
+            "change": "Remove autoFocus from the Close button; set initial focus to the dialog or the first control.",
+            "check": "Verify tab order and screen reader entry point upon opening the viewer."
+          },
+          {
+            "issue": "The rotation timer in ArtViewer uses an accumulator in a setInterval that resets frequently due to dependency changes.",
+            "evidence": "src/art/ArtViewer.tsx: setInterval(() => { ... }, 250) depends on [playing, paused, visible, failed, loaded, selected.id]",
+            "change": "Refactor to use a timestamp-based delta calculation to prevent timing drift during state updates.",
+            "check": "Verify 60-second rotation accuracy when toggling 'Pause motion' or switching tabs."
+          }
+        ]
+      }
+    }
+  ],
+  "note": "Source-only proposal review; no rendered visual or implementation verdict.",
+  "estimatedRunUsd": 0.04906809
+}

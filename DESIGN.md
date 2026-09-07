@@ -116,3 +116,11 @@ The implementer captures screenshots as evidence. The **visual critic** (separat
 ## Optional music
 
 Quiet instrumental music accompanies the rotating Scripture as well as reading pages and Genesis. Playback stays off until explicitly enabled and does not reset at verse rollover. Music settings use a native top-layer popover so small viewports do not clip the volume or track selector. See `docs/MUSIC.md`.
+
+## September 7 refinement
+
+The home keeps its engraved landscape direction. A lower-right artwork caption sits in its own quiet tonal area, separate from Scripture and foreground branches. TV mode uses a darker text-safe area. Secondary text is lighter, with home footer copy at 12–13px and editorial source notes at 15px.
+
+78 SVGs now supply the experience: 66 book illustrations and twelve exact-reference scenes for Psalms and John. Shaded leaves, engraved bark, contour-following hills and masonry side faces add depth. Camera direction varies deterministically by scene; small composited light, haze and water marks follow scene metadata. Reduced motion and pause stop movement. The gallery supports opt-in one-minute collection playback, quiet idle controls, last-decoded-image crossfades and explicit recovery when an image fails.
+
+Faith uses a restrained engraved tomb heading; Afterword has a one-column mobile hero and comfortable source typography. Creator–critic Cerebras reports are saved under docs/art/reviews and tested against actual browser behavior; model agreement is not the visual release gate.

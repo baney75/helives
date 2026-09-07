@@ -6,9 +6,12 @@
     "bookTitle": "Genesis",
     "description": "Vast newly formed mountains above a primordial sea at dawn, a luminous horizon breaking the deep indigo night, distant forest silhouettes and clouds opening in bands of gold. Monumental and spacious.",
     "family": "mountain",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 500,
     "file": "genesis.svg",
-    "bytes": 78244,
-    "sha256": "0b1b1dec1f21fa09f8914518b9343b02828e1072e03d917311685d66b601bd95"
+    "bytes": 139514,
+    "sha256": "e6fddff4ed6c813be982505c7b78e65c1a1fb47c79e00a1313204d905fa776fd"
   },
   {
     "id": "exodus",
@@ -17,9 +20,12 @@
     "bookTitle": "Exodus",
     "description": "Two towering sculpted walls of dark water, a narrow dry path between them receding toward a distant column of amber light. Low viewpoint, immense scale, white foam etched into the wave edges.",
     "family": "sea",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 600,
     "file": "exodus.svg",
-    "bytes": 114589,
-    "sha256": "89e72a6cae82110746fdb98999cd53e53b234aa87303013355d609814926c150"
+    "bytes": 102360,
+    "sha256": "4639f2f36a6f22e3b9f9e9ed034b868356156c56979dba5cf4eaf3ad8e70567e"
   },
   {
     "id": "leviticus",
@@ -28,9 +34,12 @@
     "bookTitle": "Leviticus",
     "description": "A wilderness tabernacle courtyard, intricately woven curtains, bronze altar and rising incense, desert ridges beyond. No people or flame engulfing the structure. Architectural precision and woven detail.",
     "family": "temple",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 450,
     "file": "leviticus.svg",
-    "bytes": 83838,
-    "sha256": "1e57aa714a47603d580fbd565d249f02948bd0affed52d32bddcaf3b3aa6113b"
+    "bytes": 140456,
+    "sha256": "f4b23d7b399b1c1bc83e7d3a9fe517e54a5e8ae8d865969e45a9ab128a820a81"
   },
   {
     "id": "numbers",
@@ -39,9 +48,12 @@
     "bookTitle": "Numbers",
     "description": "A great ordered camp of small tents under a vast star field, a distant luminous cloud on the horizon, sweeping dunes and a winding path. Human scale against immense wilderness.",
     "family": "desert",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 550,
     "file": "numbers.svg",
-    "bytes": 63969,
-    "sha256": "85d92c90dadd98ed585ca71873816dbfe4fc939828b8822b6aeeb89ad2922e0b"
+    "bytes": 72460,
+    "sha256": "bee78f118bbd669c12f9d2709913c820a2765d5e6b111d0df2965589c12ec0d5"
   },
   {
     "id": "deuteronomy",
@@ -50,9 +62,12 @@
     "bookTitle": "Deuteronomy",
     "description": "A high desert overlook across the Jordan valley, terraced ridges, a distant river and fertile land shining beyond. A foreground stone cairn anchors the composition.",
     "family": "mountain",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 480,
     "file": "deuteronomy.svg",
-    "bytes": 81986,
-    "sha256": "b6824e85dff70ae45fcf06ddf210088c12f2f239820f7a33f6b46cb388c227da"
+    "bytes": 142861,
+    "sha256": "2ed46b6cda3f7f7169bb31bf03658a4804a366eb258d380aee75c686940a7dc1"
   },
   {
     "id": "joshua",
@@ -61,9 +76,12 @@
     "bookTitle": "Joshua",
     "description": "Twelve rough standing memorial stones beside a river crossing, a distant ancient walled city rising on a plateau, dawn mist and clustered olive trees.",
     "family": "river",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 520,
     "file": "joshua.svg",
-    "bytes": 165725,
-    "sha256": "c1eab0795fd365033115636cb1d0a93ab916278dc80e38dbe02154f944822a72"
+    "bytes": 223073,
+    "sha256": "1a10cc78693d4546dc13b6d762725730140dd77b1ab7d1f767e98d7b2b907365"
   },
   {
     "id": "judges",
@@ -72,9 +90,12 @@
     "bookTitle": "Judges",
     "description": "Three ancient clay jars, one broken with an exposed torch, on a rocky ledge above a dark valley dotted with faraway campfires. Strong chiaroscuro, a dramatic sweeping moonlit ridge.",
     "family": "mountain",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 610,
     "file": "judges.svg",
-    "bytes": 103310,
-    "sha256": "087bbce9d0ec8f4fb71ffe273f7b8248735a5e0b21323eeaadb909043b4b82d0"
+    "bytes": 164277,
+    "sha256": "8f5883f16ef2e50d182efbdca6e60620deaff9c615468388122124122aad8166"
   },
   {
     "id": "ruth",
@@ -83,9 +104,12 @@
     "bookTitle": "Ruth",
     "description": "An abundant barley field in late golden light, carefully drawn bowed seed heads in the foreground, gathered sheaves, a small ancient village among hills. Intimate warmth and generosity.",
     "family": "harvest",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 580,
     "file": "ruth.svg",
-    "bytes": 291543,
-    "sha256": "cf2465605ae53a75fda870f37e7b617af483999c23df1baf0e6d404b7fb2bdc3"
+    "bytes": 342607,
+    "sha256": "07a0f727b8322b71f19638dc3bfc6af7ad4eecb0e93f64d03ded11b5fecb1261"
   },
   {
     "id": "1-samuel",
@@ -94,9 +118,12 @@
     "bookTitle": "1 Samuel",
     "description": "An ancient oil lamp burning in a stone sanctuary at night, its small flame illuminating carved stone and folded linen, a dark arched doorway in the background.",
     "family": "interior",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 630,
     "file": "1-samuel.svg",
-    "bytes": 62629,
-    "sha256": "b3dc0c356753086f233e455aeaf111fe25baaab159653e081024743a908231fa"
+    "bytes": 71151,
+    "sha256": "a4e2265a0734bb2e3f6861c6d9dac269db990030f261bc465c460af6879639a0"
   },
   {
     "id": "2-samuel",
@@ -105,9 +132,12 @@
     "bookTitle": "2 Samuel",
     "description": "Ancient Jerusalem as a compact terraced stone city on a dramatic hill, layered walls, cedars, a curving approach road and luminous clouds over distant hills.",
     "family": "city",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 470,
     "file": "2-samuel.svg",
-    "bytes": 112853,
-    "sha256": "6b9be0e5fcf8c0a1e9740b71393d2c98d6123201f99d9db60bd849cd648dfe6d"
+    "bytes": 135642,
+    "sha256": "fdc0052d0b6a9ec073142951988b3bb4d33ca5a7bd370db5dc81d0921c18c828"
   },
   {
     "id": "1-kings",
@@ -116,9 +146,12 @@
     "bookTitle": "1 Kings",
     "description": "A monumental ancient temple portico with two bronze columns, cedar beams and deeply carved stone steps. Angled early light and geometric shadows across the courtyard.",
     "family": "temple",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 510,
     "file": "1-kings.svg",
-    "bytes": 79844,
-    "sha256": "cc600e990beae496d8ad48781b7c23b9cf8c97d168b580c9c37b6b245565bc1e"
+    "bytes": 136413,
+    "sha256": "ad86f1bdf9fa7fe43bc7aaa6dcc40346d88aeaf3b4260ac0a6c4f1652cf3ff58"
   },
   {
     "id": "2-kings",
@@ -127,9 +160,12 @@
     "bookTitle": "2 Kings",
     "description": "A ruined ancient gateway with breached stone walls, a small green shoot emerging between foreground stones, deep blue evening and a thin gold horizon. Lament without spectacle.",
     "family": "gate",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 590,
     "file": "2-kings.svg",
-    "bytes": 149197,
-    "sha256": "966974948a796b272b1e8c387009964973ecb597e5d647e535d6bc8590f7edea"
+    "bytes": 196582,
+    "sha256": "bf2337b8cc90322cfd08e770356ffc66ad9acd1ad177de0981bdb67252c798be"
   },
   {
     "id": "1-chronicles",
@@ -138,9 +174,12 @@
     "bookTitle": "1 Chronicles",
     "description": "A close foreground of carefully cut foundation stones and chisels, beyond them the rising outlines of an ancient temple, cedar trunks and an ordered architectural rhythm.",
     "family": "temple",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 620,
     "file": "1-chronicles.svg",
-    "bytes": 82905,
-    "sha256": "13a5d43fbf89029d0d75edff63d53e9aa0703baf31fe949e3aaef8c41c0320fc"
+    "bytes": 139110,
+    "sha256": "4ba306ae9ab3f0052e577e898ec06436e0e7f6c9dcdeac00266f65707603f7fb"
   },
   {
     "id": "2-chronicles",
@@ -149,9 +188,12 @@
     "bookTitle": "2 Chronicles",
     "description": "A great temple courtyard seen along stone steps toward a luminous open doorway, two tall columns, braziers sending slender incense trails into the evening sky.",
     "family": "temple",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 540,
     "file": "2-chronicles.svg",
-    "bytes": 93652,
-    "sha256": "d08a27752082084809b28f7645be279b8eaec6d05d07029fc13a9e806e9fa7a9"
+    "bytes": 150192,
+    "sha256": "cb4ac636a60c2b7897db4c9863cb65beb12130e02619f4b75f37527f907487f5"
   },
   {
     "id": "ezra",
@@ -160,9 +202,12 @@
     "bookTitle": "Ezra",
     "description": "Partially rebuilt stone foundations among old ruins, timber beams and stacked dressed stones, dawn over Jerusalem hills. The visual emphasis is restoration through careful work.",
     "family": "city",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 560,
     "file": "ezra.svg",
-    "bytes": 116089,
-    "sha256": "854c1b231e6b9f0ef6ccb53203967a42bc8faafc6c43dc4c31bf466438bddc64"
+    "bytes": 138789,
+    "sha256": "2e53df236496c6b876f91192828dbfc6654f24238492ee1ee6a76abe9e60d1e0"
   },
   {
     "id": "nehemiah",
@@ -171,9 +216,12 @@
     "bookTitle": "Nehemiah",
     "description": "An ancient city wall being restored, strong repeating crenellations, a narrow watchtower, scattered builders' tools and a broad sunlit valley outside the wall.",
     "family": "tower",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 490,
     "file": "nehemiah.svg",
-    "bytes": 50943,
-    "sha256": "e5bf7471acb1df595757dbc32b7b9ada7b22503038ffcebbe5c110a9352b29e3"
+    "bytes": 59894,
+    "sha256": "d613984dee1fb9045942a3be190272ca90c7da57a79706c0677df4b46022904b"
   },
   {
     "id": "esther",
@@ -182,9 +230,12 @@
     "bookTitle": "Esther",
     "description": "An elegant ancient Persian palace courtyard, a tall carved doorway, hanging woven curtains, flowering branches and an empty royal seat glimpsed in deep shadow. Jewel-like amber and midnight blue.",
     "family": "gate",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 530,
     "file": "esther.svg",
-    "bytes": 156601,
-    "sha256": "7251dab120f9f6783c9e492a1a9e62e9c1778786a46a875e8edc21390eb59b86"
+    "bytes": 205209,
+    "sha256": "3bac1b9c911b7e05b3692141434c26c4309341ff7d7fa9c07624c86b5cb0e611"
   },
   {
     "id": "job",
@@ -193,9 +244,12 @@
     "bookTitle": "Job",
     "description": "A monumental spiral of storm clouds over empty jagged mountains, fine rain lines and a single narrow shaft of warm light touching the valley. Awe and scale without a visible divine figure.",
     "family": "storm",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 600,
     "file": "job.svg",
-    "bytes": 62271,
-    "sha256": "5e5b4d8991641041f6b565cf83bb1723c30875cbf2da3d48475038f20b50c2c4"
+    "bytes": 74831,
+    "sha256": "3cb19e22e2be896231ad126203646ffc4243ccaf16d45d3f73f4dd70dad7984d"
   },
   {
     "id": "psalms",
@@ -204,9 +258,12 @@
     "bookTitle": "Psalms",
     "description": "A clear river reflecting a luminous dawn, sweeping mountain ranges, a spreading olive tree on the near bank and soft ripples. Deep atmospheric perspective and detailed foreground leaves.",
     "family": "river",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 570,
     "file": "psalms.svg",
-    "bytes": 166233,
-    "sha256": "236deb087a2a371fce0b1b5e6525fac7168203c2b63dc1758e1b1f5504b50904"
+    "bytes": 223141,
+    "sha256": "8e82cf5896f3b93c3d20c3537c34ed5980ad2df58efc3062823e5fec79dc1c6a"
   },
   {
     "id": "proverbs",
@@ -215,9 +272,12 @@
     "bookTitle": "Proverbs",
     "description": "A narrow stone path climbing between ancient olive trees toward a distant sunlit doorway, a small lamp on a low foreground wall. Ordered, measured, quietly luminous.",
     "family": "gate",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 510,
     "file": "proverbs.svg",
-    "bytes": 86998,
-    "sha256": "106088d25f76a82da6fd137f1014c58f68da6109c19e0f95ee7193b09674eb8b"
+    "bytes": 134662,
+    "sha256": "7b5e9e6e7ccf52e9f02060f943ed2e051846083b02bdd92105a6fcd59015a687"
   },
   {
     "id": "ecclesiastes",
@@ -226,9 +286,12 @@
     "bookTitle": "Ecclesiastes",
     "description": "A single old tree with four subtly different branches suggesting growth, full leaves, falling leaves and bare winter, distant terraces beneath a turning circular sky. Organic, never an infographic.",
     "family": "garden",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 460,
     "file": "ecclesiastes.svg",
-    "bytes": 145219,
-    "sha256": "bd2113bcd4e9b555031c79074cd3a3030b41d46e4e00c9a170e7988410d0cb68"
+    "bytes": 205786,
+    "sha256": "d96169f09e6ce72838c4252fec44e01b9e1919c9577036428d56397723a1d5d4"
   },
   {
     "id": "song-of-solomon",
@@ -237,9 +300,12 @@
     "bookTitle": "Song of Solomon",
     "description": "A lush walled garden with pomegranates, lilies, climbing vines and a small fountain under moonlight. Layered botanical detail, a graceful stone arch and warm gold fruit.",
     "family": "garden",
+    "palette": "jade",
+    "weather": "stars",
+    "horizon": 580,
     "file": "song-of-solomon.svg",
-    "bytes": 169188,
-    "sha256": "2c432e1bf450e03ce0080754c91d5758eb6cbbafb397523b6cf7a25a4643689a"
+    "bytes": 220309,
+    "sha256": "b1cb891528b9ecfaf580e6d03ec207f4b8fffadef63b37876c749c9ef05d6fb0"
   },
   {
     "id": "isaiah",
@@ -248,9 +314,12 @@
     "bookTitle": "Isaiah",
     "description": "A grand arid canyon transformed by flowering shoots along a new stream, distant mountains and radiant dawn clouds. Foreground blossoms rendered with delicate engraved detail.",
     "family": "desert",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 520,
     "file": "isaiah.svg",
-    "bytes": 114796,
-    "sha256": "ad4aa0cbfba7f86946c17f0e2524cb188181dd24461e51ca0c3151f2716de3bc"
+    "bytes": 123310,
+    "sha256": "e2975a4d6d47193c10dfef020f0b58f1407629fb9b97d366f574d4d8b799333e"
   },
   {
     "id": "jeremiah",
@@ -259,9 +328,12 @@
     "bookTitle": "Jeremiah",
     "description": "A carefully shaped clay vessel on a potter's wheel in a shadowed workshop, other vessels along a stone shelf, a window opening onto distant hills. Rich earthen tones and quiet side light.",
     "family": "interior",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 610,
     "file": "jeremiah.svg",
-    "bytes": 52290,
-    "sha256": "4e6e2fbaabfea079ad4ccbf7d5069a12bc32f94270e3a128983f3ccf0e06601c"
+    "bytes": 60766,
+    "sha256": "c20ffb58103eb8aab1238cff23b3c00ac8ca85b9803c4df52e7fe42699e26c1b"
   },
   {
     "id": "lamentations",
@@ -270,9 +342,12 @@
     "bookTitle": "Lamentations",
     "description": "Deserted ancient stone steps and a broken arch in a ruined city at blue twilight, a few weeds between stones, a small warm light in a distant window. Restrained grief and hope.",
     "family": "city",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 640,
     "file": "lamentations.svg",
-    "bytes": 122125,
-    "sha256": "397b489f85b9e20f1737fd5351b8a42aea7549f9f28338f3a472c243b168c4a2"
+    "bytes": 144939,
+    "sha256": "15b024ddfee0bd55d85147d1935a2436ef2183b81880fe5f44a99d241554b34b"
   },
   {
     "id": "ezekiel",
@@ -281,9 +356,12 @@
     "bookTitle": "Ezekiel",
     "description": "A broad dry valley beginning to green beside a flowing river, monumental distant clouds with subtle concentric wheel-like light patterns. Symbolic landscape, no bones or visible divine figure.",
     "family": "river",
+    "palette": "jade",
+    "weather": "storm",
+    "horizon": 500,
     "file": "ezekiel.svg",
-    "bytes": 164827,
-    "sha256": "6da655429c15b84474170fe0087198344b1598d76596e08baecd041154228fcc"
+    "bytes": 221148,
+    "sha256": "88a614e4809ef8a9ee334fd7478942d521cf5f1bd601020910da6937325a609c"
   },
   {
     "id": "daniel",
@@ -292,9 +370,12 @@
     "bookTitle": "Daniel",
     "description": "Two noble lions resting peacefully in a vast stone chamber, an opening high above admitting a shaft of moonlight, detailed manes and quiet strength. No people, no aggression.",
     "family": "interior",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 550,
     "file": "daniel.svg",
-    "bytes": 68955,
-    "sha256": "eb806b494557c2f9bc59b9fe5ab7443a8b35b9ac8d3aa474f209d84aa8f1ad74"
+    "bytes": 77635,
+    "sha256": "15fe9410897542f12cee444b5ba36a1eeb00b1ba1a3d64a4c866f815b16870a2"
   },
   {
     "id": "hosea",
@@ -303,9 +384,12 @@
     "bookTitle": "Hosea",
     "description": "An ancient doorway standing open in a weathered stone farmhouse, an overgrown path leading back through vineyard rows, dawn light spilling across the threshold.",
     "family": "gate",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 530,
     "file": "hosea.svg",
-    "bytes": 84078,
-    "sha256": "109ce52359d9270d5f108036400557e7cbfa64671d32d1e2157175240aa60159"
+    "bytes": 132328,
+    "sha256": "c9051375c4a1139a9be8be7590b5b723a8d677e5abf2d961d8a5b985aa1c23b3"
   },
   {
     "id": "joel",
@@ -314,9 +398,12 @@
     "bookTitle": "Joel",
     "description": "A parched terraced field receiving the first rain, dark clouds parting over distant hills, fresh shoots and bright droplets on foreground barley. A dramatic diagonal sweep of light.",
     "family": "harvest",
+    "palette": "jade",
+    "weather": "storm",
+    "horizon": 590,
     "file": "joel.svg",
-    "bytes": 281936,
-    "sha256": "bac1b6c5a1b709f480820c2105fad1c81dbf6a1069359e7b10cd8f5b1008935e"
+    "bytes": 341373,
+    "sha256": "c01a76648d4dd296e7a094b8873135062afe3b8f677c040419cdfd0d957a5521"
   },
   {
     "id": "amos",
@@ -325,9 +412,12 @@
     "bookTitle": "Amos",
     "description": "A powerful river cascading through an ancient stone channel into a broad valley, tall waterfalls in the distance, detailed foaming curves and sturdy rocks.",
     "family": "river",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 480,
     "file": "amos.svg",
-    "bytes": 168658,
-    "sha256": "13c39d36880ac2d3f6d698bb3077303e1b84c3c7354f1ce2cc300b455cade2f5"
+    "bytes": 225716,
+    "sha256": "fc373b45043ad9b95616d350dc79c0ae027185db2a34c03653e8e5f7ad9cd7d8"
   },
   {
     "id": "obadiah",
@@ -336,9 +426,12 @@
     "bookTitle": "Obadiah",
     "description": "An imposing red sandstone mountain fortress high on cliffs, long winding steps climbing toward narrow gates, a vast lowering sky and a distant golden horizon.",
     "family": "tower",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 440,
     "file": "obadiah.svg",
-    "bytes": 49682,
-    "sha256": "9b4668bb84d3e770a50a8aa15d6964e1041a30a60c256d68a1cff83f54a949f2"
+    "bytes": 58634,
+    "sha256": "09f313efa51819c1d55720fba6e3cae26c919a409c35a53939a8a5ea704470f7"
   },
   {
     "id": "jonah",
@@ -347,9 +440,12 @@
     "bookTitle": "Jonah",
     "description": "A great whale silhouette beneath translucent ocean waves, a small ancient sailing boat far above, a dramatic curve of water and a distant dawn-lit coast. Gentle natural scale, not cartoon.",
     "family": "sea",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 650,
     "file": "jonah.svg",
-    "bytes": 86815,
-    "sha256": "afe0a52ffbc9e259101105fa4acbf62d1271e787a04820a9a8cc0d0f76bc8485"
+    "bytes": 95361,
+    "sha256": "5d59117ab97ad055c8e2b7a2b7869b1e96769bbdbaa54c77bb08d3fbb636d239"
   },
   {
     "id": "micah",
@@ -358,9 +454,12 @@
     "bookTitle": "Micah",
     "description": "A peaceful fig tree and grapevine shading an old stone courtyard, a simple wooden seat, fields and a small village beyond. Carefully drawn leaves, warm pastoral light.",
     "family": "garden",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 560,
     "file": "micah.svg",
-    "bytes": 154555,
-    "sha256": "c91f7df1b3ed612506f82f6c4b718c01cdbac3de7daa97f5ade32fbfd3596f16"
+    "bytes": 206012,
+    "sha256": "d863482e87f7399ccca17f92eff3860803011dd13398065bfcdce85dfe29afa6"
   },
   {
     "id": "nahum",
@@ -369,9 +468,12 @@
     "bookTitle": "Nahum",
     "description": "A vast ancient fortified city beside a river under heavy storm clouds, rain sweeping across massive stone gates and carved walls. A distant sliver of light, no violence.",
     "family": "city",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 510,
     "file": "nahum.svg",
-    "bytes": 112157,
-    "sha256": "f1e179f1ccde0972e4d70c8131c4733a10585d800889a7a48270649e2d18ab2a"
+    "bytes": 134784,
+    "sha256": "0d1f0865253ce2e6abc84a663622d41dc888c64a6a8ce7371f9e334b9435e0fe"
   },
   {
     "id": "habakkuk",
@@ -380,9 +482,12 @@
     "bookTitle": "Habakkuk",
     "description": "A lone stone watchtower on a high ridge overlooking dry olive terraces, a bare foreground fig branch, a luminous sunrise beyond the mountains.",
     "family": "tower",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 470,
     "file": "habakkuk.svg",
-    "bytes": 48835,
-    "sha256": "e304fc6470ae81580e3493b10925973a4c15d19f34cad06934e00fef09b96ffd"
+    "bytes": 57836,
+    "sha256": "2bbe0bba09f368410d9ac6d94b8e5791658c8ade4dfe9b02330d94773a96300f"
   },
   {
     "id": "zephaniah",
@@ -391,9 +496,12 @@
     "bookTitle": "Zephaniah",
     "description": "An ancient city at the moment storm clouds clear, scattered flowering branches in the foreground and warm light flowing into a quiet square. Renewal and shelter.",
     "family": "city",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 580,
     "file": "zephaniah.svg",
-    "bytes": 181551,
-    "sha256": "6ee5367e2d6cba44ae4810704715082075987049a832754e62da9e28964140b5"
+    "bytes": 204284,
+    "sha256": "bac831da022d31d29c477bfd1c1e3fc73f14bd19177a9e6b3273524a34257cae"
   },
   {
     "id": "haggai",
@@ -402,9 +510,12 @@
     "bookTitle": "Haggai",
     "description": "Stone pillars and cedar beams of a temple under reconstruction, a carefully laid courtyard and tools in the foreground, warm dawn over scaffolding made of timber.",
     "family": "temple",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 540,
     "file": "haggai.svg",
-    "bytes": 84307,
-    "sha256": "d6a1b8576d561ccaa1c0fcb4604bce38268e69655336ef43f3478a65393634d6"
+    "bytes": 141025,
+    "sha256": "4458ff67242047cf20cb9e0f525916ddaa3ae22ad2eec8512bb0a90522799a5b"
   },
   {
     "id": "zechariah",
@@ -413,9 +524,12 @@
     "bookTitle": "Zechariah",
     "description": "A seven-branched golden lampstand between two tall olive trees, richly drawn leaves and roots, a deep indigo landscape and soft luminous sky. Symmetrical but organic, no text.",
     "family": "garden",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 520,
     "file": "zechariah.svg",
-    "bytes": 197356,
-    "sha256": "335d1c51c6d87d2b0270757650b1d786b7fa050a708a420cc53f37871a739271"
+    "bytes": 305375,
+    "sha256": "f7f6ca2f07c2b6db5b08e487f30a0b4304431d81fad0f27916d22f4772f675bd"
   },
   {
     "id": "malachi",
@@ -424,9 +538,12 @@
     "bookTitle": "Malachi",
     "description": "A brilliant low sun above rolling hills, fine rays reaching across frost-covered fields and a quiet ancient stone settlement. Dark cool foreground, warm luminous horizon.",
     "family": "mountain",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 600,
     "file": "malachi.svg",
-    "bytes": 77232,
-    "sha256": "c90ea0a68b512a7a4e65412838de92c33d07884beef21134872ce0831abcb30e"
+    "bytes": 138668,
+    "sha256": "c11543de7e93cf97bbbafac62c344f6bc7d437fbc5abfea9db876d688d233ba9"
   },
   {
     "id": "matthew",
@@ -435,9 +552,12 @@
     "bookTitle": "Matthew",
     "description": "A broad hillside above the Sea of Galilee, ancient footpaths and wildflowers, a distant city catching first light, luminous clouds shaped by a wide horizon. No portraits.",
     "family": "mountain",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 490,
     "file": "matthew.svg",
-    "bytes": 140044,
-    "sha256": "e6b5f64b9fd1c36613e9f7c9fcb5c2977f02767f03b1ce3fbc2d19517e294b1b"
+    "bytes": 201019,
+    "sha256": "9b0f5ae547c73fd0c8a676eaea82166cf06d3798f80163860595d40bffd91c47"
   },
   {
     "id": "mark",
@@ -446,9 +566,12 @@
     "bookTitle": "Mark",
     "description": "A sturdy first-century fishing boat on the Sea of Galilee as a storm opens to shafts of light, beautifully detailed curved waves, distant rugged coast, taut simple sail.",
     "family": "sea",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 620,
     "file": "mark.svg",
-    "bytes": 82570,
-    "sha256": "f96507817989b5e4ef2a73ca2788afe8a331b52dd11724bc155b01e89e75e8b3"
+    "bytes": 90969,
+    "sha256": "a00692f478b9027a707e62237a6ba5814e8731d667bc773cc4cc8f4fc6dc3d67"
   },
   {
     "id": "luke",
@@ -457,9 +580,12 @@
     "bookTitle": "Luke",
     "description": "A winding road between olive groves toward a warmly lit ancient village, a simple roadside shelter, flowering grasses and generous twilight light.",
     "family": "river",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 570,
     "file": "luke.svg",
-    "bytes": 165591,
-    "sha256": "030dc141c8d63de9fc7ec6fd8fbebb4aaff339ca6a7922517e337fa6e2e29836"
+    "bytes": 222654,
+    "sha256": "35903238095825e701d7bb7f64afa5bf622dfee6c276c3b3299d1dc2f143db68"
   },
   {
     "id": "john",
@@ -468,9 +594,12 @@
     "bookTitle": "John",
     "description": "An ancient stone tomb with its round stone rolled aside, a radiant dawn beyond olive branches, folded linen barely visible in the shadowed entrance. The opening and light are the focus, no people.",
     "family": "tomb",
+    "palette": "rose",
+    "weather": "dawn",
+    "horizon": 530,
     "file": "john.svg",
-    "bytes": 79929,
-    "sha256": "92cf07b6a85e7658b3babf49a94ca17677f002b7501f1ff463ebe13cea1bd954"
+    "bytes": 136244,
+    "sha256": "7e940b3bb0357ce06778244d19635e5fe2d37890c6c4bdb0296e62816961db57"
   },
   {
     "id": "acts",
@@ -479,9 +608,12 @@
     "bookTitle": "Acts",
     "description": "An ancient Mediterranean harbor with moored wooden sailing ships, stone quays and a great open sea beyond, warm morning light, detailed rigging and distant mountains.",
     "family": "sea",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 510,
     "file": "acts.svg",
-    "bytes": 82528,
-    "sha256": "9302ea358307938ac3243ad050de3c44fda0f2d4833e7235af5f57dedf9c9f01"
+    "bytes": 91084,
+    "sha256": "bec2463eff222151b560ab6809308a645ff3fc96e112a5d94af1f5bddcae86fd"
   },
   {
     "id": "romans",
@@ -490,9 +622,12 @@
     "bookTitle": "Romans",
     "description": "An ancient Roman stone bridge spanning a broad river toward a distant city of arches and tiled roofs, morning mist and a low golden sun, a strong central vanishing point.",
     "family": "bridge",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 550,
     "file": "romans.svg",
-    "bytes": 92160,
-    "sha256": "2be77741671dfd9432e617cdb16829e54e27bc90e6ada66ba8c807bbb66c7c39"
+    "bytes": 100650,
+    "sha256": "3e83a5900a976e74c498c88dd32bf22069eaf53d060ecff4f82f8b36945c1099"
   },
   {
     "id": "1-corinthians",
@@ -501,9 +636,12 @@
     "bookTitle": "1 Corinthians",
     "description": "A mature olive tree with many richly detailed branches growing from one strong trunk, a distant ancient Corinthian portico and rolling fields beneath a luminous sky.",
     "family": "garden",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 590,
     "file": "1-corinthians.svg",
-    "bytes": 145305,
-    "sha256": "c6d4d80d058e49c668d938681062cb9b9e6408a2ad91461ffcd7f0529e60cfc4"
+    "bytes": 205497,
+    "sha256": "d226bfe0252e985a3c04c6210c3b3906f1d4cfbac969091f34db6058102d9c7d"
   },
   {
     "id": "2-corinthians",
@@ -512,9 +650,12 @@
     "bookTitle": "2 Corinthians",
     "description": "An earthenware jar with a narrow crack allowing warm inner light to spill onto a dark stone table, a second intact vessel, distant hills through a rough window. Tactile clay and quiet strength.",
     "family": "interior",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 630,
     "file": "2-corinthians.svg",
-    "bytes": 51839,
-    "sha256": "69ae216cd84784304fe527aa19e9943afd6899f28b756f3b692e0a5cc90e6a74"
+    "bytes": 60347,
+    "sha256": "e095f28614ddb6f2ce3366e9418bd9701ce064e38de605fb61d18f7cfd262bd2"
   },
   {
     "id": "galatians",
@@ -523,9 +664,12 @@
     "bookTitle": "Galatians",
     "description": "A flourishing orchard beyond an open stone gateway, a discarded broken chain on the foreground threshold, ripe fruit and a winding sunlit path. Organic abundance and space.",
     "family": "garden",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 540,
     "file": "galatians.svg",
-    "bytes": 147238,
-    "sha256": "7e0637814ea731cd30033d6d70a550e46933fbae26b127361e97d28ee8942a2e"
+    "bytes": 207836,
+    "sha256": "6f569d79b07d51a197fa7e5dc0c80d084d227a30e73c0cb10bf01d9fdd8f5772"
   },
   {
     "id": "ephesians",
@@ -534,9 +678,12 @@
     "bookTitle": "Ephesians",
     "description": "A grand ancient stone arch assembled from distinct fitted blocks, sunlight through its open center, olive branches framing the structure, a distant city and indigo sky.",
     "family": "gate",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 480,
     "file": "ephesians.svg",
-    "bytes": 85077,
-    "sha256": "d511c7f2ad0c58f8987bddecdfb07302d9008394bd3b046dee19718bcc2848c1"
+    "bytes": 132806,
+    "sha256": "eefff8e1e2efd4c99e75f7b7bde12e9e17d33e746d731294be6a08f342c42822"
   },
   {
     "id": "philippians",
@@ -545,9 +692,12 @@
     "bookTitle": "Philippians",
     "description": "A small lamp shining inside a humble stone room with an open shutter revealing stars above a distant town, a flowering branch in a simple cup. Warm and resilient.",
     "family": "interior",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 610,
     "file": "philippians.svg",
-    "bytes": 62734,
-    "sha256": "4b4dd47e8c4538132e30752900ed4141c25ce0bc05af7b02919127c31ef2de12"
+    "bytes": 71274,
+    "sha256": "094afafdaae2d17d5908f9ec0a19a293989a7b0209e00acb3c4b5bd5711c4815"
   },
   {
     "id": "colossians",
@@ -556,9 +706,12 @@
     "bookTitle": "Colossians",
     "description": "A monumental mountain landscape beneath a vast orderly star field, rivers and forest paths converging toward a luminous horizon. Natural grandeur, no floating symbols or figures.",
     "family": "mountain",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 450,
     "file": "colossians.svg",
-    "bytes": 89135,
-    "sha256": "ddf9dd3a166b5b116745ba3f5912e3c2ea42d1d971c999beaffd742ebdc6f5d0"
+    "bytes": 150012,
+    "sha256": "7ac73b9381b1843dca0fc8120634fe90148c9e75af00788b61d08a5674a97dc5"
   },
   {
     "id": "1-thessalonians",
@@ -567,9 +720,12 @@
     "bookTitle": "1 Thessalonians",
     "description": "A coastal beacon burning above a quiet ancient harbor before dawn, distant sails and layered sea horizons, a bright early star above the mountains.",
     "family": "tower",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 580,
     "file": "1-thessalonians.svg",
-    "bytes": 49148,
-    "sha256": "92325b9a2e75d4da33e847bad7703af271b0e56e16aca2cfc8d3968cc59fddc9"
+    "bytes": 58073,
+    "sha256": "09003caf92ee619f27bdb2e552c2dabeedac40a51a5f631874f5a4fd292db5a0"
   },
   {
     "id": "2-thessalonians",
@@ -578,9 +734,12 @@
     "bookTitle": "2 Thessalonians",
     "description": "An ancient olive tree rooted strongly into a windswept hillside, branches bending but trunk steady, distant lightning clouds giving way to a gold horizon.",
     "family": "mountain",
+    "palette": "gold",
+    "weather": "storm",
+    "horizon": 520,
     "file": "2-thessalonians.svg",
-    "bytes": 102977,
-    "sha256": "3d2ba947a3801a1e6fe77de1e8be4d9ae156de0ef1a7bf18e68c7066956a3b1d"
+    "bytes": 211183,
+    "sha256": "005ec11440f10dc26fb88a790869d9a2188933e92bec614c35475382c97ebb22"
   },
   {
     "id": "1-timothy",
@@ -589,9 +748,12 @@
     "bookTitle": "1 Timothy",
     "description": "A carefully tended clay oil lamp beside a plain wooden table and rolled parchment with no writing, a stone doorway opening to a quiet town at dawn.",
     "family": "interior",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 640,
     "file": "1-timothy.svg",
-    "bytes": 52262,
-    "sha256": "fc2e5732e1a82a40fc5e4a427839bb081db01e45660d5317d0c6fc6143e5fb81"
+    "bytes": 60770,
+    "sha256": "cfc42687fa7a42367f26032e922f69a64515db396133b1345630e9956012071b"
   },
   {
     "id": "2-timothy",
@@ -600,9 +762,12 @@
     "bookTitle": "2 Timothy",
     "description": "A long winding mountain path reaching a sunlit high pass, a worn travel cloak draped over a foreground stone, a quiet olive branch and late golden light.",
     "family": "mountain",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 500,
     "file": "2-timothy.svg",
-    "bytes": 103329,
-    "sha256": "2777bbddfb3a5c6ae80369b9120a41acf282b3f3ab895e0afc537493bbf8c03d"
+    "bytes": 212121,
+    "sha256": "a6a275eab5ab0df2b012aa9116cf473ead437c8cd1836892c7bad8c88376d82d"
   },
   {
     "id": "titus",
@@ -611,9 +776,12 @@
     "bookTitle": "Titus",
     "description": "An ancient Cretan coastal village of simple stone houses and a small harbor, cultivated terraces and olive groves, clear turquoise shadows and warm afternoon light.",
     "family": "city",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 560,
     "file": "titus.svg",
-    "bytes": 139804,
-    "sha256": "4d47787f61a3dc12747193041b0bf6279f02f393a20550fa670cddb3ccf6b7a4"
+    "bytes": 209992,
+    "sha256": "7fbae26998efb693adf5df6302f8ab1314d6202ba3d7cb30776170afc0cc8fec"
   },
   {
     "id": "philemon",
@@ -622,9 +790,12 @@
     "bookTitle": "Philemon",
     "description": "Two empty wooden stools on either side of a simple table in an open ancient courtyard, a doorway open to the road, warm light crossing the shared space. Hospitality without people.",
     "family": "interior",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 590,
     "file": "philemon.svg",
-    "bytes": 47073,
-    "sha256": "92b359f6877f47287eac033b35265a3094050d0cfe6fa45ef76df97890bc5659"
+    "bytes": 55639,
+    "sha256": "afb22477ce616a0ebda130ced7b7bd6f87233b2c8a9c0b7b7f7eb5a052973f3b"
   },
   {
     "id": "hebrews",
@@ -633,9 +804,12 @@
     "bookTitle": "Hebrews",
     "description": "A great woven veil drawn aside within an ancient stone sanctuary, a luminous open space beyond, precise fabric folds and golden side light. No visible divine figure.",
     "family": "temple",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 510,
     "file": "hebrews.svg",
-    "bytes": 82451,
-    "sha256": "c039e2b06f9772a07e6fb27640a998657e3d749246b063c11fae781a9b7a57ca"
+    "bytes": 138805,
+    "sha256": "47ccee5932b728055fd4fb31b966f2a6eb941c231bbc047fe2142f9aee944080"
   },
   {
     "id": "james",
@@ -644,9 +818,12 @@
     "bookTitle": "James",
     "description": "A fig tree laden with fruit beside a clear spring and sturdy stone path, foreground roots firmly in the earth, a cultivated valley in warm morning light.",
     "family": "garden",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 570,
     "file": "james.svg",
-    "bytes": 153302,
-    "sha256": "7c00ce04d4d872134986f70fab45102a6a520052f0153d9034f888fd209daeb0"
+    "bytes": 204926,
+    "sha256": "b6e09a39f130cd7638f7d45d65ebccde5199eaa44a724c243f57e04ba27d280d"
   },
   {
     "id": "1-peter",
@@ -655,9 +832,12 @@
     "bookTitle": "1 Peter",
     "description": "A lighthouse-like ancient stone tower on a rugged coast, fitted stones in the foreground, powerful waves below and a warm light near the top. Steadfast, weathered, enduring.",
     "family": "tower",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 460,
     "file": "1-peter.svg",
-    "bytes": 51941,
-    "sha256": "7339af497e54f280e330cb792c7b28e8d62a6387aeb21a5eaafe1d1fcaf65924"
+    "bytes": 60758,
+    "sha256": "adab8a37ac85252240be422472d2083f3d327388f3c7d970125d8d7c8c1f4101"
   },
   {
     "id": "2-peter",
@@ -666,9 +846,12 @@
     "bookTitle": "2 Peter",
     "description": "A bright single morning star above a deeply layered mountain horizon, dark pines in the foreground and a narrow river reflecting the first golden light.",
     "family": "mountain",
+    "palette": "gold",
+    "weather": "stars",
+    "horizon": 530,
     "file": "2-peter.svg",
-    "bytes": 88682,
-    "sha256": "107defad7d7839eca789fcdcb397afa2abda4f7dad6a88131e0a4b056806fe56"
+    "bytes": 150130,
+    "sha256": "08a666f62b4c92680726a9464feef9da51a8207cdf0d6678980dee3b29f15cea"
   },
   {
     "id": "1-john",
@@ -677,9 +860,12 @@
     "bookTitle": "1 John",
     "description": "A lamp-lit path through a dark olive grove, branches forming a graceful canopy, light gathering at an open garden gate. Intimate atmosphere, intricate leaves and stonework.",
     "family": "garden",
+    "palette": "jade",
+    "weather": "stars",
+    "horizon": 600,
     "file": "1-john.svg",
-    "bytes": 158788,
-    "sha256": "943e082b1f7f9d7cc67127839da05144bdb343d4e9fb37c0b2ace80d7b347d84"
+    "bytes": 219159,
+    "sha256": "bc172c2fc85e265af2f51cf10ad8b97219eb3be330486969d912227ddddf259d"
   },
   {
     "id": "2-john",
@@ -688,9 +874,12 @@
     "bookTitle": "2 John",
     "description": "A vine growing around a sturdy ancient doorway, two oil lamps casting overlapping warm pools of light on its threshold, distant soft hills.",
     "family": "interior",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 580,
     "file": "2-john.svg",
-    "bytes": 85574,
-    "sha256": "02c05141e9d1a802f7b4269f5dc87d8570f876bcc26f62407adc0036dab4b972"
+    "bytes": 133132,
+    "sha256": "e0ee86f2bf60868452fe7f8c4c7fb4b11d7a0981b4768d9e6b223730681c8cd0"
   },
   {
     "id": "3-john",
@@ -699,9 +888,12 @@
     "bookTitle": "3 John",
     "description": "A shaded ancient courtyard with a water jar, travel sandals and an open gate looking toward a winding road, rich woven cloth and flowering branches.",
     "family": "interior",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 620,
     "file": "3-john.svg",
-    "bytes": 51872,
-    "sha256": "46345a54f4ec082bfc36cf32a2eebf05054bdcdf1eea74621755f3993d1e51c6"
+    "bytes": 60433,
+    "sha256": "fccf455ccbfb9fd00c8e7edff344b9d278fac54da71765cc9b14137b16fa5efa"
   },
   {
     "id": "jude",
@@ -710,9 +902,12 @@
     "bookTitle": "Jude",
     "description": "A narrow ancient stone bridge across a deep mountain chasm, strong worn parapets and a clear path toward a warmly lit distant ridge, sweeping clouds and secure footing.",
     "family": "bridge",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 440,
     "file": "jude.svg",
-    "bytes": 92867,
-    "sha256": "534521a2e030d788006a44c90853a65ae9b37a2e8e9311cd0c919f24219e393c"
+    "bytes": 101434,
+    "sha256": "8a7a313e24e53778dadf2ce4135d771b1bf14219b9fb0163472755fca9013e81"
   },
   {
     "id": "revelation",
@@ -721,8 +916,11 @@
     "bookTitle": "Revelation",
     "description": "A luminous river flowing through an extraordinary city of translucent stone and twelve distant gateways, abundant trees along both banks, golden dawn filling the sky. Vast and serene, no divine portrait, no text.",
     "family": "river",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 500,
     "file": "revelation.svg",
-    "bytes": 196931,
-    "sha256": "1c7114ed9e5bc5e024df943e44a7d1e23c0a9e261e173c7d1c806ad51b17a286"
+    "bytes": 259356,
+    "sha256": "b5e03ca763e6498e0bff2c63e20a8fcbbb2fd57880b7fa2f208868ab81a0eda2"
   }
 ]

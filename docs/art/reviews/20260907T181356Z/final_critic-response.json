@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-99ba7018-92c8-4eec-b90f-f45dfb802bff",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"summary\": \"The proposed revisions address critical race conditions in image loading, accessibility failures in focus management, and timing drift in the rotation logic.\",\n\"verdict\": \"ACCEPT\",\n\"items\": [{\"issue\": \"Cached images bypass onLoad, potentially hanging the transition state in ArtBackdrop.\",\n\"evidence\": \"src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />\",\n\"change\": \"Add a useEffect in ArtScene to check image.current.complete on mount and trigger onReady() if true.\",\n\"check\": \"Test rapid navigation between previously viewed artworks to ensure immediate transition.\"},\n{\"issue\": \"Focus management in ArtViewer is suboptimal; autoFocus on the Close button skips the primary content.\",\n\"evidence\": \"src/art/ArtViewer.tsx: <button type=\\\"button\\\" onClick={onClose} autoFocus>Close artwork</button>\",\n\"change\": \"Remove autoFocus from the Close button; set initial focus to the dialog or the first control.\",\n\"check\": \"Verify tab order and screen reader entry point upon opening the viewer.\"},\n{\"issue\": \"The rotation timer in ArtViewer uses an accumulator in a setInterval that resets frequently due to dependency changes.\",\n\"evidence\": \"src/art/ArtViewer.tsx: setInterval(() => { ... }, 250) depends on [playing, paused, visible, failed, loaded, selected.id]\",\n\"change\": \"Refactor to use a timestamp-based delta calculation to prevent timing drift during state updates.\",\n\"check\": \"Verify 60-second rotation accuracy when toggling 'Pause motion' or switching tabs.\"}]}\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1788804841,
+  "model": "gemma-4-31b",
+  "system_fingerprint": "fp_501e0d0cb17d079bbea0",
+  "object": "chat.completion",
+  "usage": {
+    "total_tokens": 12049,
+    "completion_tokens": 359,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 11690,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 0
+    }
+  },
+  "time_info": {
+    "created": 1788804841.3510745,
+    "queue_time": 0.002841957,
+    "prompt_time": 0.172567153,
+    "completion_time": 0.257045529,
+    "total_time": 0.43851208686828613
+  }
+}

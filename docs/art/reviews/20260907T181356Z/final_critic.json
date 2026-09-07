@@ -1,0 +1,24 @@
+{
+  "summary": "The proposed revisions address critical race conditions in image loading, accessibility failures in focus management, and timing drift in the rotation logic.",
+  "verdict": "ACCEPT",
+  "items": [
+    {
+      "issue": "Cached images bypass onLoad, potentially hanging the transition state in ArtBackdrop.",
+      "evidence": "src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />",
+      "change": "Add a useEffect in ArtScene to check image.current.complete on mount and trigger onReady() if true.",
+      "check": "Test rapid navigation between previously viewed artworks to ensure immediate transition."
+    },
+    {
+      "issue": "Focus management in ArtViewer is suboptimal; autoFocus on the Close button skips the primary content.",
+      "evidence": "src/art/ArtViewer.tsx: <button type=\"button\" onClick={onClose} autoFocus>Close artwork</button>",
+      "change": "Remove autoFocus from the Close button; set initial focus to the dialog or the first control.",
+      "check": "Verify tab order and screen reader entry point upon opening the viewer."
+    },
+    {
+      "issue": "The rotation timer in ArtViewer uses an accumulator in a setInterval that resets frequently due to dependency changes.",
+      "evidence": "src/art/ArtViewer.tsx: setInterval(() => { ... }, 250) depends on [playing, paused, visible, failed, loaded, selected.id]",
+      "change": "Refactor to use a timestamp-based delta calculation to prevent timing drift during state updates.",
+      "check": "Verify 60-second rotation accuracy when toggling 'Pause motion' or switching tabs."
+    }
+  ]
+}

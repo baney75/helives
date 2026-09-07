@@ -32,7 +32,7 @@ export function HourLamp({ now }: { now?: Date }) {
         </p>
         <p className="hero-cite">{passage.ref} · King James Version</p>
       </div>
-      <div className="word-sign" aria-hidden="true"><span className="art-caption">{artworkForPassage(passage.ref).title}</span></div>
+      <div className="word-sign" aria-hidden="true"><span className="art-caption"><span className="art-caption-label">The illustration</span><span className="art-caption-title">{artworkForPassage(passage.ref).title}</span></span></div>
       <div className="word-acts">
         <div className="hero-actions">
           <a

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "psalms-refuge",
+    "ref": "Psalm 27:1",
+    "bookTitle": "Psalms",
+    "title": "A watchtower at dawn",
+    "family": "tower",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 570,
+    "file": "psalms-refuge.svg"
+  },
+  {
+    "id": "psalms-fountain",
+    "ref": "Psalm 36:9",
+    "bookTitle": "Psalms",
+    "title": "The fountain of life",
+    "family": "garden",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 500,
+    "file": "psalms-fountain.svg"
+  },
+  {
+    "id": "psalms-still-waters",
+    "ref": "Psalm 23:2",
+    "bookTitle": "Psalms",
+    "title": "Green pastures, still waters",
+    "family": "river",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 470,
+    "file": "psalms-still-waters.svg"
+  },
+  {
+    "id": "psalms-lamp-path",
+    "ref": "Psalm 119:105",
+    "bookTitle": "Psalms",
+    "title": "A lamp beside the path",
+    "family": "mountain",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 560,
+    "file": "psalms-lamp-path.svg"
+  },
+  {
+    "id": "psalms-candle",
+    "ref": "Psalm 18:28",
+    "bookTitle": "Psalms",
+    "title": "Light in the night",
+    "family": "interior",
+    "palette": "gold",
+    "weather": "stars",
+    "horizon": 590,
+    "file": "psalms-candle.svg"
+  },
+  {
+    "id": "psalms-path-life",
+    "ref": "Psalm 16:11",
+    "bookTitle": "Psalms",
+    "title": "The path of life",
+    "family": "mountain",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 440,
+    "file": "psalms-path-life.svg"
+  },
+  {
+    "id": "john-world-light",
+    "ref": "John 8:12",
+    "bookTitle": "John",
+    "title": "Dawn over the city",
+    "family": "city",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 530,
+    "file": "john-world-light.svg"
+  },
+  {
+    "id": "john-living-well",
+    "ref": "John 4:14",
+    "bookTitle": "John",
+    "title": "Water from the well",
+    "family": "garden",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 510,
+    "file": "john-living-well.svg"
+  },
+  {
+    "id": "john-rivers",
+    "ref": "John 7:38",
+    "bookTitle": "John",
+    "title": "Living rivers",
+    "family": "river",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 590,
+    "file": "john-rivers.svg"
+  },
+  {
+    "id": "john-vine-branches",
+    "ref": "John 15:5",
+    "bookTitle": "John",
+    "title": "The vine and its branches",
+    "family": "garden",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 530,
+    "file": "john-vine-branches.svg"
+  },
+  {
+    "id": "john-resurrection",
+    "ref": "John 11:25",
+    "bookTitle": "John",
+    "title": "The open tomb",
+    "family": "tomb",
+    "palette": "rose",
+    "weather": "dawn",
+    "horizon": 530,
+    "file": "john-resurrection.svg"
+  },
+  {
+    "id": "john-bread-life",
+    "ref": "John 6:35",
+    "bookTitle": "John",
+    "title": "Grain for bread",
+    "family": "harvest",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 460,
+    "file": "john-bread-life.svg"
+  }
+]

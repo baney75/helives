@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-60ee11ee-286c-4798-abcd-eb30e41a651a",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"summary\": \"Address critical reliability and accessibility gaps in the ArtViewer and ArtScene components, focusing on cached image handling and focus management.\",\n\"verdict\": \"PROPOSE\",\n\"items\": [{\"issue\": \"Cached images may not trigger onLoad, causing transitions to hang.\",\n\"evidence\": \"src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />\",\n\"change\": \"In ArtScene, add a useEffect that checks image.current.complete immediately after mount to call setLoaded(true) and onReady() if the image is already cached.\",\n\"check\": \"Verify that artworks transition immediately when served from browser cache.\"},\n{\"issue\": \"Dialog focus management is disruptive; autoFocus on 'Close' bypasses artwork content and controls.\",\n\"evidence\": \"src/art/ArtViewer.tsx: <button type=\\\"button\\\" onClick={onClose} autoFocus>Close artwork</button>\",\n\"change\": \"Remove autoFocus from the Close button. Implement a focus trap or ensure the initial focus is set to the dialog container or the first navigation control (Previous).\",\n\"check\": \"Confirm screen reader focus begins at the start of the dialog content rather than the Close button.\"},\n{\"issue\": \"Interval-based timing in ArtViewer is susceptible to jitter due to frequent dependency resets.\",\n\"evidence\": \"src/art/ArtViewer.tsx: setInterval(() => { ... }, 250) depends on [playing, paused, visible, failed, loaded, selected.id]\",\n\"change\": \"Refactor the 60-second rotation to use a single stable interval or requestAnimationFrame, calculating elapsed time based on a timestamp delta rather than a 250ms accumulator.\",\n\"check\": \"Verify that the 60-second rotation remains accurate regardless of state updates to 'visible' or 'loaded'.\"}]}\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1788804840,
+  "model": "gemma-4-31b",
+  "system_fingerprint": "fp_501e0d0cb17d079bbea0",
+  "object": "chat.completion",
+  "usage": {
+    "total_tokens": 12633,
+    "completion_tokens": 405,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 12228,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "image_tokens": 0
+    }
+  },
+  "time_info": {
+    "created": 1788804840.442824,
+    "queue_time": 0.002617085,
+    "prompt_time": 0.186898087,
+    "completion_time": 0.328634988,
+    "total_time": 0.5216312408447266
+  }
+}

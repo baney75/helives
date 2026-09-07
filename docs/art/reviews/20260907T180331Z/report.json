@@ -1,0 +1,115 @@
+{
+  "model": "gemma-4-31b",
+  "roles": [
+    {
+      "role": "creator",
+      "report": {
+        "summary": "Enhance visual immersion by adding scene variation, atmospheric layering, and smoother transitions to the art viewing experience.",
+        "verdict": "PROPOSE",
+        "items": [
+          {
+            "issue": "Uniform camera movement across all artworks lacks scene variation.",
+            "evidence": "src/art/ArtScene.tsx: animate(element, { transform: ['scale(1.015) translateX(0%)', 'scale(1.08) translateX(-1.2%)'] }, ...)",
+            "change": "Introduce varied animation paths (e.g., different scale/translate pairs) based on artwork ID or metadata to create distinct scene dynamics.",
+            "check": "Verify that different artworks exhibit unique, subtle movement patterns instead of a single global animation."
+          },
+          {
+            "issue": "Art transitions are basic replacements without immersive atmospheric layering.",
+            "evidence": "src/art/ArtBackdrop.tsx: return <>{[state.base, ...(state.incoming ? [state.incoming] : [])].map(layer => <ArtScene ... />)}</>",
+            "change": "Implement CSS crossfading and z-index layering between state.base and state.incoming to create a seamless dissolve effect during artwork changes.",
+            "check": "Confirm that the incoming artwork fades in over the base artwork without abrupt visual jumps."
+          },
+          {
+            "issue": "Lack of atmospheric depth in the ArtViewer stage.",
+            "evidence": "src/art/ArtViewer.tsx: <div className=\"art-viewer-stage\"><ArtBackdrop ... /></div>",
+            "change": "Add a subtle, semi-transparent atmospheric overlay (e.g., a gradient or noise texture) within the art-viewer-stage to enhance depth and mood.",
+            "check": "Ensure the overlay adds visual richness without obscuring the engraved SVG art or introducing distracting movement."
+          }
+        ]
+      }
+    },
+    {
+      "role": "critic",
+      "report": {
+        "summary": "The proposal focuses on aesthetic 'immersion' but ignores critical performance and state failures in the current implementation, specifically regarding image loading and navigation.",
+        "verdict": "REVISE",
+        "items": [
+          {
+            "issue": "Stale image events and race conditions in ArtBackdrop transition logic.",
+            "evidence": "src/art/ArtBackdrop.tsx: useEffect triggers 'settle' 2400ms after state.ready, regardless of whether the artwork has changed in the interim.",
+            "change": "Bind the settle timer to the specific artwork ID and ensure the cleanup function cancels pending transitions when the artwork prop changes.",
+            "check": "Verify that rapid artwork switching does not result in the wrong image being set as the base layer."
+          },
+          {
+            "issue": "Performance degradation and memory leaks from unmanaged image instances.",
+            "evidence": "src/art/ArtBackdrop.tsx: Maps over [state.base, state.incoming] creating multiple ArtScene components without a strategy to unload previous assets.",
+            "change": "Implement a cache-clearing mechanism or explicit nullification of the 'base' image once the 'incoming' image has fully settled.",
+            "check": "Monitor memory usage during long 'Play collection' sessions to ensure DOM nodes and image buffers are released."
+          },
+          {
+            "issue": "Poor rapid navigation accessibility and UX in ArtViewer.",
+            "evidence": "src/art/ArtViewer.tsx: move() resets elapsed.current to 0, but the 250ms setInterval continues to run, potentially causing jumpy transitions during manual skipping.",
+            "change": "Synchronize the auto-advance timer with manual navigation to prevent immediate double-skips and ensure the 'loaded' state is verified before triggering the next transition.",
+            "check": "Confirm that clicking 'Next' rapidly does not trigger the auto-advance logic prematurely."
+          }
+        ]
+      }
+    },
+    {
+      "role": "revision",
+      "report": {
+        "summary": "Resolve race conditions in artwork transitions, prevent memory leaks during playback, and synchronize auto-advance timers with manual navigation.",
+        "verdict": "PROPOSE",
+        "items": [
+          {
+            "issue": "Race condition in ArtBackdrop settle timer allows incorrect images to become the base layer during rapid switching.",
+            "evidence": "src/art/ArtBackdrop.tsx: setTimeout(() => dispatch({ type: 'settle', id }), 2400) is not tied to the current artwork prop.",
+            "change": "Update the settle useEffect to include 'artwork.id' in the dependency array and ensure the cleanup function clears the timeout.",
+            "check": "Rapidly switch artworks and verify the final displayed image matches the selected artwork ID."
+          },
+          {
+            "issue": "Accumulation of ArtScene components and image buffers during 'Play collection' sessions.",
+            "evidence": "src/art/ArtBackdrop.tsx: Maps over [state.base, state.incoming] without a mechanism to purge the base layer after settling.",
+            "change": "Modify the artTransition reducer to explicitly nullify the previous base layer once the incoming artwork is settled.",
+            "check": "Inspect DOM during playback to ensure only the active ArtScene remains after transition completion."
+          },
+          {
+            "issue": "Manual navigation in ArtViewer conflicts with the auto-advance interval, causing potential double-skips.",
+            "evidence": "src/art/ArtViewer.tsx: move() resets elapsed.current but does not clear or reset the active setInterval.",
+            "change": "Wrap the auto-advance logic in a useEffect that depends on selected.id, effectively resetting the interval on every manual move.",
+            "check": "Click 'Next' rapidly and verify the auto-advance timer restarts from zero for each new artwork."
+          }
+        ]
+      }
+    },
+    {
+      "role": "final_critic",
+      "report": {
+        "summary": "The proposed revisions address critical race conditions and memory leaks in the artwork transition system, but fail to specify how the reducer must change to prevent visual flickering during the 'settle' phase.",
+        "verdict": "REVISE",
+        "items": [
+          {
+            "issue": "The proposal to nullify the base layer in the reducer may cause a visual 'pop' or flash if the incoming layer's opacity isn't fully 1.0 before the base is removed.",
+            "evidence": "src/art/ArtBackdrop.tsx: The transition logic relies on a 2400ms timeout to 'settle', but there is no evidence of a CSS transition duration that guarantees synchronization.",
+            "change": "Specify that the reducer must only nullify the base layer after a delay that exceeds the CSS crossfade duration, or implement a 'completed' state in the reducer.",
+            "check": "Verify that the transition from incoming to base is seamless without a flicker when the base layer is purged from the DOM."
+          },
+          {
+            "issue": "The fix for auto-advance double-skips is insufficient as it only resets the interval, not the internal state of the timer logic.",
+            "evidence": "src/art/ArtViewer.tsx: The setInterval uses a closure over 'previous' and 'elapsed.current' which may persist across re-renders if not handled carefully.",
+            "change": "Ensure the auto-advance useEffect explicitly clears the previous interval and resets the 'previous' timestamp to Date.now() upon every 'selected.id' change.",
+            "check": "Verify that manual navigation resets the 60-second countdown exactly to 0ms without inheriting elapsed time from the previous artwork."
+          },
+          {
+            "issue": "Lack of validation for 'failed' state handling during automated playback.",
+            "evidence": "src/art/ArtViewer.tsx: The auto-advance interval checks 'if (failed) return', which will permanently stall the 'Play collection' sequence if a single image fails to load.",
+            "change": "Implement a timeout or retry limit within the auto-advance logic to automatically skip to the next artwork if the current one remains in a 'failed' state for more than 5 seconds.",
+            "check": "Simulate a 404 on an image during 'Play collection' and verify the sequence continues to the next artwork automatically."
+          }
+        ]
+      }
+    }
+  ],
+  "note": "Source-only proposal review; no rendered visual or implementation verdict.",
+  "estimatedRunUsd": 0.02012156
+}

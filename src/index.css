@@ -57,7 +57,7 @@
 :root {
   --void: #07060a;
   --ink: #ece6d8;
-  --muted: #9a9184;
+  --muted: #b6ad9e;
   --fire: #e8b86d;
   --dawn: #fff4d6;
   --speech: #d06050;
@@ -2026,3 +2026,76 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
   .art-viewer h2 { font-size:36px; }
 }
 @media(prefers-reduced-motion:reduce) { .art-scene,.canon-art-preview img,.canon-art-preview span { transition:none; } }
+
+/* The collection becomes a quiet exhibition after explicit playback. */
+.art-viewer header, .art-viewer footer { transition:opacity 700ms ease, transform 700ms ease; }
+.art-viewer.is-playing.is-idle:not(:focus-within) header,
+.art-viewer.is-playing.is-idle:not(:focus-within) footer { opacity:0; pointer-events:none; }
+.art-viewer.is-playing.is-idle:not(:focus-within) footer { transform:translateY(12px); }
+.art-viewer-caption { min-width:0; }
+.art-viewer-controls { max-width:620px; }
+.art-error { position:absolute; z-index:3; left:50%; top:45%; transform:translate(-50%,-50%); width:min(360px,calc(100% - 40px)); padding:24px; border:1px solid var(--line); background:#101519f5; text-align:center; }
+.art-error p { margin:0 0 16px; }
+.art-error button + button { margin-left:8px; }
+@media(prefers-reduced-motion:reduce) { .art-viewer header,.art-viewer footer { transition:none; } }
+@media(max-width:699px) { .art-viewer-controls { max-width:none; } }
+@media(max-height:480px) and (min-width:600px) {
+  .art-viewer header { padding:14px 24px; }
+  .art-viewer footer { padding:36px 24px 16px; }
+  .art-viewer h2 { font-size:28px; }
+  .art-viewer .hero-kicker { font-size:9px; }
+  .art-viewer-controls { max-width:390px; gap:5px; }
+}
+
+/* Caption sits in the lower artwork margin, never on a branch or beside the verse. */
+.reading-home .word-sign { position:fixed; right:max(5vw,24px); bottom:clamp(112px,16vh,180px); z-index:2; max-width:28ch; }
+.reading-home .art-caption { margin:0; max-width:none; padding:12px 18px 13px; border-left:1px solid #e8b86d80; background:linear-gradient(90deg,#0c151ce8,#0c151cb8 78%,#0c151c88); text-align:left; }
+.art-caption-label { display:block; margin-bottom:6px; font:9px/1.4 var(--mono); letter-spacing:.15em; text-transform:uppercase; color:var(--fire); }
+.art-caption-title { display:block; color:var(--ink); font:italic 20px/1.2 var(--display); }
+@media(max-width:1099px), (max-height:620px) { .reading-home .word-sign { display:none; } }
+.scene-air { position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; --air:#eed59f; }
+.air-blue { --air:#b7d3e2; }.air-jade { --air:#c4d8aa; }.air-rose { --air:#ecc1ac; }
+.scene-air-glow { position:absolute; width:65%; height:95%; right:-8%; top:-15%; background:radial-gradient(ellipse at 50% 30%,color-mix(in srgb,var(--air) 8%,transparent),transparent 65%); animation:art-light-breathe 24s ease-in-out infinite alternate; }
+.scene-air-haze { position:absolute; inset:38% -15% 4%; background:linear-gradient(178deg,transparent 15%,color-mix(in srgb,var(--air) 3%,transparent) 39%,transparent 48%); animation:art-haze-drift 48s ease-in-out infinite alternate; }
+.scene-air-water { position:absolute; inset:0; width:100%; height:100%; fill:none; stroke:var(--air); stroke-width:.8; opacity:.12; animation:art-water-glint 12s ease-in-out infinite alternate; }
+.scene-air-stars i { position:absolute; width:2px; height:2px; background:var(--air); border-radius:50%; opacity:.12; animation:art-star-breathe 9s ease-in-out infinite alternate; }
+.art-scene[data-still='true'] .scene-air * { animation-play-state:paused !important; }
+@keyframes art-light-breathe { from { opacity:.45; transform:translateX(-2%); } to { opacity:.95; transform:translateX(2%); } }
+@keyframes art-haze-drift { from { transform:translateX(-3%); opacity:.3; } to { transform:translateX(3%); opacity:.8; } }
+@keyframes art-water-glint { from { opacity:.035; transform:translateX(-.4%); } to { opacity:.16; transform:translateX(.4%); } }
+@keyframes art-star-breathe { from { opacity:.08; } to { opacity:.35; } }
+@media(prefers-reduced-motion:reduce) { .scene-air * { animation:none !important; } }
+
+/* Quiet editorial structure and legible secondary reading. */
+.reading-home.is-display .atmosphere-shade { background:radial-gradient(ellipse 68% 43% at 50% 48%,#07060aeb 0%,#07060ac4 55%,#07060a55 100%),linear-gradient(0deg,#07060a99,transparent 40%); }
+.foot { font-size:14px; line-height:1.6; }
+.faith-doc { max-width:52rem; margin-inline:auto; }
+.faith-heading { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:24px; padding-bottom:36px; margin-bottom:36px; border-bottom:1px solid var(--line); }
+.faith-heading img { width:100%; height:300px; object-fit:cover; object-position:75% center; mask-image:linear-gradient(90deg,transparent,#000 22%,#000 85%,transparent); }
+.faith-heading .hero-kicker { font-size:11px; color:var(--fire); }
+.faith-heading h1 { margin:12px 0 24px; }
+.faith-heading .faith-lead { margin:0; }
+.faith-doc > p { max-width:58ch; font-size:19px; line-height:1.72; font-weight:400; }
+.faith-doc h2 { margin-top:44px; }
+.doubt-copy p { color:#c8c0b3; font-size:19px; }
+.source-columns .sources a { font-size:17px; line-height:1.5; }
+.source-columns .sources span { font-size:15px; line-height:1.6; }
+@media(max-width:700px) {
+  .faith-heading { grid-template-columns:1fr; gap:18px; padding-bottom:20px; margin-bottom:28px; }
+  .faith-heading img { height:160px; object-position:center 60%; mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+  .faith-doc > p { font-size:18px; }
+  .doubt-hero { min-height:0; padding:52px 0 36px; }
+  .doubt-hero h1 { max-width:11ch; font-size:clamp(50px,13vw,72px); line-height:1; letter-spacing:-.04em; }
+  .doubt-lead { max-width:34ch; font-size:25px; line-height:1.42; }
+  .doubt-aperture { background:radial-gradient(ellipse at 90% 10%,#c1a1691a,transparent 65%),#08090b; opacity:1; }
+  .doubt-aperture::after { inset:8% -50% 60% 35%; border-radius:50%; transform:rotate(-25deg); opacity:.35; }
+  .doubt-paths { display:grid; gap:6px; margin-top:28px; }
+  .doubt-paths a { align-items:center; }
+  .doubt-essay,.source-ledger { padding-block:48px; }
+  .doubt-essay { gap:26px; }
+  .doubt-essay h2,.source-ledger h2 { font-size:42px; line-height:1.06; }
+  .doubt-copy p { font-size:18px; line-height:1.7; }
+  .source-columns { gap:32px; margin-top:30px; }
+}
+.site.lamp-home .foot { font-size:12px; }
+@media(min-width:700px) and (min-height:650px) { .site.lamp-home .foot { font-size:13px; } }

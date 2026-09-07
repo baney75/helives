@@ -3,396 +3,660 @@
     "id": "genesis",
     "bookTitle": "Genesis",
     "title": "The first morning",
-    "file": "genesis.svg"
+    "file": "genesis.svg",
+    "family": "mountain",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 500
   },
   {
     "id": "exodus",
     "bookTitle": "Exodus",
     "title": "A way through the sea",
-    "file": "exodus.svg"
+    "file": "exodus.svg",
+    "family": "sea",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 600
   },
   {
     "id": "leviticus",
     "bookTitle": "Leviticus",
     "title": "The sanctuary",
-    "file": "leviticus.svg"
+    "file": "leviticus.svg",
+    "family": "temple",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 450
   },
   {
     "id": "numbers",
     "bookTitle": "Numbers",
     "title": "Under the desert stars",
-    "file": "numbers.svg"
+    "file": "numbers.svg",
+    "family": "desert",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 550
   },
   {
     "id": "deuteronomy",
     "bookTitle": "Deuteronomy",
     "title": "Beyond the wilderness",
-    "file": "deuteronomy.svg"
+    "file": "deuteronomy.svg",
+    "family": "mountain",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 480
   },
   {
     "id": "joshua",
     "bookTitle": "Joshua",
     "title": "Across the Jordan",
-    "file": "joshua.svg"
+    "file": "joshua.svg",
+    "family": "river",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 520
   },
   {
     "id": "judges",
     "bookTitle": "Judges",
     "title": "Fire in the night",
-    "file": "judges.svg"
+    "file": "judges.svg",
+    "family": "mountain",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 610
   },
   {
     "id": "ruth",
     "bookTitle": "Ruth",
     "title": "At the edge of the harvest",
-    "file": "ruth.svg"
+    "file": "ruth.svg",
+    "family": "harvest",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 580
   },
   {
     "id": "1-samuel",
     "bookTitle": "1 Samuel",
     "title": "The quiet call",
-    "file": "1-samuel.svg"
+    "file": "1-samuel.svg",
+    "family": "interior",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 630
   },
   {
     "id": "2-samuel",
     "bookTitle": "2 Samuel",
     "title": "The city on the ridge",
-    "file": "2-samuel.svg"
+    "file": "2-samuel.svg",
+    "family": "city",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 470
   },
   {
     "id": "1-kings",
     "bookTitle": "1 Kings",
     "title": "Cedars and stone",
-    "file": "1-kings.svg"
+    "file": "1-kings.svg",
+    "family": "temple",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 510
   },
   {
     "id": "2-kings",
     "bookTitle": "2 Kings",
     "title": "The broken wall",
-    "file": "2-kings.svg"
+    "file": "2-kings.svg",
+    "family": "gate",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 590
   },
   {
     "id": "1-chronicles",
     "bookTitle": "1 Chronicles",
     "title": "Foundations",
-    "file": "1-chronicles.svg"
+    "file": "1-chronicles.svg",
+    "family": "temple",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 620
   },
   {
     "id": "2-chronicles",
     "bookTitle": "2 Chronicles",
     "title": "The house of prayer",
-    "file": "2-chronicles.svg"
+    "file": "2-chronicles.svg",
+    "family": "temple",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 540
   },
   {
     "id": "ezra",
     "bookTitle": "Ezra",
     "title": "Building again",
-    "file": "ezra.svg"
+    "file": "ezra.svg",
+    "family": "city",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 560
   },
   {
     "id": "nehemiah",
     "bookTitle": "Nehemiah",
     "title": "The watch on the wall",
-    "file": "nehemiah.svg"
+    "file": "nehemiah.svg",
+    "family": "tower",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 490
   },
   {
     "id": "esther",
     "bookTitle": "Esther",
     "title": "Before the court",
-    "file": "esther.svg"
+    "file": "esther.svg",
+    "family": "gate",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 530
   },
   {
     "id": "job",
     "bookTitle": "Job",
     "title": "Out of the whirlwind",
-    "file": "job.svg"
+    "file": "job.svg",
+    "family": "storm",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 600
   },
   {
     "id": "psalms",
     "bookTitle": "Psalms",
     "title": "Beside still waters",
-    "file": "psalms.svg"
+    "file": "psalms.svg",
+    "family": "river",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 570
   },
   {
     "id": "proverbs",
     "bookTitle": "Proverbs",
     "title": "The path of wisdom",
-    "file": "proverbs.svg"
+    "file": "proverbs.svg",
+    "family": "gate",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 510
   },
   {
     "id": "ecclesiastes",
     "bookTitle": "Ecclesiastes",
     "title": "A season for everything",
-    "file": "ecclesiastes.svg"
+    "file": "ecclesiastes.svg",
+    "family": "garden",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 460
   },
   {
     "id": "song-of-solomon",
     "bookTitle": "Song of Solomon",
     "title": "The enclosed garden",
-    "file": "song-of-solomon.svg"
+    "file": "song-of-solomon.svg",
+    "family": "garden",
+    "palette": "jade",
+    "weather": "stars",
+    "horizon": 580
   },
   {
     "id": "isaiah",
     "bookTitle": "Isaiah",
     "title": "The desert shall blossom",
-    "file": "isaiah.svg"
+    "file": "isaiah.svg",
+    "family": "desert",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 520
   },
   {
     "id": "jeremiah",
     "bookTitle": "Jeremiah",
     "title": "At the potter's house",
-    "file": "jeremiah.svg"
+    "file": "jeremiah.svg",
+    "family": "interior",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 610
   },
   {
     "id": "lamentations",
     "bookTitle": "Lamentations",
     "title": "The silent city",
-    "file": "lamentations.svg"
+    "file": "lamentations.svg",
+    "family": "city",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 640
   },
   {
     "id": "ezekiel",
     "bookTitle": "Ezekiel",
     "title": "Breath in the valley",
-    "file": "ezekiel.svg"
+    "file": "ezekiel.svg",
+    "family": "river",
+    "palette": "jade",
+    "weather": "storm",
+    "horizon": 500
   },
   {
     "id": "daniel",
     "bookTitle": "Daniel",
     "title": "The lions at rest",
-    "file": "daniel.svg"
+    "file": "daniel.svg",
+    "family": "interior",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 550
   },
   {
     "id": "hosea",
     "bookTitle": "Hosea",
     "title": "Returning home",
-    "file": "hosea.svg"
+    "file": "hosea.svg",
+    "family": "gate",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 530
   },
   {
     "id": "joel",
     "bookTitle": "Joel",
     "title": "Rain after drought",
-    "file": "joel.svg"
+    "file": "joel.svg",
+    "family": "harvest",
+    "palette": "jade",
+    "weather": "storm",
+    "horizon": 590
   },
   {
     "id": "amos",
     "bookTitle": "Amos",
     "title": "Justice like waters",
-    "file": "amos.svg"
+    "file": "amos.svg",
+    "family": "river",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 480
   },
   {
     "id": "obadiah",
     "bookTitle": "Obadiah",
     "title": "The high places",
-    "file": "obadiah.svg"
+    "file": "obadiah.svg",
+    "family": "tower",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 440
   },
   {
     "id": "jonah",
     "bookTitle": "Jonah",
     "title": "From the deep",
-    "file": "jonah.svg"
+    "file": "jonah.svg",
+    "family": "sea",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 650
   },
   {
     "id": "micah",
     "bookTitle": "Micah",
     "title": "Under vine and fig tree",
-    "file": "micah.svg"
+    "file": "micah.svg",
+    "family": "garden",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 560
   },
   {
     "id": "nahum",
     "bookTitle": "Nahum",
     "title": "The fortress and the storm",
-    "file": "nahum.svg"
+    "file": "nahum.svg",
+    "family": "city",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 510
   },
   {
     "id": "habakkuk",
     "bookTitle": "Habakkuk",
     "title": "Upon the watchtower",
-    "file": "habakkuk.svg"
+    "file": "habakkuk.svg",
+    "family": "tower",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 470
   },
   {
     "id": "zephaniah",
     "bookTitle": "Zephaniah",
     "title": "The morning after",
-    "file": "zephaniah.svg"
+    "file": "zephaniah.svg",
+    "family": "city",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 580
   },
   {
     "id": "haggai",
     "bookTitle": "Haggai",
     "title": "A house restored",
-    "file": "haggai.svg"
+    "file": "haggai.svg",
+    "family": "temple",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 540
   },
   {
     "id": "zechariah",
     "bookTitle": "Zechariah",
     "title": "The lamp and the olive trees",
-    "file": "zechariah.svg"
+    "file": "zechariah.svg",
+    "family": "garden",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 520
   },
   {
     "id": "malachi",
     "bookTitle": "Malachi",
     "title": "The rising sun",
-    "file": "malachi.svg"
+    "file": "malachi.svg",
+    "family": "mountain",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 600
   },
   {
     "id": "matthew",
     "bookTitle": "Matthew",
     "title": "The kingdom on the mountain",
-    "file": "matthew.svg"
+    "file": "matthew.svg",
+    "family": "mountain",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 490
   },
   {
     "id": "mark",
     "bookTitle": "Mark",
     "title": "Across the wind and waves",
-    "file": "mark.svg"
+    "file": "mark.svg",
+    "family": "sea",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 620
   },
   {
     "id": "luke",
     "bookTitle": "Luke",
     "title": "The road and the welcome",
-    "file": "luke.svg"
+    "file": "luke.svg",
+    "family": "river",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 570
   },
   {
     "id": "john",
     "bookTitle": "John",
     "title": "Light in the darkness",
-    "file": "john.svg"
+    "file": "john.svg",
+    "family": "tomb",
+    "palette": "rose",
+    "weather": "dawn",
+    "horizon": 530
   },
   {
     "id": "acts",
     "bookTitle": "Acts",
     "title": "To the ends of the earth",
-    "file": "acts.svg"
+    "file": "acts.svg",
+    "family": "sea",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 510
   },
   {
     "id": "romans",
     "bookTitle": "Romans",
     "title": "Grace and the great city",
-    "file": "romans.svg"
+    "file": "romans.svg",
+    "family": "bridge",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 550
   },
   {
     "id": "1-corinthians",
     "bookTitle": "1 Corinthians",
     "title": "Many members, one body",
-    "file": "1-corinthians.svg"
+    "file": "1-corinthians.svg",
+    "family": "garden",
+    "palette": "jade",
+    "weather": "clear",
+    "horizon": 590
   },
   {
     "id": "2-corinthians",
     "bookTitle": "2 Corinthians",
     "title": "Treasure in earthen vessels",
-    "file": "2-corinthians.svg"
+    "file": "2-corinthians.svg",
+    "family": "interior",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 630
   },
   {
     "id": "galatians",
     "bookTitle": "Galatians",
     "title": "Freedom and fruit",
-    "file": "galatians.svg"
+    "file": "galatians.svg",
+    "family": "garden",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 540
   },
   {
     "id": "ephesians",
     "bookTitle": "Ephesians",
     "title": "Built together",
-    "file": "ephesians.svg"
+    "file": "ephesians.svg",
+    "family": "gate",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 480
   },
   {
     "id": "philippians",
     "bookTitle": "Philippians",
     "title": "Joy at midnight",
-    "file": "philippians.svg"
+    "file": "philippians.svg",
+    "family": "interior",
+    "palette": "rose",
+    "weather": "stars",
+    "horizon": 610
   },
   {
     "id": "colossians",
     "bookTitle": "Colossians",
     "title": "All things held together",
-    "file": "colossians.svg"
+    "file": "colossians.svg",
+    "family": "mountain",
+    "palette": "blue",
+    "weather": "stars",
+    "horizon": 450
   },
   {
     "id": "1-thessalonians",
     "bookTitle": "1 Thessalonians",
     "title": "Steadfast hope",
-    "file": "1-thessalonians.svg"
+    "file": "1-thessalonians.svg",
+    "family": "tower",
+    "palette": "blue",
+    "weather": "dawn",
+    "horizon": 580
   },
   {
     "id": "2-thessalonians",
     "bookTitle": "2 Thessalonians",
     "title": "Stand firm",
-    "file": "2-thessalonians.svg"
+    "file": "2-thessalonians.svg",
+    "family": "mountain",
+    "palette": "gold",
+    "weather": "storm",
+    "horizon": 520
   },
   {
     "id": "1-timothy",
     "bookTitle": "1 Timothy",
     "title": "Keep the light",
-    "file": "1-timothy.svg"
+    "file": "1-timothy.svg",
+    "family": "interior",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 640
   },
   {
     "id": "2-timothy",
     "bookTitle": "2 Timothy",
     "title": "The course kept",
-    "file": "2-timothy.svg"
+    "file": "2-timothy.svg",
+    "family": "mountain",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 500
   },
   {
     "id": "titus",
     "bookTitle": "Titus",
     "title": "The island and the work",
-    "file": "titus.svg"
+    "file": "titus.svg",
+    "family": "city",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 560
   },
   {
     "id": "philemon",
     "bookTitle": "Philemon",
     "title": "An open door",
-    "file": "philemon.svg"
+    "file": "philemon.svg",
+    "family": "interior",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 590
   },
   {
     "id": "hebrews",
     "bookTitle": "Hebrews",
     "title": "Beyond the veil",
-    "file": "hebrews.svg"
+    "file": "hebrews.svg",
+    "family": "temple",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 510
   },
   {
     "id": "james",
     "bookTitle": "James",
     "title": "Faith bearing fruit",
-    "file": "james.svg"
+    "file": "james.svg",
+    "family": "garden",
+    "palette": "jade",
+    "weather": "dawn",
+    "horizon": 570
   },
   {
     "id": "1-peter",
     "bookTitle": "1 Peter",
     "title": "Living stones",
-    "file": "1-peter.svg"
+    "file": "1-peter.svg",
+    "family": "tower",
+    "palette": "blue",
+    "weather": "storm",
+    "horizon": 460
   },
   {
     "id": "2-peter",
     "bookTitle": "2 Peter",
     "title": "The morning star",
-    "file": "2-peter.svg"
+    "file": "2-peter.svg",
+    "family": "mountain",
+    "palette": "gold",
+    "weather": "stars",
+    "horizon": 530
   },
   {
     "id": "1-john",
     "bookTitle": "1 John",
     "title": "Walking in the light",
-    "file": "1-john.svg"
+    "file": "1-john.svg",
+    "family": "garden",
+    "palette": "jade",
+    "weather": "stars",
+    "horizon": 600
   },
   {
     "id": "2-john",
     "bookTitle": "2 John",
     "title": "Truth and love",
-    "file": "2-john.svg"
+    "file": "2-john.svg",
+    "family": "interior",
+    "palette": "rose",
+    "weather": "clear",
+    "horizon": 580
   },
   {
     "id": "3-john",
     "bookTitle": "3 John",
     "title": "Welcome along the way",
-    "file": "3-john.svg"
+    "file": "3-john.svg",
+    "family": "interior",
+    "palette": "gold",
+    "weather": "clear",
+    "horizon": 620
   },
   {
     "id": "jude",
     "bookTitle": "Jude",
     "title": "Kept from falling",
-    "file": "jude.svg"
+    "file": "jude.svg",
+    "family": "bridge",
+    "palette": "blue",
+    "weather": "clear",
+    "horizon": 440
   },
   {
     "id": "revelation",
     "bookTitle": "Revelation",
     "title": "The river of life",
-    "file": "revelation.svg"
+    "file": "revelation.svg",
+    "family": "river",
+    "palette": "gold",
+    "weather": "dawn",
+    "horizon": 500
   }
 ]

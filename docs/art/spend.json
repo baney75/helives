@@ -173,6 +173,187 @@
       },
       "estimatedUsd": 0.00631341,
       "reason": "TypeError"
+    },
+    {
+      "book": "adversarial-review-creator",
+      "model": "gemma-4-31b",
+      "at": "20260907T180204Z",
+      "reservedUsd": 0.03305442,
+      "status": "failed",
+      "usage": {
+        "total_tokens": 6155,
+        "completion_tokens": 3000,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 3155,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00759345,
+      "reason": "ValueError"
+    },
+    {
+      "book": "adversarial-review-creator",
+      "model": "gemma-4-31b",
+      "at": "20260907T180331Z",
+      "reservedUsd": 0.03938646,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 4461,
+        "completion_tokens": 392,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4069,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00461239
+    },
+    {
+      "book": "adversarial-review-critic",
+      "model": "gemma-4-31b",
+      "at": "20260907T180331Z",
+      "reservedUsd": 0.04290294,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 4858,
+        "completion_tokens": 386,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4472,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00500242
+    },
+    {
+      "book": "adversarial-review-revision",
+      "model": "gemma-4-31b",
+      "at": "20260907T180331Z",
+      "reservedUsd": 0.04639962,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 5228,
+        "completion_tokens": 379,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4849,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00536522
+    },
+    {
+      "book": "adversarial-review-final_critic",
+      "model": "gemma-4-31b",
+      "at": "20260907T180331Z",
+      "reservedUsd": 0.04307521,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 4947,
+        "completion_tokens": 488,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 4459,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00514153
+    },
+    {
+      "book": "adversarial-review-creator",
+      "model": "gemma-4-31b",
+      "at": "20260907T181356Z",
+      "reservedUsd": 0.07736089,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 11760,
+        "completion_tokens": 486,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11274,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.0118854
+    },
+    {
+      "book": "adversarial-review-critic",
+      "model": "gemma-4-31b",
+      "at": "20260907T181356Z",
+      "reservedUsd": 0.08153275,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 12249,
+        "completion_tokens": 478,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11771,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.01236551
+    },
+    {
+      "book": "adversarial-review-revision",
+      "model": "gemma-4-31b",
+      "at": "20260907T181356Z",
+      "reservedUsd": 0.08590261,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 12633,
+        "completion_tokens": 405,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 12228,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.01270917
+    },
+    {
+      "book": "adversarial-review-final_critic",
+      "model": "gemma-4-31b",
+      "at": "20260907T181356Z",
+      "reservedUsd": 0.08109318,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 12049,
+        "completion_tokens": 359,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 11690,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.01210801
     }
   ]
 }

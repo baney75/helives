@@ -6,8 +6,10 @@ export function FaithPage() {
     <div className="site">
       <SiteNav current="faith" />
       <main id="main-content" className="doc faith-doc">
-        <h1>Faith</h1>
-        <p className="faith-lead">Jesus Christ is Lord.</p>
+        <header className="faith-heading">
+          <div><p className="hero-kicker">He Lives</p><h1>Faith</h1><p className="faith-lead">Jesus Christ is Lord.</p></div>
+          <img src="/art/scripture/john.svg" alt="" width="1600" height="1000" decoding="async" />
+        </header>
         <p>
           He Lives is rooted in the Christian faith expressed in the Nicene Creed:
           one God, Father, Son, and Holy Spirit.

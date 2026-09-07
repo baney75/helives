@@ -1,0 +1,24 @@
+{
+  "summary": "Improve scene variation and immersive viewing by refining movement logic and transition timing.",
+  "verdict": "PROPOSE",
+  "items": [
+    {
+      "issue": "Limited scene variation: movement is based on a simple parity check of the artwork ID sum, leading to only two possible directions.",
+      "evidence": "src/art/ArtScene.tsx: const direction = artwork.id.split('').reduce((sum, letter) => sum + letter.charCodeAt(0), 0) % 2 ? 1 : -1",
+      "change": "Introduce more varied movement vectors (e.g., using modulo 4 for X/Y directions) and vary the scale range based on artwork properties to create more distinct 'camera' feels per scene.",
+      "check": "Verify that different artworks exhibit distinct movement patterns beyond simple left/right mirroring."
+    },
+    {
+      "issue": "Abrupt transition timing: the settle timer is fixed at 2400ms, which may not align with the 2200ms CSS opacity transition for a seamless crossfade.",
+      "evidence": "src/art/ArtBackdrop.tsx: const timer = setTimeout(() => dispatch({ type: 'settle', id }), 2400); src/index.css: .art-scene { transition:opacity 2200ms ease; }",
+      "change": "Synchronize the settle timeout with the CSS transition duration or implement a slight overlap to ensure the base layer is not removed before the incoming layer is fully opaque.",
+      "check": "Observe the transition between artworks to ensure no flickering or abrupt disappearance of the base layer."
+    },
+    {
+      "issue": "Static atmosphere: SceneAir elements use fixed animation durations regardless of the artwork's specific mood or palette.",
+      "evidence": "src/index.css: @keyframes art-light-breathe { ... } animation:art-light-breathe 24s ease-in-out infinite alternate;",
+      "change": "Pass artwork-specific timing modifiers (e.g., from catalog.ts) to the SceneAir component to vary the 'breath' and 'drift' speeds based on the scene's palette or weather.",
+      "check": "Confirm that 'stars' or 'water' scenes have distinct atmospheric rhythms compared to standard scenes."
+    }
+  ]
+}

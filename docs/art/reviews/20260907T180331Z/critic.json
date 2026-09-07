@@ -1,0 +1,24 @@
+{
+  "summary": "The proposal focuses on aesthetic 'immersion' but ignores critical performance and state failures in the current implementation, specifically regarding image loading and navigation.",
+  "verdict": "REVISE",
+  "items": [
+    {
+      "issue": "Stale image events and race conditions in ArtBackdrop transition logic.",
+      "evidence": "src/art/ArtBackdrop.tsx: useEffect triggers 'settle' 2400ms after state.ready, regardless of whether the artwork has changed in the interim.",
+      "change": "Bind the settle timer to the specific artwork ID and ensure the cleanup function cancels pending transitions when the artwork prop changes.",
+      "check": "Verify that rapid artwork switching does not result in the wrong image being set as the base layer."
+    },
+    {
+      "issue": "Performance degradation and memory leaks from unmanaged image instances.",
+      "evidence": "src/art/ArtBackdrop.tsx: Maps over [state.base, state.incoming] creating multiple ArtScene components without a strategy to unload previous assets.",
+      "change": "Implement a cache-clearing mechanism or explicit nullification of the 'base' image once the 'incoming' image has fully settled.",
+      "check": "Monitor memory usage during long 'Play collection' sessions to ensure DOM nodes and image buffers are released."
+    },
+    {
+      "issue": "Poor rapid navigation accessibility and UX in ArtViewer.",
+      "evidence": "src/art/ArtViewer.tsx: move() resets elapsed.current to 0, but the 250ms setInterval continues to run, potentially causing jumpy transitions during manual skipping.",
+      "change": "Synchronize the auto-advance timer with manual navigation to prevent immediate double-skips and ensure the 'loaded' state is verified before triggering the next transition.",
+      "check": "Confirm that clicking 'Next' rapidly does not trigger the auto-advance logic prematurely."
+    }
+  ]
+}

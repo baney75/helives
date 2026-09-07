@@ -12,7 +12,7 @@ try{
  await p.goto(base+'/scriptures');await p.getByRole('heading',{name:'The Scriptures',exact:true}).waitFor()
  assert.equal(await p.getByRole('button',{name:/View artwork for/}).count(),66)
  const opener=p.getByRole('button',{name:'View artwork for John',exact:true});await opener.focus();await p.keyboard.press('Enter')
- const stage=p.locator('.art-viewer .art-scene.is-ready');await stage.waitFor();await p.waitForTimeout(2500)
+ const stage=p.locator('.art-viewer .art-scene.is-ready').last();await stage.waitFor();await p.waitForTimeout(2500)
  const transform=()=>stage.locator('img').evaluate(e=>getComputedStyle(e).transform)
  const before=await transform();await p.waitForTimeout(2200);assert.notEqual(await transform(),before)
  await p.getByRole('button',{name:'Pause motion',exact:true}).click();await p.waitForTimeout(100)

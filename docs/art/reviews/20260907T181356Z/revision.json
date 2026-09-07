@@ -1,0 +1,24 @@
+{
+  "summary": "Address critical reliability and accessibility gaps in the ArtViewer and ArtScene components, focusing on cached image handling and focus management.",
+  "verdict": "PROPOSE",
+  "items": [
+    {
+      "issue": "Cached images may not trigger onLoad, causing transitions to hang.",
+      "evidence": "src/art/ArtScene.tsx: <img ... onLoad={() => { setLoaded(true); onReady?.() }} />",
+      "change": "In ArtScene, add a useEffect that checks image.current.complete immediately after mount to call setLoaded(true) and onReady() if the image is already cached.",
+      "check": "Verify that artworks transition immediately when served from browser cache."
+    },
+    {
+      "issue": "Dialog focus management is disruptive; autoFocus on 'Close' bypasses artwork content and controls.",
+      "evidence": "src/art/ArtViewer.tsx: <button type=\"button\" onClick={onClose} autoFocus>Close artwork</button>",
+      "change": "Remove autoFocus from the Close button. Implement a focus trap or ensure the initial focus is set to the dialog container or the first navigation control (Previous).",
+      "check": "Confirm screen reader focus begins at the start of the dialog content rather than the Close button."
+    },
+    {
+      "issue": "Interval-based timing in ArtViewer is susceptible to jitter due to frequent dependency resets.",
+      "evidence": "src/art/ArtViewer.tsx: setInterval(() => { ... }, 250) depends on [playing, paused, visible, failed, loaded, selected.id]",
+      "change": "Refactor the 60-second rotation to use a single stable interval or requestAnimationFrame, calculating elapsed time based on a timestamp delta rather than a 250ms accumulator.",
+      "check": "Verify that the 60-second rotation remains accurate regardless of state updates to 'visible' or 'loaded'."
+    }
+  ]
+}

@@ -1,20 +1,20 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useReducer, useRef } from 'react'
 import { ArtScene } from './ArtScene.tsx'
+import { artTransition } from './transition.ts'
 import type { Artwork } from './catalog.ts'
 
-/** Hold the previous drawing while the next SVG loads and dissolves into view. */
-export function ArtBackdrop({ artwork, still }: { artwork: Artwork; still: boolean }) {
-  const [layers, setLayers] = useState([artwork])
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
+/** Decoding and dissolving are separate: a slow or failed image never erases the last scene. */
+export function ArtBackdrop({ artwork, still, retry = 0, onReady, onFailure }: { artwork: Artwork; still: boolean; retry?: number; onReady?: (id: string) => void; onFailure?: (id: string) => void }) {
+  const [state, dispatch] = useReducer(artTransition, { base: artwork, incoming: null, ready: false })
+  const decoded = useRef(new Set<string>())
+  useEffect(() => { dispatch({ type: 'request', artwork }); if (decoded.current.has(artwork.id)) onReady?.(artwork.id) }, [artwork, retry])
   useEffect(() => {
-    if (timer.current) clearTimeout(timer.current)
-    setLayers(previous => previous.at(-1)?.id === artwork.id ? previous : [previous.at(-1)!, artwork])
-    return () => { if (timer.current) clearTimeout(timer.current) }
-  }, [artwork.id])
-  const ready = (id: string) => {
-    if (id !== artwork.id) return
-    if (timer.current) clearTimeout(timer.current)
-    timer.current = setTimeout(() => setLayers(current => current.filter(layer => layer.id === id)), 2400)
-  }
-  return <>{layers.map(layer => <ArtScene key={layer.id} artwork={layer} still={still} onReady={() => ready(layer.id)} />)}</>
+    if (!state.ready || !state.incoming) return
+    const id = state.incoming.id
+    const timer = setTimeout(() => dispatch({ type: 'settle', id }), 2400)
+    return () => clearTimeout(timer)
+  }, [state.ready, state.incoming])
+  return <>{[state.base, ...(state.incoming ? [state.incoming] : [])].map(layer => <ArtScene key={`${layer.id}:${retry}`} artwork={layer} still={still}
+    onReady={() => { decoded.current.add(layer.id); dispatch({ type: 'ready', id: layer.id }); onReady?.(layer.id) }}
+    onFailure={() => { decoded.current.delete(layer.id); dispatch({ type: 'failed', id: layer.id }); onFailure?.(layer.id) }} />)}</>
 }

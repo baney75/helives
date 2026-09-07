@@ -1,0 +1,24 @@
+{
+  "summary": "Enhance visual immersion by adding scene variation, atmospheric layering, and smoother transitions to the art viewing experience.",
+  "verdict": "PROPOSE",
+  "items": [
+    {
+      "issue": "Uniform camera movement across all artworks lacks scene variation.",
+      "evidence": "src/art/ArtScene.tsx: animate(element, { transform: ['scale(1.015) translateX(0%)', 'scale(1.08) translateX(-1.2%)'] }, ...)",
+      "change": "Introduce varied animation paths (e.g., different scale/translate pairs) based on artwork ID or metadata to create distinct scene dynamics.",
+      "check": "Verify that different artworks exhibit unique, subtle movement patterns instead of a single global animation."
+    },
+    {
+      "issue": "Art transitions are basic replacements without immersive atmospheric layering.",
+      "evidence": "src/art/ArtBackdrop.tsx: return <>{[state.base, ...(state.incoming ? [state.incoming] : [])].map(layer => <ArtScene ... />)}</>",
+      "change": "Implement CSS crossfading and z-index layering between state.base and state.incoming to create a seamless dissolve effect during artwork changes.",
+      "check": "Confirm that the incoming artwork fades in over the base artwork without abrupt visual jumps."
+    },
+    {
+      "issue": "Lack of atmospheric depth in the ArtViewer stage.",
+      "evidence": "src/art/ArtViewer.tsx: <div className=\"art-viewer-stage\"><ArtBackdrop ... /></div>",
+      "change": "Add a subtle, semi-transparent atmospheric overlay (e.g., a gradient or noise texture) within the art-viewer-stage to enhance depth and mood.",
+      "check": "Ensure the overlay adds visual richness without obscuring the engraved SVG art or introducing distracting movement."
+    }
+  ]
+}
