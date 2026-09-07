@@ -15,6 +15,7 @@ type NarrationOpts = {
 
 export type NarrationControl = {
   blocked: boolean
+  stalled: boolean
   hold: boolean
   retry: () => Promise<boolean>
   /** Media time is authoritative, including while stalled or loading. */
@@ -29,11 +30,13 @@ export function useNarration(options: NarrationOpts): NarrationControl {
   const state = useRef({ key: '', finished: false, pendingSeek: 0, seeking: true, origin: 0, journey: INTERACTIVE_SECONDS, padTime: 0, lastRead: 0 })
   const [blocked, setBlocked] = useState(false)
   const blockedRef = useRef(false)
+  const [stalled, setStalled] = useState(false)
   const [hold, setHold] = useState(false)
 
   const setPlaybackBlocked = useCallback((next: boolean) => {
     blockedRef.current = next
     setBlocked(next)
+    if (next) setStalled(false)
   }, [])
 
   const retry = useCallback(async () => {
@@ -89,6 +92,7 @@ export function useNarration(options: NarrationOpts): NarrationControl {
         state.current.padTime = Math.max(current.duration, state.current.pendingSeek)
         state.current.lastRead = performance.now()
         setHold(false)
+        setStalled(false)
       }
       const seek = () => {
         if (audioRef.current !== current) return
@@ -138,11 +142,38 @@ export function useNarration(options: NarrationOpts): NarrationControl {
     } else audio.pause()
   }, [playing, speed, muted, cinematic, sceneId, retry, setPlaybackBlocked])
 
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio || !playing || muted || state.current.finished || blockedRef.current) {
+      setStalled(false)
+      return
+    }
+    const startedAt = audio.currentTime
+    const clearStall = () => {
+      if (Math.abs(audio.currentTime - startedAt) > 0.04) setStalled(false)
+    }
+    const timer = window.setTimeout(() => {
+      if (
+        audioRef.current === audio &&
+        latest.current.playing &&
+        !latest.current.muted &&
+        !blockedRef.current &&
+        !state.current.finished &&
+        Math.abs(audio.currentTime - startedAt) <= 0.04
+      ) setStalled(true)
+    }, 3000)
+    audio.addEventListener('timeupdate', clearStall)
+    return () => {
+      window.clearTimeout(timer)
+      audio.removeEventListener('timeupdate', clearStall)
+    }
+  }, [playing, muted, sceneId, seekVersion])
+
   useEffect(() => () => {
     audioRef.current?.pause()
     audioRef.current = null
     state.current.key = ''
   }, [])
 
-  return { blocked, hold: hold && !muted, retry, readProgress }
+  return { blocked, stalled, hold: hold && !muted, retry, readProgress }
 }

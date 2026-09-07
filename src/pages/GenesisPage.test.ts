@@ -40,7 +40,7 @@ import { GenesisPage } from './GenesisPage.tsx'
 describe('Genesis first paint', () => {
   beforeEach(() => {
     useNarration.mockClear()
-    useNarration.mockReturnValue({ blocked: false, hold: false, retry: vi.fn().mockResolvedValue(true) })
+    useNarration.mockReturnValue({ blocked: false, stalled: false, hold: false, retry: vi.fn().mockResolvedValue(true) })
     vi.stubGlobal('window', { location: { search: '' } })
   })
 

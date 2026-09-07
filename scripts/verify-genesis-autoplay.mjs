@@ -56,7 +56,23 @@ try {
   await page.waitForTimeout(1000)
   assert(Number(await timeline.inputValue()) > blockedAt, 'timeline must resume after explicit sound consent')
 
-  console.log('Genesis consent passed: silent default, Play attempt, and explicit blocked-audio recovery')
+  const stalled = await browser.newPage({ viewport: { width: 1280, height: 800 } })
+  await stalled.emulateMedia({ reducedMotion: 'reduce' })
+  await stalled.addInitScript(() => {
+    HTMLMediaElement.prototype.play = function () { return Promise.resolve() }
+  })
+  await stalled.goto(`${base}/genesis?quality=low`, { waitUntil: 'networkidle' })
+  const stalledTimeline = stalled.getByLabel('Genesis time')
+  await stalled.getByRole('button', { name: 'Play', exact: true }).click()
+  const continueSilent = stalled.getByRole('button', { name: 'Audio stalled — continue without sound', exact: true })
+  await continueSilent.waitFor({ timeout: 5_000 })
+  const stalledAt = Number(await stalledTimeline.inputValue())
+  await continueSilent.click()
+  await stalled.waitForTimeout(900)
+  assert(Number(await stalledTimeline.inputValue()) > stalledAt, 'silent recovery must resume the visual clock')
+  await stalled.close()
+
+  console.log('Genesis consent passed: silent default, explicit blocked-audio retry, and stalled-clock silent recovery')
 } finally {
   await browser.close()
 }
