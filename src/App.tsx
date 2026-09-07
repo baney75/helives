@@ -7,6 +7,7 @@ import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import { ScripturesPage } from './pages/ScripturesPage.tsx'
 import { pageFor, titleFor } from './site/router.ts'
 import { Calibrating } from './ui/Calibrating.tsx'
+import { MusicProvider } from './music/MusicProvider.tsx'
 
 const GenesisPage = lazy(async () => {
   const mod = await import('./pages/GenesisPage.tsx')
@@ -35,6 +36,7 @@ export function App() {
   }, [page])
 
   return (
+    <MusicProvider quiet={page === 'genesis'}>
     <div onClick={(event) => handleSiteClick(event, setHref)}>
       {page === 'home' ? <HomePage /> : null}
       {page === 'faith' ? <FaithPage /> : null}
@@ -47,6 +49,7 @@ export function App() {
       {page === 'afterword' ? <AfterwordPage /> : null}
       {page === 'not-found' ? <NotFoundPage /> : null}
     </div>
+    </MusicProvider>
   )
 }
 

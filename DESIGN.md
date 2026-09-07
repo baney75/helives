@@ -1,6 +1,6 @@
 # He Lives design
 
-Visual thesis for [helives.dev](https://helives.dev). Brand locked at SHA `eebc74f` (Latin cross with a point of light, whole-canon Scriptures index). Tokens live in `src/index.css`. Load `gs-design`, then `.cursor/skills/helives-design`.
+Visual thesis for [helives.dev](https://helives.dev). Brand refined September 7, 2026 at Donovan’s request (unframed Latin cross with a dawn point, shared vector master). Tokens live in `src/index.css`. Load `gs-design`, then `.cursor/skills/helives-design`.
 
 This is a ministry site. Rams still applies: useful, honest, as little design as possible. It does not apply as “look like Linear.” Do not import SaaS card grids, pill clusters, or Inter.
 
@@ -39,9 +39,9 @@ Contrast: ink on void, fire on void, and `--speech` on void must stay WCAG AA. D
 
 Latin cross with a point of light at the crossing: empty tomb / resurrection, not a stock lucide cross.
 
-- Geometry: `src/site/BrandMark.tsx` and `/favicon.svg` (16×16, gold bars, dawn square at the joint).
-- Nav: 22px framed. Home hero: 48px framed.
-- Framed = void fill + gold stroke. Unframed = `currentColor` (fire in nav).
+- Geometry: `src/site/brand.ts` is the 64×64 master used by React and all vector/raster exports. Gold cross, dawn square at the joint.
+- Nav: 30px unframed. Home hero: 48px unframed. Genesis uses the same mark.
+- Unframed = `currentColor` (fire in the interface). No box around the primary mark.
 - Do not replace with an icon font, emoji, or a different cross.
 
 ## Type
@@ -112,3 +112,7 @@ When Exodus (or any book) ships:
 `device-verification`: 375 and 1280, console 0. Home must still read as He Lives with the nav removed. Scriptures must remain a list, not a grid of cards.
 
 The implementer captures screenshots as evidence. The **visual critic** (separate subagent, different model when available, no implementer chat) compares them to this thesis and to `docs/targets/`. “Looks good to me” from the agent that designed the page is not proof.
+
+## Optional music
+
+Quiet instrumental music accompanies the rotating Scripture as well as reading pages and Genesis. Playback stays off until explicitly enabled and does not reset at verse rollover. Music settings use a native top-layer popover so small viewports do not clip the volume or track selector. See `docs/MUSIC.md`.

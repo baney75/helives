@@ -1,4 +1,5 @@
 import { BrandMark } from './BrandMark.tsx'
+import { MusicControls } from '../music/MusicControls.tsx'
 
 export type NavId = 'home' | 'genesis' | 'scriptures' | 'afterword' | 'faith'
 
@@ -14,7 +15,7 @@ export function SiteNav({ current }: { current?: NavId }) {
     <header className="nav">
       <a className="skip" href="#main-content">Skip to content</a>
       <a className="nav-mark" href="/" aria-current={current === 'home' ? 'page' : undefined}>
-        <BrandMark size={22} framed />
+        <BrandMark size={30} />
         He Lives
       </a>
       <nav aria-label="Main navigation">
@@ -24,6 +25,7 @@ export function SiteNav({ current }: { current?: NavId }) {
           </a>
         ))}
       </nav>
+      {current !== 'home' && <MusicControls />}
     </header>
   )
 }

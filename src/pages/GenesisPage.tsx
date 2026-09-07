@@ -10,6 +10,7 @@ import { readAppMode } from '../lib/mode.ts'
 import { effectsAllowed, persistQualityRecord, qualityFromSearch, stricterQuality } from '../lib/quality.ts'
 import { CinematicOverlay } from '../ui/CinematicOverlay.tsx'
 import { HUD } from '../ui/HUD.tsx'
+import { MusicControls } from '../music/MusicControls.tsx'
 
 const GenesisCanvas = lazy(async () => {
   const module = await import('../scene/GenesisCanvas.tsx')
@@ -139,7 +140,7 @@ export function GenesisPage() {
           Waiting for audio — continue without sound
         </button>
       ) : null}
-      {mode.cinematic ? <CinematicOverlay clock={clock} /> : (
+      {mode.cinematic ? <><CinematicOverlay clock={clock} /><div className="cinematic-music"><MusicControls /></div></> : (
         <HUD
           clock={clock}
           muted={muted}

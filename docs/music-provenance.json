@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-07",
+  "source": "User-directed import from Downloads",
+  "tracks": [
+    {
+      "id": "where-the-light-rests",
+      "title": "Where the Light Rests",
+      "file": "where-the-light-rests.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Where_the_Light_Rests.mp3",
+      "source_sha256": "a580e995b82d31af287a58fbb66e89f8ce11372222c349122bc39e02876c408e",
+      "duration": 157.361633,
+      "original_loudness_lufs": -11.48,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "before-the-first-light",
+      "title": "Before the First Light",
+      "file": "before-the-first-light.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Before_the_First_Light.mp3",
+      "source_sha256": "9dce386a4212ec1210a3f553918c31b0d80a19180f62745ec5b1f7d417b67533",
+      "duration": 176.300408,
+      "original_loudness_lufs": -11.34,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "sunlight-on-the-garden-path",
+      "title": "Sunlight on the Garden Path",
+      "file": "sunlight-on-the-garden-path.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Sunlight_on_the_Garden_Path.mp3",
+      "source_sha256": "e88f59ed43b762483f6dfe35885be9b44d2feb9e6e70080b6df521763b897aae",
+      "duration": 179.252245,
+      "original_loudness_lufs": -11.04,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "where-the-river-stills",
+      "title": "Where The River Stills",
+      "file": "where-the-river-stills.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Where_The_River_Stills.mp3",
+      "source_sha256": "b97b63f6d3fe96ec8465a7f96e92aae2228eb87ae87d941a072a6f20616645bc",
+      "duration": 180.897959,
+      "original_loudness_lufs": -11.86,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "the-gentle-unfurling",
+      "title": "The Gentle Unfurling",
+      "file": "the-gentle-unfurling.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "The_Gentle_Unfurling.mp3",
+      "source_sha256": "6013039885629f5b02b06de3588bba636af3646028a024a7b93ea871be0d53f0",
+      "duration": 156.917551,
+      "original_loudness_lufs": -11.62,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "under-a-silent-sky",
+      "title": "Under A Silent Sky",
+      "file": "under-a-silent-sky.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Under_A_Silent_Sky.mp3",
+      "source_sha256": "179d35920ec4b49ccbaa6ad478448054f17b765d69d62a82022d69be84a5e50a",
+      "duration": 161.515102,
+      "original_loudness_lufs": -11.27,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "morning-beneath-the-oak",
+      "title": "Morning Beneath the Oak",
+      "file": "morning-beneath-the-oak.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Morning_Beneath_the_Oak.mp3",
+      "source_sha256": "45aa7e39f9dd331572662d134f3b28adfdf1ca17b1519dcc6b432ec132769ce9",
+      "duration": 176.53551,
+      "original_loudness_lufs": -11.51,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "a-room-held-in-breath",
+      "title": "A Room Held in Breath",
+      "file": "a-room-held-in-breath.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "A_Room_Held_in_Breath.mp3",
+      "source_sha256": "6238e54a3b475ac77237da667ce68480673da3c74263f1d4daa39a1be23018a7",
+      "duration": 165.877551,
+      "original_loudness_lufs": -11.29,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "winter-light-on-the-floor",
+      "title": "Winter Light on the Floor",
+      "file": "winter-light-on-the-floor.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Winter_Light_on_the_Floor.mp3",
+      "source_sha256": "223dafab155fb9f7ffac721b29ecc2f87279a3a159aadbbaef5e6b1693bd972c",
+      "duration": 166.896327,
+      "original_loudness_lufs": -11.4,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    },
+    {
+      "id": "before-the-curtains-close",
+      "title": "Before the Curtains Close",
+      "file": "before-the-curtains-close.mp3",
+      "credit": "Instrumental \u00b7 supplied by Donovan",
+      "source_file": "Before_the_Curtains_Close.mp3",
+      "source_sha256": "87b349bc8ee1d24db350c74b71dedf9d4af48fa2374b65039b82b80a720c0883",
+      "duration": 126.328163,
+      "original_loudness_lufs": -11.26,
+      "mastering": "Two-pass -23 LUFS / -3 dBTP target; stereo 44.1 kHz, MP3 160 kbps"
+    }
+  ]
+}

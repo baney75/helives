@@ -6,6 +6,7 @@ import { formatCountdown, msUntilNextHour, passageAt } from './clock.ts'
 import { bibleGatewayHref } from './gateway.ts'
 import { Sign } from './Sign.tsx'
 import { VerseText } from './VerseText.tsx'
+import { MusicControls } from '../music/MusicControls.tsx'
 
 export function HourLamp({ now }: { now?: Date }) {
   const reduced = usePrefersReducedMotion()
@@ -35,7 +36,7 @@ export function HourLamp({ now }: { now?: Date }) {
     >
       <div className="word-copy">
         <p className="hero-mark">
-          <BrandMark size={48} framed />
+          <BrandMark size={48} />
         </p>
         <h1>He Lives</h1>
         <p className="hero-kicker">This hour</p>
@@ -46,7 +47,7 @@ export function HourLamp({ now }: { now?: Date }) {
       </div>
       <Sign motif={passage.motif} reducedMotion={reduced} />
       <div className="word-acts">
-        <p className="hero-actions">
+        <div className="hero-actions">
           <a
             className="btn"
             href={bibleGatewayHref(passage.gatewayQuery)}
@@ -56,7 +57,8 @@ export function HourLamp({ now }: { now?: Date }) {
             Explore more
             <span className="sr-only"> on Bible Gateway, opens in a new tab</span>
           </a>
-        </p>
+          <MusicControls />
+        </div>
         <div className="word-remain">
           <p className="word-remain-label">New scripture every hour</p>
           <p className="word-remain-time">{formatCountdown(remain)}</p>

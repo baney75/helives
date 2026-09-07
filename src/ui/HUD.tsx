@@ -6,6 +6,8 @@ import { hasVoice } from '../genesis/voiced.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 import { Timeline } from './Timeline.tsx'
 import { sceneUrl } from '../lib/mode.ts'
+import { BrandMark } from '../site/BrandMark.tsx'
+import { MusicControls } from '../music/MusicControls.tsx'
 
 type HUDProps = {
   clock: GenesisClock
@@ -36,7 +38,7 @@ export function HUD({
     <div className="hud">
       <header className="topbar">
         <div className="brand">
-          <a className="wordmark" href="/">He Lives</a>
+          <a className="wordmark" href="/"><BrandMark size={26} />He Lives</a>
           <p className="tag">Genesis</p>
         </div>
         <dl className="readouts">
@@ -95,6 +97,7 @@ export function HUD({
           <span className="scene-count">{SCENES.findIndex((item) => item.id === scene.id) + 1} / {SCENES.length}</span>
         </label>
         <div className="transport">
+          <MusicControls />
           <button type="button" className="icon-btn" onClick={clock.reset}>
             Reset
           </button>

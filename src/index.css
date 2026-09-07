@@ -1826,3 +1826,59 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
 }
 
 .scene-loading { position: fixed; left: 50%; top: 52%; transform: translate(-50%, -50%); color: #c7bdab; font-size: 0.9rem; letter-spacing: 0.04em; pointer-events: none; }
+
+/* Shared unframed wordmark and a quiet, explicit listening control. */
+.wordmark { display: inline-flex; align-items: center; gap: 8px; }
+.wordmark .brand-mark { color: var(--fire); flex: none; }
+.hero-actions { align-items: center; flex-wrap: wrap; gap: 12px 24px; }
+.music-controls { display: inline-flex; align-items: center; gap: 4px; flex-wrap: wrap; position: relative; pointer-events: auto; }
+.music-toggle, .music-settings { min-height: 44px; border: 0; background: transparent; color: var(--muted); cursor: pointer; padding: 8px 10px; font: inherit; font-size: 14px; }
+.music-toggle { display: inline-flex; align-items: center; gap: 9px; }
+.music-toggle svg { flex: none; }
+.music-toggle[aria-pressed='true'] { color: var(--fire); }
+.music-toggle:hover, .music-settings:hover { color: var(--dawn); }
+.music-settings { font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.music-panel { position: fixed; inset: auto 24px 24px auto; width: min(320px, calc(100vw - 32px)); max-height: calc(100svh - 32px); overflow-y: auto; margin: 0; padding: 24px; background: var(--void); color: var(--ink); border: 1px solid var(--fire); box-shadow: 0 12px 60px #0008; font-family: var(--serif); font-size: 16px; line-height: 1.5; }
+.music-panel::backdrop { background: transparent; }
+.music-panel p { margin: 0 0 20px; color: var(--ink); }
+.music-panel .music-heading { font-family: var(--display); font-size: 28px; }
+.music-panel small { display: block; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.music-panel label { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px; }
+.music-panel input { width: 100%; min-height: 44px; accent-color: var(--fire); cursor: pointer; margin: 0 0 12px; }
+.music-panel select { max-width: 65%; background: var(--void); color: var(--ink); min-height: 44px; }
+.music-error { width: 100%; max-width: 280px; font-size: 12px; color: var(--ink); }
+.foot > .music-controls { margin-bottom: 16px; }
+@media (max-width: 699px) {
+  .hero-actions { gap: 4px 10px; }
+  .music-toggle { padding-inline: 4px; font-size: 12px; gap: 6px; }
+  .music-settings { padding-inline: 4px; font-size: 11px; }
+  .music-panel { right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); }
+  .transport .music-controls { flex-basis: 100%; }
+}
+.cinematic-music { position: fixed; top: 76px; right: 24px; z-index: 30; }
+.site:not(.lamp-home) .nav { flex-wrap: wrap; }
+.site:not(.lamp-home) .nav > .music-controls { flex-basis: 100%; margin-top: -8px; }
+@media (max-width: 699px) {
+  .site.lamp-home .nav { flex-direction: column; align-items: stretch; gap: 0; }
+  .site.lamp-home .nav nav { width: 100%; justify-content: space-between; gap: 8px; }
+}
+@media (max-height: 580px) and (min-width: 550px) {
+  .site.lamp-home .nav { flex-direction: row; align-items: center; }
+  .site.lamp-home .nav nav { width: auto; }
+  .site.lamp-home .word-lamp { grid-template-columns: minmax(0, 1fr) 60px; grid-template-areas: 'copy sign' 'acts sign'; column-gap: 16px; }
+  .site.lamp-home .hero-mark { display: none; }
+}
+@media (max-width: 699px) {
+  .site:not(.lamp-home) .nav { flex-wrap: nowrap; }
+  .site:not(.lamp-home) .nav > .music-controls { flex-basis: auto; width: 100%; }
+}
+@media (max-width: 549px) and (max-height: 650px) {
+  .site.lamp-home .hero-mark { display: none; }
+  .site.lamp-home .word-sign svg, .site.lamp-home .word-sign .brand-mark { width: 28px; height: 28px; }
+  .site.lamp-home .hero-actions .btn { padding-inline: 14px; font-size: 16px; }
+  .site.lamp-home .hero-cite { margin: 4px 0; }
+  .site.lamp-home .word-lamp { row-gap: 2px; }
+}
+@media (max-height: 580px) and (min-width: 550px) {
+  .site.lamp-home .hero-cite { margin: 4px 0; }
+}
