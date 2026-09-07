@@ -97,11 +97,12 @@ try {
   const noWebgl = await browser.newPage({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' })
   await noWebgl.addInitScript(() => {
     window.__clips = []
+    window.__webglDisabled = true
     const OriginalAudio = window.Audio
     window.Audio = function(...args) { const audio = new OriginalAudio(...args); window.__clips.push(audio); return audio }
     const nativeGetContext = HTMLCanvasElement.prototype.getContext
     HTMLCanvasElement.prototype.getContext = function (type, ...args) {
-      if (String(type).startsWith('webgl')) return null
+      if (window.__webglDisabled && String(type).startsWith('webgl')) return null
       return nativeGetContext.call(this, type, ...args)
     }
   })
@@ -114,9 +115,19 @@ try {
   await noWebgl.waitForTimeout(900)
   assert(Number(await fallbackTimeline.inputValue()) > fallbackStart, 'fallback timeline did not advance')
   assert(await noWebgl.evaluate(() => window.__clips.some(a => !a.paused)), 'fallback narration did not play')
+  const beforeUnavailableRetry = Number(await fallbackTimeline.inputValue())
+  await noWebgl.getByRole('button', { name: 'Retry 3D scene', exact: true }).click()
+  await noWebgl.waitForTimeout(900)
+  assert(Number(await fallbackTimeline.inputValue()) > beforeUnavailableRetry, 'persistent no-WebGL retry froze the fallback timeline')
+  assert(await noWebgl.evaluate(() => window.__clips.some(a => !a.paused)), 'persistent no-WebGL retry paused narration')
+  await noWebgl.evaluate(() => { window.__webglDisabled = false })
+  await noWebgl.getByRole('button', { name: 'Retry 3D scene', exact: true }).click()
+  await noWebgl.locator('.app.has-scene-fallback').waitFor({ state: 'detached', timeout: 15_000 })
+  await noWebgl.locator('canvas').waitFor({ state: 'visible' })
+  await noWebgl.getByText('Loading scene…', { exact: true }).waitFor({ state: 'detached', timeout: 15_000 })
   await noWebgl.screenshot({ path: `${out}/webgl-fallback-1280.png` })
   await noWebgl.close()
-  checks.push('Unavailable WebGL keeps the readable scene, narration, and timeline functional')
+  checks.push('Unavailable WebGL stays playable after a failed retry and restores Canvas after graphics recovery')
 
   let blockFish = true
   const failedModel = await browser.newPage({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' })

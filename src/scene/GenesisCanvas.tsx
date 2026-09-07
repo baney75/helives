@@ -277,10 +277,17 @@ export function GenesisCanvas({
 
   const retry = useCallback(() => {
     for (const url of MODEL_URLS) useGLTF.clear(url)
+    const available = canStartWebGL()
+    if (!available) {
+      // A failed retry must preserve the usable text/audio fallback. Since the
+      // boolean state remains false, its effect will not fire a second time.
+      onUnavailable?.()
+      return
+    }
     onReady?.(false)
-    setWebglAvailable(canStartWebGL())
+    setWebglAvailable(true)
     setEpoch((value) => value + 1)
-  }, [onReady])
+  }, [onReady, onUnavailable])
 
   if (!webglAvailable) {
     return (
