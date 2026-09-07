@@ -134,7 +134,7 @@ export function GenesisPage() {
         </button>
       ) : narration.stalled ? (
         <button type="button" className="sound-gate" onClick={() => setMuted(true)}>
-          Audio stalled — continue without sound
+          Waiting for audio — continue without sound
         </button>
       ) : null}
       {mode.cinematic ? <CinematicOverlay clock={clock} /> : <HUD clock={clock} muted={muted} onMute={() => setMuted((value) => !value)} />}

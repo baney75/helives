@@ -6,7 +6,7 @@ import { INTERACTIVE_SECONDS, sceneBounds } from '../genesis/sceneTiming.ts'
 import type { NarrationControl } from './useNarration.ts'
 import { useNarration } from './useNarration.ts'
 
-const clips: { currentTime: number; duration: number; readyState: number; playbackRate: number; dispatchEvent: (event: Event) => boolean; paused: boolean; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn>; removeEventListener: EventTarget['removeEventListener'] }[] = []
+const clips: { currentTime: number; duration: number; readyState: number; playbackRate: number; dispatchEvent: (event: Event) => boolean; paused: boolean; play: ReturnType<typeof vi.fn>; pause: ReturnType<typeof vi.fn> }[] = []
 function AudioMock() {
   const events = new EventTarget()
   const clip = {
@@ -17,7 +17,6 @@ function AudioMock() {
     pause: vi.fn(() => { clip.paused = true }),
     setAttribute: vi.fn(),
     addEventListener: events.addEventListener.bind(events),
-    removeEventListener: events.removeEventListener.bind(events),
   }
   clips.push(clip)
   return clip

@@ -13,6 +13,9 @@ type NarrationOpts = {
   seekVersion?: number
 }
 
+const AUDIO_PROGRESS_TIMEOUT_MS = 3000
+const AUDIO_PROGRESS_SAMPLE_MS = 250
+
 export type NarrationControl = {
   blocked: boolean
   stalled: boolean
@@ -148,25 +151,32 @@ export function useNarration(options: NarrationOpts): NarrationControl {
       setStalled(false)
       return
     }
-    const startedAt = audio.currentTime
-    const clearStall = () => {
-      if (Math.abs(audio.currentTime - startedAt) > 0.04) setStalled(false)
-    }
-    const timer = window.setTimeout(() => {
+    let lastTime = audio.currentTime
+    let lastProgressAt = performance.now()
+    // This covers both ordinary loading and audio backends that report Play but
+    // never tick their media clock. Progress clears the notice automatically;
+    // another three-second pause in progress makes the recovery available again.
+    const timer = window.setInterval(() => {
       if (
-        audioRef.current === audio &&
-        latest.current.playing &&
-        !latest.current.muted &&
-        !blockedRef.current &&
-        !state.current.finished &&
-        Math.abs(audio.currentTime - startedAt) <= 0.04
-      ) setStalled(true)
-    }, 3000)
-    audio.addEventListener('timeupdate', clearStall)
-    return () => {
-      window.clearTimeout(timer)
-      audio.removeEventListener('timeupdate', clearStall)
-    }
+        audioRef.current !== audio ||
+        !latest.current.playing ||
+        latest.current.muted ||
+        blockedRef.current ||
+        state.current.finished
+      ) {
+        setStalled(false)
+        return
+      }
+      const currentTime = audio.currentTime
+      if (Math.abs(currentTime - lastTime) > 0.04) {
+        lastTime = currentTime
+        lastProgressAt = performance.now()
+        setStalled(false)
+      } else if (performance.now() - lastProgressAt >= AUDIO_PROGRESS_TIMEOUT_MS) {
+        setStalled(true)
+      }
+    }, AUDIO_PROGRESS_SAMPLE_MS)
+    return () => window.clearInterval(timer)
   }, [playing, muted, sceneId, seekVersion])
 
   useEffect(() => () => {

@@ -59,12 +59,23 @@ try {
   const stalled = await browser.newPage({ viewport: { width: 1280, height: 800 } })
   await stalled.emulateMedia({ reducedMotion: 'reduce' })
   await stalled.addInitScript(() => {
+    window.__stalledClips = []
+    const NativeAudio = window.Audio
+    window.Audio = function (...args) {
+      const audio = new NativeAudio(...args)
+      window.__stalledClips.push(audio)
+      return audio
+    }
+    window.Audio.prototype = NativeAudio.prototype
     HTMLMediaElement.prototype.play = function () { return Promise.resolve() }
   })
   await stalled.goto(`${base}/genesis?quality=low`, { waitUntil: 'networkidle' })
   const stalledTimeline = stalled.getByLabel('Genesis time')
   await stalled.getByRole('button', { name: 'Play', exact: true }).click()
-  const continueSilent = stalled.getByRole('button', { name: 'Audio stalled — continue without sound', exact: true })
+  const continueSilent = stalled.getByRole('button', { name: 'Waiting for audio — continue without sound', exact: true })
+  await continueSilent.waitFor({ timeout: 5_000 })
+  await stalled.evaluate(() => { window.__stalledClips.at(-1).currentTime = 0.25 })
+  await continueSilent.waitFor({ state: 'detached', timeout: 1_500 })
   await continueSilent.waitFor({ timeout: 5_000 })
   const stalledAt = Number(await stalledTimeline.inputValue())
   await continueSilent.click()
