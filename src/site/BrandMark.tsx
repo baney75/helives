@@ -5,7 +5,7 @@ type BrandMarkProps = {
   framed?: boolean
 }
 
-/** An open Latin cross, with a dawn point at the crossing. */
+/** A slender, flared Latin cross with an engraved edge of light. */
 export function BrandMark({ size = 24, framed = false }: BrandMarkProps) {
   return (
     <svg

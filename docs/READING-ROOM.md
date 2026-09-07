@@ -6,6 +6,6 @@ TV mode enlarges and centers Scripture. Controls fade after six seconds and retu
 
 Music starts off each fresh visit. Ten supplied instrumental recordings blend over six seconds at natural handoffs, independently of Scripture changes. See MUSIC.md for provenance and mastering. Hiding the tab stops music; returning requires explicit opt-in again.
 
-Light, water and vine drawings use SVG and CSS. Motion pauses offscreen and respects reduced-motion settings. Home does not load the Genesis WebGL scene.
+66 original SVG illustrations cover every book, with the home background matched to the current passage. Drawings dissolve over 2.2 seconds and move on an 80-second camera cycle through Motion’s mini API. Motion pauses offscreen and respects reduced-motion settings. The Scriptures page opens each illustration in a keyboard-accessible viewer. Home does not load the Genesis WebGL scene. See art/README.md for generation, provenance and the budget ledger.
 
 Verification: `node scripts/verify-reading-room.mjs` against Wrangler preview tests real media, minute timing, pause/next, TV idle/recovery and 40 consecutive passages at phone, desktop, HD and 4K sizes. `node scripts/verify-brand-music.mjs` retains media failure/retry, navigation, longest-passage controls and branding checks. `node scripts/verify-refresh.mjs` checks broader site behavior. Evidence stays in local demo/.

@@ -18,7 +18,7 @@ try {
       await page.locator('h1').first().waitFor()
       if (name === 'genesis') await page.waitForTimeout(1600)
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${name} ${width} overflow`)
-      await page.screenshot({ path: `${out}/${name}-${width}.png`, fullPage: name !== 'genesis' })
+      await page.screenshot({ path: `${out}/${name}-${width}.png`, fullPage: !['genesis', 'scriptures'].includes(name) })
       checks.push(`${name} at ${width}: no horizontal overflow, captured`)
     }
     await page.close()

@@ -1,0 +1,664 @@
+{
+  "scenes": [
+    {
+      "id": "genesis",
+      "family": "mountain",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1100,
+      "horizon": 500,
+      "sunX": 800,
+      "detail": "none"
+    },
+    {
+      "id": "exodus",
+      "family": "sea",
+      "palette": "blue",
+      "weather": "clear",
+      "focalX": 1000,
+      "horizon": 600,
+      "sunX": 1200,
+      "detail": "stones"
+    },
+    {
+      "id": "leviticus",
+      "family": "temple",
+      "palette": "jade",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 450,
+      "sunX": 1100,
+      "detail": "vessel"
+    },
+    {
+      "id": "numbers",
+      "family": "desert",
+      "palette": "blue",
+      "weather": "stars",
+      "focalX": 900,
+      "horizon": 550,
+      "sunX": 1300,
+      "detail": "none"
+    },
+    {
+      "id": "deuteronomy",
+      "family": "mountain",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1150,
+      "horizon": 480,
+      "sunX": 750,
+      "detail": "stones"
+    },
+    {
+      "id": "joshua",
+      "family": "river",
+      "palette": "jade",
+      "weather": "dawn",
+      "focalX": 1050,
+      "horizon": 520,
+      "sunX": 900,
+      "detail": "olive"
+    },
+    {
+      "id": "judges",
+      "family": "mountain",
+      "palette": "blue",
+      "weather": "stars",
+      "focalX": 1200,
+      "horizon": 610,
+      "sunX": 1100,
+      "detail": "vessel"
+    },
+    {
+      "id": "ruth",
+      "family": "harvest",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 880,
+      "horizon": 580,
+      "sunX": 1250,
+      "detail": "vine"
+    },
+    {
+      "id": "1-samuel",
+      "family": "interior",
+      "palette": "rose",
+      "weather": "stars",
+      "focalX": 1100,
+      "horizon": 630,
+      "sunX": 1000,
+      "detail": "lamp"
+    },
+    {
+      "id": "2-samuel",
+      "family": "city",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1000,
+      "horizon": 470,
+      "sunX": 1200,
+      "detail": "none"
+    },
+    {
+      "id": "1-kings",
+      "family": "temple",
+      "palette": "jade",
+      "weather": "dawn",
+      "focalX": 1150,
+      "horizon": 510,
+      "sunX": 720,
+      "detail": "none"
+    },
+    {
+      "id": "2-kings",
+      "family": "gate",
+      "palette": "blue",
+      "weather": "clear",
+      "focalX": 950,
+      "horizon": 590,
+      "sunX": 1300,
+      "detail": "flowers"
+    },
+    {
+      "id": "1-chronicles",
+      "family": "temple",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1050,
+      "horizon": 620,
+      "sunX": 1100,
+      "detail": "stones"
+    },
+    {
+      "id": "2-chronicles",
+      "family": "temple",
+      "palette": "rose",
+      "weather": "stars",
+      "focalX": 1100,
+      "horizon": 540,
+      "sunX": 1200,
+      "detail": "vessel"
+    },
+    {
+      "id": "ezra",
+      "family": "city",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1200,
+      "horizon": 560,
+      "sunX": 850,
+      "detail": "stones"
+    },
+    {
+      "id": "nehemiah",
+      "family": "tower",
+      "palette": "jade",
+      "weather": "clear",
+      "focalX": 900,
+      "horizon": 490,
+      "sunX": 1150,
+      "detail": "none"
+    },
+    {
+      "id": "esther",
+      "family": "garden",
+      "palette": "rose",
+      "weather": "stars",
+      "focalX": 1150,
+      "horizon": 530,
+      "sunX": 700,
+      "detail": "flowers"
+    },
+    {
+      "id": "job",
+      "family": "storm",
+      "palette": "blue",
+      "weather": "storm",
+      "focalX": 1000,
+      "horizon": 600,
+      "sunX": 1200,
+      "detail": "none"
+    },
+    {
+      "id": "psalms",
+      "family": "river",
+      "palette": "jade",
+      "weather": "dawn",
+      "focalX": 1100,
+      "horizon": 570,
+      "sunX": 950,
+      "detail": "olive"
+    },
+    {
+      "id": "proverbs",
+      "family": "garden",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1050,
+      "horizon": 510,
+      "sunX": 1250,
+      "detail": "lamp"
+    },
+    {
+      "id": "ecclesiastes",
+      "family": "garden",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 460,
+      "sunX": 1100,
+      "detail": "none"
+    },
+    {
+      "id": "song-of-solomon",
+      "family": "garden",
+      "palette": "jade",
+      "weather": "stars",
+      "focalX": 1100,
+      "horizon": 580,
+      "sunX": 800,
+      "detail": "vine"
+    },
+    {
+      "id": "isaiah",
+      "family": "desert",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 950,
+      "horizon": 520,
+      "sunX": 1200,
+      "detail": "flowers"
+    },
+    {
+      "id": "jeremiah",
+      "family": "interior",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1150,
+      "horizon": 610,
+      "sunX": 750,
+      "detail": "vessel"
+    },
+    {
+      "id": "lamentations",
+      "family": "city",
+      "palette": "blue",
+      "weather": "stars",
+      "focalX": 1000,
+      "horizon": 640,
+      "sunX": 1100,
+      "detail": "none"
+    },
+    {
+      "id": "ezekiel",
+      "family": "river",
+      "palette": "jade",
+      "weather": "storm",
+      "focalX": 1100,
+      "horizon": 500,
+      "sunX": 1250,
+      "detail": "none"
+    },
+    {
+      "id": "daniel",
+      "family": "interior",
+      "palette": "blue",
+      "weather": "stars",
+      "focalX": 1200,
+      "horizon": 550,
+      "sunX": 900,
+      "detail": "none"
+    },
+    {
+      "id": "hosea",
+      "family": "garden",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1050,
+      "horizon": 530,
+      "sunX": 1100,
+      "detail": "vine"
+    },
+    {
+      "id": "joel",
+      "family": "harvest",
+      "palette": "jade",
+      "weather": "storm",
+      "focalX": 900,
+      "horizon": 590,
+      "sunX": 1300,
+      "detail": "none"
+    },
+    {
+      "id": "amos",
+      "family": "river",
+      "palette": "blue",
+      "weather": "clear",
+      "focalX": 1100,
+      "horizon": 480,
+      "sunX": 700,
+      "detail": "stones"
+    },
+    {
+      "id": "obadiah",
+      "family": "mountain",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 440,
+      "sunX": 1250,
+      "detail": "none"
+    },
+    {
+      "id": "jonah",
+      "family": "sea",
+      "palette": "blue",
+      "weather": "dawn",
+      "focalX": 1000,
+      "horizon": 650,
+      "sunX": 1100,
+      "detail": "boat"
+    },
+    {
+      "id": "micah",
+      "family": "garden",
+      "palette": "jade",
+      "weather": "clear",
+      "focalX": 1150,
+      "horizon": 560,
+      "sunX": 850,
+      "detail": "vine"
+    },
+    {
+      "id": "nahum",
+      "family": "city",
+      "palette": "blue",
+      "weather": "storm",
+      "focalX": 950,
+      "horizon": 510,
+      "sunX": 1200,
+      "detail": "none"
+    },
+    {
+      "id": "habakkuk",
+      "family": "tower",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1100,
+      "horizon": 470,
+      "sunX": 750,
+      "detail": "none"
+    },
+    {
+      "id": "zephaniah",
+      "family": "city",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1050,
+      "horizon": 580,
+      "sunX": 1100,
+      "detail": "flowers"
+    },
+    {
+      "id": "haggai",
+      "family": "temple",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1200,
+      "horizon": 540,
+      "sunX": 900,
+      "detail": "stones"
+    },
+    {
+      "id": "zechariah",
+      "family": "garden",
+      "palette": "blue",
+      "weather": "stars",
+      "focalX": 1100,
+      "horizon": 520,
+      "sunX": 1000,
+      "detail": "olive"
+    },
+    {
+      "id": "malachi",
+      "family": "mountain",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1000,
+      "horizon": 600,
+      "sunX": 1200,
+      "detail": "none"
+    },
+    {
+      "id": "matthew",
+      "family": "mountain",
+      "palette": "jade",
+      "weather": "dawn",
+      "focalX": 1150,
+      "horizon": 490,
+      "sunX": 800,
+      "detail": "flowers"
+    },
+    {
+      "id": "mark",
+      "family": "sea",
+      "palette": "blue",
+      "weather": "storm",
+      "focalX": 1050,
+      "horizon": 620,
+      "sunX": 1100,
+      "detail": "boat"
+    },
+    {
+      "id": "luke",
+      "family": "river",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 570,
+      "sunX": 1250,
+      "detail": "olive"
+    },
+    {
+      "id": "john",
+      "family": "tomb",
+      "palette": "rose",
+      "weather": "dawn",
+      "focalX": 900,
+      "horizon": 530,
+      "sunX": 750,
+      "detail": "none"
+    },
+    {
+      "id": "acts",
+      "family": "sea",
+      "palette": "blue",
+      "weather": "dawn",
+      "focalX": 1100,
+      "horizon": 510,
+      "sunX": 1000,
+      "detail": "boat"
+    },
+    {
+      "id": "romans",
+      "family": "bridge",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1000,
+      "horizon": 550,
+      "sunX": 1200,
+      "detail": "none"
+    },
+    {
+      "id": "1-corinthians",
+      "family": "garden",
+      "palette": "jade",
+      "weather": "clear",
+      "focalX": 1150,
+      "horizon": 590,
+      "sunX": 1100,
+      "detail": "olive"
+    },
+    {
+      "id": "2-corinthians",
+      "family": "interior",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 630,
+      "sunX": 900,
+      "detail": "vessel"
+    },
+    {
+      "id": "galatians",
+      "family": "garden",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1050,
+      "horizon": 540,
+      "sunX": 1250,
+      "detail": "flowers"
+    },
+    {
+      "id": "ephesians",
+      "family": "bridge",
+      "palette": "blue",
+      "weather": "clear",
+      "focalX": 1100,
+      "horizon": 480,
+      "sunX": 1100,
+      "detail": "olive"
+    },
+    {
+      "id": "philippians",
+      "family": "interior",
+      "palette": "rose",
+      "weather": "stars",
+      "focalX": 950,
+      "horizon": 610,
+      "sunX": 700,
+      "detail": "lamp"
+    },
+    {
+      "id": "colossians",
+      "family": "mountain",
+      "palette": "blue",
+      "weather": "stars",
+      "focalX": 1200,
+      "horizon": 450,
+      "sunX": 1300,
+      "detail": "none"
+    },
+    {
+      "id": "1-thessalonians",
+      "family": "sea",
+      "palette": "blue",
+      "weather": "dawn",
+      "focalX": 1000,
+      "horizon": 580,
+      "sunX": 850,
+      "detail": "none"
+    },
+    {
+      "id": "2-thessalonians",
+      "family": "mountain",
+      "palette": "gold",
+      "weather": "storm",
+      "focalX": 1150,
+      "horizon": 520,
+      "sunX": 1200,
+      "detail": "olive"
+    },
+    {
+      "id": "1-timothy",
+      "family": "interior",
+      "palette": "jade",
+      "weather": "dawn",
+      "focalX": 1100,
+      "horizon": 640,
+      "sunX": 1000,
+      "detail": "scroll"
+    },
+    {
+      "id": "2-timothy",
+      "family": "mountain",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 500,
+      "sunX": 1150,
+      "detail": "olive"
+    },
+    {
+      "id": "titus",
+      "family": "sea",
+      "palette": "blue",
+      "weather": "clear",
+      "focalX": 1050,
+      "horizon": 560,
+      "sunX": 1200,
+      "detail": "olive"
+    },
+    {
+      "id": "philemon",
+      "family": "interior",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1100,
+      "horizon": 590,
+      "sunX": 750,
+      "detail": "none"
+    },
+    {
+      "id": "hebrews",
+      "family": "temple",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 950,
+      "horizon": 510,
+      "sunX": 1100,
+      "detail": "none"
+    },
+    {
+      "id": "james",
+      "family": "garden",
+      "palette": "jade",
+      "weather": "dawn",
+      "focalX": 1200,
+      "horizon": 570,
+      "sunX": 1300,
+      "detail": "vine"
+    },
+    {
+      "id": "1-peter",
+      "family": "tower",
+      "palette": "blue",
+      "weather": "storm",
+      "focalX": 1000,
+      "horizon": 460,
+      "sunX": 800,
+      "detail": "stones"
+    },
+    {
+      "id": "2-peter",
+      "family": "mountain",
+      "palette": "gold",
+      "weather": "stars",
+      "focalX": 1150,
+      "horizon": 530,
+      "sunX": 900,
+      "detail": "none"
+    },
+    {
+      "id": "1-john",
+      "family": "garden",
+      "palette": "jade",
+      "weather": "stars",
+      "focalX": 1100,
+      "horizon": 600,
+      "sunX": 1100,
+      "detail": "lamp"
+    },
+    {
+      "id": "2-john",
+      "family": "interior",
+      "palette": "rose",
+      "weather": "clear",
+      "focalX": 1200,
+      "horizon": 580,
+      "sunX": 1250,
+      "detail": "vine"
+    },
+    {
+      "id": "3-john",
+      "family": "interior",
+      "palette": "gold",
+      "weather": "clear",
+      "focalX": 1050,
+      "horizon": 620,
+      "sunX": 1000,
+      "detail": "vessel"
+    },
+    {
+      "id": "jude",
+      "family": "bridge",
+      "palette": "blue",
+      "weather": "clear",
+      "focalX": 900,
+      "horizon": 440,
+      "sunX": 1200,
+      "detail": "none"
+    },
+    {
+      "id": "revelation",
+      "family": "city",
+      "palette": "gold",
+      "weather": "dawn",
+      "focalX": 1100,
+      "horizon": 500,
+      "sunX": 1100,
+      "detail": "flowers"
+    }
+  ]
+}

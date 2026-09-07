@@ -1,6 +1,6 @@
 # He Lives design
 
-Visual thesis for [helives.dev](https://helives.dev). Brand refined September 7, 2026 at Donovan’s request (unframed Latin cross with a dawn point, shared vector master). Tokens live in `src/index.css`. Load `gs-design`, then `.cursor/skills/helives-design`.
+Visual thesis for [helives.dev](https://helives.dev). Brand refined September 7, 2026 at Donovan’s request (slender flared Latin cross with an engraved light edge, shared vector master). Tokens live in `src/index.css`. Load `gs-design`, then `.cursor/skills/helives-design`.
 
 This is a ministry site. Rams still applies: useful, honest, as little design as possible. It does not apply as “look like Linear.” Do not import SaaS card grids, pill clusters, or Inter.
 
@@ -37,9 +37,9 @@ Contrast: ink on void, fire on void, and `--speech` on void must stay WCAG AA. D
 
 ## Mark
 
-Latin cross with a point of light at the crossing: empty tomb / resurrection, not a stock lucide cross.
+A slender, flared Latin cross with an engraved light edge.
 
-- Geometry: `src/site/brand.ts` is the 64×64 master used by React and all vector/raster exports. Gold cross, dawn square at the joint.
+- Geometry: `src/site/brand.ts` is the 64×64 master used by React and all vector/raster exports. Gold silhouette with a fine light edge; no square at the joint.
 - Nav: 30px unframed. Home hero: 48px unframed. Genesis uses the same mark.
 - Unframed = `currentColor` (fire in the interface). No box around the primary mark.
 - Do not replace with an icon font, emoji, or a different cross.
@@ -56,7 +56,7 @@ Latin cross with a point of light at the crossing: empty tomb / resurrection, no
 
 | Surface | Pattern |
 |---------|---------|
-| Home | One 100svh lamp (100vh fallback): mark, He Lives, rotating KJV (words of Christ in red), an authored one-line motif, Explore more, new Scripture every 60 seconds, gentle ambient motif animation, optional TV display and opt-in music, He Lives and the KJV public-domain line. No page scroll. No clipped footer. No Lucide furniture. No cards. No wash. No church button. |
+| Home | One 100svh lamp (100vh fallback): mark, He Lives, rotating KJV (words of Christ in red), an authored one-line motif, Explore more, new Scripture every 60 seconds, book-matched SVG landscapes with slow camera motion, optional TV display and opt-in music, He Lives and the KJV public-domain line. No page scroll. No clipped footer. No Lucide furniture. No cards. No wash. No church button. |
 | Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
 | Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
 | Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
@@ -78,7 +78,7 @@ Motion: slow auto-rotate off cinematic; respect `prefers-reduced-motion`; 2–3 
 
 | File | Rule |
 |------|------|
-| `/favicon.svg` | Same geometry as BrandMark. Void ground, fire cross, dawn joint. |
+| `/favicon.svg` | Same geometry as BrandMark. Void ground, gold cross, engraved edge. |
 | `/favicon-32.png` | Raster of the SVG. Regenerate with `pnpm brand` after mark changes. |
 | `/apple-touch-icon.png` | Same mark, larger. |
 | `/mask-icon.svg` | Monochrome; `color="#e8b86d"` in `index.html`. |

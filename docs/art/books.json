@@ -1,0 +1,332 @@
+[
+  {
+    "id": "genesis",
+    "title": "Genesis",
+    "division": "The Law"
+  },
+  {
+    "id": "exodus",
+    "title": "Exodus",
+    "division": "The Law"
+  },
+  {
+    "id": "leviticus",
+    "title": "Leviticus",
+    "division": "The Law"
+  },
+  {
+    "id": "numbers",
+    "title": "Numbers",
+    "division": "The Law"
+  },
+  {
+    "id": "deuteronomy",
+    "title": "Deuteronomy",
+    "division": "The Law"
+  },
+  {
+    "id": "joshua",
+    "title": "Joshua",
+    "division": "History"
+  },
+  {
+    "id": "judges",
+    "title": "Judges",
+    "division": "History"
+  },
+  {
+    "id": "ruth",
+    "title": "Ruth",
+    "division": "History"
+  },
+  {
+    "id": "1-samuel",
+    "title": "1 Samuel",
+    "division": "History"
+  },
+  {
+    "id": "2-samuel",
+    "title": "2 Samuel",
+    "division": "History"
+  },
+  {
+    "id": "1-kings",
+    "title": "1 Kings",
+    "division": "History"
+  },
+  {
+    "id": "2-kings",
+    "title": "2 Kings",
+    "division": "History"
+  },
+  {
+    "id": "1-chronicles",
+    "title": "1 Chronicles",
+    "division": "History"
+  },
+  {
+    "id": "2-chronicles",
+    "title": "2 Chronicles",
+    "division": "History"
+  },
+  {
+    "id": "ezra",
+    "title": "Ezra",
+    "division": "History"
+  },
+  {
+    "id": "nehemiah",
+    "title": "Nehemiah",
+    "division": "History"
+  },
+  {
+    "id": "esther",
+    "title": "Esther",
+    "division": "History"
+  },
+  {
+    "id": "job",
+    "title": "Job",
+    "division": "Wisdom"
+  },
+  {
+    "id": "psalms",
+    "title": "Psalms",
+    "division": "Wisdom"
+  },
+  {
+    "id": "proverbs",
+    "title": "Proverbs",
+    "division": "Wisdom"
+  },
+  {
+    "id": "ecclesiastes",
+    "title": "Ecclesiastes",
+    "division": "Wisdom"
+  },
+  {
+    "id": "song-of-solomon",
+    "title": "Song of Solomon",
+    "division": "Wisdom"
+  },
+  {
+    "id": "isaiah",
+    "title": "Isaiah",
+    "division": "Major Prophets"
+  },
+  {
+    "id": "jeremiah",
+    "title": "Jeremiah",
+    "division": "Major Prophets"
+  },
+  {
+    "id": "lamentations",
+    "title": "Lamentations",
+    "division": "Major Prophets"
+  },
+  {
+    "id": "ezekiel",
+    "title": "Ezekiel",
+    "division": "Major Prophets"
+  },
+  {
+    "id": "daniel",
+    "title": "Daniel",
+    "division": "Major Prophets"
+  },
+  {
+    "id": "hosea",
+    "title": "Hosea",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "joel",
+    "title": "Joel",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "amos",
+    "title": "Amos",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "obadiah",
+    "title": "Obadiah",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "jonah",
+    "title": "Jonah",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "micah",
+    "title": "Micah",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "nahum",
+    "title": "Nahum",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "habakkuk",
+    "title": "Habakkuk",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "zephaniah",
+    "title": "Zephaniah",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "haggai",
+    "title": "Haggai",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "zechariah",
+    "title": "Zechariah",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "malachi",
+    "title": "Malachi",
+    "division": "Minor Prophets"
+  },
+  {
+    "id": "matthew",
+    "title": "Matthew",
+    "division": "Gospels"
+  },
+  {
+    "id": "mark",
+    "title": "Mark",
+    "division": "Gospels"
+  },
+  {
+    "id": "luke",
+    "title": "Luke",
+    "division": "Gospels"
+  },
+  {
+    "id": "john",
+    "title": "John",
+    "division": "Gospels"
+  },
+  {
+    "id": "acts",
+    "title": "Acts",
+    "division": "History"
+  },
+  {
+    "id": "romans",
+    "title": "Romans",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "1-corinthians",
+    "title": "1 Corinthians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "2-corinthians",
+    "title": "2 Corinthians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "galatians",
+    "title": "Galatians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "ephesians",
+    "title": "Ephesians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "philippians",
+    "title": "Philippians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "colossians",
+    "title": "Colossians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "1-thessalonians",
+    "title": "1 Thessalonians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "2-thessalonians",
+    "title": "2 Thessalonians",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "1-timothy",
+    "title": "1 Timothy",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "2-timothy",
+    "title": "2 Timothy",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "titus",
+    "title": "Titus",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "philemon",
+    "title": "Philemon",
+    "division": "Letters of Paul"
+  },
+  {
+    "id": "hebrews",
+    "title": "Hebrews",
+    "division": "General Letters"
+  },
+  {
+    "id": "james",
+    "title": "James",
+    "division": "General Letters"
+  },
+  {
+    "id": "1-peter",
+    "title": "1 Peter",
+    "division": "General Letters"
+  },
+  {
+    "id": "2-peter",
+    "title": "2 Peter",
+    "division": "General Letters"
+  },
+  {
+    "id": "1-john",
+    "title": "1 John",
+    "division": "General Letters"
+  },
+  {
+    "id": "2-john",
+    "title": "2 John",
+    "division": "General Letters"
+  },
+  {
+    "id": "3-john",
+    "title": "3 John",
+    "division": "General Letters"
+  },
+  {
+    "id": "jude",
+    "title": "Jude",
+    "division": "General Letters"
+  },
+  {
+    "id": "revelation",
+    "title": "Revelation",
+    "division": "The Revelation"
+  }
+]

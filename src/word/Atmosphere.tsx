@@ -1,8 +1,11 @@
+import { ArtBackdrop } from '../art/ArtBackdrop.tsx'
+import { artworkForPassage } from '../art/catalog.ts'
 import type { Motif } from './types.ts'
 
 /** CSS/SVG scene grammar: no GPU framework or network assets on the reading page. */
-export function Atmosphere({ motif, still }: { motif: Motif; still: boolean }) {
+export function Atmosphere({ motif, still, reference }: { motif: Motif; still: boolean; reference: string }) {
   return <div className="reading-atmosphere" data-scene={motif} data-still={still} aria-hidden="true">
+    <ArtBackdrop artwork={artworkForPassage(reference)} still={still} />
     <div className="atmosphere-light" />
     <svg className="atmosphere-lines" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" fill="none">
       <g className="atmosphere-orbits">

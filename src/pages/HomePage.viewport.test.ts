@@ -67,6 +67,8 @@ async function measure(page: Page) {
       brand: { top: brandBox.top, bottom: brandBox.bottom, height: brandBox.height },
       verse: { top: verseBox.top, bottom: verseBox.bottom, height: verseBox.height },
       cite: { top: citeBox.top, bottom: citeBox.bottom, height: citeBox.height },
+      artHeight: document.querySelector('.art-scene img')?.getBoundingClientRect().height ?? 0,
+      artSource: document.querySelector('.art-scene img')?.getAttribute('src') ?? '',
       sign: { top: signBox.top, bottom: signBox.bottom, height: signBox.height },
       actions: { top: actionsBox.top, bottom: actionsBox.bottom, height: actionsBox.height },
       remain: { top: remainBox.top, bottom: remainBox.bottom, height: remainBox.height },
@@ -121,7 +123,9 @@ describe('home viewport', () => {
     expect(fit.brand.top).toBeGreaterThanOrEqual(0)
     expect(fit.verse.height).toBeGreaterThan(20)
     expect(fit.cite.bottom).toBeGreaterThan(fit.verse.top)
-    expect(fit.sign.height).toBeGreaterThan(20)
+    // The former small icon is replaced by a viewport-sized SVG landscape.
+    expect(fit.artHeight).toBeGreaterThanOrEqual(height)
+    expect(fit.artSource).toMatch(/art\/scripture\/[a-z0-9-]+\.svg$/)
     expect(fit.actions.height).toBeGreaterThan(20)
     expect(fit.remain.height).toBeGreaterThan(16)
     for (const piece of [fit.brand, fit.verse, fit.cite, fit.sign, fit.actions, fit.remain, fit.foot]) {

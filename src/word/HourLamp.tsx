@@ -2,7 +2,7 @@ import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
 import { BrandMark } from '../site/BrandMark.tsx'
 import { formatCountdown } from './clock.ts'
 import { bibleGatewayHref } from './gateway.ts'
-import { Sign } from './Sign.tsx'
+import { artworkForPassage } from '../art/catalog.ts'
 import { VerseText } from './VerseText.tsx'
 import { MusicControls } from '../music/MusicControls.tsx'
 import { Atmosphere } from './Atmosphere.tsx'
@@ -20,7 +20,7 @@ export function HourLamp({ now }: { now?: Date }) {
       data-length={passage.text.length > 220 ? 'long' : 'short'}
       data-paused={!rotation.visible || rotation.paused ? 'true' : undefined}
     >
-      <Atmosphere motif={passage.motif} still={reduced || rotation.paused || !rotation.visible} />
+      <Atmosphere reference={passage.ref} motif={passage.motif} still={reduced || rotation.paused || !rotation.visible} />
       <div className={`word-copy${reduced ? '' : ' verse-arrive'}`} key={rotation.sequence}>
         <p className="hero-mark">
           <BrandMark size={48} />
@@ -32,7 +32,7 @@ export function HourLamp({ now }: { now?: Date }) {
         </p>
         <p className="hero-cite">{passage.ref} · King James Version</p>
       </div>
-      <Sign motif={passage.motif} reducedMotion={reduced} />
+      <div className="word-sign" aria-hidden="true"><span className="art-caption">{artworkForPassage(passage.ref).title}</span></div>
       <div className="word-acts">
         <div className="hero-actions">
           <a

@@ -1,0 +1,178 @@
+{
+  "ceilingUsd": 5,
+  "operatingCapUsd": 4.5,
+  "requests": [
+    {
+      "book": "genesis",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.03782098,
+      "status": "failed",
+      "at": "2026-09-07T17:23:45Z",
+      "usage": {
+        "total_tokens": 3662,
+        "completion_tokens": 3195,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00522288,
+      "reason": "SVG too large or declaration found"
+    },
+    {
+      "book": "exodus",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.03781108,
+      "status": "failed",
+      "at": "2026-09-07T17:23:47Z",
+      "usage": {
+        "total_tokens": 3176,
+        "completion_tokens": 2706,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00449724,
+      "reason": "SVG too large or declaration found"
+    },
+    {
+      "book": "psalms",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.03779722,
+      "status": "failed",
+      "at": "2026-09-07T17:23:49Z",
+      "usage": {
+        "total_tokens": 4021,
+        "completion_tokens": 3558,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 463,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00575979,
+      "reason": "SVG too large or declaration found"
+    },
+    {
+      "book": "genesis",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.03782098,
+      "status": "saved",
+      "at": "2026-09-07T17:24:55Z",
+      "usage": {
+        "total_tokens": 3319,
+        "completion_tokens": 2852,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00471181,
+      "elements": 73,
+      "sha256": "ff852011a74d75b03cc4c0de77100c829d917c6eea636c4c249bc98c6da77841",
+      "file": "public/art/scripture/genesis.svg"
+    },
+    {
+      "book": "exodus",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.03781108,
+      "status": "saved",
+      "at": "2026-09-07T17:24:57Z",
+      "usage": {
+        "total_tokens": 3484,
+        "completion_tokens": 3014,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00495616,
+      "elements": 74,
+      "sha256": "536ae1b48bb3bcd8d484b6cf749b48f7e69f0f4c185b94e6a02838a988510858",
+      "file": "public/art/scripture/exodus.svg"
+    },
+    {
+      "book": "psalms",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.03779722,
+      "status": "saved",
+      "at": "2026-09-07T17:24:59Z",
+      "usage": {
+        "total_tokens": 3614,
+        "completion_tokens": 3151,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 463,
+        "prompt_tokens_details": {
+          "cached_tokens": 384,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00515336,
+      "elements": 86,
+      "sha256": "d97ac728bfabcea01ec14b3e977b2882dbb13a081e8bfc346a49fdcb46d82d1a",
+      "file": "public/art/scripture/psalms.svg"
+    },
+    {
+      "book": "66-scene-directions",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.0673014,
+      "status": "failed",
+      "usage": {
+        "total_tokens": 5269,
+        "completion_tokens": 2224,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 3045,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00632831,
+      "reason": "TypeError"
+    },
+    {
+      "book": "66-scene-directions",
+      "model": "gemma-4-31b",
+      "reservedUsd": 0.0673014,
+      "status": "saved_after_tuple_normalization",
+      "usage": {
+        "total_tokens": 5259,
+        "completion_tokens": 2214,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 3045,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944,
+          "image_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.00631341,
+      "reason": "TypeError"
+    }
+  ]
+}

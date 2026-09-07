@@ -39,3 +39,12 @@ demo/audio-staging/
 demo/audio-v2/
 demo/models-v2/
 __pycache__/
+
+# Local rejected artwork drafts and generation lock.
+docs/art/.generation.lock
+docs/art/drafts/
+docs/art/source/
+docs/art/direction-response.json
+demo/visual-expansion/
+demo/reading-room/
+demo/refresh/

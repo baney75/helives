@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-07T17:24:55Z",
+  "model": "gemma-4-31b",
+  "pricing": {
+    "prompt": "0.00000099",
+    "completion": "0.00000149"
+  },
+  "source": "https://api.cerebras.ai/public/v1/models"
+}
