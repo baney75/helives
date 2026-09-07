@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAutoQuality } from '../hooks/useAutoQuality.ts'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { useGenesisClock } from '../hooks/useGenesisClock.ts'
@@ -8,9 +8,13 @@ import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
 import type { Quality } from '../lib/budget.ts'
 import { readAppMode } from '../lib/mode.ts'
 import { effectsAllowed, persistQualityRecord, qualityFromSearch, stricterQuality } from '../lib/quality.ts'
-import { GenesisCanvas } from '../scene/GenesisCanvas.tsx'
 import { CinematicOverlay } from '../ui/CinematicOverlay.tsx'
 import { HUD } from '../ui/HUD.tsx'
+
+const GenesisCanvas = lazy(async () => {
+  const module = await import('../scene/GenesisCanvas.tsx')
+  return { default: module.GenesisCanvas }
+})
 
 export function GenesisPage() {
   const mode = useMemo(() => readAppMode(window.location.search), [])
@@ -30,7 +34,12 @@ export function GenesisPage() {
     setSceneReady(ready)
     if (ready) setSceneUnavailable(false)
   }, [])
-  const onSceneUnavailable = useCallback(() => setSceneUnavailable(true), [])
+  const onSceneUnavailable = useCallback(() => {
+    // A readable fallback is a usable scene: transport and narration should
+    // continue even when the optional WebGL layer cannot render.
+    setSceneUnavailable(true)
+    setSceneReady(true)
+  }, [])
   const lastProgress = useRef(mode.progress ?? 0)
   const holdRef = useRef(false)
   const mediaClockRef = useRef<() => number | null>(() => null)
@@ -86,17 +95,6 @@ export function GenesisPage() {
   }, [narration.blocked, clock.pause, clock.play])
 
   useEffect(() => {
-    if (!narration.blocked) return
-    const unlock = (event: PointerEvent) => {
-      // The gate's click handler covers pointer and keyboard activation itself.
-      if (event.target instanceof Element && event.target.closest('.sound-gate')) return
-      void narration.retry()
-    }
-    window.addEventListener('pointerdown', unlock, { capture: true })
-    return () => window.removeEventListener('pointerdown', unlock, { capture: true })
-  }, [narration.blocked, narration.retry])
-
-  useEffect(() => {
     document.body.dataset.mode = mode.cinematic ? 'cinematic' : 'interactive'
     return () => { delete document.body.dataset.mode }
   }, [mode.cinematic])
@@ -108,25 +106,27 @@ export function GenesisPage() {
       <a className="skip" href="#genesis-time">
         Skip to timeline
       </a>
-      <GenesisCanvas
-        onReady={onSceneReady}
-        onUnavailable={onSceneUnavailable}
-        clock={{
-          progress: clock.progress,
-          presence: clock.presence,
-          scale: clock.scale,
-          distance: clock.distance,
-          reducedMotion,
-          isMobile,
-          cinematic: mode.cinematic,
-          quality,
-          playing: clock.playing,
-          effects,
-        }}
-        qualityLocked={qualityLocked}
-        onQualityFallback={onQualityFallback}
-        onPerformanceFactor={onPerformanceFactor}
-      />
+      <Suspense fallback={<div className="stage stage-loading" aria-hidden="true" />}>
+        <GenesisCanvas
+          onReady={onSceneReady}
+          onUnavailable={onSceneUnavailable}
+          clock={{
+            progress: clock.progress,
+            presence: clock.presence,
+            scale: clock.scale,
+            distance: clock.distance,
+            reducedMotion,
+            isMobile,
+            cinematic: mode.cinematic,
+            quality,
+            playing: clock.playing,
+            effects,
+          }}
+          qualityLocked={qualityLocked}
+          onQualityFallback={onQualityFallback}
+          onPerformanceFactor={onPerformanceFactor}
+        />
+      </Suspense>
       {!sceneReady && !sceneUnavailable && <p className="scene-loading" role="status">Loading scene…</p>}
       {narration.blocked ? (
         <button type="button" className="sound-gate" onClick={() => void narration.retry()}>

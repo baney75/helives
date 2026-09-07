@@ -5,9 +5,10 @@ import {
   PerformanceMonitor,
   PerspectiveCamera,
   Preload,
+  useGLTF,
 } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Component, Suspense, useEffect, useRef, useState, type ReactNode } from 'react'
+import { Component, Suspense, useCallback, useEffect, useRef, useState, type ErrorInfo, type ReactNode } from 'react'
 import { Vector3 } from 'three'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { DPR, type Quality } from '../lib/budget.ts'
@@ -135,12 +136,8 @@ function Creation({ clock }: { clock: SceneClock }) {
       <DryLand clock={clock} />
       <HeavenLights clock={clock} />
       <LivingCreatures clock={clock} />
-      <SceneGate>
-        <Garden clock={clock} />
-      </SceneGate>
-      <SceneGate>
-        <TheFall clock={clock} />
-      </SceneGate>
+      <Garden clock={clock} />
+      <TheFall clock={clock} />
       <MeasureSky clock={clock} />
       <SceneEffects clock={clock} />
       <AdaptiveDpr />
@@ -150,15 +147,39 @@ function Creation({ clock }: { clock: SceneClock }) {
   )
 }
 
-class SceneGate extends Component<{ children: ReactNode }, { failed: boolean }> {
+const MODEL_URLS = [
+  '/models/genesis/man.glb',
+  '/models/genesis/woman.glb',
+  '/models/genesis/fish.glb',
+  '/models/genesis/bird.glb',
+] as const
+
+class CanvasErrorBoundary extends Component<{
+  children: ReactNode
+  onUnavailable?: () => void
+  onRetry: () => void
+}, { failed: boolean }> {
   state = { failed: false }
 
   static getDerivedStateFromError(): { failed: boolean } {
     return { failed: true }
   }
 
+  componentDidCatch(_error: Error, _info: ErrorInfo): void {
+    this.props.onUnavailable?.()
+  }
+
+  private retry = (): void => {
+    this.props.onRetry()
+    this.setState({ failed: false })
+  }
+
   render(): ReactNode {
-    return this.state.failed ? null : this.props.children
+    return this.state.failed ? (
+      <div className="stage stage-fallback">
+        <Fallback onRetry={this.retry} />
+      </div>
+    ) : this.props.children
   }
 }
 
@@ -205,11 +226,12 @@ function LiveQuality({
   )
 }
 
-function Fallback() {
+function Fallback({ onRetry }: { onRetry?: () => void }) {
   return (
     <div className="fallback" role="status">
       <p>The 3D scene could not start.</p>
-      <p>The Scripture and controls remain available. For the full scene, try a current browser with hardware acceleration on.</p>
+      <p>The Scripture, narration, and controls remain available. You can retry the full scene when the connection or graphics context recovers.</p>
+      {onRetry ? <button type="button" className="icon-btn primary" onClick={onRetry}>Retry 3D scene</button> : null}
     </div>
   )
 }
@@ -244,7 +266,7 @@ export function GenesisCanvas({
   onPerformanceFactor?: (factor: number) => void
 }) {
   const visible = useDocumentVisible()
-  const [webglAvailable] = useState(canStartWebGL)
+  const [webglAvailable, setWebglAvailable] = useState(canStartWebGL)
   const [epoch, setEpoch] = useState(0)
   const lost = useRef(onQualityFallback)
   lost.current = onQualityFallback
@@ -253,16 +275,24 @@ export function GenesisCanvas({
     if (!webglAvailable) onUnavailable?.()
   }, [onUnavailable, webglAvailable])
 
+  const retry = useCallback(() => {
+    for (const url of MODEL_URLS) useGLTF.clear(url)
+    onReady?.(false)
+    setWebglAvailable(canStartWebGL())
+    setEpoch((value) => value + 1)
+  }, [onReady])
+
   if (!webglAvailable) {
     return (
       <div className="stage stage-fallback">
-        <Fallback />
+        <Fallback onRetry={retry} />
       </div>
     )
   }
 
   return (
-    <div className="stage" aria-hidden="true">
+    <CanvasErrorBoundary onUnavailable={onUnavailable} onRetry={retry}>
+      <div className="stage" aria-hidden="true">
       <Canvas
         key={epoch}
         shadows={clock.quality !== 'low'}
@@ -279,7 +309,7 @@ export function GenesisCanvas({
           position: [framedCamera(clock.progress).x, framedCamera(clock.progress).y, framedCamera(clock.progress).z],
           fov: 48,
         }}
-        fallback={<Fallback />}
+        fallback={<Fallback onRetry={retry} />}
       >
         <color attach="background" args={['#07060a']} />
         <WebGLGuard
@@ -299,6 +329,7 @@ export function GenesisCanvas({
         </Suspense>
         </StoryTimeProvider>
       </Canvas>
-    </div>
+      </div>
+    </CanvasErrorBoundary>
   )
 }

@@ -186,6 +186,3 @@ function HeroBird({
     </group>
   )
 }
-
-useGLTF.preload('/models/genesis/fish.glb', false, false)
-useGLTF.preload('/models/genesis/bird.glb', false, false)

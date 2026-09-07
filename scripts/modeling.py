@@ -103,13 +103,15 @@ def export_glb(path):
     ids={o.name:i for i,o in enumerate(objects)}; nodes=[]; meshes=[]; mats=[]; mid={}; views=[]; acc=[]; binary=bytearray()
     def conv(v):return (float(v[0]),float(v[2]),float(-v[1]))
     def anchor(o): return o.matrix_world.translation if o and o.type=='EMPTY' else anchor(o.parent) if o else Vector((0,0,0))
-    def attribute(values,dim,typ='VEC3',component=5126):
+    def attribute(values,dim,typ='VEC3',component=5126,normalized=False):
         while len(binary)%4:binary.append(0)
         offset=len(binary);flat=[v for row in values for v in row] if dim>1 else values
-        binary.extend(struct.pack('<'+('f' if component==5126 else 'I')*len(flat),*flat))
+        format_code={5120:'b',5121:'B',5122:'h',5123:'H',5125:'I',5126:'f'}[component]
+        binary.extend(struct.pack('<'+format_code*len(flat),*flat))
         views.append({'buffer':0,'byteOffset':offset,'byteLength':len(binary)-offset})
         a={'bufferView':len(views)-1,'componentType':component,'count':len(values),'type':typ}
-        if typ=='VEC3':a.update(min=[min(v[i] for v in values) for i in range(3)],max=[max(v[i] for v in values) for i in range(3)])
+        if normalized:a['normalized']=True
+        if typ=='VEC3' and component==5126:a.update(min=[min(v[i] for v in values) for i in range(3)],max=[max(v[i] for v in values) for i in range(3)])
         acc.append(a);return len(acc)-1
     for o in objects:
         a=anchor(o); pa=anchor(o.parent); node={'name':o.name,'translation':conv(a-pa)}
@@ -130,7 +132,9 @@ def export_glb(path):
                 if material and material.name not in mid:
                     p=material.node_tree.nodes.get('Principled BSDF');mid[material.name]=len(mats)
                     mats.append({'name':material.name,'pbrMetallicRoughness':{'baseColorFactor':list(p.inputs['Base Color'].default_value),'roughnessFactor':p.inputs['Roughness'].default_value,'metallicFactor':p.inputs['Metallic'].default_value},'doubleSided':True})
-                prim={'attributes':{'POSITION':attribute(positions,3),'NORMAL':attribute(normals,3)},'indices':attribute(indices,1,'SCALAR',5125)}
+                packed_normals=[tuple(max(-127,min(127,round(value*127))) for value in normal) for normal in normals]
+                index_component=5123 if max(indices)<65536 else 5125
+                prim={'attributes':{'POSITION':attribute(positions,3),'NORMAL':attribute(packed_normals,3,'VEC3',5120,True)},'indices':attribute(indices,1,'SCALAR',index_component)}
                 if material:prim['material']=mid[material.name]
                 meshes.append({'name':o.name,'primitives':[prim]});node['mesh']=len(meshes)-1
             ev.to_mesh_clear()

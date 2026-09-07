@@ -113,6 +113,3 @@ export function Figure({
     </group>
   )
 }
-
-useGLTF.preload(SRC.man, false, false)
-useGLTF.preload(SRC.woman, false, false)

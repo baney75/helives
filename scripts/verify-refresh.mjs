@@ -96,18 +96,45 @@ try {
   await p.close()
   const noWebgl = await browser.newPage({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' })
   await noWebgl.addInitScript(() => {
+    window.__clips = []
+    const OriginalAudio = window.Audio
+    window.Audio = function(...args) { const audio = new OriginalAudio(...args); window.__clips.push(audio); return audio }
     const nativeGetContext = HTMLCanvasElement.prototype.getContext
     HTMLCanvasElement.prototype.getContext = function (type, ...args) {
       if (String(type).startsWith('webgl')) return null
       return nativeGetContext.call(this, type, ...args)
     }
   })
-  await noWebgl.goto(base + '/genesis?scene=beginning&pause=1&quality=low')
+  await noWebgl.goto(base + '/genesis?scene=beginning&quality=low')
   await noWebgl.getByText('The 3D scene could not start.', { exact: true }).waitFor()
   await noWebgl.getByText('Loading scene…', { exact: true }).waitFor({ state: 'detached' })
+  const fallbackTimeline = noWebgl.getByLabel('Genesis time')
+  const fallbackStart = Number(await fallbackTimeline.inputValue())
+  await noWebgl.getByRole('button', { name: 'Play', exact: true }).click()
+  await noWebgl.waitForTimeout(900)
+  assert(Number(await fallbackTimeline.inputValue()) > fallbackStart, 'fallback timeline did not advance')
+  assert(await noWebgl.evaluate(() => window.__clips.some(a => !a.paused)), 'fallback narration did not play')
   await noWebgl.screenshot({ path: `${out}/webgl-fallback-1280.png` })
   await noWebgl.close()
-  checks.push('Unavailable WebGL renders a readable static fallback and clears the loading state')
+  checks.push('Unavailable WebGL keeps the readable scene, narration, and timeline functional')
+
+  let blockFish = true
+  const failedModel = await browser.newPage({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' })
+  await failedModel.route('**/models/genesis/fish.glb', async (route) => {
+    if (blockFish) await route.abort('failed')
+    else await route.continue()
+  })
+  await failedModel.goto(base + '/genesis?scene=day5&quality=low')
+  await failedModel.getByText('The 3D scene could not start.', { exact: true }).waitFor()
+  assert.equal(await failedModel.locator('h1').textContent(), 'Fish and fowl')
+  await failedModel.getByRole('button', { name: 'Play', exact: true }).waitFor()
+  blockFish = false
+  await failedModel.getByRole('button', { name: 'Retry 3D scene', exact: true }).click()
+  await failedModel.getByText('The 3D scene could not start.', { exact: true }).waitFor({ state: 'hidden' })
+  await failedModel.locator('canvas').waitFor({ state: 'visible' })
+  await failedModel.getByText('Loading scene…', { exact: true }).waitFor({ state: 'detached', timeout: 15_000 })
+  await failedModel.close()
+  checks.push('A blocked Day 5 fish model preserves the readable app and Retry restores the authored Canvas')
   assert.deepEqual(errors, [])
   await writeFile(`${out}/checks.json`, JSON.stringify({ checks, errors }, null, 2))
   console.log(checks.join('\n'))

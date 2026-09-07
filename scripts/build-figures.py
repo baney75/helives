@@ -47,7 +47,14 @@ def person(role):
     parts=[S('Cranium',(0,.0,1.124),(.073,.068,.093)),S('Jaw',(0,.013,1.087),(.054,.053,.052)),S('Chin',(0,.041,1.065),(.029,.029,.020)),S('NoseBridge',(0,.059,1.119),(.009,.019,.030)),S('NoseTip',(0,.075,1.102),(.011,.013,.010))]
     for side in [-1,1]:
         parts += [S('Cheek',(side*.035,.030,1.108),(.024,.019,.024))]
-    fuse(parts,'Face',skin,head,.0025*scale)
+    face=fuse(parts,'Face',skin,head,.0025*scale)
+    # The voxel union preserves the sculpted silhouette but produces far more
+    # interior face tessellation than the browser view can reveal. Collapse the
+    # redundant triangles after smoothing so a cold mobile scene does not spend
+    # most of its budget downloading invisible detail.
+    decimate=face.modifiers.new('Delivery decimation','DECIMATE');decimate.ratio=.12
+    bpy.context.view_layer.objects.active=face
+    bpy.ops.object.modifier_apply(modifier=decimate.name)
     for side,code in [(-1,'L'),(1,'R')]:
         ellipsoid(code+'Ear',(side*.071*scale,0,1.117*scale),(.010,.018,.026),skin,head,24,16)
         ellipsoid(code+'EarInner',(side*.078*scale,.006,1.117*scale),(.003,.010,.016),lip,head,16,12)
@@ -101,6 +108,13 @@ def person(role):
         ellipsoid(code+'FootSkin',(side*.065,.031,.029),(.032,.069,.026),skin,foot)
         for toe in range(5):
             ellipsoid(code+'Toe'+str(toe),(side*.065+(toe-2)*.011,.088,.023),(.007,.017-abs(toe-1)*.002,.009),skin,foot,12,8)
+    # Smooth-shaded garments and rounded details retain their authored form with
+    # substantially fewer coplanar facets. Keep tiny features untouched.
+    for obj in list(bpy.context.scene.objects):
+        if obj.type!='MESH' or obj==face or len(obj.data.polygons)<300: continue
+        delivery=obj.modifiers.new('Delivery surface decimation','DECIMATE');delivery.ratio=.18
+        bpy.context.view_layer.objects.active=obj
+        bpy.ops.object.modifier_apply(modifier=delivery.name)
     return root
 
 if __name__=='__main__':

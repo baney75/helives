@@ -23,7 +23,8 @@ describe('device-aware Genesis canvas', () => {
     expect(canvas).toMatch(/guardWebGLContext/)
     expect(canvas).toMatch(/webglcontextlost|onLost/)
     expect(canvas).toMatch(/preserveDrawingBuffer: false/)
-    expect(canvas).toMatch(/class SceneGate/)
+    expect(canvas).toMatch(/class CanvasErrorBoundary/)
+    expect(canvas).toMatch(/Retry 3D scene/)
     expect(canvas).not.toMatch(/preserveDrawingBuffer: true/)
   })
 

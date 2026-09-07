@@ -616,6 +616,14 @@ a {
   line-height: 1.55;
 }
 
+.stage-fallback .fallback .icon-btn {
+  margin: var(--space-4) auto 0;
+}
+
+.stage-loading {
+  background: #07060a;
+}
+
 .calibrating {
   font-family: var(--display);
   font-size: 22px;

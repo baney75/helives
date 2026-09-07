@@ -60,11 +60,11 @@ describe('first Genesis voice', () => {
     expect(generator).toContain('loudnorm=I=-16')
   })
 
-  it('autoplays narration independently of reduced-motion visuals', () => {
+  it('waits for deliberate playback independently of reduced-motion visuals', () => {
     const clock = readFileSync(resolve('src/hooks/useGenesisClock.ts'), 'utf8')
     const narration = readFileSync(resolve('src/hooks/useNarration.ts'), 'utf8')
     const page = readFileSync(resolve('src/pages/GenesisPage.tsx'), 'utf8')
-    expect(clock).toContain('useState(!start.pause)')
+    expect(clock).toContain('useState(false)')
     expect(clock).not.toContain('!reducedMotion && !start.pause')
     // Playback, pause and mute behavior are exercised in useNarration.test.ts.
     expect(narration).toContain("current.addEventListener('ended'")

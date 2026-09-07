@@ -32,7 +32,9 @@ export function useGenesisClock(
   start: ClockStart = {},
 ): GenesisClock {
   const [progress, setProgressState] = useState(start.progress ?? 0)
-  const [playing, setPlaying] = useState(!start.pause)
+  // Narration is opt-in. A route visit, query string, or unrelated pointer
+  // interaction must never be treated as consent to begin audio.
+  const [playing, setPlaying] = useState(false)
   const [seekVersion, setSeekVersion] = useState(0)
   const [speed, setSpeed] = useState(1)
 
@@ -93,7 +95,7 @@ export function useGenesisClock(
     holdRef.current = 0
     setSeekVersion((version) => version + 1)
     setProgressState(0)
-    setPlaying(true)
+    setPlaying(false)
   }, [])
 
   return {
