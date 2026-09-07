@@ -288,6 +288,8 @@ a {
   right: max(var(--space-5), env(safe-area-inset-right));
   bottom: max(var(--space-5), env(safe-area-inset-bottom));
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
   gap: var(--space-3);
 }
 
@@ -354,13 +356,12 @@ a {
 }
 
 .sound-gate {
-  position: fixed;
-  z-index: 30;
-  top: max(18px, env(safe-area-inset-top));
-  left: 50%;
+  box-sizing: border-box;
+  justify-self: start;
+  min-width: 0;
+  max-width: 100%;
   min-height: 48px;
-  padding: 0 22px;
-  transform: translateX(-50%);
+  padding: 8px 22px;
   border: 1px solid rgba(232, 184, 109, 0.72);
   background: rgba(7, 6, 10, 0.94);
   color: var(--ink);
@@ -372,6 +373,36 @@ a {
 
 .sound-gate:hover,
 .sound-gate:focus-visible {
+  border-color: var(--fire);
+  background: rgba(31, 24, 16, 0.97);
+}
+
+.audio-waiting {
+  box-sizing: border-box;
+  justify-self: start;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px var(--space-4);
+  border: 1px solid rgba(232, 184, 109, 0.72);
+  background: rgba(7, 6, 10, 0.94);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 16px;
+  line-height: 1.35;
+  box-shadow: 0 12px 42px rgba(0, 0, 0, 0.42);
+  cursor: pointer;
+}
+
+.cinematic-audio-action {
+  position: fixed;
+  z-index: 30;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+}
+
+.audio-waiting:hover,
+.audio-waiting:focus-visible {
   border-color: var(--fire);
   background: rgba(31, 24, 16, 0.97);
 }
@@ -1770,8 +1801,16 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
   .transport .text-link { margin-left: 0; min-height: 44px; display: inline-flex; align-items: center; }
   .ticks { display: none; }
   .scene-picker { width: 100%; }
+  .audio-waiting,
+  .sound-gate { width: 100%; }
+  .cinematic-audio-action {
+    left: max(16px, env(safe-area-inset-left));
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: auto;
+  }
+  .has-cinematic-audio-action .cine-epoch { bottom: 84px; }
   .hud::before { background: linear-gradient(180deg, rgba(7,6,10,.65), transparent 24%, rgba(7,6,10,.85) 65%, var(--void)); }
-  .sound-gate { top: 100px; }
 }
 @media (max-height: 580px) {
   .hud { overflow-y: auto; pointer-events: auto; }

@@ -11,9 +11,21 @@ type HUDProps = {
   clock: GenesisClock
   muted: boolean
   onMute: () => void
+  audioBlocked?: boolean
+  onRetrySound?: () => void
+  audioWaiting?: boolean
+  onContinueWithoutSound?: () => void
 }
 
-export function HUD({ clock, muted, onMute }: HUDProps) {
+export function HUD({
+  clock,
+  muted,
+  onMute,
+  audioBlocked = false,
+  onRetrySound,
+  audioWaiting = false,
+  onContinueWithoutSound,
+}: HUDProps) {
   const scene = clock.scene
   const cue = cueAt(scene.id, clock.progress)
   const science = scene.kind === 'science'
@@ -61,6 +73,15 @@ export function HUD({ clock, muted, onMute }: HUDProps) {
       </section>
 
       <footer className="dock">
+        {audioBlocked ? (
+          <button type="button" className="sound-gate" onClick={onRetrySound}>
+            Begin with sound
+          </button>
+        ) : audioWaiting ? (
+          <button type="button" className="audio-waiting" onClick={onContinueWithoutSound}>
+            Waiting for audio — continue without sound
+          </button>
+        ) : null}
         <label className="scene-picker">
           <span>Scene</span>
           <select value={scene.id} onChange={(event) => {

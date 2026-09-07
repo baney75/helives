@@ -101,8 +101,10 @@ export function GenesisPage() {
 
   usePlaybackKeys(clock.toggle, clock.reset, clock.setProgress)
 
+  const cinematicAudioAction = mode.cinematic && (narration.blocked || narration.stalled)
+
   return (
-    <div className={`${mode.cinematic ? 'app is-cinematic' : 'app'}${sceneUnavailable ? ' has-scene-fallback' : ''}`}>
+    <div className={`${mode.cinematic ? 'app is-cinematic' : 'app'}${sceneUnavailable ? ' has-scene-fallback' : ''}${cinematicAudioAction ? ' has-cinematic-audio-action' : ''}`}>
       <a className="skip" href="#genesis-time">
         Skip to timeline
       </a>
@@ -128,16 +130,26 @@ export function GenesisPage() {
         />
       </Suspense>
       {!sceneReady && !sceneUnavailable && <p className="scene-loading" role="status">Loading scene…</p>}
-      {narration.blocked ? (
-        <button type="button" className="sound-gate" onClick={() => void narration.retry()}>
+      {mode.cinematic && narration.blocked ? (
+        <button type="button" className="sound-gate cinematic-audio-action" onClick={() => void narration.retry()}>
           Begin with sound
         </button>
-      ) : narration.stalled ? (
-        <button type="button" className="sound-gate" onClick={() => setMuted(true)}>
+      ) : mode.cinematic && narration.stalled ? (
+        <button type="button" className="audio-waiting cinematic-audio-action" onClick={() => setMuted(true)}>
           Waiting for audio — continue without sound
         </button>
       ) : null}
-      {mode.cinematic ? <CinematicOverlay clock={clock} /> : <HUD clock={clock} muted={muted} onMute={() => setMuted((value) => !value)} />}
+      {mode.cinematic ? <CinematicOverlay clock={clock} /> : (
+        <HUD
+          clock={clock}
+          muted={muted}
+          onMute={() => setMuted((value) => !value)}
+          audioBlocked={narration.blocked}
+          onRetrySound={() => void narration.retry()}
+          audioWaiting={narration.stalled}
+          onContinueWithoutSound={() => setMuted(true)}
+        />
+      )}
     </div>
   )
 }

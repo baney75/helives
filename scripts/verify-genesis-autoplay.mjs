@@ -7,6 +7,50 @@ const browser = await chromium.launch({
   args: ['--use-gl=angle', '--use-angle=swiftshader', '--disable-audio-output'],
 })
 
+async function assertMobileRecoveryLayout(page, accessibleName) {
+  await page.setViewportSize({ width: 320, height: 844 })
+  const layout = await page.evaluate((name) => {
+    const action = [...document.querySelectorAll('button')].find((button) => button.textContent?.trim() === name)
+    const narration = document.querySelector('.narration')
+    const transport = document.querySelector('.transport')
+    if (!action || !narration || !transport) throw new Error('recovery layout elements are missing')
+    const actionRect = action.getBoundingClientRect()
+    const narrationRect = narration.getBoundingClientRect()
+    const transportRect = transport.getBoundingClientRect()
+    const overlaps = (a, b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top
+    return {
+      action: { left: actionRect.left, right: actionRect.right, top: actionRect.top, bottom: actionRect.bottom },
+      withinViewport: actionRect.left >= 0 && actionRect.right <= window.innerWidth,
+      overlapsNarration: overlaps(actionRect, narrationRect),
+      overlapsTransport: overlaps(actionRect, transportRect),
+    }
+  }, accessibleName)
+  assert(layout.withinViewport, `${accessibleName} must stay inside the 320px viewport: ${JSON.stringify(layout.action)}`)
+  assert(!layout.overlapsNarration, `${accessibleName} must not obscure Scripture narration`)
+  assert(!layout.overlapsTransport, `${accessibleName} must not obscure playback controls`)
+  return layout
+}
+
+async function assertCinematicRecoveryLayout(page, accessibleName) {
+  const layout = await page.evaluate((name) => {
+    const action = [...document.querySelectorAll('button')].find((button) => button.textContent?.trim() === name)
+    const scripture = document.querySelector('.cine-epoch')
+    if (!action || !scripture) throw new Error('cinematic recovery layout elements are missing')
+    const actionRect = action.getBoundingClientRect()
+    const scriptureRect = scripture.getBoundingClientRect()
+    const overlaps = actionRect.left < scriptureRect.right && actionRect.right > scriptureRect.left &&
+      actionRect.top < scriptureRect.bottom && actionRect.bottom > scriptureRect.top
+    return {
+      action: { left: actionRect.left, right: actionRect.right, top: actionRect.top, bottom: actionRect.bottom },
+      withinViewport: actionRect.left >= 0 && actionRect.right <= window.innerWidth &&
+        actionRect.top >= 0 && actionRect.bottom <= window.innerHeight,
+      overlapsScripture: overlaps,
+    }
+  }, accessibleName)
+  assert(layout.withinViewport, `${accessibleName} must stay inside the cinematic viewport: ${JSON.stringify(layout.action)}`)
+  assert(!layout.overlapsScripture, `${accessibleName} must not obscure cinematic Scripture`)
+}
+
 try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 800 } })
   await page.emulateMedia({ reducedMotion: 'reduce' })
@@ -40,6 +84,8 @@ try {
   await play.click()
   const gate = page.getByRole('button', { name: 'Begin with sound', exact: true })
   await gate.waitFor()
+  await assertMobileRecoveryLayout(page, 'Begin with sound')
+  await page.setViewportSize({ width: 1280, height: 800 })
   assert.equal(await page.evaluate(() => window.__helivesPlayAttempts), 1, 'Play should make the first audio attempt')
   const blockedAt = Number(await timeline.inputValue())
   await page.waitForTimeout(800)
@@ -74,6 +120,8 @@ try {
   await stalled.getByRole('button', { name: 'Play', exact: true }).click()
   const continueSilent = stalled.getByRole('button', { name: 'Waiting for audio — continue without sound', exact: true })
   await continueSilent.waitFor({ timeout: 5_000 })
+  await assertMobileRecoveryLayout(stalled, 'Waiting for audio — continue without sound')
+  await stalled.setViewportSize({ width: 1280, height: 800 })
   await stalled.evaluate(() => { window.__stalledClips.at(-1).currentTime = 0.25 })
   await continueSilent.waitFor({ state: 'detached', timeout: 1_500 })
   await continueSilent.waitFor({ timeout: 5_000 })
@@ -83,7 +131,22 @@ try {
   assert(Number(await stalledTimeline.inputValue()) > stalledAt, 'silent recovery must resume the visual clock')
   await stalled.close()
 
-  console.log('Genesis consent passed: silent default, explicit blocked-audio retry, and stalled-clock silent recovery')
+  const cinematic = await browser.newPage({ viewport: { width: 320, height: 844 } })
+  await cinematic.emulateMedia({ reducedMotion: 'reduce' })
+  await cinematic.addInitScript(() => {
+    HTMLMediaElement.prototype.play = function () { return Promise.resolve() }
+  })
+  await cinematic.goto(`${base}/genesis?cinematic=1&quality=low&scene=fall&pause=1`, { waitUntil: 'networkidle' })
+  await cinematic.locator('.scene-loading').waitFor({ state: 'detached', timeout: 15_000 })
+  await cinematic.keyboard.press('Space')
+  const cinematicRecovery = cinematic.getByRole('button', { name: 'Waiting for audio — continue without sound', exact: true })
+  await cinematicRecovery.waitFor({ timeout: 5_000 })
+  await assertCinematicRecoveryLayout(cinematic, 'Waiting for audio — continue without sound')
+  await cinematicRecovery.click()
+  await cinematicRecovery.waitFor({ state: 'detached' })
+  await cinematic.close()
+
+  console.log('Genesis consent passed: silent default, explicit blocked-audio retry, 320px interactive/cinematic recovery layout, and stalled-clock silent recovery')
 } finally {
   await browser.close()
 }
