@@ -13,7 +13,7 @@ export function titleFor(page: PageId): string {
     case 'genesis':
       return 'Genesis — He Lives'
     case 'afterword':
-      return 'Got doubt? — He Lives'
+      return 'Faith and the universe — He Lives'
     case 'not-found':
       return 'Not found — He Lives'
   }

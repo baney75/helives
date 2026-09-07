@@ -12,48 +12,48 @@ export function AfterwordPage() {
       <main id="main-content">
         <section className="doubt-hero" aria-labelledby="doubt-title">
           <div className="doubt-aperture" aria-hidden="true" />
-          <p className="hero-kicker">An honest question</p>
-          <h1 id="doubt-title">Got doubt?</h1>
+          <p className="hero-kicker">After Genesis</p>
+          <h1 id="doubt-title">Faith and the universe</h1>
           <p className="doubt-lead">
-            You do not have to pretend certainty. Name the question clearly, read Scripture carefully, and
-            examine the evidence. Speak with Christians who will listen before they answer.
+            Genesis begins with God as the creator of heaven and earth. Modern cosmology studies
+            how the universe has developed. Here are the opening text and a few sources to read alongside it.
           </p>
           <nav className="doubt-paths" aria-label="Ways to continue">
             <a href="/genesis?scene=beginning"><span>01</span> Read Genesis</a>
             <a href="#measure"><span>02</span> Examine evidence</a>
-            <a href="/faith"><span>03</span> What Christians confess</a>
+            <a href="/faith"><span>03</span> The Christian faith</a>
           </nav>
         </section>
 
         <section className="doubt-essay" id="measure">
           <div>
             <p className="hero-kicker">Scripture and measurement</p>
-            <h2>Read the text. Examine the evidence.</h2>
+            <h2>Creation and cosmic history</h2>
           </div>
           <div className="doubt-copy">
             <p>
               Genesis opens with a claim about God: “In the beginning God created the heaven and the earth.”
-              Science studies measurable features of the physical world. These are different kinds of inquiry,
-              and both deserve careful reading.
+              Its opening chapters tell of creation, human life, and our relationship with God.
+              Christians have long discussed how to understand the days of creation.
             </p>
             <p>
-              Georges Lemaître, a Belgian priest and physicist, argued for an expanding universe from an early
-              dense state. Penzias and Wilson later detected the cosmic microwave background. ESA’s Planck
-              mission mapped that ancient light in fine detail. The standard ΛCDM model places the universe’s
-              age near 13.8 billion years.
+              The scientific account draws on observations of the expanding universe and the cosmic microwave
+              background, the oldest light we can observe. Measurements from ESA’s Planck mission support
+              an age of about 13.8 billion years within the standard cosmological model.
             </p>
             <p>
-              These measurements describe the physical history we can observe. They do not settle the
-              theological questions Genesis asks about God, creation, human beings, sin, and responsibility.
+              Those findings help describe the universe’s physical history. Questions about why there is a
+              universe, who God is, and how we should live also involve philosophy and theology.
+              The sources below explain the science; the opening chapters of Genesis are linked above.
             </p>
           </div>
         </section>
 
         <section className="source-ledger" aria-labelledby="source-title">
-          <p className="hero-kicker">Read beyond this page</p>
+          <p className="hero-kicker">Further reading</p>
           <h2 id="source-title">Sources and further reading</h2>
           <div className="source-columns">
-            <SourceList title="Primary pages" sources={primary} />
+            <SourceList title="Science sources" sources={primary} />
             <SourceList title="Commentary" sources={commentary} />
           </div>
         </section>

@@ -20,6 +20,6 @@ describe('titleFor', () => {
     expect(titleFor('scriptures')).toBe('The Scriptures — He Lives')
     expect(titleFor('genesis')).toBe('Genesis — He Lives')
     expect(titleFor('faith')).toBe('Faith — He Lives')
-    expect(titleFor('afterword')).toBe('Got doubt? — He Lives')
+    expect(titleFor('afterword')).toBe('Faith and the universe — He Lives')
   })
 })

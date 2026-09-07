@@ -6,14 +6,14 @@ import { passageAt } from './clock.ts'
 import { hasWordsOfChrist } from './types.ts'
 
 describe('HourLamp', () => {
-  it('leaves the hour at new scripture, with no church invitation', () => {
+  it('shows a full minute for new scripture, with no church invitation', () => {
     const html = renderToStaticMarkup(
       createElement(HourLamp, { now: new Date('2026-08-15T13:18:48.000Z') }),
     )
     expect(html.toLowerCase()).not.toContain('church')
-    expect(html).toContain('New scripture every hour')
+    expect(html).toContain('Every 60 seconds')
     expect(html).toContain('Explore more')
-    expect(html).toContain('41:12')
+    expect(html).toContain('01:00')
     expect(html).toContain('word-remain-rail')
     expect(html).toContain('word-sign')
     expect(html).toMatch(/data-length="(?:short|long)"/)

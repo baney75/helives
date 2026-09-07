@@ -172,9 +172,10 @@ a {
 }
 
 .skip {
-  position: absolute;
+  position: fixed;
   left: var(--space-4);
-  top: -48px;
+  top: 0;
+  transform: translateY(-150%);
   z-index: 20;
   padding: var(--space-2) var(--space-3);
   background: var(--ink);
@@ -183,6 +184,7 @@ a {
 }
 
 .skip:focus {
+  transform: none;
   top: var(--space-4);
 }
 
@@ -818,11 +820,11 @@ body:has(.lamp-home)::-webkit-scrollbar {
 
 .doubt-hero h1 {
   margin: 0;
-  max-width: 8ch;
+  max-width: 12ch;
   font-family: var(--display);
-  font-size: clamp(72px, 13vw, 156px);
+  font-size: clamp(52px, 8vw, 100px);
   font-weight: 500;
-  line-height: 0.84;
+  line-height: 0.96;
   letter-spacing: -0.055em;
 }
 
@@ -1885,3 +1887,99 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
 .faith-doc { max-width: 42rem; }
 .doc .faith-lead { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); line-height: 1.2; color: var(--fire); }
 .faith-reading-link { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 6px; }
+
+/* A living reading room: deliberately quiet behind the words. */
+.nav-identity { display:flex; align-items:center; gap:24px; }
+.tv-toggle, .reading-settings { min-height:44px; padding:8px 10px; border:0; color:var(--muted); background:transparent; font:inherit; font-size:13px; cursor:pointer; }
+.tv-toggle { border:1px solid var(--line); padding-inline:14px; }
+.tv-toggle:hover, .reading-settings:hover { color:var(--dawn); }
+.reading-home { isolation:isolate; }
+.reading-home .nav, .reading-home .foot { position:relative; z-index:2; }
+.reading-home .word-hero { position:static; }
+.reading-home .word-lamp { max-width:70rem; grid-template-columns:minmax(0,1fr) clamp(90px,20vw,260px); column-gap:clamp(32px,7vw,100px); }
+.reading-home .word-copy, .reading-home .word-acts, .reading-home .word-sign { position:relative; z-index:1; }
+.reading-home .hero-verse { max-width:27em; }
+.reading-home .word-sign { justify-self:center; }
+.reading-home .word-sign svg, .reading-home .word-sign .brand-mark { width:clamp(80px,13vw,190px); height:clamp(80px,13vw,190px); }
+.reading-home .hero-mark { display:none; }
+.reading-home .hero-kicker { margin-top:20px; }
+.reading-home .hero-actions { gap:4px 16px; }
+.reading-home .word-remain { display:flex; align-items:center; gap:16px; max-width:32rem; flex-wrap:wrap; }
+.site.lamp-home.reading-home .word-remain-time { margin:0; font:12px var(--mono); color:var(--muted); }
+.reading-home .word-remain-rail { flex-basis:100%; margin:0; height:1px; }
+.reading-home .word-remain-rail span { transition:transform 250ms linear; transform-origin:left; }
+.reading-atmosphere { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; background:var(--void); }
+.atmosphere-light { position:absolute; width:100vw; height:110vh; right:-35vw; top:-10vh; background:radial-gradient(ellipse at center, #b57a3535, #e8b86d12 32%, transparent 68%); transform-origin:center; animation:light-breathe 24s ease-in-out infinite alternate; transition:opacity 4s; }
+.atmosphere-lines { position:absolute; inset:0; width:100%; height:100%; stroke:#e8b86d; stroke-width:.7; opacity:.35; }
+.atmosphere-orbits,.atmosphere-water,.atmosphere-vine { opacity:0; transition:opacity 4s ease; transform-origin:80% 50%; }
+[data-scene='light'] .atmosphere-orbits,[data-scene='life'] .atmosphere-orbits { opacity:.65; animation:orbit-drift 60s ease-in-out infinite alternate; }
+[data-scene='water'] .atmosphere-water { opacity:.7; animation:water-drift 22s ease-in-out infinite alternate; }
+[data-scene='vine'] .atmosphere-vine { opacity:.6; animation:vine-drift 32s ease-in-out infinite alternate; }
+[data-scene='lamp'] .atmosphere-light { opacity:1; background:radial-gradient(ellipse at center,#c2753545,#e8b86d18 25%,transparent 65%); }
+[data-scene='water'] .atmosphere-light { opacity:.55; }
+.atmosphere-dust { position:absolute; inset:0; }
+.atmosphere-dust i { position:absolute; width:2px; height:2px; background:var(--dawn); border-radius:50%; opacity:0; animation:dust-drift 30s linear infinite; }
+.atmosphere-shade { position:absolute; inset:0; background:linear-gradient(90deg,#07060ad9 0%,#07060a99 40%,transparent 80%),linear-gradient(0deg,#07060a,transparent 35%,transparent 80%,#07060a88); }
+.verse-arrive { animation:verse-arrive 1400ms cubic-bezier(.2,.7,.2,1) both; }
+@keyframes verse-arrive { from{opacity:0;transform:translateY(12px);filter:blur(3px)} to{opacity:1;transform:translateY(0);filter:blur(0)} }
+@keyframes light-breathe { from{transform:translate(-2%,-1%) scale(.95);opacity:.55} to{transform:translate(2%,2%) scale(1.08);opacity:1} }
+@keyframes orbit-drift { from{transform:translate(0,0) scale(1)} to{transform:translate(-50px,35px) scale(1.08)} }
+@keyframes water-drift { from{transform:translate(-35px,15px)} to{transform:translate(35px,-15px)} }
+@keyframes vine-drift { from{transform:rotate(-2deg)} to{transform:rotate(2deg)} }
+@keyframes dust-drift { 0%{opacity:0;transform:translate(0,50px)} 20%,70%{opacity:.32} 100%{opacity:0;transform:translate(30px,-90px)} }
+.reading-atmosphere[data-still='true'] *, [data-paused='true'] .verse-arrive { animation-play-state:paused !important; }
+.reading-atmosphere[data-still='true'] .atmosphere-dust { display:none; }
+@media (prefers-reduced-motion:reduce) { .reading-atmosphere *, .verse-arrive { animation:none !important; transition:none !important; } .reading-home .word-remain-rail span{transition:none} }
+@media (max-width:699px) {
+  .nav-identity { width:100%; justify-content:space-between; gap:8px; }
+  .reading-home .word-lamp { grid-template-columns:minmax(0,1fr); grid-template-areas:'copy' 'sign' 'acts'; row-gap:8px; }
+  .reading-home .word-sign { justify-self:start; }
+  .reading-home .word-sign svg,.reading-home .word-sign .brand-mark { width:40px; height:40px; }
+  .reading-home .hero-actions { gap:2px 8px; }
+  .reading-home .hero-actions .btn { padding-inline:14px; font-size:16px; }
+  .reading-home .word-remain { gap:8px 12px; margin-top:6px; }
+  .reading-home .hero-kicker { margin-top:12px; }
+  .reading-home .reading-settings { font-size:12px; padding-inline:6px; }
+  .atmosphere-shade { background:linear-gradient(90deg,#07060acc,#07060a77),linear-gradient(0deg,#07060a,transparent); }
+}
+@media (max-height:650px) {
+  .reading-home .word-sign { display:none; }
+  .reading-home .word-lamp { grid-template-columns:1fr; grid-template-areas:'copy' 'acts'; }
+  .reading-home .hero-kicker { margin-top:8px; }
+  .reading-home .hero-cite { margin:4px 0; }
+}
+/* TV mode: readable from a sofa, with recoverable controls. */
+.reading-home.is-display { max-width:none; padding:clamp(20px,4vw,64px); grid-template-rows:auto minmax(0,1fr); }
+.is-display .foot, .is-display .nav nav { display:none; }
+.is-display .nav { border:0; padding:0; }
+.is-display .nav-identity { width:100%; justify-content:space-between; }
+.is-display .word-hero { display:flex; align-items:center; justify-content:center; }
+.reading-home.is-display .word-lamp { max-width:min(1400px,88vw); display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center; }
+.is-display .word-copy { width:100%; }
+.reading-home.is-display .hero h1 { font-size:clamp(28px,2.3vw,46px); letter-spacing:-.02em; }
+.is-display .hero-kicker { display:none; }
+.reading-home.is-display .hero-verse { max-width:24em; margin:32px auto 24px; font-size:clamp(30px,4.2vw,82px); line-height:1.25; text-wrap:balance; }
+.reading-home.is-display .word-lamp[data-length='long'] .hero-verse { font-size:clamp(24px,3.2vw,62px); }
+.is-display .hero-cite { font-size:clamp(15px,1.3vw,25px); }
+.is-display .word-sign { display:none; }
+.is-display .word-acts { width:100%; }
+.is-display .hero-actions,.is-display .word-remain { justify-content:center; margin-inline:auto; }
+.is-display .hero-actions .btn { display:none; }
+.is-display .nav,.is-display .word-acts { transition:opacity 700ms; }
+.is-display.is-idle .nav:not(:focus-within),.is-display.is-idle .word-acts:not(:focus-within) { opacity:0; }
+.is-display .atmosphere-shade { background:radial-gradient(ellipse at center,#07060ac9 0%,#07060a77 65%,#07060a44); }
+@media(max-height:650px) { .reading-home.is-display .word-lamp { gap:8px; } .reading-home.is-display .hero-verse { font-size:clamp(22px,3.5vw,40px); margin:16px auto; } .reading-home.is-display .word-lamp[data-length='long'] .hero-verse { font-size:clamp(19px,2.8vw,32px); } }
+.reading-lamp[data-paused='true'] .verse-arrive { animation:none !important; opacity:1; transform:none; filter:none; }
+
+.reading-transport { display:inline-flex; align-items:center; }
+@media(max-width:699px) { .reading-transport { flex-basis:100%; } .is-display .reading-transport { flex-basis:auto; } }
+@media (min-width:550px) and (max-height:580px) {
+  .site.lamp-home.reading-home .nav { flex-direction:row; align-items:center; gap:16px; }
+  .reading-home .nav-identity { width:auto; }
+  .reading-home .tv-toggle { font-size:11px; padding-inline:8px; }
+  .reading-home .reading-transport { flex-basis:auto; }
+  .site.lamp-home.reading-home .hero-kicker { margin:4px 0; }
+  .site.lamp-home.reading-home .hero-actions { margin-top:4px; }
+  .site.lamp-home.reading-home .word-remain { margin-top:2px; gap:2px 12px; }
+  .reading-home.is-display .nav-identity { width:100%; }
+}

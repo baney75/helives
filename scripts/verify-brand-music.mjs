@@ -35,10 +35,10 @@ try {
   await page.waitForTimeout(500)
   assert(await page.evaluate(() => window.__music[0].currentTime > 0 && !window.__music[0].paused))
   const verse = await page.locator('.hero-verse').textContent()
-  await page.clock.fastForward(31*60*1000)
-  assert.notEqual(await page.locator('.hero-verse').textContent(), verse, 'hourly scripture changes')
+  await page.clock.fastForward(60*1000)
+  assert.notEqual(await page.locator('.hero-verse').textContent(), verse, 'minute scripture changes')
   assert(await page.evaluate(() => window.__music.length === 1 && !window.__music[0].paused), 'verse rollover preserves player')
-  checks.push('Zero music request or Audio construction before click; keyboard opt-in plays decoded media; hourly verse changes without restarting player')
+  checks.push('Zero music request or Audio construction before click; keyboard opt-in plays decoded media; minute verse changes without restarting player')
   await page.getByRole('button', { name: 'Music settings' }).click()
   await page.getByRole('slider', { name: 'Music volume' }).fill('20')
   assert.equal(await page.evaluate(() => window.__music[0].volume), .2)
@@ -46,10 +46,12 @@ try {
   if (MUSIC_TRACKS.length > 1) {
     await page.getByLabel('Instrumental', { exact: true }).selectOption(MUSIC_TRACKS[1].id)
     await page.getByRole('button', { name: 'Music on', exact: true }).waitFor()
+    await page.clock.runFor(1400)
     assert(await page.evaluate(() => window.__music.filter(a => !a.paused).length === 1))
     await page.evaluate(() => { const clip = window.__music.at(-1); clip.currentTime = clip.duration - .1 })
     await page.waitForFunction((id) => document.querySelector('.music-panel select')?.value === id, MUSIC_TRACKS[2].id)
     await page.getByRole('button', { name: 'Music on', exact: true }).waitFor()
+    await page.clock.runFor(6300)
   }
   await page.keyboard.press('Escape')
   await page.getByRole('link', { name: 'Faith', exact: true }).click()
@@ -59,7 +61,7 @@ try {
   await page.reload()
   await page.getByRole('button', { name: 'Music off', exact: true }).waitFor()
   assert.equal(await page.evaluate(() => window.__music.length), 0)
-  checks.push('Track picker plays one recording at a time; natural ending advances the collection; Volume changes actual media gain; internal navigation preserves music; Off pauses; reload resets to silent')
+  checks.push('Track picker returns to one recording after its crossfade; natural ending advances the collection; Volume changes actual media gain; internal navigation preserves music; Off pauses; reload resets to silent')
   // Network failure and deliberate retry use the real browser media element.
   let fail = true
   await page.route('**/audio/music/*.mp3', async route => fail ? route.abort('failed') : route.continue())

@@ -1,45 +1,32 @@
-import { useEffect, useState } from 'react'
-import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
 import { BrandMark } from '../site/BrandMark.tsx'
-import { formatCountdown, msUntilNextHour, passageAt } from './clock.ts'
+import { formatCountdown } from './clock.ts'
 import { bibleGatewayHref } from './gateway.ts'
 import { Sign } from './Sign.tsx'
 import { VerseText } from './VerseText.tsx'
 import { MusicControls } from '../music/MusicControls.tsx'
+import { Atmosphere } from './Atmosphere.tsx'
+import { useRotation } from './useRotation.ts'
+import { rotationLabel } from './rotation.ts'
 
 export function HourLamp({ now }: { now?: Date }) {
   const reduced = usePrefersReducedMotion()
-  const visible = useDocumentVisible()
-  const [at, setAt] = useState(() => now ?? new Date())
-
-  useEffect(() => {
-    if (now) {
-      setAt(now)
-      return
-    }
-    if (!visible) return
-    setAt(new Date())
-    const id = window.setInterval(() => setAt(new Date()), 1000)
-    return () => window.clearInterval(id)
-  }, [now, visible])
-
-  const passage = passageAt(at)
-  const remain = msUntilNextHour(at)
+  const rotation = useRotation(now)
+  const { passage, remain } = rotation
   return (
     <div
-      className={reduced ? 'word-lamp' : 'word-lamp is-enter'}
+      className="word-lamp reading-lamp"
       data-motif={passage.motif}
       data-length={passage.text.length > 220 ? 'long' : 'short'}
-      data-paused={visible ? undefined : 'true'}
-      key={passage.ref}
+      data-paused={!rotation.visible || rotation.paused ? 'true' : undefined}
     >
-      <div className="word-copy">
+      <Atmosphere motif={passage.motif} still={reduced || rotation.paused || !rotation.visible} />
+      <div className={`word-copy${reduced ? '' : ' verse-arrive'}`} key={rotation.sequence}>
         <p className="hero-mark">
           <BrandMark size={48} />
         </p>
         <h1>He Lives</h1>
-        <p className="hero-kicker">This hour</p>
+        <p className="hero-kicker">A moment in the Word</p>
         <p className="hero-verse">
           <VerseText spans={passage.spans} />
         </p>
@@ -58,12 +45,14 @@ export function HourLamp({ now }: { now?: Date }) {
             <span className="sr-only"> on Bible Gateway, opens in a new tab</span>
           </a>
           <MusicControls />
+          <span className="reading-transport"><button type="button" className="reading-settings" aria-pressed={rotation.paused} aria-label={rotation.paused ? 'Resume Scripture rotation' : 'Pause Scripture rotation'} onClick={rotation.toggle}>{rotation.paused ? 'Resume' : 'Pause'}</button>
+          <button type="button" className="reading-settings" aria-label="Next Scripture" onClick={() => rotation.move(1)}>Next</button></span>
         </div>
         <div className="word-remain">
-          <p className="word-remain-label">New scripture every hour</p>
+          <p className="word-remain-label">{rotation.paused ? 'Rotation paused' : rotationLabel(rotation.seconds)}</p>
           <p className="word-remain-time">{formatCountdown(remain)}</p>
           <div className="word-remain-rail" aria-hidden="true">
-            <span style={{ transform: `scaleX(${remain / 3_600_000})` }} />
+            <span style={{ transform: `scaleX(${remain / (rotation.seconds * 1000)})` }} />
           </div>
         </div>
       </div>

@@ -1,0 +1,60 @@
+import { chromium } from 'playwright'
+import assert from 'node:assert/strict'
+import { mkdir, writeFile } from 'node:fs/promises'
+const base=process.env.HELIVES_PREVIEW_URL || 'http://127.0.0.1:8787'
+const out='demo/reading-room'; await mkdir(out,{recursive:true})
+const browser=await chromium.launch();const errors=[],checks=[]
+try {
+ const p=await browser.newPage({viewport:{width:1280,height:800},reducedMotion:'reduce'})
+ p.on('pageerror',e=>errors.push(String(e)))
+ await p.clock.install({time:new Date('2026-09-07T16:30:00Z')})
+ await p.addInitScript(()=>{window.__music=[];const Native=window.Audio;window.Audio=function(...args){const a=new Native(...args);window.__music.push(a);return a}})
+ let requests=0;p.on('request',r=>{if(r.url().includes('/audio/music/'))requests++})
+ await p.goto(base);await p.locator('.hero-verse').waitFor()
+ const verse=()=>p.locator('.hero-verse').textContent();const first=await verse()
+ assert.equal(requests,0);assert.equal(await p.evaluate(()=>window.__music.length),0)
+ await p.clock.runFor(59000);assert.equal(await verse(),first)
+ await p.clock.runFor(1000);assert.notEqual(await verse(),first)
+ await p.getByRole('button',{name:'Pause Scripture rotation',exact:true}).click();const paused=await verse()
+ await p.clock.runFor(120000);assert.equal(await verse(),paused)
+ await p.getByRole('button',{name:'Next Scripture',exact:true}).click();assert.notEqual(await verse(),paused)
+ assert.equal(await p.locator('.word-copy').evaluate(e=>getComputedStyle(e).opacity),'1')
+ await p.getByRole('button',{name:'Resume Scripture rotation',exact:true}).click();const next=await verse()
+ await p.clock.runFor(59000);assert.equal(await verse(),next);await p.clock.runFor(1000);assert.notEqual(await verse(),next)
+ const beforeHidden=await verse()
+ await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});Object.defineProperty(document,'visibilityState',{configurable:true,value:'hidden'});document.dispatchEvent(new Event('visibilitychange'))})
+ await p.clock.runFor(120000);assert.equal(await verse(),beforeHidden)
+ await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:false});Object.defineProperty(document,'visibilityState',{configurable:true,value:'visible'});document.dispatchEvent(new Event('visibilitychange'))})
+ await p.clock.runFor(1000);assert.equal(await verse(),beforeHidden)
+ checks.push('Full minute by default; automatic advance; pause; next while paused stays visible; next resets reading time; hidden tabs preserve the passage')
+ await p.getByRole('button',{name:'Music off',exact:true}).click();await p.getByRole('button',{name:'Music on',exact:true}).waitFor();await p.clock.runFor(1500)
+ await p.waitForFunction(()=>window.__music.some(a=>!a.paused&&a.currentTime>0))
+ await p.getByRole('button',{name:'Music settings'}).click();await p.getByLabel('Instrumental',{exact:true}).selectOption({index:1});await p.getByRole('button',{name:'Music on',exact:true}).waitFor();await p.clock.runFor(600)
+ const mix=await p.evaluate(()=>window.__music.filter(a=>!a.paused).map(a=>a.volume));assert.equal(mix.length,2);assert(mix.every(v=>v>0));assert(mix.reduce((a,b)=>a+b,0)<=.35001)
+ await p.clock.runFor(800);assert.equal(await p.evaluate(()=>window.__music.filter(a=>!a.paused).length),1)
+ await p.evaluate(()=>{const a=window.__music.find(a=>!a.paused);a.currentTime=a.duration-5;a.dispatchEvent(new Event('timeupdate'))})
+ await p.waitForFunction(()=>window.__music.filter(a=>!a.paused).length===2);await p.getByRole('button',{name:'Music on',exact:true}).waitFor();await p.clock.runFor(3000)
+ assert(await p.evaluate(()=>window.__music.filter(a=>!a.paused).every(a=>a.volume>0)))
+ await p.clock.runFor(3300);assert.equal(await p.evaluate(()=>window.__music.filter(a=>!a.paused).length),1)
+ await p.keyboard.press('Escape');await p.getByRole('button',{name:'Music on',exact:true}).click();assert(await p.evaluate(()=>window.__music.every(a=>a.paused)))
+ checks.push('No media before consent; real MP3 decode; manual blend; automatic six-second blend; bounded combined volume; stop silences all decks')
+ await p.goto(base+'/?display=1');await p.locator('.is-display .hero-verse').waitFor();await p.clock.runFor(7100)
+ await p.waitForFunction(()=>getComputedStyle(document.querySelector('.nav')).opacity==='0')
+ await p.mouse.move(150,150);await p.clock.runFor(800);await p.waitForFunction(()=>getComputedStyle(document.querySelector('.nav')).opacity==='1')
+ await p.keyboard.press('Escape');assert.equal(await p.locator('.is-display').count(),0)
+ checks.push('Direct TV URL mounts; idle controls fade; pointer reveals; Escape restores home')
+ await p.close()
+ const v=await browser.newPage({reducedMotion:'reduce'});v.on('pageerror',e=>errors.push(String(e)))
+ for(const [name,w,h,display] of [['phone',375,800,false],['small',320,568,false],['desktop',1280,800,false],['tv',1920,1080,true],['tv-4k',3840,2160,true],['tv-small',640,400,true]]){
+  await v.setViewportSize({width:w,height:h});await v.goto(base+(display?'/?display=1':''));await v.locator('.hero-verse').waitFor();await v.evaluate(()=>document.fonts.ready)
+  for(let i=0;i<40;i++){
+   const result=await v.locator('.hero-verse').evaluate(e=>{const b=e.getBoundingClientRect();return {top:b.top,bottom:b.bottom,right:b.right,left:b.left,h:innerHeight,w:innerWidth}})
+   assert(result.top>=0&&result.bottom<=h&&result.left>=0&&result.right<=w,`${name} verse clips ${JSON.stringify(result)}`)
+   await v.getByRole('button',{name:'Next Scripture',exact:true}).click()
+  }
+  await v.screenshot({path:`${out}/${name}.png`})
+ }
+ await v.goto(base+'/genesis/afterword');await v.getByRole('heading',{name:'Faith and the universe',exact:true}).waitFor();await v.setViewportSize({width:1280,height:900});await v.screenshot({path:`${out}/afterword.png`});await v.close()
+ checks.push('40 consecutive verses stay visible at 320px,375px,1280px,HD,4K and compact TV; rewritten afterword renders')
+ assert.deepEqual(errors,[]);await writeFile(`${out}/verification.json`,JSON.stringify({base,checks,errors},null,2));console.log(checks.join('\n'))
+} finally {await browser.close()}

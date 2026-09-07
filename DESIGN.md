@@ -56,7 +56,7 @@ Latin cross with a point of light at the crossing: empty tomb / resurrection, no
 
 | Surface | Pattern |
 |---------|---------|
-| Home | One 100svh lamp (100vh fallback): mark, He Lives, this hour’s KJV (words of Christ in red), an authored one-line motif, Explore more, new scripture every hour, He Lives · NeoRome and the KJV public-domain line. No page scroll. No clipped footer. No Lucide furniture. No cards. No wash. No church button. |
+| Home | One 100svh lamp (100vh fallback): mark, He Lives, rotating KJV (words of Christ in red), an authored one-line motif, Explore more, new Scripture every 60 seconds, gentle ambient motif animation, optional TV display and opt-in music, He Lives and the KJV public-domain line. No page scroll. No clipped footer. No Lucide furniture. No cards. No wash. No church button. |
 | Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
 | Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
 | Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |

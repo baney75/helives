@@ -11,7 +11,7 @@ describe('HomePage lamp', () => {
   it('keeps the hourly Word and the site footer on one lamp', () => {
     const html = renderToStaticMarkup(createElement(HomePage, { now: new Date('2026-08-15T13:18:48.000Z') }))
     expect(html).toContain('lamp-home')
-    expect(html).toContain('This hour')
+    expect(html).toContain('A moment in the Word')
     expect(html).toContain('Explore more')
     expect(html).toContain('He Lives')
     expect(html).toContain('King James Version, public domain')
