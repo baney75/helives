@@ -8,7 +8,7 @@ export type Source = {
   note: string
 }
 
-/** Verified 2026-08-12. Primary pages are NASA / ESA / NASA GSFC. Register is labeled commentary. */
+/** Verified 2026-09-07. Primary pages are NASA / ESA / NASA GSFC. Register is labeled commentary. */
 export const COSMOLOGY_SOURCES: readonly Source[] = [
   {
     id: 'nasa-big-bang',

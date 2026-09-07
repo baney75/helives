@@ -25,6 +25,12 @@ export function GenesisPage() {
   const quality = liveQuality ? stricterQuality(liveQuality, gate.quality) : gate.quality
   const effects = effectsAllowed(quality, factor)
   const [sceneReady, setSceneReady] = useState(false)
+  const [sceneUnavailable, setSceneUnavailable] = useState(false)
+  const onSceneReady = useCallback((ready: boolean) => {
+    setSceneReady(ready)
+    if (ready) setSceneUnavailable(false)
+  }, [])
+  const onSceneUnavailable = useCallback(() => setSceneUnavailable(true), [])
   const lastProgress = useRef(mode.progress ?? 0)
   const holdRef = useRef(false)
   const mediaClockRef = useRef<() => number | null>(() => null)
@@ -80,6 +86,17 @@ export function GenesisPage() {
   }, [narration.blocked, clock.pause, clock.play])
 
   useEffect(() => {
+    if (!narration.blocked) return
+    const unlock = (event: PointerEvent) => {
+      // The gate's click handler covers pointer and keyboard activation itself.
+      if (event.target instanceof Element && event.target.closest('.sound-gate')) return
+      void narration.retry()
+    }
+    window.addEventListener('pointerdown', unlock, { capture: true })
+    return () => window.removeEventListener('pointerdown', unlock, { capture: true })
+  }, [narration.blocked, narration.retry])
+
+  useEffect(() => {
     document.body.dataset.mode = mode.cinematic ? 'cinematic' : 'interactive'
     return () => { delete document.body.dataset.mode }
   }, [mode.cinematic])
@@ -87,12 +104,13 @@ export function GenesisPage() {
   usePlaybackKeys(clock.toggle, clock.reset, clock.setProgress)
 
   return (
-    <div className={mode.cinematic ? 'app is-cinematic' : 'app'}>
+    <div className={`${mode.cinematic ? 'app is-cinematic' : 'app'}${sceneUnavailable ? ' has-scene-fallback' : ''}`}>
       <a className="skip" href="#genesis-time">
         Skip to timeline
       </a>
       <GenesisCanvas
-        onReady={setSceneReady}
+        onReady={onSceneReady}
+        onUnavailable={onSceneUnavailable}
         clock={{
           progress: clock.progress,
           presence: clock.presence,
@@ -109,7 +127,7 @@ export function GenesisPage() {
         onQualityFallback={onQualityFallback}
         onPerformanceFactor={onPerformanceFactor}
       />
-      {!sceneReady && <p className="scene-loading" role="status">Loading scene…</p>}
+      {!sceneReady && !sceneUnavailable && <p className="scene-loading" role="status">Loading scene…</p>}
       {narration.blocked ? (
         <button type="button" className="sound-gate" onClick={() => void narration.retry()}>
           Begin with sound

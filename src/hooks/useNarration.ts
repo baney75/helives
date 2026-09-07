@@ -28,22 +28,29 @@ export function useNarration(options: NarrationOpts): NarrationControl {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const state = useRef({ key: '', finished: false, pendingSeek: 0, seeking: true, origin: 0, journey: INTERACTIVE_SECONDS, padTime: 0, lastRead: 0 })
   const [blocked, setBlocked] = useState(false)
+  const blockedRef = useRef(false)
   const [hold, setHold] = useState(false)
+
+  const setPlaybackBlocked = useCallback((next: boolean) => {
+    blockedRef.current = next
+    setBlocked(next)
+  }, [])
 
   const retry = useCallback(async () => {
     const audio = audioRef.current
     if (!audio || state.current.finished) return false
+    const recoveringFromBlock = blockedRef.current
     try {
       await audio.play()
       if (audioRef.current !== audio) { audio.pause(); return false }
-      if (!latest.current.playing || latest.current.muted) audio.pause()
-      setBlocked(false)
+      if ((!latest.current.playing && !recoveringFromBlock) || latest.current.muted) audio.pause()
+      setPlaybackBlocked(false)
       return true
     } catch {
-      if (audioRef.current === audio && latest.current.playing && !latest.current.muted) setBlocked(true)
+      if (audioRef.current === audio && latest.current.playing && !latest.current.muted) setPlaybackBlocked(true)
       return false
     }
-  }, [])
+  }, [setPlaybackBlocked])
 
   const readProgress = useCallback(() => {
     const audio = audioRef.current
@@ -69,7 +76,7 @@ export function useNarration(options: NarrationOpts): NarrationControl {
     if (state.current.key !== key || !audio) {
       audio?.pause()
       state.current = { key, finished: false, seeking: true, pendingSeek: target, origin, journey, padTime: target, lastRead: performance.now() }
-      setBlocked(false)
+      setPlaybackBlocked(false)
       if (!file) { audioRef.current = null; setHold(false); return }
       audio = new Audio(`${import.meta.env.BASE_URL}audio/${file}`)
       audio.preload = 'auto'
@@ -99,7 +106,7 @@ export function useNarration(options: NarrationOpts): NarrationControl {
       current.addEventListener('ended', finish)
       current.addEventListener('error', () => {
         if (audioRef.current !== current) return
-        setBlocked(true)
+        setPlaybackBlocked(true)
       })
     }
     state.current.padTime = target
@@ -117,7 +124,7 @@ export function useNarration(options: NarrationOpts): NarrationControl {
     // This effect runs only on a user seek, scene change, or mute change, not every frame.
     if (latest.current.playing && !muted && !state.current.finished) void retry()
     else audio.pause()
-  }, [sceneId, cinematic, seekVersion, muted, retry])
+  }, [sceneId, cinematic, seekVersion, muted, retry, setPlaybackBlocked])
 
   useEffect(() => {
     const audio = audioRef.current
@@ -125,11 +132,11 @@ export function useNarration(options: NarrationOpts): NarrationControl {
     state.current.lastRead = performance.now()
     audio.playbackRate = cinematic ? 1 : speed
     audio.preservesPitch = true
-    if (muted) setBlocked(false)
+    if (muted) setPlaybackBlocked(false)
     if (playing && !muted && !state.current.finished) {
       if (audio.paused) void retry()
     } else audio.pause()
-  }, [playing, speed, muted, cinematic, sceneId, retry])
+  }, [playing, speed, muted, cinematic, sceneId, retry, setPlaybackBlocked])
 
   useEffect(() => () => {
     audioRef.current?.pause()

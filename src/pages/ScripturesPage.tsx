@@ -13,10 +13,10 @@ export function ScripturesPage() {
           The whole Protestant canon, from Genesis to Revelation. Begin with Genesis 1–3,
           a narrated visual meditation. The remaining books are forthcoming.
         </p>
-        <a className="btn" href="/genesis">Enter Genesis <span aria-hidden="true">↗</span></a>
+        <a className="btn" href="/genesis">Enter Genesis</a>
         <nav className="canon-jump" aria-label="Testaments">
-          <a href="#old-testament">Old Testament <span aria-hidden="true">↓</span></a>
-          <a href="#new-testament">New Testament <span aria-hidden="true">↓</span></a>
+          <a href="#old-testament">Old Testament</a>
+          <a href="#new-testament">New Testament</a>
         </nav>
         <h2 id="old-testament" className="canon-testament">Old Testament</h2>
         {OLD_TESTAMENT.map((division) => (

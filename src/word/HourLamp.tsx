@@ -53,7 +53,7 @@ export function HourLamp({ now }: { now?: Date }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Explore more <span aria-hidden="true">↗</span>
+            Explore more
             <span className="sr-only"> on Bible Gateway, opens in a new tab</span>
           </a>
         </p>

@@ -3,7 +3,7 @@ import { chromium } from 'playwright'
 
 const base = process.env.HELIVES_PREVIEW_URL ?? 'http://127.0.0.1:4177'
 const browser = await chromium.launch({
-  args: ['--autoplay-policy=no-user-gesture-required', '--use-gl=angle', '--use-angle=swiftshader'],
+  args: ['--autoplay-policy=no-user-gesture-required', '--use-gl=angle', '--use-angle=swiftshader', '--disable-audio-output'],
 })
 
 try {
@@ -35,17 +35,18 @@ try {
     window.__helivesPlayAttempts = 0
     window.__helivesPauseCalls = 0
     window.__helivesAllowSound = false
-    HTMLMediaElement.prototype.play = function () {
+    const originalPlay = HTMLMediaElement.prototype.play
+    const originalPause = HTMLMediaElement.prototype.pause
+    HTMLMediaElement.prototype.play = function (...args) {
       window.__helivesPlayAttempts += 1
       if (!window.__helivesAllowSound) {
         return Promise.reject(new DOMException('gesture required', 'NotAllowedError'))
       }
-      Object.defineProperty(this, 'paused', { value: false, configurable: true })
-      return Promise.resolve()
+      return originalPlay.apply(this, args)
     }
-    HTMLMediaElement.prototype.pause = function () {
+    HTMLMediaElement.prototype.pause = function (...args) {
       window.__helivesPauseCalls += 1
-      Object.defineProperty(this, 'paused', { value: true, configurable: true })
+      return originalPause.apply(this, args)
     }
   })
   await blocked.goto(`${base}/genesis?quality=medium`, { waitUntil: 'networkidle' })

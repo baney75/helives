@@ -21,7 +21,7 @@ export function Timeline({ progress, sceneId, onScrub }: TimelineProps) {
         type="range"
         min={0}
         max={1}
-        step={0.0005}
+        step={0.0001}
         value={progress}
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           onScrub(Number(event.target.value))

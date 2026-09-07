@@ -34,7 +34,7 @@ if (!base) {
 }
 
 const browser = await chromium.launch({
-  args: ['--autoplay-policy=no-user-gesture-required', '--use-gl=angle', '--use-angle=swiftshader'],
+  args: ['--autoplay-policy=no-user-gesture-required', '--use-gl=angle', '--use-angle=swiftshader', '--disable-audio-output'],
 })
 
 const results = []

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { readAppMode } from './mode.ts'
+import { readAppMode, sceneUrl } from './mode.ts'
+import { SCENES } from '../genesis/scenes.ts'
 
 describe('readAppMode', () => {
   it('defaults to interactive', () => {
@@ -26,5 +27,23 @@ describe('readAppMode', () => {
 
   it('ignores unrelated query keys', () => {
     expect(readAppMode('?speed=4')).toMatchObject({ cinematic: false })
+  })
+
+  it('starts a valid scene link at its canonical scene start', () => {
+    const fall = SCENES.find((scene) => scene.id === 'fall')!
+    expect(readAppMode('?scene=fall')).toMatchObject({ progress: fall.start })
+    expect(readAppMode('?scene=unknown')).toMatchObject({ progress: null })
+  })
+
+  it('prefers explicit valid progress over a scene link', () => {
+    expect(readAppMode('?scene=fall&progress=0.2')).toMatchObject({ progress: 0.2 })
+    expect(readAppMode('?scene=fall&progress=nope')).toMatchObject({ progress: SCENES.find((scene) => scene.id === 'fall')!.start })
+  })
+
+  it('builds a scene URL without stale progress and keeps display settings', () => {
+    expect(sceneUrl('?quality=low&cinematic=1&progress=.4&extra=kept', 'garden', true))
+      .toBe('/genesis?quality=low&cinematic=1&extra=kept&scene=garden&pause=1')
+    expect(sceneUrl('?pause=1&quality=high', 'beginning', false))
+      .toBe('/genesis?quality=high&scene=beginning')
   })
 })

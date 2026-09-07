@@ -19,7 +19,7 @@ export function AfterwordPage() {
             examine the evidence. Speak with Christians who will listen before they answer.
           </p>
           <nav className="doubt-paths" aria-label="Ways to continue">
-            <a href="/scriptures"><span>01</span> Read Genesis</a>
+            <a href="/genesis?scene=beginning"><span>01</span> Read Genesis</a>
             <a href="#measure"><span>02</span> Examine evidence</a>
             <a href="/faith"><span>03</span> What Christians confess</a>
           </nav>
@@ -59,7 +59,7 @@ export function AfterwordPage() {
         </section>
 
         <div className="doubt-return">
-          <a href="/genesis">Return to Genesis</a>
+          <a href="/genesis?scene=beginning">Return to Genesis</a>
           <a href="/scriptures">Open the Scriptures</a>
         </div>
       </main>

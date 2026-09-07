@@ -207,11 +207,20 @@ function LiveQuality({
 
 function Fallback() {
   return (
-    <div className="fallback">
-      <p>This browser cannot start WebGL, so the scene cannot run.</p>
-      <p>Try a current Chrome, Firefox, or Safari with hardware acceleration on.</p>
+    <div className="fallback" role="status">
+      <p>The 3D scene could not start.</p>
+      <p>The Scripture and controls remain available. For the full scene, try a current browser with hardware acceleration on.</p>
     </div>
   )
+}
+
+function canStartWebGL(): boolean {
+  try {
+    const canvas = document.createElement('canvas')
+    return Boolean(canvas.getContext('webgl2') || canvas.getContext('webgl'))
+  } catch {
+    return false
+  }
 }
 
 function Readiness({ ready, onReady }: { ready: boolean; onReady?: (ready: boolean) => void }) {
@@ -225,17 +234,32 @@ export function GenesisCanvas({
   onQualityFallback,
   onPerformanceFactor,
   onReady,
+  onUnavailable,
 }: {
   clock: SceneClock
   onReady?: (ready: boolean) => void
+  onUnavailable?: () => void
   qualityLocked?: boolean
   onQualityFallback?: (quality: Quality) => void
   onPerformanceFactor?: (factor: number) => void
 }) {
   const visible = useDocumentVisible()
+  const [webglAvailable] = useState(canStartWebGL)
   const [epoch, setEpoch] = useState(0)
   const lost = useRef(onQualityFallback)
   lost.current = onQualityFallback
+
+  useEffect(() => {
+    if (!webglAvailable) onUnavailable?.()
+  }, [onUnavailable, webglAvailable])
+
+  if (!webglAvailable) {
+    return (
+      <div className="stage stage-fallback">
+        <Fallback />
+      </div>
+    )
+  }
 
   return (
     <div className="stage" aria-hidden="true">

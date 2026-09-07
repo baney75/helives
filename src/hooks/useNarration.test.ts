@@ -60,6 +60,37 @@ it('does not show an autoplay gate when pausing interrupts an outstanding play r
   await act(async () => root.unmount())
 })
 
+it('recovers blocked autoplay with one retry while the parent clock is paused', async () => {
+  vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true)
+  let allowPlayback = false
+  function BlockingAudioMock() {
+    const clip = AudioMock()
+    clip.play.mockImplementation(async () => {
+      if (!allowPlayback) throw new DOMException('gesture required', 'NotAllowedError')
+      clip.paused = false
+    })
+    return clip
+  }
+  vi.stubGlobal('Audio', BlockingAudioMock)
+  let control: NarrationControl | undefined
+  function Probe({ playing }: { playing: boolean }) {
+    control = useNarration({ sceneId: 'beginning', playing, cinematic: false, speed: 1 })
+    return createElement('span', null, control.blocked ? 'blocked' : 'ready')
+  }
+  const host = document.createElement('div')
+  const root = createRoot(host)
+  await act(async () => root.render(createElement(Probe, { playing: true })))
+  expect(host.textContent).toBe('blocked')
+  const attemptsBeforeRetry = clips.at(-1)!.play.mock.calls.length
+  await act(async () => root.render(createElement(Probe, { playing: false })))
+  allowPlayback = true
+  await act(async () => { await control!.retry() })
+  expect(clips.at(-1)?.play).toHaveBeenCalledTimes(attemptsBeforeRetry + 1)
+  expect(clips.at(-1)?.paused).toBe(false)
+  expect(host.textContent).toBe('ready')
+  await act(async () => root.unmount())
+})
+
 it('seeks within the same scene, follows media time during stalls, and resumes at the muted position', async () => {
   vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true)
   vi.stubGlobal('Audio', AudioMock)

@@ -10,9 +10,11 @@ Worker name: `helives`
 ```bash
 pnpm install
 pnpm test && pnpm typecheck && pnpm lint && pnpm build
-gitleaks detect --no-git --source . --redact
+gitleaks git --redact .
 pnpm run deploy
 ```
+
+The Git scan covers committed release content and history without reading ignored local credential files such as `.env.local`.
 
 `wrangler.jsonc` attaches custom domains `helives.dev` and `www.helives.dev`. If attach fails because the zone is on the Personal account, retry with that account. Do not delete unrelated DNS.
 

@@ -6,7 +6,8 @@ import { AUDIO_CUES } from '../src/genesis/audioCues.ts'
 const base = process.env.HELIVES_PREVIEW_URL || 'http://127.0.0.1:8787'
 const out = process.env.HELIVES_CAPTURE_DIR || 'demo/sync'
 await mkdir(out, { recursive: true })
-const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--ignore-gpu-blocklist', '--autoplay-policy=no-user-gesture-required'] })
+// Sync is a rendered-frame property; use the native compositor instead of throttled headless SwiftShader.
+const browser = await chromium.launch({ headless: false, args: ['--ignore-gpu-blocklist', '--autoplay-policy=no-user-gesture-required', '--disable-audio-output'] })
 const errors = [], checks = []
 try {
  const p = await browser.newPage({ viewport: { width: 1280, height: 800 }, reducedMotion: 'no-preference' })
@@ -25,6 +26,17 @@ try {
  await p.goto(`${base}/genesis?pause=1&quality=low&progress=${fall.start + 4 / INTERACTIVE_SECONDS}`, { waitUntil: 'networkidle' })
  await p.locator('.scene-loading').waitFor({ state: 'detached' })
  const snapshot = () => p.evaluate(() => ({ time: window.__clips.at(-1).currentTime, paused: window.__clips.at(-1).paused, rate: window.__clips.at(-1).playbackRate, ready: window.__clips.at(-1).readyState, duration: window.__clips.at(-1).duration, src: window.__clips.at(-1).src, error: window.__clips.at(-1).error?.message, seeks: window.__seeks, progress: Number(document.querySelector('#genesis-time').value) }))
+ const waitForSync = async (minTime, rate) => {
+   const handle = await p.waitForFunction(({ origin, journey, minTime, rate }) => {
+     const audio = window.__clips.at(-1)
+     const progress = Number(document.querySelector('#genesis-time').value)
+     const error = Math.abs((progress - origin) * journey - audio.currentTime)
+     return audio.currentTime > minTime && audio.playbackRate === rate && error < 0.18
+       ? { time: audio.currentTime, progress, rate: audio.playbackRate, paused: audio.paused, error }
+       : null
+   }, { origin: fall.start, journey: INTERACTIVE_SECONDS, minTime, rate }, { polling: 'raf', timeout: 5000 })
+   return handle.jsonValue()
+ }
  const seek = (seconds) => p.locator('#genesis-time').evaluate((element, progress) => {
    Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(element, String(progress))
    element.dispatchEvent(new Event('input', { bubbles: true }))
@@ -34,13 +46,11 @@ try {
  let s = await snapshot()
  assert(s.paused && Math.abs(s.time - 4) < 0.1, 'paused deep link seeks narration: ' + JSON.stringify(s))
  await p.getByRole('button', { name: 'Play', exact: true }).click()
- await p.waitForTimeout(900)
- s = await snapshot()
- assert(s.time > 4.5 && Math.abs((s.progress - fall.start) * INTERACTIVE_SECONDS - s.time) < 0.18, 'media clock leads visuals')
+ s = await waitForSync(4.5, 1)
+ assert(s.time > 4.5 && Math.abs((s.progress - fall.start) * INTERACTIVE_SECONDS - s.time) < 0.18, `media clock leads visuals: ${JSON.stringify(s)}`)
  await p.locator('.speed select').selectOption('2')
- await p.waitForTimeout(500)
- s = await snapshot()
- assert(s.rate === 2 && Math.abs((s.progress - fall.start) * INTERACTIVE_SECONDS - s.time) < 0.18, 'speed remains synchronized')
+ s = await waitForSync(5.1, 2)
+ assert(s.rate === 2 && Math.abs((s.progress - fall.start) * INTERACTIVE_SECONDS - s.time) < 0.18, `speed remains synchronized: ${JSON.stringify(s)}`)
  await p.getByRole('button', { name: 'Pause', exact: true }).click()
  const paused = await snapshot()
  await p.waitForTimeout(300)
@@ -63,8 +73,7 @@ try {
  await p.waitForTimeout(350)
  const muted = await snapshot()
  await p.getByRole('button', { name: 'Sound off', exact: true }).click()
- await p.waitForTimeout(150)
- s = await snapshot()
+ s = await waitForSync(muted.time, 2)
  assert(!s.paused && s.time >= muted.time && Math.abs((s.progress - fall.start) * INTERACTIVE_SECONDS - s.time) < 0.18, 'unmute rejoins current visual position')
  await p.getByRole('button', { name: 'Pause', exact: true }).click()
  const take = AUDIO_CUES.fall.find(c => c.action === 'take')

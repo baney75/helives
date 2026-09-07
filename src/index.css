@@ -155,6 +155,12 @@ a {
     linear-gradient(0deg, rgba(7, 6, 10, 0.62) 0%, transparent 36%);
 }
 
+.has-scene-fallback .hud::before {
+  background:
+    linear-gradient(180deg, rgba(7, 6, 10, 0.55) 0%, transparent 26%),
+    linear-gradient(0deg, rgba(7, 6, 10, 0.62) 0%, transparent 36%);
+}
+
 .hud header,
 .hud section,
 .hud footer,
@@ -573,6 +579,41 @@ a {
   padding: var(--space-6);
   text-align: center;
   color: var(--muted);
+}
+
+.stage-fallback {
+  background:
+    radial-gradient(circle at 50% 32%, rgba(235, 185, 99, 0.12), transparent 24%),
+    radial-gradient(circle at 22% 72%, rgba(58, 87, 112, 0.22), transparent 34%),
+    #07060a;
+}
+
+.stage-fallback .fallback {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  width: min(34rem, calc(100% - 3rem));
+  min-height: 0;
+  transform: translate(-50%, -50%);
+  padding: var(--space-6);
+  border: 1px solid var(--line);
+  background: rgba(7, 6, 10, 0.76);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(12px);
+}
+
+.stage-fallback .fallback p:first-child {
+  margin-top: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.stage-fallback .fallback p:last-child {
+  max-width: 29rem;
+  margin: var(--space-3) auto 0;
+  color: var(--ink);
+  line-height: 1.55;
 }
 
 .calibrating {

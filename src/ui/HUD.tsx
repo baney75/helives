@@ -1,9 +1,11 @@
 import { cueAt } from '../genesis/choreography.ts'
 import type { ChangeEvent } from 'react'
 import { SCENES } from '../genesis/scenes.ts'
+import { fullContextHref } from '../genesis/fullContext.ts'
 import { hasVoice } from '../genesis/voiced.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 import { Timeline } from './Timeline.tsx'
+import { sceneUrl } from '../lib/mode.ts'
 
 type HUDProps = {
   clock: GenesisClock
@@ -16,6 +18,7 @@ export function HUD({ clock, muted, onMute }: HUDProps) {
   const cue = cueAt(scene.id, clock.progress)
   const science = scene.kind === 'science'
   const voiced = hasVoice(scene.id)
+  const fullContext = fullContextHref(scene)
 
   return (
     <div className="hud">
@@ -31,7 +34,7 @@ export function HUD({ clock, muted, onMute }: HUDProps) {
           </div>
           <div>
             <dt>Text</dt>
-            <dd>{scene.kind === 'scripture' ? 'KJV' : voiced ? 'Spoken' : 'On screen'}</dd>
+            <dd>{scene.kind === 'scripture' ? 'KJV excerpt' : voiced ? 'Spoken' : 'On screen'}</dd>
           </div>
           <div>
             <dt>Cite</dt>
@@ -45,6 +48,11 @@ export function HUD({ clock, muted, onMute }: HUDProps) {
         <h1>{scene.name}</h1>
         <p className="headline">{cue?.text ?? scene.headline}</p>
         {!cue && <p className="body">{scene.body}</p>}
+        {fullContext ? (
+          <p className="full-context-link">
+            <a href={fullContext} target="_blank" rel="noopener noreferrer">Read the KJV passage in full on Bible Gateway</a>
+          </p>
+        ) : null}
         {science ? (
           <p className="afterword-link">
             <a href="/genesis/afterword">Read the sources</a>
@@ -57,7 +65,9 @@ export function HUD({ clock, muted, onMute }: HUDProps) {
           <span>Scene</span>
           <select value={scene.id} onChange={(event) => {
             const selected = SCENES.find((item) => item.id === event.target.value)
-            if (selected) clock.setProgress(selected.start)
+            if (!selected) return
+            window.history.replaceState(null, '', sceneUrl(window.location.search, selected.id, !clock.playing))
+            clock.setProgress(selected.start)
           }}>
             {SCENES.map((item, index) => <option key={item.id} value={item.id}>{String(index + 1).padStart(2, '0')} · {item.name}</option>)}
           </select>
