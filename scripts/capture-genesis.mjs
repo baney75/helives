@@ -46,7 +46,7 @@ const BEATS = [
   { name: 'home', path: '/', title: 'He Lives' },
   { name: 'scriptures', path: '/scriptures', title: 'The Scriptures — He Lives' },
   { name: 'faith', path: '/faith', title: 'Faith — He Lives' },
-  { name: 'afterword', path: '/genesis/afterword', title: 'Got doubt? — He Lives' },
+  { name: 'afterword', path: '/genesis/afterword', title: 'Faith and the universe — He Lives' },
 ]
 
 function waitForPreview(child) {
@@ -111,6 +111,7 @@ try {
     })
     const url = `${base}${beat.path}`
     await page.goto(url, { waitUntil: 'networkidle', timeout: 30_000 })
+    await page.waitForFunction((expected) => document.title === expected, beat.title)
     const title = await page.title()
     if (title !== beat.title) {
       throw new Error(`wrong app at ${url}: title=${title}`)

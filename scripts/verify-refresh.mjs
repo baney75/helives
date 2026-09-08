@@ -41,7 +41,7 @@ try {
   await p.getByRole('link', { name: 'Faith', exact: true }).click()
   assert.equal(await p.evaluate(() => scrollY), 0)
   await p.goto(base + '/genesis/afterword')
-  await p.getByRole('link', { name: 'Examine evidence', exact: false }).click()
+  await p.getByRole('link', { name: 'Read the evidence', exact: false }).click()
   assert.equal(new URL(p.url()).hash, '#measure')
   assert.equal(await p.getByRole('link', { name: 'Read Genesis', exact: false }).getAttribute('href'), '/genesis?scene=beginning')
   checks.push('Testament and afterword anchors reach sections; Read Genesis returns to the Genesis beginning')

@@ -16,8 +16,8 @@ export const SCENE_AUDIO_SECONDS: Record<SceneId, number> = {
   garden: 17.376,
   fall: 97.704,
   closing: 9.984,
-  doubt: 11.304,
-  measure: 19.056,
+  doubt: 14.472,
+  measure: 17.520,
 }
 
 export const SCENE_ORDER: readonly SceneId[] = [

@@ -2,7 +2,6 @@ import { cueAt } from '../genesis/choreography.ts'
 import type { ChangeEvent } from 'react'
 import { SCENES } from '../genesis/scenes.ts'
 import { fullContextHref } from '../genesis/fullContext.ts'
-import { hasVoice } from '../genesis/voiced.ts'
 import type { GenesisClock } from '../hooks/useGenesisClock.ts'
 import { Timeline } from './Timeline.tsx'
 import { sceneUrl } from '../lib/mode.ts'
@@ -31,8 +30,8 @@ export function HUD({
   const scene = clock.scene
   const cue = cueAt(scene.id, clock.progress)
   const science = scene.kind === 'science'
-  const voiced = hasVoice(scene.id)
   const fullContext = fullContextHref(scene)
+  const sourceLabel = scene.kind === 'scripture' ? 'KJV' : scene.kind === 'science' ? 'Afterword' : 'Invitation'
 
   return (
     <div className="hud">
@@ -41,20 +40,10 @@ export function HUD({
           <a className="wordmark" href="/"><BrandMark size={26} />He Lives</a>
           <p className="tag">Genesis</p>
         </div>
-        <dl className="readouts">
-          <div>
-            <dt>Place</dt>
-            <dd>{scene.kicker}</dd>
-          </div>
-          <div>
-            <dt>Text</dt>
-            <dd>{scene.kind === 'scripture' ? 'KJV excerpt' : voiced ? 'Spoken' : 'On screen'}</dd>
-          </div>
-          <div>
-            <dt>Cite</dt>
-            <dd>{scene.citation}</dd>
-          </div>
-        </dl>
+        <p className="readouts">
+          <span>{sourceLabel}</span>
+          <span>{scene.citation}</span>
+        </p>
       </header>
 
       <section className="narration" aria-live="off">
@@ -64,7 +53,7 @@ export function HUD({
         {!cue && <p className="body">{scene.body}</p>}
         {fullContext ? (
           <p className="full-context-link">
-            <a href={fullContext} target="_blank" rel="noopener noreferrer">Read the KJV passage in full on Bible Gateway</a>
+            <a href={fullContext} target="_blank" rel="noopener noreferrer" aria-label="Read the KJV passage in full on Bible Gateway">Read the full KJV passage</a>
           </p>
         ) : null}
         {science ? (
@@ -126,11 +115,7 @@ export function HUD({
           </a>
         </div>
         <Timeline progress={clock.progress} sceneId={scene.id} onScrub={clock.setProgress} />
-        <p className="disclaimer">
-          A visual meditation on Genesis 1–3. Scripture is the King James Version, public domain. Spoken
-          narration covers the days of creation, Eden, the Fall, and the invitation. This is not a
-          documentary.
-        </p>
+        <p className="disclaimer">Genesis 1–3 · King James Version · A visual meditation, not a documentary.</p>
       </footer>
     </div>
   )

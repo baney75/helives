@@ -22,7 +22,7 @@ export function CinematicOverlay({ clock }: CinematicOverlayProps) {
       </div>
       <div className={doubt ? 'cine-doubt is-on' : 'cine-doubt'}>
         <p className="cine-kicker">After the Word</p>
-        <h2>Got doubt?</h2>
+        <h2>Faith and the universe</h2>
       </div>
       <div className={ending ? 'cine-end is-on' : 'cine-end'}>
         <p className="cine-kicker">Then go</p>

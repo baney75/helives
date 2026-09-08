@@ -8,7 +8,7 @@ import {
   useGLTF,
 } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Component, Suspense, useCallback, useEffect, useRef, useState, type ErrorInfo, type ReactNode } from 'react'
+import { Component, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState, type ErrorInfo, type ReactNode } from 'react'
 import { Vector3 } from 'three'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { DPR, type Quality } from '../lib/budget.ts'
@@ -110,9 +110,15 @@ function Creation({ clock }: { clock: SceneClock }) {
       <JourneyCameraRig clock={clock} />
       <CinematicRig clock={clock} />
       <fog attach="fog" args={['#07060a', gardenFogNear, fog]} />
-      <ambientLight intensity={0.27 + clock.presence.day1 * 0.18 + gardenLit * 0.24 - fall * 0.04} />
-      <hemisphereLight args={['#7185a0', '#211b10', 0.38 + gardenLit * 0.34 - fall * 0.06]} />
-      <pointLight position={[0, 0.4, 0]} intensity={2.4 + clock.presence.day1 * 1.8} color="#ffd28a" distance={28} />
+      <ambientLight intensity={0.22 + clock.presence.day1 * 0.18 + gardenLit * 0.13 - fall * 0.03} />
+      <hemisphereLight args={['#7185a0', '#21180e', 0.28 + gardenLit * 0.24 - fall * 0.05]} />
+      <pointLight
+        position={gardenLit > 0.25 ? [-1.8, 3.8, 0.75] : [0, 0.4, 0]}
+        intensity={gardenLit > 0.25 ? 2.1 : 2.4 + clock.presence.day1 * 1.8}
+        color="#ffd790"
+        distance={28}
+        decay={2}
+      />
       <pointLight position={[6, 8, 12]} intensity={0.9} color="#7a90b8" distance={48} />
       <directionalLight
         castShadow={clock.quality !== 'low'}
@@ -124,12 +130,13 @@ function Creation({ clock }: { clock: SceneClock }) {
         shadow-bias={-0.0003}
         shadow-normalBias={0.025}
         position={[-4.2, 6.8, 4.8]}
-        intensity={(1.75 - fall * 0.52) * gardenLit}
+        intensity={(2.05 - fall * 0.62) * gardenLit}
         color="#ffe7b8"
       />
-      <directionalLight position={[5.5, 3.4, -4]} intensity={0.42 * gardenLit} color="#9caf93" />
+      <directionalLight position={[5.5, 3.4, -4]} intensity={0.28 * gardenLit} color="#8fa698" />
+      <pointLight position={[0.42, 1.72, 2.28]} intensity={0.52 * gardenLit} color="#ffd8ad" distance={4.8} decay={2} />
       <directionalLight position={[-3.8, 5.2, 5.5]} intensity={0.88 * creationLit} color="#d7e1cb" />
-      <pointLight position={[1.4, 2.2, 1.1]} intensity={1.9 * fall} color="#d6974c" distance={10} />
+      <pointLight position={[1.4, 2.2, 1.1]} intensity={0.8 * fall} color="#d6974c" distance={8} decay={2} />
       <VoidWaters clock={clock} />
       <LetThereBeLight clock={clock} />
       <Firmament clock={clock} />
@@ -246,7 +253,9 @@ function canStartWebGL(): boolean {
 }
 
 function Readiness({ ready, onReady }: { ready: boolean; onReady?: (ready: boolean) => void }) {
-  useEffect(() => { onReady?.(ready) }, [ready, onReady])
+  // Suspense replays layout effects when it reveals an existing scene. A passive
+  // effect can leave the production app loading after a later model resolves.
+  useLayoutEffect(() => { onReady?.(ready) }, [ready, onReady])
   return null
 }
 

@@ -11,6 +11,7 @@ import { effectsAllowed, persistQualityRecord, qualityFromSearch, stricterQualit
 import { CinematicOverlay } from '../ui/CinematicOverlay.tsx'
 import { HUD } from '../ui/HUD.tsx'
 import { MusicControls } from '../music/MusicControls.tsx'
+import '../ui/genesis.css'
 
 const GenesisCanvas = lazy(async () => {
   const module = await import('../scene/GenesisCanvas.tsx')
@@ -105,7 +106,7 @@ export function GenesisPage() {
   const cinematicAudioAction = mode.cinematic && (narration.blocked || narration.stalled)
 
   return (
-    <div className={`${mode.cinematic ? 'app is-cinematic' : 'app'}${sceneUnavailable ? ' has-scene-fallback' : ''}${cinematicAudioAction ? ' has-cinematic-audio-action' : ''}`}>
+    <div className={`${mode.cinematic ? 'app is-cinematic' : 'app'}${sceneUnavailable ? ' has-scene-fallback' : ''}${!sceneReady && !sceneUnavailable ? ' is-scene-loading' : ''}${cinematicAudioAction ? ' has-cinematic-audio-action' : ''}`}>
       <a className="skip" href="#genesis-time">
         Skip to timeline
       </a>

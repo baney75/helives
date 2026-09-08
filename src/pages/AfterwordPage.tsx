@@ -15,12 +15,12 @@ export function AfterwordPage() {
           <p className="hero-kicker">After Genesis</p>
           <h1 id="doubt-title">Faith and the universe</h1>
           <p className="doubt-lead">
-            Genesis begins with God as the creator of heaven and earth. Modern cosmology studies
-            how the universe has developed. Here are the opening text and a few sources to read alongside it.
+            Genesis begins with God as Creator. Cosmology studies how the universe has developed.
+            This afterword sets those claims beside a small body of primary-source evidence.
           </p>
           <nav className="doubt-paths" aria-label="Ways to continue">
             <a href="/genesis?scene=beginning"><span>01</span> Read Genesis</a>
-            <a href="#measure"><span>02</span> Examine evidence</a>
+            <a href="#measure"><span>02</span> Read the evidence</a>
             <a href="/faith"><span>03</span> The Christian faith</a>
           </nav>
         </section>
@@ -28,23 +28,24 @@ export function AfterwordPage() {
         <section className="doubt-essay" id="measure">
           <div>
             <p className="hero-kicker">Scripture and measurement</p>
-            <h2>Creation and cosmic history</h2>
+            <h2>What the sky can tell us</h2>
           </div>
           <div className="doubt-copy">
             <p>
               Genesis opens with a claim about God: “In the beginning God created the heaven and the earth.”
-              Its opening chapters tell of creation, human life, and our relationship with God.
-              Christians have long discussed how to understand the days of creation.
+              It speaks of creation, human life, and our relation to God. Christians have long disagreed,
+              in good faith, about how the days of creation should be understood.
             </p>
             <p>
-              The scientific account draws on observations of the expanding universe and the cosmic microwave
-              background, the oldest light we can observe. Measurements from ESA’s Planck mission support
-              an age of about 13.8 billion years within the standard cosmological model.
+              Cosmology begins elsewhere: with what instruments can observe. The universe is expanding.
+              The cosmic microwave background is the oldest light we can observe. ESA’s Planck mission
+              mapped that signal and helped test the standard cosmological model, which puts the universe’s
+              age at about 13.8 billion years.
             </p>
             <p>
-              Those findings help describe the universe’s physical history. Questions about why there is a
-              universe, who God is, and how we should live also involve philosophy and theology.
-              The sources below explain the science; the opening chapters of Genesis are linked above.
+              These findings trace physical history. They do not answer every theological or philosophical
+              question a reader brings to Genesis. The sources below explain the science; the opening chapters
+              of Genesis are linked above.
             </p>
           </div>
         </section>

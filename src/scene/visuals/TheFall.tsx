@@ -1,8 +1,8 @@
-import { useThree } from '@react-three/fiber'
 import { useStoryFrame } from '../StoryTime.tsx'
 import { useEffect, useMemo, useRef } from 'react'
-import { AdditiveBlending, type Group, Float32BufferAttribute, Vector3 } from 'three'
+import { AdditiveBlending, ExtrudeGeometry, type Group, Float32BufferAttribute, Shape, Vector3 } from 'three'
 import { createScaleTexture } from '../models/natural.ts'
+import { createSerpentHeadGeometry } from '../models/creatures.ts'
 import { EDEN, edenPairStory, fallFruitStory, knowledgeFruitWorld, serpentPoints } from '../models/eden.ts'
 import { createTaperedTube } from '../models/geometry.ts'
 import { AppleFruit } from '../models/Trees.tsx'
@@ -20,8 +20,8 @@ export function TheFall({ clock }: { clock: SceneClock }) {
       <Serpent strength={storyStrength} beat={beat} reducedMotion={clock.reducedMotion} />
       <TakenFruit strength={storyStrength} beat={beat} reducedMotion={clock.reducedMotion} />
       <EastFlame strength={storyStrength} beat={beat} reducedMotion={clock.reducedMotion} />
-      <pointLight position={[0.55, 1.32, 2.25]} intensity={1.25 * storyStrength} color="#d8e6ff" distance={6.5} />
-      <pointLight position={[2.65, 1.05, 1.35]} intensity={1.45 * storyStrength} color="#f0a35e" distance={5.5} />
+      <pointLight position={[0.2, 2.8, 3.4]} intensity={0.68 * storyStrength} color="#b7c9d7" distance={7.5} decay={2} />
+      <pointLight position={[1.05, 2.45, 1.22]} intensity={2.1 * storyStrength} color="#edab5c" distance={5.2} decay={2} />
     </group>
   )
 }
@@ -31,17 +31,18 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
   const head = useRef<Group>(null)
   const tongue = useRef<Group>(null)
   const scaleMap = useMemo(() => createScaleTexture(), [])
+  const headGeometry = useMemo(() => createSerpentHeadGeometry(), [])
   const geometry = useMemo(() => {
     const points = serpentPoints(2.85, 56).map((p) => new Vector3(...p))
     const fruit = knowledgeFruitWorld()
-    points[points.length - 1] = new Vector3(fruit[0] + 0.45, fruit[1] + 0.48, fruit[2] - 0.12)
+    points[points.length - 1] = new Vector3(fruit[0] + 0.24, fruit[1] + 0.23, fruit[2] - 0.08)
     const body = createTaperedTube(points, 0.014, 0.045, 20)
     const count = body.getAttribute('position').count
     const uv = Array.from({ length: count }, (_, i) => [(i % 20) / 20, Math.floor(i / 20) / (count / 20 - 1) * 10]).flat()
     body.setAttribute('uv', new Float32BufferAttribute(uv, 2))
     return body
   }, [])
-  useEffect(() => () => { geometry.dispose(); scaleMap.dispose() }, [geometry, scaleMap])
+  useEffect(() => () => { geometry.dispose(); headGeometry.dispose(); scaleMap.dispose() }, [geometry, headGeometry, scaleMap])
 
   const fruit = knowledgeFruitWorld()
 
@@ -67,23 +68,18 @@ function Serpent({ strength, beat, reducedMotion }: { strength: number; beat: nu
       <mesh geometry={geometry}>
         <meshPhysicalMaterial
           map={scaleMap}
-          color="#77764e"
-          roughness={0.52}
-          metalness={0.08}
-          emissive="#3a2e14"
-          emissiveIntensity={0.04}
-          clearcoat={0.42}
-          clearcoatRoughness={0.4}
+          color="#45482c"
+          roughness={0.46}
+          metalness={0.05}
+          emissive="#211b0c"
+          emissiveIntensity={0.025}
+          clearcoat={0.32}
+          clearcoatRoughness={0.46}
         />
       </mesh>
-      <group ref={head} position={[fruit[0] + 0.45, fruit[1] + 0.48, fruit[2] - 0.12]} rotation={[0.02, -0.45, -0.08]} scale={0.72}>
-        <mesh scale={[1.3, 0.62, 0.84]}>
-          <sphereGeometry args={[0.1, 32, 20]} />
-          <meshPhysicalMaterial color="#2c2816" roughness={0.62} clearcoat={0.12} clearcoatRoughness={0.38} />
-        </mesh>
-        <mesh position={[0.078, -0.02, 0]} scale={[0.95, 0.38, 0.68]}>
-          <sphereGeometry args={[0.07, 24, 16]} />
-          <meshPhysicalMaterial color="#16180f" roughness={0.4} />
+      <group ref={head} position={[fruit[0] + 0.24, fruit[1] + 0.23, fruit[2] - 0.08]} rotation={[0.02, -0.45, -0.08]} scale={0.88}>
+        <mesh geometry={headGeometry} rotation={[0, 0.08, 0]}>
+          <meshPhysicalMaterial color="#272718" roughness={0.52} clearcoat={0.18} clearcoatRoughness={0.38} />
         </mesh>
         <mesh position={[0.083, 0.024, 0.046]}>
           <sphereGeometry args={[0.016, 10, 8]} />
@@ -152,63 +148,68 @@ function TakenFruit({
 
 function EastFlame({ strength, beat, reducedMotion }: { strength: number; beat: number; reducedMotion: boolean }) {
   const flame = EDEN.east.flame
-  const width = useThree((state) => state.size.width)
   const guard = useRef<Group>(null)
   const fire = useRef<Group>(null)
+  const outer = useMemo(() => createFlameGeometry(0.18, 1.35, -0.09), [])
+  const middle = useMemo(() => createFlameGeometry(0.12, 1.08, 0.08), [])
+  const core = useMemo(() => createFlameGeometry(0.065, 0.78, -0.04), [])
   const reveal = Math.min(1, Math.max(0, (beat - 0.68) / 0.12))
+
+  useEffect(() => () => { outer.dispose(); middle.dispose(); core.dispose() }, [core, middle, outer])
 
   useStoryFrame((seconds) => {
     if (!guard.current) return
     const t = reducedMotion ? 0 : seconds
-    guard.current.rotation.y = -0.22 + Math.sin(t * 0.72) * 0.18
+    guard.current.rotation.y = -0.22 + (reducedMotion ? 0 : Math.sin(t * 0.72) * 0.09)
     if (fire.current) {
-      fire.current.scale.y = 0.9 + Math.sin(t * 4.1) * 0.1
-      fire.current.rotation.y = Math.sin(t * 1.3) * 0.16
+      fire.current.scale.y = 0.95 + (reducedMotion ? 0 : Math.sin(t * 4.1) * 0.055)
+      fire.current.rotation.y = reducedMotion ? 0 : Math.sin(t * 1.3) * 0.08
     }
   })
 
   return (
     <group
       ref={guard}
-      position={width < 700 ? [2.2, 0, 1.15] : flame}
+      position={flame}
       scale={0.72 * reveal}
       visible={strength > 0.18 && reveal > 0.02}
     >
-      <mesh position={[0, 1.04, 0.08]}>
-        <boxGeometry args={[0.07, 1.35, 0.032]} />
-        <meshStandardMaterial
-          color="#ddd7c1"
-          emissive="#9d6b35"
-          emissiveIntensity={0.18 + strength * 0.16}
-          roughness={0.28}
-          metalness={0.36}
-        />
-      </mesh>
-      <mesh position={[0, 1.78, 0.08]}>
-        <coneGeometry args={[0.05, 0.2, 6]} />
-        <meshStandardMaterial color="#ddd7c1" emissive="#9d6b35" emissiveIntensity={0.25} metalness={0.42} roughness={0.28} />
-      </mesh>
       <group ref={fire}>
-        {[
-          [-0.08, 0.95, 0.03, 0.2, '#d85d24'],
-          [0.06, 1.22, -0.01, -0.12, '#f0a33e'],
-          [-0.02, 1.52, 0.02, 0.06, '#ffe079'],
-        ].map(([x, y, z, tilt, color], index) => (
-          <mesh key={index} position={[x as number, y as number, z as number]} rotation={[0, 0, tilt as number]} scale={[0.05, 0.28 + index * 0.04, 0.04]}>
-            <sphereGeometry args={[1, 10, 8]} />
-            <meshBasicMaterial
-              color={color as string}
-              transparent
-              opacity={(0.18 + index * 0.06) * strength}
-              blending={AdditiveBlending}
-              depthWrite={false}
-              toneMapped={false}
-            />
-          </mesh>
-        ))}
+        <FlameTongue geometry={outer} color="#bd4a22" opacity={0.72 * strength} />
+        <FlameTongue geometry={middle} color="#e89538" opacity={0.78 * strength} position={[0.012, 0.03, 0.028]} />
+        <FlameTongue geometry={core} color="#fff0ad" opacity={0.86 * strength} position={[-0.006, 0.05, 0.055]} />
       </group>
-      <pointLight position={[0, 1.18, 0]} intensity={0.9 * strength * reveal} color="#e89442" distance={4} />
+      <pointLight position={[0, 0.86, 0.08]} intensity={0.68 * strength * reveal} color="#e89442" distance={3.6} />
     </group>
   )
 }
 
+function FlameTongue({ geometry, color, opacity, position = [0, 0, 0] }: {
+  geometry: ExtrudeGeometry
+  color: string
+  opacity: number
+  position?: [number, number, number]
+}) {
+  return <mesh geometry={geometry} position={position}>
+    <meshStandardMaterial
+      color={color}
+      emissive={color}
+      emissiveIntensity={0.75}
+      transparent
+      opacity={opacity}
+      blending={AdditiveBlending}
+      depthWrite={false}
+      toneMapped={false}
+    />
+  </mesh>
+}
+
+function createFlameGeometry(width: number, height: number, lean: number): ExtrudeGeometry {
+  const shape = new Shape()
+  shape.moveTo(0, 0)
+  shape.bezierCurveTo(-width * 0.78, height * 0.16, -width, height * 0.43, -width * 0.42 + lean, height * 0.66)
+  shape.bezierCurveTo(-width * 0.12 + lean, height * 0.86, lean * 1.12, height, lean, height * 1.06)
+  shape.bezierCurveTo(width * 0.35 + lean, height * 0.77, width * 0.72, height * 0.44, width * 0.48, height * 0.2)
+  shape.quadraticCurveTo(width * 0.22, height * 0.05, 0, 0)
+  return new ExtrudeGeometry(shape, { depth: 0.055, bevelEnabled: true, bevelSize: 0.012, bevelThickness: 0.008, bevelSegments: 2, curveSegments: 10 })
+}

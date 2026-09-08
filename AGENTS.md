@@ -8,7 +8,7 @@ This is a ministry site, not a SaaS product. Quoted Bible is KJV (public domain 
 
 ## Product
 
-- Phase one is live: Genesis 1–3 through the Fall, invitation to church and to live for Jesus Christ, then **Got doubt?** (sourced cosmology afterword).
+- Phase one is live: Genesis 1–3 through the Fall, invitation to church and to live for Jesus Christ, then **Faith and the universe** (sourced cosmology afterword).
 - The calling is the whole Protestant canon, cover to cover, including law, genealogies, and the books people skip. Same beauty bar as Genesis. No empty book routes. `/scriptures` names every book; only live books get a URL.
 - Adding a later book: slug in `src/canon/types.ts`, live `BookRecord` in `src/canon/catalog.ts`, route in `src/site/router.ts`. See `RUNBOOK.md`.
 
@@ -89,3 +89,5 @@ There is no standalone `grok imagine` CLI on this Mac. `which grok` is `/Users/b
 ## Verify
 
 Before claiming done: `pnpm test && pnpm typecheck && pnpm lint && pnpm build`. UI/3D work also needs 375 and 1280 screenshots and the gauntlet verifiers. Then an **independent critic** (`code-reviewer` / `check-work` / visual judge) with no implementer context. The implementer may not ship on its own screenshots or a same-session “looks good.”
+
+For Genesis loading, model, or transport changes, run `scripts/verify-genesis-readiness.mjs` against the built Worker. It delays both Eden figures after an already-ready scene, then checks that loading clears and narration resumes. Development StrictMode can mask Suspense reveal failures. Include a 653×508 CSS viewport at DPR 2 when checking compact controls.

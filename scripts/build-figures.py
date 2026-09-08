@@ -10,9 +10,9 @@ WORK=ROOT/'demo/models-v2/sources'
 
 def person(role):
     man=role=='man'; scale=1
-    skin=mat(role+' warm skin',(.47,.275,.16) if man else (.58,.355,.23),.64)
-    linen=mat(role+' woven linen',(.48,.40,.29) if man else (.69,.60,.45),.98)
-    trim=mat(role+' linen seam',(.32,.25,.16) if man else (.47,.38,.26),.96)
+    skin=mat(role+' warm skin',(.54,.33,.20) if man else (.64,.41,.27),.58)
+    linen=mat(role+' woven linen',(.61,.48,.30) if man else (.76,.64,.43),.78)
+    trim=mat(role+' linen seam',(.34,.26,.16) if man else (.48,.38,.25),.84)
     hair=mat(role+' hair',(.048,.027,.016),.85)
     hairlight=mat(role+' hair strands',(.075,.045,.026),.88)
     lip=mat(role+' lips',(.31,.13,.085),.7)
@@ -21,7 +21,7 @@ def person(role):
     root=joint('Root',(0,0,0))
     # Continuous cloth follows the waist, shoulder slope and neckline. Fine folds
     # are part of the silhouette, with no stuck-on rectangular strips.
-    profile=[(.12,.135,.085),(.18,.149,.088),(.35,.144,.083),(.50,.13,.08),(.68,.108,.069),(.78,.10,.066),(.86,.14,.075),(.94,.151 if man else .139,.080),(.975,.129,.065),(.999,.085,.051),(1.025,.044,.039)]
+    profile=[(.12,.142,.088),(.18,.155,.092),(.34,.151,.088),(.48,.134,.081),(.64,.108,.068),(.76,.098,.063),(.84,.132,.071),(.92,.155 if man else .144,.079),(.968,.135,.067),(1.002,.090,.052),(1.03,.046,.039)]
     rings=[]
     for k in range(len(profile)-1):
         a,b=profile[k],profile[k+1]
@@ -33,7 +33,7 @@ def person(role):
                 return .5*((2*p1)+(-p0+p2)*t+(2*p0-5*p1+4*p2-p3)*t*t+(-p0+3*p1-3*p2+p3)*t*t*t)
             rings.append((z*scale,curve(1)*scale,curve(2)*scale,0,.003*math.sin(z*5)))
     a=profile[-1];rings.append((a[0]*scale,a[1]*scale,a[2]*scale,0,0))
-    loft('Robe',rings,linen,root,segments=64,folds=.035)
+    loft('Robe',rings,linen,root,segments=64,folds=.042)
     # Belt and a draped end in the same cloth language.
     belt=[]
     for i in range(65):
@@ -52,7 +52,7 @@ def person(role):
     # interior face tessellation than the browser view can reveal. Collapse the
     # redundant triangles after smoothing so a cold mobile scene does not spend
     # most of its budget downloading invisible detail.
-    decimate=face.modifiers.new('Delivery decimation','DECIMATE');decimate.ratio=.12
+    decimate=face.modifiers.new('Delivery decimation','DECIMATE');decimate.ratio=.10
     bpy.context.view_layer.objects.active=face
     bpy.ops.object.modifier_apply(modifier=decimate.name)
     for side,code in [(-1,'L'),(1,'R')]:
@@ -86,13 +86,13 @@ def person(role):
             tube('HairLock'+str(i),[(x,y,1.165),(x*1.10,y-.012,1.102),(x*1.03+.004*math.sin(i),y-.025,1.022),(x*.83,y-.019,.956)], [.014,.013,.012,.002],hairlight if i%5==0 else hair,head,8)
     # Long sleeves and connected parent-child limbs. Hands move with wrists.
     for side,code in [(-1,'L'),(1,'R')]:
-        x=side*(.155 if man else .14)*scale; shoulder=(x,0,.958*scale)
+        x=side*(.142 if man else .132)*scale; shoulder=(x,0,.950*scale)
         upper=joint(code+'UpperArm',shoulder,root)
         elbow=(x,.0,.769*scale); fore=joint(code+'Forearm',elbow,upper)
         wrist=(x,0,.590*scale); hand=joint(code+'Hand',wrist,fore)
-        sleeveRings=[(.985*scale,.004,.004,x,0),(.978*scale,.021,.022,x,0),(.963*scale,.037,.036,x,0)]
+        sleeveRings=[(.982*scale,.004,.004,x,0),(.974*scale,.017,.018,x,0),(.957*scale,.031,.030,x,0)]
         for i in range(16):
-            t=i/15;z=(.950-.191*t)*scale;r=(.043*(1-t)+.034*t+.003*math.sin(t*math.pi))*scale
+            t=i/15;z=(.947-.191*t)*scale;r=(.038*(1-t)+.030*t+.0025*math.sin(t*math.pi))*scale
             sleeveRings.append((z,r,r*.88,x,0))
         loft(code+'Sleeve',sleeveRings,linen,upper,segments=32,folds=.028)
         tube(code+'ArmSkin',[elbow,(x,.006,.70*scale),wrist],[.030,.031,.020],skin,fore,16)

@@ -46,10 +46,10 @@ export const NARRATION: Record<SceneId | 'trailer', string> = {
   closing:
     'Follow Jesus Christ. Begin with one of the Gospels. Pray honestly. Find a faithful local church that teaches Scripture and takes your questions seriously.',
   doubt:
-    'Got doubt? You do not have to pretend certainty. Ask what Genesis says and what the evidence can show. Bring both questions to Christians who will listen before they answer.',
+    'Genesis begins with God as creator. Cosmology studies how the universe has developed. The questions overlap, but a measurement is not a verdict on faith. The afterword follows the evidence and the questions it leaves open.',
   measure:
-    'Measurements support an expanding universe about 13.8 billion years old and record the cosmic microwave background. These findings describe the physical history we can observe. They do not settle every question Genesis asks. The NASA and Planck sources are linked on the next page.',
-  trailer: `${KJV.gen1_1} ${KJV.gen1_3} ${KJV.gen1_31} ${KJV.gen3_4} And she took of the fruit thereof, and did eat. Follow Jesus Christ. Begin with one of the Gospels. Got doubt? You do not have to pretend certainty.`,
+    'The universe is expanding. The cosmic microwave background is light released early in its history. Together with other observations, it supports a universe about 13.8 billion years old within the standard cosmological model. The sources are on the next page.',
+  trailer: `${KJV.gen1_1} ${KJV.gen1_3} ${KJV.gen1_31} ${KJV.gen3_4} And she took of the fruit thereof, and did eat. Follow Jesus Christ. Begin with one of the Gospels. Then read the afterword on faith and the universe.`,
 }
 
 export const SCENE_VOICE_CUES: Partial<Record<SceneId, readonly VoiceCue[]>> = {

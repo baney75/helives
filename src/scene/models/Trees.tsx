@@ -10,8 +10,8 @@ import {
   type InstancePose,
 } from '../../lib/instances.ts'
 import { mulberry32 } from '../../lib/rng.ts'
-import { EDEN, canopyLeafCount, groveCount, grovePositions, herbCount, herbPositions } from './eden.ts'
-import { createLeafGeometry, createPlantGeometry } from './geometry.ts'
+import { EDEN, canopyLeafCount, groveCount, grovePositions, herbCount, herbPositions, riverPlantPositions } from './eden.ts'
+import { createLeafGeometry, createPlantGeometry, createReedTuftGeometry } from './geometry.ts'
 
 const leafTint = new Color()
 
@@ -27,16 +27,20 @@ export function TreeOfLife({
   const bark = useBark(EDEN.life.trunkColor)
   const trunk = useMemo(() => organicBranch([[0, 0, 0], [-0.04, 0.5, 0.015], [0.02, 1.1, -0.025], [0, 1.9, 0]], 0.12), [])
   useEffect(() => () => trunk.dispose(), [trunk])
-  const leaves = useMemo(() => leafClusters(lifeTips(), canopyLeafCount(quality, 'life'), 0.42, 41), [quality])
-  const fruit = useMemo(() => hangingFruit(8, 0.38, 17, 2.15), [])
+  const leaves = useMemo(() => leafClusters(lifeTips(), canopyLeafCount(quality, 'life'), 0.5, 41), [quality])
+  const twigs = useMemo(() => canopyTwigs(lifeTips(), 0.5, 41), [])
+  const fruit = useMemo(() => hangingFruit(lifeTips(), 8), [])
+  const fruitBoughs = useMemo(() => fruitBranches(lifeTips(), fruit), [fruit])
   const branches = useMemo(() => lifeBranches(), [])
-  useEffect(() => () => branches.forEach((geometry) => geometry.dispose()), [branches])
+  useEffect(() => () => { branches.forEach((geometry) => geometry.dispose()); twigs.dispose(); fruitBoughs.dispose() }, [branches, fruitBoughs, twigs])
 
   return (
     <group position={EDEN.life.position}>
       <TreeRoots material={bark} radius={0.55} />
       <mesh castShadow receiveShadow geometry={trunk} material={bark} />
       {branches.map((geometry, index) => <mesh castShadow key={index} geometry={geometry} material={bark} />)}
+      <mesh castShadow geometry={twigs} material={bark} />
+      <mesh castShadow geometry={fruitBoughs} material={bark} />
       <LeafCanopy
         field={leaves}
         color={EDEN.life.canopyColor}
@@ -47,7 +51,7 @@ export function TreeOfLife({
         reducedMotion={reducedMotion}
       />
       <HangingFruit positions={fruit} color={EDEN.life.fruitColor} emissive="#fff4d6" />
-      <pointLight position={[0, 1.9, 0.2]} intensity={1.8 * (1 - fall * 0.55)} color="#fff0c2" distance={7} />
+      <pointLight position={[0.12, 2.18, 0.3]} intensity={2.2 * (1 - fall * 0.58)} color="#ffe3a0" distance={7.5} decay={2} />
     </group>
   )
 }
@@ -69,8 +73,15 @@ export function TreeOfKnowledge({
   const count = canopyLeafCount(quality, 'knowledge')
   const leaves = useMemo(() => leafClusters(knowledgeTips(), count, 0.55, 63), [count])
   const inner = useMemo(() => leafClusters(knowledgeTips(), Math.floor(count * 0.55), 0.32, 71), [count])
+  const twigs = useMemo(() => canopyTwigs(knowledgeTips(), 0.55, 63), [])
   const branches = useMemo(() => knowledgeBranches(), [])
-  useEffect(() => () => branches.forEach((geometry) => geometry.dispose()), [branches])
+  const fruitBough = useMemo(() => organicBranch([
+    [0.02, 0.88, 0.02],
+    [-0.15, 1.14, 0.24],
+    [-0.34, 1.42, 0.47],
+    [-0.46, 1.52, 0.62],
+  ], 0.052), [])
+  useEffect(() => () => { branches.forEach((geometry) => geometry.dispose()); twigs.dispose(); fruitBough.dispose() }, [branches, fruitBough, twigs])
   const reach = EDEN.knowledge.fruitLocal
 
   return (
@@ -78,6 +89,8 @@ export function TreeOfKnowledge({
       <TreeRoots material={bark} radius={0.62} />
       <mesh castShadow receiveShadow geometry={trunk} material={bark} />
       {branches.map((geometry, index) => <mesh castShadow key={index} geometry={geometry} material={bark} />)}
+      <mesh castShadow geometry={twigs} material={bark} />
+      <mesh castShadow geometry={fruitBough} material={bark} />
       <LeafCanopy
         field={leaves}
         color="#718049"
@@ -97,7 +110,7 @@ export function TreeOfKnowledge({
         reducedMotion={reducedMotion}
       />
       <group position={reach} visible={!fruitTaken}>
-        <AppleFruit scale={0.75} glow={0.015} />
+        <AppleFruit scale={0.82} glow={0.04} />
       </group>
     </group>
   )
@@ -177,7 +190,7 @@ export function Grove({
   const used = positions.length / 3
   const trunks = useRef<InstancedMesh>(null)
   const shrubs = useRef<InstancedMesh>(null)
-  const leafGeo = useMemo(() => createLeafGeometry(), [])
+  const leafGeo = useMemo(() => createSprigGeometry(4), [])
   const field = useMemo(() => shrubLeaves(positions, used), [positions, used])
 
   useEffect(() => () => leafGeo.dispose(), [leafGeo])
@@ -198,7 +211,7 @@ export function Grove({
         <meshStandardMaterial color="#4a3420" roughness={0.92} />
       </instancedMesh>
       <instancedMesh ref={shrubs} args={[leafGeo, undefined, field.count]}>
-        <meshStandardMaterial color={canopy} roughness={0.78} side={DoubleSide} />
+        <meshStandardMaterial color={canopy} roughness={0.84} side={DoubleSide} />
       </instancedMesh>
     </BreathingGroup>
   )
@@ -208,8 +221,12 @@ export function Herbs({ quality }: { quality: Quality }) {
   const count = herbCount(quality)
   const positions = useMemo(() => herbPositions(count, 88), [count])
   const used = positions.length / 3
+  const riverPositions = useMemo(() => riverPlantPositions(Math.max(18, Math.floor(count * 0.34)), 118), [count])
+  const riverUsed = riverPositions.length / 3
   const mesh = useRef<InstancedMesh>(null)
+  const reeds = useRef<InstancedMesh>(null)
   const geometry = useMemo(() => createPlantGeometry(), [])
+  const reedGeometry = useMemo(() => createReedTuftGeometry(), [])
   const kinds = useMemo(() => {
     const rng = mulberry32(88)
     return Float32Array.from({ length: used }, () => rng())
@@ -221,17 +238,29 @@ export function Herbs({ quality }: { quality: Quality }) {
       scale: [0.85 + (kinds[i] ?? 0) * 1.1, 0.85 + (kinds[i] ?? 0) * 0.8, 1],
       rotation: [0.2, (kinds[i] ?? 0) * Math.PI * 2, 0.1],
     }))
-  }, [kinds, positions, used])
+    if (reeds.current) {
+      writeOrientedInstances(reeds.current, riverPositions, riverUsed, (i) => {
+        const variation = kinds[i] ?? 0
+        return {
+          scale: [0.55 + variation * 0.22, 0.42 + variation * 0.34, 0.55 + variation * 0.22],
+          rotation: [0, variation * Math.PI * 2, ((i % 5) - 2) * 0.12],
+        }
+      })
+    }
+  }, [kinds, positions, riverPositions, riverUsed, used])
 
-  useEffect(() => () => geometry.dispose(), [geometry])
+  useEffect(() => () => { geometry.dispose(); reedGeometry.dispose() }, [geometry, reedGeometry])
 
   if (used === 0) return null
 
-  return (
+  return <group>
+    <instancedMesh ref={reeds} args={[reedGeometry, undefined, riverUsed]}>
+      <meshStandardMaterial color="#38533a" roughness={0.9} side={DoubleSide} />
+    </instancedMesh>
     <instancedMesh ref={mesh} args={[geometry, undefined, used]}>
       <meshStandardMaterial color="#3d5c32" roughness={0.86} side={DoubleSide} />
     </instancedMesh>
-  )
+  </group>
 }
 
 function LeafCanopy({
@@ -252,7 +281,7 @@ function LeafCanopy({
   reducedMotion: boolean
 }) {
   const mesh = useRef<InstancedMesh>(null)
-  const geometry = useMemo(() => createLeafGeometry(), [])
+  const geometry = useMemo(() => createSprigGeometry(5), [])
   const tint = useMemo(() => new Color(color).lerp(new Color('#5a3a18'), fall * 0.55), [color, fall])
 
   useEffect(() => () => geometry.dispose(), [geometry])
@@ -313,15 +342,28 @@ function HangingFruit({
   emissive: string
 }) {
   const mesh = useRef<InstancedMesh>(null)
+  const stems = useRef<InstancedMesh>(null)
   const count = positions.length / 3
+  const stemPositions = useMemo(() => {
+    const next = positions.slice()
+    for (let i = 0; i < count; i += 1) next[i * 3 + 1] = (next[i * 3 + 1] ?? 0) + 0.065
+    return next
+  }, [count, positions])
   useLayoutEffect(() => {
     if (mesh.current) writeInstanceMatrices(mesh.current, positions, count, () => 1)
-  }, [count, positions])
+    if (stems.current) writeInstanceMatrices(stems.current, stemPositions, count, () => 1)
+  }, [count, positions, stemPositions])
   return (
-    <instancedMesh ref={mesh} args={[undefined, undefined, count]}>
-      <sphereGeometry args={[0.038, 10, 10]} />
-      <meshStandardMaterial color={color} roughness={0.35} emissive={emissive} emissiveIntensity={0.7} />
-    </instancedMesh>
+    <group>
+      <instancedMesh ref={stems} args={[undefined, undefined, count]}>
+        <cylinderGeometry args={[0.004, 0.006, 0.09, 6]} />
+        <meshStandardMaterial color="#513a1e" roughness={0.9} />
+      </instancedMesh>
+      <instancedMesh ref={mesh} args={[undefined, undefined, count]}>
+        <sphereGeometry args={[0.03, 10, 10]} />
+        <meshStandardMaterial color={color} roughness={0.32} emissive={emissive} emissiveIntensity={0.66} />
+      </instancedMesh>
+    </group>
   )
 }
 
@@ -359,29 +401,70 @@ function knowledgeTips(): Array<[number, number, number]> {
 }
 
 function leafClusters(tips: Array<[number, number, number]>, count: number, radius: number, seed: number): LeafField {
-  const rng = mulberry32(seed)
+  const paths = canopyTwigPaths(tips, radius, seed)
+  const rng = mulberry32(seed + 811)
   const positions = new Float32Array(count * 3)
   const poses: Array<{ scale: readonly [number, number, number]; rotation: readonly [number, number, number] }> = []
   for (let i = 0; i < count; i += 1) {
-    const tip = tips[i % tips.length] ?? [0, 2, 0]
-    const theta = rng() * Math.PI * 2
-    const phi = Math.acos(2 * rng() - 1)
-    const r = radius * (0.2 + rng() * 0.85)
+    const path = paths[i % paths.length]!
+    const tier = Math.floor(i / paths.length) % 3
+    const t = 0.46 + tier * 0.24
     const i3 = i * 3
-    positions[i3] = tip[0] + Math.sin(phi) * Math.cos(theta) * r
-    positions[i3 + 1] = tip[1] + Math.cos(phi) * r * 0.65
-    positions[i3 + 2] = tip[2] + Math.sin(phi) * Math.sin(theta) * r
-    const s = 0.7 + rng() * 0.55
+    positions[i3] = path.middle[0] + (path.end[0] - path.middle[0]) * t
+    positions[i3 + 1] = path.middle[1] + (path.end[1] - path.middle[1]) * t
+    positions[i3 + 2] = path.middle[2] + (path.end[2] - path.middle[2]) * t
+    const s = 0.72 + rng() * 0.32
     poses.push({
-      scale: [s, s * 1.15, s],
-      rotation: [phi + rng() * 0.3, theta, rng() * Math.PI],
+      scale: [s * (0.9 + rng() * 0.18), s, s],
+      rotation: [(rng() - 0.5) * 0.4, -path.angle + (rng() - 0.5) * 0.34, (rng() - 0.5) * 0.5],
     })
   }
   return { positions, count, poseAt: (i) => poses[i] ?? { scale: [1, 1, 1], rotation: [0, 0, 0] } }
 }
 
+type CanopyTwigPath = {
+  start: [number, number, number]
+  middle: [number, number, number]
+  end: [number, number, number]
+  angle: number
+}
+
+function canopyTwigPaths(tips: Array<[number, number, number]>, radius: number, seed: number): CanopyTwigPath[] {
+  const rng = mulberry32(seed + 301)
+  const paths: CanopyTwigPath[] = []
+  for (const [index, tip] of tips.entries()) {
+    for (let branch = 0; branch < 4; branch += 1) {
+      const angle = index * 1.71 + branch * 1.571 + rng() * 0.24
+      const spread = radius * (0.72 + branch * 0.1)
+      paths.push({
+        start: tip,
+        middle: [
+          tip[0] + Math.cos(angle) * spread * 0.46,
+          tip[1] + (branch - 1.5) * 0.045 + 0.05,
+          tip[2] + Math.sin(angle) * spread * 0.46,
+        ],
+        end: [
+          tip[0] + Math.cos(angle) * spread,
+          tip[1] + (branch - 1.5) * 0.09 + 0.1,
+          tip[2] + Math.sin(angle) * spread,
+        ],
+        angle,
+      })
+    }
+  }
+  return paths
+}
+
+/** Fine branchlets terminate inside every sprig; no foliage floats off the tree. */
+function canopyTwigs(tips: Array<[number, number, number]>, radius: number, seed: number): BufferGeometry {
+  const parts = canopyTwigPaths(tips, radius, seed).map((path) => organicBranch([path.start, path.middle, path.end], 0.015))
+  const merged = mergeGeometries(parts)
+  parts.forEach((part) => part.dispose())
+  return merged
+}
+
 function shrubLeaves(treePos: Float32Array, trees: number): LeafField {
-  const per = 18
+  const per = 6
   const count = trees * per
   const positions = new Float32Array(count * 3)
   const poses: InstancePose[] = []
@@ -391,15 +474,15 @@ function shrubLeaves(treePos: Float32Array, trees: number): LeafField {
     const tx = treePos[t * 3] ?? 0
     const tz = treePos[t * 3 + 2] ?? 0
     for (let k = 0; k < per; k += 1) {
-      const a = rng() * Math.PI * 2
-      const r = 0.08 + rng() * 0.16
+      const a = k / per * Math.PI * 2 + rng() * 0.18
+      const r = k === 0 ? 0 : 0.08 + rng() * 0.1
       const i3 = n * 3
       positions[i3] = tx + Math.cos(a) * r
-      positions[i3 + 1] = 0.28 + rng() * 0.28
+      positions[i3 + 1] = 0.42 + (k % 3) * 0.07
       positions[i3 + 2] = tz + Math.sin(a) * r
       poses.push({
-        scale: [0.58 + rng() * 0.32, 0.58 + rng() * 0.38, 0.58 + rng() * 0.28],
-        rotation: [0.4, a, rng()],
+        scale: [0.44 + rng() * 0.16, 0.44 + rng() * 0.18, 0.44 + rng() * 0.14],
+        rotation: [0.18, -a, (rng() - 0.5) * 0.42],
       })
       n += 1
     }
@@ -407,18 +490,46 @@ function shrubLeaves(treePos: Float32Array, trees: number): LeafField {
   return { positions, count, poseAt: (i) => poses[i] ?? { scale: [1, 1, 1], rotation: [0, 0, 0] } }
 }
 
-function hangingFruit(count: number, radius: number, seed: number, y: number): Float32Array {
-  const rng = mulberry32(seed)
+function hangingFruit(tips: Array<[number, number, number]>, count: number): Float32Array {
   const pos = new Float32Array(count * 3)
   for (let i = 0; i < count; i += 1) {
-    const a = rng() * Math.PI * 2
-    const r = 0.16 + rng() * radius
+    const tip = tips[i % tips.length] ?? [0, 2.2, 0]
+    const angle = i * 2.4 + (i % 3) * 0.62
+    const reach = 0.2 + (i % 3) * 0.055
     const i3 = i * 3
-    pos[i3] = Math.cos(a) * r
-    pos[i3 + 1] = y - 0.35 - rng() * 0.25
-    pos[i3 + 2] = Math.sin(a) * r
+    pos[i3] = tip[0] + Math.cos(angle) * reach
+    pos[i3 + 1] = tip[1] - 0.13 - (i % 2) * 0.05
+    pos[i3 + 2] = tip[2] + Math.sin(angle) * reach
   }
   return pos
+}
+
+function fruitBranches(tips: Array<[number, number, number]>, fruit: Float32Array): BufferGeometry {
+  const parts: BufferGeometry[] = []
+  for (let i = 0; i < fruit.length / 3; i += 1) {
+    const tip = tips[i % tips.length] ?? [0, 2.2, 0]
+    const end: [number, number, number] = [fruit[i * 3] ?? 0, (fruit[i * 3 + 1] ?? 0) + 0.11, fruit[i * 3 + 2] ?? 0]
+    parts.push(organicBranch([tip, [(tip[0] + end[0]) * 0.5, tip[1] - 0.02, (tip[2] + end[2]) * 0.5], end], 0.008))
+  }
+  const geometry = mergeGeometries(parts)
+  parts.forEach((part) => part.dispose())
+  return geometry
+}
+
+function createSprigGeometry(leaves: number): BufferGeometry {
+  const parts = Array.from({ length: leaves }, (_, index) => {
+    const leaf = createLeafGeometry()
+    const turn = index / leaves * Math.PI * 2 + (index % 2) * 0.28
+    leaf.translate(0, 0.095, 0)
+    leaf.scale(0.86 + (index % 3) * 0.08, 0.78 + (index % 2) * 0.12, 1)
+    leaf.rotateZ(0.42 + (index % 3) * 0.12)
+    leaf.rotateY(turn)
+    leaf.translate(Math.cos(turn) * 0.028, index * 0.018, Math.sin(turn) * 0.028)
+    return leaf
+  })
+  const sprig = mergeGeometries(parts)
+  parts.forEach((part) => part.dispose())
+  return sprig
 }
 
 function branching(tips: Array<[number, number, number]>, base: number, radius: number): BufferGeometry[] {

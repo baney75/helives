@@ -1,7 +1,7 @@
 import { Clone, useGLTF } from '@react-three/drei'
 import { useStoryFrame } from '../StoryTime.tsx'
-import { useRef } from 'react'
-import { MathUtils, Vector3, type Group, type Object3D } from 'three'
+import { useLayoutEffect, useRef } from 'react'
+import { MathUtils, Mesh, MeshStandardMaterial, Vector3, type Group, type Object3D } from 'three'
 import type { Vec3 } from './eden.ts'
 import { solveReach } from './reach.ts'
 import { AppleFruit } from './Trees.tsx'
@@ -68,6 +68,26 @@ export function Figure({
   const lean = LEAN[pose] * (role === 'woman' ? -1 : 1)
   const figureScale = role === 'man' ? 1.02 : 0.98
 
+  useLayoutEffect(() => {
+    clone.current?.traverse((object) => {
+      if (!(object instanceof Mesh)) return
+      const materials = Array.isArray(object.material) ? object.material : [object.material]
+      for (const material of materials) {
+        if (!(material instanceof MeshStandardMaterial)) continue
+        if (material.name.includes('woven linen')) {
+          material.roughness = 0.78
+          material.color.offsetHSL(0, -0.025, 0.07)
+        } else if (material.name.includes('warm skin')) {
+          material.roughness = 0.58
+          material.color.offsetHSL(0.012, -0.015, 0.045)
+        } else if (material.name.includes('hair')) {
+          material.roughness = 0.72
+        }
+        material.needsUpdate = true
+      }
+    })
+  }, [gltf.scene])
+
   useStoryFrame((seconds, delta) => {
     const group = root.current
     if (!group) return
@@ -104,8 +124,12 @@ export function Figure({
 
   return (
     <group ref={root} position={position} rotation={[0, rotationY, lean]} scale={figureScale} visible={fade >= 0.04}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.006, 0]} scale={[1.18, 0.66, 1]}>
+        <circleGeometry args={[0.17, 24]} />
+        <meshBasicMaterial color="#080704" transparent opacity={0.32 * fade} depthWrite={false} />
+      </mesh>
       <group ref={clone} scale={fade}>
-        <Clone object={gltf.scene} castShadow receiveShadow />
+        <Clone object={gltf.scene} deep="materialsOnly" castShadow receiveShadow />
       </group>
       <group ref={fruit} visible={holdFruit}>
         <AppleFruit scale={0.75} glow={0.015} />

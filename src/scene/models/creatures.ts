@@ -28,6 +28,32 @@ export function createBirdGeometry(): BufferGeometry {
   return mesh(positions, idx)
 }
 
+/** Broad triangular snake head with an angled snout — a head rather than a stretched sphere. */
+export function createSerpentHeadGeometry(): BufferGeometry {
+  const rings: Array<readonly [number, number, number]> = [
+    [-0.085, 0.048, 0.058],
+    [-0.015, 0.072, 0.098],
+    [0.095, 0.058, 0.088],
+    [0.155, 0.038, 0.052],
+  ]
+  const positions: number[] = []
+  for (const [x, height, width] of rings) {
+    positions.push(x, height, -width, x, height, width, x, -height * 0.58, width * 0.66, x, -height * 0.58, -width * 0.66)
+  }
+  const indices: number[] = []
+  for (let ring = 0; ring < rings.length - 1; ring += 1) {
+    const a = ring * 4, b = a + 4
+    indices.push(a, b, a + 1, a + 1, b, b + 1)
+    indices.push(a + 1, b + 1, a + 2, a + 2, b + 1, b + 2)
+    indices.push(a + 2, b + 2, a + 3, a + 3, b + 2, b + 3)
+    indices.push(a + 3, b + 3, a, a, b + 3, b)
+  }
+  indices.push(0, 1, 2, 0, 2, 3)
+  const end = (rings.length - 1) * 4
+  indices.push(end, end + 2, end + 1, end, end + 3, end + 2)
+  return mesh(positions, indices)
+}
+
 export function fishAspect(geometry: BufferGeometry): { length: number; height: number } {
   geometry.computeBoundingBox()
   const box = geometry.boundingBox

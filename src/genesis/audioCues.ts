@@ -275,17 +275,17 @@ export const AUDIO_CUES = {
   "doubt": [
     {
       "role": "narrator",
-      "text": "Got doubt? You do not have to pretend certainty. Ask what Genesis says and what the evidence can show. Bring both questions to Christians who will listen before they answer.",
+      "text": "Genesis begins with God as creator. Cosmology studies how the universe has developed. The questions overlap, but a measurement is not a verdict on faith. The afterword follows the evidence and the questions it leaves open.",
       "start": 0,
-      "end": 11.28
+      "end": 14.448
     }
   ],
   "measure": [
     {
       "role": "narrator",
-      "text": "Measurements support an expanding universe about 13.8 billion years old and record the cosmic microwave background. These findings describe the physical history we can observe. They do not settle every question Genesis asks. The NASA and Planck sources are linked on the next page.",
+      "text": "The universe is expanding. The cosmic microwave background is light released early in its history. Together with other observations, it supports a universe about 13.8 billion years old within the standard cosmological model. The sources are on the next page.",
       "start": 0,
-      "end": 19.032
+      "end": 17.496
     }
   ]
 } as const

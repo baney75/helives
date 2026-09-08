@@ -131,16 +131,27 @@ function HeroFish({
   const { scene } = useGLTF('/models/genesis/fish.glb', false, false)
   const model = useMemo(() => scene.clone(true), [scene])
   const tail = useMemo(() => model.getObjectByName('Tail'), [model])
+  const dorsal = useMemo(() => model.getObjectByName('DorsalFin'), [model])
+  const leftFin = useMemo(() => model.getObjectByName('Pectoral1'), [model])
+  const rightFin = useMemo(() => model.getObjectByName('Pectoral-1'), [model])
   useStoryFrame((seconds) => {
     const t = reducedMotion ? 0 : seconds
     const phase = index * 1.37
+    const stroke = Math.sin(t * 4.2 + phase)
     if (root.current) {
       root.current.position.x = position[0] + Math.sin(t * 0.34 + phase) * 0.24
       root.current.position.y = position[1] + Math.sin(t * 0.72 + phase) * 0.055
       root.current.position.z = position[2] + Math.cos(t * 0.28 + phase) * 0.18
-      root.current.rotation.set(rotation[0], rotation[1] + Math.cos(t * 0.34 + phase) * 0.16, rotation[2])
+      root.current.rotation.set(
+        rotation[0] + stroke * 0.045,
+        rotation[1] + Math.cos(t * 0.34 + phase) * 0.16,
+        rotation[2] + Math.cos(t * 2.1 + phase) * 0.035,
+      )
     }
-    if (tail) tail.rotation.y = Math.sin(t * 4.2 + phase) * 0.42
+    if (tail) tail.rotation.y = stroke * 0.42
+    if (dorsal) dorsal.rotation.y = stroke * 0.045
+    if (leftFin) leftFin.rotation.x = -0.16 + Math.sin(t * 3.2 + phase) * 0.12
+    if (rightFin) rightFin.rotation.x = 0.16 - Math.sin(t * 3.2 + phase) * 0.12
   })
   return (
     <group ref={root} position={position} rotation={rotation} scale={scale}>
@@ -167,17 +178,26 @@ function HeroBird({
   const model = useMemo(() => scene.clone(true), [scene])
   const leftWing = useMemo(() => model.getObjectByName('LeftWing'), [model])
   const rightWing = useMemo(() => model.getObjectByName('RightWing'), [model])
+  const tail = useMemo(() => model.getObjectByName('TailFeather4'), [model])
   useStoryFrame((seconds) => {
     const t = reducedMotion ? 0 : seconds
     const phase = index * 1.61
-    const flap = Math.sin(t * 3.15 + phase) * 0.52
-    if (leftWing) leftWing.rotation.x = -0.18 + flap
-    if (rightWing) rightWing.rotation.x = 0.18 - flap
+    // Wing motion has a brief glide at the top of each beat, instead of a
+    // symmetrical metronome flap. With reduced motion t is exactly zero.
+    const wingBeat = Math.sin(t * 3.15 + phase)
+    const flap = wingBeat > 0 ? wingBeat * wingBeat * 0.62 : wingBeat * 0.26
+    if (leftWing) leftWing.rotation.x = -0.12 + flap
+    if (rightWing) rightWing.rotation.x = 0.12 - flap
+    if (tail) tail.rotation.y = Math.sin(t * 1.1 + phase) * 0.07
     if (root.current) {
       root.current.position.x = position[0] + Math.cos(t * 0.24 + phase) * 0.25
       root.current.position.y = position[1] + Math.sin(t * 0.42 + phase) * 0.12
       root.current.position.z = position[2] + Math.sin(t * 0.2 + phase) * 0.2
-      root.current.rotation.set(rotation[0], rotation[1] + Math.sin(t * 0.22 + phase) * 0.17, rotation[2])
+      root.current.rotation.set(
+        rotation[0] + Math.sin(t * 0.42 + phase) * 0.06,
+        rotation[1] + Math.sin(t * 0.22 + phase) * 0.17,
+        rotation[2] + Math.cos(t * 0.22 + phase) * 0.08,
+      )
     }
   })
   return (

@@ -1,17 +1,18 @@
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js'
 import { BufferGeometry, CatmullRomCurve3, Float32BufferAttribute, Vector3 } from 'three'
 
-/** Flat pointed leaf in XY. Thickness is on Z so a canopy of these reads as foliage, not balls. */
+/** Broad, veined leaf in XY. The rounded shoulder avoids a crown of identical spears. */
 export function createLeafGeometry(): BufferGeometry {
   const positions: number[] = []
   const indices: number[] = []
   const colors: number[] = []
-  const rows = 12
+  const rows = 18
   for (let i = 0; i <= rows; i += 1) {
     const t = i / rows
-    const width = Math.pow(Math.sin(t * Math.PI), 0.9) * 0.055
+    const width = Math.pow(Math.sin(t * Math.PI), 0.58) * 0.048
     for (let side = -1; side <= 1; side += 1) {
-      positions.push(side * width, t * 0.265 - 0.125, Math.sin(t * Math.PI) * 0.008 + Math.abs(side) * 0.010 + t * t * 0.008)
+      const vein = Math.sin(t * Math.PI) * 0.009 + t * t * 0.007
+      positions.push(side * width, t * 0.22 - 0.095, vein + Math.abs(side) * 0.008)
       const tint = side === 0 ? 0.93 : 0.72 + Math.sin(t * Math.PI) * 0.14
       colors.push(tint, tint, tint * 0.86)
     }
@@ -39,6 +40,24 @@ export function createPlantGeometry(): BufferGeometry {
   const plant = mergeGeometries(leaves)
   leaves.forEach((leaf) => leaf.dispose())
   return plant
+}
+
+/** A bent riverside tuft. The separate blades keep planted ground from reading as cones. */
+export function createReedTuftGeometry(): BufferGeometry {
+  const blades = Array.from({ length: 7 }, (_, i) => {
+    const blade = createLeafGeometry()
+    const turn = i * 2.39996
+    const height = 1.4 + (i % 3) * 0.32
+    blade.translate(0, 0.125, 0)
+    blade.scale(0.42 + (i % 2) * 0.08, height, 0.72)
+    blade.rotateZ(0.16 + (i % 3) * 0.09)
+    blade.rotateY(turn)
+    blade.translate(Math.cos(turn) * 0.025, 0.015, Math.sin(turn) * 0.025)
+    return blade
+  })
+  const tuft = mergeGeometries(blades)
+  blades.forEach((blade) => blade.dispose())
+  return tuft
 }
 
 export function leafAspect(geometry: BufferGeometry): { length: number; width: number; thick: number } {

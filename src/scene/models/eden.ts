@@ -2,7 +2,7 @@ import { fallStoryBeat } from '../../genesis/choreography.ts'
 import { INTERACTIVE_SECONDS } from '../../genesis/sceneTiming.ts'
 import type { Quality } from '../../lib/budget.ts'
 import { sceneBounds } from '../../genesis/sceneTiming.ts'
-import { fillDisk, mulberry32 } from '../../lib/rng.ts'
+import { mulberry32 } from '../../lib/rng.ts'
 
 export type Vec3 = readonly [number, number, number]
 
@@ -39,50 +39,61 @@ export const EDEN = {
   groundRadius: 4.35,
   life: {
     id: 'tree-of-life' as const,
-    position: [-1.72, 0, 0.08] as const satisfies Vec3,
+    position: [-1.72, 0, -0.08] as const satisfies Vec3,
     height: 2.9,
-    trunkColor: '#8a6a32',
-    canopyColor: '#c4b85a',
+    trunkColor: '#8b6634',
+    canopyColor: '#c8b86a',
     fruitColor: '#fff4d6',
   },
   knowledge: {
     id: 'tree-of-knowledge' as const,
-    position: [1.48, 0, 0.22] as const satisfies Vec3,
+    position: [1.5, 0, 0.08] as const satisfies Vec3,
     height: 2.38,
     trunkColor: '#3a2818',
-    canopyColor: '#5a3a28',
+    canopyColor: '#4d5738',
     fruitColor: '#8a2a22',
-    fruitLocal: [-0.37, 1.22, 0.76] as const satisfies Vec3,
+    fruitLocal: [-0.46, 1.4, 0.62] as const satisfies Vec3,
   },
   river: {
     id: 'river' as const,
-    width: 0.46,
+    width: 0.5,
     points: [
-      [-3.15, 0.02, 2.55],
-      [-2.35, 0.02, 1.85],
-      [-1.55, 0.02, 1.55],
-      [-0.55, 0.02, 0.82],
-      [0.35, 0.02, 0.95],
-      [1.15, 0.02, 0.22],
-      [2.15, 0.02, -0.55],
-      [3.05, 0.02, -1.15],
+      [-3.45, 0.02, 2.75],
+      [-2.55, 0.02, 2.12],
+      [-1.5, 0.02, 1.62],
+      [-0.62, 0.02, 0.96],
+      [-0.12, 0.02, 0.28],
+      [-0.35, 0.02, -0.52],
+      [-0.02, 0.02, -1.48],
+      [-0.42, 0.02, -2.7],
     ] as const satisfies readonly Vec3[],
   },
   man: {
     id: 'man' as const,
-    garden: [0.22, 0, 1.38] as const satisfies Vec3,
+    garden: [0.16, 0, 1.34] as const satisfies Vec3,
     depart: [3.02, 0, 1.76] as const satisfies Vec3,
   },
   woman: {
     id: 'woman' as const,
-    garden: [0.78, 0, 1.28] as const satisfies Vec3,
-    reach: [0.88, 0, 0.82] as const satisfies Vec3,
+    garden: [0.72, 0, 1.2] as const satisfies Vec3,
+    reach: [0.82, 0, 0.86] as const satisfies Vec3,
     depart: [3.48, 0, 1.94] as const satisfies Vec3,
   },
   east: {
     flame: [2.72, 0, 0.72] as const satisfies Vec3,
   },
 } as const
+
+/** Deliberate planted beds. Their spacing is part of the garden composition. */
+export const GARDEN_BEDS = [
+  { center: [-3.08, 1.06] as const, radius: [0.72, 0.38] as const, turn: 0.18 },
+  { center: [-2.76, -1.38] as const, radius: [0.82, 0.5] as const, turn: -0.12 },
+  { center: [-1.45, -1.78] as const, radius: [0.76, 0.42] as const, turn: 0.08 },
+  { center: [0.2, -1.92] as const, radius: [0.88, 0.48] as const, turn: -0.05 },
+  { center: [1.72, -1.66] as const, radius: [0.78, 0.44] as const, turn: 0.14 },
+  { center: [2.78, -1.08] as const, radius: [0.68, 0.4] as const, turn: -0.2 },
+  { center: [3.02, 1.32] as const, radius: [0.86, 0.46] as const, turn: -0.16 },
+] as const
 
 export function add3(a: Vec3, b: Vec3): Vec3 {
   return [a[0] + b[0], a[1] + b[1], a[2] + b[2]]
@@ -196,20 +207,21 @@ export function treesAreDistinct(): boolean {
 
 export function groveCount(quality: Quality): number {
   if (quality === 'low') return 4
-  if (quality === 'medium') return 7
-  return 10
+  if (quality === 'medium') return 6
+  return 8
 }
 
 export function herbCount(quality: Quality): number {
-  if (quality === 'low') return 90
-  if (quality === 'medium') return 160
-  return 240
+  if (quality === 'low') return 58
+  if (quality === 'medium') return 96
+  return 142
 }
 
 export function canopyLeafCount(quality: Quality, kind: 'life' | 'knowledge'): number {
-  const base = kind === 'life' ? 280 : 420
-  if (quality === 'low') return Math.floor(base * 0.45)
-  if (quality === 'medium') return Math.floor(base * 0.72)
+  // Each instance is a five-leaf sprig rooted on a modeled branchlet.
+  const base = kind === 'life' ? 128 : 156
+  if (quality === 'low') return Math.floor(base * 0.52)
+  if (quality === 'medium') return Math.floor(base * 0.76)
   return base
 }
 
@@ -241,40 +253,62 @@ export function riverDistance(x: number, z: number): number {
 
 /** Extra grove trees. Never the two named trees; never on the river or the pair. */
 export function grovePositions(count: number, seed: number): Float32Array {
-  const oversample = fillDisk(Math.max(count * 8, 32), 3.85, seed, 0)
+  const anchors: readonly (readonly [number, number])[] = [
+    [-3.45, -2.68], [-2.65, -3.18], [-1.25, -3.42], [-0.02, -3.55],
+    [1.28, -3.4], [2.52, -3.12], [3.36, -2.5], [-3.72, -1.9],
+  ]
+  const rng = mulberry32(seed)
   const out = new Float32Array(count * 3)
-  let written = 0
-  for (let i = 0; i < oversample.length / 3 && written < count; i += 1) {
-    const x = oversample[i * 3] ?? 0
-    const z = oversample[i * 3 + 2] ?? 0
-    if (isNearHero(x, z)) continue
-    if (Math.hypot(x, z) < 2.4) continue
-    if (z > -0.8) continue
-    const i3 = written * 3
-    out[i3] = x
+  for (let i = 0; i < count; i += 1) {
+    const anchor = anchors[i % anchors.length] ?? [0, -3.5]
+    const i3 = i * 3
+    out[i3] = anchor[0] + (rng() - 0.5) * 0.16
     out[i3 + 1] = 0
-    out[i3 + 2] = z
-    written += 1
+    out[i3 + 2] = anchor[1] + (rng() - 0.5) * 0.12
   }
-  return out.subarray(0, written * 3)
+  return out
 }
 
 export function herbPositions(count: number, seed: number): Float32Array {
-  const oversample = fillDisk(Math.max(count * 3, 12), 3.6, seed, 0.04)
   const out = new Float32Array(count * 3)
   const rng = mulberry32(seed + 9)
-  let written = 0
-  for (let i = 0; i < oversample.length / 3 && written < count; i += 1) {
-    const x = oversample[i * 3] ?? 0
-    const z = oversample[i * 3 + 2] ?? 0
-    if (isNearHero(x, z)) continue
-    const i3 = written * 3
-    out[i3] = x
+  for (let i = 0; i < count; i += 1) {
+    const bed = GARDEN_BEDS[i % GARDEN_BEDS.length]!
+    const row = Math.floor(i / GARDEN_BEDS.length)
+    const lane = ((row * 0.61803398875) % 1) * 2 - 1
+    const across = ((row * 0.38196601125 + i * 0.17) % 1) * 2 - 1
+    const localX = across * bed.radius[0] * 0.78
+    const localZ = lane * bed.radius[1] * 0.62
+    const cos = Math.cos(bed.turn), sin = Math.sin(bed.turn)
+    const i3 = i * 3
+    out[i3] = bed.center[0] + localX * cos - localZ * sin + (rng() - 0.5) * 0.07
     out[i3 + 1] = 0.02 + rng() * 0.03
-    out[i3 + 2] = z
-    written += 1
+    out[i3 + 2] = bed.center[1] + localX * sin + localZ * cos + (rng() - 0.5) * 0.05
   }
-  return out.subarray(0, written * 3)
+  return out
+}
+
+/** Reeds follow the river banks instead of doubling every garden herb. */
+export function riverPlantPositions(count: number, seed: number): Float32Array {
+  const rng = mulberry32(seed + 71)
+  const out = new Float32Array(count * 3)
+  const points = EDEN.river.points
+  for (let i = 0; i < count; i += 1) {
+    const t = (i + 0.5) / count * (points.length - 1)
+    const index = Math.min(points.length - 2, Math.floor(t))
+    const phase = t - index
+    const a = points[index]!
+    const b = points[index + 1]!
+    const dx = b[0] - a[0], dz = b[2] - a[2]
+    const length = Math.max(0.001, Math.hypot(dx, dz))
+    const side = i % 2 === 0 ? -1 : 1
+    const bank = EDEN.river.width * 0.68 + 0.14 + rng() * 0.08
+    const i3 = i * 3
+    out[i3] = a[0] + dx * phase - dz / length * bank * side
+    out[i3 + 1] = 0.025
+    out[i3 + 2] = a[2] + dz * phase + dx / length * bank * side
+  }
+  return out
 }
 
 export function serpentPoints(turns = 2.35, samples = 28): Vec3[] {
