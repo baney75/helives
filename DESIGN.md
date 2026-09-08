@@ -56,7 +56,7 @@ A slender, flared Latin cross with an engraved light edge.
 
 | Surface | Pattern |
 |---------|---------|
-| Home | One 100svh lamp (100vh fallback): mark, He Lives, rotating KJV (words of Christ in red), an authored one-line motif, Explore more, new Scripture every 60 seconds, book-matched SVG landscapes with slow camera motion, optional TV display and opt-in music, He Lives and the KJV public-domain line. No page scroll. No clipped footer. No Lucide furniture. No cards. No wash. No church button. |
+| Home | One 100svh lamp (100vh fallback): nav mark, rotating KJV (words of Christ in red), Explore more, new Scripture every 60 seconds, book-matched SVG landscapes with slow camera motion, optional fullscreen mode and opt-in music. The large in-hero “He Lives” heading and “A moment in the Word” subtitle are intentionally absent; the verse leads. The shared site footer is intentionally absent from this reading view. No page scroll. No Lucide furniture. No cards. No wash. No church button. |
 | Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
 | Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
 | Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
@@ -117,10 +117,10 @@ The implementer captures screenshots as evidence. The **visual critic** (separat
 
 Quiet instrumental music accompanies the rotating Scripture as well as reading pages and Genesis. Playback stays off until explicitly enabled and does not reset at verse rollover. Music settings use a native top-layer popover so small viewports do not clip the volume or track selector. See `docs/MUSIC.md`.
 
-## September 7 refinement
+## September 8 refinement
 
-The home keeps its engraved landscape direction. A lower-right artwork caption sits in its own quiet tonal area, separate from Scripture and foreground branches. TV mode uses a darker text-safe area. Secondary text is lighter, with home footer copy at 12–13px and editorial source notes at 15px.
+The home keeps its engraved landscape direction. A lower-right artwork caption sits in its own quiet tonal area, separate from Scripture and foreground branches. Fullscreen mode uses a darker text-safe area. Secondary text is lighter, with home footer copy at 12–13px and editorial source notes at 15px.
 
-78 SVGs now supply the experience: 66 book illustrations and twelve exact-reference scenes for Psalms and John. Shaded leaves, engraved bark, contour-following hills and masonry side faces add depth. Camera direction varies deterministically by scene; small composited light, haze and water marks follow scene metadata. Reduced motion and pause stop movement. The gallery supports opt-in one-minute collection playback, quiet idle controls, last-decoded-image crossfades and explicit recovery when an image fails.
+660 SVG scenes now supply the experience: ten for each canonical book, including preserved exact-reference scenes. A passage’s initial visit selects its exact scene when present; later visits select a deterministic scene from that book so image requests remain one-at-a-time and the home does not freeze on one familiar backdrop. Shaded leaves, engraved bark, contour-following hills and masonry side faces add depth. Camera direction varies deterministically by scene; small composited light, haze and water marks follow scene metadata. Reduced motion and pause stop movement. The gallery keeps a 66-book selector, adds a scene indicator, and its opt-in one-minute collection playback covers all 660 scenes with last-decoded-image crossfades and explicit recovery when an image fails. The public control label is “Fullscreen mode” and becomes “Exit fullscreen mode”; `?display=1` remains the direct layout route.
 
 Faith uses a restrained engraved tomb heading; Afterword has a one-column mobile hero and comfortable source typography. Creator–critic Cerebras reports are saved under docs/art/reviews and tested against actual browser behavior; model agreement is not the visual release gate.

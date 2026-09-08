@@ -1,7 +1,11 @@
 import { chromium } from 'playwright'
 import assert from 'node:assert/strict'
-import { mkdir,writeFile } from 'node:fs/promises'
+import { mkdir,readFile,writeFile } from 'node:fs/promises'
 const base=process.env.HELIVES_PREVIEW_URL||'http://127.0.0.1:8787',out='demo/exhibition';await mkdir(out,{recursive:true})
+const [books, library]=await Promise.all(['src/art/catalog.json','src/art/library.json'].map(path=>readFile(path,'utf8').then(JSON.parse)))
+// Match `LIBRARY` without importing a Vite/TypeScript module: automatic playback is book-grouped.
+const collection=books.flatMap(book=>library.filter(art=>art.bookId===book.id))
+assert.equal(collection.length,660)
 const b=await chromium.launch();const errors=[],checks=[]
 try{
  const p=await b.newPage({viewport:{width:1280,height:800},reducedMotion:'reduce'});p.on('pageerror',e=>errors.push(String(e)))
@@ -9,17 +13,18 @@ try{
  const opener=p.getByRole('button',{name:'View artwork for John',exact:true});await opener.click()
  const reveal=async()=>{await p.mouse.move(20,300);await p.mouse.move(25,305);await p.clock.runFor(50)}
  const picker=p.getByLabel('Choose a book artwork');const ready=id=>p.locator(`.art-viewer [data-artwork="${id}"].is-ready`).waitFor()
+ const current=()=>p.locator('.art-viewer .art-scene.is-ready').last().getAttribute('data-artwork')
  await ready('john');await p.getByRole('button',{name:'Play collection',exact:true}).click()
  await p.clock.runFor(59000);assert.equal(await picker.inputValue(),'john')
- await reveal();await p.getByRole('button',{name:'Next artwork',exact:true}).click();await ready('acts')
- await p.clock.runFor(59000);assert.equal(await picker.inputValue(),'acts')
- await p.clock.runFor(1200);await ready('romans');assert.equal(await picker.inputValue(),'romans')
- await reveal();await p.getByRole('button',{name:'Pause motion',exact:true}).click();await p.clock.runFor(120000);assert.equal(await picker.inputValue(),'romans')
+ await reveal();await p.getByRole('button',{name:'Next artwork',exact:true}).click();const johnIndex=collection.findIndex(a=>a.id==='john'),second=collection[(johnIndex+1)%collection.length];await ready(second.id);assert.equal(await picker.inputValue(),second.bookId);assert.equal(await p.locator('.art-scene-indicator').textContent(),`Scene ${collection.filter(a=>a.bookId===second.bookId).findIndex(a=>a.id===second.id)+1} of 10`)
+ await p.clock.runFor(59000);assert.equal(await current(),second.id)
+ await p.clock.runFor(1200);const third=collection[(johnIndex+2)%collection.length];await ready(third.id);assert.equal(await picker.inputValue(),third.bookId)
+ await reveal();await p.getByRole('button',{name:'Pause motion',exact:true}).click();await p.clock.runFor(120000);assert.equal(await current(),third.id)
  await reveal();await p.getByRole('button',{name:'Resume motion',exact:true}).click()
  await p.evaluate(()=>{Object.defineProperty(document,'visibilityState',{configurable:true,value:'hidden'});document.dispatchEvent(new Event('visibilitychange'))})
- await p.clock.runFor(120000);assert.equal(await picker.inputValue(),'romans')
+ await p.clock.runFor(120000);assert.equal(await current(),third.id)
  await p.evaluate(()=>{Object.defineProperty(document,'visibilityState',{configurable:true,value:'visible'});document.dispatchEvent(new Event('visibilitychange'))})
- await reveal();await p.getByRole('button',{name:'Stop collection',exact:true}).click();checks.push('Exhibition advances after a full minute; manual Next resets dwell; pause and hidden tabs preserve artwork')
+ await reveal();await p.getByRole('button',{name:'Stop collection',exact:true}).click();checks.push('Exhibition advances one scene after a full minute through the 660-scene collection; manual Next resets dwell; pause and hidden tabs preserve artwork')
  let held=null;await p.route('**/art/scripture/exodus.svg',route=>{held=route})
  await picker.selectOption('exodus');await p.waitForTimeout(50);await picker.selectOption('psalms');await ready('psalms');if(held)await held.continue();await p.clock.runFor(2600)
  assert.equal(await p.locator('.art-viewer .art-scene').count(),1);assert.equal(await p.locator('.art-viewer .art-scene').getAttribute('data-artwork'),'psalms')

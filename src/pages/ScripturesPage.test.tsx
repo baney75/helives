@@ -12,5 +12,6 @@ describe('ScripturesPage', () => {
     expect(html).toContain('href="/genesis"')
     expect(html).not.toContain('href="/exodus"')
     expect(html).not.toContain('disabled')
+    expect(html).toContain('660 illustrations, ten for each book')
   })
 })

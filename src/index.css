@@ -1948,7 +1948,7 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
   .reading-home .hero-kicker { margin-top:8px; }
   .reading-home .hero-cite { margin:4px 0; }
 }
-/* TV mode: readable from a sofa, with recoverable controls. */
+/* Fullscreen mode: readable from a sofa, with recoverable controls. */
 .reading-home.is-display { max-width:none; padding:clamp(20px,4vw,64px); grid-template-rows:auto minmax(0,1fr); }
 .is-display .foot, .is-display .nav nav { display:none; }
 .is-display .nav { border:0; padding:0; }
@@ -2013,6 +2013,7 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
 .art-viewer-controls { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:8px; }
 .art-viewer button, .art-viewer select { font:14px var(--serif); color:var(--ink); background:#07060ac9; border:1px solid #e8b86d55; min-height:44px; padding:10px 14px; cursor:pointer; }
 .art-viewer select { max-width:180px; }
+.art-scene-indicator { min-height:44px; display:inline-flex; align-items:center; padding:0 4px; color:var(--muted); font:12px var(--mono); white-space:nowrap; }
 @media(max-width:699px) {
   .reading-home .art-caption { display:none; }
   .reading-home .atmosphere-shade { background:linear-gradient(90deg,#07060aed,#07060a80),linear-gradient(0deg,#07060acc,transparent); }
@@ -2048,7 +2049,7 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
 }
 
 /* Caption sits in the lower artwork margin, never on a branch or beside the verse. */
-.reading-home .word-sign { position:fixed; right:max(5vw,24px); bottom:clamp(112px,16vh,180px); z-index:2; max-width:28ch; }
+.reading-home .word-sign { position:fixed; right:max(5vw,24px); bottom:clamp(32px,5vh,64px); z-index:2; max-width:28ch; }
 .reading-home .art-caption { margin:0; max-width:none; padding:12px 18px 13px; border-left:1px solid #e8b86d80; background:linear-gradient(90deg,#0c151ce8,#0c151cb8 78%,#0c151c88); text-align:left; }
 .art-caption-label { display:block; margin-bottom:6px; font:9px/1.4 var(--mono); letter-spacing:.15em; text-transform:uppercase; color:var(--fire); }
 .art-caption-title { display:block; color:var(--ink); font:italic 20px/1.2 var(--display); }

@@ -1,5 +1,5 @@
-/** Deterministic engraved landscapes from validated Gemma art directions.
- * All SVG geometry is authored here; model output supplies enums and numbers only.
+/** Deterministic engraved landscapes from vetted directions.
+ * All SVG geometry is authored here; direction metadata supplies composition only.
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { optimize } from 'svgo'
@@ -9,6 +9,7 @@ const books=JSON.parse(await readFile(new URL('docs/art/books.json',root)))
 const directions=JSON.parse(await readFile(new URL('docs/art/directions.json',root))).scenes
 const subjects=Object.fromEntries((await readFile(new URL('docs/art/subjects.txt',root),'utf8')).trim().split('\n').map(line=>{const [id,title,description]=line.split('|');return[id,{title,description}]}))
 const passageDirections=JSON.parse(await readFile(new URL('docs/art/passage-art.json',root)))
+const libraryDirections=JSON.parse(await readFile(new URL('docs/art/library-directions.json',root)))
 const families='mountain sea river garden desert city temple interior storm tomb tower bridge boat harvest gate'.split(' ')
 if(directions.length!==66 || new Set(directions.map(s=>s.id)).size!==66)throw Error('Invalid coverage')
 for(const s of directions){
@@ -21,7 +22,10 @@ function random(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imu
 const escape=x=>x.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;')
 const editorial = {obadiah:{family:'tower'},esther:{family:'gate'},hosea:{family:'gate'},proverbs:{family:'gate'},ephesians:{family:'gate'},'1-thessalonians':{family:'tower'},titus:{family:'city'},revelation:{family:'river'}}
 function render(input,seed){
- const s={...input,...editorial[input.id]}
+ // Variants retain their own scene ID for file/seed purposes, but their book ID
+ // selects the vetted book-specific subjects. Editorial family overrides are
+ // canonical-only so a variant can keep its authored composition.
+ const s={...input,id:input.bookId??input.id,...(input.bookId?{}:editorial[input.id])}
  const rand=random(seed),p=palettes[s.palette],gold=p[3],ink=p[0],bright=p[4];let parts=[]
  const path=(d,fill='none',stroke=gold,width=.8,opacity=1)=>parts.push(`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${width}" opacity="${opacity}" stroke-linejoin="round" stroke-linecap="round"/>`)
  const circle=(x,y,r,fill,opacity=1)=>parts.push(`<circle cx="${n(x)}" cy="${n(y)}" r="${n(r)}" fill="${fill}" opacity="${opacity}"/>`)
@@ -98,7 +102,7 @@ function render(input,seed){
  case 'river':
   water(H+40);path(`M0 ${H+20}Q500 ${H+70} ${X-80} ${H+70}Q${X-260} 700 ${X-260} 810Q${X-600} 840 430 1030H0Z`,'url(#bank)',gold,.8);path(`M1600 ${H+20}Q${X+100} ${H+30} ${X+25} ${H+80}Q${X-100} 710 ${X+20} 820Q${X+300} 890 1350 1030H1600Z`,ink,gold,.8);tree(1380,930,1.15);flowers(150,975);break
  case 'garden':case 'harvest':
-  mountain(2,H+210,.5);for(let i=0;i<45;i++)path(`M${-500+i*65} 1050Q${X+i*9-300} 740 ${X+i*4-140} ${H+80}`,'none',gold,.6,.25);ground();if(!['zechariah','psalms-fountain','john-living-well'].includes(s.id))tree(X+70,860,1.1,s.detail==='vine');if(s.family==='harvest')for(let i=0;i<95;i++){const xx=rand()*1600,yy=940+rand()*100,ll=50+rand()*150;path(`M${n(xx)} ${n(yy)}q20 ${n(-ll*.6)} 7 ${n(-ll)}`,'none',gold,.8,.65);for(let j=0;j<7;j++){line(xx+7,yy-ll+j*5,xx-2,yy-ll+j*5-8,bright,1.3,.7);line(xx+7,yy-ll+j*5,xx+17,yy-ll+j*5-7,gold,1.3,.8)}}else flowers(400,990);break
+  mountain(2,H+210,.5);for(let i=0;i<45;i++)path(`M${-500+i*65} 1050Q${X+i*9-300} 740 ${X+i*4-140} ${H+80}`,'none',gold,.6,.25);ground();if(!['zechariah','psalms-fountain','john-living-well'].includes(s.id))tree(X+70,860,1.1,s.detail==='vine');if(s.family==='harvest')for(let i=0;i<55;i++){const xx=rand()*1600,yy=940+rand()*100,ll=50+rand()*150;path(`M${n(xx)} ${n(yy)}q20 ${n(-ll*.6)} 7 ${n(-ll)}`,'none',gold,.8,.65);for(let j=0;j<7;j++){line(xx+7,yy-ll+j*5,xx-2,yy-ll+j*5-8,bright,1.3,.7);line(xx+7,yy-ll+j*5,xx+17,yy-ll+j*5-7,gold,1.3,.8)}}else flowers(400,990);break
  case 'temple':
   ground();if(s.id!=='leviticus')temple(X,660,1.15);tree(1500,950,.85);lamp(X-230,840,.55);lamp(X+235,840,.55);break
  case 'city':
@@ -162,8 +166,8 @@ function render(input,seed){
   for(let i=0;i<25;i++)path(`M${-120+i*6} -68q-12 18 2 40`,'none',gold,.65,.3)
   parts.push('</g>')
  }
- if(s.id==='daniel'){rect(450,810,1040,190,ink);lion(X-130,934,1.6,1);lion(X+170,944,1.05,-1)}
- if(s.id==='zechariah'){
+ if(s.id==='daniel'&&['interior','tomb','mountain','gate','tower'].includes(s.family)){rect(450,810,1040,190,ink);lion(X-130,934,1.6,1);lion(X+170,944,1.05,-1)}
+ if(s.id==='zechariah'&&!input.bookId){
   tree(X-245,890,.78);tree(X+265,890,.78);line(X,820,X,485,gold,9,1)
   for(let i=1;i<=3;i++)for(const dir of [-1,1]){const xx=X+dir*i*42;path(`M${X} ${810-i*50}Q${xx} ${810-i*50} ${xx} ${610-i*33}V485`,'none',gold,7);lamp(xx,472,.28)}
   lamp(X,472,.28);path(`M${X-62} 850L${X-30} 829H${X+30}L${X+62} 850Z`,p[2],gold,1)
@@ -172,10 +176,10 @@ function render(input,seed){
   path(`M${X-22} ${H+6}Q${X-170} 750 ${X-225} 1030H${X+225}Q${X+115} 750 ${X+22} ${H+6}Z`,'url(#stone)',bright,.8)
   for(let i=0;i<100;i++){let yy=H+15+rand()*(1000-H),w=(yy-H)*.8,xx=X+(rand()-.5)*w;path(`M${n(xx)} ${n(yy)}l${n(5+rand()*26)} -3`,'none',gold,.8,.5)}
  }
- if(s.id==='jonah'){
+ if(s.id==='jonah'&&['sea','boat','river','storm'].includes(s.family)){
   parts.push(`<g transform="translate(${X-100} 840)">`);path('M-340 -80Q-220 -190 35 -154Q160 -140 195 -92Q286 -121 322 -185Q338 -134 299 -82Q342 -52 347 7Q274 -41 185 -47Q50 21 -176 -14Q-296 -17 -340 -80Z',ink,gold,1.5);path('M-290 -72Q-156 -37 74 -65Q-10 45 -79 -13','none',gold,1);for(let i=0;i<25;i++)path(`M${-260+i*12} -120q42 35 15 83`,'none',gold,.7,.2);circle(-250,-104,4,bright);parts.push('</g>')
  }
- if(s.id==='leviticus'){
+ if(s.id==='leviticus'&&['temple','desert','gate','interior'].includes(s.family)){
   rect(X-235,410,460,300,'url(#stone)',gold,1);path(`M${X-260} 410L${X-100} 340H${X+175}L${X+250} 410Z`,p[2],gold,1)
   for(let i=0;i<30;i++)path(`M${X-230+i*15} 416q-5 140 3 292`,'none',gold,.7,.6)
   rect(X-65,442,130,270,ink,gold);path(`M${X-65} 442q35 110 0 255M${X+65} 442q-35 110 0 255`,'none',bright,2)
@@ -209,21 +213,28 @@ function render(input,seed){
  // Very fine edge engraving around foreground leaves / rocks, not a UI border.
  parts.push('</svg>');return parts.join('')
 }
-await mkdir(new URL('public/art/scripture/',root),{recursive:true});const manifest=[]
-for(const book of books){const d=directions.find(d=>d.id===book.id);if(!d||!palettes[d.palette])throw Error('Invalid direction');const seed=createHash('sha256').update(book.id).digest().readUInt32LE(0);const svg=optimize(render(d,seed),{multipass:true,plugins:[{name:'preset-default'},{name:'cleanupNumericValues',params:{floatPrecision:2}},{name:'convertPathData',params:{floatPrecision:2}}]}).data;await writeFile(new URL(`public/art/scripture/${book.id}.svg`,root),svg);manifest.push({...book,bookTitle:book.title,...subjects[book.id],family:editorial[book.id]?.family??d.family,palette:d.palette,weather:d.weather,horizon:d.horizon,file:`${book.id}.svg`,bytes:Buffer.byteLength(svg),sha256:createHash('sha256').update(svg).digest('hex')})}
-await writeFile(new URL('docs/art/manifest.json',root),JSON.stringify(manifest,null,2));await writeFile(new URL('src/art/catalog.json',root),JSON.stringify(manifest.map(({id,bookTitle,title,file,family,palette,weather,horizon})=>({id,bookTitle,title,file,family,palette,weather,horizon})),null,2));console.log(`Rendered ${manifest.length} deterministic illustrations; ${Math.round(manifest.reduce((n,a)=>n+a.bytes,0)/1024)} KB total SVG.`)
-
-const passageManifest=[]
-if(passageDirections.length!==12||new Set(passageDirections.map(s=>s.id)).size!==12)throw Error('Expected 12 distinct passage scenes')
-for(const scene of passageDirections){
- if(!families.includes(scene.family)||!palettes[scene.palette]||!Number.isFinite(scene.horizon)||scene.horizon<430||scene.horizon>650)throw Error('Invalid passage direction')
+if(libraryDirections.length!==582||new Set(libraryDirections.map(s=>s.id)).size!==582)throw Error('Expected 582 unique library directions')
+const byBook=Object.fromEntries(books.map(book=>[book.id,book]))
+const expectedCount=id=>id==='psalms'||id==='john'?3:9
+for(const book of books){const scenes=libraryDirections.filter(scene=>scene.bookId===book.id);if(scenes.length!==expectedCount(book.id))throw Error(`Invalid library coverage for ${book.id}`)
+ for(const scene of scenes){
+  if(!families.includes(scene.family)||!palettes[scene.palette]||!['dawn','stars','storm','clear'].includes(scene.weather)||!['olive','lamp','vessel','stones','flowers','scroll','vine','none','boat'].includes(scene.detail)||!Number.isFinite(scene.horizon)||scene.horizon<430||scene.horizon>650||!Number.isFinite(scene.focalX)||scene.focalX<850||scene.focalX>1250||!Number.isFinite(scene.sunX)||scene.sunX<700||scene.sunX>1300||typeof scene.title!=='string'||!scene.title.trim())throw Error(`Invalid library scene: ${scene.id}`)
+ }
+}
+await mkdir(new URL('public/art/scripture/',root),{recursive:true})
+const generated=[]
+for(const scene of libraryDirections){
+ const book=byBook[scene.bookId];if(!book)throw Error(`Unknown library book: ${scene.bookId}`)
  const seed=createHash('sha256').update(scene.id).digest().readUInt32LE(0)
  const svg=optimize(render(scene,seed),{multipass:true,plugins:[{name:'preset-default'},{name:'cleanupNumericValues',params:{floatPrecision:2}},{name:'convertPathData',params:{floatPrecision:2}}]}).data
- const bytes=Buffer.byteLength(svg);if(bytes>=350000)throw Error(`Passage artwork exceeds budget: ${scene.id}`)
- await writeFile(new URL(`public/art/scripture/${scene.id}.svg`,root),svg)
- const {id,ref,bookTitle,title,family,palette,weather,horizon}=scene
- passageManifest.push({id,ref,bookTitle,title,family,palette,weather,horizon,file:`${id}.svg`,bytes,sha256:createHash('sha256').update(svg).digest('hex')})
+ const bytes=Buffer.byteLength(svg);if(bytes>=350000)throw Error(`Library artwork exceeds budget: ${scene.id}`)
+ const file=`${scene.id}.svg`;await writeFile(new URL(`public/art/scripture/${file}`,root),svg)
+ generated.push({id:scene.id,bookId:scene.bookId,bookTitle:book.title,title:scene.title,file,family:scene.family,palette:scene.palette,weather:scene.weather,horizon:scene.horizon,bytes,sha256:createHash('sha256').update(svg).digest('hex')})
 }
-await writeFile(new URL('docs/art/passage-manifest.json',root),JSON.stringify(passageManifest,null,2))
-await writeFile(new URL('src/art/passage-art.json',root),JSON.stringify(passageManifest.map(({bytes,sha256,...art})=>art),null,2))
-console.log(`Rendered ${passageManifest.length} passage illustrations; ${Math.round(passageManifest.reduce((n,a)=>n+a.bytes,0)/1024)} KB additional SVG.`)
+const canonical=JSON.parse(await readFile(new URL('docs/art/manifest.json',root))).map(({id,bookTitle,title,file,family,palette,weather,horizon,bytes,sha256})=>({id,bookId:id,bookTitle,title,file,family,palette,weather,horizon,bytes,sha256}))
+const passages=JSON.parse(await readFile(new URL('docs/art/passage-manifest.json',root))).map(({id,ref,bookTitle,title,file,family,palette,weather,horizon,bytes,sha256})=>({id,bookId:bookTitle.toLowerCase(),bookTitle,title,file,family,palette,weather,horizon,ref,bytes,sha256}))
+const manifest=[...canonical,...passages,...generated]
+if(manifest.length!==660||new Set(manifest.map(item=>item.id)).size!==660)throw Error('Library manifest coverage mismatch')
+await writeFile(new URL('docs/art/library-manifest.json',root),JSON.stringify(manifest,null,2))
+await writeFile(new URL('src/art/library.json',root),JSON.stringify(manifest.map(({bytes,sha256,...art})=>art),null,2))
+console.log(`Rendered ${generated.length} new illustrations; library has ${manifest.length} total SVG records.`)

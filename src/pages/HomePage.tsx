@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { SiteFooter } from '../site/SiteFooter.tsx'
 import { SiteNav } from '../site/SiteNav.tsx'
 import { HourLamp } from '../word/HourLamp.tsx'
 
@@ -63,11 +62,10 @@ export function HomePage({ now }: HomePageProps) {
   }, [display])
   return (
     <div className={`site lamp-home reading-home${display ? ' is-display' : ''}${idle ? ' is-idle' : ''}`} onPointerMove={reveal} onKeyDown={reveal}>
-      <SiteNav current="home" extra={<button type="button" className="tv-toggle" onClick={(event) => { if (event.detail) event.currentTarget.blur(); void toggleDisplay() }} aria-pressed={display}>{display ? 'Exit TV mode' : 'TV mode'}</button>} />
+      <SiteNav current="home" extra={<button type="button" className="tv-toggle" onClick={(event) => { if (event.detail) event.currentTarget.blur(); void toggleDisplay() }} aria-pressed={display}>{display ? 'Exit fullscreen mode' : 'Fullscreen mode'}</button>} />
       <main id="main-content" className="hero word-hero">
         <HourLamp now={now} />
       </main>
-      <SiteFooter />
     </div>
   )
 }

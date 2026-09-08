@@ -1,0 +1,9 @@
+{
+  "model": "gpt-oss-120b",
+  "pricing": {
+    "prompt": "0.00000035",
+    "completion": "0.00000075"
+  },
+  "source": "https://api.cerebras.ai/public/v1/models",
+  "checkedAt": "20260908T144301Z"
+}

@@ -32,15 +32,14 @@ async function measure(page: Page) {
     const root = document.documentElement
     const body = document.body
     const lamp = document.querySelector('.lamp-home')
-    const foot = document.querySelector('.foot')
     const cite = document.querySelector('.hero-cite')
     const brand = document.querySelector('.nav-mark')
     const verse = document.querySelector('.hero-verse')
     const sign = document.querySelector('.word-sign')
     const actions = document.querySelector('.hero-actions')
     const remain = document.querySelector('.word-remain')
-    if (!(lamp instanceof HTMLElement) || !(foot instanceof HTMLElement)) {
-      throw new Error('lamp or footer missing')
+    if (!(lamp instanceof HTMLElement)) {
+      throw new Error('lamp missing')
     }
     if (
       !(verse instanceof HTMLElement) ||
@@ -58,7 +57,6 @@ async function measure(page: Page) {
     const signBox = sign.getBoundingClientRect()
     const actionsBox = actions.getBoundingClientRect()
     const remainBox = remain.getBoundingClientRect()
-    const footBox = foot.getBoundingClientRect()
     return {
       inner: window.innerHeight,
       scroll: Math.max(root.scrollHeight, body.scrollHeight, lamp.scrollHeight),
@@ -72,8 +70,6 @@ async function measure(page: Page) {
       sign: { top: signBox.top, bottom: signBox.bottom, height: signBox.height },
       actions: { top: actionsBox.top, bottom: actionsBox.bottom, height: actionsBox.height },
       remain: { top: remainBox.top, bottom: remainBox.bottom, height: remainBox.height },
-      foot: { top: footBox.top, bottom: footBox.bottom, height: footBox.height },
-      footerText: foot.textContent ?? '',
     }
   })
 }
@@ -128,13 +124,11 @@ describe('home viewport', () => {
     expect(fit.artSource).toMatch(/art\/scripture\/[a-z0-9-]+\.svg$/)
     expect(fit.actions.height).toBeGreaterThan(20)
     expect(fit.remain.height).toBeGreaterThan(16)
-    for (const piece of [fit.brand, fit.verse, fit.cite, fit.sign, fit.actions, fit.remain, fit.foot]) {
+    for (const piece of [fit.brand, fit.verse, fit.cite, fit.sign, fit.actions, fit.remain]) {
       expect(piece.top).toBeGreaterThanOrEqual(-1)
       expect(piece.bottom).toBeLessThanOrEqual(fit.inner + 1)
     }
-    expect(fit.remain.bottom).toBeLessThanOrEqual(fit.foot.top + 1)
+    expect(fit.remain.bottom).toBeLessThanOrEqual(fit.inner + 1)
     expect(fit.actions.bottom).toBeLessThanOrEqual(fit.remain.top + 1)
-    expect(fit.footerText).toContain('He Lives')
-    expect(fit.footerText).toContain('King James Version, public domain')
   })
 })

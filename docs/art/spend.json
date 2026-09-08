@@ -354,6 +354,127 @@
         }
       },
       "estimatedUsd": 0.01210801
+    },
+    {
+      "book": "library-directions",
+      "model": "gemma-4-31b",
+      "at": "20260908T143835Z",
+      "reservedUsd": 0.16876772,
+      "status": "failed",
+      "reason": "HTTPError"
+    },
+    {
+      "book": "library-directions",
+      "model": "gemma-4-31b",
+      "at": "20260908T143927Z",
+      "reservedUsd": 0.16876772,
+      "status": "failed",
+      "reason": "HTTPError"
+    },
+    {
+      "book": "library-directions",
+      "model": "gpt-oss-120b",
+      "at": "20260908T143948Z",
+      "reservedUsd": 0.0793098,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 26398,
+        "completion_tokens": 22299,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "reasoning_tokens": 1666
+        },
+        "prompt_tokens": 4099,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.0181589
+    },
+    {
+      "book": "library-critic",
+      "model": "gpt-oss-120b",
+      "at": "20260908T143948Z",
+      "reservedUsd": 0.1327177,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 29723,
+        "completion_tokens": 434,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "reasoning_tokens": 413
+        },
+        "prompt_tokens": 29289,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.01057665
+    },
+    {
+      "book": "library-directions",
+      "model": "gpt-oss-120b",
+      "at": "20260908T144301Z",
+      "reservedUsd": 0.0403168,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 16426,
+        "completion_tokens": 12353,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "reasoning_tokens": 1930
+        },
+        "prompt_tokens": 4073,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        }
+      },
+      "estimatedUsd": 0.0106903
+    },
+    {
+      "book": "library-critic",
+      "model": "gpt-oss-120b",
+      "at": "20260908T144301Z",
+      "reservedUsd": 0.1075728,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 34994,
+        "completion_tokens": 1184,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "reasoning_tokens": 783
+        },
+        "prompt_tokens": 33810,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "estimatedUsd": 0.0127215
+    },
+    {
+      "book": "library-revision",
+      "model": "gpt-oss-120b",
+      "at": "20260908T144301Z",
+      "reservedUsd": 0.1089686,
+      "status": "saved",
+      "usage": {
+        "total_tokens": 46338,
+        "completion_tokens": 12039,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0,
+          "reasoning_tokens": 1500
+        },
+        "prompt_tokens": 34299,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "estimatedUsd": 0.0210339
     }
   ]
 }

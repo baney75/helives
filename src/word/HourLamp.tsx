@@ -1,5 +1,4 @@
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
-import { BrandMark } from '../site/BrandMark.tsx'
 import { formatCountdown } from './clock.ts'
 import { bibleGatewayHref } from './gateway.ts'
 import { artworkForPassage } from '../art/catalog.ts'
@@ -13,6 +12,7 @@ export function HourLamp({ now }: { now?: Date }) {
   const reduced = usePrefersReducedMotion()
   const rotation = useRotation(now)
   const { passage, remain } = rotation
+  const artwork = artworkForPassage(passage.ref, rotation.sequence, rotation.epoch)
   return (
     <div
       className="word-lamp reading-lamp"
@@ -20,19 +20,15 @@ export function HourLamp({ now }: { now?: Date }) {
       data-length={passage.text.length > 220 ? 'long' : 'short'}
       data-paused={!rotation.visible || rotation.paused ? 'true' : undefined}
     >
-      <Atmosphere reference={passage.ref} motif={passage.motif} still={reduced || rotation.paused || !rotation.visible} />
+      <Atmosphere artwork={artwork} motif={passage.motif} still={reduced || rotation.paused || !rotation.visible} />
       <div className={`word-copy${reduced ? '' : ' verse-arrive'}`} key={rotation.sequence}>
-        <p className="hero-mark">
-          <BrandMark size={48} />
-        </p>
-        <h1>He Lives</h1>
-        <p className="hero-kicker">A moment in the Word</p>
+        <h1 className="sr-only">He Lives</h1>
         <p className="hero-verse">
           <VerseText spans={passage.spans} />
         </p>
         <p className="hero-cite">{passage.ref} · King James Version</p>
       </div>
-      <div className="word-sign" aria-hidden="true"><span className="art-caption"><span className="art-caption-label">The illustration</span><span className="art-caption-title">{artworkForPassage(passage.ref).title}</span></span></div>
+      <div className="word-sign" aria-hidden="true"><span className="art-caption"><span className="art-caption-label">The illustration</span><span className="art-caption-title">{artwork.title}</span></span></div>
       <div className="word-acts">
         <div className="hero-actions">
           <a

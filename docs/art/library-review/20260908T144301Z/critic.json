@@ -1,0 +1,50 @@
+{
+  "verdict": "REVISE",
+  "problems": [
+    {
+      "bookId": "genesis",
+      "index": 1,
+      "reason": "Uses a generic \"Ancient mountain sunrise scene\" that repeats the same family sequence found in every other book, offering no unique thematic relevance to Genesis."
+    },
+    {
+      "bookId": "exodus",
+      "index": 2,
+      "reason": "Title \"Ancient sea sunrise scene\" is generic and does not reflect the Exodus narrative; the repeated family pattern across books weakens its distinctiveness."
+    },
+    {
+      "bookId": "leviticus",
+      "index": 3,
+      "reason": "\"Ancient river sunrise scene\" repeats the same family order as other books, providing no specific connection to Levitical laws."
+    },
+    {
+      "bookId": "numbers",
+      "index": 4,
+      "reason": "\"Ancient garden sunrise scene\" is a generic title that mirrors the identical family sequence used in all books, lacking a tailored fit for Numbers."
+    },
+    {
+      "bookId": "deuteronomy",
+      "index": 5,
+      "reason": "\"Ancient desert sunrise scene\" repeats the standard family set, offering a weak thematic link to Deuteronomy's covenant themes."
+    },
+    {
+      "bookId": "judges",
+      "index": 6,
+      "reason": "\"Ancient city sunrise scene\" follows the same repetitive family pattern and does not capture the unique cyclical leadership stories of Judges."
+    },
+    {
+      "bookId": "ruth",
+      "index": 7,
+      "reason": "\"Ancient temple sunrise scene\" is a generic title that does not convey Ruth's story of loyalty and redemption, and repeats the common family sequence."
+    },
+    {
+      "bookId": "john",
+      "index": 1,
+      "reason": "Title \"Ancient tomb sunrise scene\" is misleading for the Gospel of John, whose central theme is light and life, not a tomb."
+    },
+    {
+      "bookId": "revelation",
+      "index": 9,
+      "reason": "\"Ancient storm sunrise scene\" is a weak fit for Revelation\u2019s apocalyptic vision; the generic storm motif repeats the same family pattern without capturing the book\u2019s distinctive imagery."
+    }
+  ]
+}

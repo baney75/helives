@@ -47,6 +47,6 @@ export function useRotation(now?: Date) {
     window.addEventListener('keydown', key)
     return () => window.removeEventListener('keydown', key)
   }, [move])
-  return { passage: rotatedPassage(start, offset), sequence: offset, seconds,
+  return { passage: rotatedPassage(start, offset), sequence: offset, epoch: Math.floor(start.getTime() / 3_600_000), seconds,
     paused, toggle: () => setPaused(value => !value), move, remain: seconds*1000-elapsed, visible }
 }

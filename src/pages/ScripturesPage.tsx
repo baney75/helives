@@ -31,7 +31,7 @@ export function ScripturesPage() {
           <a href="#old-testament">Old Testament</a>
           <a href="#new-testament">New Testament</a>
         </nav>
-        <p className="canon-art-intro">66 illustrations, one for each book. Open any artwork to explore the collection.</p>
+        <p className="canon-art-intro">660 illustrations, ten for each book. Open any artwork to explore the collection.</p>
         <h2 id="old-testament" className="canon-testament">Old Testament</h2>
         {OLD_TESTAMENT.map((division) => (
           <CanonSection key={division.id} division={division} onView={openArt} />
