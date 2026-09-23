@@ -23,15 +23,15 @@ export function ScripturesPage() {
         <p className="hero-kicker">The whole canon</p>
         <h1>The Scriptures</h1>
         <p className="canon-intro">
-          The whole Protestant canon, from Genesis to Revelation. Begin with Genesis 1–3,
-          a narrated visual meditation. The remaining books are forthcoming.
+          Every book of the Protestant canon, from Genesis to Revelation. Genesis 1–3 is open now
+          as a narrated visual journey; the remaining books are forthcoming.
         </p>
-        <a className="btn" href="/genesis">Enter Genesis</a>
+        <a className="btn canon-entry" href="/genesis">Begin Genesis 1–3 <span aria-hidden="true">→</span></a>
         <nav className="canon-jump" aria-label="Testaments">
           <a href="#old-testament">Old Testament</a>
           <a href="#new-testament">New Testament</a>
         </nav>
-        <p className="canon-art-intro">660 illustrations, ten for each book. Open any artwork to explore the collection.</p>
+        <p className="canon-art-intro">660 illustrations, ten for each book. Choose an artwork to explore its collection.</p>
         <h2 id="old-testament" className="canon-testament">Old Testament</h2>
         {OLD_TESTAMENT.map((division) => (
           <CanonSection key={division.id} division={division} onView={openArt} />

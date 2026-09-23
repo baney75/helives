@@ -6,15 +6,18 @@ const canvas = readFileSync(resolve('src/scene/GenesisCanvas.tsx'), 'utf8')
 const page = readFileSync(resolve('src/pages/GenesisPage.tsx'), 'utf8')
 const pkg = readFileSync(resolve('package.json'), 'utf8')
 
-describe('device-aware Genesis canvas', () => {
-  it('uses drei performance tools already in the tree', () => {
+describe('retained 3D authoring source and active 2D route', () => {
+  it('retains performance guards in the legacy renderer', () => {
     expect(canvas).toMatch(/PerformanceMonitor/)
     expect(canvas).toMatch(/AdaptiveEvents/)
     expect(canvas).toMatch(/AdaptiveDpr/)
     expect(canvas).toMatch(/Preload/)
     expect(canvas).toMatch(/demoteQuality/)
-    expect(page).toMatch(/effectsAllowed/)
-    expect(page).toMatch(/onQualityFallback/)
+  })
+
+  it('loads the illustrated route without importing WebGL or GPU detection', () => {
+    expect(page).toMatch(/import\('\.\.\/scene\/GenesisIllustration\.tsx'\)/)
+    expect(page).not.toMatch(/GenesisCanvas|react-three|useAutoQuality|detect-gpu/)
     expect(page).toMatch(/audioHold/)
     expect(page).toMatch(/narration\.hold/)
   })

@@ -1,0 +1,85 @@
+.genesis-illustration {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  z-index: 0;
+  background: #07060a;
+  pointer-events: none;
+}
+
+.gi-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gi-land { opacity: var(--gi-land, 1); }
+.gi-growth {
+  opacity: var(--gi-grow, 1);
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  scale: var(--gi-grow-scale, 1);
+}
+.gi-life { opacity: var(--gi-life, 1); }
+.gi-human { opacity: var(--gi-human, 1); }
+.gi-leaf-cover { opacity: var(--gi-cover, 0); }
+.gi-firmament { opacity: var(--gi-firmament, 1); }
+.gi-heaven-lights { opacity: var(--gi-lights, 1); }
+.gi-tomb-reveal { opacity: var(--gi-tomb, 1); }
+.gi-measure-reveal { opacity: var(--gi-measure, .47); }
+
+.gi-waves {
+  transform: translateX(var(--gi-drift, 0px));
+}
+
+.gi-bird-flight,
+.gi-cloud {
+  transform: translateY(var(--gi-swell, 0px));
+}
+
+.gi-bird {
+  transform-box: fill-box;
+  transform-origin: center;
+  rotate: var(--gi-wing, 0deg);
+}
+
+.gi-foliage {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  rotate: var(--gi-leaf, 0deg);
+}
+
+.gi-fish {
+  translate: var(--gi-travel, 0px) 0;
+}
+
+.gi-light-reveal {
+  opacity: var(--gi-reveal, .18);
+}
+
+.gi-fall-fruit {
+  translate: var(--gi-fruit-x, 0px) var(--gi-fruit-y, 0px);
+}
+
+.gi-stars {
+  opacity: var(--gi-glow, .8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gi-waves,
+  .gi-bird-flight,
+  .gi-cloud,
+  .gi-bird,
+  .gi-foliage,
+  .gi-fish,
+  .gi-stars {
+    transform: none;
+    translate: none;
+    rotate: none;
+  }
+  .gi-growth { scale: 1; }
+}

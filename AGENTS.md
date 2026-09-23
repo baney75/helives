@@ -15,29 +15,29 @@ This is a ministry site, not a SaaS product. Quoted Bible is KJV (public domain 
 ## Stack
 
 - React 19 + TypeScript (strict) + Vite
-- `@react-three/fiber` + `@react-three/drei` + `@react-three/postprocessing`
+- Genesis: JavaScript-driven SVG illustration in `src/scene/GenesisIllustration.tsx`, timed by `src/genesis/` and narrated audio
+- Legacy 3D authoring sources remain in the repository but are not loaded by the active Genesis route
 - Cloudflare Worker + static assets (`worker/`, `wrangler.jsonc`)
 - Vitest for canon routing, cosmology sources, scene math, voice inventory
 
 ## Skill routing
 
-Load **`gold-standard`** first. Then **one overlay per phase**. Do not invent a second Three.js or design skill.
+Load **`gold-standard`** first. Then **one overlay per phase**. The shared skills currently resolve under `~/.agents/skills/`; project overlays remain under `.cursor/skills/`. Check a path before relying on it.
 
 | Work | Load | Overlay (this repo) |
 |------|------|---------------------|
-| Any non-trivial ship | `~/.cursor/skills/gold-standard` | — |
-| UI, brand, type, home, Scriptures | `~/.cursor/skills/gs-design` | `.cursor/skills/helives-design` |
-| Canvas, R3F, particles, disposal | `~/.cursor/skills/three-js` (+ `particle-systems`) | `.cursor/skills/helives-three` |
-| Meshes, glTF, Blender, target stills | `~/.cursor/skills/blender-3d`, `three-js` GLTF section, `assets` | `.cursor/skills/helives-models` |
+| Any non-trivial ship | `~/.agents/skills/gold-standard` | — |
+| UI, brand, type, SVG illustration, home, Scriptures | `~/.agents/skills/gs-design` + `~/.agents/skills/assets` when sourcing art | `.cursor/skills/helives-design` |
+| Legacy 3D source maintenance only | `~/.agents/skills/three-js`, `~/.agents/skills/blender-3d`, `~/.agents/skills/assets` | `.cursor/skills/helives-three` or `.cursor/skills/helives-models` |
 | Narration, ElevenLabs, mp3 cache | — | `.cursor/skills/helives-voice` |
-| Fix-until-pass, visual loops | `~/.cursor/skills/gloop` | `.cursor/skills/helives-gauntlet` |
-| Theology, verse handling | `~/.cursor/skills/bible-reasoning` | — |
-| Headers, secrets, threat model | `~/.cursor/skills/gs-security` | — |
-| Copy, docs, anti-slop | `~/.cursor/skills/communication-writing` + `gs-content` | — |
-| Visual proof 375 + 1280 | `~/.cursor/skills/device-verification` | helives-gauntlet |
-| Independent review | `~/.cursor/skills/code-reviewer`, `check-work` | helives-gauntlet critics |
+| Fix-until-pass, visual loops | `~/.agents/skills/gloop` | `.cursor/skills/helives-gauntlet` |
+| Theology, verse handling | KJV source and `src/genesis/` scene/citation conventions; verify the passage | — |
+| Headers, secrets, threat model | `~/.agents/skills/gs-security` | — |
+| Copy and docs | `~/.agents/skills/gs-content`; preserve the KJV/original-copy distinction | — |
+| Visual proof 375 + 1280 + compact 653×508 DPR 2 | `~/.agents/skills/device-verification` | `.cursor/skills/helives-gauntlet` |
+| Independent review | `~/.agents/skills/code-reviewer`, `~/.agents/skills/check-work` | `.cursor/skills/helives-gauntlet` critics |
 
-**3D and voice are essential, not polish-later.** A later book that ships mute, or as a card grid with a nebula blob, is unfinished.
+**Voice and authored visual storytelling are essential.** Active Genesis uses a 2D SVG renderer. A later book that ships mute or as a card grid with a nebula blob is unfinished; 3D is a project-specific art choice, not a requirement for every book.
 
 ## Critics (mandatory, not polish)
 
@@ -51,17 +51,17 @@ Ship path: **implement → independent critic → only then merge/ship.**
 | Separate judge | gloop-style: verifier-first, separate judge, max loops. Builder writes evidence; judge reads GOAL + artifacts + `git diff` only. |
 | Forbidden | Implementer self-approving screenshots. “Looks good to me.” Same agent writing then rubber-stamping. Same-context self-grade. |
 
-Critics: `code-reviewer` (diff), `check-work` (did the request land), visual judge (`gs-design` + still-vs-target). `VERDICT: SHIP` from the critic is required for material UI, 3D, voice, or security work. See `.cursor/skills/helives-gauntlet`.
+Critics: `code-reviewer` (diff), `check-work` (did the request land), visual judge (`gs-design` + still-vs-target). `VERDICT: SHIP` from the critic is required for material UI, illustration, 3D, voice, or security work. See `.cursor/skills/helives-gauntlet`.
 
 ## Rules
 
-- R3F/drei first. No new raw Three.js loops in React components unless justified (shaders, instancing).
-- HUD text wins. Canvas is the simulation; HUD stays readable.
+- Keep the active Genesis illustration in the existing SVG/scene-clock pipeline; do not load legacy 3D into it by accident. For deliberate legacy 3D work, use R3F/drei first and justify any raw Three.js loop.
+- HUD text wins. The illustration stays behind readable selectable text.
 - Quoted Bible is KJV only. Do not paste NIV/ESV/NASB/NLT. Original lines stay in `kind: 'exhortation'` (see `src/genesis/scenes.ts`).
 - Epoch times and scene copy live in `src/genesis/` (later books: `src/<book>/`). Do not invent cosmology numbers without a source in `src/genesis/sources.ts`.
 - `?cinematic=1` on `/genesis` is the video pass: captions only, locked camera.
-- Dispose manual geometries/materials.
-- Mobile: fewer particles, no bloom. Quality tiers in `src/lib/budget.ts` and `src/lib/quality.ts`.
+- Keep SVG IDs unique within the rendered node tree; preserve pause, seek, reduced-motion, and still-frame behavior.
+- Legacy 3D maintenance: dispose manual geometries/materials and respect the quality tiers in `src/lib/budget.ts` and `src/lib/quality.ts`.
 - Never commit `.env.local`, `ELEVENLABS_API_KEY`, `ONE_MIN_AI_API_KEY`, or any secret. Keys live in `.env.local` only (see `.env.example`). Do not put keys in README.
 - Voice fails closed: if the mp3 is not in `public/audio/` and listed in `VOICED_IDS`, do not request it. Silence must not pretend to be narration.
 - Narration cache: `pnpm audio` writes `public/audio/<id>.mp3`. Prefer `ONE_MIN_AI_API_KEY` (1min.ai `TEXT_TO_SPEECH`) when ElevenLabs is out of quota. Do not invent spoken files.
@@ -80,14 +80,14 @@ pnpm audio          # 1min.ai or ElevenLabs → public/audio/ (needs .env.local)
 pnpm record         # cinematic trailer (gitignored demo/)
 ```
 
-## Models and stills
+## Visual targets and legacy models
 
-Grok Imagine is a **visual target**, not a mesh. Pipeline: blockout → target still → model/sculpt/texture → screenshot/compare → iterate. Stills live under `docs/targets/`. See `.cursor/skills/helives-models` and `.cursor/skills/helives-gauntlet`.
+Grok Imagine is a **visual target**, not an implementation asset. For the active SVG route, storyboard the actual scene and voice, draw editable vectors, then compare 375/1280 captures with the target still and correct the render. Stills live under `docs/targets/`. The older model/sculpt/texture pipeline remains available for deliberate legacy 3D source work; see `.cursor/skills/helives-models` and `.cursor/skills/helives-gauntlet`.
 
 There is no standalone `grok imagine` CLI on this Mac. `which grok` is `/Users/baney/.grok/bin/grok` (Grok Build TUI). Generate stills inside Grok Build with `/imagine` or the `image_gen` / `image_edit` tools (`~/.grok/bundled/skills/imagine/SKILL.md`). Do not invent a REST API.
 
 ## Verify
 
-Before claiming done: `pnpm test && pnpm typecheck && pnpm lint && pnpm build`. UI/3D work also needs 375 and 1280 screenshots and the gauntlet verifiers. Then an **independent critic** (`code-reviewer` / `check-work` / visual judge) with no implementer context. The implementer may not ship on its own screenshots or a same-session “looks good.”
+Before claiming done: `pnpm test && pnpm typecheck && pnpm lint && pnpm build`. UI/illustration work also needs 375 and 1280 screenshots, a 653×508 DPR 2 compact check, and the gauntlet verifiers. Then an **independent critic** (`code-reviewer` / `check-work` / visual judge) with no implementer context. The implementer may not ship on its own screenshots or a same-session “looks good.”
 
-For Genesis loading, model, or transport changes, run `scripts/verify-genesis-readiness.mjs` against the built Worker. It delays both Eden figures after an already-ready scene, then checks that loading clears and narration resumes. Development StrictMode can mask Suspense reveal failures. Include a 653×508 CSS viewport at DPR 2 when checking compact controls.
+For Genesis illustration, loading, voice, or transport changes, run `scripts/verify-refresh.mjs` and `scripts/verify-genesis-readiness.mjs` against the built Worker. They check all 13 SVG scenes, absent WebGL/GLB requests, blocked-WebGL operation, navigation, playback, native scene text dialog, reduced motion, and compact controls. Development StrictMode does not replace the Worker check.

@@ -1,185 +1,162 @@
-/* Genesis is an editorial reading surface: the controls support the text and never compete with it. */
-.app .hud {
-  padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right))
-    max(18px, env(safe-area-inset-bottom)) max(28px, env(safe-area-inset-left));
+/* Scripture and illustration share an illuminated page. */
+.illustrated-genesis .hud { padding: max(28px, env(safe-area-inset-top)) max(40px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(40px, env(safe-area-inset-left)); }
+.illustrated-genesis .hud::before { background: linear-gradient(90deg, rgba(7,6,10,.94), rgba(7,6,10,.73) 30%, rgba(7,6,10,.08) 64%, transparent), linear-gradient(0deg, rgba(7,6,10,.98), rgba(7,6,10,.83) 15%, transparent 46%), linear-gradient(180deg, rgba(7,6,10,.52), transparent 24%); }
+.illustrated-genesis .topbar { align-items: center; }
+.illustrated-genesis .wordmark { font-size: 34px; }
+.illustrated-genesis .tag { color: var(--muted); font-size: 9px; letter-spacing: .19em; margin-top: 9px; }
+.journey-nav { display: flex; gap: 26px; pointer-events: auto; }
+.journey-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: 15px; color: var(--ink); }
+.journey-nav a:hover { color: var(--fire); }
+.illustrated-genesis .narration { top: clamp(125px, 19vh, 195px); left: max(40px, env(safe-area-inset-left)); padding: 0; width: min(39vw, 520px); max-width: none; }
+.illustrated-genesis .epoch-kicker { display: flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 10px; margin-bottom: 22px; }
+.chapter-number { color: var(--muted); letter-spacing: .05em; }
+.chapter-number::after { content: ''; display: inline-block; width: 35px; height: 1px; background: var(--line); margin-left: 14px; vertical-align: middle; }
+.illustrated-genesis .narration h1 { font-size: clamp(40px, 5.5vw, 76px); line-height: .98; letter-spacing: -.035em; text-wrap: balance; }
+.illustrated-genesis .headline { margin: 24px 0 0; max-width: 36ch; font-size: clamp(17px, 1.65vw, 22px); line-height: 1.65; text-wrap: pretty; }
+.illustrated-genesis .body { font-size: 16px; line-height: 1.6; margin-top: 12px; }
+.passage-citation { margin: 18px 0 0; color: var(--fire); font-family: var(--mono); font-size: 10px; line-height: 1.6; letter-spacing: .08em; }
+.illustrated-genesis .full-context-link, .illustrated-genesis .afterword-link { margin: 12px 0 0; font-size: 13px; }
+.illustrated-genesis .full-context-link a { color: var(--muted); text-underline-offset: 5px; }
+.illustrated-genesis .full-context-link a:hover { color: var(--ink); }
+.illustrated-genesis .dock { left: max(40px, env(safe-area-inset-left)); right: max(40px, env(safe-area-inset-right)); bottom: max(22px, env(safe-area-inset-bottom)); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 32px; }
+.journey-meta { display: flex; justify-content: space-between; grid-column: 1 / -1; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: .07em; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.chapter-controls { display: flex; align-items: center; gap: 8px; min-width: 0; max-width: 470px; }
+.chapter-step { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; border: 1px solid var(--line); background: transparent; color: var(--fire); cursor: pointer; font-size: 20px; }
+.chapter-step:hover:not(:disabled) { border-color: var(--fire); background: #e8b86d10; }
+.chapter-step:disabled { opacity: .3; cursor: default; }
+.illustrated-genesis .scene-picker { min-width: 0; flex: 1; margin: 0; padding: 0; border: 0; }
+.illustrated-genesis .scene-picker select { width: 100%; background: transparent; border: 0; padding: 8px 4px; font-size: 15px; }
+.illustrated-genesis select option { background: var(--void); color: var(--ink); }
+.scene-count { white-space: nowrap; font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.illustrated-genesis .transport { gap: 8px; }
+.illustrated-genesis .icon-btn, .illustrated-genesis .speed select { background: transparent; backdrop-filter: none; }
+.illustrated-genesis .icon-btn { padding-inline: 16px; }
+.illustrated-genesis .icon-btn.primary { display: inline-flex; gap: 8px; align-items: center; justify-content: center; min-width: 96px; background: var(--fire); color: var(--ground); border-color: var(--fire); }
+.illustrated-genesis .icon-btn.primary:hover { background: var(--dawn); }
+.illustrated-genesis .icon-btn:not(.primary):hover { border-color: var(--fire); }
+.illustrated-genesis .speed { display: inline-flex; align-items: center; gap: 7px; margin: 0; }
+.illustrated-genesis .speed select { padding-inline: 8px; }
+.illustrated-genesis .transport .music-controls { margin-left: 8px; }
+.illustrated-genesis .timeline { grid-column: 1 / -1; max-width: none; padding-bottom: 20px; }
+.illustrated-genesis .ticks { height: 20px; margin-top: 0; }
+.illustrated-genesis .disclaimer { display: flex; justify-content: space-between; grid-column: 1 / -1; font-size: 10px; color: var(--muted); margin: 0; }
+.illustrated-genesis .sound-gate, .illustrated-genesis .audio-waiting { grid-column: 1 / -1; justify-self: start; }
+.illustrated-genesis .scene-loading { position: fixed; top: 100px; right: 40px; left: auto; transform: none; z-index: 2; background: var(--void); padding: 8px 12px; font-size: 12px; }
+@media (max-width: 1100px) {
+  .illustrated-genesis .dock { column-gap: 16px; }
+  .illustrated-genesis .transport { gap: 6px; }
+  .illustrated-genesis .icon-btn { padding-inline: 10px; }
+  .illustrated-genesis .transport .music-controls { margin-left: 0; }
+  .illustrated-genesis .music-settings { padding-inline: 4px; }
+  .illustrated-genesis .scene-picker select { font-size: 14px; }
 }
-
-.app .hud::before {
-  background:
-    linear-gradient(90deg, rgba(7, 6, 10, 0.8) 0%, rgba(7, 6, 10, 0.45) 31%, transparent 55%),
-    linear-gradient(180deg, rgba(7, 6, 10, 0.42), transparent 24%),
-    linear-gradient(0deg, rgba(7, 6, 10, 0.82), rgba(7, 6, 10, 0.34) 40%, transparent 62%);
+@media (max-width: 900px) {
+  .illustrated-genesis .dock { grid-template-columns: 1fr; gap: 9px; }
+  .illustrated-genesis .chapter-controls { max-width: none; }
+  .illustrated-genesis .transport { justify-content: flex-start; }
+  .illustrated-genesis .transport .music-controls { margin-left: auto; }
+  .illustrated-genesis .timeline { padding-bottom: 0; }
+  .illustrated-genesis .ticks { display: none; }
+  .illustrated-genesis .narration { top: 120px; width: min(52vw, 490px); }
+  .illustrated-genesis .headline { font-size: 18px; }
 }
-
-.app .topbar { align-items: flex-start; }
-.app .wordmark { font-size: clamp(29px, 3vw, 40px); }
-.app .tag { margin-top: 7px; color: color-mix(in srgb, var(--muted) 78%, transparent); }
-
-.app .readouts {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  max-width: min(42vw, 31rem);
-  margin: 4px 0 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: color-mix(in srgb, var(--ink) 76%, transparent);
-  font-family: var(--mono);
-  font-size: 10px;
-  line-height: 1.4;
-  text-align: right;
-  text-shadow: 0 1px 16px rgba(7, 6, 10, 0.98);
-}
-
-.app .readouts span:first-child {
-  color: var(--fire);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.app .narration {
-  z-index: 1;
-  top: 102px;
-  max-width: 31rem;
-  padding-left: 16px;
-  border-left: 1px solid color-mix(in srgb, var(--fire) 62%, transparent);
-}
-
-.app .epoch-kicker { margin-bottom: 7px; }
-.app .narration h1 { max-width: none; font-size: clamp(34px, 4.25vw, 54px); line-height: 0.98; letter-spacing: -0.035em; }
-.app .headline { margin-top: 14px; font-size: 15px; line-height: 1.55; }
-.app .body { font-size: 14px; line-height: 1.6; }
-.app .dock { gap: 8px; }
-
-.app .scene-picker {
-  max-width: 27rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 86%, transparent);
-  padding-bottom: 7px;
-}
-
-.app .scene-picker select { background: rgba(7, 6, 10, 0.7); }
-.app .transport { gap: 8px; }
-.app .icon-btn, .app .speed select { background: rgba(7, 6, 10, 0.68); backdrop-filter: blur(8px); }
-.app .icon-btn.primary { background: var(--fire); color: var(--void); }
-.app .text-link { margin-left: 8px; }
-.app .timeline { max-width: 64rem; padding-bottom: 2.6rem; }
-.app .ticks { margin-top: 7px; height: 2.2rem; }
-
-.app .disclaimer {
-  max-width: none;
-  color: color-mix(in srgb, var(--ink) 56%, transparent);
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.035em;
-}
-
 @media (max-width: 700px) {
-  .app .hud { padding: max(16px, env(safe-area-inset-top)) 16px max(13px, env(safe-area-inset-bottom)); }
-  .app .readouts { display: none; }
-  .app .narration { position: relative; top: auto; left: auto; max-width: min(30rem, calc(100vw - 32px)); padding-left: 12px; }
-  .app .narration h1 { font-size: clamp(32px, 10.6vw, 46px); }
-  .app .headline { max-width: 30ch; font-size: 14px; }
-  .app .dock { left: 16px; right: 16px; }
-  .app .scene-picker { max-width: none; }
-  .app .transport { gap: 6px; }
-  .app .speed { display: inline-flex; gap: 5px; }
-  .app .text-link { margin-left: auto; }
-  .app .disclaimer { display: none; }
+  .illustrated-genesis .hud { padding: max(20px, env(safe-area-inset-top)) 22px max(18px, env(safe-area-inset-bottom)); }
+  .illustrated-genesis .hud::before { background: linear-gradient(180deg, rgba(7,6,10,.89), rgba(7,6,10,.79) 25%, rgba(7,6,10,.1) 51%, rgba(7,6,10,.2) 61%, rgba(7,6,10,.95) 79%, var(--void)); }
+  .illustrated-genesis .wordmark { font-size: 29px; }
+  .illustrated-genesis .tag { font-size: 8px; letter-spacing: .12em; }
+  .journey-nav { gap: 14px; }
+  .journey-nav a { font-size: 12px; }
+  .journey-nav a:last-child { display: none; }
+  .illustrated-genesis .narration { top: 110px; left: 22px; width: calc(100% - 44px); max-height: calc(100svh - 410px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--fire) transparent; }
+  .illustrated-genesis .epoch-kicker { margin-bottom: 13px; font-size: 9px; }
+  .illustrated-genesis .narration h1 { font-size: clamp(37px, 11vw, 56px); }
+  .illustrated-genesis .headline { margin-top: 15px; font-size: 16px; line-height: 1.55; max-width: 38ch; }
+  .illustrated-genesis .body { font-size: 14px; max-height: none; overflow: visible; }
+  .passage-citation { margin-top: 13px; font-size: 9px; }
+  .illustrated-genesis .full-context-link { font-size: 12px; }
+  .illustrated-genesis .dock { left: 22px; right: 22px; bottom: max(18px, env(safe-area-inset-bottom)); padding: 0; gap: 7px; }
+  .journey-meta { padding-bottom: 10px; font-size: 9px; }
+  .illustrated-genesis .transport { gap: 6px; }
+  .illustrated-genesis .icon-btn { padding-inline: 10px; font-size: 13px; }
+  .illustrated-genesis .icon-btn.primary { min-width: 85px; }
+  .illustrated-genesis .speed { gap: 5px; font-size: 11px; }
+  .illustrated-genesis .speed select { font-size: 13px; }
+  .illustrated-genesis .transport .music-controls { flex-basis: 100%; justify-content: flex-start; margin-left: 0; }
+  .illustrated-genesis .music-toggle, .illustrated-genesis .music-settings { font-size: 12px; }
+  .illustrated-genesis .disclaimer { font-size: 9px; }
+  .illustrated-genesis .disclaimer span, .illustrated-genesis .scene-count { display: none; }
+  .illustrated-genesis .scene-loading { top: 80px; right: 22px; }
 }
-
-@media (max-height: 680px) and (min-width: 701px) {
-  .app .narration { top: 80px; }
-  .app .narration h1 { font-size: 36px; }
-  .app .headline { margin-top: 8px; }
-  .app .body, .app .full-context-link { display: none; }
-  .app .timeline { padding-bottom: 1.75rem; }
-  .app .ticks { height: 1.5rem; }
-  .app .disclaimer { display: none; }
+@media (max-height: 700px) and (min-width: 701px) {
+  .illustrated-genesis .narration { top: 105px; max-height: calc(100svh - 340px); overflow-y: auto; }
+  .illustrated-genesis .narration h1 { font-size: 42px; }
+  .illustrated-genesis .headline { margin-top: 14px; font-size: 17px; }
+  .illustrated-genesis .epoch-kicker { margin-bottom: 12px; }
 }
-
 @media (max-height: 580px) {
-  .app .hud {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    overflow-y: auto;
-    padding: 12px 16px;
-    pointer-events: auto;
-  }
-
-  .app .topbar { flex: 0 0 auto; }
-  .app .wordmark { font-size: 28px; }
-  .app .tag { margin-top: 3px; }
-
-  .app .narration {
-    position: relative;
-    z-index: 1;
-    top: auto;
-    left: auto;
-    flex: 0 0 auto;
-    max-width: min(30rem, 100%);
-    margin-top: 8px;
-    padding-left: 10px;
-  }
-
-  .app .narration h1 { font-size: clamp(27px, 7.8vw, 34px); }
-  .app .headline { margin: 7px 0 0; font-size: 13px; line-height: 1.38; }
-  .app .body, .app .full-context-link, .app .afterword-link { margin-top: 7px; }
-
-  .app .dock {
-    position: relative;
-    inset: auto;
-    z-index: 1;
-    flex: 0 0 auto;
-    gap: 4px;
-    margin-top: auto;
-    padding-top: 6px;
-  }
-
-  .app .scene-picker { display: flex; padding-bottom: 0; }
-  .app .scene-picker select { min-height: 44px; padding-block: 5px; }
-  .app .transport { gap: 4px 6px; }
-  .app .transport .music-controls { flex-basis: auto; }
-  .app .music-toggle, .app .music-settings { min-height: 44px; }
-  .app .icon-btn, .app .speed select { min-height: 44px; }
-  .app .icon-btn { padding-inline: 10px; }
-  .app .speed { min-height: 44px; }
-  .app .timeline { padding-bottom: 0; }
-  .app .timeline input[type='range'] { height: 24px; }
-  .app .ticks { display: none; }
+  .illustrated-genesis .hud { overflow-y: auto; display: flex; flex-direction: column; gap: 24px; padding: 14px 22px; pointer-events: auto; }
+  .illustrated-genesis .topbar { flex: 0 0 auto; }
+  .illustrated-genesis .brand { display: flex; align-items: center; gap: 12px; }
+  .illustrated-genesis .wordmark { font-size: 28px; }
+  .illustrated-genesis .tag { display: none; }
+  .illustrated-genesis .narration { position: relative; inset: auto; flex: 0 0 auto; width: min(460px, 100%); max-height: none; overflow: visible; }
+  .illustrated-genesis .narration h1 { font-size: 38px; }
+  .illustrated-genesis .headline { font-size: 16px; margin-top: 12px; }
+  .illustrated-genesis .epoch-kicker { margin-bottom: 10px; }
+  .illustrated-genesis .dock { position: relative; inset: auto; flex: 0 0 auto; margin-top: auto; }
+  .illustrated-genesis .timeline { padding: 0; }
+  .illustrated-genesis .ticks { display: none; }
+  .illustrated-genesis .transport .music-controls { flex-basis: auto; margin-left: auto; }
+  .illustrated-genesis .hud::before { position: fixed; background: linear-gradient(90deg, rgba(7,6,10,.95), rgba(7,6,10,.75) 55%, rgba(7,6,10,.35)); }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .app .hud *, .app .cine * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .illustrated-genesis .hud *, .illustrated-genesis .cine * { transition: none !important; animation: none !important; }
 }
 
-.app .scene-loading {
-  top: max(24px, env(safe-area-inset-top));
-  right: max(24px, env(safe-area-inset-right));
-  left: auto;
-  transform: none;
-  z-index: 2;
-  margin: 0;
-  padding: 6px 9px;
-  background: rgba(7, 6, 10, 0.85);
-  font-size: 12px;
-}
-.app.is-scene-loading .readouts { visibility: hidden; }
-
+.illustrated-genesis .narration { z-index: 1; }
+.illustrated-genesis .disclaimer { max-width: none; }
 @media (max-width: 700px) {
-  .app .scene-loading { top: 16px; right: 16px; }
+  .illustrated-genesis .narration { position: absolute; }
+  .illustrated-genesis .speed { min-height: 44px; }
+  .illustrated-genesis .speed select { min-width: 52px; }
+  .illustrated-genesis .icon-btn { padding-inline: 9px; }
 }
+@media (max-height: 580px) { .illustrated-genesis .narration { position: relative; } }
 
-@media (min-width: 520px) and (max-height: 580px) {
-  .app .brand { display: flex; align-items: center; gap: 12px; }
-  .app .wordmark { font-size: 24px; }
-  .app .brand .tag { margin: 0; font-size: 9px; }
-  .app .narration { max-width: min(28rem, 100%); }
-  .app .narration h1 { font-size: 28px; }
-  .app .headline { max-width: none; }
-  .app .full-context-link { font-size: 12px; }
-  .app .scene-picker { max-width: 27rem; }
-  .app .scene-loading { top: 12px; right: 16px; }
+.read-scene { pointer-events: auto; margin-top: 12px; min-height: 36px; padding: 0; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); background: transparent; font: inherit; font-size: 13px; cursor: pointer; }
+.read-scene span { margin-left: 14px; color: var(--fire); }
+.reset-icon { display: none; }
+.scene-transcript { pointer-events: auto; color: var(--ink); background: var(--void); border: 1px solid var(--line); width: min(680px, calc(100vw - 32px)); max-height: 85svh; padding: clamp(24px, 5vw, 54px); overflow-y: auto; }
+.scene-transcript::backdrop { background: rgba(3, 4, 6, .85); backdrop-filter: blur(8px); }
+.scene-transcript form { display: flex; justify-content: flex-end; margin: -8px -8px 22px 0; }
+.scene-transcript h2 { font-size: clamp(32px, 6vw, 48px); font-weight: 500; margin: 16px 0; line-height: 1.1; }
+.scene-transcript .transcript-copy { font-size: 19px; line-height: 1.8; }
+.scene-transcript a { color: var(--fire); text-underline-offset: 5px; line-height: 1.7; }
+@media (max-width: 700px) and (min-height: 581px) {
+  .illustrated-genesis .narration { max-height: 310px; }
+  .illustrated-genesis .headline { max-height: 100px; overflow-y: auto; scrollbar-width: thin; }
+  .illustrated-genesis .full-context-link { display: none; }
+  .illustrated-genesis .transport { display: grid; grid-template-columns: 44px 85px 1fr 54px; }
+  .illustrated-genesis .reset-button { padding: 0; min-width: 44px; }
+  .illustrated-genesis .reset-text, .illustrated-genesis .speed-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .illustrated-genesis .reset-icon { display: inline; font-size: 23px; }
+  .illustrated-genesis .speed select { padding-inline: 4px; width: 54px; }
+  .illustrated-genesis .transport .music-controls { grid-column: 1 / -1; }
+  .illustrated-genesis .read-scene { margin-top: 6px; }
+}
+@media (max-height: 580px) {
+  .illustrated-genesis .hud { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px; overflow: hidden; }
+  .illustrated-genesis .narration { min-height: 0; height: 100%; overflow-y: auto; scrollbar-width: thin; }
+  .illustrated-genesis .dock { margin-top: 0; }
+  .illustrated-genesis .full-context-link { display: none; }
+}
+@media (min-width: 701px) and (min-height: 581px) {
+  .illustrated-genesis .narration { display: flex; flex-direction: column; max-height: calc(100svh - clamp(125px, 19vh, 195px) - 240px); overflow: hidden; }
+  .illustrated-genesis .narration > * { flex-shrink: 0; }
+  .illustrated-genesis .narration .headline { flex-shrink: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--fire) transparent; }
+  .illustrated-genesis .read-scene { align-self: flex-start; }
+}
+@media (min-width: 701px) and (max-width: 900px) and (min-height: 581px) {
+  .illustrated-genesis .narration { max-height: calc(100svh - 410px); }
 }

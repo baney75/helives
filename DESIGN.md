@@ -1,12 +1,12 @@
 # He Lives design
 
-Visual thesis for [helives.dev](https://helives.dev). Brand refined September 7, 2026 at Donovan’s request (slender flared Latin cross with an engraved light edge, shared vector master). Tokens live in `src/index.css`. Load `gs-design`, then `.cursor/skills/helives-design`.
+Visual thesis for [helives.dev](https://helives.dev). Brand refined September 7, 2026 at Donovan’s request (slender flared Latin cross with an engraved light edge, shared vector master). Tokens live in `src/index.css`. Load `~/.agents/skills/gs-design`, then `.cursor/skills/helives-design`.
 
 This is a ministry site. Rams still applies: useful, honest, as little design as possible. It does not apply as “look like Linear.” Do not import SaaS card grids, pill clusters, or Inter.
 
 ## Thesis
 
-**Light in darkness.** Night field, one gold, one dawn spark. The first viewport is brand + one verse + one sentence + two actions. The 3D canvas is the later Genesis room, not a decorative blob behind the home copy.
+**Light in darkness.** Night field, one gold, one dawn spark. The first viewport is brand + one verse + one sentence + two actions. Genesis now uses an authored JavaScript/SVG illustration behind its HUD; the art serves each passage rather than filling space as a decorative blob.
 
 Mood: reverent, quiet, specific. Not cute. Not cinematic-trailer chrome on the marketing pages. Not a dashboard.
 
@@ -14,7 +14,7 @@ Mood: reverent, quiet, specific. Not cute. Not cinematic-trailer chrome on the m
 
 | Token | Value | Use |
 |-------|-------|-----|
-| `--void` | `#07060a` | Page, canvas fog, favicon ground |
+| `--void` | `#07060a` | Page, Genesis illustration ground, favicon ground |
 | `--ink` | `#ece6d8` | Primary text (parchment, not pure white) |
 | `--muted` | `#9a9184` | Secondary text |
 | `--fire` | `#e8b86d` | Accent, links, live book titles, mark, primary button |
@@ -33,7 +33,7 @@ Two families. Gold is the only chrome accent. Liturgical red is reserved for the
 
 Do not install Canvas UI (`npx shadcn add @canvas-ui/*`). Experimental HTML-in-canvas, Commons Clause. Take pause-offscreen and reduced-motion discipline only.
 
-Contrast: ink on void, fire on void, and `--speech` on void must stay WCAG AA. Do not drop body to `--muted` at small sizes on busy 3D.
+Contrast: ink on void, fire on void, and `--speech` on void must stay WCAG AA. Do not drop body to `--muted` at small sizes on busy illustration.
 
 ## Mark
 
@@ -59,20 +59,20 @@ A slender, flared Latin cross with an engraved light edge.
 | Home | One 100svh lamp (100vh fallback): nav mark, rotating KJV (words of Christ in red), Explore more, new Scripture every 60 seconds, book-matched SVG landscapes with slow camera motion, optional fullscreen mode and opt-in music. The large in-hero “He Lives” heading and “A moment in the Word” subtitle are intentionally absent; the verse leads. The shared site footer is intentionally absent from this reading view. No page scroll. No Lucide furniture. No cards. No wash. No church button. |
 | Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
 | Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
-| Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
+| Genesis HUD | Fixed SVG illustration `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
 | Cinematic | Captions only. Locked camera. Brand stays Cormorant. |
 
 No card-grid home. No “feature” icon row. No floating badges on the hero.
 
-## 3D inheritance
+## Genesis illustration and legacy 3D
 
-Canvas background is `--void`. Light is warm (`#ffd28a` / fire / dawn), not neon purple. Fog is void.
+The active `src/scene/GenesisIllustration.tsx` draws one SVG scene at a time with JavaScript timing. Its background is `--void`; light is warm (`#ffd28a` / fire / dawn), not neon purple. Keep the passage selectable in the HUD, and preserve a readable static frame for reduced motion and paused playback.
 
-Garden and Fall are the quality bar for later narrative scenes: readable as *those* scenes, not generic trees and a squiggle. Instanced primitives are allowed as a blockout. Shipping a later book still as icosahedron canopies and capsule people is a known debt, not a style.
+Garden and Fall are the quality bar for later narrative scenes: readable as *those* scenes, not generic trees and a squiggle. At 375px the figures must read as adults and the focal tree must have a deliberate silhouette; distinguish foreground, subject, and distance. Flat blob canopies and toy-like people are a known defect to correct through drawing and staging, not a site style. Existing R3F/GLB files are legacy authoring sources and are not loaded on the active Genesis route.
 
 Later books inherit this night/gold grammar. A Gospel night can be quieter. Revelation may use more fire. Do not invent a second palette (no maroon-from-another-project, no corporate blue).
 
-Motion: slow auto-rotate off cinematic; respect `prefers-reduced-motion`; 2–3 motions max on site pages (none required on Faith). Bloom only on medium/high Genesis quality.
+Motion: tie reveal and movement to the narrated scene, freeze ambient motion on pause, respect `prefers-reduced-motion`, and keep important KJV lines readable through their hold. Site pages need only purposeful movement (none required on Faith). Legacy 3D bloom and quality-tier guidance applies only if that pipeline is deliberately reused.
 
 ## Favicon and share
 
@@ -94,7 +94,7 @@ Do not point og:image at a CDN or a generated Imagine file. Public share art is 
 - No stock crosses, doves, or sunrise photographs as the brand.
 - No “unlock your potential” ministry slogans. Invitation is: go to church, hear the Word, live for Jesus Christ.
 - No fake 66-book library of empty tiles.
-- Particle fields and bloom never win over the verse. Hour transitions leave no wash, card, or leftover motion.
+- Scene effects never win over the verse. Hour transitions leave no wash, card, or leftover motion.
 
 ## Later books
 
@@ -103,13 +103,13 @@ When Exodus (or any book) ships:
 1. Keep tokens. Do not theme-switch the chrome.
 2. Home stays He Lives. The book lives at `/{slug}`.
 3. Scriptures row flips to live (fire link) only when the route works.
-4. Interactive books follow Genesis: canvas + HUD + KJV + voice. Reading books may be type-first; they still use this type, this night, this mark.
+4. Interactive books follow Genesis: authored illustration + HUD + KJV + voice. Reading books may be type-first; they still use this type, this night, this mark.
 5. Prove with 375 and 1280 screenshots against `docs/targets/` if a still exists.
 6. Visual ship requires an independent visual judge (not the implementer). See AGENTS.md critics and `.cursor/skills/helives-gauntlet`.
 
 ## Proof
 
-`device-verification`: 375 and 1280, console 0. Home must still read as He Lives with the nav removed. Scriptures must remain a list, not a grid of cards.
+`~/.agents/skills/device-verification`: 375 and 1280, plus 653×508 DPR 2 for compact Genesis controls, console 0. Home must still read as He Lives with the nav removed. Scriptures must remain a list, not a grid of cards.
 
 The implementer captures screenshots as evidence. The **visual critic** (separate subagent, different model when available, no implementer chat) compares them to this thesis and to `docs/targets/`. “Looks good to me” from the agent that designed the page is not proof.
 

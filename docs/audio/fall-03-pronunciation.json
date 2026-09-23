@@ -1,0 +1,8 @@
+{
+  "index": 26,
+  "canonicalText": "And the woman said unto the serpent, We may eat of the fruit of the trees of the garden: But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall ye touch it, lest ye die.",
+  "synthesisText": "And the woman said unto the serpent, We may eat of the fruit of the trees of the garden: But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall yee touch it, lest yee die.",
+  "reason": "Pronunciation alias: ye is spoken /ji\u02d0/. Canonical KJV text is unchanged.",
+  "canonicalTextSha256": "79da141f6cc8d3f919cf4f5559b4028c9a6ec495b6598d60b8800873ed07ce36",
+  "synthesisTextSha256": "99451373cfd63c160c3ad5ca83a9d5ef4ac0527c1a7f1739c43171e9e150e8df"
+}

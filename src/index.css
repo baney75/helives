@@ -2100,3 +2100,74 @@ a.canon-book-title { min-height: 44px; display: inline-flex; align-items: center
 }
 .site.lamp-home .foot { font-size:12px; }
 @media(min-width:700px) and (min-height:650px) { .site.lamp-home .foot { font-size:13px; } }
+
+/* The page links remain available without crowding the compact reading header. */
+.nav-menu-toggle,
+.tv-label-compact { display: none; }
+.nav-menu-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: 13px var(--serif);
+  cursor: pointer;
+}
+.nav-menu-toggle:hover,
+.nav-menu-toggle[aria-expanded='true'] { border-color: var(--fire); color: var(--dawn); }
+.foot nav { margin-top: var(--space-4); }
+.canon-entry { margin-top: var(--space-3); }
+.canon-entry span { font-family: var(--serif); }
+.canon-jump { padding-block: var(--space-4); border-block: 1px solid var(--line); }
+.canon-art-intro { margin-top: var(--space-6); }
+.faith-path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+.faith-path a { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; text-underline-offset: 6px; }
+.faith-path a:first-child { color: var(--fire); }
+.faith-path a:last-child { color: var(--ink); }
+.faith-path a:hover { color: var(--dawn); }
+
+@media (max-width: 699px) {
+  .site .nav { position: relative; flex-wrap: wrap; }
+  .site .nav-identity { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: var(--space-2); }
+  .site .nav-menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .site .nav > .nav-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 0;
+    z-index: 12;
+    width: min(17rem, 100%);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--line);
+    background: var(--void);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  }
+  .site .nav > .nav-menu.is-open { display: flex; flex-direction: column; gap: 0; }
+  .site .nav > .nav-menu a { width: 100%; min-height: 48px; border-bottom: 1px solid var(--line); }
+  .site .nav > .nav-menu a:last-child { border-bottom: 0; }
+  .site .tv-toggle { font-size: 12px; padding-inline: 10px; white-space: nowrap; }
+  .site.is-display .nav-menu-toggle,
+  .site.is-display .nav > .nav-menu { display: none; }
+  .canon-jump { gap: var(--space-5); }
+  .canon-book { display: block; min-width: 0; }
+  .canon-status { display: block; margin: -2px 0 4px; }
+  .faith-path { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 380px) {
+  .site .tv-label-full { display: none; }
+  .site .tv-label-compact { display: inline; }
+}
+
+.faith-scripture { margin: 36px 0; padding: 4px 0 4px 24px; border-left: 1px solid var(--fire); }
+.faith-scripture p { font-family: var(--display); font-size: clamp(24px, 3vw, 30px); line-height: 1.4; color: var(--ink); }
+.faith-scripture cite { font-family: var(--mono); font-style: normal; font-size: 11px; }
+.faith-scripture cite a { color: var(--fire); text-underline-offset: 4px; }

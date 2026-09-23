@@ -23,9 +23,9 @@ The ten copyable prompts are in `music-prompts.html`. All are suitable for the r
 
 For Creative Commons recordings, retain the original work URL, creator, license URL/version, download date, and modifications in this file before release. Choose terms compatible with the site and provide required visible attribution. No Creative Commons recording has been imported in this change.
 
-## 1min.ai narration
+## Narration production
 
-The existing `scripts/generate-audio.mjs` uses 1min.ai TEXT_TO_SPEECH with tts-1-hd and server-side production credentials from `.env.local`. It generates static narration assets; visitors never call the API and no key enters the frontend. `pnpm audio --sample` rebuilds a narration sample, reusing the paid cache when present. Existing narration is retained; the public music is the user-supplied collection.
+The September 23 narration uses Higgsfield Cillian; see [the production record](audio/HIGGSFIELD-NARRATION.md). The legacy `scripts/generate-audio.mjs` uses 1min.ai TEXT_TO_SPEECH with tts-1-hd and server-side production credentials from `.env.local`. It generates static narration assets; visitors never call the API and no key enters the frontend. `pnpm audio --sample` rebuilds a narration sample, reusing the paid cache when present. The public music remains the user-supplied collection.
 
 Documentation checked September 7, 2026:
 - https://docs.1min.ai/docs/api/ai-for-audio/text-to-speech/openai

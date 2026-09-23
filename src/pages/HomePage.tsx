@@ -62,7 +62,7 @@ export function HomePage({ now }: HomePageProps) {
   }, [display])
   return (
     <div className={`site lamp-home reading-home${display ? ' is-display' : ''}${idle ? ' is-idle' : ''}`} onPointerMove={reveal} onKeyDown={reveal}>
-      <SiteNav current="home" extra={<button type="button" className="tv-toggle" onClick={(event) => { if (event.detail) event.currentTarget.blur(); void toggleDisplay() }} aria-pressed={display}>{display ? 'Exit fullscreen mode' : 'Fullscreen mode'}</button>} />
+      <SiteNav current="home" extra={<button type="button" className="tv-toggle" onClick={(event) => { if (event.detail) event.currentTarget.blur(); void toggleDisplay() }} aria-label={display ? 'Exit fullscreen mode' : 'Fullscreen mode'} aria-pressed={display}><span className="tv-label-full">{display ? 'Exit fullscreen mode' : 'Fullscreen mode'}</span><span className="tv-label-compact" aria-hidden="true">{display ? 'Exit full' : 'Full screen'}</span></button>} />
       <main id="main-content" className="hero word-hero">
         <HourLamp now={now} />
       </main>

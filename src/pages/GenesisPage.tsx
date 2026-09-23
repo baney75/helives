@@ -1,47 +1,25 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { useAutoQuality } from '../hooks/useAutoQuality.ts'
 import { useDocumentVisible } from '../hooks/useDocumentVisible.ts'
 import { useGenesisClock } from '../hooks/useGenesisClock.ts'
-import { useIsMobile } from '../hooks/useIsMobile.ts'
 import { useNarration } from '../hooks/useNarration.ts'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.ts'
-import type { Quality } from '../lib/budget.ts'
 import { readAppMode } from '../lib/mode.ts'
-import { effectsAllowed, persistQualityRecord, qualityFromSearch, stricterQuality } from '../lib/quality.ts'
 import { CinematicOverlay } from '../ui/CinematicOverlay.tsx'
 import { HUD } from '../ui/HUD.tsx'
 import { MusicControls } from '../music/MusicControls.tsx'
 import '../ui/genesis.css'
 
-const GenesisCanvas = lazy(async () => {
-  const module = await import('../scene/GenesisCanvas.tsx')
-  return { default: module.GenesisCanvas }
+const GenesisIllustration = lazy(async () => {
+  const module = await import('../scene/GenesisIllustration.tsx')
+  return { default: module.GenesisIllustration }
 })
 
 export function GenesisPage() {
   const mode = useMemo(() => readAppMode(window.location.search), [])
   const reducedMotion = usePrefersReducedMotion()
-  const isMobile = useIsMobile()
   const visible = useDocumentVisible()
-  const search = window.location.search
-  const gate = useAutoQuality(reducedMotion, visible, search)
-  const qualityLocked = Boolean(qualityFromSearch(search) || reducedMotion)
-  const [liveQuality, setLiveQuality] = useState<Quality | null>(null)
-  const [factor, setFactor] = useState(1)
-  const quality = liveQuality ? stricterQuality(liveQuality, gate.quality) : gate.quality
-  const effects = effectsAllowed(quality, factor)
   const [sceneReady, setSceneReady] = useState(false)
-  const [sceneUnavailable, setSceneUnavailable] = useState(false)
-  const onSceneReady = useCallback((ready: boolean) => {
-    setSceneReady(ready)
-    if (ready) setSceneUnavailable(false)
-  }, [])
-  const onSceneUnavailable = useCallback(() => {
-    // A readable fallback is a usable scene: transport and narration should
-    // continue even when the optional WebGL layer cannot render.
-    setSceneUnavailable(true)
-    setSceneReady(true)
-  }, [])
+  const onSceneReady = useCallback((ready: boolean) => setSceneReady(ready), [])
   const lastProgress = useRef(mode.progress ?? 0)
   const holdRef = useRef(false)
   const mediaClockRef = useRef<() => number | null>(() => null)
@@ -53,22 +31,6 @@ export function GenesisPage() {
   })
 
   lastProgress.current = clock.progress
-
-  const onQualityFallback = useCallback(
-    (next: Quality) => {
-      if (qualityLocked) return
-      setLiveQuality((current) => (current ? stricterQuality(current, next) : next))
-      persistQualityRecord(next, Date.now(), window.navigator.userAgent, window.localStorage)
-    },
-    [qualityLocked],
-  )
-
-  const onPerformanceFactor = useCallback(
-    (next: number) => {
-      setFactor((current) => (effectsAllowed(quality, current) === effectsAllowed(quality, next) ? current : next))
-    },
-    [quality],
-  )
 
   const [muted, setMuted] = useState(false)
   const narration = useNarration({
@@ -106,32 +68,20 @@ export function GenesisPage() {
   const cinematicAudioAction = mode.cinematic && (narration.blocked || narration.stalled)
 
   return (
-    <div className={`${mode.cinematic ? 'app is-cinematic' : 'app'}${sceneUnavailable ? ' has-scene-fallback' : ''}${!sceneReady && !sceneUnavailable ? ' is-scene-loading' : ''}${cinematicAudioAction ? ' has-cinematic-audio-action' : ''}`}>
+    <main id="main-content" className={`${mode.cinematic ? 'app is-cinematic' : 'app'} illustrated-genesis${!sceneReady ? ' is-scene-loading' : ''}${cinematicAudioAction ? ' has-cinematic-audio-action' : ''}`}>
       <a className="skip" href="#genesis-time">
         Skip to timeline
       </a>
       <Suspense fallback={<div className="stage stage-loading" aria-hidden="true" />}>
-        <GenesisCanvas
+        <GenesisIllustration
           onReady={onSceneReady}
-          onUnavailable={onSceneUnavailable}
-          clock={{
-            progress: clock.progress,
-            presence: clock.presence,
-            scale: clock.scale,
-            distance: clock.distance,
-            reducedMotion,
-            isMobile,
-            cinematic: mode.cinematic,
-            quality,
-            playing: clock.playing,
-            effects,
-          }}
-          qualityLocked={qualityLocked}
-          onQualityFallback={onQualityFallback}
-          onPerformanceFactor={onPerformanceFactor}
+          sceneId={clock.scene.id}
+          progress={clock.progress}
+          reducedMotion={reducedMotion}
+          playing={clock.playing && visible && !narration.hold}
         />
       </Suspense>
-      {!sceneReady && !sceneUnavailable && <p className="scene-loading" role="status">Loading scene…</p>}
+      {!sceneReady && <p className="scene-loading" role="status">Loading scene…</p>}
       {mode.cinematic && narration.blocked ? (
         <button type="button" className="sound-gate cinematic-audio-action" onClick={() => void narration.retry()}>
           Begin with sound
@@ -152,7 +102,7 @@ export function GenesisPage() {
           onContinueWithoutSound={() => setMuted(true)}
         />
       )}
-    </div>
+    </main>
   )
 }
 
@@ -165,7 +115,7 @@ function usePlaybackKeys(
     const onKey = (event: KeyboardEvent) => {
       const target = event.target
       if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey ||
-        (target instanceof Element && target.closest('input, select, textarea, button, a, [contenteditable]'))) {
+        (target instanceof Element && target.closest('input, select, textarea, button, a, dialog, [contenteditable]'))) {
         return
       }
       handlePlaybackKey(event, toggle, reset, setProgress)

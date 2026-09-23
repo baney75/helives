@@ -5,9 +5,6 @@ import { findSceneAt, presenceById } from '../genesis/scenes.ts'
 
 const useNarration = vi.fn()
 
-vi.mock('../hooks/useAutoQuality.ts', () => ({
-  useAutoQuality: () => ({ status: 'pending', quality: 'medium' }),
-}))
 vi.mock('../hooks/useDocumentVisible.ts', () => ({ useDocumentVisible: () => true }))
 vi.mock('../hooks/useGenesisClock.ts', () => ({
   useGenesisClock: () => ({
@@ -26,14 +23,13 @@ vi.mock('../hooks/useGenesisClock.ts', () => ({
     presence: presenceById(0),
   }),
 }))
-vi.mock('../hooks/useIsMobile.ts', () => ({ useIsMobile: () => false }))
 vi.mock('../hooks/useNarration.ts', () => ({
   useNarration: (options: unknown) => useNarration(options),
 }))
 vi.mock('../hooks/usePrefersReducedMotion.ts', () => ({
   usePrefersReducedMotion: () => false,
 }))
-vi.mock('../scene/GenesisCanvas.tsx', () => ({ GenesisCanvas: () => null }))
+vi.mock('../scene/GenesisIllustration.tsx', () => ({ GenesisIllustration: () => null }))
 
 import { GenesisPage } from './GenesisPage.tsx'
 
@@ -44,7 +40,7 @@ describe('Genesis first paint', () => {
     vi.stubGlobal('window', { location: { search: '' } })
   })
 
-  it('shows the beginning Scripture while GPU quality is still pending', () => {
+  it('shows the beginning Scripture before the illustration is ready', () => {
     const html = renderToStaticMarkup(createElement(GenesisPage))
 
     expect(html).toContain('In the beginning')

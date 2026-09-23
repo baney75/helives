@@ -35,21 +35,21 @@ export const FALL_VOICE_CUES: readonly VoiceCue[] = [
 export const NARRATION: Record<SceneId | 'trailer', string> = {
   beginning: `${KJV.gen1_1} ${KJV.gen1_2}`,
   day1: `${KJV.gen1_3} ${KJV.gen1_4}`,
-  day2: `${KJV.gen1_6} ${KJV.gen1_8} And the evening and the morning were the second day.`,
-  day3: `${KJV.gen1_9} ${KJV.gen1_10} ${KJV.gen1_11} And God saw that it was good.`,
-  day4: `${KJV.gen1_16} And God saw that it was good.`,
-  day5: `${KJV.gen1_20} And God saw that it was good.`,
-  day6: `${KJV.gen1_24} ${KJV.gen1_26} ${KJV.gen1_27} ${KJV.gen1_31}`,
-  day7: `${KJV.gen2_2} And God blessed the seventh day, and sanctified it.`,
+  day2: `${KJV.gen1_6} ${KJV.gen1_7} ${KJV.gen1_8}`,
+  day3: `${KJV.gen1_9} ${KJV.gen1_10} ${KJV.gen1_11} ${KJV.gen1_12} ${KJV.gen1_13}`,
+  day4: `${KJV.gen1_14} ${KJV.gen1_15} ${KJV.gen1_16} ${KJV.gen1_17} ${KJV.gen1_18} ${KJV.gen1_19}`,
+  day5: `${KJV.gen1_20} ${KJV.gen1_21} ${KJV.gen1_22} ${KJV.gen1_23}`,
+  day6: `${KJV.gen1_24} ${KJV.gen1_25} ${KJV.gen1_26} ${KJV.gen1_27} ${KJV.gen1_31}`,
+  day7: `${KJV.gen2_2} ${KJV.gen2_3}`,
   garden: `${KJV.gen2_8} ${KJV.gen2_16_17}`,
   fall: FALL_VOICE_CUES.map((cue) => cue.text).join(' '),
   closing:
-    'Follow Jesus Christ. Begin with one of the Gospels. Pray honestly. Find a faithful local church that teaches Scripture and takes your questions seriously.',
+    'Jesus Christ is risen. Turn to Him. Read the Gospels. Pray and repent. Find a faithful local church where Scripture is preached and Christ is worshipped. Follow Him with your life.',
   doubt:
-    'Genesis begins with God as creator. Cosmology studies how the universe has developed. The questions overlap, but a measurement is not a verdict on faith. The afterword follows the evidence and the questions it leaves open.',
+    'Genesis opens with a declaration: God created the heaven and the earth. Cosmology measures how the universe has developed. Its evidence deserves careful attention; no instrument can settle the question of God. The afterword follows the evidence and its limits.',
   measure:
-    'The universe is expanding. The cosmic microwave background is light released early in its history. Together with other observations, it supports a universe about 13.8 billion years old within the standard cosmological model. The sources are on the next page.',
-  trailer: `${KJV.gen1_1} ${KJV.gen1_3} ${KJV.gen1_31} ${KJV.gen3_4} And she took of the fruit thereof, and did eat. Follow Jesus Christ. Begin with one of the Gospels. Then read the afterword on faith and the universe.`,
+    'The universe is expanding. The cosmic microwave background is the oldest light we can observe, released early in its history. With other observations, it supports an age of about 13.8 billion years within the standard cosmological model. The afterword names the sources.',
+  trailer: `${KJV.gen1_1} ${KJV.gen1_3} ${KJV.gen1_31} ${KJV.gen3_4} ${KJV.gen3_6} Follow Jesus Christ. Begin with one of the Gospels. Then read the afterword on faith and the universe.`,
 }
 
 export const SCENE_VOICE_CUES: Partial<Record<SceneId, readonly VoiceCue[]>> = {
@@ -61,30 +61,30 @@ export const SCENE_VOICE_CUES: Partial<Record<SceneId, readonly VoiceCue[]>> = {
   day2: [
     { role: 'narrator', text: 'And God said,' },
     { role: 'god', text: 'Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.' },
-    { role: 'narrator', text: `${KJV.gen1_8} And the evening and the morning were the second day.` },
+    { role: 'narrator', text: `${KJV.gen1_7} ${KJV.gen1_8}` },
   ],
   day3: [
     { role: 'narrator', text: 'And God said,' },
     { role: 'god', text: 'Let the waters under the heaven be gathered together unto one place, and let the dry land appear:' },
     { role: 'narrator', text: `and it was so. ${KJV.gen1_10} And God said,` },
-    { role: 'god', text: 'Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind.' },
-    { role: 'narrator', text: 'And God saw that it was good.' },
+    { role: 'god', text: KJV.gen1_11.replace(/^And God said, /, '') },
+    { role: 'narrator', text: `${KJV.gen1_12} ${KJV.gen1_13}` },
   ],
   day5: [
     { role: 'narrator', text: 'And God said,' },
     { role: 'god', text: 'Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.' },
-    { role: 'narrator', text: 'And God saw that it was good.' },
+    { role: 'narrator', text: `${KJV.gen1_21} ${KJV.gen1_22} ${KJV.gen1_23}` },
   ],
   day6: [
     { role: 'narrator', text: 'And God said,' },
-    { role: 'god', text: 'Let the earth bring forth the living creature after his kind.' },
-    { role: 'narrator', text: 'And God said,' },
-    { role: 'god', text: 'Let us make man in our image, after our likeness.' },
+    { role: 'god', text: KJV.gen1_24.replace(/^And God said, /, '') },
+    { role: 'narrator', text: `${KJV.gen1_25} And God said,` },
+    { role: 'god', text: KJV.gen1_26.replace(/^And God said, /, '') },
     { role: 'narrator', text: `${KJV.gen1_27} ${KJV.gen1_31}` },
   ],
   garden: [
     { role: 'narrator', text: `${KJV.gen2_8} And the Lord God commanded the man, saying,` },
-    { role: 'god', text: 'Of every tree of the garden thou mayest freely eat: But of the tree of the knowledge of good and evil, thou shalt not eat of it.' },
+    { role: 'god', text: KJV.gen2_16_17.replace(/^And the Lord God commanded the man, saying, /, '') },
   ],
   fall: FALL_VOICE_CUES,
 }

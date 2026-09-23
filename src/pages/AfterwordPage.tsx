@@ -15,8 +15,9 @@ export function AfterwordPage() {
           <p className="hero-kicker">After Genesis</p>
           <h1 id="doubt-title">Faith and the universe</h1>
           <p className="doubt-lead">
-            Genesis begins with God as Creator. Cosmology studies how the universe has developed.
-            This afterword sets those claims beside a small body of primary-source evidence.
+            “In the beginning God created the heaven and the earth.” Genesis 1:1 gives the
+            foundation. The heavens invite our attention. Here is what observation can tell us,
+            and where its reach ends.
           </p>
           <nav className="doubt-paths" aria-label="Ways to continue">
             <a href="/genesis?scene=beginning"><span>01</span> Read Genesis</a>
@@ -33,8 +34,9 @@ export function AfterwordPage() {
           <div className="doubt-copy">
             <p>
               Genesis opens with a claim about God: “In the beginning God created the heaven and the earth.”
-              It speaks of creation, human life, and our relation to God. Christians have long disagreed,
-              in good faith, about how the days of creation should be understood.
+              God speaks; creation answers. He calls His work good and makes mankind in His image.
+              Christians differ over how to understand the days of creation. The text deserves to be
+              read carefully, in full, before those arguments begin.
             </p>
             <p>
               Cosmology begins elsewhere: with what instruments can observe. The universe is expanding.
@@ -43,9 +45,9 @@ export function AfterwordPage() {
               age at about 13.8 billion years.
             </p>
             <p>
-              These findings trace physical history. They do not answer every theological or philosophical
-              question a reader brings to Genesis. The sources below explain the science; the opening chapters
-              of Genesis are linked above.
+              A measurement can tell us about light, matter, and time. It cannot decide whether God
+              exists or what we owe Him. Follow the evidence carefully. Read the Scripture closely.
+              The sources below make the scientific claims available for examination.
             </p>
           </div>
         </section>

@@ -23,6 +23,7 @@ export function Timeline({ progress, sceneId, onScrub }: TimelineProps) {
         max={1}
         step={0.0001}
         value={progress}
+        aria-valuetext={`${SCENES.find((scene) => scene.id === sceneId)?.name ?? 'Genesis'}, ${Math.round(progress * 100)} percent`}
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           onScrub(Number(event.target.value))
         }}
