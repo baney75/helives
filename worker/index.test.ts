@@ -40,12 +40,15 @@ describe('withSecurityHeaders', () => {
   })
 })
 
-it('prevents injected HTML scripts while preserving existing cache semantics', () => {
+it('lets Cloudflare Web Analytics run and nothing else from outside', () => {
   const html = withSecurityHeaders(new Response('html', { headers: { 'content-type': 'text/html', 'cache-control': 'private, max-age=0' } }))
-  expect(html.headers.get('cache-control')).toBe('private, max-age=0, no-transform')
+  // No no-transform: the edge must be able to insert the analytics beacon.
+  expect(html.headers.get('cache-control')).toBe('private, max-age=0')
   expect(html.headers.get('content-security-policy')).toBe(CSP)
-  const twice = withSecurityHeaders(html)
-  expect(twice.headers.get('cache-control')).toBe('private, max-age=0, no-transform')
+  expect(CSP).toMatch(/script-src 'self' https:\/\/static\.cloudflareinsights\.com;/)
+  expect(CSP).toMatch(/connect-src 'self' https:\/\/cloudflareinsights\.com;/)
+  expect(CSP).not.toContain('unsafe-eval')
+  expect(CSP).not.toMatch(/script-src[^;]*'unsafe-inline'/)
   const audio = withSecurityHeaders(new Response('audio', { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=3600' } }))
   expect(audio.headers.get('cache-control')).toBe('public, max-age=3600')
 })
