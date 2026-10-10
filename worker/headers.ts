@@ -1,10 +1,11 @@
 export const CSP = [
   "default-src 'self'",
-  "script-src 'self'",
+  // Cloudflare Web Analytics: the edge inserts its beacon script and it reports here. Nothing broader.
+  "script-src 'self' https://static.cloudflareinsights.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
-  "connect-src 'self'",
+  "connect-src 'self' https://cloudflareinsights.com",
   "media-src 'self'",
   "worker-src 'self' blob:",
   "child-src 'self' blob:",
@@ -55,13 +56,8 @@ export function withSecurityHeaders(response: Response): Response {
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     headers.set(key, value)
   }
-  // Preserve our reviewed HTML: edge analytics injection conflicts with self-only CSP.
-  if (headers.get('content-type')?.includes('text/html')) {
-    const cache = headers.get('cache-control') ?? 'public, max-age=0, must-revalidate'
-    if (!cache.split(',').some((directive) => directive.trim().toLowerCase() === 'no-transform')) {
-      headers.set('cache-control', `${cache}, no-transform`)
-    }
-  }
+  // HTML stays transformable so Cloudflare can insert its Web Analytics beacon; the CSP above
+  // allows only that script host, so no other injected script can run.
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
