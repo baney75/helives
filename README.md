@@ -40,3 +40,9 @@ Mark: a Latin cross with a point of light.
 ## License
 
 Quoted Scripture is KJV, public domain in the United States. Site code is in this repository.
+
+## Sponsors
+
+<!-- sponsors:start -->
+No sponsors yet. [Sponsor on GitHub](https://github.com/sponsors/baney75) and your name appears here automatically.
+<!-- sponsors:end -->
