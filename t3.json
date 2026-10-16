@@ -10,7 +10,8 @@
     },
     {
       "name": "Check",
-      "command": "pnpm test && pnpm typecheck && pnpm lint && pnpm build"
+      "command": "pnpm test && pnpm typecheck && pnpm lint && pnpm build",
+      "icon": "test"
     }
   ]
 }
