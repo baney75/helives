@@ -29,8 +29,17 @@ export function App() {
 
   useEffect(() => {
     // The Worker sets this on first load; keep it right after client-side navigation too.
-    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
-    if (canonical && page !== 'not-found') canonical.href = `https://helives.dev${path === '/' ? '/' : path}`
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    if (page === 'not-found') {
+      canonical?.remove()
+      return
+    }
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.append(canonical)
+    }
+    canonical.href = `https://helives.dev${path}`
   }, [page, path])
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { withAudioRange } from './audioRange.ts'
 import { isBlockedPath, isMissingStaticAsset, withSecurityHeaders } from './headers.ts'
-import { shapeSpaHtml } from './pages.ts'
+import { shapeSpaHtml, withoutConditionalsForRoutes } from './pages.ts'
 
 export interface Env {
   ASSETS: Fetcher
@@ -15,7 +15,7 @@ export default {
     if (isBlockedPath(url.pathname)) {
       return withSecurityHeaders(new Response('Not found', { status: 404 }))
     }
-    const asset = await env.ASSETS.fetch(request)
+    const asset = await env.ASSETS.fetch(withoutConditionalsForRoutes(request))
     if (isMissingStaticAsset(url.pathname, asset.headers.get('content-type'))) {
       return withSecurityHeaders(new Response('Not found', { status: 404 }))
     }

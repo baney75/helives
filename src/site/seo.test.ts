@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { canonicalFor, shapeSpaHtml } from '../../worker/pages.ts'
+import { canonicalFor, shapeSpaHtml, withoutConditionalsForRoutes } from '../../worker/pages.ts'
 
 const INDEX = readFileSync(new URL('../../index.html', import.meta.url), 'utf8')
 const SITEMAP = readFileSync(new URL('../../public/sitemap.xml', import.meta.url), 'utf8')
@@ -59,10 +59,28 @@ describe('shapeSpaHtml', () => {
     const out = await shapeSpaHtml(new Request('https://helives.dev/missing', { method: 'HEAD' }), spa())
     expect(out.status).toBe(404)
     expect(out.body).toBeNull()
+    expect(out.headers.get('etag')).toBeNull()
   })
 
   it('leaves non-HTML assets alone', async () => {
     const png = new Response('png', { status: 200, headers: { 'content-type': 'image/png' } })
     expect(await shapeSpaHtml(new Request('https://helives.dev/og.png'), png)).toBe(png)
+  })
+})
+
+describe('withoutConditionalsForRoutes', () => {
+  const conditional = { 'if-none-match': '"x"', 'if-modified-since': 'Thu, 01 Jan 2026 00:00:00 GMT' }
+
+  it('strips validators from route requests so unknown routes cannot get a 304', () => {
+    for (const path of ['/missing', '/genesis/2', '/faith', '/']) {
+      const out = withoutConditionalsForRoutes(new Request(`https://helives.dev${path}`, { headers: conditional }))
+      expect(out.headers.get('if-none-match')).toBeNull()
+      expect(out.headers.get('if-modified-since')).toBeNull()
+    }
+  })
+
+  it('keeps validators on real files', () => {
+    const request = new Request('https://helives.dev/og.png', { headers: conditional })
+    expect(withoutConditionalsForRoutes(request)).toBe(request)
   })
 })
