@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState, type MouseEvent } from 'react'
-import { parsePath } from './canon/catalog.ts'
+import { normalizePath, parsePath } from './canon/catalog.ts'
 import { AfterwordPage } from './pages/AfterwordPage.tsx'
 import { FaithPage } from './pages/FaithPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
@@ -24,6 +24,23 @@ export function App() {
 
   const url = new URL(href, window.location.origin)
   const page = pageFor(parsePath(url.pathname))
+
+  const path = normalizePath(url.pathname)
+
+  useEffect(() => {
+    // The Worker sets this on first load; keep it right after client-side navigation too.
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    if (page === 'not-found') {
+      canonical?.remove()
+      return
+    }
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.append(canonical)
+    }
+    canonical.href = `https://helives.dev${path}`
+  }, [page, path])
 
   useEffect(() => {
     document.title = titleFor(page)
