@@ -1,6 +1,6 @@
 # He Lives design
 
-Visual thesis for [helives.dev](https://helives.dev). Brand locked at SHA `eebc74f` (Latin cross with a point of light, whole-canon Scriptures index). Tokens live in `src/index.css`. Load `.cursor/skills/helives-design`.
+Visual thesis for [helives.dev](https://helives.dev). Brand locked at SHA `eebc74f` (Latin cross with a point of light, whole-canon Scriptures index). Tokens live in `src/index.css`. In Cursor, load `gs-design`, then `.cursor/skills/helives-design`.
 
 This is a ministry site. Rams still applies: useful, honest, as little design as possible. It does not apply as “look like Linear.” Do not import SaaS card grids, pill clusters, or Inter.
 
