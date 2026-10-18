@@ -4,8 +4,11 @@ Ministry site at https://helives.dev: one KJV passage each hour, Genesis 1–3 a
 ## Run and check
 - Install: `pnpm install`
 - Check (must pass before commit; it can fail): `pnpm test && pnpm typecheck && pnpm lint && pnpm build`
-- Live proof for visible changes: after `pnpm build`, run `pnpm exec wrangler dev --port 8787`, then `node scripts/verify-refresh.mjs` (screenshots land in `demo/refresh/`; check 375 and 1280 widths). Else report "untested live".
+- Live proof for visible changes: after `pnpm build`, run `pnpm exec wrangler dev --port 8787`, then `node scripts/verify-refresh.mjs` (screenshots land in the untracked `demo/` folder under `refresh`; check 375 and 1280 widths). Else report "untested live".
 - Deploy: `gitleaks git --redact . && pnpm run deploy` -> helives.dev and www.helives.dev; read it back after (`curl -sI https://helives.dev` and open the changed page).
+
+## Brand
+- No shared BarnLabs, NeoRome or Martyr design system applies; helives has its own (night field, gold `--fire`, Cormorant Garamond and Source Serif 4). Tokens are in `src/index.css`, described in `DESIGN.md`. Use the tokens, add no raw hex.
 
 ## Layout
 - `src/canon/`: book slugs and catalog; `src/site/router.ts` maps live books to routes.
