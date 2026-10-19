@@ -1,0 +1,14 @@
+{
+  "name": "He Lives",
+  "install": "pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps chromium",
+  "terminals": [
+    {
+      "name": "dev",
+      "command": "pnpm dev",
+      "description": "Vite dev server for helives.dev on http://localhost:5173"
+    }
+  ],
+  "ports": [
+    { "name": "vite dev server", "port": 5173 }
+  ]
+}
