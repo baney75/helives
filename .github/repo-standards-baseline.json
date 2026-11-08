@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-07",
+  "problems": [
+    "agents: Brand section must say: Read DESIGN.md before any visible UI",
+    "agents: Install must use a locked or frozen installer (npm ci, --frozen-lockfile, uv sync --frozen, cargo --locked)",
+    "dashes: .cursor/skills/helives-gauntlet/SKILL.md: N em or en dash(es) in agent-facing prose",
+    "dashes: AGENTS.md: N em or en dash(es) in agent-facing prose",
+    "dashes: DESIGN.md: N em or en dash(es) in agent-facing prose",
+    "logging: the service logs no structured lines (JSON or a structured logger)",
+    "readme: README has no ## Install (or Get started/Quick start) heading",
+    "readme: README has no badges row (public repo with CI)",
+    "readme: README has no image in the first N lines",
+    "readme: no LICENSE (public repo)"
+  ]
+}
