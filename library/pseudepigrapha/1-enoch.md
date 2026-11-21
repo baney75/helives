@@ -13,7 +13,7 @@ words: 38050
 
 # The Book of Enoch
 
-> An ancient Jewish apocalypse, written in parts between the third and first centuries BC, that tells of Enoch's visions of the fallen Watchers, the judgment and the Messiah. It is quoted in Jude 14 and 15, was read by many early Christians, and is canonical in the Ethiopian Orthodox Tewahedo Church, but it is outside the Protestant and Catholic canons.
+> An ancient Jewish apocalypse, written in parts between the third and first centuries BC, that tells of Enoch's visions of the fallen Watchers, the judgment and the Messiah. It is quoted in Jude 14 and 15, was read by many early Christians, and is canonical in the Ethiopian Orthodox Tewahedo Church, but it is outside the Protestant and Catholic canons. It is not Scripture.
 
 ## Abbreviations, Brackets and Symbols
 

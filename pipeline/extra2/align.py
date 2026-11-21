@@ -46,7 +46,7 @@ def ocr_tokens(raw: str) -> list[tuple[str, str]]:
 
 def as_number(raw: str) -> int | None:
     """Return the verse number an OCR token like '7.', 'ro.', '1g.' stands for, else None."""
-    core = raw.rstrip(".,:;")
+    core = raw.rstrip(".,:; \n\t")
     if not core or len(core) > 3:
         return None
     if core.isdigit():

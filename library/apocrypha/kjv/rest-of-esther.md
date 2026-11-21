@@ -13,7 +13,7 @@ words: 2758
 
 # The Rest of the Chapters of the Book of Esther
 
-> Additions found in the Greek text of Esther but not in the Hebrew, including Mardocheus' dream, the king's letters and the prayers of Mardocheus and Esther; the KJV prints them together as chapters 10:4 to 16. They are received as deuterocanonical by the Catholic and Orthodox churches and are outside the Protestant canon.
+> Additions found in the Greek text of Esther but not in the Hebrew, including Mardocheus' dream, the king's letters and the prayers of Mardocheus and Esther; the KJV prints them together as chapters 10:4 to 16. They are received as deuterocanonical by the Catholic and Orthodox churches and are outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## Rest of Esther 10
 

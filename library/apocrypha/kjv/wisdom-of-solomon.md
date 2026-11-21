@@ -13,7 +13,7 @@ words: 10603
 
 # The Wisdom of Solomon
 
-> A Jewish book of wisdom written in Solomon's name on righteousness, immortality and the folly of idolatry. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
+> A Jewish book of wisdom written in Solomon's name on righteousness, immortality and the folly of idolatry. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## Wisdom 1
 

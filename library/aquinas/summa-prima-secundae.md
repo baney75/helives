@@ -14,8 +14,6 @@ words: 490984
 
 ## Treatise on the Last End (QQ. 1-5)
 
-### Treatise on the Last End (QQ. 1-5)
-
 ### Prologue
 
 Since, as Damascene states (De Fide Orth. ii, 12), man is said to be made in God's image, in so far as the image implies "an intelligent being endowed with free-will and self-movement": now that we have treated of the exemplar, i.e. God, and of those things which came forth from the power of God in accordance with His will; it remains for us to treat of His image, i.e. man, inasmuch as he too is the principle of his actions, as having free-will and control of his actions.
@@ -940,8 +938,6 @@ Secondly, it is again evident if we consider the specific nature of Happiness. F
 **Reply to Objection 3:** This definition of Happiness given by some—"Happy is the man that has all he desires," or, "whose every wish is fulfilled" is a good and adequate definition; but an inadequate definition if understood in another. For if we understand it simply of all that man desires by his natural appetite, thus it is true that he who has all that he desires, is happy: since nothing satisfies man's natural desire, except the perfect good which is Happiness. But if we understand it of those things that man desires according to the apprehension of the reason, thus it does not belong to Happiness, to have certain things that man desires; rather does it belong to unhappiness, in so far as the possession of such things hinders man from having all that he desires naturally; thus it is that reason sometimes accepts as true things that are a hindrance to the knowledge of truth. And it was through taking this into consideration that Augustine added so as to include perfect Happiness—that he "desires nothing amiss": although the first part suffices if rightly understood, to wit, that "happy is he who has all he desires."
 
 ## Treatise on Human Acts: Acts Peculiar to Man (QQ. 6-21)
-
-### Treatise on Human Acts: Acts Peculiar to Man (QQ. 6-21)
 
 ### Question 6. Of the Voluntary and the Involuntary (Eight Articles)
 
@@ -3101,8 +3097,6 @@ It is therefore evident that a good or evil action deserves praise or blame, in 
 **Reply to Objection 3:** Man is not ordained to the body politic, according to all that he is and has; and so it does not follow that every action of his acquires merit or demerit in relation to the body politic. But all that man is, and can, and has, must be referred to God: and therefore every action of man, whether good or bad, acquires merit or demerit in the sight of God, as far as the action itself is concerned.
 
 ## Treatise on the Passions (QQ. 22-48)
-
-### Treatise on the Passions (QQ. 22-48)
 
 ### Question 22. Of the Subject of the Soul's Passions (Three Articles)
 
@@ -6117,8 +6111,6 @@ And this suffices for the Reply to the Second Objection.
 
 ## Treatise on Habits (QQ. 49-54)
 
-### Treatise on Habits (QQ. 49-54)
-
 ### Question 49. Of Habits in General, as to their Substance (Four Articles)
 
 After treating of human acts and passions, we now pass on to the consideration of the principles of human acts, and firstly of intrinsic principles, secondly of extrinsic principles. The intrinsic principle is power and habit; but as we have treated of powers in the FP, Q[77], seqq., it remains for us to consider them in general: in the second place we shall consider virtues and vices and other like habits, which are the principles of human acts.
@@ -6726,8 +6718,6 @@ If then we consider a habit as to the extent of its object, we shall find a cert
 **Reply to Objection 3:** In any science, he who acquires, by demonstration, scientific knowledge of one conclusion, has the habit indeed, yet imperfectly. And when he obtains, by demonstration, the scientific knowledge of another conclusion, no additional habit is engendered in him: but the habit which was in him previously is perfected, forasmuch as it has increased in extent; because the conclusions and demonstrations of one science are coordinate, and one flows from another.
 
 ## Treatise on Habits in Particular: Good Habits, i.e. Virtues (QQ. 55-89)
-
-### Treatise on Habits in Particular: Good Habits, i.e. Virtues (QQ. 55-89)
 
 ### Question 55. Of the Virtues, as to their Essence (Four Articles)
 
@@ -11315,8 +11305,6 @@ In this way also is to be understood the saying of Anselm, wherefore the Reply t
 
 ## Treatise on Law (QQ. 90-108)
 
-### Treatise on Law (QQ. 90-108)
-
 ### Question 90. Of the Essence of Law (Four Articles)
 
 We have now to consider the extrinsic principles of acts. Now the extrinsic principle inclining to evil is the devil, of whose temptations we have spoken in the FP, Q[114]. But the extrinsic principle moving to good is God, Who both instructs us by means of His Law, and assists us by His Grace: wherefore in the first place we must speak of law; in the second place, of grace.
@@ -14048,8 +14036,6 @@ Now if a man observe these absolutely, this is in accordance with the counsels a
 **Reply to Objection 4:** Those things which Our Lord prescribed about the true love of our enemies, and other similar sayings (Mat. 5; Lk. 6), may be referred to the preparation of the mind, and then they are necessary for salvation; for instance, that man be prepared to do good to his enemies, and other similar actions, when there is need. Hence these things are placed among the precepts. But that anyone should actually and promptly behave thus towards an enemy when there is no special need, is to be referred to the particular counsels, as stated above. As to those matters which are set down in Mat. 10 and Lk. 9 and 10, they were either disciplinary commands for that particular time, or concessions, as stated above (A[2], ad 3). Hence they are not set down among the counsels.
 
 ## Treatise on Grace (QQ. 109-114)
-
-### Treatise on Grace (QQ. 109-114)
 
 ### Question 109. Of the Necessity of Grace (Ten Articles)
 
