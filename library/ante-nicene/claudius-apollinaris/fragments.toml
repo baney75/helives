@@ -1,0 +1,43 @@
+[work]
+id = "claudius-apollinaris-fragments"
+title = "Claudius Apollinaris, Bishop of Hierapolis, and Apologist"
+author = "claudius-apollinaris"
+collection = "ante-nicene"
+order = 2240
+language = "Greek"
+translator = "Rev. B. P. Pratten"
+edition = "Ante-Nicene Fathers, Vol. 8 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf08.xml"
+source_sha256 = "2e18deb94f36104f63186b4247f01bc2610f76452b02d885341360664aba57fe"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 566
+
+[[section]]
+id = "claudius-apollinaris-bishop-of-hierapolis-and-apologist"
+title = "Claudius Apollinaris, Bishop of Hierapolis, and Apologist."
+level = 1
+blocks = [
+  { t = "p", text = "[^3755] [a.d. 160–180.] This author, an early apologist, is chiefly interesting as a competent witness, who tells the story of the *Thundering Legion*[^3756] in an artless manner, and gives it the simple character of an answer to prayer. This subject is treated by Lightfoot, in his recent work on the *Apostolic Fathers*,[^3757] in an exhaustive manner; and the story, reduced to the simple narrative as Apollinaris gives it, receives from him a just and discriminating approval." },
+  { t = "note", id = "3755", text = "Westcott, *Canon*, p. 248." },
+  { t = "note", id = "3756", text = "See vol. i. p. 187, this series, and references in my note (II.) on same page. The incident occurred during the war against the Quadi, a.d. 174." },
+  { t = "note", id = "3757", text = "Part ii. vol. i. pp. 469–476." },
+  { t = "p", text = "Apollinaris, as well as Rhodon, has been imagined the author of the work (ascribed to Asterius Urbanus) against Montanism, dedicated to Abiricius Marcellus.[^3758] This is sufficiently refuted by Routh,[^3759] whose Greek text, with notes, must be consulted by the studious.[^3760]" },
+  { t = "note", id = "3758", text = "See p. 766, note 3, *supra*; also vol. vii., this series, p. 338." },
+  { t = "note", id = "3759", text = "*Rel. Sac*., tom. ii. p. 196; and *Ibid*., tom. i. pp. 157–174." },
+  { t = "note", id = "3760", text = "*Rel. Sac*., tom. i. p. 173." },
+  { t = "p", text = "Apollinaris was bishop of Hierapolis on the Mæander, and, Lightfoot thinks, was probably with Melito and Polycrates, known to Polycarp, and influenced by his example and doctrine.[^3761] He addressed his *Apology*, which is honourably mentioned by Jerome, to M. Antoninus, the emperor. He also wrote *Adversus Gentes* and *De Veritate;* also against the Jews. Serapion calls him[^3762] “most blessed.”" },
+  { t = "note", id = "3761", text = "*Ap. Fathers*, part ii. vol. i. p. 428." },
+  { t = "note", id = "3762", text = "See p. 775, *infra*." },
+  { t = "p", text = "From an Unknown Book.[^3763]" },
+  { t = "note", id = "3763", text = "[See vol. i. p. 187, note 2.]" },
+  { t = "p", text = "“This narration (says Eusebius, *Hist*., v. 5) is given” (it relates to that storm of rain which was sent to the army of the Emperor M. Antoninus, to allay the thirst of the soldiers, whilst the enemy was discomfited by thunderbolts hurled upon them) “even by those historians who are at a wide remove from the doctrines that prevail among us, and who have been simply concerned to describe what related to *the emperors who are* the subjects of their history; and it has been recorded also by our own writers. But historians without *the pale of the Church*, as being unfriendly to the faith, while they have recorded the prodigy, have refrained from acknowledging that it was sent in answer to our prayers. On the other hand, our writers, as lovers of truth, have reported the matter in a simple and artless way. To this number Apollinaris must be considered as belonging. ‘Thereupon,’ he says, ‘the legion which had by its prayer caused the prodigy received from the emperor a title suitable to the occurrence, and was called in the Roman language the Thunder-hurling *Legion*.’”" },
+  { t = "p", text = "From the Book Concerning the Passover.[^3764]" },
+  { t = "note", id = "3764", text = "This extract and the following are taken from the preface to the *Chronicon Paschale*." },
+  { t = "p", text = "There are, then, some who through ignorance raise disputes about these things (though their conduct is pardonable: for ignorance is no subject for blame—it rather needs further instruction), and say that on the fourteenth day the Lord ate the lamb with the disciples, and that on the great day of the *feast of* unleavened bread He Himself suffered; and they quote Matthew as speaking in accordance with their view. Wherefore their opinion is contrary to the law, and the Gospels seem to be at variance with them.[^3765]" },
+  { t = "note", id = "3765", text = "[Routh, *R. S*., vol. i. p. 160.]" },
+  { t = "p", text = "From the Same Book." },
+  { t = "p", text = "The fourteenth day, the true Passover of the Lord; the great sacrifice, the Son of God instead of the lamb, who was bound, who bound the strong, and who was judged, *though* Judge of living and dead, and who was delivered into the hands of sinners to be crucified, who was lifted up on the horns of the unicorn, and who was pierced in His holy side, who poured forth from His side the two purifying elements,[^3766] water and blood, word and spirit, and who was buried on the day of the passover, the stone being placed upon the tomb." },
+  { t = "note", id = "3766", text = "Πάλιν καθάρσια, qu. παλινκαθάρσια =\"re-purifiers.”" },
+]

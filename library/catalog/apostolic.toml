@@ -1,0 +1,68 @@
+[[collection]]
+id = "apostolic"
+title = "Apostolic Fathers"
+order = 3
+summary = "Writings of the generation after the apostles: Clement of Rome, Ignatius, Polycarp, Barnabas, Hermas, Papias, the Didache and the Epistle to Diognetus, in the Ante-Nicene Fathers translation."
+
+[authors.clement-of-rome]
+name = "Clement of Rome"
+dates = "30-100"
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.mathetes]
+name = "Mathetes"
+dates = "130"
+role = "Author of the Epistle to Diognetus"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.polycarp]
+name = "Polycarp"
+dates = "65-100-155"
+role = "Bishop of Smyrna"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.church-of-smyrna]
+name = "The Church of Smyrna"
+dates = ""
+role = "Church"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.ignatius]
+name = "Ignatius of Antioch"
+dates = "30-107"
+role = "Bishop of Antioch"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.anonymous]
+name = "Anonymous"
+dates = ""
+role = "Unknown or uncertain author"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.barnabas]
+name = "Barnabas"
+dates = "100"
+role = "Author of the Epistle of Barnabas"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.papias]
+name = "Papias"
+dates = "70-155"
+role = "Bishop of Hierapolis"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.hermas]
+name = "Hermas"
+dates = "160"
+role = "Author of the Shepherd"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf02.xml"

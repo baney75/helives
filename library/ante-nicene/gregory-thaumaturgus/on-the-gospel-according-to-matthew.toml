@@ -1,0 +1,26 @@
+[work]
+id = "gregory-thaumaturgus-on-the-gospel-according-to-matthew"
+title = "On the Gospel According to Matthew"
+author = "gregory-thaumaturgus"
+collection = "ante-nicene"
+order = 1010
+language = "Greek"
+edition = "Ante-Nicene Fathers, Vol. 6 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf06.xml"
+source_sha256 = "620c7626c3ba4120d55bfaf569da947b3d10b440dc72b2239be3cf1985a13a07"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 254
+
+[[section]]
+id = "on-the-gospel-according-to-matthew"
+title = "On the Gospel According to Matthew."
+level = 1
+blocks = [
+  { t = "h", text = "[^605] (Chapter VI. 22, 23.)" },
+  { t = "note", id = "605", text = "A fragment. (Gallandi, *Vet. Patr. Biblioth.*, xiv. p. 119; from a Catena on Matthew, Cod. ms. 168, Mitarelli.)" },
+  { t = "p", text = "“The light of the body is the eye: if therefore thine eye be single, thy whole body shall be full of light. But if thine eye be evil, thy whole body shall be full of darkness. If therefore the light that is in thee be darkness, how great is that darkness!”" },
+  { t = "p", text = "The single eye is the love unfeigned; for when the body is enlightened by it, it sets forth through the medium of the outer members only things which are perfectly correspondent with the inner thoughts. But the evil eye is the pretended love, which is also called hypocrisy, by which the whole body of the man is made darkness. We have to consider that deeds meet only for darkness may be within the man, while through the outer members he may produce words that seem to be of the light:[^606] for there are those who are in reality wolves, though they may be covered with sheep’s clothing. Such are they who wash only the outside of the cup and platter, and do not understand that, unless the inside of these things is cleansed, the outside itself cannot be made pure. Wherefore, in manifest confutation of such persons, the Saviour says: “If the light that is in thee be darkness, how great is that darkness!” That is to say, if the love which seems to thee to be light is really a work meet for darkness, by reason of some hypocrisy concealed in thee, what must be thy patent transgressions!" },
+  { t = "note", id = "606", text = "The text is apparently corrupt here: ἄξια μὲν σκότους πράγματα ἐννοούμενον ἔσωθεν· διὰ δὲ τῶν ἔξωθεν μερῶν φωτὸς εἶναι δοκοῦντα προφέον ῥήματα. Migne suggests ἐννοοῦμεν τόν and προφέροντα." },
+]

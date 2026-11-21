@@ -1,0 +1,8 @@
+[[collection]]
+id = "bible"
+title = "Holy Scripture"
+order = 1
+summary = "The sixty-six books of the Old and New Testaments in the Berean Standard Bible, a public domain English translation."
+
+[authors.bible]
+name = "Holy Scripture"

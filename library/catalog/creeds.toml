@@ -1,0 +1,13 @@
+[[collection]]
+id = "creeds"
+title = "The Creeds"
+order = 2
+summary = "The ecumenical creeds of the early church: the Apostles' Creed, the Creed of Nicaea (325), the Niceno-Constantinopolitan Creed (381), the Definition of Chalcedon (451) and the Athanasian Creed, in Philip Schaff's English with the Greek or Latin text, from The Creeds of Christendom (1877)."
+
+[authors.church]
+name = "The Church"
+dates = ""
+role = "Creeds and definitions received by the church as a body rather than written by one author"
+summary = "Used for texts whose authority comes from the church's common confession or from a council, such as the ecumenical creeds."
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/creeds1"

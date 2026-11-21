@@ -1,0 +1,165 @@
+[[collection]]
+id = "encyclicals"
+title = "Papal Encyclicals"
+order = 9
+summary = "The encyclical letters of the popes from Benedict XIV (1740) to the present, indexed in data/encyclicals.toml. Most are linked to their pages on the Vatican's website, which holds the copyright in its modern translations. A subset is hosted here in full from public domain English translations printed before 1931."
+
+[authors.benedict-xiv]
+name = "Pope Benedict XIV"
+dates = "1675-1758"
+role = "Bishop of Rome, 1740-1758"
+summary = "Born Prospero Lorenzo Lambertini; elected pope and took the name Benedict XIV."
+portrait = ""
+source = "https://www.vatican.va/content/benedictus-xiv/en.html"
+
+[authors.clement-xiii]
+name = "Pope Clement XIII"
+dates = "1693-1769"
+role = "Bishop of Rome, 1758-1769"
+summary = "Born Carlo della Torre di Rezzonico; elected pope and took the name Clement XIII."
+portrait = ""
+source = "https://www.vatican.va/content/clemens-xiii/en.html"
+
+[authors.clement-xiv]
+name = "Pope Clement XIV"
+dates = "1705-1774"
+role = "Bishop of Rome, 1769-1774"
+summary = "Born Giovanni Vincenzo Antonio Ganganelli; elected pope and took the name Clement XIV."
+portrait = ""
+source = "https://www.vatican.va/content/clemens-xiv/en.html"
+
+[authors.pius-vi]
+name = "Pope Pius VI"
+dates = "1717-1799"
+role = "Bishop of Rome, 1775-1799"
+summary = "Born Giovanni Angelo Braschi; elected pope and took the name Pius VI."
+portrait = ""
+source = "https://www.vatican.va/content/pius-vi/en.html"
+
+[authors.pius-vii]
+name = "Pope Pius VII"
+dates = "1742-1823"
+role = "Bishop of Rome, 1800-1823"
+summary = "Born Barnaba Niccolò Maria Luigi Chiaramonti; elected pope and took the name Pius VII."
+portrait = ""
+source = "https://www.vatican.va/content/pius-vii/en.html"
+
+[authors.leo-xii]
+name = "Pope Leo XII"
+dates = "1760-1829"
+role = "Bishop of Rome, 1823-1829"
+summary = "Born Annibale della Genga; elected pope and took the name Leo XII."
+portrait = ""
+source = "https://www.vatican.va/content/leo-xii/en.html"
+
+[authors.pius-viii]
+name = "Pope Pius VIII"
+dates = "1761-1830"
+role = "Bishop of Rome, 1829-1830"
+summary = "Born Francesco Saverio Castiglioni; elected pope and took the name Pius VIII."
+portrait = ""
+source = "https://www.vatican.va/content/pius-viii/en.html"
+
+[authors.gregory-xvi]
+name = "Pope Gregory XVI"
+dates = "1765-1846"
+role = "Bishop of Rome, 1831-1846"
+summary = "Born Bartolomeo Alberto Cappellari; elected pope and took the name Gregory XVI."
+portrait = ""
+source = "https://www.vatican.va/content/gregorius-xvi/en.html"
+
+[authors.pius-ix]
+name = "Pope Pius IX"
+dates = "1792-1878"
+role = "Bishop of Rome, 1846-1878"
+summary = "Born Giovanni Maria Mastai Ferretti; elected pope and took the name Pius IX."
+portrait = ""
+source = "https://www.vatican.va/content/pius-ix/en.html"
+
+[authors.leo-xiii]
+name = "Pope Leo XIII"
+dates = "1810-1903"
+role = "Bishop of Rome, 1878-1903"
+summary = "Born Vincenzo Gioacchino Pecci; elected pope and took the name Leo XIII."
+portrait = ""
+source = "https://www.vatican.va/content/leo-xiii/en.html"
+
+[authors.pius-x]
+name = "Pope Pius X"
+dates = "1835-1914"
+role = "Bishop of Rome, 1903-1914"
+summary = "Born Giuseppe Melchiorre Sarto; elected pope and took the name Pius X."
+portrait = ""
+source = "https://www.vatican.va/content/pius-x/en.html"
+
+[authors.benedict-xv]
+name = "Pope Benedict XV"
+dates = "1854-1922"
+role = "Bishop of Rome, 1914-1922"
+summary = "Born Giacomo della Chiesa; elected pope and took the name Benedict XV."
+portrait = ""
+source = "https://www.vatican.va/content/benedict-xv/en.html"
+
+[authors.pius-xi]
+name = "Pope Pius XI"
+dates = "1857-1939"
+role = "Bishop of Rome, 1922-1939"
+summary = "Born Achille Ratti; elected pope and took the name Pius XI."
+portrait = ""
+source = "https://www.vatican.va/content/pius-xi/en.html"
+
+[authors.pius-xii]
+name = "Pope Pius XII"
+dates = "1876-1958"
+role = "Bishop of Rome, 1939-1958"
+summary = "Born Eugenio Pacelli; elected pope and took the name Pius XII."
+portrait = ""
+source = "https://www.vatican.va/content/pius-xii/en.html"
+
+[authors.john-xxiii]
+name = "Pope John XXIII"
+dates = "1881-1963"
+role = "Bishop of Rome, 1958-1963"
+summary = "Born Angelo Giuseppe Roncalli; elected pope and took the name John XXIII."
+portrait = ""
+source = "https://www.vatican.va/content/john-xxiii/en.html"
+
+[authors.paul-vi]
+name = "Pope Paul VI"
+dates = "1897-1978"
+role = "Bishop of Rome, 1963-1978"
+summary = "Born Giovanni Battista Montini; elected pope and took the name Paul VI."
+portrait = ""
+source = "https://www.vatican.va/content/paul-vi/en.html"
+
+[authors.john-paul-ii]
+name = "Pope John Paul II"
+dates = "1920-2005"
+role = "Bishop of Rome, 1978-2005"
+summary = "Born Karol Józef Wojtyła; elected pope and took the name John Paul II."
+portrait = ""
+source = "https://www.vatican.va/content/john-paul-ii/en.html"
+
+[authors.benedict-xvi]
+name = "Pope Benedict XVI"
+dates = "1927-2022"
+role = "Bishop of Rome, 2005-2013"
+summary = "Born Joseph Ratzinger; elected pope and took the name Benedict XVI."
+portrait = ""
+source = "https://www.vatican.va/content/benedict-xvi/en.html"
+
+[authors.francis]
+name = "Pope Francis"
+dates = "1936-2025"
+role = "Bishop of Rome, 2013-2025"
+summary = "Born Jorge Mario Bergoglio; elected pope and took the name Francis."
+portrait = ""
+source = "https://www.vatican.va/content/francesco/en.html"
+
+[authors.leo-xiv]
+name = "Pope Leo XIV"
+dates = "born 1955"
+role = "Bishop of Rome from 2025"
+summary = "Born Robert Francis Prevost; elected pope and took the name Leo XIV."
+portrait = ""
+source = "https://www.vatican.va/content/leo-xiv/en.html"

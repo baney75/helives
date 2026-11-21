@@ -1,0 +1,50 @@
+---
+title: "Dionysius, Bishop of Corinth"
+author: "dionysius-of-corinth"
+language: "Greek"
+translator: "Rev. B. P. Pratten"
+edition: "Ante-Nicene Fathers, Vol. 8 (1886), ed. Roberts, Donaldson and Coxe"
+source_url: "https://www.ccel.org/ccel/schaff/anf08.xml"
+license: "Public domain"
+license_basis: "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words: 503
+---
+
+# Dionysius, Bishop of Corinth
+
+## Dionysius, Bishop of Corinth.
+
+[a.d. 170.] Eusebius is almost diffuse in what he tells us of this Dionysius,[^dionysius-bishop-of-corinth-3709] “who was appointed over the church at Corinth, and imparted freely, not only to his own people, but to others, and those abroad also, the blessings of his divine labours.” He wrote “Catholic Epistles;” he addressed an epistle to the Spartans and the Athenians; and, as Eusebius says, Dionysius the Areopagite, the convert of St. Paul, was the first bishop of Athens.[^dionysius-bishop-of-corinth-3710] He wrote to the Nicomedians, refuting Marcion, and closely adhering to “the rule of faith.” In an epistle to the Gortynians and others in Crete, he praises Philip for his courageous ministry, and warns them against the heretics. He seems to recognise Palmas as bishop of Amastris and Pontus, and adds expositions of Scripture, and rules regarding marriage, its purity and sanctity. He also inculcates tenderness to penitent lapsers and backsliders. With Pinytus, bishop of the Gnossians, he corresponds on similar subjects; but Pinytus, while he thanks him and commends his clemency, evidently regards him as too much inclined to furnish “food for babes,” and counsels him to add “strong meat for those of full age.” He also writes to Chrysophora, his most faithful sister, imparting spiritual instruction.
+
+### Fragments from a Letter to the Roman Church.
+
+### I.
+
+For this has been your custom from the beginning, to do good to all the brethren in various ways, and to send resources to many churches which are in every city, thus refreshing the poverty of the needy, and granting subsidies to the brethren who are in the mines.[^dionysius-bishop-of-corinth-3711] Through the resources which ye have sent from the beginning, ye Romans, keep up the custom of the Romans handed down by the fathers, which your blessed Bishop Soter has not only preserved, but added to, sending a splendid gift to the saints, and exhorting with blessed words those brethren who go up to Rome, as an affectionate father his children.
+
+### II.
+
+From the Same Epistle.[^dionysius-bishop-of-corinth-3712]
+
+We passed this holy Lord’s day, in which we read your letter, from the constant reading of which we shall be able to draw admonition, even as from the reading of the former one you sent us written through Clement.
+
+### III.
+
+From the Same.
+
+Therefore you also have by such admonition joined in close union *the churches* that were planted by Peter and Paul, that of the Romans and that of the Corinthians: for both of them went[^dionysius-bishop-of-corinth-3713] to our Corinth, and taught us in the same way as they taught you when they went to Italy; and having taught you, they suffered martyrdom at the same time.[^dionysius-bishop-of-corinth-3714]
+
+### IV.
+
+From the Same.[^dionysius-bishop-of-corinth-3715]
+
+For I wrote letters when the brethren requested me to write. And these letters the apostles of the devil have filled with tares, taking away some things and adding others, for whom a woe is in store. It is not wonderful, then, if some have attempted to adulterate the Lord’s writings, when they have formed designs against those which are not such.[^dionysius-bishop-of-corinth-3716]
+
+[^dionysius-bishop-of-corinth-3709]: Book iv. cap. 24, from which these Fragments are collected. See Westcott, *On the Canon*, p. 206.
+[^dionysius-bishop-of-corinth-3710]: See Lightfoot, *Ap. Fathers*, part ii. vol. i. p. 555, where he corrects the reading και Πολύκαρπος.
+[^dionysius-bishop-of-corinth-3711]: [Routh (also on Pinytus and Soter), *R. S*., p. 177. This series, vol. vi. p. 102, note 3. Note also Lightfoot, *A. F*., part ii. vol. ii. p. 192, note 1; and Westcott, *Canon*, p. 206.]
+[^dionysius-bishop-of-corinth-3712]: [Comp. p. 758, note 8, *supra*. Also Ignatius, vol. i. p. 63, at note 2, this series.]
+[^dionysius-bishop-of-corinth-3713]: mss. “planted.”
+[^dionysius-bishop-of-corinth-3714]: The text is evidently corrupt.
+[^dionysius-bishop-of-corinth-3715]: [For the reply of Pinytus, and what is said by Eusebius of seven other epistles, see Routh, *R. S*., vol. i. pp. 181–184.]
+[^dionysius-bishop-of-corinth-3716]: i.e., of such importance or of such a character.

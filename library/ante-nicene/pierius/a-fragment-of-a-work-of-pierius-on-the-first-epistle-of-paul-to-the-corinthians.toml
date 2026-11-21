@@ -1,0 +1,41 @@
+[work]
+id = "pierius-a-fragment-of-a-work-of-pierius-on-the-first-epistle-of-paul-to-the-corinthians"
+title = "A Fragment of a Work of Pierius on the First Epistle of Paul to the Corinthians"
+author = "pierius"
+collection = "ante-nicene"
+order = 1120
+language = "Greek"
+edition = "Ante-Nicene Fathers, Vol. 6 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf06.xml"
+source_sha256 = "620c7626c3ba4120d55bfaf569da947b3d10b440dc72b2239be3cf1985a13a07"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 268
+
+[[section]]
+id = "translator-s-biographical-notice"
+title = "Translator's Biographical Notice."
+level = 1
+blocks = [
+  { t = "h", text = "Pierus of Alexandria.[^1265]" },
+  { t = "note", id = "1265", text = "[See Introductory Note, p. 143, *supra*; also p. 99, note 8, *supra*.]" },
+  { t = "h", text = "Translator’s Biographical Notice." },
+  { t = "p", text = "[a.d. 275.] Among the very eminent men who flourished near his own time, Eusebius mentions Pierius, a presbyter of Alexandria, and speaks of him as greatly renowned for his voluntary poverty, his philosophical erudition and his skill in the exposition of Scripture and in discoursing to the public assemblies of the Church.[^1266] He lived in the latter part of the third century, and seems to have been for a considerable period president of the Catechetical school at Alexandria. Jerome says that he was called *Origenes, junior*; and according to Photius, he shared in some of the errors of Origen, on such subjects especially as the doctrine of the Holy Ghost and the pre-existence of souls.[^1267] In his manner of life he was an ascetic. After the persecution under Galerius or Maximus he lived at Rome. He appears to have devoted himself largely to sacred criticism and the study of the text of Scripture; and among several treatises written by him, and extant in the time of Photius, we find mention made of one on the prophet Hosea. And, in addition to the *Commentary on the First Epistle to the Corinthians*,[^1268] Photius notices twelve books of his, and praises both their composition and their matter.[^1269]" },
+  { t = "note", id = "1266", text = "*Hist. Eccl*., vii. 32." },
+  { t = "note", id = "1267", text = "Perhaps only speculatively (see Frag. II. *infra*), not dogmatically. Compare Wordsworth’s Platonic *Ode on Immortality*.]" },
+  { t = "note", id = "1268", text = "Lardner (part ii. book i. chap. xxiv.) does not think that there was a commentary written by Pierius on this epistle, but only that the word of Paul, mentioned below, was expounded at length in some work or other by Pierius. Fabricius holds the opposite opinion.—Tr." },
+  { t = "note", id = "1269", text = "See Eusebius as above, Jerome in the preface to Hosea, *Photius*, cod. 118, 119; *Epiphanius*, 69, 2; *Lardner*, part ii. book i. chap. 24; &c." },
+]
+
+[[section]]
+id = "section-1"
+title = "Section I. A Fragment of a Work of Pierius on the First Epistle of Paul to the Corinthians."
+level = 1
+blocks = [
+  { t = "p", text = "[^1270] Origen, Dionysius, Pierius, Eusebius of Cæsareia, Didymus, and Apollinaris, have interpreted this epistle most copiously;[^1271] of whom Pierius, when he was expounding and unfolding the meaning of the apostle, and purposed to explain the words, *For I would that all men were even as I myself*,[^1272] added this remark: In saying this, Paul, without disguise, preaches celibacy.[^1273]" },
+  { t = "note", id = "1270", text = "This very brief quotation is preserved in Jerome’s Second Epistle to Pammachius." },
+  { t = "note", id = "1271", text = "*Latissime.*" },
+  { t = "note", id = "1272", text = "1 Cor. vii. 7." },
+  { t = "note", id = "1273", text = "Vol. iv. p. 243, edit. Benedictin. [No doubt he does, as did his Master, Christ, before him, and under the same limitations. Matt. xix. 12.]" },
+]

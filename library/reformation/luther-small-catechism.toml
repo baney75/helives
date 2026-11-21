@@ -1,0 +1,235 @@
+[work]
+id = "luther-small-catechism"
+title = "Luther's Small Catechism"
+short_title = "Small Catechism"
+author = "luther"
+collection = "reformation"
+order = 2
+date = "1529"
+language = "German"
+edition = "Philip Schaff, The Creeds of Christendom, with a History and Critical Notes, Vol. III: The Evangelical Protestant Creeds (New York: Harper & Brothers, 1877); text as reprinted in the sixth edition (1919), CCEL digitization"
+source_url = "https://www.ccel.org/ccel/schaff/creeds3.xml"
+source_sha256 = "756adf1ddd466d237221c76b99d25d55cab7e83d08914f28a289c3b90dccddf3"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1877 in the United States (Harper & Brothers); the CCEL file reproduces the sixth edition of 1919, also published in the United States before 1931"
+words = 3207
+summary = "Martin Luther's brief catechism for households on the Ten Commandments, the Creed, the Lord's Prayer, Baptism, Confession and the Lord's Supper, in the English Schaff prints."
+
+[[section]]
+id = "part-i-the-ten-commandments"
+title = "Part I. The Ten Commandments"
+level = 1
+blocks = [
+  { t = "h", text = "Dr. Martin Luther's Enchiridion, or Small Catechism." },
+  { t = "p", text = "*As they should be clearly and simply explained to every household by the head of the family.*" },
+  { t = "h", text = "The First Commandment." },
+  { t = "p", text = "*Thou shalt have no other gods.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should fear and love God, and trust in him, above all things." },
+  { t = "h", text = "The Second Commandment." },
+  { t = "p", text = "*Thou shalt not take the name of thy God in vain.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to curse, swear, conjure, lie, or deceive, by his name; but call upon it in every time of need, pray, praise and give thanks." },
+  { t = "h", text = "The Third Commandment." },
+  { t = "p", text = "*Thou shalt keep holy the Sabbath day.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to despise preaching and his Word, but deem it holy, and willingly hear and learn it." },
+  { t = "h", text = "The Fourth Commandment." },
+  { t = "p", text = "*Thou shalt honor thy father and thy mother.*[^28]" },
+  { t = "note", id = "28", text = "In the edition of 1542 the blessing is added: 'That thy days may be long upon the land which the Lord thy God giveth thee.'" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to despise nor provoke our parents and rulers, but honor, serve, obey, love, and esteem them." },
+  { t = "h", text = "The Fifth Commandment." },
+  { t = "p", text = "*Thou shalt not kill.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to do our neighbor any injury or harm in his body, but help and befriend him in all bodily troubles." },
+  { t = "h", text = "The Sixth Commandment." },
+  { t = "p", text = "*Thou shalt not commit adultery.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as to be chaste and pure in our words and deeds, and that husband and wife should love and honor each other." },
+  { t = "h", text = "The Seventh Commandment." },
+  { t = "p", text = "*Thou shalt not steal.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to take our neighbor's money or property, nor get it by false ware or dealing, but help him to improve and protect his property and livelihood." },
+  { t = "h", text = "The Eighth Commandment." },
+  { t = "p", text = "*Thou shalt not bear false witness against thy neighbor.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to belie, betray, or slander our neighbor, nor injure his character, but defend him, speak well of him, and make the best of all he does.[^30]" },
+  { t = "note", id = "30", text = "Or, 'Put the most charitable construction on all his actions.'—Edition of the Lutheran Board of Publications, Philadelphia." },
+  { t = "h", text = "The Ninth Commandment." },
+  { t = "p", text = "*Thou shall not covet thy neighbor's house.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to try to defraud our neighbor of his inheritance or home, nor obtain it under pretext of a legal right, but aid and assist him to keep it." },
+  { t = "h", text = "The Tenth Commandment." },
+  { t = "p", text = "*Thou shalt not covet thy neighbor's wife, nor his man-servant, nor his maid-servant, nor his cattle, nor any thing that is his own.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We should so fear and love God as not to detach, extort, or alienate from our neighbor his wife, servants, or cattle, but induce them to stay and do their duty." },
+  { t = "p", text = "What does God say about all these Commandments?" },
+  { t = "p", text = "He says this:" },
+  { t = "p", text = "*I the Lord, thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me, and showing mercy unto thousands of them that love me and keep my commandments.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "God threatens to punish all who transgress these Commandments: we should, therefore, fear his anger, and do nothing against such Commandments. But he promises grace and every blessing to all who keep them: we should, therefore, love and trust in him, and gladly obey his Commandments." },
+]
+
+[[section]]
+id = "part-ii-the-creed"
+title = "Part II. The Creed"
+level = 1
+blocks = [
+  { t = "p", text = "*As it should be clearly and simply explained to every household by the head of the family.*" },
+  { t = "h", text = "The First Article." },
+  { t = "h", text = "*Of Creation.*" },
+  { t = "p", text = "*I believe in God the Father Almighty, Maker of heaven and earth.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "I believe that God has created me and all that exists; that he has given and still preserves to me body and soul, eyes, ears, and all my limbs, my reason and all my senses; and also clothing and shoes, food and drink, house and home, wife and child, land, cattle, and all my property; that he provides me richly and daily with all the necessaries of life, protects me from all danger, and preserves and guards me against all evil; and all this out of pure paternal, divine goodness and mercy, without any merit or worthiness of mine; for all which I am in duty bound to thank, praise, serve, and obey him. This is most certainly true." },
+  { t = "h", text = "The Second Article." },
+  { t = "h", text = "*Of Redemption.*" },
+  { t = "p", text = "*And in Jesus Christ his only Son, our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary; suffered under Pontius Pilate; was crucified, dead, and buried; he descended into hell; the third day he rose again from the dead; he ascended into heaven, and sitteth on the right hand of God the Father Almighty; from thence he shall* *come to judge the quick and the dead.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "I believe that Jesus Christ, true God, begotten of the Father from eternity, and also true man, born of the Virgin Mary, is my Lord; who has redeemed me, a lost and condemned man, secured and delivered me [even][^32] from all sins, from death, and from the power of the devil, not with gold or silver, but with his holy, precious blood, and with his innocent sufferings and death; in order that I might be his own, live under him in his kingdom, and serve him in everlasting righteousness, innocence, and blessedness, even as he is risen from the dead, and lives and reigns forever. This is most certainly true." },
+  { t = "note", id = "32", text = "This *und* (which, if not a typographical error, must have the force of *und zwar*, even) is found in all the editions of Luther, but is now usually omitted as superfluous." },
+  { t = "h", text = "The Third Article." },
+  { t = "h", text = "*Of Sanctification.*" },
+  { t = "p", text = "*I believe in the Holy Ghost; one holy Christian*[^34] *Church; the Communion of Saints; the Forgiveness of Sins; the Resurrection of the Body; and the Life Everlasting. Amen.*" },
+  { t = "note", id = "34", text = "Luther omitted the word *Catholic*, and substituted for it *Christian*. The Heidelberg Catechism combines the two: '*allgemeine christliche Kirche*.'" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "I believe that I can not, by my own reason or strength, believe in Jesus Christ my Lord, or come to him; but the Holy Ghost has called me through the Gospel, enlightened me by his gifts, and sanctified and preserved me in the true faith; just as he calls, gathers, enlightens, and sanctifies the whole Christian Church on earth, and preserves it in union with Jesus Christ in the one true faith; in which Christian Church he daily forgives richly all my sins, and the sins of all believers; and will raise up me and all the dead at the last day, and will grant everlasting life to me and to all who believe in Christ. This is most certainly true." },
+]
+
+[[section]]
+id = "part-iii-the-lord-s-prayer"
+title = "Part III. The Lord's Prayer"
+level = 1
+blocks = [
+  { t = "p", text = "*As it should be clearly and simply explained to every household by the head of the family.*" },
+  { t = "p", text = "*Our Father, who art in heaven.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "God would thereby affectionately encourage us to believe that he is truly our Father, and that we are truly his children, so that we may cheerfully and with all confidence pray to him, even as dear children ask their dear father." },
+  { t = "h", text = "The First Petition." },
+  { t = "p", text = "*Hallowed be thy name.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "The name of God is indeed in itself holy; but we pray in this petition that it may be hallowed also by us." },
+  { t = "p", text = "How can this be done? Answer:" },
+  { t = "p", text = "When the Word of God is taught in its truth and purity, and we, as the children of God, lead holy lives accordingly. To this may our blessed Father in heaven help us! But whoever teaches and lives otherwise than as God's Word teaches, profanes the name of God among us. From this preserve us, heavenly Father!" },
+  { t = "h", text = "The Second Petition." },
+  { t = "p", text = "*Thy kingdom come.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "The kingdom of God comes indeed of itself, without our prayer; but we pray in this petition that it may come also to us." },
+  { t = "p", text = "How can this be done? Answer:" },
+  { t = "p", text = "When our heavenly Father gives us his Holy Spirit, so that by his grace we believe his holy Word, and live a godly life here in time, and hereafter in eternity." },
+  { t = "h", text = "The Third Petition." },
+  { t = "p", text = "*Thy will be done on earth, as it is in heaven.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "God's good, gracious will is done indeed without our prayer; but we pray in this petition that it may be done also by us." },
+  { t = "p", text = "How can this be done? Answer:" },
+  { t = "p", text = "When God breaks and brings to naught every evil counsel and will which would hinder us from hallowing the name of God, and prevent his kingdom from coming to us (such as the will of the devil, of the world, and of our own flesh); but makes us strong and steadfast in his Word and faith even unto our end: this is his gracious, good will." },
+  { t = "h", text = "The Fourth Petition." },
+  { t = "p", text = "*Give us this day our daily bread.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "God gives indeed, without our prayer, even to the wicked their daily bread; but we pray in this petition that he would make us sensible [of his benefits] and enable us to receive our daily bread with thanksgiving." },
+  { t = "p", text = "How can this be done? Answer:" },
+  { t = "p", text = "All that pertains to the nourishment and needs of the body, as drink, food, clothing, shoes, house. home, land, cattle, money, property, pious husband or wife, pious children, pious servants, pious and faithful rulers, good government, good seasons, peace, health, education, honor, good friends, trusty neighbors, and the like." },
+  { t = "h", text = "The Fifth Petition." },
+  { t = "p", text = "*And forgive us our debts, as we forgive our debtors.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We pray in this petition that our Father in heaven would not look upon our sins, nor on account of them deny our request; for we are not worthy of any thing for which we pray, and have not merited it; but that he would grant us all things through grace; for we daily sin much, and deserve nothing but punishment. We will, therefore, also on our part, heartily forgive and willingly do good to those who sin against us." },
+  { t = "h", text = "The Sixth Petition." },
+  { t = "p", text = "*And lead us not into temptation.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "God indeed tempts no one, but we pray in this petition that God would so guard and preserve us that the devil, the world, and our own flesh may not deceive us, nor lead us into misbelief, despair, and other great shame and vice; and that, though we may be thus tempted, we may nevertheless finally prevail and gain the victory." },
+  { t = "h", text = "The Seventh Petition." },
+  { t = "p", text = "*But deliver us from evil.*" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "We pray in this petition, as in a summary, that our Father in heaven may deliver us from all manner of evil—in body or soul, property or honor—and, at last, when our time comes, may grant us a happy end, and graciously take us from this world of sorrow to himself in heaven." },
+  { t = "h", text = "*Amen*.[^37]" },
+  { t = "note", id = "37", text = "Many modern editions insert the doxology before *Amen*, with this question: ,Wie lautet der Befchluß? Denn dein ist das Reich, und die Kraft, und die Herrlichkeit, in Ewigkeit. Amen.,—What is the conclusion? For thine is the kingdom, and the power, and the glory, forever. Amen.'" },
+  { t = "p", text = "What does this mean? Answer:" },
+  { t = "p", text = "That I should be sure that such petitions are pleasing to our Father in heaven, and are heard by him; for he himself has commanded us thus to pray, and has promised that he will hear us. Amen, Amen: that is, Yea, yea, so shall it be." },
+]
+
+[[section]]
+id = "part-iv-the-sacrament-of-holy-baptism"
+title = "Part IV. The Sacrament of Holy Baptism"
+level = 1
+blocks = [
+  { t = "p", text = "*As it should be clearly and simply explained to every household by the head of the family.*" },
+  { t = "h", text = "I." },
+  { t = "p", text = "What is Baptism? Answer:" },
+  { t = "p", text = "Baptism is not simply common water, but it is the water comprehended in God's command, and connected with God's Word." },
+  { t = "p", text = "What is that Word of God? Answer:" },
+  { t = "p", text = "It is that which our Lord Christ speaks in the last chapter of Matthew [xxviii. 19]:" },
+  { t = "p", text = "'*Go ye* [*into all the world*]*, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost.*'" },
+  { t = "h", text = "II." },
+  { t = "p", text = "What does Baptism give, or of what use is it? Answer:" },
+  { t = "p", text = "It worketh forgiveness of sins, delivers from death and the devil, and gives everlasting salvation to all who believe, as the Word and promise of God declare." },
+  { t = "p", text = "What are such words and promises of God? Answer:" },
+  { t = "p", text = "Those which our Lord Christ speaks in the last chapter of Mark:" },
+  { t = "p", text = "'*He that believeth and is baptized,* *shall be saved; but he that believeth not, shall be damned.*'" },
+  { t = "h", text = "III." },
+  { t = "p", text = "How can water do such great things? Answer:" },
+  { t = "p", text = "It is not water, indeed, that does it, but the Word of God which is with and in the water, and faith, which trusts in the Word of God in the water. For without the Word of God the water is nothing but water, and no baptism; but with the Word of God it is a baptism—that is, a gracious water of life and a washing of regeneration in the Holy Ghost, as St. Paul says, Titus, third chapter [iii. 5–7]:" },
+  { t = "p", text = "'*By the washing of regeneration, and renewing of the Holy Ghost, which he shed on. us abundantly through Jesus Christ our Saviour; that being justified by his grace, we should be made heirs according to the hope of eternal life.*' *This is certainly true.* [Or, '*This is a faithful saying,*' ver. 8.]" },
+  { t = "h", text = "IV." },
+  { t = "p", text = "What does such baptising with water signify? Answer:" },
+  { t = "p", text = "It signifies that the old Adam in us is to be drowned by daily sorrow and repentance, and perish with all sins and evil lusts; and that the new man should daily come forth again and rise, who shall live before God in righteousness and purity forever." },
+  { t = "p", text = "Where is it so written? Answer:" },
+  { t = "p", text = "St. Paul, in the 6th chapter of Romans, says:" },
+  { t = "p", text = "'*We are buried with Christ by baptism into death; that like as he was raised up from the dead by the glory of the Father, even, so we also should walk in newness of life.*'" },
+]
+
+[[section]]
+id = "how-the-unlearned-should-be-taught-to-confess"
+title = "How the Unlearned Should Be Taught to Confess"
+level = 1
+blocks = [
+  { t = "h", text = "HOW THE UNLEARNED SHOULD BE TAUGHT TO CONFESS.[^40]" },
+  { t = "note", id = "40", text = "This section on Confession appears first in the third edition before Part V., and preparatory to it. So also in the editions of 1539 and 1542. (See Harnack, p. lvi. and p. 53.) In later editions it is enlarged (by inserting the passages Matt. xvi. 19 and John xx. 22, 23, and other additions), and is counted as a separate Part (V.) on *The Office of the Keys* (Von Der Beichte oder dem Amt Der Schlüßel), or added as an Appendix after Part V. See Vol. I. § 43, p. 248." },
+  { t = "p", text = "What sins should we confess? Answer:" },
+  { t = "p", text = "Before God we should accuse ourselves of all manner of sins, even of those which we do not ourselves perceive; as we do in the Lord's Prayer. But to the confessor we should confess those sins only which we know and feel in our hearts." },
+  { t = "p", text = "Which are these? Answer:" },
+  { t = "p", text = "Here consider your condition, according to the Ten Commandments, whether you are a father or mother, a son or daughter, a master or mistress, a man-servant or maid-servant; whether you have been disobedient, unfaithful, lazy, angry, unchaste, spiteful; whether you have injured any one by words or deeds; whether yon have stolen, neglected, or wasted any thing, or done any harm." },
+  { t = "p", text = "Show me a short way to confess. Answer:[^42]" },
+  { t = "note", id = "42", text = "This and the following forms of Confession and Absolution are omitted in the translations of the 'Evang. Luth. Ministerium of Pennsylvania,' and even in the 'Church Book' of the General Council of the Ev. Luth. Church in America (1873). The reason of the omission is obvious." },
+  { t = "h", text = "Speak thus to the confessor:" },
+  { t = "p", text = "Worthy, dear sir, I beseech you to hear my confession, and absolve me for God's sake." },
+  { t = "h", text = "Say:" },
+  { t = "p", text = "I, poor sinner, confess before God that I am guilty of all manner of sin; in particular I confess before you that I am a man-servant, maid-servant, etc.; but, alas ! I serve my master unfaithfully, for I have not done what they told me; I have moved them to anger and to cursing, have neglected my duty, and let things go to waste; I have also been immodest in words and deeds, have quarreled with my equals, have grumbled and sworn at my wife, etc. For all this I am sorry, and plead for mercy; I will do so no more." },
+  { t = "h", text = "A master or mistress should say thus:" },
+  { t = "p", text = "In particular I confess before you, that I have not brought up my child, household, and wife to the glory of God; I have cursed, have set a bad example with unchaste words and actions, have injured my neighbor, have slandered, overcharged, given spurious goods and short measure." },
+  { t = "p", text = "[And so on with any thing he has done contrary to the commands of God, and to his position, etc. If, however, the conscience of any one of you is not troubled with such or greater sins, do not worry, or hunt up, or invent other sins, and thereby make a torture out of confession, but mention one or two you know of Thus:]" },
+  { t = "p", text = "In particular, I confess that I have once sworn; also, I have once used improper language, once neglected some duty, etc." },
+  { t = "p", text = "[And then stop. But if you should know of no sin (which, however, is hardly possible), then mention none in particular, but receive absolution after the general confession which you make to God before the confessor.]" },
+  { t = "h", text = "Then shall the father confessor say:" },
+  { t = "p", text = "God be merciful unto thee, and strengthen thy faith. Amen." },
+  { t = "h", text = "Further:" },
+  { t = "p", text = "Dost thou believe that my forgiveness is the forgiveness of God?" },
+  { t = "h", text = "Answer:" },
+  { t = "h", text = "Yes, dear sir." },
+  { t = "h", text = "Then let him say:" },
+  { t = "p", text = "As thou believest, so be it unto thee. And I, by command of our Lord Jesus Christ, forgive thee thy sins in the name of the Father, and of the Son, and of the Holy Ghost. Amen." },
+  { t = "p", text = "Depart in peace." },
+  { t = "p", text = "[Those, however, who are much troubled in conscience, or who are in distress or temptation, a father confessor will know how to comfort with Scripture passages, and stir up to faith. This is only a general method of confession for the unlearned.]" },
+]
+
+[[section]]
+id = "part-v-the-sacrament-of-the-altar"
+title = "Part V. The Sacrament of the Altar"
+level = 1
+blocks = [
+  { t = "h", text = "**Part V.**[^44] THE SACRAMENT OF THE ALTAR," },
+  { t = "note", id = "44", text = "In the 'Book of Concord,' and in many editions of the Catechism, this section is numbered as Part VI., and the preceding insertion, or appendix, as Part V." },
+  { t = "p", text = "*As it should be clearly and simply explained to every household by the head of the family.*" },
+  { t = "p", text = "What is the Sacrament of the Altar? Answer:" },
+  { t = "p", text = "It is the true body and blood of our Lord Jesus Christ, under the bread and wine, given unto us Christians to eat and to drink, as it was instituted by Christ himself." },
+  { t = "p", text = "Where is it so written? Answer:" },
+  { t = "p", text = "The holy Evangelists, Matthew, Mark, and Luke, together with St. Paul, write thus:" },
+  { t = "p", text = "'*Our Lord Jesus Christ, the same night in which he was betrayed, took bread/ and when he had given thanks, he brake it, and gave it to the disciples, and said, Take, eat; this is my body, which is given for you; this do, in remembrance of me.*" },
+  { t = "p", text = "'*After the same manner also he took the cup, when he had supped, gave thanks, and gave it to them, saying, Drink ye all of it: this cup is the New Testament in my blood, which is shed for you, for the remission of sins: this do ye, as oft as ye drink it, in remembrance of me!*" },
+  { t = "p", text = "What is the use, then, of such eating and drinking? Answer:" },
+  { t = "p", text = "It is pointed out to us in the words: '*Given, and shed for you, for the remission of sins*.' Namely, through these words, the remission of sins, life and salvation are given us in the Sacrament: for where there is remission of sins, there are also life and salvation." },
+  { t = "p", text = "How can bodily eating and drinking do such great things? Answer:" },
+  { t = "p", text = "Eating and drinking, indeed, do not do them, but the words which stand here: '*Given, and shed for you, for the remission of sins.*' Which words, besides the bodily eating and drinking, are the main point in the sacrament; and he who believes these words has that which they declare and mean, namely, forgiveness of sins." },
+  { t = "p", text = "Who, then, receives this Sacrament worthily? Answer:" },
+  { t = "p", text = "Fasting and bodily preparation are, indeed, a good external discipline, but he is truly worthy and well prepared who has faith in these words: '*Given, and shed for you, for the remission of sins.*' But he who does not believe these words, or who doubts, is unworthy and unfit, for the words '*for you*' require truly believing hearts." },
+]

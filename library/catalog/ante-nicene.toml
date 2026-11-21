@@ -1,0 +1,474 @@
+[[collection]]
+id = "ante-nicene"
+title = "Ante-Nicene Fathers"
+order = 4
+summary = "Christian writings before the Council of Nicaea (A.D. 325), from the American edition of the Ante-Nicene Fathers edited by Roberts, Donaldson and Coxe."
+
+[authors.justin-martyr]
+name = "Justin Martyr"
+dates = "110-165"
+role = "Apologist and martyr"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.irenaeus]
+name = "Irenæus"
+dates = "120-202"
+role = "Bishop of Lyons"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf01.xml"
+
+[authors.tatian]
+name = "Tatian"
+dates = "110-172"
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf02.xml"
+
+[authors.theophilus-of-antioch]
+name = "Theophilus of Antioch"
+dates = "115-168-181"
+role = "Bishop of Antioch"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf02.xml"
+
+[authors.athenagoras]
+name = "Athenagoras"
+dates = "177"
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf02.xml"
+
+[authors.clement-of-alexandria]
+name = "Clement of Alexandria"
+dates = "153-193-217"
+role = "Teacher at Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf02.xml"
+
+[authors.tertullian]
+name = "Tertullian"
+dates = "145-220"
+role = "Presbyter of Carthage"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf03.xml"
+
+[authors.pseudo-tertullian]
+name = "Pseudo-Tertullian"
+dates = ""
+role = "Works once attributed to Tertullian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf03.xml"
+
+[authors.minucius-felix]
+name = "Minucius Felix"
+dates = "210"
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf04.xml"
+
+[authors.commodianus]
+name = "Commodianus"
+dates = "240"
+role = "Christian poet"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf04.xml"
+
+[authors.origen]
+name = "Origen"
+dates = "185-230-254"
+role = "Teacher at Alexandria and Cæsarea"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf04.xml"
+
+[authors.hippolytus]
+name = "Hippolytus"
+dates = "170-236"
+role = "Bishop of Portus"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf05.xml"
+
+[authors.pontius-the-deacon]
+name = "Pontius the Deacon"
+dates = "200-258"
+role = "Deacon of Carthage, biographer of Cyprian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf05.xml"
+
+[authors.cyprian]
+name = "Cyprian"
+dates = ""
+role = "Bishop of Carthage"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf05.xml"
+
+[authors.pseudo-cyprian]
+name = "Pseudo-Cyprian"
+dates = ""
+role = "Works once attributed to Cyprian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf05.xml"
+
+[authors.caius]
+name = "Caius"
+dates = "180-217"
+role = "Presbyter of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf05.xml"
+
+[authors.novatian]
+name = "Novatian"
+dates = "210-280"
+role = "Presbyter of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf05.xml"
+
+[authors.gregory-thaumaturgus]
+name = "Gregory Thaumaturgus"
+dates = "205-240-265"
+role = "Bishop of Neocæsarea"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.dionysius-of-alexandria]
+name = "Dionysius of Alexandria"
+dates = "200-265"
+role = "Bishop of Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.julius-africanus]
+name = "Julius Africanus"
+dates = "200-232-245"
+role = "Chronographer"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.anatolius]
+name = "Anatolius"
+dates = "230-270-280"
+role = "Bishop of Laodicea"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.alexander-of-cappadocia]
+name = "Alexander of Cappadocia"
+dates = "170-233-251"
+role = "Bishop of Jerusalem"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.theognostus]
+name = "Theognostus of Alexandria"
+dates = ""
+role = "Teacher at Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.pierius]
+name = "Pierius"
+dates = "275"
+role = "Presbyter of Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.theonas]
+name = "Theonas"
+dates = "300"
+role = "Bishop of Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.phileas]
+name = "Phileas"
+dates = "307"
+role = "Bishop of Thmuis"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.pamphilus]
+name = "Pamphilus"
+dates = "309"
+role = "Presbyter of Cæsarea"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.malchion]
+name = "Malchion"
+dates = "270"
+role = "Presbyter of Antioch"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.archelaus]
+name = "Archelaus"
+dates = "277"
+role = "Bishop in Mesopotamia"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.alexander-of-lycopolis]
+name = "Alexander of Lycopolis"
+dates = "301"
+role = "Writer against the Manichæans"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.peter-of-alexandria]
+name = "Peter of Alexandria"
+dates = "260-300-311"
+role = "Bishop of Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.alexander-of-alexandria]
+name = "Alexander of Alexandria"
+dates = "273-313-326"
+role = "Bishop of Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.methodius]
+name = "Methodius"
+dates = "260-312"
+role = "Bishop of Olympus"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.arnobius]
+name = "Arnobius"
+dates = "297-303"
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf06.xml"
+
+[authors.lactantius]
+name = "Lactantius"
+dates = "260-330"
+role = "Rhetorician and apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf07.xml"
+
+[authors.venantius]
+name = "Venantius"
+dates = ""
+role = "Christian poet"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf07.xml"
+
+[authors.asterius-urbanus]
+name = "Asterius Urbanus"
+dates = ""
+role = "Writer against the Montanists"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf07.xml"
+
+[authors.victorinus]
+name = "Victorinus"
+dates = ""
+role = "Bishop of Petau"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf07.xml"
+
+[authors.dionysius-of-rome]
+name = "Dionysius of Rome"
+dates = "259-269"
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf07.xml"
+
+[authors.council-of-nicaea]
+name = "The First Council of Nicæa"
+dates = "325"
+role = "First Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf07.xml"
+
+[authors.pseudo-clement]
+name = "Pseudo-Clement"
+dates = ""
+role = "Works once attributed to Clement of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.zephyrinus]
+name = "Zephyrinus"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.callistus]
+name = "Callistus"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.urban-i]
+name = "Urban I"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.pontianus]
+name = "Pontianus"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.anterus]
+name = "Anterus"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.fabian]
+name = "Fabian"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.jacob-of-serug]
+name = "Jacob of Serug"
+dates = ""
+role = "Syriac poet and bishop"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.simeon-metaphrastes]
+name = "Simeon Metaphrastes"
+dates = ""
+role = "Byzantine hagiographer"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.moses-of-chorene]
+name = "Moses of Chorene"
+dates = ""
+role = "Armenian historian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.bardesan]
+name = "Bardesan"
+dates = ""
+role = "Syriac writer"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.mara-bar-serapion]
+name = "Mara bar Serapion"
+dates = ""
+role = "Syriac letter writer"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.quadratus]
+name = "Quadratus"
+dates = ""
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.aristo-of-pella]
+name = "Aristo of Pella"
+dates = "140"
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.melito]
+name = "Melito"
+dates = "160-170-177"
+role = "Bishop of Sardis"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.hegesippus]
+name = "Hegesippus"
+dates = "170"
+role = "Church historian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.dionysius-of-corinth]
+name = "Dionysius of Corinth"
+dates = "170"
+role = "Bishop of Corinth"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.rhodon]
+name = "Rhodon"
+dates = "180"
+role = "Writer against Marcion"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.maximus-of-jerusalem]
+name = "Maximus of Jerusalem"
+dates = "185-196"
+role = "Bishop of Jerusalem"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.claudius-apollinaris]
+name = "Claudius Apollinaris"
+dates = "160-180"
+role = "Bishop of Hierapolis"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.polycrates]
+name = "Polycrates"
+dates = "130-196"
+role = "Bishop of Ephesus"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.theophilus-of-caesarea]
+name = "Theophilus of Cæsarea"
+dates = "180"
+role = "Bishop of Cæsarea"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.serapion-of-antioch]
+name = "Serapion"
+dates = "c. 190-200-211"
+role = "Bishop of Antioch"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.apollonius]
+name = "Apollonius"
+dates = "211"
+role = "Writer against the Montanists"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.pantaenus]
+name = "Pantænus"
+dates = "182-192-212"
+role = "Teacher at Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.pseudo-irenaeus]
+name = "Pseudo-Irenæus"
+dates = ""
+role = "Fragments once attributed to Irenæus"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf08.xml"
+
+[authors.aristides]
+name = "Aristides"
+dates = ""
+role = "Apologist"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/anf09.xml"

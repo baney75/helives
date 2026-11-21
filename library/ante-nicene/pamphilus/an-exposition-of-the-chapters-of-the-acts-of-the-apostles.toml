@@ -1,0 +1,118 @@
+[work]
+id = "pamphilus-an-exposition-of-the-chapters-of-the-acts-of-the-apostles"
+title = "An Exposition of the Chapters of the Acts of the Apostles"
+author = "pamphilus"
+collection = "ante-nicene"
+order = 1170
+language = "Greek"
+edition = "Ante-Nicene Fathers, Vol. 6 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf06.xml"
+source_sha256 = "620c7626c3ba4120d55bfaf569da947b3d10b440dc72b2239be3cf1985a13a07"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 2422
+
+[[section]]
+id = "translator-s-biographical-notice"
+title = "Translator's Biographical Notice."
+level = 1
+blocks = [
+  { t = "h", text = "Pamphilus." },
+  { t = "h", text = "Translator’s Biographical Notice." },
+  { t = "p", text = "[a.d. 309.] According to the common account Pamphilus was a native of Berytus, the modern Beirût, and a member of a distinguished Phœnician family. Leaving Berytus, however, at an early period, he repaired to Alexandria and studied under Pierius, the well-known head of the Catechetical school there. At a subsequent period he went to the Palestinian Cæsareia, and was made a presbyter of the Church there under Bishop Agapius. In course of the persecutions of Diocletian he was thrown into prison by Urbanus, the governor of Palestine. This took place towards the end of the year 307 a.d., and his confinement lasted till the beginning of the year 309, when he suffered martyrdom by order of Firmilianus, who had succeeded Urbanus in the governorship of the country. During his imprisonment he enjoyed the affectionate attendance of Eusebius, the Church historian, and the tender friendship which subsisted long between the two is well known. It was as a memorial of that intimacy that Eusebius took the surname of Pamphili. Pamphilus appears to have given himself up with great enthusiasm to the promotion of Biblical studies, and is spoken of as the founder of a theological school in which special importance was attached to exposition. He busied himself also with the transcription and dissemination of the Scriptures and other writings, such as those of Origen, of whom he was a devoted follower. At Cæsareia he established a great public library,[^1344] consisting mainly of ecclesiastical writers; and among the treasures of that library are mentioned the *Tetrapla* and *Hexapla* of Origen, from which, with the help of Eusebius, he produced a new and revised edition of the Septuagint. There is a statement in Jerome[^1345] to the effect that, though he was so great a student of the writings of others, Pamphilus, through an excess of modesty, wrote no work of his own, with exception of some letters to his friends.[^1346] But there is a work bearing the title of *An Exposition of the Chapters of the Acts of the Apostles*, which is attributed by many to him, although others ascribe it to Euthalius, bishop of Sulce. And besides this there is also the *Apology for Origen*, of which, according to the statement of Photius,[^1347] the first five books were compiled by Pamphilus, in conjunction with Eusebius, during the period of his imprisonment, the sixth book being added by Eusebius after his friend’s martyrdom. Of this *Apology* we possess now only the first book, and that, too, only in the faulty Latin version of Rufinus. There are repeated and warmly eulogistic references to Pamphilus in the *Ecclesiastical History* of Eusebius. Thus he speaks of him as *that holy martyr of our day*;[^1348] and as *that most eloquent man, and that philosopher truly such in his life*;[^1349] and again, as *that most admirable man of our times, that glory of the church of Cæsareia*.[^1350] He devotes the eleventh chapter of the eighth book also to a notice of Pamphilus and other martyrs. And besides all this he wrote a separate life of his friend, in three books, of which, however, all has perished, with exception of a few disputed fragments.[^1351]" },
+  { t = "note", id = "1344", text = "[Another glorious product of the school of Alexandria.]" },
+  { t = "note", id = "1345", text = "*Απολ. χοντρ. Ρυφ*., βοοκ ι. νυμ. 9, Ωορκσ, ιι. π. 465." },
+  { t = "note", id = "1346", text = "*Proprii operis nihil omnino scripsit, exceptis epistolis quas ad amicos forte mittebat; in tantum se humiltate dejecerat.*" },
+  { t = "note", id = "1347", text = "*Bibl. Cod*., cxviii. p. 295." },
+  { t = "note", id = "1348", text = "*Ibid*., vi. 32." },
+  { t = "note", id = "1349", text = "*Ibid*., vii. 32." },
+  { t = "note", id = "1350", text = "*Ibid*., viii. 13." },
+  { t = "note", id = "1351", text = "[Evidently he impressed Eusebius as an extraordinary man in an age of colossal minds, and we must lament the loss of his writings.]" },
+]
+
+[[section]]
+id = "an-exposition-of-the-chapters-of-the"
+title = "An Exposition of the Chapters of the Acts of the Apostles."
+level = 1
+blocks = [
+  { t = "p", text = "An Exposition of the Chapters of the Acts of the Apostles.[^1352]" },
+  { t = "note", id = "1352", text = "This ἔκθεσιςwas edited under the name of *Euthalius, Bishop of Sulce*, towards the end of the preceding century, by Laurentius Zacagnius, in the collection of *Monumenta Vetera*, p. 428, published at Rome. Fabricius also compared the edition of Montfaucon with the Roman. This collation is added here.—Migne." },
+  { t = "p", text = "Having had ourselves the advantage of the method and model received from our fathers and teachers, we attempt, in a modest way, to give these in this exposition of the chapters, entreating your forgiveness for the rashness of such an endeavour in us who are young in point both of years and of study,[^1353] and looking to have the indulgence[^1354] of every one who reads this writing in prayer on our behalf. We make this exposition, therefore, after the history of Luke, the evangelist and historian. And, accordingly, we have indicated whole chapters by the letters of the alphabet,[^1355] and their subdivisions into parts we have noted by means of the asterisk.[^1356]" },
+  { t = "note", id = "1353", text = "The text is νέοι χρόνῳ τε καὶ μαθημάτων, ἑκάστου, &c.; for which Euthal., χρόνων τε καὶ μαθημάτων παρ᾽ ὑμῶν ἑκάστου." },
+  { t = "note", id = "1354", text = "συμπεριφορὰν κομιζόμενοι." },
+  { t = "note", id = "1355", text = "But Euthal., διὰ μὲν τοῦ μέλανος…διὰ δὲ τοῦ κινναβάρεως, i.e., by the different colours of black and vermilion." },
+  { t = "note", id = "1356", text = "These marks are wholly wanting in the Coislin Codex, from which Montfaucon edited the piece. But they are found in the Vatican Codex.—Tr." },
+  { t = "p", text = "A. Of Christ’s teaching after His resurrection, and of His appearing to the disciples, and of the promise of the gift of the Holy Ghost, and of the spectacle and manner of Christ’s assumption.[^1357]" },
+  { t = "note", id = "1357", text = "Euthal. adds, καὶ περὶ τῆς ἐνδόξου καὶ δευτέρας αὐτοῦ παρουσίας, i.e., and of His glorious and second coming." },
+  { t = "p", text = "B. Peter’s discourse to those who were made disciples, on the subject of the death and reprobation[^1358] of Judas;[^1359] * in this chapter we have also the section on the substitution of Matthias, who was elected by lot through the grace of God with prayer." },
+  { t = "note", id = "1358", text = "ἀποβολῆς." },
+  { t = "note", id = "1359", text = "But Euthal. ἀποστολῆς, *apostleship.*" },
+  { t = "p", text = "C. Of the divine descent[^1360] of the Holy Ghost on the day of Pentecost which lighted on them who believed. In this we have also * the instruction delivered by Peter, and * passages from the prophets on the subject, and * on the passion and resurrection and assumption of Christ, and the gift of the Holy Ghost; also * of the faith of those present, and their salvation by baptism; and, further, * of the unity of spirit pervading the believers and promoting the common good, and of the addition made to their number." },
+  { t = "note", id = "1360", text = "ἐπιφοιτήσεως." },
+  { t = "p", text = "D. Of the healing in (the name of) Christ of the man lame from his birth; and of the discourse[^1361] of Peter, in which he reasons and sympathizes and counsels with respect to his[^1362] salvation. And here we have * the interposition[^1363] of the chief priests through jealousy of what had taken place, and their judgment on the miracle, and Peter’s confession[^1364] of the power and grace of Christ. Also the section on * the unbelieving chief priests, commanding that they should not speak boldly in the name of Christ,[^1365] and of the dismissal[^1366] of the apostles. Then * the thanksgivings offered up by the Church for the faithful constancy of the apostles." },
+  { t = "note", id = "1361", text = "κατηχήσεως." },
+  { t = "note", id = "1362", text = "But Euthal., αὐτῶν, *their.*" },
+  { t = "note", id = "1363", text = "ἐπιστασία." },
+  { t = "note", id = "1364", text = "Euthal. inserts περὶ ἀπειλῆς, *and of the threatening of the chief priests.*" },
+  { t = "note", id = "1365", text = "ἐπὶ τῶ ὀνόματι; but Euthal., ἐπὶ τὸ ὄνομα." },
+  { t = "note", id = "1366", text = "Reading ἀνέσεως with Euthal., instead of ἀνανεώσεως." },
+  { t = "p", text = "E. Of the harmonious and universal fellowship of the believers; and also * of Ananias and Sapphira and their miserable end." },
+  { t = "p", text = "F. Of the apostles being cast into prison, and led out of it by night by the angel of the Lord, who enjoined them to preach Jesus without restraint; and * of the fact that, on the following day, the chief priests apprehended them again, and, after scourging them, sent them away with the charge not to teach any longer. Then * the trusty opinion of Gamaliel touching the apostles, together with certain examples and proofs." },
+  { t = "p", text = "G. Of the election of the seven deacons." },
+  { t = "p", text = "H. The rising and slanderous information of the Jews against Stephen, and his address concerning the covenant of God with Abraham, and concerning the twelve patriarchs. Also the account of the famine and the buying of corn, and the mutual recognition of the sons of Jacob, and of the birth of Moses and the appearance of God[^1367] to Moses, which took place at Mount Sinai. * Also of the exodus and calf-making of Israel (and other matters), up to the times of Solomon and the building of the temple. * Then the acknowledgment of the supercelestial glory of Jesus Christ which was revealed to Stephen himself, on account of which Stephen was himself stoned, and fell asleep piously." },
+  { t = "note", id = "1367", text = "θεοφανεία." },
+  { t = "p", text = "I. Of the persecution of the Church and the burial of Stephen; also * of the healing of many in Samaria by Philip the apostle." },
+  { t = "p", text = "J. Of Simon Magus, who believed and was baptized with many others; also * of the sending of Peter and John to them, and their praying for the descent of the Holy Ghost upon the baptized." },
+  { t = "p", text = "K. That the participation of the Holy Ghost was not given[^1368] for money,[^1369] nor to hypocrites, but to saints by faith; also * of the hypocrisy and the reproof of Simon." },
+  { t = "note", id = "1368", text = "ἐδίδοτο; Euthal., δίδοται is given." },
+  { t = "note", id = "1369", text = "ὅτι οὐκ ἀργυρίου; Euthal., οὐ δι᾽ ἀργυρίου." },
+  { t = "p", text = "L. That the Lord helps the good and the believing on the way to salvation, as is shown from the instance of the eunuch." },
+  { t = "p", text = "M. Of the divine call that came from heaven for Paul to the apostleship of Christ; also * of the healing and the baptism of Paul by the hand of Ananias, in accordance with the revelation from God, and of his boldness of speech and his association with the apostles by the instrumentality of Barnabas.[^1370]" },
+  { t = "note", id = "1370", text = "Euthal., διὰ Βαρνάβαν, *on Barnabas’s account.*" },
+  { t = "p", text = "N. Of the paralytic Æneas who was cured by Peter at Lydda. Also * the account of Tabitha, the friend of widows, whom Peter raised from the dead by means of prayer in Joppa." },
+  { t = "p", text = "O. Of Cornelius, and what the angel said to him. Also what was spoken[^1371] to Peter from heaven with respect to the calling of the Gentiles. Then * that Peter, on being summoned, came to Cornelius. * The repetition by Cornelius of the things which the angel said[^1372] to Cornelius himself. * Peter’s instruction of them in Christ, and the gift of τ῾ε Holy Ghost upon those who heard him, and how those who believed from among the Gentiles were baptized there." },
+  { t = "note", id = "1371", text = "Euthal. inserts πάλιν, *again.*" },
+  { t = "note", id = "1372", text = "The text is ὧν εἶπεν ὁ ἄγγελος, &c. But Euthal., ὧν ὁ ἄγγελος ἐπεμαρτύρησε καὶ ὑφηγήσατο, *which the angel testified and showed.*" },
+  { t = "p", text = "P. That Peter recounts to the apostles who contended with him[^1373] all the things that had happened in order and separately. * Then the sending of Barnabas to the brethren in Antioch." },
+  { t = "note", id = "1373", text = "διακριθεῖσι πρὸς αὐτόν." },
+  { t = "p", text = "Q. The prophecy of Agabus respecting the famine in the world,[^1374] and the liberal relief sent to the brethren in Jerusalem." },
+  { t = "note", id = "1374", text = "The text gives οἰκουμενικῆς; Euthal., οἰκουμένης." },
+  { t = "p", text = "R. The slaying of the Apostle James. * Also the apprehension of Peter by Herod, and the account of the manner in which the angel by divine command delivered him from his bonds, and how Peter, after showing himself to the disciples by night, quietly withdrew. Also of the punishment of the keepers, and then of the miserable and fatal overthrow[^1375] of the impious Herod." },
+  { t = "note", id = "1375", text = "The text gives κατασφαγῆς; Euthal., καταστροφῆς." },
+  { t = "p", text = "S. The sending of Barnabas and Paul by the Holy Ghost to Cyprus. * The things which he did[^1376] there in the name of Christ on Elymas the sorcerer." },
+  { t = "note", id = "1376", text = "Euthal., εἰργάσαντο, *they did.*" },
+  { t = "p", text = "T. Paul’s admirable[^1377] exposition of the truth concerning Christ, both from the law and from the prophets in their order, both historical and evangelical; * his use both of the confuting and the argumentative mode of discourse on the subject of the transference of the word of preaching to the Gentiles, and of their persecution and their arrival at Iconium." },
+  { t = "note", id = "1377", text = "εὐθαλής." },
+  { t = "p", text = "U. How, when they had preached Christ in Iconium, and many had believed, the apostles were persecuted." },
+  { t = "p", text = "V. Of the man lame from his birth in Lystra who was healed by the apostles; on account of which they were taken by the people of the place for gods who had appeared on earth. After that, however, Paul is stoned there by the neighbouring people." },
+  { t = "p", text = "W. That according to the decree and judgment of the apostles, the Gentiles who believe ought not to be circumcised. Here, also, is the epistle of the apostles themselves to those from among the Gentiles, on the subject of the things from which they should keep themselves.[^1378] * The dissension of Paul with Barnabas on account of Mark." },
+  { t = "note", id = "1378", text = "Reading φυλακτέων with Euthal., instead of φυλακέων." },
+  { t = "p", text = "X. Of the teaching of Timothy, and of the coming of Paul into Macedonia according to revelation. * Of the faith and salvation of a certain woman Lydia, and * of the cure of the damsel having a spirit of divination, on account of which the masters of the damsel cast Paul into prison; and * of the earthquake and miracle which happened there; and how the jailer believed and was baptized forthwith that same night with all his house.[^1379] * That the apostles on being besought went out from the prison." },
+  { t = "note", id = "1379", text = "The text gives πανεύτιος; Euthal., πανέστιος. Montfaucon reads πανοικί." },
+  { t = "p", text = "Y. Of the tumult that arose in Thessalonica on account of their preaching, and of the flight of Paul to Berea, and thence to Athens." },
+  { t = "p", text = "Z. Of the inscription on the altar at Athens, and of the philosophic preaching and piety of Paul." },
+  { t = "p", text = "AA. Of Aquila and Priscilla, and the unbelief of the Corinthians, and of the good-will of God towards them according to fore-knowledge revealed to Paul. Also * of Priscus,[^1380] the chief ruler of the synagogue, who believed with certain others and was baptized. And * that a tumult being stirred up in Corinth, Paul departed; and coming to Ephesus, and having discoursed there, he left it. * And concerning Apollos, an eloquent man and a believer." },
+  { t = "note", id = "1380", text = "But Euthal., Κρίσπου, *Crispus.*" },
+  { t = "p", text = "BB. Of baptism and the gift of the Holy Ghost conferred by means of the prayer of Paul on those who believed in Ephesus, and of the healing of the people. * Of the sons of Sceva, and as to its not being meet to approach[^1381] those who have become unbelieving and unworthy of the faith; and of the confession of those who believed; * and of the tumult that was stirred up in Ephesus by Demetrius, the silversmith, against the apostles." },
+  { t = "note", id = "1381", text = "προσχωρεῖν; Euthal., ἐγχειρεῖν." },
+  { t = "p", text = "CC. Of the circuit of Paul, in which also we have the account of the death of Eutychus and his restoration by prayer in Troas; also Paul’s own pastoral exhortations[^1382] to the presbyters at Ephesus; also Paul’s voyage from Ephesus to Cæsareia in Palestine." },
+  { t = "note", id = "1382", text = "Euthal., παραίνεσις ποιμαντική, *pastoral exhortation.*" },
+  { t = "p", text = "DD. The prophecy of Agabus as to what should befall Paul in Jerusalem." },
+  { t = "p", text = "EE. The address of James to Paul touching the matter that he should not offer to keep the Hebrews back from the practice of circumcision." },
+  { t = "p", text = "FF. Of the tumult that was excited against Paul in Jerusalem, and how the chief-captain rescues him from the mob. * Also Paul’s speech[^1383] concerning himself and his vocation to be an apostle; * and of what Ananias said to Paul in Damascus, and of the vision and the voice of God that befell him once in the temple. * And that when Paul was about to be beaten for these words, on declaring that he was a Roman, he was let go." },
+  { t = "note", id = "1383", text = "κατάστασις." },
+  { t = "p", text = "GG. What Paul endured, and what he said, and what he did exactly[^1384] when he came down into the council." },
+  { t = "note", id = "1384", text = "εὐθυβόλως, perhaps here, as Montfaucon makes it, *sagaciously.*" },
+  { t = "p", text = "HH. Of the ambush planned by the Jews against Paul, and its discovery to Lysias; * and that Paul was sent to Cæsareia to the governor with soldiers and with a letter." },
+  { t = "p", text = "II. Of the accusation laid by Tertullus in Paul’s case, and of his defence of himself before the governor." },
+  { t = "p", text = "JJ. Of the removal of Felix and the arrival of Festus as his successor, and of Paul’s pleading before them,[^1385] and his dismissal." },
+  { t = "note", id = "1385", text = "Euthal., ἐπ᾽ αὐτοῦ, *before him.*" },
+  { t = "p", text = "KK. The coming of Agrippa and Bernice, and their inquiry into the case of Paul.[^1386] * Paul’s defence of himself before Agrippa and Bernice, respecting his nurture in the law, and his vocation to the Gospel. That Paul does no wrong to the Jews, Agrippa said to Festus." },
+  { t = "note", id = "1386", text = "Euthal., κατὰΠαῦλον, *against Paul.*" },
+  { t = "p", text = "LL. Paul’s voyage to Rome, abounding in very many and very great perils. * Paul’s exhortation to those with him as to his hope of deliverance. The shipwreck of Paul, and how they effected their safety on the island of Melita, and what marvellous things he did on it." },
+  { t = "p", text = "MM. How Paul reached Rome from Melita." },
+  { t = "p", text = "NN. Of Paul’s discourse with the Jews in Rome." },
+  { t = "p", text = "There are in all forty chapters; and the sections following these, and marked with the asterisk,[^1387] are forty-eight." },
+  { t = "note", id = "1387", text = "Euthal., διὰ κινναβάρεως, *with the vermilion.*" },
+]

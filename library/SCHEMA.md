@@ -63,9 +63,9 @@ split long ones at the source's own subdivisions, never mid-paragraph.
 | t | Fields | Meaning |
 |---|---|---|
 | `h` | `text`, optional `level` (2 to 4) | heading inside a section |
-| `p` | `text` | prose paragraph |
+| `p` | `text`, optional `run_on = true` | prose paragraph; `run_on = true` means the line runs on into the next block, so the narrator reads them as one sentence (used for line-by-line prayers) |
 | `q` | `text`, optional `indent` (1 to 3) | poetry or indented line |
-| `v` | `n`, `text`, optional `p = true`, optional `indent` | Bible verse; `p = true` starts a new paragraph |
+| `v` | `n`, `text`, optional `p = true`, optional `indent`, optional `cont = true` | Bible verse; `p = true` starts a new paragraph; `cont = true` continues verse `n` after a heading that falls inside it (no number shown) |
 | `bq` | `text` | block quotation |
 | `note` | `id`, `text` | footnote; referenced inline as `[^id]` |
 | `ref` | `text` | cross-reference line (Bible) |

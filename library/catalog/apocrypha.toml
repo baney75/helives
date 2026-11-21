@@ -1,0 +1,13 @@
+[[collection]]
+id = "apocrypha"
+title = "The Apocrypha"
+order = 2
+summary = "The books printed between the Old and New Testaments in the King James Version of 1611. The Catholic and Orthodox churches receive most of them as deuterocanonical Scripture; they are outside the Protestant canon. The Church of England's Articles of Religion (Article VI) commend them for example of life and instruction of manners, but not to establish any doctrine. They are kept here for reading and study, not presented as Scripture."
+
+[authors.apocrypha-anonymous]
+name = "Anonymous Jewish authors"
+dates = "4th century BC to 1st century AD"
+role = "Writers of the books of the Apocrypha"
+summary = "Most books of the Apocrypha are anonymous Jewish writings from the centuries between the Old and New Testaments. Ecclesiasticus names its author, Jesus the son of Sirach, and 2 Esdras (chapters 3 to 14) is a Jewish apocalypse with later Christian additions."
+portrait = ""
+source = "https://ebible.org/eng-kjv/"

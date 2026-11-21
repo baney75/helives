@@ -1,0 +1,92 @@
+[work]
+id = "kjv-susanna"
+title = "The History of Susanna"
+short_title = "Susanna"
+author = "apocrypha-anonymous"
+collection = "apocrypha"
+order = 10
+date = "2nd or 1st century BC"
+language = "Hebrew or Greek"
+translator = "The King James translators (1611), standard text of 1769"
+edition = "The Holy Bible, King James Version, with the Apocrypha: the Oxford standard text of 1769 (Benjamin Blayney), from the eBible.org USFM edition (eng-kjv, source dated 15 November 2026)"
+source_url = "https://ebible.org/Scriptures/eng-kjv_usfm.zip"
+source_sha256 = "9d37aa78180ceefd5e4aeeaedceccf16f21484e5eb17d5662e8beff31bc3d8a5"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "The King James Version was published in London by Robert Barker in 1611 and the standard text by the Oxford University Press in 1769; it is in the public domain in the United States because it was published before 1931. (The Crown's letters patent restrict printing only inside the United Kingdom.)"
+chapters = 1
+verses = 64
+words = 1470
+summary = "The story of Susanna, falsely accused by two elders and saved by the young Daniel, which the Greek text adds to Daniel. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture."
+
+[[section]]
+id = "1"
+title = "Susanna 1"
+level = 1
+blocks = [
+  { t = "h", level = 3, text = "Set apart from the beginning of Daniel, because it is not in the Hebrew, as neither the Narration of Bel and the Dragon." },
+  { t = "v", n = 1, p = true, text = "There dwelt a man in Babylon, called Joacim:" },
+  { t = "v", n = 2, p = true, text = "And he took a wife, whose name was Susanna, the daughter of Chelcias, a very fair woman, and one that feared the Lord." },
+  { t = "v", n = 3, p = true, text = "Her parents also were righteous, and taught their daughter according to the law of Moses." },
+  { t = "v", n = 4, p = true, text = "Now Joacim was a great rich man, and had a fair garden joining unto his house: and to him resorted the Jews; because he was more honourable than all others." },
+  { t = "v", n = 5, p = true, text = "The same year were appointed two of the ancients of the people to be judges, such as the Lord spake of, that wickedness came from Babylon from ancient judges, who seemed to govern the people." },
+  { t = "v", n = 6, p = true, text = "These kept much at Joacim’s house: and all that had any suits in law came unto them." },
+  { t = "v", n = 7, p = true, text = "Now when the people departed away at noon, Susanna went into her husband’s garden to walk." },
+  { t = "v", n = 8, p = true, text = "And the two elders saw her going in every day, and walking; so that their lust was inflamed toward her." },
+  { t = "v", n = 9, p = true, text = "And they perverted their own mind, and turned away their eyes, that they might not look unto heaven, nor remember just judgments." },
+  { t = "v", n = 10, p = true, text = "And albeit they both were wounded with her love, yet durst not one shew another his grief." },
+  { t = "v", n = 11, p = true, text = "For they were ashamed to declare their lust, that they desired to have to do with her." },
+  { t = "v", n = 12, p = true, text = "Yet they watched diligently from day to day to see her." },
+  { t = "v", n = 13, p = true, text = "And the one said to the other, Let us now go home: for it is dinner time." },
+  { t = "v", n = 14, p = true, text = "So when they were gone out, they parted the one from the other, and turning back again they came to the same place; and after that they had asked one another the cause, they acknowledged their lust: then appointed they a time both together, when they might find her alone." },
+  { t = "v", n = 15, p = true, text = "And it fell out, as they watched a fit time, she went in as before with two maids only, and she was desirous to wash herself in the garden: for it was hot." },
+  { t = "v", n = 16, p = true, text = "And there was no body there save the two elders, that had hid themselves, and watched her." },
+  { t = "v", n = 17, p = true, text = "Then she said to her maids, Bring me oil and washing balls, and shut the garden doors, that I may wash me." },
+  { t = "v", n = 18, p = true, text = "And they did as she bade them, and shut the garden doors, and went out themselves at privy doors to fetch the things that she had commanded them: but they saw not the elders, because they were hid." },
+  { t = "v", n = 19, p = true, text = "Now when the maids were gone forth, the two elders rose up, and ran unto her, saying," },
+  { t = "v", n = 20, p = true, text = "Behold, the garden doors are shut, that no man can see us, and we are in love with thee; therefore consent unto us, and lie with us." },
+  { t = "v", n = 21, p = true, text = "If thou wilt not, we will bear witness against thee, that a young man was with thee: and therefore thou didst send away thy maids from thee." },
+  { t = "v", n = 22, p = true, text = "Then Susanna sighed, and said, I am straitened on every side: for if I do this thing, it is death unto me: and if I do it not I cannot escape your hands." },
+  { t = "v", n = 23, p = true, text = "It is better for me to fall into your hands, and not do it, than to sin in the sight of the Lord." },
+  { t = "v", n = 24, p = true, text = "With that Susanna cried with a loud voice: and the two elders cried out against her." },
+  { t = "v", n = 25, p = true, text = "Then ran the one, and opened the garden door." },
+  { t = "v", n = 26, p = true, text = "So when the servants of the house heard the cry in the garden, they rushed in at the privy door, to see what was done unto her." },
+  { t = "v", n = 27, p = true, text = "But when the elders had declared their matter, the servants were greatly ashamed: for there was never such a report made of Susanna." },
+  { t = "v", n = 28, p = true, text = "And it came to pass the next day, when the people were assembled to her husband Joacim, the two elders came also full of mischievous imagination against Susanna to put her to death;" },
+  { t = "v", n = 29, p = true, text = "And said before the people, Send for Susanna, the daughter of Chelcias, Joacim’s wife. And so they sent." },
+  { t = "v", n = 30, p = true, text = "So she came with her father and mother, her children, and all her kindred." },
+  { t = "v", n = 31, p = true, text = "Now Susanna was a very delicate woman, and beauteous to behold." },
+  { t = "v", n = 32, p = true, text = "And these wicked men commanded to uncover her face, (for she was covered) that they might be filled with her beauty." },
+  { t = "v", n = 33, p = true, text = "Therefore her friends and all that saw her wept." },
+  { t = "v", n = 34, p = true, text = "Then the two elders stood up in the midst of the people, and laid their hands upon her head." },
+  { t = "v", n = 35, p = true, text = "And she weeping looked up toward heaven: for her heart trusted in the Lord." },
+  { t = "v", n = 36, p = true, text = "And the elders said, As we walked in the garden alone, this woman came in with two maids, and shut the garden doors, and sent the maids away." },
+  { t = "v", n = 37, p = true, text = "Then a young man, who there was hid, came unto her, and lay with her." },
+  { t = "v", n = 38, p = true, text = "Then we that stood in a corner of the garden, seeing this wickedness, ran unto them." },
+  { t = "v", n = 39, p = true, text = "And when we saw them together, the man we could not hold: for he was stronger than we, and opened the door, and leaped out." },
+  { t = "v", n = 40, p = true, text = "But having taken this woman, we asked who the young man was, but she would not tell us: these things do we testify." },
+  { t = "v", n = 41, p = true, text = "Then the assembly believed them as those that were the elders and judges of the people: so they condemned her to death." },
+  { t = "v", n = 42, p = true, text = "Then Susanna cried out with a loud voice, and said, O everlasting God, that knowest the secrets, and knowest all things before they be:" },
+  { t = "v", n = 43, p = true, text = "Thou knowest that they have borne false witness against me, and, behold, I must die; whereas I never did such things as these men have maliciously invented against me." },
+  { t = "v", n = 44, p = true, text = "And the Lord heard her voice." },
+  { t = "v", n = 45, p = true, text = "Therefore when she was led to be put to death, the Lord raised up the holy spirit of a young youth whose name was Daniel:" },
+  { t = "v", n = 46, p = true, text = "Who cried with a loud voice, I am clear from the blood of this woman." },
+  { t = "v", n = 47, p = true, text = "Then all the people turned them toward him, and said, What mean these words that thou hast spoken?" },
+  { t = "v", n = 48, p = true, text = "So he standing in the midst of them said, Are ye such fools, ye sons of Israel, that without examination or knowledge of the truth ye have condemned a daughter of Israel?" },
+  { t = "v", n = 49, p = true, text = "Return again to the place of judgment: for they have borne false witness against her." },
+  { t = "v", n = 50, p = true, text = "Wherefore all the people turned again in haste, and the elders said unto him, Come, sit down among us, and shew it us, seeing God hath given thee the honour of an elder." },
+  { t = "v", n = 51, p = true, text = "Then said Daniel unto them, Put these two aside one far from another, and I will examine them." },
+  { t = "v", n = 52, p = true, text = "So when they were put asunder one from another, he called one of them, and said unto him, O thou that art waxen old in wickedness, now thy sins which thou hast committed aforetime are come to light." },
+  { t = "v", n = 53, p = true, text = "For thou hast pronounced false judgment and hast condemned the innocent and hast let the guilty go free; albeit the Lord saith, The innocent and righteous shalt thou not slay." },
+  { t = "v", n = 54, p = true, text = "Now then, if thou hast seen her, tell me, Under what tree sawest thou them companying together? Who answered, Under a mastick tree." },
+  { t = "v", n = 55, p = true, text = "And Daniel said, Very well; thou hast lied against thine own head; for even now the angel of God hath received the sentence of God to cut thee in two." },
+  { t = "v", n = 56, p = true, text = "So he put him aside, and commanded to bring the other, and said unto him, O thou seed of Chanaan, and not of Juda, beauty hath deceived thee, and lust hath perverted thine heart." },
+  { t = "v", n = 57, p = true, text = "Thus have ye dealt with the daughters of Israel, and they for fear companied with you: but the daughter of Juda would not abide your wickedness." },
+  { t = "v", n = 58, p = true, text = "Now therefore tell me, Under what tree didst thou take them companying together? Who answered, Under an holm tree." },
+  { t = "v", n = 59, p = true, text = "Then said Daniel unto him, Well; thou hast also lied against thine own head: for the angel of God waiteth with the sword to cut thee in two, that he may destroy you." },
+  { t = "v", n = 60, p = true, text = "With that all the assembly cried out with a loud voice, and praised God, who saveth them that trust in him." },
+  { t = "v", n = 61, p = true, text = "And they arose against the two elders, for Daniel had convicted them of false witness by their own mouth:" },
+  { t = "v", n = 62, p = true, text = "And according to the law of Moses they did unto them in such sort as they maliciously intended to do to their neighbour: and they put them to death. Thus the innocent blood was saved the same day." },
+  { t = "v", n = 63, p = true, text = "Therefore Chelcias and his wife praised God for their daughter Susanna, with Joacim her husband, and all the kindred, because there was no dishonesty found in her." },
+  { t = "v", n = 64, p = true, text = "From that day forth was Daniel had in great reputation in the sight of the people." },
+]

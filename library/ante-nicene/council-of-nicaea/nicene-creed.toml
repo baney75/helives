@@ -1,0 +1,60 @@
+[work]
+id = "council-of-nicaea-nicene-creed"
+title = "The Nicene Creed"
+author = "council-of-nicaea"
+collection = "ante-nicene"
+order = 1460
+language = "Greek"
+edition = "Ante-Nicene Fathers, Vol. 7 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf07.xml"
+source_sha256 = "2a06bbed738de15a688512d4f51c9f28b6543e33284cfa2c28d55632952e8d83"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 367
+
+[[section]]
+id = "the-nicene-creed"
+title = "The Nicene Creed"
+level = 1
+blocks = [
+  { t = "h", text = "Nicene Council" },
+  { t = "h", text = "The Nicene Creed." },
+  { t = "h", text = "The Creed" },
+  { t = "p", text = "As set forth at Nicœa,[^4014] a.d. 325." },
+  { t = "note", id = "4014", text = "It was the old Creed of Jerusalem slightly amended, and made the liturgic symbol of Christendom, and the exponent of Catholic orthodoxy. Compare the Creed of Cæsarea, Burbidge, p. 334. But see this whole subject admirably illustrated for popular study by Burbidge, Liturgies and Offices of the Church, p. 330, etc., London, Bells, 1885." },
+  { t = "p", text = "We believe in one God, the Father Almighty, Maker of all things, visible and invisible:" },
+  { t = "p", text = "And in one Lord Jesus Christ, the Son of God, begotten of the Father, only begotten, that is, of the substance of the Father;" },
+  { t = "p", text = "God of God; Light of light; very God of very God; begotten, not made; being of one substance with the Father," },
+  { t = "p", text = "By whom all things were made, both things in heaven and things in earth:" },
+  { t = "p", text = "Who for us men and for our salvation came down, and was incarnate, and was made man:" },
+  { t = "p", text = "He suffered, and rose again the third day:" },
+  { t = "p", text = "And ascended into heaven:" },
+  { t = "p", text = "And shall come again to judge the quick and the dead." },
+  { t = "p", text = "And in the Holy Ghost, etc.[^4015]" },
+  { t = "note", id = "4015", text = "Here the κ.τ.λͅ. is to be understood, as in the liturgies where a known form is begun and left imperfect. The clauses (see Cyril of Jerusalem, Catechet., lect. xviii.) are found in the Creed of Jerusalem, thus: “In one baptism of repentance for the remission of sins, and in one Holy Catholic Church; and in the resurrection of the flesh; and in eternal life.”" },
+  { t = "h", text = "The Ratification." },
+  { t = "p", text = "And those who say There was a time when He was not, or that Before He was begotten He was not, or that He was made out of nothing; or who say that The Son of God is of any other substance, or that He is changeable or unstable,—these the Catholic and Apostolic Church anathematizes." },
+  { t = "h", text = "Addenda," },
+  { t = "h", text = "As Authorized at Constantinople, a.d. 381." },
+  { t = "p", text = "(a) Of heaven and earth." },
+  { t = "p", text = "(b) Begotten of the Father before all worlds." },
+  { t = "p", text = "(c) By the Holy Ghost of the Virgin Mary." },
+  { t = "p", text = "(d) Was crucified also for us, under Pontius Pilate," },
+  { t = "p", text = "(e) And was buried." },
+  { t = "p", text = "(f) Sitteth on the right hand of the Father," },
+  { t = "p", text = "(g) Whose kingdom shall have no end." },
+  { t = "p", text = "(h) The Lord, the Giver of life," },
+  { t = "p", text = "Who proceedeth from the Father;[^4016]" },
+  { t = "note", id = "4016", text = "The addition of the Filioque, in the West, is theologically true, but of no authority here. See Pearson, On the Creed." },
+  { t = "p", text = "Who with the Father and the Son together is worshipped and glorified;" },
+  { t = "p", text = "Who spake by the prophets:" },
+  { t = "p", text = "In one Holy Catholic and Apostolic Church." },
+  { t = "p", text = "We acknowledge one baptism for the remission of sins." },
+  { t = "p", text = "We look for the resurrection of the dead," },
+  { t = "p", text = "And the life of the world to come. Amen." },
+  { t = "p", text = "This Nicæno-Constantinopolitan Creed was solemnly ratified by the Council of Ephesus (a.d. 431) with the decree[^4017] that “No one[^4018] shall be permitted to introduce, write, or compose any other faith,[^4019] besides that which was defined by the holy Fathers assembled in the city of Nice, with the presence of the Holy Ghost.”" },
+  { t = "note", id = "4017", text = "Canon vii." },
+  { t = "note", id = "4018", text = "No one. This re-affirms the action of Nicæa itself, and forbids the imposition of anything novel as a creed by any authority whatever. Nothing, therefore, which has not been set forth by Nicene authority (or by the supplementing and co-equal councils of the whole Church, from the same primitive sources) can be a creed, strictly speaking. It may be an orthodox confession, like the *Quicunque Vult*, but cannot be imposed in terms of communion, any more than the *Te Deum*" },
+  { t = "note", id = "4019", text = "Any other faith. The composition and setting north of another faith, as terms of communion, by Pius IV., bishop of Rome, a.d. 1564, and its acceptance, with additional dogmas, at the opening of the Vatican Council (so-called), a.d. 1869, brought the whole Papal communion under this anathema of Ephesus." },
+]

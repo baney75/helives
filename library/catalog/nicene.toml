@@ -1,0 +1,446 @@
+[[collection]]
+id = "nicene"
+title = "Nicene and Post-Nicene Fathers"
+order = 5
+summary = "Augustine, Chrysostom, Athanasius, the Cappadocians, Jerome and other fathers of the fourth to eighth centuries, with the canons of the seven ecumenical councils, from the two series edited by Philip Schaff and Henry Wace."
+
+[authors.philip-schaff]
+name = "Philip Schaff"
+dates = ""
+role = "Editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf101.xml"
+
+[authors.augustine]
+name = "Augustine of Hippo"
+dates = ""
+role = "Bishop of Hippo"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf101.xml"
+
+[authors.albert-henry-newman]
+name = "Albert Henry Newman"
+dates = ""
+role = "Editor's essayist, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf104.xml"
+
+[authors.chester-d-hartranft]
+name = "Chester D. Hartranft"
+dates = ""
+role = "Editor's essayist and reviser, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf104.xml"
+
+[authors.benjamin-b-warfield]
+name = "Benjamin B. Warfield"
+dates = ""
+role = "Editor's essayist, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf105.xml"
+
+[authors.david-schley-schaff]
+name = "David Schley Schaff"
+dates = ""
+role = "Editor's essayist, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf106.xml"
+
+[authors.john-chrysostom]
+name = "John Chrysostom"
+dates = ""
+role = "Archbishop of Constantinople"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf109.xml"
+
+[authors.john-a-broadus]
+name = "John A. Broadus"
+dates = ""
+role = "Editor's essayist and reviser, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf113.xml"
+
+[authors.arthur-cushman-mcgiffert]
+name = "Arthur Cushman McGiffert"
+dates = ""
+role = "Translator and editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf201.xml"
+
+[authors.eusebius-of-caesarea]
+name = "Eusebius of Cæsarea"
+dates = ""
+role = "Bishop of Cæsarea, church historian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf201.xml"
+
+[authors.ernest-cushing-richardson]
+name = "Ernest Cushing Richardson"
+dates = ""
+role = "Translator and editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf201.xml"
+
+[authors.constantine]
+name = "Constantine the Great"
+dates = ""
+role = "Roman emperor"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf201.xml"
+
+[authors.socrates-scholasticus]
+name = "Socrates Scholasticus"
+dates = ""
+role = "Church historian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf202.xml"
+
+[authors.sozomen]
+name = "Sozomen"
+dates = ""
+role = "Church historian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf202.xml"
+
+[authors.blomfield-jackson]
+name = "Blomfield Jackson"
+dates = ""
+role = "Translator and editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.theodoret]
+name = "Theodoret"
+dates = ""
+role = "Bishop of Cyrus"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.jerome]
+name = "Jerome"
+dates = ""
+role = "Presbyter and translator of the Vulgate"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.gennadius]
+name = "Gennadius"
+dates = ""
+role = "Presbyter of Marseilles"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.william-henry-fremantle]
+name = "William Henry Fremantle"
+dates = ""
+role = "Translator and editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.rufinus]
+name = "Rufinus"
+dates = ""
+role = "Presbyter of Aquileia"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.anastasius-of-rome]
+name = "Anastasius"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf203.xml"
+
+[authors.archibald-robertson]
+name = "Archibald Robertson"
+dates = ""
+role = "Editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf204.xml"
+
+[authors.athanasius]
+name = "Athanasius"
+dates = ""
+role = "Bishop of Alexandria"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf204.xml"
+
+[authors.william-moore-and-henry-austin-wilson]
+name = "William Moore and Henry Austin Wilson"
+dates = ""
+role = "Translators and editors, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf205.xml"
+
+[authors.gregory-of-nyssa]
+name = "Gregory of Nyssa"
+dates = ""
+role = "Bishop of Nyssa"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf205.xml"
+
+[authors.cyril-of-jerusalem]
+name = "Cyril of Jerusalem"
+dates = ""
+role = "Archbishop of Jerusalem"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf207.xml"
+
+[authors.charles-gordon-browne-and-james-edward-swallow]
+name = "Charles Gordon Browne and James Edward Swallow"
+dates = ""
+role = "Translators, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf207.xml"
+
+[authors.gregory-nazianzen]
+name = "Gregory Nazianzen"
+dates = ""
+role = "Archbishop of Constantinople"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf207.xml"
+
+[authors.basil]
+name = "Basil the Great"
+dates = ""
+role = "Archbishop of Cæsarea"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf208.xml"
+
+[authors.e-w-watson]
+name = "E. W. Watson"
+dates = ""
+role = "Translator, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf209.xml"
+
+[authors.hilary-of-poitiers]
+name = "Hilary of Poitiers"
+dates = ""
+role = "Bishop of Poitiers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf209.xml"
+
+[authors.john-of-damascus]
+name = "John of Damascus"
+dates = ""
+role = "Monk and theologian"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf209.xml"
+
+[authors.h-de-romestin]
+name = "H. de Romestin"
+dates = ""
+role = "Translator, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf210.xml"
+
+[authors.ambrose]
+name = "Ambrose"
+dates = ""
+role = "Bishop of Milan"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf210.xml"
+
+[authors.alexander-roberts]
+name = "Alexander Roberts"
+dates = ""
+role = "Translator and editor, Ante-Nicene and Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf211.xml"
+
+[authors.sulpitius-severus]
+name = "Sulpitius Severus"
+dates = ""
+role = "Historian and biographer of St. Martin"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf211.xml"
+
+[authors.vincent-of-lerins]
+name = "Vincent of Lérins"
+dates = ""
+role = "Monk of Lérins"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf211.xml"
+
+[authors.edgar-c-s-gibson]
+name = "Edgar C. S. Gibson"
+dates = ""
+role = "Translator, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf211.xml"
+
+[authors.john-cassian]
+name = "John Cassian"
+dates = ""
+role = "Monk and abbot at Marseilles"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf211.xml"
+
+[authors.charles-lett-feltoe]
+name = "Charles Lett Feltoe"
+dates = ""
+role = "Translator, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf212.xml"
+
+[authors.leo-the-great]
+name = "Leo the Great"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf212.xml"
+
+[authors.james-barmby]
+name = "James Barmby"
+dates = ""
+role = "Translator, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf212.xml"
+
+[authors.gregory-the-great]
+name = "Gregory the Great"
+dates = ""
+role = "Bishop of Rome"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf212.xml"
+
+[authors.john-gwynn]
+name = "John Gwynn"
+dates = ""
+role = "Editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf213.xml"
+
+[authors.ephraim-the-syrian]
+name = "Ephraim the Syrian"
+dates = ""
+role = "Syriac hymn writer and deacon"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf213.xml"
+
+[authors.aphrahat]
+name = "Aphrahat"
+dates = ""
+role = "The Persian Sage"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf213.xml"
+
+[authors.henry-r-percival]
+name = "Henry R. Percival"
+dates = ""
+role = "Editor, Nicene and Post-Nicene Fathers"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-ancyra]
+name = "The Council of Ancyra"
+dates = "314"
+role = "Provincial synod"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-neocaesarea]
+name = "The Council of Neocæsarea"
+dates = "c. 315"
+role = "Provincial synod"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-gangra]
+name = "The Council of Gangra"
+dates = "325-381"
+role = "Provincial synod"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.synod-of-antioch]
+name = "The Synod of Antioch in Encæniis"
+dates = "341"
+role = "Provincial synod"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.synod-of-laodicea]
+name = "The Synod of Laodicea"
+dates = "343-381"
+role = "Provincial synod"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.first-council-of-constantinople]
+name = "The First Council of Constantinople"
+dates = "381"
+role = "Second Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-ephesus]
+name = "The Council of Ephesus"
+dates = "431"
+role = "Third Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-chalcedon]
+name = "The Council of Chalcedon"
+dates = "451"
+role = "Fourth Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.second-council-of-constantinople]
+name = "The Second Council of Constantinople"
+dates = "553"
+role = "Fifth Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.third-council-of-constantinople]
+name = "The Third Council of Constantinople"
+dates = "680-681"
+role = "Sixth Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-in-trullo]
+name = "The Council in Trullo (Quinisext)"
+dates = "692"
+role = "Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-sardica]
+name = "The Council of Sardica"
+dates = "343 or 344"
+role = "Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-carthage-419]
+name = "The Council of Carthage (419)"
+dates = "419"
+role = "African council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-constantinople-394]
+name = "The Council of Constantinople under Nectarius"
+dates = "394"
+role = "Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.council-of-carthage-257]
+name = "The Council of Carthage under Cyprian"
+dates = "257"
+role = "African council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+
+[authors.second-council-of-nicaea]
+name = "The Second Council of Nicæa"
+dates = "787"
+role = "Seventh Ecumenical Council"
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/npnf214.xml"

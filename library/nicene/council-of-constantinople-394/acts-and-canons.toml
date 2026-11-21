@@ -1,0 +1,44 @@
+[work]
+id = "council-of-constantinople-394-acts-and-canons"
+title = "Council of Constantinople Held under Nectarius"
+author = "council-of-constantinople-394"
+collection = "nicene"
+order = 2300
+language = "Greek"
+translator = "Edited by Henry R. Percival"
+edition = "Nicene and Post-Nicene Fathers, Series 2, Vol. 14 (1900), ed. Philip Schaff and Henry Wace"
+source_url = "https://www.ccel.org/ccel/schaff/npnf214.xml"
+source_sha256 = "4ae3cb29edcb7b8e58bb9246049243c464b6839f88f6730f98b80122770b9bb4"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1900 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 1022
+
+[[section]]
+id = "introductory-note"
+title = "Introductory Note."
+level = 1
+blocks = [
+  { t = "p", text = "The acts of this Council are found in Balsamon, page 761 of the Paris edition, with Hervetus’s translation. Labbe[^498] has taken Balsamon’s text and inserted it into his Collection, from which the following translation is made. There is another version extant in Leunclavius, *Jus Græco-Roman*. p. 247." },
+  { t = "note", id = "498", text = "Labbe and Cossart, *Concilia*, Tom. II., col. 1151." },
+  { t = "p", text = "On September the twenty-ninth of the year 394, a magnificent church, dedicated to SS. Peter and Paul, built by the munificence of Rufinus the Prætoreal prefect, and situated at a place called “the Oaks,” a suburb of Chalcedon, was consecrated. Most scholars have adopted Tillemont’s suggestion that this was the occasion which brought the patriarchs of Alexandria and Antioch to Constantinople, and that occasion was taken advantage of to hold a synod with regard to the dispute as to the see of Bostra. At this council, in accordance with the canon of the Second Ecumenical Council, adopted only a dozen years before, Constantinople took the first place and its bishop presided, but so strong was the hold of Alexandria that three centuries afterwards the Quinisext Synod speaks of this council as held “under Nectarius and Theophilus.” In passing it may not be amiss to remark that St. Gregory of Nyssa and Theodore of Mopsuestia, and Flavian were present at this council! Well may Tillemont[^499] exclaim, “It is remarkable to see Theophilus there with Flavian, although they were not in communion with each other.”" },
+  { t = "note", id = "499", text = "Tillemont. *Mémoires*, ix., 592." },
+]
+
+[[section]]
+id = "council-of-constantinople-under-nectarius-of-constantinople"
+title = "Council of Constantinople Under Nectarius of Constantinople and Theophilus of Alexandria."
+level = 1
+blocks = [
+  { t = "h", text = "a.d. 394." },
+  { t = "h", text = "(*Found in Beveridge*, Synodicon. *Tom. I*., p. 678; *Labbe and Cossart*, Concilia, *Tom. II*., col. 1151. *Both taken from Balsamon*.)" },
+  { t = "p", text = "In the consulate of our most religious and beloved-of-God Emperors, Flavius Arcadius Augustus, for the third time, and Honorius for the second time, on the third day before the calends of October, in the baptistery of the most holy church of Constantinople, when the most holy bishops had taken their seats [*here follow the names*], Nectarius, the bishop of Constantinople, said: Since by the grace of God this synod has met in this holy place, if the synod of my holy brethren and fellow ministers in holy things thinks good, since I see our brothers Bagadius and Agapius, who contend between themselves about the bishopric of Bostra, are also present, let these begin to set forth their mutual rights. And after some things had been done by them for the sake of this cause, and it had been shewn that the afore-named Bagadius was deposed by only two bishops, both of whom were dead, Arabianus, bishop of Ancyra, said: Not on account of this judgment, but fearing henceforth for my whole life, I desire the holy Synod to make a decree, whether or no, a bishop can be deposed by only two bishops, and whether the Metropolitan is absent or not, without prejudice to the present cause. For I fear that some, taking their power from these acts, may dare to attempt such things. I wish therefore your response." },
+  { t = "p", text = "Nectarius, the bishop of Constantinople, said: The most religious bishop Arabianus hath spoken most laudably. But since it is impossible to go backward in judgment, let us, without condemning that which is past, establish things for the future. Arabianus, bishop of Ancyra, said: The synod of blessed fathers who met at Nice condemns what has taken place, for it orders that not less than three shall ordain, nor even so without the metropolitan. But of the future I, full of fear, have made this question. I would wish therefore that you would say clearly and without delay or doubt, that a bishop could not, according to the decree of the Synod of Nice, lawfully be ordained or deposed by two men." },
+  { t = "p", text = "And, after some further debate, Theophilus, the bishop of Alexandria, said: Against those who have gone forth, no sentence of indignation can be pronounced, since those to be condemned were not present. But if any one were to consider those who are to be deposed in future, it seems to me that not only these ought to assemble, but so far as possible all the other provincials, that by the sentence of many there may be rendered a more accurate condemnation of him who is present and is being judged, and who deserves deposition. Nectarius, the bishop of Constantinople, said: Since, the controversy is concerning legitimate institutions and decrees, it follows that nothing must be decreed on account of personal causes. Wherefore as the most holy bishop Arabianus has said, wishing to make the future certain, the sentence of the most holy bishop Theophilus hath consistently and considerately decreed that for the future it shall be lawful not even for three, far less for two bishops to depose him who is examined as a defendant: but by the sentence of the greater synod and of the bishops of the province, according to the Apostolic Canons. Flavian, the bishop of Antioch, said: What things the most holy bishop Nectarius, and the most holy bishop Theophilus have set forth are clearly right. And all the ecclesiastics agreed with these." },
+  { t = "h", text = "Notes." },
+  { t = "p", text = "Ancient Epitome." },
+  { t = "p", text = "In future when a defendant is examined, he ought not to be deposed by two or three bishops: but by the sentence of the greater Synod and of his own provincials, as also the Apostolic Canons provide." },
+  { t = "p", text = "Balsamon." },
+  { t = "p", text = "As Bagadius, the bishop of Bostra, had been deposed by only two bishops, the matter was considered in the synod at Constantinople, whether that deposition had been rightly decreed. Agapius, the elect, laying claim to it under the decision. And it was decreed that the deposition was not canonical, since not two but a number should judge of those accusations which are made against bishops. But know that this constitution has no force to-day, for by the twelfth canon of the synod of Carthage, which is much later, crimes charged against bishops are to be judged of by twelve bishops. Read that canon, and know that this synod was held in the time of the Emperor Arcadius, while that of Carthage was in the days of Theodosius the younger." },
+  { t = "p", text = "Zonaras explains that by the words “have gone forth” in the speech of Theophilus of Alexandria is to be understood have died." },
+]

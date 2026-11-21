@@ -1,0 +1,12 @@
+[[collection]]
+id = "aquinas"
+title = "Thomas Aquinas"
+order = 7
+summary = "The Summa Theologica of St. Thomas Aquinas in the translation of the Fathers of the English Dominican Province."
+
+[authors.thomas-aquinas]
+name = "Thomas Aquinas"
+dates = ""
+role = "Dominican friar and theologian"
+portrait = ""
+source = "https://www.ccel.org/ccel/aquinas/summa.xml"
