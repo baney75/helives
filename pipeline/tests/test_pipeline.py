@@ -53,6 +53,13 @@ class ValidateTest(unittest.TestCase):
         self.assertTrue(any("HTML entity" in e for e in self.check(sections("an &amp; entity"))))
         self.assertTrue(any("page marker" in e for e in self.check(sections("text [Pg 12] more"))))
 
+    def test_catches_control_characters(self):
+        # A footnote marker left in a heading put NUL bytes in the search load (2026-11-21).
+        secs = sections("clean text")
+        secs[0]["title"] = "Song IX. \x00Footnote_I_9\x00 Invocation"
+        self.assertTrue(any("control character" in e for e in self.check(secs)))
+        self.assertTrue(any("control character" in e for e in self.check(sections("a\x07bell"))))
+
     def test_catches_orphan_footnotes(self):
         errs = self.check(sections("a mark[^9] with no note"))
         self.assertTrue(any("[^9] has no note" in e for e in errs))

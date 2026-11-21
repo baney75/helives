@@ -35,9 +35,18 @@ def roman_int(r: str) -> int:
     return total
 
 
+def drop_markers(text: str) -> str:
+    """Footnote markers in a heading are never resolved to notes; leave the heading text alone."""
+    return " ".join(re.sub(r"\x00[^\x00]*\x00", " ", text).split())
+
+
 def finish_secs(secs: list) -> list:
     out = []
     for s in secs:
+        s["title"] = drop_markers(s["title"])
+        for b in s["blocks"]:
+            if b["t"] == "h":
+                b["text"] = drop_markers(b["text"])
         if not any(b["t"] != "note" for b in s["blocks"]):
             s["blocks"] = [{"t": "h", "text": s["title"]}] + s["blocks"]
         s["blocks"] = order_notes(s["blocks"])

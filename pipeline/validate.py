@@ -29,6 +29,22 @@ ARTIFACTS = [
 ]
 
 
+# Control characters (a stray footnote marker, a NUL) break the search load and show as junk on the page.
+CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
+
+def strings(o, where: str = ""):
+    """Every string in a parsed TOML document, with its path."""
+    if isinstance(o, dict):
+        for k, v in o.items():
+            yield from strings(v, f"{where}.{k}" if where else k)
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            yield from strings(v, f"{where}[{i}]")
+    elif isinstance(o, str):
+        yield where, o
+
+
 def check_file(path: Path, ids: dict[str, Path]) -> list[str]:
     errs: list[str] = []
     rel = path.relative_to(LIBRARY.parent) if path.is_relative_to(LIBRARY.parent) else path
@@ -53,6 +69,10 @@ def check_file(path: Path, ids: dict[str, Path]) -> list[str]:
     if wid in ids:
         errs.append(f"{rel}: duplicate work.id {wid!r} (also {ids[wid]})")
     ids[wid] = rel
+    for where, value in strings(doc):
+        bad = CONTROL.search(value)
+        if bad:
+            errs.append(f"{rel}: {where} has control character {bad.group()!r}: {value[:60]!r}")
     sections = doc.get("section", [])
     if not sections:
         errs.append(f"{rel}: no sections")

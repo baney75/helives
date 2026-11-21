@@ -14,7 +14,7 @@ source_sha256 = "20cc0108f2c9f42a7f9ce805ae60e3aa73b37af56d46a4c7733409f9afc81c8
 retrieved = "2026-11-21"
 license = "Public domain"
 license_basis = "Published in London in 1897, before 1931, so public domain in the United States. The translator's list of page references to quotations is not included."
-words = 42242
+words = 42239
 summary = "Written in prison while Boethius awaited execution, a dialogue in prose and verse in which Philosophy consoles him by leading him from the gifts of Fortune to the true good, which is God, and to the question of providence and free will. Translated with the translator's preface, introduction and epilogue."
 
 [[section]]
@@ -871,7 +871,7 @@ blocks = [
 
 [[section]]
 id = "book-3-chapter-9"
-title = "Chapter IX, and Song IX. \u0000Footnote_I_9\u0000 Invocation"
+title = "Chapter IX, and Song IX. Invocation"
 level = 2
 blocks = [
   { t = "h", text = "Chapter IX" },
@@ -918,7 +918,7 @@ blocks = [
   { t = "p", text = "'Well, since, as Plato maintains in the \"Timæus,\" we ought even in the most trivial matters to implore the Divine protection, what thinkest thou should we now do in order to deserve to find the seat of that highest good?'" },
   { t = "p", text = "'We must invoke the Father of all things,' said I; 'for without this no enterprise sets out from a right beginning.'" },
   { t = "p", text = "'Thou sayest well,' said she; and forthwith lifted up her voice and sang:" },
-  { t = "h", text = "Song IX. \u0000Footnote_I_9\u0000 Invocation" },
+  { t = "h", text = "Song IX. Invocation" },
   { t = "q", text = "Maker of earth and sky, from age to age" },
   { t = "q", text = "Who rul'st the world by reason; at whose word" },
   { t = "q", text = "Time issues from Eternity's abyss:" },
@@ -1033,7 +1033,7 @@ blocks = [
 
 [[section]]
 id = "book-3-chapter-11"
-title = "Chapter XI, and Song XI. Reminiscence.\u0000Footnote_J_10\u0000"
+title = "Chapter XI, and Song XI. Reminiscence."
 level = 2
 blocks = [
   { t = "h", text = "Chapter XI" },
@@ -1069,7 +1069,7 @@ blocks = [
   { t = "p", text = "Then she: 'Exceedingly do I rejoice, dear pupil; thine eye is now fixed on the very central mark of truth. Moreover, herein is revealed that of which thou didst erstwhile profess thyself ignorant.'" },
   { t = "p", text = "'What is that?' said I." },
   { t = "p", text = "'The end and aim of the whole universe. Surely it is that which is desired of all; and, since we have concluded the good to be such, we ought to acknowledge the end and aim of the whole universe to be \"the good.\"'" },
-  { t = "h", text = "Song XI. Reminiscence.\u0000Footnote_J_10\u0000" },
+  { t = "h", text = "Song XI. Reminiscence." },
   { t = "q", text = "Who truth pursues, who from false ways" },
   { t = "q", indent = 1, text = "His heedful steps would keep," },
   { t = "q", text = "By inward light must search within" },
@@ -1792,7 +1792,7 @@ blocks = [
 
 [[section]]
 id = "book-5-chapter-4"
-title = "Chapter IV, and Song IV. A Psychological Fallacy.\u0000Footnote_R_18\u0000"
+title = "Chapter IV, and Song IV. A Psychological Fallacy."
 level = 2
 blocks = [
   { t = "h", text = "Chapter IV" },
@@ -1802,7 +1802,7 @@ blocks = [
   { t = "p", text = "'No; certainly not. There would be no efficacy in skill if all motions took place perforce.'" },
   { t = "p", text = "'Then, things which in taking place are free from any necessity as to their being in the present must also, before they take place, be about to happen without necessity. Wherefore there are things which will come to pass, the occurrence of which is perfectly free from necessity. At all events, I imagine that no one will deny that things now taking place were about to come to pass before they were actually happening. Such things, however much foreknown, are in their occurrence *free*. For even as knowledge of things present imports no necessity into things that are taking place, so foreknowledge of the future imports none into things that are about to come. But this, thou wilt say, is the very point in dispute—whether any foreknowing is possible of things whose occurrence is not necessary. For here there seems to thee a contradiction, and, if they are foreseen, their necessity follows; whereas if there is no necessity, they can by no means be foreknown; and thou thinkest that nothing can be grasped as known unless it is certain, but if things whose occurrence is uncertain are foreknown as certain, this is the very mist of opinion, not the truth of knowledge. For to think of things otherwise than as they are, thou believest to be incompatible with the soundness of knowledge." },
   { t = "p", text = "'Now, the cause of the mistake is this—that men think that all knowledge is cognized purely by the nature and efficacy of the thing known. Whereas the case is the very reverse: all that is known is grasped not conformably to its own efficacy, but rather conformably to the faculty of the knower. An example will make this clear: the roundness of a body is recognised in one way by sight, in another by touch. Sight looks upon it from a distance as a whole by a simultaneous reflection of rays; touch grasps the roundness piecemeal, by contact and attachment to the surface, and by actual movement round the periphery itself. Man himself, likewise, is viewed in one way by Sense, in another by Imagination, in another way, again, by Thought, in another by pure Intelligence. Sense judges figure clothed in material substance, Imagination figure alone without matter. Thought transcends this again, and by its contemplation of universals considers the type itself which is contained in the individual. The eye of Intelligence is yet more exalted; for overpassing the sphere of the universal, it will behold absolute form itself by the pure force of the mind's vision. Wherein the main point to be considered is this: the higher faculty of comprehension embraces the lower, while the lower cannot rise to the higher. For Sense has no efficacy beyond matter, nor can Imagination behold universal ideas, nor Thought embrace pure form; but Intelligence, looking down, as it were, from its higher standpoint in its intuition of form, discriminates also the several elements which underlie it; but it comprehends them in the same way as it comprehends that form itself, which could be cognized by no other than itself. For it cognizes the universal of Thought, the figure of Imagination, and the matter of Sense, without employing Thought, Imagination, or Sense, but surveying all things, so to speak, under the aspect of pure form by a single flash of intuition. Thought also, in considering the universal, embraces images and sense-impressions without resorting to Imagination or Sense. For it is Thought which has thus defined the universal from its conceptual point of view: \"Man is a two-legged animal endowed with reason.\" This is indeed a universal notion, yet no one is ignorant that the *thing* is imaginable and presentable to Sense, because Thought considers it not by Imagination or Sense, but by means of rational conception. Imagination, too, though its faculty of viewing and forming representations is founded upon the senses, nevertheless surveys sense-impressions without calling in Sense, not in the way of Sense-perception, but of Imagination. See'st thou, then, how all things in cognizing use rather their own faculty than the faculty of the things which they cognize? Nor is this strange; for since every judgment is the act of the judge, it is necessary that each should accomplish its task by its own, not by another's power.'" },
-  { t = "h", text = "Song IV. A Psychological Fallacy.\u0000Footnote_R_18\u0000" },
+  { t = "h", text = "Song IV. A Psychological Fallacy." },
   { t = "q", text = "From the Porch's murky depths" },
   { t = "q", indent = 1, text = "Comes a doctrine sage," },
   { t = "q", text = "That doth liken living mind" },

@@ -8,7 +8,7 @@ edition: "The Consolation of Philosophy of Boethius, translated into English pro
 source_url: "https://gutenberg.pglaf.org/1/4/3/2/14328/14328-h/14328-h.htm"
 license: "Public domain"
 license_basis: "Published in London in 1897, before 1931, so public domain in the United States. The translator's list of page references to quotations is not included."
-words: 42242
+words: 42239
 ---
 
 # The Consolation of Philosophy
@@ -905,7 +905,7 @@ On hearts so dull? May they the race still run
 The false good they have grasped—ah, then too late!—  
  May they discern the true!  
 
-### Chapter IX, and Song IX.  Footnote_I_9  Invocation
+### Chapter IX, and Song IX. Invocation
 
 #### Chapter IX
 
@@ -995,7 +995,7 @@ The false good they have grasped—ah, then too late!—
 
 'Thou sayest well,' said she; and forthwith lifted up her voice and sang:
 
-#### Song IX.  Footnote_I_9  Invocation
+#### Song IX. Invocation
 
 Maker of earth and sky, from age to age  
 Who rul'st the world by reason; at whose word  
@@ -1139,7 +1139,7 @@ Shunneth dark and ruined souls.
 He who once hath seen *this* light  
 Will not call the sunbeam bright.  
 
-### Chapter XI, and Song XI. Reminiscence. Footnote_J_10 
+### Chapter XI, and Song XI. Reminiscence.
 
 #### Chapter XI
 
@@ -1207,7 +1207,7 @@ Then she: 'Exceedingly do I rejoice, dear pupil; thine eye is now fixed on the v
 
 'The end and aim of the whole universe. Surely it is that which is desired of all; and, since we have concluded the good to be such, we ought to acknowledge the end and aim of the whole universe to be "the good."'
 
-#### Song XI. Reminiscence. Footnote_J_10 
+#### Song XI. Reminiscence.
 
 Who truth pursues, who from false ways  
  His heedful steps would keep,  
@@ -2093,7 +2093,7 @@ To win back all he bravely strives.
 [^book-5-chapter-3-P]: *I.e.*, the necessity of the truth of the statement from the fact.
 [^book-5-chapter-3-Q]: Compare Plato, 'Meno,' 80; Jowett, vol. ii., pp. 39, 40.
 
-### Chapter IV, and Song IV. A Psychological Fallacy. Footnote_R_18 
+### Chapter IV, and Song IV. A Psychological Fallacy.
 
 #### Chapter IV
 
@@ -2109,7 +2109,7 @@ Then said she: 'This debate about providence is an old one, and is vigorously di
 
 'Now, the cause of the mistake is this—that men think that all knowledge is cognized purely by the nature and efficacy of the thing known. Whereas the case is the very reverse: all that is known is grasped not conformably to its own efficacy, but rather conformably to the faculty of the knower. An example will make this clear: the roundness of a body is recognised in one way by sight, in another by touch. Sight looks upon it from a distance as a whole by a simultaneous reflection of rays; touch grasps the roundness piecemeal, by contact and attachment to the surface, and by actual movement round the periphery itself. Man himself, likewise, is viewed in one way by Sense, in another by Imagination, in another way, again, by Thought, in another by pure Intelligence. Sense judges figure clothed in material substance, Imagination figure alone without matter. Thought transcends this again, and by its contemplation of universals considers the type itself which is contained in the individual. The eye of Intelligence is yet more exalted; for overpassing the sphere of the universal, it will behold absolute form itself by the pure force of the mind's vision. Wherein the main point to be considered is this: the higher faculty of comprehension embraces the lower, while the lower cannot rise to the higher. For Sense has no efficacy beyond matter, nor can Imagination behold universal ideas, nor Thought embrace pure form; but Intelligence, looking down, as it were, from its higher standpoint in its intuition of form, discriminates also the several elements which underlie it; but it comprehends them in the same way as it comprehends that form itself, which could be cognized by no other than itself. For it cognizes the universal of Thought, the figure of Imagination, and the matter of Sense, without employing Thought, Imagination, or Sense, but surveying all things, so to speak, under the aspect of pure form by a single flash of intuition. Thought also, in considering the universal, embraces images and sense-impressions without resorting to Imagination or Sense. For it is Thought which has thus defined the universal from its conceptual point of view: "Man is a two-legged animal endowed with reason." This is indeed a universal notion, yet no one is ignorant that the *thing* is imaginable and presentable to Sense, because Thought considers it not by Imagination or Sense, but by means of rational conception. Imagination, too, though its faculty of viewing and forming representations is founded upon the senses, nevertheless surveys sense-impressions without calling in Sense, not in the way of Sense-perception, but of Imagination. See'st thou, then, how all things in cognizing use rather their own faculty than the faculty of the things which they cognize? Nor is this strange; for since every judgment is the act of the judge, it is necessary that each should accomplish its task by its own, not by another's power.'
 
-#### Song IV. A Psychological Fallacy. Footnote_R_18 
+#### Song IV. A Psychological Fallacy.
 
 From the Porch's murky depths  
  Comes a doctrine sage,  
