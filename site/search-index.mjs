@@ -1,12 +1,13 @@
 // Writes build/search.sql: the D1 full-text index behind /api/search.
 // One row per Bible verse, per paragraph of prose, per video, article and encyclical.
-// Load it with: pnpm exec wrangler d1 execute helives-library --remote --file build/search.sql
+// Load it with: node scripts/load-search.mjs (chunked; see RUNBOOK.md). build/search-chunks/ holds the pieces.
 import { createHash } from 'node:crypto'
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { plain } from './lib/html.mjs'
 import { COLLECTION, ROOT, loadLibrary, readToml } from './lib/load.mjs'
 import { bookSlug, sectionUrl, shortTitle, workUrl } from './lib/render.mjs'
+import { assertClean, chunkStatements } from './lib/search-chunks.mjs'
 
 const OUT = join(ROOT, 'build')
 const MAX_STATEMENT = 90_000 // D1 caps one statement at 100 KB
@@ -58,6 +59,7 @@ for (const e of lib.encyclicals) {
   add(e.title, [e.english_title, e.subject, e.pope, String(e.date).slice(0, 4)].filter(Boolean).join(' · '), local ? workUrl(local) : e.url, `Encyclical · ${e.pope}, ${String(e.date).slice(0, 4)}`, 'encyclicals', 1.1)
 }
 
+assertClean(rows)
 const head = [
   'DROP TABLE IF EXISTS doc;',
   "CREATE VIRTUAL TABLE doc USING fts5(title, body, url UNINDEXED, place UNINDEXED, scope UNINDEXED, boost UNINDEXED, tokenize = 'porter unicode61 remove_diacritics 2');",
@@ -80,6 +82,13 @@ mkdirSync(OUT, { recursive: true })
 writeFileSync(join(OUT, 'search.sql'), body)
 const hash = createHash('sha256').update(body).digest('hex').slice(0, 16)
 writeFileSync(join(OUT, 'search.hash'), hash + '\n')
+writeFileSync(join(OUT, 'search.count'), rows.length + '\n')
+const CHUNKS = join(OUT, 'search-chunks')
+rmSync(CHUNKS, { recursive: true, force: true })
+mkdirSync(CHUNKS, { recursive: true })
+chunkStatements(head, stmts, ["INSERT INTO doc(doc) VALUES('optimize');"]).forEach((c, i) =>
+  writeFileSync(join(CHUNKS, `${String(i).padStart(3, '0')}.sql`), c),
+)
 const byScope = {}
 for (const r of rows) {
   const scope = r.match(/,'([a-z-]+)',[\d.]+\)$/)?.[1]
