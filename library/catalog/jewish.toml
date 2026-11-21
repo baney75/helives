@@ -1,8 +1,8 @@
 [[collection]]
 id = "jewish"
-title = "Josephus and Philo"
+title = "Josephus"
 order = 4
-summary = "First century Jewish writers whose histories and commentary shed light on the world of the Bible: Flavius Josephus in William Whiston's translation, and Philo of Alexandria in C. D. Yonge's translation: Allegorical Interpretation (Books 1 to 3), On the Cherubim, That the Worse Is Wont to Attack the Better, On the Posterity of Cain, On the Unchangeableness of God, On Husbandry, On Drunkenness, On Sobriety, Who Is the Heir of Divine Things, On Mating with the Preliminary Studies, On Flight and Finding, On Dreams (Book 1), On Joseph, On the Decalogue, On the Special Laws (Book 3), Every Good Man Is Free, Flaccus, Hypothetica and On Providence (Fragment 1). They are historical sources, not Scripture."
+summary = "A first century Jewish writer whose histories shed light on the world of the Bible: Flavius Josephus in William Whiston's translation. They are historical sources, not Scripture."
 
 [authors.josephus]
 name = "Flavius Josephus"
@@ -12,10 +12,3 @@ summary = "Born Joseph son of Matthias to a priestly family in Jerusalem, he com
 portrait = ""
 source = "https://gutenberg.pglaf.org/2/8/4/2846/2846-h/2846-h.htm"
 
-[authors.philo]
-name = "Philo of Alexandria"
-dates = "c. 20 BC-c. AD 50"
-role = "Jewish philosopher and biblical interpreter at Alexandria"
-summary = "A leader of the Jewish community of Alexandria who wrote in Greek, interpreting the books of Moses through allegory and Greek philosophy. In 39 or 40 he led the Jewish embassy to the emperor Gaius."
-portrait = ""
-source = "https://www.ccel.org/ccel/philo/works"

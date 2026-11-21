@@ -1,29 +1,33 @@
-"""Philo: only Yonge's 1854 Bohn text is hosted. A treatise whose CCEL wording failed the scan check
-carries 1993 Hendrickson changes, so the ingest must not write it."""
+"""Philo is withdrawn: CCEL's text is the 1993 Hendrickson revision, and a stricter check against the
+1854 Bohn scans found 1993 wording in every treatise. Nothing of Philo is hosted until a hand review clears it."""
 from __future__ import annotations
 
+import subprocess
 import sys
+import tomllib
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "pipeline" / "extra3"))
-import ingest_philo  # noqa: E402
+INGEST = ROOT / "pipeline" / "extra3" / "ingest_philo.py"
 
 
-class PhiloScopeTest(unittest.TestCase):
-    def test_failed_check_treatises_are_not_written(self) -> None:
-        held = set(ingest_philo.FAILED_CHECK) & set(ingest_philo.TREATISES)
-        self.assertEqual(held, set(), f"treatises with 1993 wording would be written: {sorted(held)}")
+class PhiloWithdrawnTest(unittest.TestCase):
+    def test_no_philo_text_is_hosted(self) -> None:
+        self.assertEqual(sorted((ROOT / "library" / "jewish").glob("philo/*")), [])
+        hosted = [p for p in (ROOT / "library").rglob("*.toml") if "philo" in tomllib.loads(p.read_text()).get("author", "")]
+        self.assertEqual(hosted, [])
 
-    def test_dropped_treatises_are_not_written(self) -> None:
-        self.assertEqual(set(ingest_philo.DROPPED) & set(ingest_philo.TREATISES), set())
+    def test_catalog_lists_no_philo(self) -> None:
+        cat = tomllib.loads((ROOT / "library" / "catalog" / "jewish.toml").read_text())
+        self.assertNotIn("philo", cat.get("authors", {}))
+        self.assertNotIn("Philo", cat["collection"][0]["title"] + cat["collection"][0]["summary"])
 
-    def test_library_holds_no_held_out_treatise(self) -> None:
-        on_disk = {p.stem for p in (ROOT / "library" / "jewish" / "philo").glob("*.toml")}
-        slugs = {info[0] for info in ingest_philo.HELD.values()}
-        self.assertEqual(len(slugs), len(ingest_philo.FAILED_CHECK))
-        self.assertEqual(on_disk & slugs, set())
+    def test_ingest_refuses_to_write(self) -> None:
+        r = subprocess.run([sys.executable, str(INGEST)], capture_output=True, text=True, timeout=60)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("withdrawn", r.stderr)
+        self.assertEqual(sorted((ROOT / "library" / "jewish").glob("philo/*")), [])
 
 
 if __name__ == "__main__":

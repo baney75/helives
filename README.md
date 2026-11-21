@@ -9,7 +9,7 @@
 - **Ante-Nicene Fathers** and **Nicene and Post-Nicene Fathers**: the Schaff editions, including Irenaeus, Tertullian, Athanasius, Chrysostom and Augustine (the Confessions, the City of God and more).
 - **The Apocrypha**: the fourteen books of the 1611 King James Apocrypha, from the 1769 Oxford text.
 - **The Pseudepigrapha**: 1 Enoch in R. H. Charles's 1917 translation, labeled as outside the canon.
-- **Josephus and Philo**: Whiston's Josephus and Yonge's Philo, for the history and thought around the New Testament.
+- **Josephus**: Whiston's Josephus, for the history around the New Testament.
 - **Thomas Aquinas**: the Summa Theologica.
 - **The Reformation and After**: the Augsburg, Belgic, Westminster and Heidelberg confessions and catechisms, the Canons of Dort, the Thirty-Nine Articles, Luther, Calvin's Institutes and The Pilgrim's Progress.
 - **The Creeds**: the Apostles', Nicene, Niceno-Constantinopolitan and Athanasian creeds and the Chalcedonian Definition.
@@ -55,7 +55,6 @@ The same files live in this repository under [`library/`](library/).
 | KJV Apocrypha | Oxford standard text (1769) | [eBible.org](https://ebible.org/Scriptures/eng-kjv_usfm.zip) | Published 1611 and 1769 |
 | 1 Enoch | R. H. Charles, SPCK (1917) | [sacred-texts.com](https://archive.sacred-texts.com/bib/boe/index.htm), checked against the 1917 scan | Published before 1931 |
 | Josephus | William Whiston (1737) | [Project Gutenberg](https://www.gutenberg.org/ebooks/2849) | Published 1737 |
-| Philo | C. D. Yonge, H. G. Bohn (1854 to 1855) | [Christian Classics Ethereal Library](https://www.ccel.org/ccel/p/philo/works.xml), checked against the Bohn scans | Published 1854 to 1855 |
 | Reformation confessions and catechisms | Schaff, The Creeds of Christendom, Vol. III (1877) | [Christian Classics Ethereal Library](https://www.ccel.org/ccel/schaff/creeds3.xml) | Published 1877 in the United States |
 | Luther, Calvin, Bunyan | Wace and Buchheim (1883), Bente and Dau (1921), Beveridge (1845), Bunyan (1678) | [Christian Classics Ethereal Library](https://www.ccel.org), [Project Gutenberg](https://www.gutenberg.org/ebooks/131) | Published before 1931 |
 | Pistis Sophia | G. R. S. Mead, revised edition (1921) | [gnosis.org](http://gnosis.org/library/pistis-sophia/index.htm) | Published before 1931 |
