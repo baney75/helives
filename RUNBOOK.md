@@ -21,12 +21,11 @@ pnpm test && pnpm typecheck && pnpm lint && pnpm build
 ## Search index
 
 ```bash
-old=$(cat build/search.hash 2>/dev/null)
 node site/search-index.mjs    # writes build/search.sql, search.hash, search.count and search-chunks/
-[ "$old" = "$(cat build/search.hash)" ] && echo "index unchanged: skip the D1 load"
+cmp -s build/search.hash build/search.loaded-remote && echo "D1 already holds this index: skip the load"
 ```
 
-Load D1 only when the hash changed. The load drops and recreates the `doc` table, so search is empty for the few minutes it runs:
+Load D1 unless it already holds this index. `build/search.loaded-remote` records the hash of the last load that passed its row count, so a load that failed partway is never skipped. The load drops and recreates the `doc` table, so search is empty for the few minutes it runs:
 
 ```bash
 node scripts/load-search.mjs          # loads build/search-chunks/*.sql in order, then checks the row count

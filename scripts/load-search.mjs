@@ -1,7 +1,7 @@
 // Loads build/search-chunks/*.sql into the D1 search table in order, then checks the row count.
 // Usage: node scripts/load-search.mjs [--local]   (run node site/search-index.mjs first)
 import { spawnSync } from 'node:child_process'
-import { readdirSync, readFileSync } from 'node:fs'
+import { readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROOT = new URL('..', import.meta.url).pathname
@@ -10,6 +10,9 @@ const where = process.argv.includes('--local') ? '--local' : '--remote'
 const dir = join(ROOT, 'build', 'search-chunks')
 const files = readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()
 const want = Number(readFileSync(join(ROOT, 'build', 'search.count'), 'utf8'))
+// Written only after the count matches, so a partial load is never mistaken for a finished one.
+const loaded = join(ROOT, 'build', `search.loaded${where.replace('--', '-')}`)
+rmSync(loaded, { force: true })
 
 const wrangler = (...args) =>
   spawnSync('pnpm', ['exec', 'wrangler', 'd1', 'execute', DB, where, '--yes', ...args], { cwd: ROOT, encoding: 'utf8' })
@@ -33,4 +36,5 @@ if (got !== want) {
   console.error(`load-search: D1 holds ${got} rows, the index has ${want}. Rerun the load from 000.sql.`)
   process.exit(1)
 }
+writeFileSync(loaded, readFileSync(join(ROOT, 'build', 'search.hash')))
 console.log(`load-search: ${got} rows, matches the index`)
