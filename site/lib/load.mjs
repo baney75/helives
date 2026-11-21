@@ -13,7 +13,7 @@ export const COLLECTIONS = [
   { id: 'bible', route: 'bible', title: 'Holy Scripture', short: 'Scripture' },
   { id: 'apocrypha', route: 'apocrypha', title: 'The Apocrypha', short: 'Apocrypha' },
   { id: 'pseudepigrapha', route: 'pseudepigrapha', title: 'Enoch and the Pseudepigrapha', short: 'Pseudepigrapha' },
-  { id: 'jewish', route: 'josephus-and-philo', title: 'Josephus and Philo', short: 'Josephus and Philo' },
+  { id: 'jewish', route: 'josephus-and-philo', title: 'Josephus', short: 'Josephus' },
   { id: 'creeds', route: 'creeds', title: 'The Creeds', short: 'Creeds' },
   { id: 'apostolic', route: 'apostolic-fathers', title: 'The Apostolic Fathers', short: 'Apostolic Fathers' },
   { id: 'ante-nicene', route: 'ante-nicene-fathers', title: 'Ante-Nicene Fathers', short: 'Ante-Nicene' },

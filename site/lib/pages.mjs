@@ -410,7 +410,7 @@ export function searchPage() {
   const body = html`<div class="wrap narrow"><p class="kicker">Search</p><h1>Search the library</h1>
 <form class="searchbox" role="search" style="margin-top:var(--s5)" id="search-form"><label class="vh" for="sq">Search</label><input id="sq" name="q" type="search" placeholder="A verse, a phrase, a name" autocomplete="off" autofocus><button class="btn" type="submit">${raw(icon('search'))}<span>Search</span></button></form>
 <div class="filters seg" role="radiogroup" aria-label="Search in">
-${[['all', 'Everything'], ['bible', 'Scripture'], ['apocrypha', 'Apocrypha and Enoch'], ['history', 'Josephus and Philo'], ['fathers', 'Fathers'], ['medieval', 'Medieval'], ['aquinas', 'Aquinas'], ['reformation', 'Reformation'], ['creeds', 'Creeds'], ['gnostic', 'Gnostic'], ['encyclicals', 'Encyclicals'], ['media', 'Videos and articles']].map(
+${[['all', 'Everything'], ['bible', 'Scripture'], ['apocrypha', 'Apocrypha and Enoch'], ['history', 'Josephus'], ['fathers', 'Fathers'], ['medieval', 'Medieval'], ['aquinas', 'Aquinas'], ['reformation', 'Reformation'], ['creeds', 'Creeds'], ['gnostic', 'Gnostic'], ['encyclicals', 'Encyclicals'], ['media', 'Videos and articles']].map(
     ([v, l], i) => html`<label><input type="radio" name="scope" value="${v}"${i === 0 ? raw(' checked') : ''}><span>${l}</span></label>`,
   )}</div>
 <p class="meta" style="margin-top:var(--s3)">Tip: a reference like <a href="/search/?q=John%203:16">John 3:16</a> or <a href="/search/?q=Rom%208">Rom 8</a> goes straight to the passage. Use quotes for an exact phrase.</p>

@@ -461,7 +461,13 @@ def check(n_sent: int = 25) -> int:
 
 # ---------------------------------------------------------------- write
 
+# CCEL's Philo is the 1993 Hendrickson revision. A stricter scan check found 1993 wording in every
+# treatise, so none is hosted until a hand review clears it (branch philo-gate).
+WITHDRAWN = "Philo is withdrawn: CCEL's text carries 1993 Hendrickson wording"
+
+
 def write() -> int:
+    sys.exit(WITHDRAWN)
     v = ccelwork.load(SOURCE)
     m = meta(SOURCE)
     caps = mid_caps(v)
