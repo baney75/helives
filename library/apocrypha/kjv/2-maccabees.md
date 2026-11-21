@@ -13,7 +13,7 @@ words: 16329
 
 # The Second Book of the Maccabees
 
-> An abridgment of Jason of Cyrene's history of the Maccabean revolt up to Judas' victory over Nicanor, including the martyrdom of Eleazar and of the seven brothers and their mother. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
+> An abridgment of Jason of Cyrene's history of the Maccabean revolt up to Judas' victory over Nicanor, including the martyrdom of Eleazar and of the seven brothers and their mother. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## 2 Maccabees 1
 

@@ -13,7 +13,7 @@ words: 23127
 
 # The First Book of the Maccabees
 
-> A history of the Jewish revolt against the Seleucid kings under Mattathias and his sons Judas, Jonathan and Simon, from 175 to 134 BC. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
+> A history of the Jewish revolt against the Seleucid kings under Mattathias and his sons Judas, Jonathan and Simon, from 175 to 134 BC. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## 1 Maccabees 1
 

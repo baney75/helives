@@ -119,6 +119,7 @@ python3 -m unittest discover -s pipeline/tests -t .
 5. Build, check the new pages live, rebuild the search index, and deploy as above.
 6. Gnostic works go in `library/gnostic/`. Any non-canonical work needs a `summary` that says it is a historical text the church rejected, never Scripture.
 7. Pending: Bondage of the Will (Atherton 1931, CCEL) enters US public domain 2027-01-01; ingest then.
+8. Skipped: the Apocalypse of Abraham (G. H. Box, SPCK 1918). The only usable text is the OCR of one archive.org scan (apocalypseofabra00boxg); the online e-texts are unattributed or unusable, so there is no second witness to check the words against. Ingest it only once a second scan or a trustworthy transcription of the Box translation turns up.
 
 ## Live checks
 

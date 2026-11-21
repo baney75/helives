@@ -1,0 +1,45 @@
+[[collection]]
+id = "medieval"
+title = "Medieval Writers"
+order = 6
+summary = "Christian writers of the Middle Ages in public domain English translations: Boethius's Consolation of Philosophy, Bede's Ecclesiastical History of the English Nation, Anselm of Canterbury and The Imitation of Christ."
+
+[authors.boethius]
+name = "Boethius"
+dates = "c. 477-524"
+role = "Roman statesman and philosopher under Theodoric the Ostrogoth"
+summary = "Anicius Manlius Severinus Boethius, consul in 510 and master of offices to Theodoric, translated and commented on Aristotle and wrote theological tractates. Accused of treason, he wrote The Consolation of Philosophy in prison before his execution."
+portrait = ""
+source = "https://www.gutenberg.org/ebooks/14328"
+
+[authors.bede]
+name = "Bede"
+dates = "c. 673-735"
+role = "English monk of Wearmouth and Jarrow, historian and biblical scholar"
+summary = "Called the Venerable Bede, he spent his life in the twin monastery of Wearmouth and Jarrow in Northumbria, writing biblical commentaries, works on time and the calendar, and the Ecclesiastical History of the English Nation, completed in 731."
+portrait = ""
+source = "https://www.gutenberg.org/ebooks/38326"
+
+[authors.thomas-a-kempis]
+name = "Thomas à Kempis"
+dates = "c. 1380-1471"
+role = "Canon regular of Mount St. Agnes near Zwolle, devotional writer"
+summary = "A member of the Brethren of the Common Life and the Devotio Moderna, he spent most of his life at the monastery of Mount St. Agnes, where he copied manuscripts and wrote devotional works. The Imitation of Christ is traditionally attributed to him."
+portrait = ""
+source = "https://www.gutenberg.org/ebooks/1653"
+
+[authors.anselm]
+name = "Anselm of Canterbury"
+dates = "c. 1033-1109"
+role = "Abbot of Bec and Archbishop of Canterbury, theologian"
+summary = "Born at Aosta, he became a monk and then abbot of Bec in Normandy and in 1093 Archbishop of Canterbury. His Monologium, Proslogium and Cur Deus Homo set out reasoned accounts of God's existence and of the Incarnation."
+portrait = ""
+source = "https://www.ccel.org/ccel/anselm/basic_works"
+
+[authors.gaunilo]
+name = "Gaunilo of Marmoutier"
+dates = "11th century"
+role = "Benedictine monk of Marmoutier near Tours"
+summary = "A monk of the abbey of Marmoutier, known only for his reply In Behalf of the Fool, which objects to the argument of Anselm's Proslogium."
+portrait = ""
+source = "https://www.ccel.org/ccel/anselm/basic_works"

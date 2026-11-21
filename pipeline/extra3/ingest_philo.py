@@ -157,24 +157,23 @@ TREATISES = {
                "that nature's evils disprove providence."),
 }
 
-# Failed the first sample check (25 random sentences each) before the full correction; the CCEL
-# wording differs from the Bohn scan by more than scan noise or transliteration.
+# These ten failed the first sample check (25 random sentences each): the CCEL text carried 1993
+# Hendrickson wording where the Bohn scans differ. The full two-scan correction (correct() and MANUAL)
+# restores the Bohn reading; pipeline/tests/test_philo_scope.py checks each pair below in the library.
+# treatise: [(1993 reading, Bohn reading), ...]
 FAILED_CHECK = {
-    "iii.i": "On the Creation: 'dividing days and nights, of months and years' (Bohn: 'nights, months')",
-    "iii.ix": "On the Giants: 'whether aquatic of terrestrial' (Bohn: 'or terrestrial')",
-    "iii.xii": "Concerning Noah's Work as a Planter: 'the most supporting and firm foundation of the universe' "
-               "(Bohn: 'the strong and lasting support'); 'there is placed the man' (Bohn: 'there he placed')",
-    "iii.xv": "On the Confusion of Tongues: 'a slight foundation is being first laid' (Bohn: 'being first laid')",
-    "iii.xvi": "On the Migration of Abraham: 'to also appear' (Bohn: 'also to appear'); 'the wicked man multitude' "
-               "(Bohn: 'a mixed multitude')",
-    "iii.xx": "On the Change of Names: 'O the man that thus thought worthy' (Bohn: 'O the man thus thought worthy')",
-    "iii.xxii": "On Dreams, Book 2: 'characteristic of the wise man to go forth' (Bohn: 'of the one man')",
-    "iii.xxiii": "On Abraham: 'the brother's son of a wise Abraham' (Bohn: 'of the wise Abraham')",
-    "iii.xxv": "On the Life of Moses, Book 1: 'vast number of bodies' (Bohn: 'vast numbers of bodies')",
-    "iii.xl": "On Providence, Fragment 2: 'as an act of relentless' (Bohn: 'as the act of relentless')",
+    "iii.i": [("dividing days and nights, of months and years", "days and nights, months and years")],
+    "iii.ix": [("whether aquatic of terrestrial", "whether aquatic or terrestrial")],
+    "iii.xii": [("the most supporting and firm foundation of the universe",
+                 "the strong and lasting support of the universe")],
+    "iii.xv": [("a slight foundation is being first laid", "a slight foundation being first laid")],
+    "iii.xvi": [("to also appear", "also to appear"), ("the wicked man multitude", "the wicked man a mixed multitude")],
+    "iii.xx": [("O the man that thus thought worthy", "O the man thus thought worthy")],
+    "iii.xxii": [("characteristic of the wise man to go forth", "characteristic of the one man to go forth")],
+    "iii.xxiii": [("the brother's son of a wise Abraham", "the brother's son of the wise Abraham")],
+    "iii.xxv": [("vast number of bodies", "vast numbers of bodies")],
+    "iii.xl": [("as an act of relentless", "as the act of relentless")],
 }
-# Held out until a two-scan correction restores the Bohn readings: their CCEL text carries 1993 wording.
-HELD = {_did: TREATISES.pop(_did) for _did in FAILED_CHECK}
 
 TREATISES["iii.xli"] = (
     "on-the-embassy-to-gaius", "On the Embassy to Gaius", "Embassy to Gaius",
@@ -200,12 +199,13 @@ EDITOR_NOTE = re.compile(r"^Yonge's|Yonge has|Loeb|Cohn|Wendland|publisher|reord
                          r"newly translated|Hendrickson")
 
 EDITION = ("C. D. Yonge, trans., The Works of Philo Judaeus, the Contemporary of Josephus, 4 vols. (London: "
-           "H. G. Bohn, 1854-1855), {vol}; electronic text from CCEL (philo/works), checked against the archive.org "
-           "scan of the Bohn edition ({scan})")
+           "H. G. Bohn, 1854-1855), {vol}; electronic text from CCEL (philo/works), corrected word by word to the "
+           "Bohn wording against two archive.org scans of that edition ({scan} and {scan_b})")
 BASIS = ("Yonge's translation was published in London by H. G. Bohn in 1854-1855, before 1931, so it is in the "
          "public domain in the United States. The section numbering and the Greek transliteration follow the CCEL "
-         "electronic text, which derives from a 1993 updated edition; that edition's added titles and editor notes "
-         "are not included, and only treatises without its new translation or reordering are hosted.")
+         "electronic text, which derives from a 1993 updated edition; where that edition's wording differs from the "
+         "Bohn scans, the Bohn reading is restored. Its added titles and editor notes are not included, and only "
+         "treatises without its new translation or reordering are hosted.")
 
 MOJIBAKE = [("â\x80\x94", "—"), ("Ì\x84", "̄"), ("Â̄", "̄"), ("Â", ""), ("\xa0", " ")]
 
@@ -459,14 +459,285 @@ def check(n_sent: int = 25) -> int:
     return 0
 
 
+# ---------------------------------------------------------------- full correction against two scans
+
+SCANS_B = [f"yongeB{n}_djvu.txt" for n in (1, 2, 3, 4)]
+SCAN_B_IDS = ["worksofphilojuda01yonguoft", "worksofphilojuda02yonguoft", "theworksofphiloj03yonguoft",
+              "theworksofphiloj04yonguoft"]
+JUNK = {"philo", "judaeus", "judus", "judseus", "judeus", "genesis", "exodus", "leviticus", "deuteronomy",
+        "psalm", "ibid", "vol", "see", "cf"}
+CORRECTIONS = CACHE / "philo-corrections.tsv"
+# Readings from the first sample check that the automated pass cannot take (a footnote inside the
+# sentence, a break in one scan's OCR, or a reworded sentence), read from both scans by hand.
+MANUAL = [
+    ("iii.xii", "But it is the eternal law of the everlasting God which is the most supporting and firm foundation of "
+     "the universe.", "But the eternal law of the everlasting God is the strong and lasting support of the universe."),
+    ("iii.xv", "a slight foundation is being first laid", "a slight foundation being first laid"),
+    ("iii.xvi", "the soul of the wicked man multitude", "the soul of the wicked man a mixed multitude"),
+    ("iii.xxv", "from such vast number of bodies", "from such vast numbers of bodies"),
+    # typos in the CCEL text at a page break of the scan
+    ("iii.iii", "ought to be birded", "ought to be girded"),
+    ("iii.xix", "Of thiscompany Jacob", "Of this company Jacob"),
+]
+TRACE: list = []  # debugging: print the decision for every difference in sentences containing these
+
+
+def scans():
+    import scancheck
+    a = scancheck.Scan([CACHE / n for n in SCANS])
+    b = scancheck.Scan([CACHE / n for n in SCANS_B])
+    return a, b
+
+
+def vocabulary(v) -> set[str]:
+    import scancheck
+    words = scancheck.load_words(Path("/usr/share/dict/web2"))
+    words = {x for x in words if len(x) >= 5}  # short dictionary words include OCR debris (bo, mose)
+    for did in list(TREATISES) + list(DROPPED):
+        for blk in raw_blocks(v, did):
+            words |= {t[0] for t in scancheck.tokens(blk["text"])}
+    return words | {"caius"}  # Yonge's spelling, replaced throughout by the 1993 edition
+
+
+SHAPES = str.maketrans("bcoulta", "heenife")  # letters OCR and worn type confuse
+
+
+def shape(x: str) -> str:
+    return x.replace("rn", "m").replace("cl", "d").replace("li", "h").translate(SHAPES)
+
+
+def refuse(old: list, alt: list, caps: list, vocab: set) -> str:
+    """Why a scan reading is not taken as a correction, or "" when it is."""
+    if len(old) > 3 or len(alt) > 3 or (not old and len(alt) > 1) or (not alt and len(old) > 1):
+        return "long span"
+    if any(caps):
+        return "running head"
+    for x in alt:
+        if x in JUNK or (len(x) == 1 and x != "a") or (re.fullmatch(r"[ivxlc]+", x) and x not in ("ill", "civil")):
+            return "scan noise"
+        if x not in vocab:
+            return "not a word"
+    if not alt and len(old[0]) == 1:
+        return "scan noise"  # O and I read as digits
+    if len(old) == 1 and len(alt) == 1:
+        o, n = old[0], alt[0]
+        if len(n) == len(o) - 1 and any(o[:k] + o[k + 1:] == n for k in range(len(o))):
+            return "dropped letter"  # a misprint or broken type in the 1854 printing, e.g. "he measure"
+        if shape(o) == shape(n):
+            return "look-alike letters"
+    return ""
+
+
+def printed(raw: list, old: list) -> str:
+    """The scan's words as printed (so proper names keep their capitals), with a hyphen wherever
+    consecutive scan words spell one CCEL word ("allaccomplished" in CCEL, "all-accomplished" in Bohn)."""
+    words = [r.lower() if r.isupper() and len(r) > 1 else r for r in raw]
+    out, k = [], 0
+    while k < len(words):
+        for m in range(len(words), k + 1, -1):
+            if scancheck_norm("".join(words[k:m])) in old:
+                out.append("-".join(words[k:m]))
+                k = m
+                break
+        else:
+            out.append(words[k])
+            k += 1
+    return " ".join(out)
+
+
+def scancheck_norm(x: str) -> str:
+    import scancheck
+    return scancheck.norm(x)
+
+
+def correct(secs: list, did: str, a, b, vocab: set, log: list) -> dict:
+    """Take the Bohn reading wherever both scans agree on clean dictionary words that differ from the
+    CCEL text. Returns counts; appends one row per correction to log."""
+    import scancheck
+    st = collections.Counter()
+    for sec in secs:
+        for blk in sec["blocks"]:
+            if blk["t"] not in ("p", "q", "note"):
+                continue
+            text = blk["text"]
+            edits = []
+            for sa, sb in scancheck.sentences(text):
+                sent = text[sa:sb]
+                toks = scancheck.tokens(sent)
+                w = [t[0] for t in toks]
+                ra = a.align(w)
+                if ra is None:
+                    st["unanchored"] += len(w)
+                    continue
+                rb = b.align(w)
+                start_a = a.start
+                ops_a, seg_a = ra
+                rb = b.align(w)
+                ops_b = {(o[1], o[2]): rb[1][o[3]:o[4]] for o in rb[0]} if rb else {}
+                # Differences closer together than three matching words form one cluster ("to also appear"
+                # against "also to appear" is a delete and an insert). A cluster needs firm ground: three
+                # matching words on each side (or the sentence edge), so a footnote or verse quotation that
+                # sits inside the sentence at a page break cannot pair stray words like "of the" across it.
+                # A running head the scan carries inside the sentence is page furniture: it neither joins
+                # nor breaks a cluster, and the matching words around it count together.
+                def furniture(o):
+                    seg = seg_a[o[3]:o[4]]
+                    return o[0] == "insert" and (any(a.caps[start_a + o[3]:start_a + o[4]]) or seg[0] in JUNK)
+                eqrun = {}  # op index -> matching words in its run, furniture skipped
+                run, members = 0, []
+                for m, o in enumerate(ops_a + [("delete", 0, 0, 0, 0)]):
+                    if m < len(ops_a) and (o[0] == "equal" or furniture(o)):
+                        run += o[2] - o[1]
+                        members.append(m)
+                        continue
+                    for mm in members:
+                        eqrun[mm] = run
+                    run, members = 0, []
+                clusters, cur = [], []
+                for m, o in enumerate(ops_a):
+                    if m in eqrun:
+                        if eqrun[m] >= 3 and cur:
+                            clusters.append(cur)
+                            cur = []
+                    else:
+                        cur.append(m)
+                if cur:
+                    clusters.append(cur)
+
+                def ground(m):
+                    return m < 0 or m >= len(ops_a) or eqrun.get(m, 0) >= 3
+                for cl in clusters:
+                    m0, m1 = cl[0], cl[-1]
+                    firm = ground(m0 - 1) and ground(m1 + 1)
+                    # several differences together, or a reworded phrase, need matching words on both sides,
+                    # not the sentence edge, where the anchor window can pair it with the sentence before
+                    strict = all(0 <= x < len(ops_a) and eqrun.get(x, 0) >= 3 for x in (m0 - 1, m1 + 1))
+                    if len(cl) > 1 and not strict:
+                        firm = False
+                    span_w = ops_a[m1][2] - ops_a[m0][1]
+                    span_s = ops_a[m1][4] - ops_a[m0][3]
+                    # a reworded phrase in the 1993 text: a replacement on both sides, confirmed by both scans,
+                    # clean dictionary words and no page break near it, up to 12 words
+                    phrase = (strict and span_w and span_s and span_s <= 12 and span_w <= 12
+                              and not any(a.caps[max(0, start_a + ops_a[m0][3] - 8):start_a + ops_a[m1][4] + 8])
+                              and all(x in vocab and x not in JUNK for x in seg_a[ops_a[m0][3]:ops_a[m1][4]])
+                              and all(ops_b.get((ops_a[m][1], ops_a[m][2])) == seg_a[ops_a[m][3]:ops_a[m][4]]
+                                      for m in cl))
+                    whys, picks = [], []
+                    for m in cl:
+                        t, i1, i2, j1, j2 = ops_a[m]
+                        alt = seg_a[j1:j2]
+                        caps = a.caps[start_a + j1:start_a + j2]
+                        why = refuse(w[i1:i2], alt, caps, vocab)
+                        if why == "long span" and phrase:
+                            why = ""
+                        if not why and not firm:
+                            why = "near page break" if any(
+                                a.caps[max(0, start_a + j1 - 8):start_a + j2 + 8]) else "weak alignment"
+                        if not why and not phrase and len(cl) > 1 and (span_w > 6 or span_s > 6):
+                            why = "long span"
+                        if not why and ((t == "insert" and i1 in (0, len(w))) or (t == "delete" and (i1 == 0 or i2 == len(w)))):
+                            why = "edge"
+                        if not why and i2 - i1 > 1 and sent[toks[i1][1]:toks[i2 - 1][2]].count(" ") != i2 - i1 - 1:
+                            why = "punctuation inside"
+                        if not why and any(c in sent[toks[k][1]:toks[k][2]] for k in range(i1, i2) for c in "'’"):
+                            why = "apostrophe"
+                        if not why and ops_b.get((i1, i2)) != alt:
+                            why = "unconfirmed"
+                        if TRACE and any(x in sent for x in TRACE):
+                            print(f"TRACE {did} {w[i1:i2]} -> {alt} B={ops_b.get((i1, i2))}: {why or 'taken'}")
+                        whys.append(why)
+                        nxt = a.raw[start_a + j2] if start_a + j2 < len(a.raw) else ""
+                        picks.append((sa, toks, i1, i2, a.raw[start_a + j1:start_a + j2], nxt))
+                    # A cluster is taken whole or not at all, except that an unreadable scan word ("not a word",
+                    # "scan noise") only keeps the CCEL word in its own place.
+                    local = ("not a word", "scan noise")
+                    bad = [x for x in whys if x and x not in local]
+                    if bad:
+                        st[bad[0]] += len(cl)
+                        continue
+                    for why, pick in zip(whys, picks):
+                        if why:
+                            st[why] += 1
+                        else:
+                            edits.append(pick)
+            # apply right to left
+            for sa, toks, i1, i2, alt, nxt in sorted(edits, key=lambda e: (e[0], e[2], e[3] > e[2]), reverse=True):
+                if i1 < i2:
+                    start, end = sa + toks[i1][1], sa + toks[i2 - 1][2]
+                    old = text[start:end]
+                    new = printed(alt, [t[0] for t in toks[i1:i2]])
+                    if old[:1].isupper():
+                        new = new[:1].upper() + new[1:]
+                    if not alt:  # Bohn lacks the word: drop it with one space
+                        if end < len(text) and text[end] == " ":
+                            end += 1
+                        elif start > 0 and text[start - 1] == " ":
+                            start -= 1
+                else:
+                    start = end = sa + toks[i1][1]
+                    old, new = "", printed(alt, []) + " "
+                    # Bohn opens with the inserted word ("He here calls"): take the scan's case for the next word
+                    k2 = sa + toks[i1][1]
+                    if nxt[:1].islower() and text[k2:k2 + 1].isupper() and new[:1].isupper():
+                        text = text[:k2] + text[k2].lower() + text[k2 + 1:]
+                ctx = text[max(0, start - 40):end + 40].replace("\t", " ")
+                text = text[:start] + new + text[end:]
+                log.append((did, sec["id"], old, new.strip(), ctx))
+                st["corrections"] += 1
+            blk["text"] = re.sub(r"  +", " ", text)
+    return st
+
+
+def match_rate(secs: list, a) -> tuple[int, int, int]:
+    """Words in sentences found in scan A, and of those the words equal to the scan."""
+    import scancheck
+    found = eq = total = 0
+    for sec in secs:
+        for blk in sec["blocks"]:
+            if blk["t"] not in ("p", "q"):
+                continue
+            for sa, sb in scancheck.sentences(blk["text"]):
+                w = [t[0] for t in scancheck.tokens(blk["text"][sa:sb])]
+                total += len(w)
+                r = a.align(w)
+                if r is None:
+                    continue
+                found += len(w)
+                eq += sum(i2 - i1 for t, i1, i2, j1, j2 in r[0] if t == "equal")
+    return eq, found, total
+
+
 # ---------------------------------------------------------------- write
 
 def write() -> int:
     v = ccelwork.load(SOURCE)
     m = meta(SOURCE)
     caps = mid_caps(v)
+    a, b = scans()
+    vocab = vocabulary(v)
+    log: list = []
+    rates = []
+    refused = collections.Counter()
     for i, (did, (slug, title, short, ytitle, summary)) in enumerate(TREATISES.items()):
         secs = sections_of(v, did, caps)
+        for s2 in secs:
+            for b2 in s2["blocks"]:
+                if b2["t"] == "note":  # the 1993 edition starts notes in lowercase; Bohn's start with capitals
+                    b2["text"] = re.sub(r"^([^A-Za-z]*)([a-z])", lambda m2: m2.group(1) + m2.group(2).upper(), b2["text"])
+        st = correct(secs, did, a, b, vocab, log)
+        for mdid, mold, mnew in MANUAL:
+            if mdid != did:
+                continue
+            hits = [(s2, b2) for s2 in secs for b2 in s2["blocks"] if mold in b2["text"]]
+            assert len(hits) == 1 and hits[0][1]["text"].count(mold) == 1, (did, mold)
+            s2, b2 = hits[0]
+            b2["text"] = b2["text"].replace(mold, mnew)
+            log.append((did, s2["id"], mold, mnew, "checked by hand on both scans"))
+            st["corrections"] += 1
+        eq, found, total = match_rate(secs, a)
+        rates.append((slug, st["corrections"], st["unconfirmed"], eq, found, total))
+        refused.update({k: n for k, n in st.items() if k != "corrections"})
         vol = vol_of(secs)
         found = yonge_title(v, did)
         yt = f" Yonge's title: {found}." if found else ""
@@ -476,13 +747,29 @@ def write() -> int:
             "id": f"philo-{slug}", "title": title, "short_title": short, "author": "philo", "collection": "jewish",
             "order": 10 + i, "date": "c. 20-50", "language": "Greek", "translator": "C. D. Yonge",
             "edition": EDITION.format(vol=f"vol. {['I', 'II', 'III', 'IV'][vol - 1]}",
-                                      scan=f"archive.org {SCAN_IDS[vol - 1]}"),
+                                      scan=f"archive.org {SCAN_IDS[vol - 1]}", scan_b=SCAN_B_IDS[vol - 1]),
             "source_url": m["url"], "source_sha256": m["sha256"], "retrieved": m["retrieved"],
             "license": "Public domain", "license_basis": BASIS, "summary": summary + yt,
         }
+        if did == "iii.xli":
+            # The 1993 edition spells the emperor "Gaius" throughout; Yonge printed "Caius" (both scans
+            # show only "Caius" in this treatise). Restore it everywhere, possessives included.
+            for s2 in secs:
+                for b2 in s2["blocks"]:
+                    for m2 in re.finditer(r"\bGaius\b", b2["text"]):
+                        log.append((did, s2["id"], "Gaius", "Caius", b2["text"][max(0, m2.start() - 40):m2.end() + 40]))
+                    b2["text"] = re.sub(r"\bGaius\b", "Caius", b2["text"])
         p = write_work(OUT / f"{slug}.toml", work, secs)
         print(f"  wrote {p.relative_to(LIBRARY.parent)}: {len(secs)} sections, "
               f"{sum(section_words(s['blocks']) for s in secs)} words")
+    with open(CORRECTIONS, "w", encoding="utf-8") as f:
+        f.write("treatise\tsection\tccel\tbohn\tcontext\n")
+        for row in log:
+            f.write("\t".join(x.replace("\t", " ") for x in row) + "\n")
+    print("refused readings:", dict(refused.most_common()))
+    print(f"{'treatise':42} {'fixed':>5} {'unconf':>6} {'match%':>7} {'found%':>7}")
+    for slug, c, u, eq, found, total in rates:
+        print(f"{slug:42} {c:5} {u:6} {100 * eq / max(1, found):7.2f} {100 * found / max(1, total):7.1f}")
     return 0
 
 

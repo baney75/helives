@@ -13,7 +13,7 @@ words: 11061
 
 # Judith
 
-> The story of Judith, a widow of Bethulia, who delivers Israel from the Assyrian general Holofernes. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
+> The story of Judith, a widow of Bethulia, who delivers Israel from the Assyrian general Holofernes. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## Judith 1
 

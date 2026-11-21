@@ -1239,8 +1239,6 @@ If I mistake not, I have already shown clearly how the same act at once betrays 
 
 ## Book Second. Of the Knowledge of God the Redeemer, in Christ, as First Manifested to the Fathers, Under the Law, and Thereafter to Us Under the Gospel
 
-### Book Second. Of the Knowledge of God the Redeemer, in Christ, as First Manifested to the Fathers, Under the Law, and Thereafter to Us Under the Gospel
-
 ### Argument
 
 The First Part of the Apostles’ Creed—viz. the knowledge of God the Creator, being disposed of, we now come to the Second Part, which relates to the knowledge of God as a Redeemer in Christ. The subjects treated of accordingly are, *first*, the Occasion of Redemption—viz. Adam’s fall; and, *secondly*, Redemption itself. The first five chapters are devoted to the former subject, and the remainder to the latter.
@@ -2653,8 +2651,6 @@ END OF THE SECOND BOOK.
 [^book-2-chapter-17-christ-rightly-and-properly-said-to-have-merited-273]: The sentence stands thus in the French:—“Les Sorbonnistes pervertissent le passage de S. Paul, l’appliquans a ce propos c’est que pource que Jesus Christ s’est humilié, le Pere l’a exalté et lui donné un nom souverain:”—The Sorbonnists pervert the passage of St Paul, and apply it in this way—that because Christ humbled himself, the Father exalted him, and gave him a sovereign name.
 
 ## Book Third. The Mode of Obtaining the Grace of Christ. the Benefits It Confers, and the Effects Resulting from It
-
-### Book Third. The Mode of Obtaining the Grace of Christ. the Benefits It Confers, and the Effects Resulting from It
 
 ### Argument
 
@@ -4758,8 +4754,6 @@ It remains to make a passing remark on the mode of resurrection. I speak thus be
 [^book-3-chapter-25-sections-10-12-516]: French, “Et encore quand nous aurons bien profité en cette meditation, se nous faut il entendre que nous sommes encore tout au bas et à la premiere entree, et que jamais nous n’approcherons durant cette vie à la hautesse de ce mystere.”—And still, when we shall have profited much by thus meditating, we must understand that we are still far beneath it, and at the very threshold, and that never during this life shall we approach the height of this mystery.
 
 ## Book Fourth. Of the Holy Catholic Church
-
-### Book Fourth. Of the Holy Catholic Church
 
 ### Argument
 

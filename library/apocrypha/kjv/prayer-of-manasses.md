@@ -13,7 +13,7 @@ words: 408
 
 # The Prayer of Manasses
 
-> A prayer of repentance in the name of King Manasseh of Judah, written to fit 2 Chronicles 33:12 and 13. It is canonical in the Eastern Orthodox churches but not in the Catholic canon (it stands in an appendix to the Vulgate), and it is outside the Protestant canon.
+> A prayer of repentance in the name of King Manasseh of Judah, written to fit 2 Chronicles 33:12 and 13. It is canonical in the Eastern Orthodox churches but not in the Catholic canon (it stands in an appendix to the Vulgate), and it is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## Prayer of Manasses 1
 
