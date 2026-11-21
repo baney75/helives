@@ -604,7 +604,7 @@ At this time, the brave and ambitious king, Ethelfrid,[^book-1-chapter-34-139] g
 
 ## Book II
 
-### Chapter I. Of the death of the blessed Pope Gregory. note_143 [604 a.d.]
+### Chapter I. Of the death of the blessed Pope Gregory. [604 a.d.]
 
 At this time, that is, in the year of our Lord 605,[^book-2-chapter-1-144] the blessed Pope Gregory, after having most gloriously governed the Roman Apostolic see thirteen years, six months, and ten days, died, and was translated to an eternal abode in the kingdom of Heaven. Of whom, seeing that by his zeal he converted our nation, the English, from the power of Satan to the faith of Christ, it behoves us to discourse more at large in our Ecclesiastical History, for we may rightly, nay, we must, call him our apostle; because, as soon as he began to wield the pontifical power over all the world, and was placed over the Churches long before converted to the true faith, he made our nation, till then enslaved to idols, the Church of Christ, so that concerning him we may use those words of the Apostle; “if he be not an apostle to others, yet doubtless he is to us; for the seal of his apostleship are we in the Lord.”[^book-2-chapter-1-145]
 
@@ -1369,7 +1369,7 @@ At this time he gave to the above-mentioned Peada, son to King Penda, because he
 [^book-3-chapter-24-452]: C. 23, p. 187, and note.
 [^book-3-chapter-24-453]: IV, 3, 5, 6. He was deposed by Theodore for some act of disobedience not known (IV, 6), and went to the Continent, where, travelling in Neustria, he was mistaken for Wilfrid and cruelly ill-treated by the emissaries of Ebroin (v. V, 19, note), “errore bono unius syllabae seducti,” as Eddius, the biographer of Wilfrid, remarks.
 
-### Chapter XXV. How the question arose about the due time of keeping Easter, with those that came out of Scotland. note_454 [664 a.d.]
+### Chapter XXV. How the question arose about the due time of keeping Easter, with those that came out of Scotland. [664 a.d.]
 
 In the meantime, Bishop Aidan being taken away from this life, Finan, who was ordained and sent by the Scots, succeeded him in the bishopric, and built a church in the Isle of Lindisfarne, fit for the episcopal see; nevertheless, after the manner of the Scots, he made it, not of stone, but entirely of hewn oak, and covered it with reeds; and it was afterwards dedicated in honour of the blessed Peter the Apostle, by the most reverend Archbishop Theodore. Eadbert,[^book-3-chapter-25-455] also bishop of that place, took off the thatch, and caused it to be covered entirely, both roof and walls, with plates of lead.
 
@@ -1596,7 +1596,7 @@ In the meantime, Colman, the Scottish bishop, departing from Britain,[^book-4-ch
 [^book-4-chapter-4-558]: Innisboffin, off the coast of Mayo. The annals of Ulster give 667 as the date of his retirement to it.
 [^book-4-chapter-4-559]: Mayo, called from this settlement, “Mayo of the Saxons.” It continued to be an English monastery (v. infra), and after awhile adopted those usages, to avoid which Colman had left England. It became an episcopal see, which in 1559 was annexed to the archbishopric of Tuam.
 
-### Chapter V. Of the death of the kings Oswy and Egbert, and of the synod held at the place Herutford, note_560  in which Archbishop Theodore presided. [670-673 a.d.]
+### Chapter V. Of the death of the kings Oswy and Egbert, and of the synod held at the place Herutford, in which Archbishop Theodore presided. [670-673 a.d.]
 
 In the year of our Lord 670,[^book-4-chapter-5-561] being the second year after Theodore arrived in England, Oswy, king of the Northumbrians, fell sick, and died, in the fifty-eighth year of his age.[^book-4-chapter-5-562] He at that time bore so great affection to the Roman Apostolic usages, that he had designed, if he recovered from his sickness, to go to Rome, and there [pg 227] to end his days at the holy places, having asked Bishop Wilfrid, with a promise of no small gift of money, to conduct him on his journey. He died on the 15th of February, leaving his son Egfrid[^book-4-chapter-5-563] his successor in the kingdom. In the third year of his reign, Theodore assembled a council of bishops, along with many other teachers of the church, who loved and were acquainted with the canonical statutes of the fathers. When they were met together, he began, in the spirit which became a bishop, to enjoin the observance of such things as were in accordance with the unity and the peace of the Church. The purport of the proceedings of this synod is as follows:—[^book-4-chapter-5-564]
 
@@ -1997,7 +1997,7 @@ It is also told, that her death was, in a vision, made known the same night to o
 [^book-4-chapter-23-707]: She has been confused with Heiu and with Bega, v.s. p. 271, note 7.
 [^book-4-chapter-23-708]: I.e., the Prioress.
 
-### Chapter XXIV. That there was in her monastery a brother, on whom the gift of song was bestowed by Heaven. note_709 [680 a.d.]
+### Chapter XXIV. That there was in her monastery a brother, on whom the gift of song was bestowed by Heaven. [680 a.d.]
 
 There was in the monastery of this abbess a certain brother, marked in a special manner by the grace of God, for he was wont to make songs of piety and religion, so that whatever was expounded to him out of Scripture, he turned ere long into verse expressive of much sweetness and penitence, in English, which was his native language. By his songs the minds of many were often fired with contempt of the world, and desire of the heavenly life. Others of the English nation after him [pg 278] attempted to compose religious poems, but none could equal him, for he did not learn the art of poetry from men, neither was he taught by man, but by God's grace he received the free gift of song, for which reason he never could compose any trivial or vain poem, but only those which concern religion it behoved his religious tongue to utter. For having lived in the secular habit till he was well advanced in years, he had never learned anything of versifying; and for this reason sometimes at a banquet, when it was agreed to make merry by singing in turn, if he saw the harp come towards him, he would rise up from table and go out and return home.
 
