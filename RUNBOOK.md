@@ -22,17 +22,17 @@ pnpm test && pnpm typecheck && pnpm lint && pnpm build
 
 ```bash
 old=$(cat build/search.hash 2>/dev/null)
-node site/search-index.mjs    # writes build/search.sql and build/search.hash
+node site/search-index.mjs    # writes build/search.sql, search.hash, search.count and search-chunks/
 [ "$old" = "$(cat build/search.hash)" ] && echo "index unchanged: skip the D1 load"
 ```
 
-Load D1 only when the hash changed. The SQL drops and recreates the `doc` table:
+Load D1 only when the hash changed. The load drops and recreates the `doc` table, so search is empty for the few minutes it runs:
 
 ```bash
-pnpm exec wrangler d1 execute helives-library --remote --file build/search.sql
+node scripts/load-search.mjs          # loads build/search-chunks/*.sql in order, then checks the row count
 ```
 
-For local work use `--local` instead of `--remote`.
+It must end with "matches the index"; otherwise rerun it. Never load `build/search.sql` in one `--file` call: D1 refuses a file that size (`D1_RESET_DO`). For local work add `--local`.
 
 ## Deploy
 
