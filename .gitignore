@@ -43,3 +43,6 @@ pipeline/cache/
 __pycache__/
 *.toml.tmp
 build/
+
+# design reference screenshots stay local
+refs/*/screenshots/
