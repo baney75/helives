@@ -203,13 +203,14 @@ EDITOR_NOTE = re.compile(r"^Yonge's|Yonge has|Loeb|Cohn|Wendland|publisher|reord
 EDITION = ("C. D. Yonge, trans., The Works of Philo Judaeus, the Contemporary of Josephus, 4 vols. (London: "
            "H. G. Bohn, 1854-1855), {vol}; electronic text from CCEL (philo/works), corrected word by word to the "
            "Bohn wording against two archive.org scans of that edition ({scan} and {scan_b}). After correction "
-           "every compared sentence matches both scans except where they show OCR noise; {pct}% of the words "
-           "(headings and short or unlocated sentences) could not be compared")
+           "every span of four or more words matches the scans except where they show OCR noise; {pct}% of "
+           "the words (spans under four words) were not compared")
 BASIS = ("Yonge's translation was published in London by H. G. Bohn in 1854-1855, before 1931, so it is in the "
          "public domain in the United States. The section numbering and the Greek transliteration follow the CCEL "
          "electronic text, which derives from a 1993 updated edition; where that edition's wording differs from the "
          "Bohn scans, the Bohn reading is restored, and a treatise is hosted only when a second comparison with "
-         "both scans finds no remaining difference other than OCR noise. Its added titles and editor notes are not "
+         "both scans finds no remaining difference other than OCR noise in every span of four or more words; "
+         "shorter spans are not compared (the edition note gives their share). Its added titles and editor notes are not "
          "included, and only treatises without its new translation or reordering are hosted.")
 
 MOJIBAKE = [("â\x80\x94", "—"), ("Ì\x84", "̄"), ("Â̄", "̄"), ("Â", ""), ("\xa0", " ")]
@@ -451,15 +452,18 @@ def refuse(old: list, alt: list, caps: list, vocab: set, agreed: bool = False) -
     return ""
 
 
-def printed(raw: list, old: list) -> str:
-    """The scan's words as printed (so proper names keep their capitals), with a hyphen wherever
-    consecutive scan words spell one CCEL word ("allaccomplished" in CCEL, "all-accomplished" in Bohn)."""
+def printed(raw: list, old: list, seps: list | None = None) -> str:
+    """The scan's words as printed (so proper names keep their capitals). Where consecutive scan words
+    spell one CCEL word they are joined as Bohn printed them: with a hyphen when the scan has one between
+    them ("allaccomplished" in CCEL, "all-accomplished" in Bohn), else with a space ("forever" in CCEL,
+    "for ever" in Bohn). seps[k] is the scan text before raw[k]."""
     words = [r.lower() if r.isupper() and len(r) > 1 else r for r in raw]
+    seps = seps if seps is not None else ["-"] * len(raw)
     out, k = [], 0
     while k < len(words):
         for m in range(len(words), k + 1, -1):
             if scancheck_norm("".join(words[k:m])) in old:
-                out.append("-".join(words[k:m]))
+                out.append(words[k] + "".join(("-" if "-" in seps[x] else " ") + words[x] for x in range(k + 1, m)))
                 k = m
                 break
         else:
@@ -570,7 +574,8 @@ def correct(secs: list, did: str, a, b, vocab: set, log: list) -> dict:
                             print(f"TRACE {did} {w[i1:i2]} -> {alt} B={ops_b.get((i1, i2))}: {why or 'taken'}")
                         whys.append(why)
                         nxt = a.raw[start_a + j2] if start_a + j2 < len(a.raw) else ""
-                        picks.append((sa, toks, i1, i2, a.raw[start_a + j1:start_a + j2], nxt))
+                        picks.append((sa, toks, i1, i2, a.raw[start_a + j1:start_a + j2], nxt,
+                                      a.seps[start_a + j1:start_a + j2]))
                     # A cluster is taken whole or not at all, except that an unreadable scan word ("not a word",
                     # "scan noise") in a single-difference cluster only keeps the CCEL word in its own place. In a
                     # cluster of several differences ("to also appear" against "also to appear"), taking the rest
@@ -586,11 +591,11 @@ def correct(secs: list, did: str, a, b, vocab: set, log: list) -> dict:
                         else:
                             edits.append(pick)
             # apply right to left
-            for sa, toks, i1, i2, alt, nxt in sorted(edits, key=lambda e: (e[0], e[2], e[3] > e[2]), reverse=True):
+            for sa, toks, i1, i2, alt, nxt, seps in sorted(edits, key=lambda e: (e[0], e[2], e[3] > e[2]), reverse=True):
                 if i1 < i2:
                     start, end = sa + toks[i1][1], sa + toks[i2 - 1][2]
                     old = text[start:end]
-                    new = printed(alt, [t[0] for t in toks[i1:i2]])
+                    new = printed(alt, [t[0] for t in toks[i1:i2]], seps)
                     if old[:1].isupper():
                         new = new[:1].upper() + new[1:]
                     if not alt:  # Bohn lacks the word: drop it with one space
@@ -634,89 +639,251 @@ def match_rate(secs: list, a) -> tuple[int, int, int]:
 
 # ---------------------------------------------------------------- residual check and publication gate
 
-def reading(ops, seg, i1: int, i2: int) -> list:
-    """The scan words aligned with w[i1:i2] (an insertion point when i1 == i2)."""
+def reading(ops, i1: int, i2: int) -> list:
+    """Indices into the aligned scan segment of the words aligned with w[i1:i2] (an insertion point when
+    i1 == i2)."""
     out = []
     for t, a1, a2, c1, c2 in ops:
         if t == "insert":
             if (i1 == i2 and a1 == i1) or i1 < a1 < i2:
-                out += seg[c1:c2]
+                out += range(c1, c2)
         elif a1 < i2 and a2 > i1:
             if t == "equal":
                 lo, hi = max(a1, i1), min(a2, i2)
-                out += seg[c1 + lo - a1:c1 + hi - a1]
+                out += range(c1 + lo - a1, c1 + hi - a1)
             else:
-                out += seg[c1:c2]
+                out += range(c1, c2)
     return out
 
 
 def unreadable(x: str, vocab: set) -> bool:
-    """A scan word that fails the vocabulary check (or is page furniture: a page reference, a roman
-    numeral, a stray letter)."""
-    return (x not in vocab or x in JUNK or (len(x) == 1 and x not in ("a", "i", "o"))
+    """A scan word that fails the vocabulary check (or is a roman numeral or a stray letter)."""
+    return (x not in vocab or (len(x) == 1 and x not in ("a", "i", "o"))
             or (re.fullmatch(r"[ivxlc]+", x) is not None and x not in ("ill", "civil", "i")))
 
 
+BOOKS = {"genesis", "exodus", "leviticus", "numbers", "deuteronomy", "psalm", "psalms", "isaiah", "jeremiah",
+         "proverbs", "joshua", "judges", "kings", "samuel", "deut", "gen", "exod", "levit", "numb"}
+
+
+def furniture(x: str) -> bool:
+    """A scan token that is never a word of the text: a stray letter (a footnote dagger read as t, f or j)
+    or a roman numeral (chapter and citation numbers)."""
+    return (len(x) == 1 and x not in ("a", "i", "o")) or (
+        re.fullmatch(r"[ivxlc]+", x) is not None and x not in ("i", "ill", "civil"))
+
+
+def body_words(words: list, caps: list) -> tuple[list, bool]:
+    """A reading without its page furniture: words set in capitals (running heads), stray letters, roman
+    numerals, a book name citing a chapter ("Genesis vi"), and JUNK words next to other furniture.
+    Returns the rest and whether anything was removed."""
+    n = len(words)
+    drop = [bool(caps[k]) or furniture(words[k]) for k in range(n)]
+    for k in range(n - 1):
+        if words[k] in BOOKS and (furniture(words[k + 1]) or words[k + 1] == "i"):  # "Genesis i. 27"
+            drop[k] = drop[k + 1] = True
+    for _ in range(2):
+        for k in range(n):
+            if words[k] in JUNK and ((k and drop[k - 1]) or (k + 1 < n and drop[k + 1])):
+                drop[k] = True
+    keep = [x for x, d in zip(words, drop) if not d]
+    return keep, len(keep) != n
+
+
+def classify(old: list, ra: tuple, rb: tuple | None, vocab: set) -> str:
+    """Why a difference between the CCEL words old and the scans is OCR noise, or "" when it is not.
+    ra and rb are (words, capitals) of scans A and B at that place; rb is None when B was not found.
+    Noise needs support for the CCEL text: one scan reads the CCEL words once page furniture is removed
+    (a word broken across a page counts as one), or neither scan offers a readable word in their place."""
+    old, _ = body_words(old, [False] * len(old))
+    alt, head = body_words(*ra)
+    alt_b, head_b = body_words(*rb) if rb is not None else (None, False)
+    for r, h in ((alt, head), (alt_b, head_b)):
+        if r is not None and (r == old or (h and "".join(r) == "".join(old))):
+            return "running head" if h else "one scan agrees"
+    if old == ["o"] and not alt and not alt_b:
+        return "O read as a digit"  # the scans print the vocative O as 0
+    offered = alt + (alt_b or [])
+    if offered and all(unreadable(x, vocab) for x in offered):
+        return "not a word"
+    return ""
+
+
+def locate(scan, w: list, lo: int, hi: int):
+    """Find w near scan positions lo..hi, allowing OCR noise and a running head inside. Returns
+    (start, ops, seg) with difflib opcodes over (w, seg), or None."""
+    import difflib
+    n = len(w)
+    lo, hi = max(0, lo), min(len(scan.words), hi)
+    cand = {j - k for j in range(lo, hi) for k in range(min(3, n)) if scan.words[j] == w[k]}
+    target = " ".join(w)
+    best = None  # (words matched, -distance from the CCEL length, character similarity), (start, size)
+    for j in sorted(cand):
+        if j < 0:
+            continue
+        for size in range(max(1, n - 2), n + 8):
+            seg = scan.words[j:j + size]
+            rest, _ = body_words(seg, scan.caps[j:j + size])
+            r = difflib.SequenceMatcher(None, target, " ".join(rest), autojunk=False).ratio()
+            if r < LOCATE_MIN:
+                continue
+            same = sum(m.size for m in difflib.SequenceMatcher(None, w, rest, autojunk=False).get_matching_blocks())
+            key = (same, -abs(len(rest) - n), r)
+            if best is None or key > best[0]:
+                best = (key, (j, size))
+    if best is None:
+        return None
+    j, size = best[1]
+    seg = scan.words[j:j + size]
+    ops = difflib.SequenceMatcher(None, w, seg, autojunk=False).get_opcodes()
+    while ops and ops[-1][0] == "insert":
+        ops = ops[:-1]
+    while ops and ops[0][0] == "insert":
+        ops = ops[1:]
+    return j, ops, seg
+
+
+LOCATE_MIN = 0.8  # character similarity for a short or unanchored sentence to count as found
+NEAR = 400  # scan words searched beyond a found neighbour
+
+
 def residual(secs: list, a, b, vocab: set) -> tuple[collections.Counter, list]:
-    """Compare the final text with both scans again. Every difference from scan A is either explained
-    as OCR noise (the two scans disagree with each other, a scan word fails the vocabulary check, or a
-    running head set in capitals sits inside the sentence) or counted as unexplained. Words that cannot
-    be compared (headings, sentences under 8 words, sentences with no unique 6-word anchor) count as
-    unanchored. Returns counts and one row per unexplained difference."""
+    """Compare the final text with both scans again.
+
+    Every sentence of 8 words or more is anchored by a unique 6-word run. Every other span of 4 words or
+    more (a short sentence, a sentence with no anchor, a heading) is looked for in each scan near its
+    neighbours, allowing OCR noise; text found in neither scan (a sentence the 1993 edition added) is an
+    unexplained difference. Found text is compared word by word, and so is the scan word just outside it
+    against the neighbouring CCEL word, so a word dropped at a sentence edge is seen. A difference is OCR
+    noise only as classify() allows; every other one is unexplained. Spans under 4 words count as
+    uncompared ("unanchored"). Returns counts and one row per difference:
+    (section, ccel, scan A, scan B, noise category or "" when unexplained, sentence)."""
     import scancheck
     st = collections.Counter()
     rows = []
+
+    def note(sec, old, ra, rb, why, sent):
+        st[why or "unexplained"] += 1
+        rows.append((sec["id"], old, " ".join(ra[0]), "(not found)" if rb is None else " ".join(rb[0]), why,
+                     sent[:200]))
+
     for sec in secs:
-        for blk in sec["blocks"]:
+        # spans in reading order: (block index, block type, sentence text, words)
+        spans = []
+        for bi, blk in enumerate(sec["blocks"]):
             text = blk["text"]
-            n = len(scancheck.tokens(text))
-            st["words"] += n
-            if blk["t"] not in ("p", "q", "note"):
-                st["unanchored"] += n
+            st["words"] += len(scancheck.tokens(text))
+            parts = [(0, len(text))] if blk["t"] == "h" else scancheck.sentences(text, min_words=1)
+            for sa, sb in parts:
+                w = [t[0] for t in scancheck.tokens(text[sa:sb])]
+                if w:
+                    spans.append((bi, blk["t"], text[sa:sb], w))
+        note_heads = {s[3][0] for s in spans if s[1] == "note"}
+
+        def stream(x):  # notes are compared within their own block; the text runs on across blocks
+            return ("note", spans[x][0]) if spans[x][1] == "note" else ("text",)
+        found = {}  # span index -> {"a": (scan, start, ops, seg), "b": ... or absent}
+        missing = set()  # spans in neither scan, already counted
+        for k, (bi, kind, sent, w) in enumerate(spans):
+            if kind != "h" and len(w) >= 8:
+                hit = {}
+                for name, scan in (("a", a), ("b", b)):
+                    r = scan.align(w)
+                    if r is not None:
+                        hit[name] = (scan, scan.start, r[0], r[1])
+                if "a" in hit:
+                    found[k] = hit
+
+        def near(k, name, scan):
+            same = [x for x in range(len(spans)) if stream(x) == stream(k)]
+            if spans[k][1] == "note":
+                same = list(range(len(spans)))  # a note sits on the page of the text it annotates
+            prev = next((found[x][name] for x in reversed(same) if x < k and x in found and name in found[x]), None)
+            nxt = next((found[x][name] for x in same if x > k and x in found and name in found[x]), None)
+            lo = prev[1] + (prev[2][-1][4] if prev[2] else 0) if prev else None
+            hi = nxt[1] if nxt else None
+            if lo is None and hi is None:
+                return None
+            if lo is None or hi is None or hi < lo or hi - lo > 4 * NEAR:
+                lo, hi = (lo - 20, lo + NEAR) if lo is not None else (hi - NEAR, hi + 20)
+            else:
+                lo, hi = lo - 20, hi + 20
+            r = locate(scan, spans[k][3], lo, hi)
+            return (scan, *r) if r else None
+
+        for k, (bi, kind, sent, w) in enumerate(spans):
+            if len(w) < 4:
+                st["unanchored"] += len(w)
                 continue
-            seen = 0
-            for sa, sb in scancheck.sentences(text):
-                sent = text[sa:sb]
-                w = [t[0] for t in scancheck.tokens(sent)]
-                seen += len(w)
-                ra = a.align(w)
-                if ra is None:
-                    st["unanchored"] += len(w)
+            if k in found:
+                continue
+            hit = {name: r for name, scan in (("a", a), ("b", b)) if (r := near(k, name, scan)) is not None}
+            if not hit:
+                note(sec, " ".join(w), (["(not found)"], []), None, "", sent)
+                missing.add(k)
+                continue
+            found[k] = hit if "a" in hit else {"a": hit["b"]}  # compare with the scan that has it
+            st["located"] += len(w)
+
+        for k in sorted(found):
+            bi, kind, sent, w = spans[k]
+            pa, sa_, ops_a, seg_a = found[k]["a"]
+            sb_ = found[k].get("b")
+
+            def at(scan, start, seg, idx):
+                return [seg[x] for x in idx], [scan.caps[start + x] for x in idx]
+            for t, i1, i2, j1, j2 in ops_a:
+                if t == "equal":
                     continue
-                start_a = a.start
-                ops_a, seg_a = ra
-                rb = b.align(w)
-                for t, i1, i2, j1, j2 in ops_a:
-                    if t == "equal":
+                ra = at(pa, sa_, seg_a, range(j1, j2))
+                rb = at(sb_[0], sb_[1], sb_[3], reading(sb_[2], i1, i2)) if sb_ else None
+                why = classify(w[i1:i2], ra, rb, vocab)
+                note(sec, " ".join(w[i1:i2]), ra, rb, why, sent)
+            if not ops_a:
+                continue
+            same = [x for x in range(len(spans)) if stream(x) == stream(k)]
+            pos = same.index(k)
+            for side in ("before", "after"):
+                # the nearest CCEL text word outside the span, past chapter numbers
+                order = reversed(same[:pos]) if side == "before" else same[pos + 1:]
+                nb = cc = None
+                for x in order:
+                    if x in missing:
                         continue
-                    old, alt = w[i1:i2], seg_a[j1:j2]
-                    if "".join(old) == "".join(alt):
-                        continue  # a word split or joined across a line ("all accomplished")
-                    alt_b = reading(*rb, i1, i2) if rb else None
-                    if t == "insert" and any(a.caps[start_a + j1:start_a + j2]):
-                        why = "running head"
-                    elif alt_b is not None and "".join(alt_b) != "".join(alt):
-                        why = "scans disagree"
-                    elif any(unreadable(x, vocab) for x in alt) or (not alt and old == ["o"]):
-                        why = "not a word"  # the scans print the vocative O as the digit 0
-                    else:
-                        why = ""
-                    st[why or "unexplained"] += 1
-                    if not why:
-                        rows.append((sec["id"], " ".join(old), " ".join(alt),
-                                     "(no anchor)" if alt_b is None else " ".join(alt_b), sent[:200]))
-            st["unanchored"] += n - seen  # sentences under 8 words
+                    ws = [y for y in spans[x][3] if not furniture(y)]
+                    if ws:
+                        nb, cc = x, (ws[-1] if side == "before" else ws[0])
+                        break
+                if nb is None or (side == "before" and nb in found):
+                    continue  # the gap after a found span is checked from that span
+
+                def edge(scan, start, ops):
+                    # the nearest text word outside the span, past any page furniture (up to 8 scan words)
+                    x = start + (ops[0][3] - 8 if side == "before" else ops[-1][4])
+                    lo, hi = max(0, x), min(len(scan.words), x + 8)
+                    rest, _ = body_words(scan.words[lo:hi], scan.caps[lo:hi])
+                    if not rest:
+                        return [], []
+                    return ([rest[-1]], [False]) if side == "before" else ([rest[0]], [False])
+                ra = edge(pa, sa_, ops_a)
+                rb = edge(sb_[0], sb_[1], sb_[2]) if sb_ and sb_[2] else None
+                if ra[0] == [cc] or (rb is not None and rb[0] == [cc]) or not ra[0]:
+                    continue
+                if side == "after" and ra[0][0] in note_heads:
+                    continue  # a footnote printed at the foot of the page after this sentence
+                why = classify([], ra, rb, vocab)  # a scan word CCEL lacks between two sentences
+                note(sec, f"({side} sentence)", ra, rb, why, sent)
     return st, rows
 
 
-# Above this share of unanchored words a treatise is held even with no unexplained difference, since too
-# much of it was never compared with the scans. Measured on all 32 treatises (pipeline/extra3/philo-gate.tsv):
-# the shares run from 0.4% to 3.0%, mostly headings and sentences under 8 words, with outliers at 3.02% and
-# 4.2%; in compared text the unexplained differences run at 0.73 per 1000 words. At 3%, a treatise under
-# about 22,700 words carries fewer than 0.5 expected 1993 readings in its uncompared words.
+# Above this share of uncompared words (spans under 4 words: chapter numbers, "Why so?") a treatise is held
+# even with no unexplained difference. Every longer span is compared with the scans or counted as
+# unexplained. Round 1 measured shares of 0.4% to 3.0% (then including all sentences under 8 words) and
+# 0.73 unexplained differences per 1000 compared words; 3% stays as a second limit.
 UNANCHORED_MAX = 0.03
 GATE = HERE / "philo-gate.tsv"  # every treatise: residual counts and published or held, with the reason
-RESIDUAL = HERE / "philo-residual.tsv"  # every unexplained difference, for review by hand
+RESIDUAL = HERE / "philo-residual.tsv"  # every unexplained difference (and, for published treatises, every
+# difference filed as noise), for review by hand
 
 
 def gate(st: collections.Counter) -> str:
@@ -769,7 +936,8 @@ def check() -> int:
         res, rows = residual(secs, a, b, vocab)
         print(f"{did:11} {info[0]:40} {gate(res) or 'publish'}")
         for row in rows:
-            print(f"    {row[1]!r} -> A {row[2]!r} B {row[3]!r}\n      {row[4]}")
+            if not row[4]:
+                print(f"    {row[1]!r} -> A {row[2]!r} B {row[3]!r}\n      {row[5]}")
     return 0
 
 
@@ -793,7 +961,8 @@ def write() -> int:
         res, rows = residual(secs, a, b, vocab)
         held = gate(res)
         gates.append((did, slug, res["words"], res["unanchored"], res["unexplained"], held))
-        details += [(did, *row) for row in rows]
+        # every unexplained difference; for a published treatise also each one filed as noise, for audit
+        details += [(did, *row[:4], row[4] or "UNEXPLAINED", row[5]) for row in rows if held == "" or not row[4]]
         path = OUT / f"{slug}.toml"
         if held:
             for p in (path, path.with_suffix(".md")):
@@ -827,7 +996,7 @@ def write() -> int:
             f.write(f"{did}\t{slug}\t{words}\t{un}\t{100 * un / max(1, words):.2f}\t{ux}\t"
                     f"{'held' if held else 'published'}\t{held}\n")
     with open(RESIDUAL, "w", encoding="utf-8") as f:
-        f.write("treatise\tsection\tccel\tscan_a\tscan_b\tsentence\n")
+        f.write("treatise\tsection\tccel\tscan_a\tscan_b\tverdict\tsentence\n")
         for row in details:
             f.write("\t".join(x.replace("\t", " ").replace("\n", " ") for x in row) + "\n")
     print("refused readings:", dict(refused.most_common()))

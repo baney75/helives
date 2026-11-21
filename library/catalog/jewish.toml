@@ -2,7 +2,7 @@
 id = "jewish"
 title = "Josephus and Philo"
 order = 4
-summary = "First century Jewish writers whose histories and commentary shed light on the world of the Bible: Flavius Josephus in William Whiston's translation, and Philo of Alexandria in C. D. Yonge's translation: On the Giants and On Providence, Fragment 1. They are historical sources, not Scripture."
+summary = "A first century Jewish writer whose histories shed light on the world of the Bible: Flavius Josephus in William Whiston's translation. They are historical sources, not Scripture."
 
 [authors.josephus]
 name = "Flavius Josephus"

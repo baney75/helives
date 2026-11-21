@@ -26,17 +26,22 @@ def tokens(text: str) -> list[tuple[str, int, int]]:
     return [(norm(m.group()), m.start(), m.end()) for m in WORD.finditer(text)]
 
 
-def ocr_words(text: str, caps: list | None = None, raw: list | None = None) -> list[str]:
+def ocr_words(text: str, caps: list | None = None, raw: list | None = None, seps: list | None = None) -> list[str]:
     """Words of an OCR text. When caps is a list, it receives, per word, whether the scan prints it
-    in capitals (running heads are set in capitals); raw receives each word as printed."""
+    in capitals (running heads are set in capitals); raw receives each word as printed; seps receives
+    the text between the previous word and this one (so a mid-line hyphen can be told from a space)."""
     text = re.sub(r"(\w)-\s*\n\s*(\w)", r"\1\2", text)
     out = []
+    last = 0
     for m in WORD.finditer(text):
         out.append(norm(m.group()))
         if caps is not None:
             caps.append(len(m.group()) > 1 and m.group().isupper())
         if raw is not None:
             raw.append(m.group())
+        if seps is not None:
+            seps.append(text[last:m.start()])
+        last = m.end()
     return out
 
 
@@ -48,9 +53,10 @@ class Scan:
         self.words: list[str] = []
         self.caps: list[bool] = []
         self.raw: list[str] = []
+        self.seps: list[str] = []
         self.start = 0  # where the segment of the last align() begins
         for p in paths:
-            self.words += ocr_words(p.read_text(errors="replace"), self.caps, self.raw)
+            self.words += ocr_words(p.read_text(errors="replace"), self.caps, self.raw, self.seps)
         cnt = collections.Counter(tuple(self.words[k:k + n]) for k in range(len(self.words) - n))
         self.idx = {tuple(self.words[k:k + n]): k for k in range(len(self.words) - n)
                     if cnt[tuple(self.words[k:k + n])] == 1}
@@ -87,15 +93,15 @@ class Scan:
         return ops, seg
 
 
-def sentences(text: str) -> list[tuple[int, int]]:
-    """Spans of sentences (at least 8 words) in a block of text."""
+def sentences(text: str, min_words: int = 8) -> list[tuple[int, int]]:
+    """Spans of sentences (at least min_words words) in a block of text."""
     out, start = [], 0
     for m in re.finditer(r"(?<=[.;?!:])[\"'’”)\]]*\s+", text + " "):
         out.append((start, m.start()))
         start = m.end()
     if start < len(text):
         out.append((start, len(text)))
-    return [(a, b) for a, b in out if len(WORD.findall(text[a:b])) >= 8]
+    return [(a, b) for a, b in out if len(WORD.findall(text[a:b])) >= min_words]
 
 
 def load_words(path: Path) -> set[str]:

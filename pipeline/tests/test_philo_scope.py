@@ -62,32 +62,94 @@ class PhiloScopeTest(unittest.TestCase):
             self.assertEqual(ingest_philo.refuse([old], [new], [False], vocab, agreed=False), why, (old, new))
         self.assertEqual(ingest_philo.refuse(["these"], ["fhese"], [False], vocab, agreed=True), "not a word")
 
-    def test_a_treatise_with_an_unexplained_residual_is_held(self) -> None:
-        bohn = ("Now these things being so, we must consider the nature of the soul with great care, "
-                "and those who love wisdom will follow the argument to its end and rejoice in it. ")
-        with tempfile.TemporaryDirectory() as tmp:
-            pa, pb, pc = Path(tmp, "a.txt"), Path(tmp, "b.txt"), Path(tmp, "c.txt")
-            pa.write_text(bohn)
-            pb.write_text(bohn)
-            pc.write_text(bohn.replace("those who love", "thoso who love"))  # B misreads the word
-            a, b, c = scancheck.Scan([pa]), scancheck.Scan([pb]), scancheck.Scan([pc])
-            vocab = {t[0] for t in scancheck.tokens(bohn)} | {"them"}
+    # Synthetic Bohn text for the residual tests: sentences long enough to anchor, with unique 6-word runs.
+    S1 = "Now these things being so, we must consider the nature of the soul with great care."
+    S2 = "And those who love wisdom will follow the argument to its end and rejoice in it."
+    S3 = "For the lawgiver teaches that the mind which is devoted to virtue is never alone."
+    S4 = "Therefore let every man who desires instruction listen with attention to these words."
 
-            def secs(text):
-                return [{"id": "text", "blocks": [{"t": "p", "text": text}]}]
-            same = secs(bohn.strip())
-            st, rows = ingest_philo.residual(same, a, b, vocab)
-            self.assertEqual((st["unexplained"], rows), (0, []))
-            self.assertEqual(ingest_philo.gate(st), "")
-            # the 1993 reading "them who" where both scans read "those who": held
-            changed = secs(bohn.strip().replace("those who love", "them who love"))
-            st, rows = ingest_philo.residual(changed, a, b, vocab)
-            self.assertEqual(st["unexplained"], 1, rows)
-            self.assertEqual(rows[0][1:3], ("them", "those"))
-            self.assertIn("unexplained", ingest_philo.gate(st))
-            # where the two scans disagree the difference is OCR noise, not a reason to hold
-            st, rows = ingest_philo.residual(changed, a, c, vocab)
-            self.assertEqual((st["unexplained"], st["scans disagree"]), (0, 1))
+    def residual_of(self, ccel: str, scan_a: str, scan_b: str | None = None):
+        """residual() of a one-block treatise against two synthetic scans; returns (counts, unexplained rows)."""
+        with tempfile.TemporaryDirectory() as tmp:
+            pa, pb = Path(tmp, "a.txt"), Path(tmp, "b.txt")
+            pa.write_text(scan_a)
+            pb.write_text(scan_a if scan_b is None else scan_b)
+            a, b = scancheck.Scan([pa]), scancheck.Scan([pb])
+            vocab = {t[0] for t in scancheck.tokens(" ".join((self.S1, self.S2, self.S3, self.S4)))}
+            vocab |= {"them", "thus", "indeed", "said"}
+            secs = [{"id": "text", "blocks": [{"t": "p", "text": ccel}]}]
+            st, rows = ingest_philo.residual(secs, a, b, vocab)
+        return st, [r for r in rows if not r[4]]
+
+    def test_a_treatise_with_an_unexplained_residual_is_held(self) -> None:
+        bohn = " ".join((self.S1, self.S2, self.S3))
+        st, rows = self.residual_of(bohn, bohn)
+        self.assertEqual((st["unexplained"], rows), (0, []))
+        self.assertEqual(ingest_philo.gate(st), "")
+        # the 1993 reading "them who" where both scans read "those who": held
+        changed = bohn.replace("those who love", "them who love")
+        st, rows = self.residual_of(changed, bohn)
+        self.assertEqual(st["unexplained"], 1, rows)
+        self.assertEqual(rows[0][1:3], ("them", "those"))
+        self.assertIn("unexplained", ingest_philo.gate(st))
+
+    def test_scans_that_disagree_explain_nothing_unless_one_reads_the_ccel_word(self) -> None:
+        bohn = " ".join((self.S1, self.S2, self.S3))
+        changed = bohn.replace("those who love", "them who love")
+        # A reads "those", B misreads it "thoso": neither supports the CCEL "them", so it is held
+        st, rows = self.residual_of(changed, bohn, bohn.replace("those who love", "thoso who love"))
+        self.assertEqual(st["unexplained"], 1, rows)
+        self.assertTrue(ingest_philo.gate(st))
+        # B reads the CCEL word: one scan supports it, so it is OCR noise in A
+        st, rows = self.residual_of(changed, bohn, changed)
+        self.assertEqual((st["unexplained"], st["one scan agrees"]), (0, 1), rows)
+
+    def test_a_sentence_in_neither_scan_is_held(self) -> None:
+        bohn = " ".join((self.S1, self.S2, self.S3))
+        # a short sentence (under 8 words, so never anchored) the 1993 edition added
+        added = " ".join((self.S1, "This verse was added later.", self.S2, self.S3))
+        st, rows = self.residual_of(added, bohn)
+        self.assertEqual(len(rows), 1, rows)
+        self.assertEqual(rows[0][2], "(not found)")
+        self.assertTrue(ingest_philo.gate(st))
+        # a short sentence that is in both scans, with one word changed, is compared word by word
+        short = "Thus indeed Moses said."
+        bohn2 = " ".join((self.S1, short, self.S2, self.S3))
+        st, rows = self.residual_of(bohn2, bohn2)
+        self.assertEqual(st["unexplained"], 0, rows)
+        st, rows = self.residual_of(bohn2.replace("Thus indeed Moses said", "Thus indeed Moses spoke"), bohn2)
+        self.assertEqual([r[1:3] for r in rows], [("spoke", "said")])
+
+    def test_a_word_dropped_between_sentences_is_held(self) -> None:
+        bohn = " ".join((self.S1, self.S2, self.S3))
+        ccel = bohn.replace("in it. For the", "in it. The")  # CCEL drops the opening "For"
+        st, rows = self.residual_of(ccel, bohn)
+        self.assertEqual(st["unexplained"], 1, rows)
+        self.assertTrue(any(r[2] == "for" for r in rows), rows)
+
+    def test_a_word_dropped_at_a_running_head_is_held(self) -> None:
+        head = " PHILO JUDAEUS. 7 "
+        bohn = " ".join((self.S1, self.S2, self.S3)).replace("argument to its", "argument" + head + "to its")
+        # the running head alone is page furniture
+        st, rows = self.residual_of(" ".join((self.S1, self.S2, self.S3)), bohn)
+        self.assertEqual(st["unexplained"], 0, rows)
+        # the same page break where CCEL also lacks Bohn's "to" is an omission, not furniture
+        st, rows = self.residual_of(" ".join((self.S1, self.S2, self.S3)).replace("argument to its", "argument its"), bohn)
+        self.assertEqual(st["unexplained"], 1, rows)
+
+    def test_a_closed_compound_takes_the_bohn_spacing(self) -> None:
+        self.assertEqual(ingest_philo.printed(["for", "ever"], ["forever"], ["", " "]), "for ever")
+        self.assertEqual(ingest_philo.printed(["all", "accomplished"], ["allaccomplished"], ["", "-"]),
+                         "all-accomplished")
+        bohn = " ".join((self.S1, self.S2.replace("will follow", "will for ever follow"), self.S3))
+        with tempfile.TemporaryDirectory() as tmp:
+            pa = Path(tmp, "a.txt")
+            pa.write_text(bohn)
+            a, b = scancheck.Scan([pa]), scancheck.Scan([pa])
+            vocab = {t[0] for t in scancheck.tokens(bohn)} | {"forever"}
+            secs = [{"id": "text", "blocks": [{"t": "p", "text": bohn.replace("for ever", "forever")}]}]
+            ingest_philo.correct(secs, "test", a, b, vocab, [])
+        self.assertIn("will for ever follow", secs[0]["blocks"][0]["text"])
 
     def test_gate_too_much_uncompared_text_is_held(self) -> None:
         import collections
