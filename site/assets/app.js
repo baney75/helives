@@ -220,7 +220,8 @@
   var lit = null
   function anchorEl(sid, id) {
     if (id === 'title') return $('#s-' + CSS.escape(sid)) || $('main h1')
-    if (id.charAt(0) === 'v') return $('.text .v[data-v="' + CSS.escape(id.slice(1)) + '"]')
+    // a page may hold several chapters of a work (Tobit 1 to 14): find the verse within its own section
+    if (id.charAt(0) === 'v') return $('.text .v[data-s="' + CSS.escape(sid) + '"][data-v="' + CSS.escape(id.slice(1)) + '"]') || $('.text .v[data-v="' + CSS.escape(id.slice(1)) + '"]')
     return $('.text [data-b="' + CSS.escape(sid + ':' + id.slice(1)) + '"]')
   }
   function light(el) {

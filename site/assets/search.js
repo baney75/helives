@@ -1,4 +1,4 @@
-import { parseRef } from './ref.js'
+import { refAction } from './ref.js'
 // Search page. A Bible reference goes straight to the passage; anything else asks /api/search.
 const form = document.getElementById('search-form')
 const input = document.getElementById('sq')
@@ -23,10 +23,12 @@ async function run(push) {
   const scope = (document.querySelector('input[name="scope"]:checked') || {}).value || 'all'
   if (push) history.replaceState(null, '', q ? `/search/?q=${encodeURIComponent(q)}${scope !== 'all' ? `&scope=${scope}` : ''}` : '/search/')
   list.innerHTML = ''
+  let bookLink = null
   if (!q) { status.textContent = ''; return }
   if (scope === 'all' || scope === 'bible') {
-    const ref = parseRef(q, await loadBooks())
-    if (ref) { status.textContent = 'Opening the passage…'; location.href = ref; return }
+    const act = refAction(q, await loadBooks())
+    if (act.go) { status.textContent = 'Opening the passage…'; location.href = act.go; return }
+    bookLink = act.book || null
   }
   status.textContent = 'Searching…'
   let data
@@ -40,7 +42,8 @@ async function run(push) {
   }
   const n = data.results.length
   status.textContent = n ? `${n === data.limit ? `First ${n}` : n} result${n === 1 ? '' : 's'} for “${q}”` : `Nothing found for “${q}”. Try fewer or different words.`
-  list.innerHTML = data.results
+  const book = bookLink ? `<li><a class="ref" href="${esc(bookLink)}">Open the book of ${esc(q)}</a><span class="meta"> · Bible</span></li>` : ''
+  list.innerHTML = book + data.results
     .map((r) => `<li><a class="ref" href="${esc(r.url)}">${esc(r.title)}</a>${r.where ? `<span class="meta"> · ${esc(r.where)}</span>` : ''}<p class="snip">${mark(r.snip)}</p></li>`)
     .join('')
 }

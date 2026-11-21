@@ -88,7 +88,10 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
 </div>
 </div>`
   document.body.appendChild(d)
+  let passed = false
   d.addEventListener('cancel', (e) => e.preventDefault()) // the gate does not close with Escape
+  // Chromium lets a second Escape with no click between close a modal despite preventDefault: reopen it.
+  d.addEventListener('close', () => { if (!passed && d.isConnected) d.showModal() })
   d.showModal()
   root.removeAttribute('data-gate') // the page behind stays inert under the modal
 
@@ -239,6 +242,7 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
     stopAll()
     clearTimeout(silentTimer)
     pass()
+    passed = true
     d.close()
     d.remove()
     const main = document.getElementById('main')

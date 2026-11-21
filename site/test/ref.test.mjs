@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { parseRef } from '../assets/ref.js'
+import { parseRef, refAction } from '../assets/ref.js'
 
 const books = [
   { s: 'genesis', t: 'Genesis', a: 'Gen', c: 50 },
@@ -28,4 +28,11 @@ test('words that are not references stay searches', () => {
   assert.equal(parseRef('love your enemies', books), null)
   assert.equal(parseRef('John 99', books), null)
   assert.equal(parseRef('Augustine 4', books), null)
+})
+
+test('a bare book name searches and offers the book; a reference opens it', () => {
+  assert.deepEqual(refAction('John', books), { search: true, book: '/bible/john/' })
+  assert.deepEqual(refAction('John 3:16', books), { go: '/bible/john/3/#v16' })
+  assert.deepEqual(refAction('ps 23', books), { go: '/bible/psalms/23/' })
+  assert.deepEqual(refAction('grace', books), { search: true })
 })

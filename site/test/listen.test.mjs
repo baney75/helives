@@ -20,5 +20,13 @@ test('prose blocks carry data-b="<section>:<block index>" for the audio timing',
 
 test('verses keep data-v for the audio verse anchors', () => {
   const { html } = renderSections([{ id: '23', title: 'Psalm 23', blocks: [{ t: 'v', n: 1, text: 'The LORD is my shepherd.' }] }], { bible: true, fx: false })
-  assert.match(html, /id="v1" data-v="1"/)
+  assert.match(html, /id="v1" data-s="23" data-v="1"/)
+})
+
+test('verses of several chapters on one page have unique ids, scoped to their chapter', () => {
+  const ch = (n) => ({ id: String(n), title: `Chapter ${n}`, blocks: [{ t: 'v', n: 1, text: 'One.' }, { t: 'v', n: 2, text: 'Two.' }] })
+  const { html } = renderSections([ch(1), ch(2)], { fx: false })
+  const ids = [...html.matchAll(/ id="([^"]+)"/g)].map((m) => m[1])
+  assert.equal(new Set(ids).size, ids.length, `duplicate ids: ${ids.join(' ')}`)
+  assert.match(html, /id="2-v1" data-s="2" data-v="1"/)
 })

@@ -63,8 +63,8 @@ export function renderSections(sections, { bible = false, showTitles = true, fx 
       switch (b.t) {
         case 'v': {
           const body = b.cont
-            ? `<span class="v" data-v="${b.n}">${inline(b.text, { fx, noteHref })}</span>`
-            : `<span class="v" id="v${b.n}" data-v="${b.n}"><span class="vn" aria-hidden="true">${b.n}</span><span class="vh">Verse ${b.n}. </span>${inline(b.text, { fx, noteHref })}</span>`
+            ? `<span class="v" data-s="${esc(sid)}" data-v="${b.n}">${inline(b.text, { fx, noteHref })}</span>`
+            : `<span class="v" id="${bible ? `v${b.n}` : `${esc(sid)}-v${b.n}`}" data-s="${esc(sid)}" data-v="${b.n}"><span class="vn" aria-hidden="true">${b.n}</span><span class="vh">Verse ${b.n}. </span>${inline(b.text, { fx, noteHref })}</span>`
           if (b.indent) {
             closeP()
             out.push(`<p class="q i${b.indent}">${body}</p>`)

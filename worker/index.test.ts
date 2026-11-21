@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { audioKey } from './audio.ts'
+import { audioKey, byteSpan, serveAudio } from './audio.ts'
 import { CSP, isBlockedPath, withSecurityHeaders } from './headers.ts'
 import worker from './index.ts'
 import { toFtsQuery } from './search.ts'
@@ -85,5 +85,38 @@ describe('worker routing', () => {
     const r = await worker.fetch(new Request('https://helives.dev/bible/'), { ASSETS: assets })
     expect(await r.text()).toBe('page')
     expect(r.headers.get('Content-Security-Policy')).toBe(CSP)
+  })
+})
+
+describe('audio ranges', () => {
+  const size = 1000
+  const bucket = (range?: object, body = true) => ({
+    get: async () => ({
+      size,
+      range,
+      httpEtag: '"e"',
+      writeHttpMetadata: () => {},
+      ...(body ? { body: new Uint8Array(range ? 100 : size) } : {}),
+    }),
+  }) as unknown as R2Bucket
+  it('maps offset and suffix ranges to exact bytes', () => {
+    expect(byteSpan({ offset: 10, length: 90 }, size)).toEqual({ start: 10, end: 99 })
+    expect(byteSpan({ offset: 900 }, size)).toEqual({ start: 900, end: 999 })
+    expect(byteSpan({ suffix: 100 }, size)).toEqual({ start: 900, end: 999 })
+    expect(byteSpan({ suffix: 5000 }, size)).toEqual({ start: 0, end: 999 })
+    expect(byteSpan(undefined, size)).toBeNull()
+  })
+  it('answers a suffix range with 206 and the true length', async () => {
+    const req = new Request('https://helives.dev/audio/a/1.m4a', { headers: { range: 'bytes=-100' } })
+    const res = await serveAudio(req, bucket({ suffix: 100 }), '/audio/a/1.m4a')
+    expect(res.status).toBe(206)
+    expect(res.headers.get('content-range')).toBe('bytes 900-999/1000')
+    expect(res.headers.get('content-length')).toBe('100')
+  })
+  it('answers a failed If-Match with 412 and a matching If-None-Match with 304', async () => {
+    const m = new Request('https://helives.dev/audio/a/1.m4a', { headers: { 'if-match': '"x"' } })
+    expect((await serveAudio(m, bucket(undefined, false), '/audio/a/1.m4a')).status).toBe(412)
+    const n = new Request('https://helives.dev/audio/a/1.m4a', { headers: { 'if-none-match': '"e"' } })
+    expect((await serveAudio(n, bucket(undefined, false), '/audio/a/1.m4a')).status).toBe(304)
   })
 })

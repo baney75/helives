@@ -121,6 +121,9 @@ class Chunker(unittest.TestCase):
 
     def test_queue_order(self):
         names = [p.name for _, p in prep.queue(FIX)]
+        if prep.GATE.exists():
+            self.assertEqual(names[0], "gate.toml")  # the daily gate's prayers render first
+            names = names[1:]
         self.assertEqual(names, ["19-psalms.toml", "01-genesis.toml", "confessions.toml"])
 
 

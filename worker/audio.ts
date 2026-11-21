@@ -9,6 +9,22 @@ export function audioKey(pathname: string): string | null {
   return `audio/${m[1]}`
 }
 
+type R2Range = { offset?: number; length?: number; suffix?: number }
+
+/** The bytes R2 returned for a ranged get: an offset range (bytes=a-b, bytes=a-) or a suffix (bytes=-n). */
+export function byteSpan(r: R2Range | undefined, size: number): { start: number; end: number } | null {
+  if (!r || size <= 0) return null
+  if (typeof r.suffix === 'number') {
+    const n = Math.min(r.suffix, size)
+    return n > 0 ? { start: size - n, end: size - 1 } : null
+  }
+  if (typeof r.offset === 'number') {
+    const length = Math.min(r.length ?? size - r.offset, size - r.offset)
+    return length > 0 ? { start: r.offset, end: r.offset + length - 1 } : null
+  }
+  return null
+}
+
 export async function serveAudio(request: Request, bucket: R2Bucket | undefined, pathname: string): Promise<Response> {
   const key = audioKey(pathname)
   if (!key || !bucket) return new Response('Not found', { status: 404 })
@@ -22,12 +38,16 @@ export async function serveAudio(request: Request, bucket: R2Bucket | undefined,
   headers.set('cache-control', 'public, max-age=86400')
   const ext = key.split('.').pop() ?? ''
   if (!headers.get('content-type')) headers.set('content-type', TYPES[ext] ?? 'application/octet-stream')
-  if (!('body' in obj)) return new Response(null, { status: 304, headers })
-  const r = obj.range as { offset?: number; length?: number } | undefined
-  if (range && r && typeof r.offset === 'number') {
-    const length = r.length ?? obj.size - r.offset
-    headers.set('content-range', `bytes ${r.offset}-${r.offset + length - 1}/${obj.size}`)
-    headers.set('content-length', String(length))
+  // No body means a precondition failed: If-None-Match or If-Modified-Since is a 304, If-Match or
+  // If-Unmodified-Since is a 412.
+  if (!('body' in obj)) {
+    const strict = request.headers.has('if-match') || request.headers.has('if-unmodified-since')
+    return new Response(null, { status: strict ? 412 : 304, headers })
+  }
+  const span = range ? byteSpan(obj.range as R2Range | undefined, obj.size) : null
+  if (span) {
+    headers.set('content-range', `bytes ${span.start}-${span.end}/${obj.size}`)
+    headers.set('content-length', String(span.end - span.start + 1))
     return new Response(request.method === 'HEAD' ? null : obj.body, { status: 206, headers })
   }
   headers.set('content-length', String(obj.size))
