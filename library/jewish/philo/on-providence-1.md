@@ -4,10 +4,10 @@ author: "philo"
 date: "c. 20-50"
 language: "Greek"
 translator: "C. D. Yonge"
-edition: "C. D. Yonge, trans., The Works of Philo Judaeus, the Contemporary of Josephus, 4 vols. (London: H. G. Bohn, 1854-1855), vol. IV; electronic text from CCEL (philo/works), corrected word by word to the Bohn wording against two archive.org scans of that edition (archive.org worksphilojudaeu04philuoft and theworksofphiloj04yonguoft)"
+edition: "C. D. Yonge, trans., The Works of Philo Judaeus, the Contemporary of Josephus, 4 vols. (London: H. G. Bohn, 1854-1855), vol. IV; electronic text from CCEL (philo/works), corrected word by word to the Bohn wording against two archive.org scans of that edition (archive.org worksphilojudaeu04philuoft and theworksofphiloj04yonguoft). After correction every compared sentence matches both scans except where they show OCR noise; 1.2% of the words (headings and short or unlocated sentences) could not be compared"
 source_url: "https://www.ccel.org/ccel/p/philo/works.xml"
 license: "Public domain"
-license_basis: "Yonge's translation was published in London by H. G. Bohn in 1854-1855, before 1931, so it is in the public domain in the United States. The section numbering and the Greek transliteration follow the CCEL electronic text, which derives from a 1993 updated edition; where that edition's wording differs from the Bohn scans, the Bohn reading is restored. Its added titles and editor notes are not included, and only treatises without its new translation or reordering are hosted."
+license_basis: "Yonge's translation was published in London by H. G. Bohn in 1854-1855, before 1931, so it is in the public domain in the United States. The section numbering and the Greek transliteration follow the CCEL electronic text, which derives from a 1993 updated edition; where that edition's wording differs from the Bohn scans, the Bohn reading is restored, and a treatise is hosted only when a second comparison with both scans finds no remaining difference other than OCR noise. Its added titles and editor notes are not included, and only treatises without its new translation or reordering are hosted."
 words: 683
 ---
 
