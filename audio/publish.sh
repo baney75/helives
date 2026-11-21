@@ -18,7 +18,8 @@ if ! ssh "$HOST" "test -d '$REMOTE'"; then
   exit 0
 fi
 # Only finished files: .m4a and their .json timing manifests; never .part files or dotfiles.
-rsync -a --partial --prune-empty-dirs \
+# --delete: audio withdrawn on Parish1 (a removed work or section) leaves the stage and the manifest too.
+rsync -a --partial --prune-empty-dirs --delete \
   --exclude '.*' --exclude '*.part.m4a' \
   --include '*/' --include '*.m4a' --include '*.json' --exclude '*' \
   "$HOST:$REMOTE" "$STAGE/"

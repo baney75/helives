@@ -301,6 +301,56 @@ class StateMachine(Base):
         self.assertEqual(self.st.get("voice")["speaker"], "Ryan")
 
 
+class NarratorAndWithdrawal(Base):
+    def test_set_voice_mid_batch_stops_and_nothing_is_done_in_the_old_voice(self):
+        def switch(n):
+            if n == 1:
+                self.assertEqual(render.main(["set-voice", "Aiden", "--yes"]), 0)
+        render.batch(self.args, lambda: FakeEngine(on_speak=switch), self.guard, self.st)
+        last = self.st.db.execute("SELECT end_reason FROM batches ORDER BY id DESC LIMIT 1").fetchone()[0]
+        self.assertEqual(last, "narrator changed")
+        self.assertEqual({r["status"] for r in self.chunk_rows()}, {"pending"})
+        eng = FakeEngine()
+        render.batch(self.args, lambda: eng, self.guard, self.st)
+        self.assertEqual({r["status"] for r in self.chunk_rows()}, {"done"})
+        self.assertEqual({self.st.take(r["best_take"])["speaker"] for r in self.chunk_rows()}, {"Aiden"})
+        self.assertEqual({c[1] for c in eng.calls}, {"Aiden"})
+
+    def test_old_narrator_take_is_never_the_best(self):
+        render.batch(self.args, FakeEngine, self.guard, self.st)
+        self.assertEqual(render.main(["set-voice", "Aiden", "--yes"]), 0)
+        text = self.chunk_rows()[1]["text"]
+        render.batch(self.args, lambda: FakeEngine(bad={text: "always"}), self.guard, self.st)
+        row = self.chunk_rows()[1]
+        self.assertEqual(row["status"], "flagged")
+        self.assertEqual(self.st.take(row["best_take"])["speaker"], "Aiden")
+        ryan = [t for t in self.st.takes_for(row, any_speaker=True) if t["speaker"] == "Ryan"]
+        self.assertTrue(ryan and all(Path(t["path"]).exists() for t in ryan if t["path"]))  # not overwritten
+
+    def test_withdrawn_work_is_retired_with_its_audio(self):
+        render.batch(self.args, FakeEngine, self.guard, self.st)
+        self.assertEqual(render.assemble_ready(self.st), 1)
+        out = Path(self.st.db.execute("SELECT out_path FROM sections WHERE work_id='bsb-psalms'").fetchone()[0])
+        self.assertTrue(out.exists())
+        lib = Path(self.tmp.name) / "lib"
+        (lib / "bible" / "bsb").mkdir(parents=True)
+        (lib / "bible" / "bsb" / "01-genesis.toml").write_bytes((FIX / "bible/bsb/01-genesis.toml").read_bytes())
+        totals = render.sync_queue(self.st, lib, quiet=True)
+        self.assertGreaterEqual(totals["retired"], 1)
+        self.assertFalse(out.exists())
+        self.assertFalse(out.with_suffix(".json").exists())
+        for table in ("works", "sections", "chunks"):
+            self.assertEqual(self.st.db.execute(f"SELECT count(*) FROM {table} WHERE work_id='bsb-psalms'").fetchone()[0], 0)
+        self.assertEqual(render.assemble_ready(self.st), 0)
+
+    def test_a_load_error_retires_nothing(self):
+        lib = Path(self.tmp.name) / "lib"
+        (lib / "bible" / "bsb").mkdir(parents=True)
+        (lib / "bible" / "bsb" / "19-psalms.toml").write_text("not = [valid")
+        render.sync_queue(self.st, lib, quiet=True)
+        self.assertGreater(self.st.db.execute("SELECT count(*) FROM chunks WHERE work_id='bsb-psalms'").fetchone()[0], 0)
+
+
 class Supervisor(Base):
     def make(self, ready=True):
         sup = render.Supervisor(once=True, only=["bsb-psalms/23"])

@@ -131,10 +131,28 @@ class State:
                 counts["removed"] += gone
             for (sid,) in self.db.execute("SELECT section_id FROM sections WHERE work_id=?", (work["id"],)).fetchall():
                 if sid not in keep:
+                    old = self.db.execute("SELECT out_path FROM sections WHERE work_id=? AND section_id=?",
+                                          (work["id"], sid)).fetchone()
+                    if old and old[0]:
+                        counts.setdefault("retired_paths", []).append(old[0])
                     self.db.execute("DELETE FROM sections WHERE work_id=? AND section_id=?", (work["id"], sid))
                     counts["removed"] += self.db.execute("DELETE FROM chunks WHERE work_id=? AND section_id=?",
                                                          (work["id"], sid)).rowcount
         return counts
+
+    def retire(self, keep_works: set[str]) -> list[str]:
+        """Drop works no longer in the queue, with their sections and chunks, so nothing renders or
+        publishes for a withdrawn work. Returns the assembled audio paths to delete."""
+        paths = []
+        with self.tx():
+            for (wid,) in self.db.execute("SELECT work_id FROM works").fetchall():
+                if wid in keep_works:
+                    continue
+                paths += [r[0] for r in self.db.execute(
+                    "SELECT out_path FROM sections WHERE work_id=? AND out_path IS NOT NULL", (wid,))]
+                for table in ("chunks", "sections", "works"):
+                    self.db.execute(f"DELETE FROM {table} WHERE work_id=?", (wid,))
+        return paths
 
     # -------------------------------------------------------------- render loop
     def next_pending(self, limit: int = 1, only: list[tuple[str, str]] | None = None) -> list[sqlite3.Row]:
@@ -167,6 +185,13 @@ class State:
                  json.dumps(take.get("problems", [])), int(final_status == "done"),
                  take.get("gen_seconds"), take.get("asr_seconds"), time.time()))
             take_id = cur.lastrowid
+            if take["speaker"] != self.speaker():
+                # The narrator changed while this take rendered: keep it as history, render again.
+                self.db.execute(
+                    "UPDATE chunks SET attempts=0, status='pending', best_take=NULL, updated=? "
+                    "WHERE work_id=? AND section_id=? AND idx=?",
+                    (time.time(), chunk["work_id"], chunk["section_id"], chunk["idx"]))
+                return take_id
             if final_status == "done":
                 best = take_id
             elif final_status == "flagged":
@@ -179,10 +204,18 @@ class State:
                  chunk["work_id"], chunk["section_id"], chunk["idx"]))
         return take_id
 
-    def takes_for(self, chunk) -> list[sqlite3.Row]:
-        return self.db.execute(
-            "SELECT * FROM takes WHERE work_id=? AND section_id=? AND idx=? AND chunk_sha=? ORDER BY attempt",
+    def speaker(self) -> str | None:
+        """The current narrator. Takes by any other narrator are history, never used."""
+        return (self.get("voice") or {}).get("speaker")
+
+    def takes_for(self, chunk, any_speaker: bool = False) -> list[sqlite3.Row]:
+        rows = self.db.execute(
+            "SELECT * FROM takes WHERE work_id=? AND section_id=? AND idx=? AND chunk_sha=? ORDER BY id",
             (chunk["work_id"], chunk["section_id"], chunk["idx"], chunk["sha"])).fetchall()
+        if any_speaker:
+            return rows
+        cur = self.speaker()
+        return [t for t in rows if t["speaker"] == cur]
 
     def best_take_id(self, chunk) -> int | None:
         """Fewest problems, then lowest WER, then the earliest attempt."""

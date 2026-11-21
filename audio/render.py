@@ -73,12 +73,15 @@ def sync_queue(st: State, library: Path | None = None, quiet: bool = False) -> d
     lex_path = HERE / "lexicon.toml"
     lex_bytes = lex_path.read_bytes() if lex_path.exists() else b""
     lexicon = prep.Lexicon.load(lex_path)
-    totals = {"works": 0, "updated": 0, "new": 0, "changed": 0, "removed": 0, "errors": 0}
+    totals = {"works": 0, "updated": 0, "new": 0, "changed": 0, "removed": 0, "errors": 0, "retired": 0}
+    seen: set[str] = set()
+    retired: list[str] = []
     for prio, path in prep.queue(library):
         totals["works"] += 1
         try:
             key = _work_key(path, lex_bytes)
             work = prep.load_work(path)
+            seen.add(work["id"])
             if st.work_sha(work["id"]) == key:
                 continue
             plans = [prep.plan_section(work, s, lexicon) for s in work["sections"]]
@@ -89,12 +92,21 @@ def sync_queue(st: State, library: Path | None = None, quiet: bool = False) -> d
                 elif not prep.is_english(p):
                     skipped[p.section_id] = f"original-language text (English ratio {prep.english_ratio(p):.2f})"
             counts = st.sync_work(work, prio, key, plans, skipped)
+            retired += counts.pop("retired_paths", [])
             totals["updated"] += 1
             for k in ("new", "changed", "removed"):
                 totals[k] += counts[k]
         except Exception as exc:          # one bad file must not stop the queue
             totals["errors"] += 1
             log(f"prep failed for {path}: {exc}")
+    # A work that left the library or the queue is withdrawn: its rows and its audio go. Only after a
+    # clean pass, so a file that failed to load is never mistaken for a removed one.
+    if not totals["errors"]:
+        retired += st.retire(seen)
+    for p in retired:
+        for f in (Path(p), Path(p).with_suffix(".json")):
+            f.unlink(missing_ok=True)
+        totals["retired"] += 1
     if not quiet and (totals["updated"] or totals["errors"]):
         log(f"queue sync: {totals}")
     return totals
@@ -278,8 +290,8 @@ def audition(eng: Engine, st: State, lexicon, stop) -> dict | None:
     return voice
 
 
-def take_path(c, attempt: int) -> Path:
-    return TAKES / c["work_id"] / c["section_id"] / f"{c['idx']:04d}-{c['sha'][:8]}-a{attempt}.flac"
+def take_path(c, attempt: int, speaker: str) -> Path:
+    return TAKES / c["work_id"] / c["section_id"] / f"{c['idx']:04d}-{c['sha'][:8]}-{speaker.lower()}-a{attempt}.flac"
 
 
 def render_chunk(eng: Engine, st: State, c, voice: dict, lexicon, stop) -> str:
@@ -289,10 +301,12 @@ def render_chunk(eng: Engine, st: State, c, voice: dict, lexicon, stop) -> str:
         seed = SEED_BASE + int(hashlib.sha256(f"{c['work_id']}/{c['section_id']}/{c['idx']}".encode())
                                .hexdigest()[:6], 16) + attempt * 7919
         t = render_take(eng, c["text"], c["ref_text"], c["words"], voice["speaker"], seed, attempt, lexicon,
-                        take_path(c, attempt))
+                        take_path(c, attempt, voice["speaker"]))
         accepted = not t["problems"]
         final = "done" if accepted else ("flagged" if attempt == MAX_ATTEMPTS else None)
         st.record_take(c, t, final)
+        if st.speaker() != voice["speaker"]:
+            return "stopped"              # the narrator changed mid-chunk; record_take sent it back to pending
         rtf = t["gen_seconds"] / max(t["duration"], 1e-3)
         log(f"{c['work_id']}/{c['section_id']}#{c['idx']} a{attempt}: WER {t['wer']:.3f} wps {t['wps']} "
             f"{'ok' if accepted else 'rejected ' + ','.join(t['problems'])} ({t['duration']:.1f}s audio, RTF {rtf:.2f})",
@@ -356,14 +370,17 @@ def batch(args, engine_factory=None, guard=None, st=None) -> int:
         if stop():
             end = stop_reason["why"]
             break
+        if st.speaker() != voice["speaker"]:
+            end = "narrator changed"      # set-voice ran during this batch; the next batch loads the new one
+            break
         rows = st.next_pending(1, only or None)
         if not rows:
             end = "queue empty" if not only else "requested sections finished"
             break
         c = rows[0]
-        before = len(st.takes_for(c))
+        before = len(st.takes_for(c, any_speaker=True))
         result = render_chunk(eng, st, c, voice, lexicon, stop)
-        new = st.takes_for(c)[before:]
+        new = st.takes_for(c, any_speaker=True)[before:]
         takes += len(new)
         audio_s += sum(t["duration"] or 0 for t in new)
         gpu_s += sum((t["gen_seconds"] or 0) + (t["asr_seconds"] or 0) for t in new)
@@ -371,7 +388,7 @@ def batch(args, engine_factory=None, guard=None, st=None) -> int:
             chunks_done += 1
         st.batch_update(batch_id, chunks_done=chunks_done, takes=takes, audio_seconds=audio_s, gpu_seconds=gpu_s)
         if result == "stopped":
-            end = stop_reason["why"] or "stopped"
+            end = stop_reason["why"] or ("narrator changed" if st.speaker() != voice["speaker"] else "stopped")
             break
     st.batch_update(batch_id, ended=time.time(), end_reason=end)
     log(f"batch ended ({end}): {chunks_done} chunks, {takes} takes, {audio_s/60:.1f} min audio in "
