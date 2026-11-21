@@ -53,3 +53,53 @@ def renumber_cont(sections):
             if b.get("cont") and cur is not None:
                 b["n"] = cur
             cur = b["n"]
+
+
+def spelling_variant(ours: str, printed: str) -> bool:
+    """True when two words differ only as American and British spellings (a closed list of patterns)."""
+    a, b = ours.lower(), printed.lower()
+    if a == b:
+        return False
+    if a.replace("iz", "is") == b:                       # recognize, recognise
+        return True
+    for x, y in (("ense", "ence"), ("practic", "practis"), ("steadfast", "stedfast")):
+        if a.replace(x, y) == b:
+            return True
+    if len(a) >= 5 and a.replace("or", "our") == b:   # honor, honour (not for, four)
+        return True
+    for k in range(1, len(a)):                         # traveling, travelling; skillful, skilful
+        c = a[k - 1]
+        if (c == "l" or (c == "p" and a[k:].startswith(("ing", "ed", "er")))) and a[:k] + c + a[k:] == b:
+            return True
+        if c == "l" and a[k] == "l" and a[:k] + a[k + 1:] == b:
+            return True
+    return False
+
+
+def ocr_spelling(sections, raw: str, log: list[str]) -> None:
+    """Restore the printed spelling where an e-text modernized it: one-word differences that the OCR
+    of the printed page shows as the British form of the same word."""
+    import difflib
+    import re as _re
+    from align import ocr_tokens, words_with_pos
+    ours, owner = [], []
+    for si, s in enumerate(sections):
+        for bi, b in enumerate(s["blocks"]):
+            if b["t"] not in ("v", "p"):
+                continue
+            for w, pos in words_with_pos(b["text"]):
+                ours.append(w)
+                owner.append((si, bi, pos, len(w)))
+    theirs = [n for n, _ in ocr_tokens(raw)]
+    sm = difflib.SequenceMatcher(None, ours, theirs, autojunk=False)
+    edits = []
+    for op, i1, i2, j1, j2 in sm.get_opcodes():
+        if op == "replace" and i2 - i1 == 1 and j2 - j1 == 1 and spelling_variant(ours[i1], theirs[j1]):
+            edits.append((owner[i1], theirs[j1]))
+    for (si, bi, pos, n), printed in sorted(edits, key=lambda e: (e[0][0], e[0][1], -e[0][2])):
+        b = sections[si]["blocks"][bi]
+        old = b["text"][pos:pos + n]
+        new = printed[:1].upper() + printed[1:] if old[:1].isupper() else printed
+        b["text"] = b["text"][:pos] + new + b["text"][pos + n:]
+        log.append(f"spelling {sections[si]['id']}:{b.get('n', '')} {old} -> {new}")
+    del _re
