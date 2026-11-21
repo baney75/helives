@@ -39,3 +39,6 @@ demo/audio-staging/
 demo/audio-v2/
 demo/models-v2/
 __pycache__/
+pipeline/cache/
+__pycache__/
+*.toml.tmp
