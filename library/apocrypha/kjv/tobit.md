@@ -13,7 +13,7 @@ words: 6964
 
 # Tobit
 
-> The story of Tobit, a devout Israelite exile in Nineveh, and of his son Tobias, who travels with the angel Raphael and marries Sarah. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
+> The story of Tobit, a devout Israelite exile in Nineveh, and of his son Tobias, who travels with the angel Raphael and marries Sarah. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## Tobit 1
 

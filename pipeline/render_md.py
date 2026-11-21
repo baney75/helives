@@ -23,6 +23,19 @@ def yaml_scalar(v) -> str:
     return f'"{s}"'
 
 
+def title_echo(s: dict) -> int:
+    """Index of a heading block that only repeats its section's title, or -1.
+
+    A section with no text of its own (a Book or Part) carries its title as its only block so the data
+    stays valid; the title is already printed, so that block is skipped.
+    """
+    for i, b in enumerate(s.get("blocks", [])):
+        if b["t"] == "note":
+            continue
+        return i if b["t"] == "h" and b["text"].strip() == str(s.get("title", "")).strip() else -1
+    return -1
+
+
 def render(doc: dict) -> str:
     w = doc["work"]
     out = ["---"]
@@ -47,7 +60,10 @@ def render(doc: dict) -> str:
                 para.clear()
 
         sid = s["id"]
-        for b in s["blocks"]:
+        echo = title_echo(s)
+        for bi, b in enumerate(s["blocks"]):
+            if bi == echo:
+                continue
             t = b["t"]
             b = dict(b, text=NOTE_REF.sub(lambda m: f"[^{sid}-{m.group(1)}]", b["text"]))
             if t == "v":

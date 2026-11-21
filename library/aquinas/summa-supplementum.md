@@ -18,8 +18,6 @@ After writing these few questions of the treatise on Penance, St. Thomas was cal
 
 ## Treatise on the Sacraments, Continued (QQ. 1-68)
 
-### Treatise on the Sacraments, Continued (QQ. 1-68)
-
 ### Question 1. Of the Parts of Penance, in Particular, and First of Contrition (Three Articles)
 
 We must now consider each single part of Penance, and (1) Contrition; (2) Confession; (3) Satisfaction. The consideration about Contrition will be fourfold: (1) What is it? (2) What should it be about? (3) How great should it be? (4) Of its duration; (5) Of its effect.
@@ -7430,8 +7428,6 @@ There are six ways of becoming legitimate: two according to the canons (Cap. Con
 
 ## Treatise on the Resurrection (QQ. 69-86)
 
-### Treatise on the Resurrection (QQ. 69-86)
-
 ### Question 69. Of Matters Concerning the Resurrection, and First of the Place Where Souls Are After Death (Seven Articles)
 
 In sequence to the foregoing we must treat of matters concerning the state of resurrection: for after speaking of the sacraments whereby man is delivered from the death of sin, we must next speak of the resurrection whereby man is delivered from the death of punishment. The treatise on the resurrection offers a threefold consideration, namely the things that precede, those that accompany, and those that follow the resurrection. Consequently we must speak (1) of those things which partly, though not wholly, precede the resurrection; (2) of the resurrection itself and its circumstances; (3) of the things which follow it.
@@ -9855,8 +9851,6 @@ Further, even as the body co-operates with the soul in merit, so does it co-oper
 
 ## Treatise on the Last Things (QQ. 87-99)
 
-### Treatise on the Last Things (QQ. 87-99)
-
 ### Question 87. Of the Knowledge Which, After Rising Again, Men Will Have at the Judgment Concerning Merits and Demerits (Three Articles)
 
 In the next place we must treat of those things which follow the resurrection. The first of these to be considered will be the knowledge, which after rising again, men will have at the judgment, concerning merits and demerits; the second will be the general judgment itself, as also the time and place at which it will be; thirdly we shall consider who will judge and who will be judged; fourthly we shall treat of the form wherein the judge will come to judge; and fifthly we shall consider what will be after the judgment, the state of the world and of those who will have risen again.
@@ -12240,11 +12234,7 @@ It is therefore clear that this opinion is utterly unreasonable: and consequentl
 
 ## Appendix 2
 
-### Appendix 2
-
 ### Question 1. Two Articles on Purgatory
-
-#### Question 1. Two Articles on Purgatory
 
 #### Article 1. Whether there is a Purgatory after this life?
 
