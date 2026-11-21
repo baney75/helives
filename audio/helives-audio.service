@@ -1,0 +1,26 @@
+# He Lives audiobook renderer (Parish1, systemd --user).
+# Waits for parish-media's own readiness check and GPU lock; renders in 30-minute batches,
+# releasing the lock between them. Installed by audio/sync.sh --install.
+[Unit]
+Description=He Lives audiobook renderer (opportunistic; waits for the parish-media GPU guard)
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.local/share/helives-audio/app
+ExecStart=%h/.local/share/parish-media/voice/venv/bin/python -u %h/.local/share/helives-audio/app/render.py run
+Restart=always
+RestartSec=60
+Nice=19
+CPUSchedulingPolicy=batch
+IOSchedulingClass=idle
+KillMode=control-group
+TimeoutStopSec=45
+UMask=0022
+Environment=PYTHONUNBUFFERED=1
+Environment=HELIVES_AUDIO_DATA=/srv/magnus-data/media/helives-audio
+Environment=HELIVES_LIBRARY=%h/.local/share/helives-audio/library
+Environment=HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_HUB_DISABLE_TELEMETRY=1 DO_NOT_TRACK=1
+
+[Install]
+WantedBy=default.target

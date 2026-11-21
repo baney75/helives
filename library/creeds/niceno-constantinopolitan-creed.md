@@ -1,0 +1,32 @@
+---
+title: "The Niceno-Constantinopolitan Creed (381)"
+author: "church"
+date: "381"
+language: "Greek"
+translator: "Philip Schaff"
+edition: "Philip Schaff, The Creeds of Christendom, Vol. I, § 8 (English, pp. 28-29) and Vol. II (Greek) (New York: Harper & Brothers, 1877); text as reprinted in the sixth edition (1919), CCEL digitization"
+source_url: "https://www.ccel.org/ccel/schaff/creeds1.xml"
+license: "Public domain"
+license_basis: "Published 1877 in the United States (Harper & Brothers); the creed translations are unchanged from that edition"
+words: 391
+---
+
+# The Niceno-Constantinopolitan Creed (381)
+
+> The enlarged Nicene Creed received at the Council of Constantinople in 381, the form confessed in the churches today, in Schaff's English translation and the Greek text. The Western churches later added "and the Son" (Filioque) after "proceedeth from the Father".
+
+## The Constantinopolitan Creed of 381
+
+We believe in one God, the Father Almighty, Maker of heaven and earth, and of all things visible and invisible.
+
+And in one Lord Jesus Christ, the only-begotten Son of God, begotten of the Father before all worlds (æons), Light of Light, very God of very God, begotten, not made, being of one substance with the Father; by whom all things were made; who for us men, and for our salvation, came down from heaven, and was incarnate by the Holy Ghost of the Virgin Mary, and was made man; he was crucified for us under Pontius Pilate, and suffered, and was buried, and the third day he rose again, according to the Scriptures, and ascended into heaven, and sitteth on the right hand of the Father; from thence he shall come again, with glory, to judge the quick and the dead; whose kingdom shall have no end.
+
+And in the Holy Ghost, the Lord and Giver of life, who proceedeth from the Father, who with the Father and the Son together is worshiped and glorified, who spake by the prophets. In one holy catholic and apostolic Church; we acknowledge one baptism for the remission of sins; we look for the resurrection of the dead, and the life of the world to come. Amen.
+
+## Greek Text
+
+Πιστεύομεν εἰς ἕνα ΘΕΟΝ ΠΑΤΕΡΑ παντοκράτορα, ποιητὴν οὐρανοῦ καὶ γῆς, ὁρατῶν τε πάντων καὶ ἀοράτων.
+
+Καὶ εἰς ἕνα κύριον ἸΗΣΟΥΝ ΧΡΙΣΤΟΝ, τὸν υἱὸν τοῦ θεοῦ τὸν μονογενῆ, τὸν ἐκ τοῦ πατρὸς γεννηθέντα πρὸ πάντων τῶν αἰώνων, φῶς ἐκ φωτός, θεὸν ἀληθινὸν ἐκ θεοῦ ἀληθινοῦ, γεννηθέντα, οὐ ποιηθέντα, ὁμοούσιον τῷ πατρί· δἰ οὗ τὰ πάντα ἐγένετο· τὸν δἰ ἡμᾶς τοὺς ἀνθρώπους καὶ διὰ τὴν ἡμετέραν σωτηρίαν κατελθόντα ἐκ τῶν οὐρανῶν καὶ σαρκωθέντα ἐκ πνεύματος ἁγίου καὶ Μαρίας τῆς παρθένου καὶ ἐνανθρωπήσαντα, σταυρωθέντα τε ὑπὲρ ἡμῶν ἐπὶ Ποντίου Πιλάτου, καὶ παθόντα καὶ ταφέντα, καὶ ἀναστάντα τῇ τρίτῃ ἡμέρᾳ κατὰ τὰς γραφάς, καὶ ἀνελθόντα εἰς τοὺς οὐρανούς, καὶ καθεζόμενον ἐκ δεξιῶν τοῦ πατρός, καὶ πάλιν ἐρχόμενον μετὰ δόξης κρῖναι ζῶντας καὶ νεκρούς· οὗ τῆς βασιλείας οὐκ ἔσται τέλος.
+
+Καὶ εἰς τὸ ΠΝΕΥΜΑ ΤΟ ἍΓΙΟΝ, τὸ κύριον, (καὶ) τὸ ζωοποιόν, τὸ ἐκ τοῦ πατρὸς ἐκπορευόμενον, τὸ σὺν πατρὶ καὶ ὑιῷ συν προσκυνούμενον καὶ συνδοξαζόμενον, τὸ λαλῆσαν διὰ τῶν προφητῶν· εἰς μίαν, ἁγίαν, καθολικὴν καὶ ἀποστολικὴν ἐκκλησίαν· ὁμολογοῦμεν ἓν βάπτισμα εἰς ἄφεσιν ἁμαρτιῶν· προσδοκῶμεν ἀνάστασιν νεκρῶν, καὶ ζωὴν τοῦ μέλλοντος αἰώνος. Ἀμὴν.

@@ -1,0 +1,40 @@
+[[collection]]
+id = "gnostic"
+title = "Gnostic Texts"
+order = 8
+summary = "Historical documents of the Gnostic movements, which the early church examined and rejected as heresy. They are kept here so readers can see what the church answered. For the church's answer, read Irenaeus, Against Heresies (irenaeus-against-heresies). The Nag Hammadi texts have no public domain English translation and are linked, not hosted."
+
+[authors.gnostic-anonymous]
+name = "Anonymous Gnostic authors"
+dates = "2nd to 4th century"
+role = "Unknown writers of the Gnostic movements"
+summary = "The writers of these texts are unknown. The works survive in Coptic and Syriac manuscripts and were translated into English by G. R. S. Mead in the early twentieth century."
+portrait = ""
+source = "https://archive.org/details/pistissophiagnos1921mead"
+
+[[external]]
+id = "gospel-of-thomas"
+collection = "gnostic"
+title = "The Gospel of Thomas"
+summary = "A Coptic collection of 114 sayings attributed to Jesus, found at Nag Hammadi in 1945."
+url = "http://gnosis.org/naghamm/gthlamb.html"
+source = "The Gnostic Society Library (Lambdin translation)"
+external = true
+
+[[external]]
+id = "gospel-of-truth"
+collection = "gnostic"
+title = "The Gospel of Truth"
+summary = "A Valentinian meditation on the gospel, found at Nag Hammadi, which Irenaeus mentions by name."
+url = "http://gnosis.org/naghamm/gostruth.html"
+source = "The Gnostic Society Library (Attridge and MacRae translation)"
+external = true
+
+[[external]]
+id = "apocryphon-of-john"
+collection = "gnostic"
+title = "The Apocryphon of John"
+summary = "A Gnostic account of creation and redemption presented as a revelation to the apostle John, found at Nag Hammadi."
+url = "http://gnosis.org/naghamm/apocjn.html"
+source = "The Gnostic Society Library (Wisse translation)"
+external = true

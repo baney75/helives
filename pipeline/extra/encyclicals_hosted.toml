@@ -1,0 +1,12 @@
+# vatican.va url -> hosted work id; written by ingest_leo_xiii.py
+[hosted]
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_01111885_immortale-dei.html" = "leo-xiii-immortale-dei"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_10011890_sapientiae-christianae.html" = "leo-xiii-sapientiae-christianae"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_10021880_arcanum.html" = "leo-xiii-arcanum-divinae"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html" = "leo-xiii-rerum-novarum"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_16021892_au-milieu-des-sollicitudes.html" = "leo-xiii-au-milieu-des-sollicitudes"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_18840420_humanum-genus.html" = "leo-xiii-humanum-genus"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_20061888_libertas.html" = "leo-xiii-libertas"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_21041878_inscrutabili-dei-consilio.html" = "leo-xiii-inscrutabili-dei-consilio"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_25051899_annum-sacrum.html" = "leo-xiii-annum-sacrum"
+"https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_28121878_quod-apostolici-muneris.html" = "leo-xiii-quod-apostolici-muneris"

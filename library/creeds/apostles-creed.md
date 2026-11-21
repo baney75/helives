@@ -1,0 +1,45 @@
+---
+title: "The Apostles' Creed"
+author: "church"
+date: "Received form by the 8th century; Old Roman form 2nd to 4th century"
+language: "Latin"
+translator: "Philip Schaff"
+edition: "Philip Schaff, The Creeds of Christendom, Vol. II: The Greek and Latin Creeds, with Translations (New York: Harper & Brothers, 1877); text as reprinted in the sixth edition (1919), CCEL digitization"
+source_url: "https://www.ccel.org/ccel/schaff/creeds2.xml"
+license: "Public domain"
+license_basis: "Published 1877 in the United States (Harper & Brothers); the creed translations are unchanged from that edition"
+words: 274
+---
+
+# The Apostles' Creed
+
+> The baptismal creed of the Western church in its received form, in Schaff's English translation with his notes, followed by the Latin and Greek texts he prints.
+
+## The Apostles' Creed
+
+I believe in God the Father Almighty; Maker of heaven and earth.
+
+And in Jesus Christ his only (begotten) Son our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, dead, and buried; he descended into hell [Hades, spirit-world];[^text-45] the third day he rose from the dead; he ascended into heaven; and sitteth at the right hand of God the Father Almighty; from thence he shall come to judge the quick and the dead.
+
+I believe in the Holy Ghost; the holy catholic Church; the communion of saints; the forgiveness of sins; the resurrection of the body [flesh];[^text-46] and the life everlasting. Amen.
+
+[^text-45]: *Descendit ad inferna* (other Latin copies: *ad inferos*, to the *inhabitants* of the spirit-world; so also in the Athanasian Symbol), κατελθόντα εἰς τὰ κατώτατα (other Eastern creeds: εἰς ᾅδου, viz., τόπον, or εἰς τὸν ᾅδην), *he descended into Hades.* This clause was unknown in the older creeds, though believed in the Church, and was transferred into the Roman symbol after the fifth century, probably from that of Aquilcia, A.D. 390, where it first appears among Latin creeds, as we learn from Rufinus. In the East it is found before in Arian creeds (about 360). After this we meet it again in the Creed of Venantius Fortunatus, A.D. 590, who had the Creed of Rufinus before him. The words κατώτατα and *inferna*, taken from Eph. iv. 9, correspond here to the Greek Ἅιδης, which occurs eleven times in the Greek Testament, viz., Matt. xi. 23; xvi. 18; Luke x. 15; xvi. 23; Acts ii. 27, 31; 1 Cor. xv. 55; Rev. i. 18; vi. 8; xx. 13, 14, and is always incorrectly translated *hell* in the English Version, except in 1 Cor. xv. 55. *Hades* signifies, like the Hebrew *Sheol*, the unseen spirit-world, the abode of all the departed, both the righteous and wicked; while *hell* (probably from the Saxon word *helan*, to *cover*, to *conceal*), at least in modern usage, is a much narrower conception, and signifies the state and place of eternal damnation, like the Hebrew *gehenna*, which occurs twelve times in the Greek Testament, and is so translated in the English Bible, viz., Matt. v. 22, 29, 30; x. 28; xviii. 9; xxiii. 15, 33; Mark ix. 43, 45, 47; Luke xii. 5; James iii. 6. The American editions of the *Book of Common Prayer* leave it optional with the minister to use, in the Creed, *hell*, or *the place of departed spirits;* but it would be much better to restore or popularize the Greek *Hades.* The current translation, *hell*, is apt to mislead, and excludes the important fact—the only one which we *certainly* know of the mysterious *triduum* —that Christ was in *Paradise* in the time between the crucifixion and the resurrection, according to his own declaration to the penitent thief, Luke xxiii. 43. Some connect the descent into Hades with the resurrection in one article; while others, on the contrary, connect it with the preceding article by placing a (,) after buried. It forms rather a separate article, and should be included in (;), as above. The clause has been explained in three different ways: 1. It is identical with *sepultus* (Rufinus), or means 'continued in the state of death and under the power of death' till the resurrection (Westminster divines). This makes it a useless repetition in figurative language. 2. It signifies the intensity of Christ's sufferings on the cross, where he tasted the pain of hell for sinners (Calvin and the Heidelberg Catechism). This is inconsistent with the order of the clause between death and resurrection. 3. An actual self-manifestation of Christ after the crucifixion to all the departed spirits, Luke xxiii. 43; Acts ii. 27, 31; 1 Pet. iii. 18, 19; iv.6; comp. Eph. iv. 8, 9; Col. ii. 15; Phil. ii. 10; Rev. i. 18. As such the descent is a part of the universality of the scheme of redemption, and forms the transition from the state of humiliation to the state of exaltation. This is the historical explanation, according to the belief of the ancient Church, but leaves much room for speculation concerning the object and effect of the descent.
+[^text-46]: 'Resurrection of the *body*.' The older English translations of the Creed had the literal rendering *flesh* (*caro*, σάρξ), by which the ancient Church protested against spiritualistic conceptions of the Gnostics. But this may be misunderstood in a grossly materialistic sense, while the resurrection of the *body* is unobjectionable; comp. 1 Cor. xv. 50. According to Heurtley, l.c. p. 147, the change of *flesh* into *body* was first made 1543, in 'The necessary Doctrine and Erudition for any Christian Man,' set forth by Henry VIII.; but in the Interrogative Creed, used at Baptism and at the Visitation of the Sick, *flesh* is retained.
+
+## Latin and Greek Text
+
+### Latin
+
+Credo in Deum Patrem omnipotentem; Creatorem cæli et terræ.
+
+Et in Jesum Christum, Filium ejus unicum, Dominum nostrum; qui conceptus est de Spiritu Sancto, natus ex Maria virgine; passus sub Pontio Pilato, crucifixus, mortuus, et sepultus; descendit ad inferna; tertia die resurrexit a mortuis; ascendit ad cælos; sedet ad dexteram Dei Patris omnipotentis; inde venturus (est) judicare vivos et mortuos.
+
+Credo in Spiritum Sanctum; sanctam ecclesiam catholicam; sanctorum communionem; remissionem peccatorum; carnis resurrectionem; vitam æternam. Amen.
+
+### Greek
+
+Πιστεύω εἰς ΘΕΟΝ ΠΑΤΕΡΑ, παντοκράτορα, ποιητὴν οὐρανοῦ καὶ γῆς.
+
+Καὶ (εἰς) ἸΗΣΟΥΝ ΧΡΙΣΤΟΝ, υἱὸν αὐτοῦ τὸν μονογενῆ, τὸν κύριον ἡμῶν, τὸν συλληφθέντα ἐκ πνεύματος ἁγίου, γεννηθέντα ἐκ Μαρίας τῆς παρθένου, παθόντα ἐπὶ Ποντίου Πιλάτου, σταυρωθέντα, θανόντα, καὶ ταφέντα, κατελθόντα εἰς τὰ κατώτατα, τῇ τρίτῃ ἡμέρᾳ ἀναστάντα ἀπὸ τῶν νεκρῶν, ἀνελθόντα εἰς τοὺς οὐρανούς, καθεζόμενον ἐν δεξιᾷ θεοῦ πατρὸς παντοδυνάμου, ἐκεῖθεν ἐρχόμενον κρῖναι ζῶντας καὶ νεκρούς.
+
+Πιστεύω εἰς τὸ ΠΝΕΥΜΑ ΤΟ ἍΓΙΟΝ, ἁγίαν καθολικὴν ἐκκλησίαν, ἁγίων κοινωνίαν, ἄφεσιν ἁμαρτιῶν, σαρκὸς ἀνάστασιν, ζωὴν αἰώνιον. Ἀμήν.

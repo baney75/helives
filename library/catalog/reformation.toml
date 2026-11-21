@@ -1,0 +1,61 @@
+[[collection]]
+id = "reformation"
+title = "The Reformation"
+order = 10
+summary = "Confessions, catechisms and writings of the sixteenth and seventeenth century Protestant Reformation: the Augsburg Confession, Luther's catechisms and treatises, the Heidelberg Catechism, the Belgic Confession, the Canons of Dort, the Westminster standards, the Thirty-Nine Articles, Calvin's Institutes and Bunyan's Pilgrim's Progress, in public domain English editions."
+
+[authors.lutheran-church]
+name = "The Lutheran Reformers"
+dates = "1530"
+role = "Confession presented by the Lutheran princes and cities at the Diet of Augsburg"
+summary = "Used for the Augsburg Confession, drafted by Philip Melanchthon and presented to Emperor Charles V in 1530 as the common confession of the Lutheran estates."
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/creeds3"
+
+[authors.luther]
+name = "Martin Luther"
+dates = "1483-1546"
+role = "German monk, professor at Wittenberg and leader of the Reformation"
+summary = "Augustinian friar and professor of theology whose Ninety-Five Theses of 1517 began the Protestant Reformation. He translated the Bible into German and wrote catechisms, hymns and treatises."
+portrait = ""
+source = "https://www.ccel.org/ccel/luther"
+
+[authors.reformed-churches]
+name = "The Reformed Churches"
+dates = "1561-1619"
+role = "Confessions and catechisms of the Reformed churches of the Palatinate and the Netherlands"
+summary = "Used for the Three Forms of Unity: the Heidelberg Catechism (1563), the Belgic Confession (1561) and the Canons of the Synod of Dort (1619)."
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/creeds3"
+
+[authors.westminster-assembly]
+name = "The Westminster Assembly"
+dates = "1643-1653"
+role = "Assembly of divines called by the English Parliament to reform the Church of England"
+summary = "Met at Westminster Abbey and produced the Westminster Confession of Faith and the Larger and Shorter Catechisms, the doctrinal standards of Presbyterian churches."
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/creeds3"
+
+[authors.church-of-england]
+name = "The Church of England"
+dates = "1563-1571"
+role = "Articles of religion of the Church of England"
+summary = "Used for the Thirty-Nine Articles, agreed by Convocation in 1563 and given their final English form in 1571."
+portrait = ""
+source = "https://www.ccel.org/ccel/schaff/creeds3"
+
+[authors.calvin]
+name = "John Calvin"
+dates = "1509-1564"
+role = "French theologian and pastor at Geneva"
+summary = "Reformer whose Institutes of the Christian Religion became the leading systematic theology of the Reformed churches. He led the church at Geneva from 1541 until his death."
+portrait = ""
+source = "https://www.ccel.org/ccel/calvin"
+
+[authors.bunyan]
+name = "John Bunyan"
+dates = "1628-1688"
+role = "English Puritan preacher and writer"
+summary = "A tinker from Bedfordshire who became a Baptist preacher, was imprisoned for twelve years for preaching without a license, and wrote The Pilgrim's Progress, first published in 1678."
+portrait = ""
+source = "https://www.gutenberg.org/ebooks/131"

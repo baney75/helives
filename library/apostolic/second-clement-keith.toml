@@ -1,0 +1,293 @@
+[work]
+id = "second-clement-keith"
+title = "The Second Epistle of Clement (Menzies Supplement)"
+short_title = "Second Clement (Keith)"
+author = "clement-of-rome"
+collection = "apostolic"
+order = 210
+language = "Greek"
+edition = "Ante-Nicene Fathers, Vol. 9 (1896), ed. Allan Menzies"
+source_url = "https://www.ccel.org/ccel/schaff/anf09.xml"
+source_sha256 = "6a3932956be998903672d451fc3a0901b5da8ebecce85273bb6513ae9d7df09f"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1896 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 4710
+
+[[section]]
+id = "introductory-notice-to-2nd-clement"
+title = "Introductory Notice to 2nd Clement."
+level = 1
+blocks = [
+  { t = "h", text = "[*From Vol. VII., p. 515 of the Ante-Nicene Fathers*.]" },
+  { t = "p", text = "The first certain reference which is made by any early writer to this so-called Epistle of Clement is found in these words of Eusebius (*Hist. Eccl*., iii. 38): “We must know that there is also a second Epistle of Clement. But we do not regard it as being equally notable with the former, since we know of none of the ancients that have made use of it.” Several critics in modern times have endeavoured to vindicate the authenticity of this epistle. But it is now generally regarded. as one of the many writings which have been falsely ascribed to Clement. Besides the want of external evidence, indicated even by Eusebius in the above extract, the diversity of style clearly points to a different writer from that of the first epistle. A commonly accepted opinion among critics at the present day is, that this is not an epistle at all, but a fragment of one of the many homilies falsely ascribed to Clement. There can be no doubt, however, that in the catalogue of writings contained in the Alexandrian ms. it is both styled an epistle, and, as well as the other which accompanies it, is attributed to Clement. As the ms. is certainly not later than the fifth century, the opinion referred to must by that time have taken firm root in the Church; but in the face of internal evidence, and in want of all earlier testimony, such a fact goes but a small way to establish its authenticity." },
+  { t = "p", text = "The second epistle differs from the first in several respects. The range of Scriptural quotation is wider, the quotations of the first epistle being taken mainly from the Septuagint version of the Old Testament. The attitude of the writer is in accordance with this fact; it is distinctively Gentile. For example, Chapter XII. contains a report of words purporting to have been spoken by the Lord; these, Clemens Alexandrinus states, are taken from the Apocryphal Gospel according to the Egyptians, not now extant. The reference in Chapter XIV. to the spiritual church, recalling Eph. i. 3–5, is parallel to the Pastor of Hermas, Vision II. 4. These passages help to determine the date; for the quotation from the Apocryphal Gospel would not have been made after the four gospels of the New Testament obtained exclusive authority—toward the close of the second century; while similarity of idea and exposition would seem to make the second epistle and the Pastor of Hermas somewhat contemporaneous." },
+  { t = "p", text = "The conclusion of the second epistle, as in the recently discovered ms., goes to establish the speculation made before this ms. was discovered, that it is a homily to be read in churches." },
+]
+
+[[section]]
+id = "chapter-1"
+title = "Chapter I. We Ought to Think Highly of Christ."
+level = 1
+blocks = [
+  { t = "h", text = "The Second Epistle of Clement.[^4328]" },
+  { t = "note", id = "4328", text = "No title, not even a letter, is preserved in A. I. inserts “Clement’s (Epistle) to the Corinthians II.”" },
+  { t = "p", text = "Chapter I.—We Ought to Think Highly of Christ." },
+  { t = "p", text = "Brethren, it is fitting that you should think of Jesus Christ as of God,—as the Judge of the living and the dead. And it does not become us to think lightly of our salvation; for if we think little of Him, we shall also hope but to obtain little [from Him]. And those of us who hear carelessly of these things, as if they were of small importance, commit sin, not knowing whence we have been called, and by whom, and to what place, and how much Jesus Christ submitted to suffer for our sakes. What return, then, shall we make to Him, or what fruit that shall be worthy of that which He has given to us? For, indeed, how great are the benefits[^4329] which we owe to Him! He has graciously given us light; as a Father, He has called us sons; He has saved us when we were ready to perish. What praise, then, shall we give to Him, or what return shall we make for the things which we have received?[^4330] We were deficient[^4331] in understanding, worshipping stones and wood, and gold, and silver, and brass, the works of men’s hands;[^4332] and our whole life was nothing else than death. Involved in blindness, and with such darkness[^4333] before our eyes, we have received sight, and through His will have laid aside that cloud by which we were enveloped. For He had compassion on us, and mercifully saved us, observing the many errors in which we were entangled, as well as the destruction to which we were exposed,[^4334] and that we had no hope of salvation except it came to us from Him. For He called us when we were not,[^4335] and willed that out of nothing we should attain a real existence.[^4336]" },
+  { t = "note", id = "4329", text = "Literally, “holy things.”" },
+  { t = "note", id = "4330", text = "Comp. Ps. cxvi. 12." },
+  { t = "note", id = "4331", text = "Literally, “lame.” I. πονηροί (wicked)." },
+  { t = "note", id = "4332", text = "Literally, “of men.”" },
+  { t = "note", id = "4333", text = "Literally, “being full of such darkness in our sight.”" },
+  { t = "note", id = "4334", text = "Literally, “having beheld in us much error and destruction.”" },
+  { t = "note", id = "4335", text = "Comp. Hos. ii. 23; Rom. iv. 17, ix. 25." },
+  { t = "note", id = "4336", text = "Literally, “willed us from not being to be.”" },
+]
+
+[[section]]
+id = "chapter-2"
+title = "Chapter II. The Church, Formerly Barren, is Now Fruitful."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter II.—The Church, Formerly Barren, is Now Fruitful." },
+  { t = "p", text = "“Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not; for she that is desolate hath many more children than she that hath an husband.”[^4337] In that He said, “Rejoice, thou barren that bearest not,” He referred to us, for our church was barren before that children were given to her. But when He said, “Cry out, thou that travailest not,” He means this, that we should sincerely offer up our prayers to God, and should not, like women in travail, show signs of weakness.[^4338] And in that He said, “For she that is desolate hath many more children than she that hath an husband,” [He means] that our people seemed to be outcast from God, but now, through believing, have become more numerous than those who are reckoned to possess God.[^4339] And another Scripture saith, “I came not to call the righteous, but sinners.”[^4340] This means that those who are perishing must be saved. For it is indeed a great and admirable thing to establish not the things which are standing, but those that are falling. Thus also did Christ[^4341] desire to save the things which were perishing,[^4342] and has saved many by coming and calling us when hastening to destruction.[^4343]" },
+  { t = "note", id = "4337", text = "Isa. liv. 1; Gal. iv. 27." },
+  { t = "note", id = "4338", text = "Some render, “should not cry out, like women in travail.” The text is doubtful. I. ἐκκακῶμεν (faint)." },
+  { t = "note", id = "4339", text = "It has been remarked that the writer here implies he was a Gentile." },
+  { t = "note", id = "4340", text = "Matt. ix. 13; Luke v. 32." },
+  { t = "note", id = "4341", text = "I. Κύριος (Lord)." },
+  { t = "note", id = "4342", text = "Comp. Matt. xviii. 11." },
+  { t = "note", id = "4343", text = "Literally, “already perishing.”" },
+]
+
+[[section]]
+id = "chapter-3"
+title = "Chapter III. The Duty of Confessing Christ."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter III.—The Duty of Confessing Christ." },
+  { t = "p", text = "Since, then, He has displayed so great mercy towards us, and especially in this respect, that we who are living should not offer sacrifices to gods that are dead, or pay them worship,[^4344] but should attain through Him to the knowledge of the true Father,[^4345] whereby shall we show that we do indeed know Him,[^4346] but by not denying Him through whom this knowledge has been attained? For He himself declares, “Whosoever shall confess me before men, him will I confess before my Father.”[^4347] This, then, is our reward if we shall confess Him by whom we have been saved. But in what way shall we confess Him? By doing what He says, and not transgressing His commandments, and by honouring Him not with our lips only, but with all our heart and all our mind.[^4348] For He says in Isaiah, “This people honoureth me with their lips, but their heart is far from me.”[^4349]" },
+  { t = "note", id = "4344", text = "I. omits." },
+  { t = "note", id = "4345", text = "I. τῆς ἀληθείας (of truth)." },
+  { t = "note", id = "4346", text = "Literally, “what is the knowledge which is towards Him.”" },
+  { t = "note", id = "4347", text = "Matt. x. 32." },
+  { t = "note", id = "4348", text = "Comp. Matt. xxii. 37." },
+  { t = "note", id = "4349", text = "Isa. xxix. 13." },
+]
+
+[[section]]
+id = "chapter-4"
+title = "Chapter IV. True Confession of Christ."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter IV.—True Confession of Christ." },
+  { t = "p", text = "Let us, then, not only call Him Lord, for that will not save us. For He saith, “Not every one that saith to me, Lord, Lord, shall be saved, but he that worketh righteousness.”[^4350] Wherefore, brethren, let us confess Him by our works, by loving one another, by not committing adultery, or speaking evil of one another, or cherishing envy; but by being continent, compassionate, and good. We ought also to sympathize with one another, and not be avaricious. By such works let us confess Him,[^4351] and not by those that are of an opposite kind. And it is not fitting that we should fear men, but rather God. For this reason, if we should do such [wicked] things, the Lord hath said, “Even though ye were gathered together to[^4352] me in my very bosom, yet if ye were not to keep my commandments, I would cast you off, and say unto you, Depart from me; I know you not whence ye are, ye workers of iniquity.”[^4353]" },
+  { t = "note", id = "4350", text = "Matt. vii. 21, loosely quoted." },
+  { t = "note", id = "4351", text = "Some read, “God.”" },
+  { t = "note", id = "4352", text = "Or, “with me.”" },
+  { t = "note", id = "4353", text = "The first part of this sentence is not found in Scripture; for the second comp., Matt. vii. 23; Luke xiii. 27." },
+]
+
+[[section]]
+id = "chapter-5"
+title = "Chapter V. This World Should Be Despised."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter V.—This World Should Be Despised." },
+  { t = "p", text = "Wherefore, brethren, leaving [willingly] our sojourn in this present world, let us do the will of Him that called us, and not fear to depart out of this world. For the Lord saith, “Ye shall be as lambs in the midst of wolves.”[^4354] And Peter answered and said unto Him,[^4355] “What, then, if the wolves shall tear in pieces the lambs?” Jesus said unto Peter, “The lambs have no cause after they are dead to fear[^4356] the wolves; and in like manner, fear not ye them that kill you, and can do nothing more unto you; but fear Him who, after you are dead, has power over both soul and body to cast them into hell-fire.”[^4357] And consider,[^4358] brethren, that the sojourning in the flesh in this world is but brief and transient, but the promise of Christ is great and wonderful, even the rest of the kingdom to come, and of life everlasting.[^4359] By what course of conduct, then, shall we attain these things, but by leading a holy and righteous life, and by deeming these worldly things as not belonging to us, and not fixing our desires upon them? For if we desire to possess them, we fall away from the path of righteousness." },
+  { t = "note", id = "4354", text = "Matt. x. 16." },
+  { t = "note", id = "4355", text = "No such conversation is recorded in Scripture." },
+  { t = "note", id = "4356", text = "Or, “Let not the lambs fear.”" },
+  { t = "note", id = "4357", text = "Matt. x. 28; Luke xii. 4, 5." },
+  { t = "note", id = "4358", text = "Or, “know.”" },
+  { t = "note", id = "4359", text = "The text and translation are here doubtful." },
+]
+
+[[section]]
+id = "chapter-6"
+title = "Chapter VI. The Present and Future Worlds are Enemies to Each Other."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter VI.—The Present and Future Worlds are Enemies to Each Other." },
+  { t = "p", text = "Now the Lord declares, “No servant can serve two masters.”[^4360] If we desire, then, to serve both God and mammon, it will be unprofitable for us. “For what will it profit if a man gain the whole world, and lose his own soul?”[^4361] This world and the next are two enemies. The one urges[^4362] to adultery and corruption, avarice and deceit; the other bids farewell to these things. We cannot, therefore, be the friends of both; and it behoves us, by renouncing the one, to make sure[^4363] of the other. Let us reckon[^4364] that it is better to hate the things present, since they are trifling, and transient, and corruptible; and to love those [which are to come,] as being good and incorruptible. For if we do the will of Christ, we shall find rest; otherwise, nothing shall deliver us from eternal punishment, if we disobey His commandments. For thus also saith the Scripture in Ezekiel, “If Noah, Job, and Daniel should rise up, they should not deliver their children in captivity.”[^4365] Now, if men so eminently righteous are not able by their righteousness to deliver their children, how[^4366] can we hope to enter into the royal residence[^4367] of God unless we keep our baptism holy and undefiled? Or who shall be our advocate, unless we be found possessed of works of holiness and righteousness?" },
+  { t = "note", id = "4360", text = "Matt. vi. 24; Luke xvi. 13." },
+  { t = "note", id = "4361", text = "Matt. xvi. 26. I. omits ὅλον (whole)." },
+  { t = "note", id = "4362", text = "Literally, “speaks of.”" },
+  { t = "note", id = "4363", text = "Or, “enjoy. ”" },
+  { t = "note", id = "4364", text = "The ms. has, “we reckon.”" },
+  { t = "note", id = "4365", text = "Ezek. xiv. 14, 20." },
+  { t = "note", id = "4366", text = "Literally, “with what confidence shall we.”" },
+  { t = "note", id = "4367", text = "Wake translates “kingdom,” as if the reading had been βασιλείαν ; but the ms. has βασίλειον, “palace.”" },
+]
+
+[[section]]
+id = "chapter-7"
+title = "Chapter VII. We Must Strive in Order to Be Crowned."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter VII.—We Must Strive in Order to Be Crowned." },
+  { t = "p", text = "Wherefore, then, my brethren, let us struggle with all earnestness, knowing that the contest is [in our case] close at hand, and that many undertake long voyages to strive for a corruptible reward;[^4368] yet all are not crowned, but those only that have laboured hard and striven gloriously. Let us therefore so strive, that we may all be crowned. Let us run the straight[^4369] course, even the race that is incorruptible; and let us in great numbers set out[^4370] for it, and strive that we may be crowned. And should we not all be able to obtain the crown, let us at least come near to it. We must remember[^4371] that he who strives in the corruptible contest, if he be found acting unfairly,[^4372] is taken away and scourged, and cast forth from the lists. What then think ye? If one does anything unseemly in the incorruptible contest, what shall he have to bear? For of those who do not preserve the seal[^4373] [unbroken], [the Scripture] saith, “Their worm shall not die, and their fire shall not be quenched, and they shall be a spectacle to all flesh.”[^4374]" },
+  { t = "note", id = "4368", text = "Literally, “that many set sail for corruptible contests,” referring probably to the concourse at the Isthmian games." },
+  { t = "note", id = "4369", text = "Or, “Let us place before us.”" },
+  { t = "note", id = "4370", text = "Or, “set sail.”" },
+  { t = "note", id = "4371", text = "Literally, “know.”" },
+  { t = "note", id = "4372", text = "Literally, “if he be found corrupting.”" },
+  { t = "note", id = "4373", text = "Baptism is probably meant." },
+  { t = "note", id = "4374", text = "Isa. lxvi. 24." },
+]
+
+[[section]]
+id = "chapter-8"
+title = "Chapter VIII. The Necessity of Repentance While We are on Earth."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter VIII.—The Necessity of Repentance While We are on Earth." },
+  { t = "p", text = "As long, therefore, as we are upon earth, let us practise repentance, for we are as clay in the hand of the artificer. For as the potter, if he make a vessel, and it be distorted or broken in his hands, fashions it over again; but if he have before this cast it into the furnace of fire, can no longer find any help for it: so let us also, while we are in this world, repent with our whole heart of the evil deeds we have done in the flesh, that we may be saved by the Lord, while we have yet an opportunity of repentance. For after we have gone out of the world, no further power of confessing or repenting will there belong to us. Wherefore, brethren, by doing the will of the Father, and keeping the flesh holy, and observing the commandments of the Lord, we shall obtain eternal life. For the Lord saith in the Gospel, “If ye have not kept that which was small, who will commit to you the great? For I say unto you, that he that is faithful in that which is least, is faithful also in much.”[^4375] This, then, is what He means: “Keep the flesh holy and the seal undefiled, that[^4376] ye may receive eternal life.”[^4377]" },
+  { t = "note", id = "4375", text = "Comp. Luke xvi. 10–12." },
+  { t = "note", id = "4376", text = "ms. has “we,” which is corrected by all editors as above. I. ἀπολάβητε." },
+  { t = "note", id = "4377", text = "Some have thought this a quotation from an unknown apocryphal book, but it seems rather an explanation of the preceding words." },
+]
+
+[[section]]
+id = "chapter-9"
+title = "Chapter IX. We Shall Be Judged in the Flesh."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter IX.—We Shall Be Judged in the Flesh." },
+  { t = "p", text = "And let no one of you say that this very flesh shall not be judged, nor rise again. Consider ye in what [state] ye were saved, in what ye received sight,[^4378] if not while ye were in this flesh. We must therefore preserve the flesh as the temple of God. For as ye were called in the flesh, ye shall also come [to be judged] in the flesh. As Christ[^4379] the Lord who saved us, though He was first a Spirit[^4380] became flesh, and thus called us, so shall we also receive the reward in this flesh. Let us therefore love one another, that we may all attain to the kingdom of God. While we have an opportunity of being healed, let us yield ourselves to God that healeth us, and give to Him a recompense. Of what sort? Repentance out of a sincere heart; for He knows all things beforehand, and is acquainted with what is in our hearts. Let us therefore give Him praise, not with the mouth only, but also with the heart, that He may accept us as sons. For the Lord has said, “Those are my brethren who do the will of my Father.”[^4381]" },
+  { t = "note", id = "4378", text = "Literally, “looked up.”" },
+  { t = "note", id = "4379", text = "The ms. has εἷς, “one,” which Wake follows, but it seems clearly a mistake for ὡς." },
+  { t = "note", id = "4380", text = "I. λόγος (word)." },
+  { t = "note", id = "4381", text = "Matt. xii. 50." },
+]
+
+[[section]]
+id = "chapter-10"
+title = "Chapter X. Vice is to Be Forsaken, and Virtue Followed."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter X.—Vice is to Be Forsaken, and Virtue Followed." },
+  { t = "p", text = "Wherefore, my brethren, let us do the will of the Father who called us, that we may live; and let us earnestly[^4382] follow after virtue, but forsake every wicked tendency[^4383] which would lead us into transgression; and flee from ungodliness, lest evils overtake us. For if we are diligent in doing good, peace will follow us. On this account, such men cannot find it [i.e. peace] as are[^4384] influenced by human terrors, and prefer rather present enjoyment[^4385] to the promise which shall afterwards be fulfilled. For they know not what torment present enjoyment incurs, or what felicity is involved in the future promise. And if, indeed, they themselves only did such things, it would be [the more] tolerable; but now they persist in imbuing innocent souls with their pernicious doctrines, not knowing that they shall receive a double condemnation, both they and those that hear them." },
+  { t = "note", id = "4382", text = "Literally, “rather.”" },
+  { t = "note", id = "4383", text = "Literally, “malice, as it were, the precursor of our sins.” Some deem the text corrupt." },
+  { t = "note", id = "4384", text = "Literally, according to the ms., “it is not possible that a man should find it who *are*”—the passage being evidently corrupt." },
+  { t = "note", id = "4385", text = "I. ἀνάπαυσιν (rest)." },
+]
+
+[[section]]
+id = "chapter-11"
+title = "Chapter XI. We Ought to Serve God, Trusting in His Promises."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XI.—We Ought to Serve God, Trusting in His Promises." },
+  { t = "p", text = "Let us therefore serve God with a pure heart, and we shall be righteous; but if we do not serve Him, because we believe not the promise of God, we shall be miserable. For the prophetic word also declares, “Wretched are those of a double mind, and who doubt in their heart, who say, All these things[^4386] have we heard even in the times of our fathers; but though we have waited day by day, we have seen none of them [accomplished]. Ye fools! compare yourselves to a tree; take, for instance, the vine. First of all it sheds its leaves, then the bud appears; after that the sour grape, and then the fully-ripened fruit. So, likewise, my people have borne disturbances and afflictions, but afterwards shall they receive their good things.”[^4387] Wherefore, my brethren, let us not be of a double mind, but let us hope and endure, that we also may obtain the reward. For He is faithful who has promised that He will bestow on every one a reward according to his works. If, therefore, we shall do righteousness in the sight of God, we shall enter into His kingdom, and shall receive the promises, which “ear hath not heard, nor eye seen, neither have entered into the heart of man.”[^4388]" },
+  { t = "note", id = "4386", text = "I. πάλαι (long ago)." },
+  { t = "note", id = "4387", text = "The same words occur in Clement’s first epistle, chap. xxiii." },
+  { t = "note", id = "4388", text = "1 Cor. ii. 9." },
+]
+
+[[section]]
+id = "chapter-12"
+title = "Chapter XII. We are Constantly to Look for the Kingdom of God."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XII.—We are Constantly to Look for the Kingdom of God." },
+  { t = "p", text = "Let us expect, therefore, hour by hour, the kingdom of God in love and righteousness, since we know not the day of the appearing of God. For the Lord Himself, being asked by one when His kingdom would come, replied, “When two shall be one, that which is without as that which is within, and the male with the female, neither male nor female.”[^4389] Now, two are one when we speak the truth one to another, and there is unfeignedly one soul in two bodies. And “that which is without as” that which is within meaneth this: He calls the soul “that which is within,” and the body “that which is without.” As, then, thy body is visible to sight, so also let thy soul be manifest by good works. And “the male, with the female, neither male nor female,” this[^4390] He saith, that brother seeing sister may have no thought concerning her as female, and that she may have no thought concerning him as male. “If ye do these things,” saith He, “the kingdom of my Father shall come.”[^4391]" },
+  { t = "note", id = "4389", text = "These words are quoted (Clem. Alex., *Strom*., iii. 9, 1.) from the Gospel according to the Egyptians, no longer extant." },
+  { t = "note", id = "4390", text = "Here the piece formerly broke off. From this point to the end the text of Gebhardt, Harnack, Zahn has been followed." },
+  { t = "note", id = "4391", text = "Comp. 1 Cor. vii. 29." },
+]
+
+[[section]]
+id = "chapter-13"
+title = "Chapter XIII. God's Name Not to Be Blasphemed."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XIII.—God’s Name Not to Be Blasphemed." },
+  { t = "p", text = "Brethren, then, let us now at length repent, let us soberly turn to that which is good; for we are full of abundant folly and wickedness. Let us wipe out from us our former sins, and repenting from the heart be saved; and let us not be men-pleasers, nor be willing to please one another only, but also the men without, for righteousness sake, that the name may not be, because of us, blasphemed. For the Lord saith, “Continually my name is blasphemed among all nations,” and “Wherefore my name is blasphemed; blasphemed in what? In your not doing the things which I wish.”[^4392] For the nations, hearing from our mouth the oracles of God, marvel at their excellence and worth; thereafter learning that our deeds are not worthy of the words which we speak,—receiving this occasion they turn to blasphemy, saying that they are a fable and a delusion. For, whenever they hear from us that God saith, “No thank have ye, if ye love them which love you, but ye have thank, if ye love your enemies and them which hate you”[^4393]—whenever they hear these words, they marvel at the surpassing measure of their goodness; but when they see, that not only do we not love those who hate, but that we love not even those who love, they laugh us to scorn, and the name is blasphemed." },
+  { t = "note", id = "4392", text = "Is. lii. 5." },
+  { t = "note", id = "4393", text = "Luke vi. 32 *sqq*." },
+]
+
+[[section]]
+id = "chapter-14"
+title = "Chapter XIV. The Church Spiritual."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XIV.—The Church Spiritual." },
+  { t = "p", text = "So, then, brethren, if we do the will of our Father God, we shall be members of the first church, the spiritual,—that which was created before sun and moon; but if we shall not do the will of the Lord, we shall come under the Scripture which saith, “My house became a den of robbers.”[^4394] So, then, let us elect to belong to the church of life,[^4395] that we may be saved. I think not that ye are ignorant that the living church is the body of Christ (for the Scripture, saith, “God created man male and female;”[^4396] the male is Christ, the female the church,) and that the Books[^4397] and the Apostles teach that the church is not of the present, but from the beginning. For it was spiritual, as was also our Jesus, and was made manifest at the end of the days in order to save you.[^4398] The church being spiritual, was made manifest in the flesh of Christ, signifying to us that if any one of us shall preserve it in the flesh and corrupt it not, he shall receive it in the Holy Spirit. For this flesh is the type of the spirit; no one, therefore, having corrupted the type, will receive afterwards the antitype. Therefore is it, then, that He saith, brethren, “Preserve ye the flesh, that ye may become partakers of the spirit.” If we say that the flesh is the church and the spirit Christ, then it follows that he who shall offer outrage to the flesh is guilty of outrage on the church. Such an one, therefore, will not partake of the spirit, which is Christ. Such is the life and immortality, which this flesh may afterwards receive, the Holy Spirit cleaving to it; and no one can either express or utter what things the Lord hath prepared for His elect.[^4399]" },
+  { t = "note", id = "4394", text = "Jer. vii. 11." },
+  { t = "note", id = "4395", text = "Comp. 1 Pet. ii., iv. *sqq*." },
+  { t = "note", id = "4396", text = "Gen. i. 27; comp. Eph. v. 22–23." },
+  { t = "note", id = "4397", text = "i.e., The Old Testament." },
+  { t = "note", id = "4398", text = "1 Pet. i. 20." },
+  { t = "note", id = "4399", text = "1 Cor. ii. 9." },
+]
+
+[[section]]
+id = "chapter-15"
+title = "Chapter XV. He Who Saves and He Who is Saved."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XV.—He Who Saves and He Who is Saved." },
+  { t = "p", text = "I think not that I counted trivial counsel concerning continence; following it, a man will not repent thereof, but will save both himself and me who counselled.[^4400] For it is no small reward to turn back a wandering and perishing soul for its salvation.[^4401] For this recompense we are able to render to the God who created us, if he who speaks and hears both speak and hear with faith and love. Let us, therefore, continue in that course in which we, righteous and holy, believed, that with confidence we may ask God who saith, “Whilst thou art still speaking, I will say, Here I am.”[^4402] For these words are a token of a great promise, for the Lord saith that He is more ready to give than he who asks. So great, then, being the goodness of which we are partakers, let us not grudge one another the attainment of so great blessings. For in proportion to the pleasure with which these words are fraught to those who shall follow them, in that proportion is the condemnation with which they are fraught to those who shall refuse to hear." },
+  { t = "note", id = "4400", text = "1 Tim. iv. 16." },
+  { t = "note", id = "4401", text = "Jas. v. 19–25." },
+  { t = "note", id = "4402", text = "Is. lviii. 9." },
+]
+
+[[section]]
+id = "chapter-16"
+title = "Chapter XVI. Preparation for the Day of Judgment."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XVI.—Preparation for the Day of Judgment." },
+  { t = "p", text = "So, then, brethren, having received no small occasion to repent, while we have opportunity, let us turn to God who called us, while yet we have One to receive us. For if we renounce these indulgences and conquer the soul by not fulfilling its wicked desires, we shall be partakers of the mercy of Jesus. Know ye that the day[^4403] of judgment draweth nigh like a burning oven, and certain of the heavens and all the earth will melt, like lead melting in fire; and then will appear the hidden and manifest deeds of men. Good, then, is alms as repentance from sin; better is fasting than prayer, and alms than both; “charity covereth a multitude of sins,”[^4404] and prayer out of a good conscience delivereth from death. Blessed is every one that shall be found complete in these; for alms lightens the burden of sin." },
+  { t = "note", id = "4403", text = "2 Pet. ii. 9, iii. 5–10." },
+  { t = "note", id = "4404", text = "1 Pet. iv. 4." },
+]
+
+[[section]]
+id = "chapter-17"
+title = "Chapter XVII. Same Subject Continued."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XVII.—Same Subject Continued." },
+  { t = "p", text = "Let us, then, repent with our whole heart, that no one of us may perish amiss. For if we have commands and engage in withdrawing from idols and instructing others, how much more ought a soul already knowing God not to perish. Rendering, therefore, mutual help, let us raise the weak also in that which is good, that all of us may be saved and convert one another and admonish. And not only now let us seem to believe and give heed, when we are admonished by the elders;[^4405] but also when we take our departure home, let us remember the commandments of the Lord, and not be allured back by worldly lusts, but let us often and often draw near and try to make progress in the Lord’s commands, that we all having the same mind may be gathered together for life. For the Lord said, “I come to gather all nations [kindreds] and tongues.”[^4406] This means the day of His appearing, when He will come and redeem us—each one according to his works. And the unbelievers will see His glory and might, and, when they see the empire of the world in Jesus, they will be surprised, saying, “Woe to us, because Thou wast, and we knew not and believed not and obeyed not the elders[^4407] who show us plainly of our salvation.” And “their worm shall not die, neither shall their fire be quenched; and they shall be a spectacle unto all flesh.”[^4408] It is of the great day of judgment He speaks, when they shall see those among us who were guilty of ungodliness and erred in their estimate of the commands of Jesus Christ. The righteous, having succeeded both in enduring the trials and hating the indulgences of the soul, whenever they witness how those who have swerved and denied Jesus by words or deeds are punished with grievous torments in fire unquenchable, will give glory to their God and say, “There will be hope for him who has served God with his whole heart.”" },
+  { t = "note", id = "4405", text = "i.e., Presbyters." },
+  { t = "note", id = "4406", text = "This passage proves this so-called Epistle to be a homily." },
+  { t = "note", id = "4407", text = "Is. lxvi. 18." },
+  { t = "note", id = "4408", text = "Is. lxvi. 24." },
+]
+
+[[section]]
+id = "chapter-18"
+title = "Chapter XVIII. The Author Sinful, Yet Pursuing."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XVIII.—The Author Sinful, Yet Pursuing." },
+  { t = "p", text = "And let us, then, be of the number of those who give thanks, who have served God, and not of the ungodly who are judged. For I myself, though a sinner every whit and not yet fleeing temptation but continuing in the midst of the tools of the devil, study to follow after righteousness, that I may make, be it only some, approach to it, fearing the judgment to come." },
+]
+
+[[section]]
+id = "chapter-19"
+title = "Chapter XIX. Reward of the Righteous, Although They May Suffer."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XIX.—Reward of the Righteous, Although They May Suffer." },
+  { t = "p", text = "So then, brothers and sisters,[^4409] after the God of truth[^4410] I address to you an appeal that ye may give heed to the words written,[^4411] that ye may save both yourselves and him who reads an address in your midst. For as a reward I ask of you repentance with the whole heart, while ye bestow upon yourselves salvation and life. For by so doing we shall set a mark for all the young who wish to be diligent in godliness and the goodness of God. And let not us, in our folly, feel displeasure and indignation, whenever any one admonishes us and turns us from unrighteousness to righteousness. For there are some wicked deeds which we commit, and know it not, because of the double-mindedness and unbelief present in our breasts, and our understanding is darkened by vain desires. Let us, therefore, work righteousness, that we may be saved to the end. Blessed are they who obey these commandments, even if for a brief space they suffer in this world, and they will gather the imperishable fruit of the resurrection. Let not the godly man, therefore, grieve; if for the present he suffer affliction, blessed is the time that awaits him there; rising up to life again with the fathers he will rejoice for ever without a grief." },
+  { t = "note", id = "4409", text = "Indicative of the approaching close." },
+  { t = "note", id = "4410", text = "Bryennius interprets this to refer to the Scripture-lesson." },
+  { t = "note", id = "4411", text = "Either the Scripture-lesson or the homily." },
+]
+
+[[section]]
+id = "chapter-20"
+title = "Chapter XX. Godliness, Not Gain, the True Riches."
+level = 1
+blocks = [
+  { t = "p", text = "Chapter XX.—Godliness, Not Gain, the True Riches." },
+  { t = "p", text = "But let it not even trouble your mind, that we see the unrighteous possessed of riches and the servants of God straitened. Let us, therefore, brothers and sisters, believe; in a trial of the living God we strive and are exercised in the present life, that we may obtain the crown in that which is to come. No one of the righteous received fruit speedily, but waiteth for it. For if God tendered the reward of the righteous in a trice, straightway were it commerce that we practised, and not godliness. For it were as if we were righteous by following after not godliness but gain; and for this reason the divine judgment baffled[^4412] the spirit that is unrighteous and heavily weighed the fetter." },
+  { t = "note", id = "4412", text = "Some take the aorist here used to be the iterative aorist of proverbs and, therefore, translated by the present tense." },
+  { t = "p", text = "To the only God, invisible, Father of truth, who sent forth to us the Saviour and Author of immortality, through whom He also manifested to us the truth and the heavenly life, to Him be glory for ever and ever. Amen." },
+]

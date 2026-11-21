@@ -1,0 +1,141 @@
+---
+title: "Canonical Epistle"
+author: "gregory-thaumaturgus"
+language: "Greek"
+edition: "Ante-Nicene Fathers, Vol. 6 (1886), ed. Roberts, Donaldson and Coxe"
+source_url: "https://www.ccel.org/ccel/schaff/anf06.xml"
+license: "Public domain"
+license_basis: "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words: 1966
+---
+
+# Canonical Epistle
+
+## Canon I.
+
+Canonical Epistle.[^canon-1-121]
+
+Canon I.
+
+The meats are no burden to us, most holy father,[^canon-1-122] if the captives ate things which their conquerors set before them, especially since there is one report from all, viz., that the barbarians who have made inroads into our parts have not sacrificed to idols. For the apostle says, “Meats for the belly, and the belly for meats: but God shall destroy both it and them.”[^canon-1-123] But the Saviour also, who cleanseth all meats, says, “Not that which goeth into a man defileth the man, but that which cometh out.”[^canon-1-124] And this meets the case of the captive women defiled by the barbarians, who outraged their bodies. But if the previous life of any such person convicted him of going, as it is written, after the eyes of fornicators, the habit of fornication evidently becomes an object of suspicion also in the time of captivity. And one ought not readily to have communion with such women in prayers. If any one, however, has lived in the utmost chastity, and has shown in time past a manner of life pure and free from all suspicion, and now falls into wantonness through force of necessity, we have an example for our guidance,—namely, the instance of the damsel in Deuteronomy, whom a man finds in the field, and forces her and lies with her. “Unto the damsel,” he says, “ye shall do nothing; there is in the damsel no sin worthy of death: for as when a man riseth against his neighbour, and slayeth him, even so is this matter: the damsel cried, and there was none to help her.”[^canon-1-125]
+
+[^canon-1-121]: Of the holy Gregory, archbishop of Neo-Cæsareia, surnamed Thaumaturgus, concerning those who, in the inroad of the barbarians, ate things sacrificed to idols, or offended in certain other matters. Gallandi, iii. p. 400. [Written a.d. 258 or 262.] There are scholia in Latin by Theodorus Balsamon and Joannes Zonaras on these canons. The note of the former on the last canon may be cited:—The present saint has defined shortly five several positions for the penitent; but he has not indicated either the times appointed for their exercise, or the sins for which discipline is determined. Basil the Great, again, has handed down to us an accurate account of these things in his canonical epistles. [Elucidation II.] Yet he, too, has referred to episcopal decision the matter of recovery through penalties [i.e., to the decision of his comprovincial bishops, as in Cyprian’s example. See vol. v. p. 415, Elucidation XIII.; also Elucidation I. p. 20, *infra.*
+[^canon-1-122]: [Elucidation III. p. 20.]
+[^canon-1-123]: 1 Cor. vi. 13.
+[^canon-1-124]: Matt. xv. 11.
+[^canon-1-125]: Deut. xxii. 26, 27.
+
+## Canon II.
+
+Canon II.
+
+Covetousness is a great evil; and it is not possible in a single letter to set forth those scriptures in which not robbery alone is declared to be a thing horrible and to be abhorred, but in general the grasping mind, and the disposition to meddle with what belongs to others, in order to satisfy the sordid love of gain. And all persons of that spirit are excommunicated from the Church of God. But that at the time of the irruption, in the midst of such woful sorrows and bitter lamentations, some should have been audacious enough to consider the crisis which brought destruction to all the very period for their own private aggrandizement, that is a thing which can be averred only of men who are impious and hated of God, and of unsurpassable iniquity. Wherefore it seemed good to excommunicate such persons, lest the wrath (of God) should come upon the whole people, and upon those first of all who are set over them in office, and yet fail to make inquiry. For I am afraid, as the Scripture says, lest the impious work the destruction of the righteous along with his own.[^canon-2-126] “For fornication,” it says,[^canon-2-127] “and covetousness *are things* on account of which the wrath of God cometh upon the children of disobedience. Be not ye therefore partakers with them. For ye were sometimes darkness, but now are ye light in the Lord: walk as children of light (for the fruit of the light[^canon-2-128] is in all goodness, and righteousness, and truth), proving what is acceptable unto the Lord. And have no fellowship with the unfruitful works of darkness, but rather reprove them; for it is a shame even to speak of those things which are done of them in secret. But all things that are reproved are made manifest by the light.” In this wise speaks the apostle. But if certain parties who pay the proper penalty for that former covetousness of theirs, which exhibited itself in the time of peace, now turn aside again to the indulgence of covetousness in the very time of trouble (i.e., in the troubles of the inroads by the barbarians), and make gain out of the blood and ruin of men who have been utterly despoiled, or taken captive, (or) put to death, what else ought to be expected, than that those who struggle so hotly for covetousness should heap up wrath both for themselves and for the whole people?
+
+[^canon-2-126]: Gen. xviii. 23, 25.
+[^canon-2-127]: Eph. v. 5–13.
+[^canon-2-128]: τοῦ φωτός for the received πνεύματος.
+
+## Canon III.
+
+Canon III.
+
+Behold, did not Achar[^canon-3-129] the son of Zara transgress in the accursed thing, and trouble then lighted on all the congregation of Israel? And this one man was alone in his sin; but he was not alone in the death that came by his sin. And by us, too, everything of a gainful kind at this time, which is ours not in our own rightful possession, but as property strictly belonging to others, ought to be reckoned a thing devoted. For that Achar indeed took of the spoil; and those men of the present time take also of the spoil. But he took what belonged to enemies; while these now take what belongs to brethren, and aggrandize themselves with fatal gains.
+
+[^canon-3-129]: Josh. vii.
+
+## Canon IV.
+
+Canon IV.
+
+Let no one deceive himself, nor put forward the pretext of having found such property. For it is not lawful, even for a man who has found anything, to aggrandize himself by it. For Deuteronomy says: “Thou shalt not see thy brother’s ox or his sheep go astray in the way, and pay no heed to them; but thou shalt in any wise bring them again unto thy brother. And if thy brother come not nigh thee, or if thou know him not, then thou shalt bring them together, and they shall be with thee until thy brother seek after them, and thou shalt restore them to him again. And in like manner shalt thou do with his ass, and so shalt thou do with his raiment, and so shalt thou do with all lost things of thy brother’s, which he hath lost, and thou mayest find.”[^canon-4-130] Thus much in Deuteronomy. And in the book of Exodus it is said, with reference not only to the case of finding what is a friend’s, but also of finding what is an enemy’s: “Thou shalt surely bring them back to the house of their master again.”[^canon-4-131] And if it is not lawful to aggrandize oneself at the expense of another, whether he be brother or enemy, even in the time of peace, when he is living at his ease and delicately, and without concern as to his property, how much more must it be the case when one is met by adversity, and is fleeing from his enemies, and has had to abandon his possessions by force of circumstances!
+
+[^canon-4-130]: Deut. xxii. 1–3.
+[^canon-4-131]: Ex. xxiii. 4.
+
+## Canon V.
+
+Canon V.
+
+But others deceive themselves by fancying that they can retain the property of others which they may have found as an equivalent for their own property which they have lost. In this way verily, just as the Boradi and Goths brought the havoc of war on them, they make themselves Boradi and Goths to others. Accordingly we have sent to you our brother and comrade in old age, Euphrosynus, with this view, that he may deal with you in accordance with our model here, and teach you against whom you ought to admit accusations,[^canon-5-132] and whom you ought to exclude from your prayers.
+
+[^canon-5-132]: ὧν δεῖ τὰς κατηγορίας προσίεσθαι.
+
+## Canon VI.
+
+Canon VI.[^canon-6-133]
+
+Moreover, it has been reported to us that a thing has happened in your country which is surely incredible, and which, if done at all, is altogether the work of unbelievers, and impious men, and men who know not the very name of the Lord; to wit, that some have gone to such a pitch of cruelty and inhumanity, as to be detaining by force certain captives who have made their escape. Dispatch ye commissioners into the country, lest the thunderbolts of heaven fall all too surely upon those who perpetrate such deeds.
+
+[^canon-6-133]: Concerning those who forcibly detain captives escaped from the barbarians.
+
+## Canon VII.
+
+Canon VII.[^canon-7-134]
+
+Now, as regards those who have been enrolled among the barbarians, and have accompanied them in their irruption in a state of captivity, and who, forgetting that they were from Pontus, and Christians, have become such thorough barbarians, as even to put those of their own race to death by the gibbet[^canon-7-135] or strangulation, and to show their roads or houses to the barbarians, who else would have been ignorant of them, it is necessary for you to debar such persons even from being auditors in the public congregations,[^canon-7-136] until some common decision about them is come to by the saints assembled in council, and by the Holy Spirit antecedently to them.
+
+[^canon-7-134]: Concerning those who have been enrolled among the barbarians, and who have dared to do certain monstrous things against those of the same race with themselves.
+[^canon-7-135]: ξυλῳ.
+[^canon-7-136]: ακροάσεως.
+
+## Canon VIII.
+
+Canon VIII.[^canon-8-137]
+
+Now those who have been so audacious as to invade the houses of others, if they have once been put on their trial and convicted, ought not to be deemed fit even to be hearers in the public congregation. But if they have declared themselves and made restitution, they should be placed in the rank of the repentant.[^canon-8-138]
+
+[^canon-8-137]: Concerning those who have been so audacious as to invade the houses of others in the inroad of the barbarians.
+[^canon-8-138]: τῶν ὑποστρεφόντων.
+
+## Canon IX.
+
+Canon IX.[^canon-9-139]
+
+Now, those who have found in the open field or in their own houses anything left behind them by the barbarians, if they have once been put on their trial and convicted, ought to fall under the same class of the repentant. But if they have declared themselves and made restitution, they ought to be deemed fit for the privilege of prayer.[^canon-9-140]
+
+[^canon-9-139]: Concerning those who have found in the open field or in private houses property left behind them by the barbarians.
+[^canon-9-140]: [Partially elucidated below in (the spurious) Canon XI. See Marshall’s *Penitential Discipline of the Primitive Church.*]
+
+## Canon X.
+
+Canon X.
+
+And they who keep the commandment ought to keep it without any sordid covetousness, demanding neither recompense,[^canon-10-141] nor reward,[^canon-10-142] nor fee,[^canon-10-143] nor anything else that bears the name of acknowledgment.
+
+[^canon-10-141]: μηνυτρα, the price of information.
+[^canon-10-142]: σῶστρα, the reward for bringing back a runaway slave.
+[^canon-10-143]: εὕρετρα, the reward of discovery.
+
+## Canon XI.
+
+Canon XI.[^canon-11-144]
+
+Weeping[^canon-11-145] takes place without the gate of the oratory; and the offender standing there ought to implore the faithful as they enter to offer up prayer on his behalf. Waiting on the word,[^canon-11-146] again, takes place within the gate in the porch,[^canon-11-147] where the offender ought to stand until the catechumens *depart*, and thereafter he should go forth. For let him hear the Scriptures and doctrine, it is said, and then be put forth, and reckoned unfit for the privilege of prayer. Submission,[^canon-11-148] again, is that one stand within the gate of the temple, and go forth along with the catechumens. Restoration[^canon-11-149] is that one be associated with the faithful, and go not forth with the catechumens; and last of all comes the participation in the holy ordinances.[^canon-11-150]
+
+[^canon-11-144]: [This canon is rejected as spurious. Lardner, *Credib.*, ii. p. 633.]
+[^canon-11-145]: πρόσκλαυσις, discipline.
+[^canon-11-146]: ἀκρόασις.
+[^canon-11-147]: ἐν τῷ νάρθηκι.
+[^canon-11-148]: ὑπόπτωσις.
+[^canon-11-149]: σύστασις.
+[^canon-11-150]: ἁγιασμάτων.
+
+## Elucidations.
+
+### I.
+
+### (The title, p. 18.)
+
+This is a genuine epistle, all but the eleventh canon. It is addressed to an anonymous bishop; one of his suffragans, some think. I suppose, rather, he consults, as Cyprian did, the bishop of the nearest Apostolic See, and awaits his concurrence. It refers to the ravages of the Goths in the days of Gallienus (a.d. 259–267), and proves the care of the Church to maintain discipline, even in times most unfavourable to order and piety. The last canon is an explanatory addition made to elucidate the four degrees or classes of penitents. It is a very interesting document in this respect, and sheds light on the famous canonical epistles of St. Basil.
+
+### II.
+
+### (Basil the Great, p. 18, note.)
+
+The “Canonical Epistles” of St. Basil are not private letters, but canons of the churches with which he was nearest related. When there was no art of printing, the chief bishops were obliged to communicate with suffragans, and with their brethren in the Apostolic See nearest to them. See them expounded at large in Dupin, *Ecclesiastical Writers of the Fourth Century, Works*, vol. i., London, 1693 (translated), p. 139, etc.
+
+### III.
+
+### (Most holy father, p. 18.)
+
+This expression leads me to think that this epistle is addressed to the Bishop of Antioch or of some other Apostolic See. It must not be taken as a prescribed formula, however, as when we say “Most Reverend” in our days; e.g., addressing the Archbishop of Canterbury. Rather, it is an expression of personal reverence. As yet, titular distinctions, such as these, were not known. In the West existing usages seem to have been introduced with the Carlovingian system of dignities, expounded by Gibbon.

@@ -1,0 +1,743 @@
+---
+title: "Prolegomena: The Life and Works of Theodoret"
+author: "blomfield-jackson"
+language: "English"
+edition: "Nicene and Post-Nicene Fathers, Series 2, Vol. 3 (1892), ed. Philip Schaff and Henry Wace"
+source_url: "https://www.ccel.org/ccel/schaff/npnf203.xml"
+license: "Public domain"
+license_basis: "Published 1892 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words: 18645
+---
+
+# Prolegomena: The Life and Works of Theodoret
+
+## Translator's Preface.
+
+The following translation has been made from the edition published in Migne’s Patrologia. The plan originally proposed was, in the case of the History, to make a revision of an existing translation. This was, however, after a brief trial, abandoned, and the translation has throughout been made entirely fresh. The Letters, so far as the translator is aware, have never been published in English before. The notes indicate with sufficient clearness to whom he is indebted for such elucidation of the text as he may have been enabled to furnish. Conscious of its imperfections, and not confident that revision can have removed all blemishes and errors, he yet puts forth this English version of the History, Dialogues, and Letters of Theodoret, Bishop of Cyrus, in the hope that he may not have done great injustice to their holy and learned author.
+
+London, July, 1892.
+
+### Πρὸς τῶν χρατούντων ἐσμέν
+
+> — *Æschylus*.
+
+## Chronological Tables to accompany the History and Life of Theodoret.
+
+323. | Defeat and relegation of Licinius. | *Theod. i. 1;* Soc. i. 4; Soz. i. 8; Eus. x. 9.
+
+324. | Execution of Licinius. Macarius, bishop of Jerusalem, Silvester of Rome, and Alexander of Alexandria. | *Theod. i. 2;* Soc. i. 9; Soz. i. 2.
+
+Colluthus condemned at Alexandria. | *Theod. i. 3*
+
+325. | 20th year of Constantine I. COUNCIL OF NICÆA (May 20–Aug. 25). | *Theod. i. 6;* Soc. i. 8; Soz. i. 17.
+
+Birth of Gallus (Cæsar). | *Theod. iii. 1*
+
+Birth of Gregory of Nazianzus.
+
+Eustathius of Berœa elected bishop of Antioch. | *Theod. i. 3;* Soz. i. 2.
+
+Constantine writes a letter ordering the building and reparation of churches. | *Theod. i. 14*
+
+Also a letter to Macarius, bishop of Jerusalem, about the Church of the Holy Sepulchre. | *Theod. i. 16;* Soc. i. 9.
+
+326. | Alexander, bishop of Alexandria, died in January (perhaps April), and Athanasius succeeds, probably on June 8th. The Festal Index gives 328. | *Theod. i. 25;* Soc. i. 15; Soz. ii. 17.
+
+327. | ? Consecration of Frumentius to the Abyssinian bishopric. | *Theod. i. 22;* Soc. i. 19; Soz. ii. 24.
+
+328. | Arian Council of Antioch, and deposition of Eustathius: but the date is much controverted. Possibly 330 or 331. | *Theod. i. 20;* Soc. i. 24; Soz. ii. 19.
+
+329. | Incident of Ischyras and Macarius. | *Theod. ii. 6;* Soc. i. 27.
+
+Birth of Basil of Cæsarea, “the Great.”
+
+330. | Byzantium dedicated as Constantinople, May 11th. | *cf. Theod. i. 18;* Soc. i. 16; Soz. i. 3.
+
+331. | Birth of Julian.
+
+Perhaps the deposition of Eustathius.
+
+333. | Constantine’s letter to Sapor II. | *Theod. i. 24*
+
+335. | Division of the empire between Constantine, Constantius, and Constans, sons, and Dalmatius and Hannibalianus, nephews, of the emperor.
+
+Dedication of the Great Church at Jerusalem. | *Theod. i. 29;* Soc. i. 28; Soz. ii. 26.
+
+Anthony summoned to Alexandria. | *Theod. iv. 24*
+
+Councils of Tyre and Jerusalem; first exile of Athanasius. | *Theod. i. 28–29*; Soc. i. 28; Soz. ii. 25.
+
+336. | Athanasius at Treves. | *Theod. i. 29*; Soc. i. 35; Soz. ii. 28.
+
+Death of Arius. | *Theod. i. 13;* Soc. i. 38; Soz. ii. 29.
+
+Death (? Clinton gives 340) of Alexander of Constantinople. | Theod. i. 19.
+
+337. | Death of Constantine I. Whitsunday. | *Theod. i. 30;* Soc. i. 39; Soz. ii. 34.
+
+338. | Athanasius’ restoration recommended by Constantine II. | *Theod. ii. 1;* Soc. ii. 3; Soz. iii. 2.
+
+340. | Constantine II. defeated and slain near Aquileia. | *Theod. ii. 3;* Soc. ii. 5; Soz. iii. 2.
+
+Constantius at war with Persia.
+
+Death of Eusebius of Cæsarea, the historian.
+
+Paul and Eusebius of Nicomedia rivals at Constantinople. | *Theod. i. 19;* Soc. ii. 7; Soz. iii. 4.
+
+Athanasius withdraws to Rome.
+
+Gregory at Alexandria. | *Theod. ii. 3;* Soc. ii. 11; Soz. iii. 6.
+
+Arian Synod of the Dedication of the Great Church at Antioch, commonly dated 341. | *Theod. ii. 3;* Soc. ii. 10; Soz. iii. 5.
+
+342. | Constantius orders expulsion of Paul from Constantinople. | *Theod. ii. 4;* Soc. ii. 7; Soz. iii. 4.
+
+343. | Persecution in Persia.
+
+343–4 or 347. | (See note on p. 67.) Council of Sardica. | *Theod. ii. 6;* Soc. ii. 14; Soz. iii. 11.
+
+Athanasius received at Milan by Constans.
+
+345. | Murder of Gregory. | Theod. ii. 9.
+
+345 or 346. | Deposition of Stephen of Antioch. | *Theod. ii. 8;* Soc. ii. 26; Soz. iii. 20.
+
+Return of Athanasius, October 21. | *Theod. ii. 3;* Soc. ii. 33; Soz. iii. 70.
+
+347. | Birth of John Chrysostom.
+
+349. | Council at Jerusalem (Mansi. ii. 171 u.), under bp. Maximus, in favour of Athanasius. 1st Council of Sirmium.
+
+350. | Revolt of Magnentius. | *Theod. ii. 12;* Soc. ii. 25.
+
+Constans killed February 27. | *Theod. ii. 9;* Soc. ii. 25; Soz. iv. 1.
+
+351. | Constantius, sole emperor, defeats Magnentius at Mursa.
+
+2nd Council of Sirmium.
+
+352. | Liberius succeeds Julius in the See of Rome | Theod. ii. 12.
+
+Paul of Constantinople strangled. | *Theod. ii. 4;* Soc. ii. 26; Soz. iv. 2.
+
+353. | Suicide of Magnentius.
+
+355. | Council of Milan. | *Theod. ii. 12;* Soc. ii. 36; Soz. iv. 9.
+
+356. | Intrusion of George at Alexandria. | *Theod. ii. 10;* Soc. ii. 14; Soz. iv. 30.
+
+357. | Deposition of Cyril of Jerusalem by Acacius. | *Theod. ii. 22;* Soc. ii. 42; Soz. iv. 25.
+
+3rd Council of Sirmium.
+
+358. | Return of Liberius. | *Theod. ii. 14;* Soc. ii. 42; Soz. iv. 15.
+
+359. | Synod of the Isaurian Seleucia. | *Theod. ii. 22;* Soc. ii. 39; Soz. iv. 22.
+
+Birth of Gratianus.
+
+Council of Ariminum. | *Theod. ii. 15;* Soc. ii. 37; Soz. iv. 17.
+
+360. | Synod of Nica. | Theod. ii. 16.
+
+3rd Council of Constantinople. (Semi Arian.)
+
+361. | Nov. 3 Death of Constantius.
+
+Accession of Julian. | *Theod. iii. 1;* Soc. ii. 47; Soz. v. 1.
+
+362. | Murder of George of Alexandria.
+
+Athanasius returns Feb. 22, but goes into 4th exile in October. | *Theod. iii. 5;* Soc. iii. 4; Soz. vi. 6.
+
+363. | Julian’s baffled attempt to rebuild the Temple | *Theod. iii. 15;* Soc. iii. 70; Soz. v. 22.
+
+Julian’s Persian expedition and death, June 26. | *Theod. iii. 20;* Soc. iii. 17; Soz. vi. 1.
+
+Accession of Jovian, June 27
+
+364. | Death of Jovian. | *Theod. iv. 4;* Soc. iii. 26; Soz. vi. 3.
+
+Accession of Valentinian. Valens *Augustus*.
+
+366. | Liberius, bp. of Rome, dies and is succeeded by Damasus. | *Theod. ii. 17;* Soc. iv. 29; Soz. vi. 23.
+
+367. | Gratianus, son of Valentinian, declared Augustus. æt. s.8. | Theod. v. 1.
+
+5th exile of Athanasius.
+
+370. | Basil becomes bishop of Cæsarea. | *Theod. iv. 16;* Soc. iv. 26; Soz. vi. 16.
+
+372. | Gregory of Nazianzus becomes bishop of Sasima. | *Theod. v. 7;* Soc. iv. 26; Soz. vi. 17.
+
+373. | Death of Athanasius, May 2. | *Theod. iv. 17;* Soc. iv. 20; Soz. vi. 19.
+
+Death of Ephraim Syrus, June 19. | *Theod. iv. 26;* Soc. iii. 16.
+
+374. | Auxentius of Milan dies. | *Theod. iv. 5;* Soc. iv. 30; Soz. i. 24.
+
+Ambrose archbishop of Milan. | Theod. iv. 6.
+
+375. | Gratian emperor of the West. | *Theod. v. 1;* Soc. iv. 31; Soz. vi. 36.
+
+378. | Death of Valens. | *Theod. iv. 32;* Soc. iv. 37; Soz. vi. 40.
+
+379. | Theodosius named *Augustus*, Jan. 19. | *Theod. v. 5;* Soc. v. 2; Soz. vii. 2.
+
+Gregory of Nazianzus at Constantinople. | *Theod. v. 8;* Soc. v. 6; Soz. vii. 7.
+
+381. | Council of Constantinople | *Theod. v. 8;* Soc. v. 8; Soz. vii. 7.
+
+383. | Death of Gratian. Rebellion of Maximus. | *Theod. v. 12;* Soc. v. 11; Soz. vii. 13.
+
+386. | Birth of Theodoret, according to the less probable date of Garnerius.
+
+387. | Sedition at Antioch. | *Theod. v. 19;* Soc. v. 15; Soz. vii. 23.
+
+388. | Defeat and death of Maximus.
+
+Death of Cyril of Jerusalem.
+
+390. | Destruction of the Serapeum. | *Theod. v. 22;* Soc. v. 16; Soz. vii. 15.
+
+Massacre at Thessalonica. | Theod. v. 17.
+
+Death of Gregory of Nazianzus.
+
+392. | Death of Valentinian II. Eugenius set up as Emperor. | Theod. v. 24.
+
+393. | Birth of Theodoret, according to the more probable date of Tillemont.
+
+394. | Theodosius defeats Eugenius. | *Theod. v. 24;* Soc. v. 25; Soz. vii. 24.
+
+395. | Death of Theodosius. Accession of Honorius and Arcadius. | *Theod. v. 25;* Soc. v. 26; Soz. vii. 25.
+
+398. | John Chrysostom becomes bishop of Constantinople. | *Theod. v. 27;* Soc. vi. 2; Soz. viii. 2.
+
+400. | Revolt of Gainas. | *cf. Theod. v. 33;* Soc. vi. 6; Soz. viii. 4.
+
+401. | Roman legions withdrawn from Britain.
+
+403. | Synod of the “the Oak.” | *Theod. v. 34*; Soc. vi. 15; Soz. viii. 19.
+
+404. | Death of the empress Eudoxia.
+
+Chrysostom ordered to quit Constantinople. | *Theod. v. 34;* Soc. vi. 18; Soz. viii. 24.
+
+407. | Death of Chrysostom. | Theod. v. 34.
+
+408. | Death of Arcadius. Accession of Theodosius II. | Theod. v. 36.
+
+410. | Sack of Rome by Alaric.
+
+412. | Cyril becomes patriarch of Alexandria. | Theod. v. 35.
+
+415. | Murder of Hypatia at Alexandria.
+
+Theodoret loses his parents and retires to Nicerte. | Theod. Epp. CXIII, CXIX.
+
+418. | Council of Carthage.
+
+423. | Death of Honorius.
+
+Theodoret becomes bishop of Cyrus.
+
+425. | Accession of Valentinian III.
+
+428. | Nestorius becomes bishop of Constantinople.
+
+Vandals in Africa. | Theod. Epp. XXIX–XXXVI.
+
+429. | Death of Theodotus, patriarch of Antioch, fixed by Theodoretus as the term of his History. | Theod. v. 39.
+
+430. | Letters of Celestine of Rome and Cyril of Alexandria to John of Antioch on the Western condemnation of Nestorius.
+
+Death of St. Augustine.
+
+431. | Council of Ephesus. (3rd general.)
+
+432. | Council of Orientals at Berœa. (St. Patrick’s mission.)
+
+433. | Peace between Cyril and the Orientals.
+
+434 (c). | Friendly correspondence between Theod. and Cyril. | Theod. Ep. LXXXIII.
+
+438. | Translation of the relics of Chrysostom to Constantinople. | *Theod. v. 36;* Soc. vii. 45.
+
+Cyril denounces Diodorus and Theodore of Mopsuestia: renewal of hostilities with Theodoret.
+
+440. | Accession of Isdigerdes II., the last event referred to in the Ecc. History. | Theod. v. 38.
+
+444. | Death of Cyril of Alexandria. | Theod. Ep. CLXXX.
+
+Accession of Dioscorus.
+
+446 (c). | Composition of the “Dialogues.”
+
+448. | Dioscorus deposes Irenæus of Tyre.
+
+449. | (March 30.) Edict confining Theodoret within the limits of his diocese.
+
+(Aug.) Assembly of the “Latrocinium” at Ephesus.
+
+450. | (July 29.) Death of Theodosius II.
+
+Accession of Pulcheria and Marcian.
+
+451. | Council of Chalcedon. (4th general.)
+
+453. | Death of Theodoret, according to Tillemont.
+
+458. | Probable date of the death, according to Garnerius.
+
+## Prolegomena.
+
+### Section I. Parentage, Birth, and Education.
+
+### Prolegomena.
+
+### The Life and Writings of the Blessed Theodoretus,
+
+### Bishop of Cyrus.
+
+### I.—Parentage, Birth, and Education.
+
+At Antioch at the close of the fourth century there were living a husband and wife, opulent and happy in the enjoyment of all the good things of this life, one thing only excepted. They were childless. Married at seventeen, the young bride lived for several years in the enjoyment of such pleasures as wealth and society could give. At the age of twenty-three she was attacked by a painful disease in one of her eyes, for which neither the books of older authorities nor later physiological discoveries could suggest a remedy. One of her domestic servants, compassionating her distress, informed her that the wife of Pergamius, at that time in authority in the East, had been healed of a similar ailment by Petrus, a famous Galatian solitary who was then living in the upper story of a tomb in the neighbourhood, to which access could only be obtained by climbing a ladder. The afflicted lady, says the story which her son himself repeats,[^prolegomena-1] hastened to climb to the recluse’s latticed cell, arrayed in all her customary elaborate costume, with earrings, necklaces, and the rest of her ornaments of gold, her silk robe blazing with embroidery, her face smeared with red and white cosmetics, and her eyebrows and eyelids artificially darkened. “Tell me,” said the hermit, on beholding his brilliant visitor, “tell me, my child, if some skilful painter were to paint a portrait according to his art’s strict rules and offer it for exhibition, and then up were to come some dauber dashing off his pictures on the spur of the moment, who should find fault with the artistic picture, lengthen the lines of brows and lids, make the face whiter and heighten the red of the cheeks, what would you say? Do you not think the original painter would be hurt at this insult to his art and these needless additions of an unskilled hand.” These arguments, we learn, led eventually to the improvement of the young Antiochene gentlewoman both in piety and good taste and her eye is said to have been restored to health by the imposition of the sign of the cross. Not impossibly the discontinuance of the use of cosmetics may have helped, if not caused, the cure.
+
+Six years longer the husband and wife lived together a more religious life, but still unblessed with children. Among the ascetic solitaries whom the disappointed husband begged to aid him in his prayers was one Macedonius, distinguished, from the simplicity of his diet, as “the barley eater.” In answer to his prayers, it was believed, a son was at last granted to the pious pair.[^prolegomena-2] The condition of the boon being that the boy should be devoted to the divine service, he was appropriately named at his birth “Theodoretus,” or “Given by God.”[^prolegomena-3] Of the exact date of this birth, productive of such important consequences to the history and literature of the Church, no precise knowledge is attainable. The less probable year is 386 as given by Garnerius,[^prolegomena-4] the more probable and now generally accepted year 393 follows the computation of Tillemont.[^prolegomena-5]
+
+While yet in his swaddling bands the little Theodoret began to receive training appropriate to his high career,[^prolegomena-6] and, as he himself tells us, with the pardonable exaggeration of enthusiasm, was no sooner weaned than he began to learn the apostolic teaching. Among his earliest impressions were the lessons and exhortations of Peter of Galatia, to whom his mother owed so much, and of Macedonius “the barley eater,” who had helped to save the Antiochenes in the troubles that arose about the statues.[^prolegomena-7] Of the latter[^prolegomena-8] Theodoret quotes the earnest charges to a holy life, and in his modesty expresses his sorrow that he had not profited better by the solitary’s solemn entreaties. If however Macedonius was indeed quite ignorant of the Scriptures,[^prolegomena-9] it may have been well for the boy’s education to have been not wholly in his hands. It is not impossible that he may have had a childish recollection of Chrysostom, who left Antioch in 398. To Peter he used to pay a weekly visit, and records[^prolegomena-10] how the holy man would take him on his knees and feed him with bread and raisins. A treasure long preserved in the household of Theodoret’s parents was half Peter’s girdle, woven of coarse linen, which the old man had one day wound round the loins of the boy. Frequently proved an unfailing remedy in various cases of family ailment, its very reputation led to its loss, for all the neighbours used to borrow it to cure their own complaints, and at last an unkind or careless friend omitted to return it.[^prolegomena-11]
+
+When a stripling Theodoret was blessed by the right hand of Aphraates the monk, of whom he relates an anecdote in his Ecclesiastical History,[^prolegomena-12] and when his beard was just beginning to grow was also blessed by the ascetic Zeno.[^prolegomena-13] At this period he was already a lector[^prolegomena-14] and was therefore probably past the age of eighteen. By this time his general education would be regarded as more or less complete, and to these earlier years may be traced the acquaintance which he shows with the writings of Homer, Thucydides, Plato, Euripides, and other Greek classics. Lighter literature, too, will not have been excluded from his reading, if we accept the genuineness of the famous letter on the death of Cyril,[^prolegomena-15] and may infer that the dialogues of Lucian are more likely to have amused the leisure hours of a lad at school and college than have intruded on the genuine piety and marvellous industry of the Bishop of Cyrus.
+
+Theodoret was familiar with Greek, Syriac, and Hebrew, but is said to have been unacquainted with Latin.[^prolegomena-16] Such I presume to be an inference from a passage in one of his works[^prolegomena-17] in which he tells us “The Romans indeed had poets, orators, and historians, and we are informed by those who are skilled in both languages that their reasonings are closer than the Greeks‘ and their sentences more concise. In saying this I have not the least intention of disparaging the Greek language which is in a sense mine,[^prolegomena-18] or of making an ungrateful return to it for my education, but I speak that I may to some extent close the lips and lower the brows of those who make too big a boasting about it, and may teach them not to ridicule a language which is illuminated by the truth.’ But it is not clear from these words that Theodoret had no acquaintance with Latin. His admiration for orthodox Western theology as well as his natural literary and social curiosity would lead him to learn it. In the Ecclesiastical History (III. 16) there is a possible reference to Horace.
+
+Theodoret’s chief instructor in Theology was the great light of the school of Antioch, Theodorus, known from the name of the see to which he was appointed in 392, “Mopsuestia,” or “the hearth of Mopsus,” in Cilicia Secunda. He also refers to his obligations to Diodorus of Tarsus.[^prolegomena-19] Accepting 393 as the date of his birth and 392 as that of Theodore’s appointment to his see, it would seem that the younger theologian must have been rather a reader than a hearer as well of Theodore as of Diodore. But Theodore expounded Scripture in many churches of the East.[^prolegomena-20] The friendship of Theodoret for Nestorius may have begun when the latter was a monk in the convent of St. Euprepius at the gates of Antioch. It is recorded[^prolegomena-21] that on one occasion Theodore gave offence while preaching at Antioch by refusing to give to the blessed Virgin the title θεοτόκος. He afterwards retracted this refusal for the sake of peace. The original objection and subsequent consent have a curious significance in view of the subsequent careers of his two famous pupils. Of the school of Antioch as distinguished from that of Alexandria it may be said broadly that while the latter shewed a tendency to syntheticism and to unity of conception, the former, under the influence of the Aristotelian philosophy, favoured analytic processes.[^prolegomena-22] And while the general bent of the school of thinkers among whom Theodoret was brought up inclined to a recognition of a distinction between the two natures in the Person of Christ, there was much in the special teaching of its great living authority which was not unlikely to lead to such division of the Person as was afterwards attributed to Nestorius.[^prolegomena-23] Such were the influences under which Theodoret grew up.
+
+On the death of his parents he at once distributed all the property that he inherited from them, and embraced a life of poverty,[^prolegomena-24] retiring, at about the age of three and twenty, to Nicerte, a village three miles from Apamea, and seventy-five from Antioch, in the monastery of which he passed seven calm and happy years, occasionally visiting neighbouring monasteries and perhaps during this period paying the visit to Jerusalem which left an indelible impression on his memory. “With my own eyes,” he writes,[^prolegomena-25] “I have seen that desolation. The prediction rang in my ears when I saw the fulfillment before my eyes and I lauded and worshipped the truth.” Of the peace of Theodoret’s earlier manhood Dr. Newman[^prolegomena-26] says in a sentence less open to criticism than another which shall be quoted further on, “There he laid deep within him that foundation of faith and devotion, and obtained that vivid apprehension of the world unseen and future which lasted him as a secret spring of spiritual strength all through the conflict and sufferings of the years that followed.”
+
+[^prolegomena-1]: Relig. Hist. 1188 et seq.
+[^prolegomena-2]: Relig. Hist. 1214.
+[^prolegomena-3]: The Hebrew equivalents of this very general designation are Nathaniel and Matthew. Modern English custom has travelled back to the Greek for its Theodore, Theodora, but Dieudonné and Diodati are familiar in French and Italian.
+[^prolegomena-4]: Garnier the French Jesuit Father, was born in Paris in 1612, and died in 1681. His “Auctarium Theodoreti Episcopi Cyrensis,” with dissertations, was published in 1684.
+[^prolegomena-5]: According to this reckoning Theodoret would be fifty-six at the time of the letter to Leo, written 449, in which he speaks of his old age, and about thirty at his consecration as bishop in 423. W. Möller in Herzog’s Encyclopedia of Prot. Theol. (Ed. 1885. xv. 402) gives 390.
+[^prolegomena-6]: Ep. LXXXI.
+[^prolegomena-7]: Ecc. Hist. v. 19. p. 146.
+[^prolegomena-8]: Relig. Hist. 1215.
+[^prolegomena-9]: cf. Ecc. Hist. p. 146.
+[^prolegomena-10]: Relig. Hist. 1188.
+[^prolegomena-11]: The confidence of Theodoret in the wonder working powers of half Peter’s girdle may be taken as a crucial instance of what detractors of the individual and of the age would call his foolish credulity. But an unsound process of reasoning from *post hoc* to *propter hoc* is not confined to any particular period, and it is not impossible that the scientists of the thirty-fourth century may smile benevolently at some of the cherished remedies of the nineteenth.
+[^prolegomena-12]: Cf. p. 127.
+[^prolegomena-13]: Relig. Hist. 1203.
+[^prolegomena-14]: Vide n. p. 34.
+[^prolegomena-15]: Vide p. 346. To what is said there may be added the following remarks from Dr. Salmon’s “Infallibility of the Church,” p. 303, n. “The letter from which these passages are taken was read as Theodoret’s at the fifth General Council (fifth Session) and there accepted as his. But on questions of this kind Councils are not infallible; and the letter contains a note of spuriousness in purporting to be addressed to John, bishop of Antioch, who died before Cyril. I own that the suggestion that for ‘John’ we ought to read ‘Domnus’ does not suffice to remove suspicion from my mind. But it is solely for the reason just stated that I feel no confidence in accepting the letter as Theodoret’s. Newman’s opinion that it is incredible Theodoret could have written so ‘atrocious’ a letter is one which it is amazing should be held by any one familiar with the controversial amenities of the time. Our modern urbanity is willing to bury party animosities in the grave; but in the fifth century Swift’s translation would be thought the only proper one of the maxim ‘*De mortuis nil nisi bonum*,’ ‘when scoundrels die let all bemoan them.’ Certainly the man who half a dozen years after Chrysostom’s death spoke of him as Judas Iscariot had no right to expect to be politely treated after his own death by one whom he had relentlessly persecuted.” Glubowski, whose great work on Theodoret now in progress is unfortunately a sealed volume to the majority of the readers on account of its being written in the author’s native Russian, is of opinion that the letter is spurious. See also Schröckh Kircheges. xviii. 370. I am myself unable to see the force of the *internal* evidence of spuriousness. It may have been half playful, and never meant for publication.
+[^prolegomena-16]: Cf. Can. Venables Dict. Christ. Biog. iv. 906.
+[^prolegomena-17]: *Græcarum affectionum curatio* 843.
+[^prolegomena-18]: To a Syrian it would not be literally the mother tongue but was possibly acquired in infancy.
+[^prolegomena-19]: Ep. xvi.
+[^prolegomena-20]: John of Antioch Fac. ii. 2.
+[^prolegomena-21]: Cyril. Alex. Ep. LXIX.
+[^prolegomena-22]: Glubokowski p. 63.
+[^prolegomena-23]: e.g. Theodorus, Migne 776.
+[^prolegomena-24]: Ep. CXIII.
+[^prolegomena-25]: *Græc. Affect. Cur.* 1099.
+[^prolegomena-26]: *Historical Sketches* iii. 319.
+
+### Episcopate at Cyrus.
+
+Cyrus or Cyrrhus was a town of the district of Syria called after it Cyrestica. The capital of Cyrestica was Gindarus, which Strabo describes[^episcopate-at-cyrus-27] as being in his time a natural nest of robbers. Cyrus lies on a branch of the river Œnoparas, now Aphreen, and the site is still known as Koros. A tradition has long obtained that it received the name of Cyrus from the Jews in honour of their great benefactor, but this is more than doubtful. The form Cyrus may have arisen from a confusion with a Cyrus in Susiana.[^episcopate-at-cyrus-28] The Cyrestica is a fertile plain lying between the spurs of the Alma Dagh and the Euphrates, irrigated by three streams and blessed with a rich soil. The diocese, which was subject to the Metropolitan of Hierapolis, contained some sixteen hundred square miles[^episcopate-at-cyrus-29] and eight hundred distinct parishes each with its church.[^episcopate-at-cyrus-30] But Cyrus itself was a wretched little place[^episcopate-at-cyrus-31] scantily inhabited. Before it was beautified by the munificence of Theodoret it contained no buildings of any dignity or grace. The people of the town as well as of the diocese seem to have been poor in orthodoxy as well as in pocket, and the rich soil of the district grew a plentiful crop of the tares of Arianism, Marcionism, Eunomianism and Judaism.[^episcopate-at-cyrus-32]
+
+Such was the diocese to which Theodoret, in spite of his honest *nolo episcopari,*[^episcopate-at-cyrus-33] was consecrated at about the age of thirty, a.d. 423. Of the circumstances of this consecration we have no evidence. Garnerius conjectures that he must have been ordained deacon by Alexander who succeeded Porphyrius at Antioch. He was probably appointed, if not consecrated, to succeed Isidorus at Cyrus, by Theodotus the successor of Alexander on the patriarchal throne of Antioch. In this diocese certainly for five and twenty years, perhaps for five and thirty, with occasional intervals he worked night and day with unflagging patience and perseverance for the good of the people committed to his care, and in the cause of his Master and of the truth. The ecclesiastic of these early times is sometimes imagined to have been a morose and ungenial ascetic, wasting his energies in unprofitable hair-splitting, and taking little or no interest in the every day needs of his contemporaries. In marked contrast with this imaginary bishop stands out the kindly figure of the real bishop of Cyrus, as the modest statements and hints supplied by his own letters enable us to recall him.
+
+As an administrator and man of business he was munificent and efficient. Stripped, as we have already learnt, of his family property by his own act and will, he must have been dependent in his diocese on the revenues of his see. From these, which cannot have been small, he was able to spend large sums on public works. Cyrus was adorned with porticoes, with two great bridges, with baths, and with an aqueduct, all at Theodoret’s expense.[^episcopate-at-cyrus-34] On assuming the administration of his diocese he took measures, he tells us,[^episcopate-at-cyrus-35] to secure for Cyrus “the necessary arts,” and from these three words we need not hesitate to infer that architects, engineers, masons, sculptors, and carpenters, would be attracted “from all quarters” to the bishop’s important works. And for this increased population it is interesting to note that Theodoret provided competent practitioners in medicine and surgery, in which it would seem he was not himself unskilled.[^episcopate-at-cyrus-36] His keen interest in the temporal needs of his people is shown by the efforts he made to obtain relief for them from the cruel pressure of exorbitant taxation.[^episcopate-at-cyrus-37] So unendurable was the tale of imposts under which they groaned that in many cases they were deserting their farms and the country, and he earnestly appeals to the empress Pulcheria and to his friend Anatolius to help them.[^episcopate-at-cyrus-38] The tender sympathy felt by him for all those afflicted in body and estate, as well as in mind, is shown in his letters on behalf of Celestinianus, or Celestiacus, a gentleman of position at Carthage, who had suffered cruelly during the attack of the Vandals,[^episcopate-at-cyrus-39] and in the admirable and touching letters of consolation addressed to survivors on the deaths of relatives. That these should have been religiously preserved need excite no surprise.[^episcopate-at-cyrus-40] Of the terms on which he lived with his neighbours we can form some idea from the justifiable boast contained in his letter to Nomus. In the quarter of a century of his episcopate, he writes, he never appeared in court either as prosecutor or defendant; his clergy followed his admirable example; he never took an obol or a garment from any one; not one of his household ever received so much as a loaf or an egg; he could not bear to think that he had any property beyond his few poor clothes.[^episcopate-at-cyrus-41] Yet he was always ready to give where he would not receive, and in addition to all the diocesan and literary work which he conscientiously performed, he spent more time than he could well afford in all sorts of extra diocesan business which his position thrust in his way.
+
+As a shepherd of souls he was unceasing in his efforts to win heathen, heretics and Jews to the true faith. His diocese, when he assumed its government, was a very hotbed of heresy.[^episcopate-at-cyrus-42] Nevertheless in the famous letter to Leo[^episcopate-at-cyrus-43] he could boast that not a tare was left to spoil the crop. His fame as a preacher was great and wide, and makes us the more regret that of the discourses which in turn roused, cheered, and blamed, so little should survive. The eloquence, so to say, of his extant writings, gives indications of the force of spoken utterances not less marked by learning and literary skill. Two of his letters give vivid pictures of the enthusiasm of oriental auditories in Antioch, once so populous and so keen in theological interest, where now, amid a people numbering only about a fiftieth part of their predecessors of the fifth century, there is not a single church. We see the patriarch John in a frenzy of gladness at Theodoret’s sermons, clapping his hands and springing again and again from his chair;[^episcopate-at-cyrus-44] we see the heads of the congregation receiving the bishop of Cyrus with frantic delight as he came down from the pulpit, flinging their arms round him, kissing now his head, now his breast, now his hands, now his knees, and hear them exclaiming, “This is the Voice of the Apostle!”[^episcopate-at-cyrus-45] But Theodoret had to encounter sometimes the fury of opposition. Again and again in his campaign against heretics and unbelievers he was stoned, wounded, and brought nigh unto death.[^episcopate-at-cyrus-46] “He from whom no secrets are hid knows all the bruises my body has received, aimed at me by ill-named heretics, and what fights I have fought in most of the cities of the East against Jews, heretics, and heathen.”[^episcopate-at-cyrus-47]
+
+[^episcopate-at-cyrus-27]: Strabo xvi. c. 751.
+[^episcopate-at-cyrus-28]: Glubokowski p. 31. Tillemont v. 217.
+[^episcopate-at-cyrus-29]: Ep. XLII.
+[^episcopate-at-cyrus-30]: Ep. CXIII.
+[^episcopate-at-cyrus-31]: Ep. CXXXVIII.
+[^episcopate-at-cyrus-32]: Epp. LXXXI, CXIII.
+[^episcopate-at-cyrus-33]: Ep. LXXXI.
+[^episcopate-at-cyrus-34]: Epp. LXXIX. LXXXI.
+[^episcopate-at-cyrus-35]: Ep. CXV.
+[^episcopate-at-cyrus-36]: Epp. CXIV, CXV, and Dial. p. 217 cf. also de Prov. 518 et seqq.
+[^episcopate-at-cyrus-37]: Epp. XLII, XLIII, XLV.
+[^episcopate-at-cyrus-38]: Epp. XLIII. and XLV.
+[^episcopate-at-cyrus-39]: Epp. XXIX.–XXXVI.
+[^episcopate-at-cyrus-40]: cf. Epp. VII. VIII. XIV. XV. XVII. XVIII. LXV. LXIX.
+[^episcopate-at-cyrus-41]: Ep. LXXXI.
+[^episcopate-at-cyrus-42]: “In a diocese such as his, lying as it were in a corner of the world, not reached by the public posts, isolated by the great river to the east and the mountain chains to the west, peopled by half-leavened heathen, Christianity assumed many strange forms, sometimes hardly recognisable caricatures of the truth.” Canon Venables. Dict. Christ. Biog. iv. 906.
+[^episcopate-at-cyrus-43]: Epp. CXIII.
+[^episcopate-at-cyrus-44]: Ep. LXXXIII.
+[^episcopate-at-cyrus-45]: Ep. CXLVII.
+[^episcopate-at-cyrus-46]: Epp. LXXXI and CXIII.
+[^episcopate-at-cyrus-47]: Ep. CXIII.
+
+### Relations with Nestorius and to Nestorianism.
+
+Nestorius, patriarch of Constantinople, was bound by ties of close friendship both to Theodoret and to John, patriarch of Antioch. In August, 430, the western bishops, under the presidency of the Pope Celestine, assembled in council at Rome, condemned Nestorius, and threatened him with excommunication. Shortly afterwards a council of Orientals at Alexandria, summoned by Cyril, endorsed this condemnation and despatched it to Constantinople. Then John received from Celestine and Cyril letters announcing their common action. When the couriers conveying these communications reached Antioch they found John surrounded by Theodoret and other bishops who were assembled possibly for the ordination of Macarius, the new bishop of Laodicea. John took counsel with his brother bishops, and a letter was despatched in their common name to Nestorius, exhorting him to accept the term θεοτόκος, round which the whole war waged; pointing out the sense in which it could not but be accepted by every loyal Christian, and imploring him not to embroil Christendom for a word. This letter has been generally attributed to Theodoret. But while the conciliatory sage of Cyrus was endeavouring to formulate an Eirenicon, the ardent Egyptian made peace almost impossible by the publication of his famous anathematisms. John and his friends were distressed at the apparent unorthodoxy of Cyril’s condemnation of Nestorius, and asked Theodoret to refute Cyril.[^relations-with-nestorius-and-to-nestorianism-48] The strong language employed in Letter CL. conveys an idea of the heat of the enthusiasm with which Theodoret entered on the task, and his profound conviction that Cyril, in blind zeal against imaginary error on the part of Nestorius, was himself falling headlong into the Apollinarian pit. An eager war of words now waged over Nestorius between Cyril and Theodoret, each denouncing the other for supposed heresy on the subject of the incarnation; and, with deep respect for the learning and motives of Theodoret, we may probably find a solution of much that he said and did in the fact that he misunderstood Nestorius as completely as he did Cyril.[^relations-with-nestorius-and-to-nestorianism-49] Cyril, nursed in the synthetic principles of the Alexandrian school, could see only the unity of the two natures in the one Person. To him, to distinguish, as the analysis of Theodoret distinguished, between God the Word and Christ the Man, was to come perilously near a recognition of two Christs, keeping up as it were a mutual dialogue of speech and action. But Cyril’s unqualified assertion that there is one Christ, and that Christ is God, really gave no ground for the accusation that to him the manhood was an unreality. Yet he and Theodoret were substantially at one. Theodoret’s failure to apprehend Cyril’s drift was no doubt due less to any want of intelligence on the part of the Syrian than to the overbearing bitterness of the fierce Egyptian.
+
+On the other hand Theodoret’s loyal love for Nestorius led him to give his friend credit for meaning what he himself meant. While he was driven to contemplate the doctrines of Cyril in their most dangerous exaggeration, he shrank from seeing how the Nestorian counter statement might be dangerously exaggerated. Theodoret, as Dr. Bright remarks,[^relations-with-nestorius-and-to-nestorianism-50] “uses a good deal of language which is *prima facie* Nestorian; his objections are pervaded by an *ignoratio elenchi,* and his language is repeatedly illogical and inconsistent; but he and Cyril were essentially nearer to each other in belief than at the time they would have admitted, for Theodoret virtually owns the personal oneness and explains the phrase ‘God assumed man’ by ‘He assumed manhood.’” Cyril “in his letter to Euoptius earnestly disclaims both forms of Apollinarianism—the notion of a mindless manhood in Christ and the notion of a body formed out of Godhead. In his reply (on Art iv.) he admits the language appropriate to each nature.”
+
+Probably both the Egyptian and the Syrian would have found no difficulty in subscribing the language of our own judicious divine; “a kind of mutual commutation there is whereby those concrete names, *God and Man,* when we speak of Christ, do take interchangeably one another’s room, so that for truth of speech it skilleth not whether we say that the Son of God hath created the world and the Son of Man by his death hath saved it or else that the Son of Man did create, and the Son of God died to save the world. Howbeit, as oft as we attribute to God what the manhood of Christ claimeth, or to man what his Deity hath right unto, we understand by the name of God and the name of Man neither the one nor the other nature, but the whole person of Christ, in whom both natures are. When the Apostle saith of the Jews that they crucified the Lord of Glory, and when the Son of Man being on earth affirmeth that the Son of Man was in heaven at the same instant, there is in these two speeches that mutual circulation before mentioned. In the one there is attributed to God or the Lord of Glory death, whereof divine nature is not capable; in the other ubiquity unto man, which human nature admitteth not. Therefore by the Lord of Glory we must needs understand the whole person of Christ, who being Lord of Glory, was indeed crucified, but not in that nature for which he is termed the Lord of Glory. In like manner by the Son of Man the whole person of Christ must necessarily be meant, who being man upon earth, filled heaven with his glorious presence, but not according to that nature for which the title of Man is given him. Without this caution the Fathers whose belief was divine and their meaning most sound, shall seem in their writing one to deny what another constantly doth affirm. Theodoret disputeth with great earnestness that *God* cannot be said to suffer. But he thereby meaneth Christ’s *divine nature* against Apollinarius, which held even Deity itself passible. Cyril on the other side against Nestorius as much contendeth that whosoever will deny *very God* to have suffered death doth forsake the faith. Which notwithstanding to hold were heresy, if the name of God in this assertion did not import as it doth the person of Christ, who being verily God suffered death, but in the flesh, and not in that substance for which the name of God is given him.”[^relations-with-nestorius-and-to-nestorianism-51]
+
+As to the part played by Theodoret throughout the whole controversy we may conclude that though he had to own himself beaten intellectually, yet the honours of the moral victory remain with him rather than with his illustrious opponent. Not for the last time in the history of the Church a great duel of dialectic issued in a conclusion wherein of the champion who was driven to say, “I was wrong,” the congregation of the faithful has yet perforce felt that he was right.
+
+The end is well known. Theodosius summoned the bishops to Ephesus at the Pentecost of 431. There arrived Cyril with fifty supporters early in June; there arrived Theodoret with his Metropolitan Alexander of Hierapolis, in advance of the rest of the Orientals. The Cyrillians were vainly entreated to wait for John of Antioch and his party, and opened the Council without them. When they arrived they would not join the Council, and set up their own “Conciliabulum” apart. Under the hot Levantine sun of July and August the two parties denounced one another on the one side for not accepting the condemnation of Nestorius, which the Cyrillians had passed in the beginning of their proceedings, on the other for the informality and injustice of the condemnation. Then deputies from the Orientals, of whom Theodoret was one, hurried to Constantinople, but were allowed to proceed no further than Chalcedon. The letters written by Theodoret at this time to his friends among the bishops and at the court, and his petitions to the Emperor,[^relations-with-nestorius-and-to-nestorianism-52] leave a vivid impression of the zeal, vigour and industry of the writer, as well as of the extraordinary literary readiness which could pour out letter after letter, memorial after memorial, amid all the excitement of controversy, the weariness of travel, the sojourning in strange and uncomfortable quarters, and the tension of anxiety as to an uncertain future.
+
+Though Nestorius was deposed his friends protested that they would continue true to him, and Theodoret was one of the synod held at Tarsus, and of another at Antioch, in which the protest against Cyril’s action was renewed. But the oriental bishops were now themselves undergoing a process of scission,[^relations-with-nestorius-and-to-nestorianism-53] John of Antioch and Acacius of Berœa heading the peacemakers who were anxious to come to terms with Cyril, while Alexander of Hierapolis led the irreconcilables. Intellectually Theodoret shrank from concession, but his moral instincts were all in favour of peace. He himself drew up a declaration of faith which was presented by Paul of Emesa to Cyril, which Cyril accepted. But still true to his friend, Theodoret refused to accept the deposition of Nestorius and his individual condemnation, and it was not till several years had elapsed that, moved less by the threat of exile and forfeiture, as the imperial penalty for refusing to accept the position, than by the entreaties of his beloved flock and of his favourite ascetic solitaries that he would not leave them, Theodoret found means of attaching a meaning to the current anathemas on Nestorianism, not, as he said, on Nestorius, which allowed him to submit. He even entered into friendly correspondence with Cyril.[^relations-with-nestorius-and-to-nestorianism-54] But the truce was hollow. Cyril was indignant to find that Theodoret still maintained his old opinions. At last the protracted quarrel was ended by Cyril’s death in June, 444.
+
+On the famous letter over which so many battles of criticism have been fought we have already spoken. If it was really written by Theodoret, to which opinion my own view inclines,[^relations-with-nestorius-and-to-nestorianism-55] there is no reason why we should damn it as “a coarse and ferocious invective.” If genuine, it was clearly a piece of grim pleasantry dashed off in a moment of excitement to a personal friend, and never intended for the publicity which has drawn such severe blame upon its writer.
+
+But though the death of Cyril might appear to bring relief to the Church and Empire as well as to his individual opponents, it was by no means a ground of unmixed gratification to Theodoret.[^relations-with-nestorius-and-to-nestorianism-56] Dioscorus, who succeeded to the Patriarchate of Alexandria, however Theodoret in the language of conventional courtesy may speak of the new bishop’s humble mindedness,[^relations-with-nestorius-and-to-nestorianism-57] inherited none of the good qualities of Cyril and most of his faults. Theodoret, naturally viewed with suspicion and dislike as the friend and supporter of Nestorius, gave additional ground for ill-will and hostility by action which brought him into individual conflict with Dioscorus. He accepted the synodical letters issued at Constantinople at the time of Proclus, and so seemed to lower the dignity of the apostolic sees of Antioch and Alexandria;[^relations-with-nestorius-and-to-nestorianism-58] he also warmly resented the tyrannical treatment of his friend Irenæus, bishop of Tyre.[^relations-with-nestorius-and-to-nestorianism-59] Irenæus had indeed in the earlier days of his banishment to Petra after his first condemnation in 435 attacked Theodoret for not being thoroughly Nestorian, but Theodoret was able to claim Irenæus as not objecting to the crucial term θεοτόκος,[^relations-with-nestorius-and-to-nestorianism-60] reasonably understood, and accepted him as unquestionably orthodox. When therefore Dioscorus, the Archimandrite Eutyches, and his godson the eunuch Chrysaphius attacked Domnus for consecrating Irenæus to the Metropolitan see of Tyre, Theodoret indignantly protested and counselled Domnus as to how he had best reply.[^relations-with-nestorius-and-to-nestorianism-61] But Dioscorus and his party had now the ear, and guided the fingers, of the imperial weakling at Constantinople, and the deposition of Irenæus (Feb. 17, 448) was followed after a year’s successful intrigues by the autograph edict of Theodosius confining Theodoret within the limits of his own diocese as a vexatious and turbulent busybody.
+
+[^relations-with-nestorius-and-to-nestorianism-48]: Vide the Anathematisms and Theodoret’s refutation in the Prolegomena.
+[^relations-with-nestorius-and-to-nestorianism-49]: cf. Glubokowski p. 98.
+[^relations-with-nestorius-and-to-nestorianism-50]: Dict. Christ Biog. i. 767.
+[^relations-with-nestorius-and-to-nestorianism-51]: Hooker. Ecc. Pol. v. liii. 4.
+[^relations-with-nestorius-and-to-nestorianism-52]: Epp., clvii., clviii., clxvii,, clxviii., clxix., clxx.
+[^relations-with-nestorius-and-to-nestorianism-53]: Hefele. Hist. Consc. iii. 127. Can. Venables. Dict. Christ. Biog. iv. 910.
+[^relations-with-nestorius-and-to-nestorianism-54]: Ep. lxxxiii.
+[^relations-with-nestorius-and-to-nestorianism-55]: Glubokowski p. 163 thinks it spurious.
+[^relations-with-nestorius-and-to-nestorianism-56]: Glubokowski, p. 163.
+[^relations-with-nestorius-and-to-nestorianism-57]: Ep. LX.
+[^relations-with-nestorius-and-to-nestorianism-58]: Ep. LXXXVI.
+[^relations-with-nestorius-and-to-nestorianism-59]: Epp. III. XII. XVI. XXXV.
+[^relations-with-nestorius-and-to-nestorianism-60]: Ep. CX.
+[^relations-with-nestorius-and-to-nestorianism-61]: Ep. CX.
+
+### Under the Ban of Theodosius and of the Latrocinium.
+
+Theodoret was at Antioch when Count Rufus brought him the edict. His friends would have detained him, but he hurried away.[^under-the-ban-of-theodosius-and-of-62] On reaching Cyrus he wrote to his friend Anatolius warmly protesting against the cruel and unjust action taken against him, and informing the patrician that Euphronius, a military officer, had travelled hard on the track of Rufus to ask for a written acknowledgment of the receipt of the edict of relegation.[^under-the-ban-of-theodosius-and-of-63] The letters written at this crisis by the indignant pen of the maligned scholar and saint[^under-the-ban-of-theodosius-and-of-64] have a peculiar value, at once biographical, literary, and theological. To Eusebius bishop of Ancyra he sends an important catalogue of his works. To Dioscorus, the chief of the cabal against him, he sends a summary of his views on the incarnation and the nature of our Lord, couched in such terms as might perhaps in earlier days have shortened his great controversy with Cyril. But the opponents of Theodoret were not in a mood to be moved by any formulation of the terms of his faith. Dioscorus received the letter with insult, and publicly joined in the shout of anathema which he permitted to be raised against his hated brother.[^under-the-ban-of-theodosius-and-of-65] The condemnation of Eutyches by Flavian’s Constantinopolian Synod had roused the Eutychian party to leave no stone unturned to secure its reversal and crush it and all who upheld it. Of the latter Theodoret was the most prominent, the ablest and perhaps the holiest. Hence he was the natural representative and personification of the doctrines that Dioscorus sought to decry and degrade.[^under-the-ban-of-theodosius-and-of-66] The sixth Council of Ephesus of evil fame met in the Church of St. Mary the Virgin on August 8, 449. Eutyches was acquitted. Flavian was condemned. Ibas of Edessa, Domnus of Antioch, and Theodoret of Cyrus were deprived of their sees. The disgraceful scenes of violence which marked every stage of this shameful ecclesiastical gathering have been described again and again with the vivid detail[^under-the-ban-of-theodosius-and-of-67] rendered possible by the exactitude of contemporary narrative, but, inasmuch as Theodoret was condemned in his absence we are concerned here less with the manner in which his condemnation was brought about than with the steps he took to protest against and to reverse it.
+
+To the prisoner of Cyrus courier after courier would bring intelligence of the riots and tricks of the council. At last came news of the crowning wrong. On the indictment of an Antiochene presbyter named Pelagius, Theodoret was condemned as an enemy of God, a disseminator of poison, a false teacher deserving to be burnt. In support of the accusation was quoted the careful theological statement addressed by Theodoret to the monks in the Euphratensis and the Osrhoene which appears as Letter CLI., as well as citations from his works at large. Dioscorus described the absent defendant as a blasphemous enemy of God and the Emperor whose life had been spent in damning souls. Theodoret was sentenced not merely to deposition from his see but to degradation from the priesthood and to excommunication, and his books were ordered to be burnt.[^under-the-ban-of-theodosius-and-of-68] So the great council ended with the deposition of Flavian of Constantinople, Eusebius of Dorylæum, Daniel of Carræ, Irenæus of Tyre, Aquilinus of Biblus, and Domnus of Antioch as well as of Theodoret.[^under-the-ban-of-theodosius-and-of-69] Eutyches the heretic Archimandrite was restored and the brutal Dioscorus seemed master of Christendom. One word of manly Latin had broken in on the supple suffrages of the servile orientals, the “*Contradicitur*” of Hilarius the representative of the Church of Rome.
+
+To that church, and to its illustrious bishop, Theodoret naturally turned in his hour of need. He implored his friend Anatolius to get him permission to plead his own cause in person in the West, or if not to let him retire to his old home at Nicerte.[^under-the-ban-of-theodosius-and-of-70] The latter alternative was conceded. In this retreat he received many proofs of the affectionate regard of his friends and offers of more practical help than his modest necessities demanded.[^under-the-ban-of-theodosius-and-of-71] Thence products of his facile pen travelled far and wide. The whole series of letters written at this period gives touching testimony to the gentle and forgiving spirit of the sorely tried bishop. There is nothing of the bitterness and fierce anger which appear sometimes in the earlier controversy with Cyril. He is refined, not soured, by adversity, and, though he never approached nearer to canonization than the acquisition of the inferior title of Blessed, he appears in these dark days as no unworthy specimen of the suffering saint.[^under-the-ban-of-theodosius-and-of-72] The chief interest of these letters is in truth moral, spiritual and theological. This, however, has been obscured by the ecclesiastical interest which has been given them by the unwarranted attempt to represent Theodoret’s letter to Leo as an “appeal” to the see of Rome in the later and technical sense of the word. Whether St. Hilary of Arles ever did or did not give the lie to his short life of strenuous protest against the growing aggrandizement of the see of Rome, there is no doubt that before his death at the age of 41 in 449 his suffragans had been released by Leo from allegiance to a Metropolitan disobedient to the Roman chair, and that Valentinian had issued an edict confirming Leo’s claims and making the authority of the Bishop of Rome supreme in the West.[^under-the-ban-of-theodosius-and-of-73] It would be useful to maintainers of the Roman supremacy if they could adduce instances of any assertion or acceptance of similar authority in the East. So it has been said that Theodoret appealed to the Pope.[^under-the-ban-of-theodosius-and-of-74] In a sense this is of course perfectly true. Theodoret did appeal to the Pope. But the whole superstructure of papal supremacy, so far as Theodoret is concerned, is really based upon a poor paronomasia. The bishop of Cyrus “appealed” to the bishop of Rome as any bishop believing himself to lie under an unjust sentence might appeal to any other bishop, and as Theodoret did appeal to other bishops. It is quite true that the church of Rome had many claims to honour and regard, as Theodoret himself felicitously and opportunely points out, and that the present occupant of its throne was a man of unblemished orthodoxy and of commanding personal dignity. But to recognise these facts is a long way from admitting that this very dignified see had either *de facto* or *de jure* any coercive jurisdiction over the Metropolitans of Alexandria or of Hierapolis, to the latter of whom Cyrus was subordinate. Theodoret himself quotes the crucial passage in St. Matthew’s gospel[^under-the-ban-of-theodosius-and-of-75] apparently without any idea that the “Petra” means all the successors of the “Petrus.”[^under-the-ban-of-theodosius-and-of-76] What Theodoret asked from Leo was not the sentence of a superior but the sympathy and support of an influential brother. What made it so peculiarly important that he should gain the ear and the approval of Leo was that Rome had been wholly unconcerned in the intrigue which condemned him. He could have had no more idea of papal authority in the later *ultramontane* sense than he could of the decrees of the Vatican Council. Bound as he was to do his utmost to vindicate not so much his own position and doctrinal soundness, as the truth now trampled on by the combined factions of Alexandria and the court, he naturally turned to Leo as alike the most respected and most independent bishop of his age.[^under-the-ban-of-theodosius-and-of-77]
+
+Leo, however, could do little or nothing to help him. Theodosius, completely under the influence of Chrysaphius and Dioscorus, was quite satisfied as to the proper constitution and equity of the Latrocinium.
+
+[^under-the-ban-of-theodosius-and-of-62]: Epp. LXXIX and LXXX.
+[^under-the-ban-of-theodosius-and-of-63]: Ep. LXXIX.
+[^under-the-ban-of-theodosius-and-of-64]: Epp. LXXIX. LXXX. LXXXI. LXXXII. LXXXIII.
+[^under-the-ban-of-theodosius-and-of-65]: Ep. LXXXVI.
+[^under-the-ban-of-theodosius-and-of-66]: “Theodoret’s condemnation was the chief object aimed at in summoning” the Latrocinium. He was “the bugbear of the whole Eutychian party and consequently condemned in advance.” Canon Venables, Dict. Christ. Biog. iv. 913 and Martin Brigandage à Ephèse p. 192.
+[^under-the-ban-of-theodosius-and-of-67]: See specially Gibbon Chap. xlvii. Milman Hist. Lat. Christ. Book II. Chap. iv. Stanley, *Christian Institutions,* Chap. xvi. 4 and Canon Bright Art. Dioscorus in Dict. Christ. Biog. General Councils, it may be remarked, have been depreciated and ridiculed by historians of two kinds; the anti-Christian, such as Gibbon, who have been glad of the opportunity of bringing discredit on the Church; and the Roman, such as Cardinal Newman, who are aware that the authority of Councils is not always reconcileable with the asserted authority of the Bishop of their favourite see. (“Even those councils which were œcumenical have nothing to boast of in regard to the Fathers, taken individually, which compose them. They appear as the antagonist host in a battle, not as the shepherds of their people.” Hist. Sketches, p. 335.) And it must be conceded that so far as outward circumstances went the Latrocinium was as good a council as any other. As is pointed out by Dean Milman, “It is difficult to discover in what respect, either in the legality of its convocation or the number and dignity of the assembled prelates, consists its inferiority to more received and honoured councils. Two imperial commissioners attended to maintain order in the council and peace in the city. Dioscorus the patriarch of Alexandria by the Imperial command assumed the presidency. The Bishops who formed the Synod of Constantinople were excluded as parties in the transaction, but Flavianus took his place with the Metropolitans of Antioch and Jerusalem and no less than three hundred and sixty bishops and ecclesiastics. Three ecclesiastics, Julian a bishop, Renatus a presbyter, and Hilarius a deacon were to represent the bishop of Rome. The Abbot Barsumas (this was an innovation) took his seat in the Council as a kind of representative of the monks.” Milman, Lat. Christ. Book II. Chap. iv. The fact is that the great Councils of the Early Church are like the great men of the Early Church. Some have authority and some have not. But their authority does not depend upon formal circumstances or outward position. They have authority because the inspired common sense of the Church has seen and valued the truth and wisdom of their utterances. Athanasius, Arius, Cyril, and Nestorius, were all great churchmen. Athanasius and Cyril stand out against the background of centuries as champions of the faith. Arius and Nestorius are counted as heretics. Character does not outweigh doctrine. Nestorius is unsound in the faith though he was an amiable and virtuous man; Cyril is an authority of orthodoxy though his personal qualities were not saintly. Of all the councils that according to Ammianus Marcellinus hamstrung the postal resources of the Empire, take Nicæa, Tyre, and the two Ephesian councils of 431 and 449. Nicæa and the earlier Ephesian are accepted by the Church Catholic. Tyre and the later Ephesian, though both were summoned at the will of princes and attended by a large concourse of bishops, are rejected. Why? The earlier Ephesian in the disorder and violence of its proceedings was as disgraceful as the Tyrian and the later Ephesian. The councils of Nicæa and of Ephesus, called the first and the third œcumenical councils, are vindicated by the assent of the wisest of the Church. The dictum *securus judicat orbis terrarum* here holds good, and is seen to be identical with the ultimate foundation of the great Aristotelian definition “defined by reason, and as the wise man would define.” And such is also the practical outcome of the statement of Article XXI, of the Church of England. cf. the striking passage of Augustine (Cont. Maximin. Arian. ii. 14). *“Sed nunc nec ego Nicænum, nec tu debes Ariminense, tanquam prœjudicaturus, proferre consilium. Nec ego hujus auctoritate, nec tu illius detineris. Scripturarum auctoritatibus, non quorumque propriis, sed utrisque communibus testibus, res cum re, causa cum causa, ratio cum ratione concertet.”* On the first four accepted œcumenical councils Dr. Salmon (*Infallibility of the Church*, p. 287) remarks, “Gregory the Great says that he venerates these four as the four Gospels, and describes them as the four square stones on which the structure of faith rests. Yet the hard struggle each of these councils had to make and the number of years which the struggle lasted before its decrees obtained general acceptance, show that they obtain their authority because of the truth which they declared and it was not because of their authority that the decrees were recognised as true.”
+[^under-the-ban-of-theodosius-and-of-68]: Canon Venables Dict. Christ. Biog. Actes du Brigandage, pp. 193, 195.
+[^under-the-ban-of-theodosius-and-of-69]: Evagrius i. 10.
+[^under-the-ban-of-theodosius-and-of-70]: Ep. CXIX.
+[^under-the-ban-of-theodosius-and-of-71]: Ep. CXXIII.
+[^under-the-ban-of-theodosius-and-of-72]: Epp. CXIII. to CXXXIII. and CLXXXI.
+[^under-the-ban-of-theodosius-and-of-73]: Cf. Milman Lat. Christ. Book ii. Chap. iv; Const. Valentin. iii Aug. apud S. Leon. op. epist. xi.
+[^under-the-ban-of-theodosius-and-of-74]: Garnerius, the Jesuit, in his dissertation on the life of Theodoret writes: “When Theodoret got news of his deposition he determined to send envoys to the apostolic see, that is to the head of all the churches in the world, to plead his cause before the righteous judgment seat of St. Leo,” and in his summary of his own chapter he says “Theodoret appeals to the apostolic see.”
+[^under-the-ban-of-theodosius-and-of-75]: Matt. xvi. 18
+[^under-the-ban-of-theodosius-and-of-76]: Ep. CXLVI.
+[^under-the-ban-of-theodosius-and-of-77]: cf. Glubokowski. pp. 237, 239. Du Pin. iv. 83. Cardinal Newman, in his very bright and sympathetic sketch of Theodoret, (Hist. Sketches ii. 308 ed. 1891) writes the following remarkable sentence. “This, at least, he has in common with St. Chrysostom that both of them were deprived of their episcopal rank by a council, both appealed to the holy see, and by the holy see both were cleared and restored to their ecclesiastical dignities.” It would be difficult in the compass of so short a sentence to combine more statements so completely misleading. To say that Chrysostom and Theodoret both appealed to the “holy see” is as much an anachronism as to say that they appealed to the Court of the Vatican or to the Dome of St. Peter’s. In their day there was no holy see, that is to say, κατ᾽ ἐξοχήν. All sees were holy sees, just as all bishops were styled your holiness. Rome, it is true, was the only apostolical see in the West, but it was not the only apostolical see, and whatever official precedence it could claim over Antioch, Jerusalem, and Alexandria, was due to its being the see of the old imperial capital, a precedence expressly ordered at Chalcedon to be shared with the new Rome on the Bosphorus. As to the “appeal,” we have seen what it meant in the case of Theodoret. It meant the same in the case of Chrysostom. Cut to the quick at the cruel and brutal treatment of his friends after his banishment from Constantinople in the summer of 404 he pleaded his cause in letters sent as well to Venerius of Milan and Chromatius of Aquileia as to Innocent of Rome. Innocent very properly espoused his cause, declared his deposition void, and did his best to move Honorius to move Arcadius to convoke a council. The cruel story of the long martyrdom of bitter exile and the death in the lonely chapel at Comana is a terrible satire on the restoration to ecclesiastical dignities. The unwary reader of “the historical sketch” might imagine the famous John of the mouth of gold brought back in triumph to Constantinople by the authority of the pope in 404 as he had been by the enthusiasm of his flock in 403, and Arcadius and Eudoxia cowering before the power of Holy Church like Henry IV. at Canossa in 1077. The true picture of the three years of agony which preceded the old man’s passage to the better world in 407 is a painful contrast to contemplate (Pallad. Dial. 1–3. Theodoret V. 34. Sozomen viii. 26, 27, 28.) Of Theodoret’s restoration to “ecclesiastical dignity,” and Leo’s part in it, we shall see further on.
+
+### Theodoret and Chalcedon.
+
+Now, not for the last time in history, an important part was played by a horse. In July, 450, Theodosius, while hunting in the neighbourhood of his capital, was thrown from the saddle into a stream, hurt his spine, and a few days afterwards died.[^theodoret-and-chalcedon-78] With him died the cause of Eutyches and of Chrysaphius. The eunuch was promptly executed, and at last a Council was conceded to reconsider and rectify the crimes and blunders of the Latrocinium.[^theodoret-and-chalcedon-79] But the Empress and her venerable husband did not wait for the Council to undo some of the wrong done to Theodoret, and the large place he filled in the eyes and estimation of the oriental world is shewn by the interest shewn at Constantinople in his behalf.[^theodoret-and-chalcedon-80] The decree of relegation appears to have been rescinded, and he was free to present himself at the synod. On the first assembling of the five hundred bishops,[^theodoret-and-chalcedon-81] under the presidency of the imperial Commissioners,[^theodoret-and-chalcedon-82] the minutes of the Latrocinium were read; the presence of Dioscorus was protested against by the Roman representation as having dared to hold a synod unauthorized by Rome; and the claim of Theodoret to sit and vote, allowed both by the imperial Commissioners and by the westerns, since Leo[^theodoret-and-chalcedon-83] had accepted him as an orthodox bishop, was vehemently resisted by the Eutychians. He entered, but at first did not vote, and his enemies at last succeeded in wringing from him a personal anathema not only of Nestorianism, but of Nestorius. The scenes reported in detail are too characteristic alike of the earlier Councils and of Theodoret to be omitted.
+
+“The illustrious Presidents and the honorable Assessors ordered that the most religious bishop Theodoret should enter, that he might be a partaker of the Council, because the holy Archbishop Leo had restored the bishopric to him; and the most sacred and pious Emperor determined that he was to be present at the Holy Council. And on the entrance of the most religious Theodoret, the most religious bishops of Egypt, Illyricum and Palestine called out: ‘Have mercy upon us! The faith is destroyed. The Canons cast him out. Cast out the teacher of Nestorius.’ The most religious bishops of the East and those of Pontus, Asia, and Thrace shouted out: ‘We had to sign a blank paper; we were scourged, and so we signed. Cast out the Manichæans; cast out the enemies of Flavian; cast out the enemies of the faith.’ Dioscorus, the most religious bishop of Alexandria said: ‘Why is Cyril being cast out, who is anathematized by Theodoret?’ The Eastern and Pontic and Asian and Thracian most religious bishops shouted out: ‘Cast out Dioscorus the murderer. Who does not know the deeds of Dioscorus?’ The Egyptian and the Illyrian and the Palestinian most religious bishops shouted out: ‘Long years to the Empress!’ The Eastern and the most religious bishops with them shouted out: ‘Cast out the murderers!’ The Egyptians and the most religious bishops with them shouted out: ‘The Empress has cast out Nestorius. Long years to the orthodox Empress! The Council will not receive Theodoret.’ Theodoret, the most religious bishop, came up into the midst and said: ‘I have offered petitions to the most godlike, most religious and Christ-loving masters of the world, and I have related the disasters which have befallen me, and I claim that they shall be read.’ The most illustrious Presidents and the most honourable Assessors said: ‘Theodoret, the most religious bishop, having received his proper place from the holy Archbishop of the renowned Rome, now occupies the place of an accuser. Wherefore, that there be no confusion in our proceedings, allow the things which have had a beginning to be finished. No prejudice will accrue to anyone from the appearance of the most religious Theodoret. Every argument for you and for him, if you desire to make one on one side or the other is of course reserved.’ And after Theodoret, the most religious bishop, had sat down in the midst, the Eastern, and the most religious bishops who were with them, shouted out: ‘He is worthy! He is worthy!’ The Egyptians and the most religious bishops who were with them shouted out: ‘Do not call him a bishop! He is not a bishop! Cast out the fighter against God! Cast out the Jew!’ The Easterns and the most religious bishops who were with them shouted out: ‘The orthodox for the Council! Cast out the rebels! Cast out the murderers!’ The Egyptians and the most religious bishops who were with them shouted out: ‘Cast out the fighter against God! Cast out the insulter of Christ! Long years to the Empress! Long years to the Emperor! Long years to the orthodox Emperor! Theodoret has anathematized Cyril.’ The Easterns and the most religious bishops who were with them shouted out: ‘Cast out the murderer Dioscorus!’ The Egyptians and the most religious bishops with them shouted out: ‘Long years to the Assessors! He has not the right of speech. He is expelled from the whole Synod!’ Basil, the most religious bishop of Trajanopolis, in the province of Rhodope, rose up and said: ‘Theodoret has been condemned by us.’ The Egyptians and the most religious bishops with them shouted out: ‘Theodoret has accused Cyril. We cast out Cyril if we receive Theodoret. The Canons cast out Theodoret. God has turned away from him.’ The most illustrious Presidents and the most honourable Assessors said: ‘The vulgar cries are not worthy of bishops, nor will they assist either side. Suffer, therefore, the reading of all the documents.’ The Egyptians and the most religious bishops with them shouted out: ‘Cast out one man, and we will all hear. We shout out in the cause of Religion. We say these things for the sake of the orthodox Faith.’ The most illustrious Presidents and the honourable Assessors said: ‘Rather acquiesce, in God’s name, that the hearing of the documents should take place, and concede that all shall be read in proper order.’ And at last they were silent, and Constantine, the most holy Secretary and Magistrate of the Divine Synod, read these documents.”[^theodoret-and-chalcedon-84]
+
+One more sad incident must be given—the demand made at the eighth session that Theodoret should pronounce a curse on his ancient friend. “The most reverend bishops all stood before the rails of the most holy altar, and shouted “Theodoret must now anathematize Nestorius.” Theodoret, the most reverend bishop, passed into the midst, and said: “I have made my petition to the most divine and religious Emperor, and I have laid documents before the most reverend bishops occupying the place of the most sacred Archbishop Leo; and if you think fit, they shall be read to you, and you will know what I think.’ The most reverend bishops shouted ‘We want nothing to be read—only anathematize Nestorius.’ Theodoret, the most reverend bishop, said: ‘I was brought up by the orthodox, I was taught by the orthodox, I have preached orthodoxy, and not only Nestorius and Eutyches, but any man who thinks not rightly, I avoid and count him an alien.’ The most reverend bishops shouted out: ‘Speak plainly; anathema to Nestorius and his doctrine—anathema to Nestorius and to those who defend him.’ Theodoret, the most reverend bishop said: ‘Of a truth I say nothing except so far as I know it to be pleasing to God. First I will convince you that I am here, not because I care for my city, not because I covet rank. Because I have been falsely accused, I come to satisfy you that I am orthodox, and that I anathematize Nestorius and Eutyches, and every one who says that there are two Sons.’ Whilst he was speaking, the most reverend bishops shouted out: ‘Speak plainly; anathematize Nestorius and those who think with him.’ Theodoret, the most reverend bishop, said: ‘Unless I set forth at length my faith I cannot speak. I believe’—And whilst he spoke the most reverend bishops shouted: ‘He is a heretic! He is a Nestorian! Away with the heretic! Anathema to Nestorius and to any one who does not confess that the Holy Virgin Mary is the Parent of God, and who divides the only begotten Son to two Sons.’ Theodoret, the most reverend bishop, said, ‘Anathema to Nestorius and to whoever denies that the Holy Virgin Mary is the Parent of God, and who divides the only begotten Son into two Sons. I have subscribed the definition of faith, and the epistle of the most holy Archbishop Leo.”[^theodoret-and-chalcedon-85]
+
+[^theodoret-and-chalcedon-78]: cf. the deaths of William I. and William III. of England.
+[^theodoret-and-chalcedon-79]: Though Marcian’s independence of western dictation was shewn in the summoning of the bishops not to a place in Italy, as Leo had hoped and urged, but to Chalcedon, the beautiful Asiatic suburb of Constantinople.
+[^theodoret-and-chalcedon-80]: Epp. CXXXIX, CXL.
+[^theodoret-and-chalcedon-81]: Accounts of the numbers vary. Marcellinus says 630. There were more than 400 signatures.
+[^theodoret-and-chalcedon-82]: Perhaps of the Emperor himself. (Breviar. Hist. Eutych.) The representatives of the imperial government sat in the centre of the Cancelli; on their right were Dioscorus, Juvenal of Jerusalem, and the Palestinian bishops; on their left Paschasinus of Lilybæum, (Marsala) Lucentius of Asculum (Ascoli) with Boniface, a Roman presbyter, the three representatives of Leo, Anatolius of Constantinople, Maximus of Antioch, and the orientals. Paschasinus signed as *“synodo præsidens,”* but he did not either locally or effectively preside.
+[^theodoret-and-chalcedon-83]: The acts of the Council of Chalcedon refer to Theodoret having been righted by the bishop of “the illustrious city of Rome;” “the archbishop of the senior city of Rome.” The primacy is that of the ancient capital.
+[^theodoret-and-chalcedon-84]: Labbe iv., 102, 103.
+[^theodoret-and-chalcedon-85]: Labbe iv. 621. Bertram (Theod. Ep. Cyr. doctrina christologica, 1883) thinks Theodoret changed his views; Möller (Herzog XV. s.v.) that he retained them, though necessarily modified in expression by stress of circumstances.
+
+### Retirement after Chalcedon, and Death.
+
+Some doubt hangs over the question whether after his vindication at Chalcedon Theodoret resumed his labours at Cyrus, or occupied himself with literary work in the congenial seclusion of Nicerte. Garnerius makes it about the time of his quitting Chalcedon that Sporacius charged him with the duty of writing on the Heresies,[^retirement-after-chalcedon-and-death-86] and if so his five books on this subject would seem to have constituted the first fruit of his comparative leisure. Sporacius[^retirement-after-chalcedon-and-death-87] he styles his “Christ-loving Son,” and no doubt owed something to the aid of the influential “Comes domesticorum,” who was present at Chalcedon, when the question of his admission to the Council was being agitated. To this period has also been referred his commentary on the Octateuch.[^retirement-after-chalcedon-and-death-88] On Dr. Newman’s statement that Theodoret made over the charge of his diocese to Hypatius (one of his chorepiscopi, who had been entrusted with his appeal to Pope Leo) and retired into his monastery, and there regaining the peace which he had enjoyed in youth, passed from the peace of the Church to the peace of eternity, Canon Venables[^retirement-after-chalcedon-and-death-89] remarks that there is no authority for so pleasing a picture, and that Tillemont[^retirement-after-chalcedon-and-death-90] contradicts it altogether. Garnerius quotes his congratulation to Sabinianus[^retirement-after-chalcedon-and-death-91] on leaving Perrha as suggestive of what conduct he might have preferred.
+
+It is at least certain that during this period he received a long and sympathetic letter from Leo, from which it is clear that the Roman bishop reposed great confidence in him.[^retirement-after-chalcedon-and-death-92] It is characteristic of one in whom the mere man was merged in the theologian and ecclesiastic that, as of the year of his birth, so of the year of his death, we have no specific information, and are compelled to form our conclusions on evidence which though valuable, is not overwhelming. Theodorus Lector, the composer of the Historia Tripartita, in the 6th century, states[^retirement-after-chalcedon-and-death-93] that Theodoret prepared a sepulchral urn for the burial of the famous ascetic Jacobus; that he predeceased Jacobus; but that Jacobus was buried in it.[^retirement-after-chalcedon-and-death-94] Evagrius[^retirement-after-chalcedon-and-death-95] mentions Jacobus Syrus as still living when the Emperor Leo sent his Circular Letter to the bishops in 458, though then he must have been in extreme old age. And Gennadius, who lived not long after Theodoret, says that he died in the reign of Leo. The evidence is not strong. Theodoret may have died some years before Jacob. But Gennadius probably knew. On the whole we may conclude that there is some probability that Theodoret survived till 458; none that he lived longer. Like Lucius Cary, Viscount Falkland, to whom, in his isolation, Dean Stanley[^retirement-after-chalcedon-and-death-96] compares him, Theodoret must have expired with the cry of “Peace, Peace,” in his heart, if not on his lips. Garnerius is careful to prove that he died in “the peace of the Church,” and appeals in support of this contention to the laudatory testimony of Popes Vigilius, Pelagius I., Pelagius II., and Gregory the Great. The peace of the Church, in the narrower sense, has not always been accorded to holy men and women who have assuredly departed this life in the faith and fear of their Lord. In its truer and holier connotation it coincides with a state in which we trust we may contemplate the godly old man of Cyrus, forgetting the storms that had beaten now and again on the life he was leaving behind him, and stepping quietly into the calm of the windless haven of souls,—the Peace not of man, but of God.
+
+[^retirement-after-chalcedon-and-death-86]: Præf. Hœret Fab.
+[^retirement-after-chalcedon-and-death-87]: Ep. XCVII.
+[^retirement-after-chalcedon-and-death-88]: Photius Cod. 204. The Octateuch comprises the first eight books of the Old Testament.
+[^retirement-after-chalcedon-and-death-89]: Dict. Christ. Biog. iv. 916.
+[^retirement-after-chalcedon-and-death-90]: xv., 311.
+[^retirement-after-chalcedon-and-death-91]: Ep. CXXVI.
+[^retirement-after-chalcedon-and-death-92]: Leo. Ep. cxx., and Migne Theod. iv. 1193. Chagrined at the decision of the Council that Constantinople was to enjoy honorary precedence next after old Rome and practical equality and independence, in that the metropolitans of Pontus, Asia, and Thrace were to be ordained by the patriarch of Constantinople, Leo manages to write to Theodoret, *par parenthèse,* of the Roman See as one *“quam cœteris omnium Dominus statuit prœsidere.”* If in *“statuit”* Leo had meant to refer to a Divine Providence overruling history, and in *“prœsidere”* to the fact that Rome was for many years the capital of the world, his remark would have been open to little objection. But he meant something quite different.
+[^retirement-after-chalcedon-and-death-93]: Collect. Book i. Ed. Migne p. 566.
+[^retirement-after-chalcedon-and-death-94]: There seems no authority for the statement of Garnerius (Hist. Theod. xiii) repeated in Smith’s Dict. Chris. Biog. that Jacobus and Theodoret shared it.
+[^retirement-after-chalcedon-and-death-95]: de Scrip. Ecc. 89.
+[^retirement-after-chalcedon-and-death-96]: *Christian Institutions.* Chap. xvi.
+
+### The Condemnation of “the Three Chapters.”
+
+A sketch of the life of Theodoret might well be supposed to terminate with his death. But it can hardly be regarded as complete without a brief supplementary notice of the posthumous controversy which has contributed to his fame in ecclesiastical history. The Council of Chalcedon was designed to give rest to the Church, and to undo a great wrong, and catholic common sense has since vindicated its decisions. But it was not to be supposed that the opinions and passions which had achieved a combined triumph at Ephesus in 449 would die away and disappear in consequence of the imperial and synodical action of 451. The face of the world was changing. The vandal Genseric captured and pillaged Rome. The Teutonic races were pushing to a foremost place, and accepting first of all an Arian Christianity. Clovis represented orthodoxy almost alone. Theodoric, the Arian Ostrogoth, mastered Italy. Then the turning tide saw Rome once again a city of sole empire, but not the chief city. The victories of Belisarius made of Rome a suburb of Constantinople, and empire and theology swayed and were swayed by the policy of Justinian and the palace plots of Theodora. All through monophysitism had had its friends and defenders. Metropolitans, monks, and mobs had anathematized one another for nearly a century. At Alexandria Dioscorus had won almost a local canonization, and the patriarch Timotheus, nicknamed “the Cat,” had left a strong monophysite party, consolidated under Peter the Stutterer as the “acephali.”[^the-condemnation-of-the-three-chapters-97] At Antioch Peter the Fuller had anathematized all who refused to accept the Shibboleth he appended to the Trisagion, “who wast crucified on our account.” Leo, Marcian’s successor on the Eastern throne, had followed Marcian’s theology, and Zeno, Leo; but the usurper Basiliscus had seen elements of strength in a bold bid for monophysite support. Zeno, on the fall of Basiliscus, had attempted to atone the disunited sections of Christendom by the henoticon, or edict of unity, but the henoticon had been for years a watchword of division. Anastasius had favoured the Eutychians. And in his reign Theodoret had been twice condemned, at the synods of Constantinople and Sidon, in 499 and 512.[^the-condemnation-of-the-three-chapters-98]
+
+Justin I., the unlettered barbarian, supported the Chalcedonians, but in 544 Belisarius had made the Eutychian Vigilius bishop of Rome. When Justinian aspired to become a second Constantine, and give theological as well as civil law to the world, it was proposed to condemn in a fifth œcumenical council certain so-called Nestorian writings, on the plea that such a condemnation might reconcile the opponents of Chalcedon. The writings in question were the Letter of Ibas of Edessa to Maris, praising Theodore of Mopsuestia; the works of Theodore himself, and the writings of Theodoret against Cyril. These three literary monuments were known as “the Three Chapters.”[^the-condemnation-of-the-three-chapters-99] Of the controversy of the Three Chapters it has been said that it “filled more volumes than it was worth lines.”[^the-condemnation-of-the-three-chapters-100] The Council satisfied nobody. Pope Vigilius, detained at Constantinople and Marmora with something of the same violence with which Napoleon I. detained Pius VI. at Valence, declined to preside over a gathering so exclusively oriental. The West was outraged by the constitution of the synod, irrespective of its decisions. The Monophysites were disappointed that the credit of Chalcedon should be even nominally saved by the nice distinction which damaged the writings, but professed complete agreement with the council which had refused to damn the writers. The orthodox wanted no slur cast upon Chalcedon, and, however fenced, the condemnation of the Three Chapters indubitably involved such a slur. Practically, the decrees of the fourth and fifth councils are mutually inconsistent, and it is impossible to accept both. Theodoret was reinstated at Chalcedon in spite of what he had written, and what he had written was anathematized at Constantinople in spite of his reinstatement.
+
+The xiii Canon of the fifth Council runs as follows, “if any one defends the impious writings of Theodoret which he published against the true faith, against the first holy synod of Ephesus and against the holy Cyril and his twelve chapters; and all that he wrote in defence of the impious Theodorus and Nestorius, and others who held the same opinions as the aforesaid Theodorus and Nestorius, defending them and their impiety, and accordingly calling impious the doctors of the church who confess the union according to hypostasis of God the Word in the flesh; and does not anathematize these writings and those who have held or do hold similar opinions, above all those who have written against the true faith and the holy Cyril and his twelve chapters, and have remained to the day of their death in such impiety; let him be anathema.”
+
+In this condemnation the works certainly included are Theodoret’s “Objections to Cyril’s Chapters,” some of his letters, and, among his lost works, the “Pentalogium,” namely five books on the Incarnation written against Cyril and his supporters at Ephesus, of which fragments are preserved, and two allocutions against Cyril delivered at Chalcedon in 431, of which portions exist in the acts of the fifth Council, and do not exhibit Theodoret at his best.
+
+The Council has at least preserved to us an interesting little record of the survival at Cyrus of the memory of her great bishop, for it appears that at the seventh collation, held at the end of May, notice was taken of an enquiry ordered by Justinian respecting a statue or portrait of Theodoret which was said to have been carried in procession into his cathedral town, by Andronicus a presbyter and George a deacon.[^the-condemnation-of-the-three-chapters-101] A more important tribute to his memory is the fact that, though it officially anathematized writings some of which, composed in the thick of the fight, and soiled with its indecorous dust, Theodoret himself may well have regretted and condemned, the Council advisedly abstained from directly condemning a bishop whose character and person were protected by the notorious iniquity of the robber council that had deposed him, the friendship of the illustrious Leo, and the solemn vindication of the church in Synod at Chalcedon, as well as by his own confession of the faith, his repudiation of the errors of Nestorius, and the stainless beauty and pious close of his long life.
+
+No better reconciliation between Chalcedon and Constantinople can be proffered than that which Garnerius quotes from the letter said to have been written by Gregory the Great, though sent in the name of Pelagius II, to the Illyrians on the fifth council, “It is the part of unwarrantable rashness to defend those writings of Theodoret which it is notorious that Theodoret himself condemned in his subsequent profession of the right faith. So long as we at once accept himself and repudiate the erroneous writings which have long remained unknown we do not depart in any way from the decision of the sacred synod, because so long as we only reject his heretical writings, we, with the synod, attack Nestorius, and with the synod express our veneration for Theodoret in his right confession. His other writings we not only accept, but use against our foes.”[^the-condemnation-of-the-three-chapters-102]
+
+[^the-condemnation-of-the-three-chapters-97]: ᾽Ακέφαλοι = headless, i.e., without bishop.
+[^the-condemnation-of-the-three-chapters-98]: Victor: Turon: and Mansi, viii. 371, Mansi, viii. 197–200.
+[^the-condemnation-of-the-three-chapters-99]: Dean Milman (Lat. Christ. iv, 4), following in the wake of Gibbon, remarks that “the church was not now disturbed by the sublime, if inexplicable, dogmas concerning the nature of God, the Persons of the Trinity, or the union of the divine and human nature of Christ, concerning the revelations of Scripture, or even the opinions of the ancient fathers. The orthodoxy or heterodoxy of certain writings by bishops but recently dead became the subject of imperial edicts of a fifth so-called Œcumenic Council, held at Constantinople, and a religious war between the East and the West,” but it was on their explanation of sublime if inexplicable dogmas that the orthodoxy or heterodoxy of these bishops depended, and so far as the subject matter of dispute is concerned, the position in 553 was not very different from that of 451. In both cases the church was moved at once by honest conviction and partisan passion; the state was influenced partly by a healthy desire to promote peace through out the empire, partly by the meaner ambition of posing as theological arbitrator.
+[^the-condemnation-of-the-three-chapters-100]: Gibbon, chap. xlvii. Schaff Hist. Christ. iii, 770.
+[^the-condemnation-of-the-three-chapters-101]: Dean Milman (Lat. Christ. iv, 4), following in the wake of Gibbon, remarks that “the church was not now disturbed by the sublime, if inexplicable, dogmas concerning the nature of God, the Persons of the Trinity, or the union of the divine and human nature of Christ, concerning the revelations of Scripture, or even the opinions of the ancient fathers. The orthodoxy or heterodoxy of certain writings by bishops but recently dead became the subject of imperial edicts of a fifth so-called Œcumenic Council, held at Constantinople, and a religious war between the East and the West,” but it was on their explanation of sublime if inexplicable dogmas that the orthodoxy or heterodoxy of these bishops depended, and so far as the subject matter of dispute is concerned, the position in 553 was not very different from that of 451. In both cases the church was moved at once by honest conviction and partisan passion; the state was influenced partly by a healthy desire to promote peace through out the empire, partly by the meaner ambition of posing as theological arbitrator.
+[^the-condemnation-of-the-three-chapters-102]: Labbe. Act. Conc. Const. v. Coll. vii.
+
+### The Works of Theodoret.
+
+Of authorities for the works of Theodoret we may first cite himself. In four of his letters he mentions his own writings; viz.: in lxxxii, to Eusebius of Ancyra; in cxiii, to Leo of Rome; in cxvi, to the Presbyter Renatus; and in cxlv, to the monks at Constantinople. Of these the first was written in 445 and the last three in 449 and a reference to them will show the works mentioned. It is to be noticed[^the-works-of-theodoret-103] that no allusion is made to the refutation of the twelve chapters; to the defence of Diodorus of Tarsus and Theodorus of Mopsuestia, nor to the Dialogues, though all are held to have been written before the Latrocinium. It may have been, as Garnerius conjectures, that Theodoret did not judge it politic at this time to call attention to these particular works, but the assumption is not based on strong grounds, and Theodoret never appears as one unwilling to avow his convictions, which indeed, were perfectly well known.
+
+Gennadius, presbyter of Marseilles, who died in 496, writes “Theodoretus, bishop of Cyrus, is said to have written many works: those, however, which have come to my knowledge are the following; of the Incarnation of the Lord, against the presbyter Eutyches, and Dioscorus, bishop of Alexandria, who deny that there was in Christ human flesh,—powerful writings wherein he proves, as well by argument as by scriptural evidence, that Christ had very flesh of the substance of His mother, which He took from the Virgin, and very Godhead, which by eternal generation He received, in being generated, from God the father begetting Him. There exist also his books of Ecclesiastical History, which he wrote in imitation of Eusebius of Cæsarea, beginning from the end of the books of Eusebius down to his own time, viz.: from the twentieth year of Constantine down to the reign of Leo I, in whose reign he died.”[^the-works-of-theodoret-104]
+
+Photius, in the ninth century, says that he has read the Ecclesiastical History; twenty-seven books against Heresies, among which he reckons the “Eranistes;” five books “Hæreticarum Fabularum;” five in praise of Chrysostom; with Commentaries on Daniel, the Octateuch, Kings, Chronicles, and the Twelve Minor Prophets.
+
+Nicephorus Callistus Xanthopulus in the fourteenth century, Hist. Ecc. xiv. 54, writes: “Theodoretus, Syrian by birth, was a follower of the great Chrysostom, whom he set before him as a model of style. His own was flowing and copious, eloquent and easy, and not destitute of Attic grace.” He mentions expositions of difficult passages of the Old Testament; Commentaries on the Prophets and the Psalms; the “de Providentia;” a volume “On the Apostles;” the Confutation of heresies, called “the battle between truth and falsehood;” the refutation of Cyril’s “Twelve Chapters;” the Ecclesiastical History; the “Philotheus,” a History of the Lovers of God; three books on the divine doctrines, and five hundred (?) letters.
+
+The following is the catalogue of extant works as given by Sirmondus and followed by Garnerius.
+
+(i.) *Exegetical.* Questions on the Octateuch, the Books of Kings and Chronicles; the Interpretation of the Psalms, Canticles, the Four Greater, and the Twelve Lesser Prophets; an exposition of all the Epistles of St. Paul, including the Hebrews.
+
+(ii.) *Historical.* The Ecclesiastical History, and the “Philotheus,” or Religious History.
+
+(iii.) *Controversial.* The Eranistes, or Dialogues, and the Hæreticarum Fabularum Compendium.
+
+(iv.) *Theological.* The Græcarum Affectionum Curatio, the Discourse on Charity, and the De Providentia.
+
+(v.) *Epistolary.* The Letters.
+
+(vi.) To these may be added the Refutation of the Twelve Chapters, and the following given in the Auctarium of Garnerius.
+
+(1.) Prolegomena and extracts from Commentaries on the Psalms.
+
+(2.) Part of a Commentary on St. Luke.
+
+(3.) Sermon on the Nativity of St. John the Baptist.
+
+(4.) Portions of Sermons on St. Chrysostom.
+
+(5.) Homily preached at Chalcedon in 431.
+
+(6.) Fragments of the Pentalogium, extracted from Marius Mercator,[^the-works-of-theodoret-105] who attributed the work to the instigation of the devil.
+
+*Lost works.*[^the-works-of-theodoret-106]
+
+(1.) The Pentalogium, of which fragments are preserved in the Auctarium.
+
+(2.) Opus mysticurn, sive mysteriorum fidei expositiones, lib. xii.
+
+(3.) Works “de theologia et Incarnatione,” identified by Garnier with three Dialogues against the Macedonians, and two against the Apollinarians, erroneously attributed to Athanasius.
+
+(4.) Adversus Marcionem.
+
+(5.) Adversus Judæos (? the Commentary on Daniel).
+
+(6.) Responsiones ad quæsitus magorum Persarum.
+
+(7.) Five sermons on St. Chrysostom.
+
+(8.) Two allocutions spoken at Chalcedon against Cyril in 431.
+
+(9.) Sermon preached at Antioch on the death of Cyril.
+
+(10.) Works on Sabellius and the Trinity, of which portions are given by Baluz. Misc. iv.
+
+[^the-works-of-theodoret-103]: Cf. Garnerius in Migne’s Theodoret V. 255.
+[^the-works-of-theodoret-104]: The last record in the History appears to be of a.d. 440, cf. p. 159. Eusebius ends, and Theodoret begins, with the defeat of Licinius in 323. Constantine began to reign in 306.
+[^the-works-of-theodoret-105]: A writer, supposed to be a layman, whose works were discovered in two mss. at the end of the seventeenth century. One is in the Vatican, the other was found in the Cathedral Library of Beauvais. Marius wrote fully on the Nestorian Controversy, and with acrimony against Theodoret.
+[^the-works-of-theodoret-106]: As catalogued by Canon Venables from Cave (Hist. Lit. I. 405 ff.) Dict. Christ. Biog. iv. 918.
+
+### Contents and Character of the Extant Works.
+
+(a) The character of the Commentary on the Octateuch and the Books of Kings and Chronicles is indicated by the Title “εἰς τὰ ᾽άπορα τῆς θείας Γραφῆς κατ᾽ ᾽εκλογήν,” or “On selected difficulties in Holy Scripture.” These questions are treated, with occasional deflexions into allegory, from the historico-exegetical point of view of the Syrian School,[^contents-and-character-of-the-extant-works-107] of which Diodorus of Tarsus and Theodore of Mopsuestia were distinguished representatives. On Diodorus Socrates[^contents-and-character-of-the-extant-works-108] remarks, “he composed many works, relying on the bare letter of Scripture, and avoiding their speculative aspect.” This might be said of Diodorus’ great pupil too. Nevertheless, though generally following a line of interpretation in broad contrast with that of Origen, Theodoret quotes Origen as well as Diodore and Theodore of Mopsuestia as authorities. Of the 182 “questions” on Genesis and Exodus the following may be taken as specimens.
+
+Question viii. “What spirit moved upon the waters?” Theodoret’s conclusion is that the wind is indicated.
+
+Question x. “Why did the author add, ‘And God saw that it was good’?” To persuade the thankless not to find fault with what the divine judgment pronounces good.
+
+Question xix. “To whom did God say ‘let us make man in our image and likeness’?” The reply, carefully elaborated, is that here is an indication of the Trinity.
+
+Question xx. “What is meant by ‘image’?”
+
+Here long extracts from Diodorus, Theodorus, and Origen are given.
+
+Question xxiv. “Why did God plant paradise, when He intended straightway to drive out Adam thence?”
+
+God condemns none of foreknowledge. And besides, He wished to shew the saints the Kingdom prepared for them from the foundation of the world.[^contents-and-character-of-the-extant-works-109]
+
+Question xl. “What is the meaning of the statement ‘The man is become as one of us’?” Theodoret thinks this is said ironically. God had forbidden Adam to take of the fruit of the tree of life, not because he grudged man immortal life, but to check the course of sin. So death is a means of cure, not a punishment.
+
+Question xlvii. “Whom did Moses call sons of God?” A long argument replies, the sons of Seth.
+
+Question lxxxi suggests an ingenious excuse for Jacob. “Did not Jacob lie when he said, I am Esau thy firstborn?” He had bought the precedence of primogeniture, and therefore spoke the truth when he called himself firstborn.
+
+Exodus. “Question xii. What is the meaning of the phrase ‘I will harden Pharaoh’s heart’?” This is answered at great length.
+
+The information given in these notes, as we might call them, is theological, exegetic, and explanatory of peculiar terms, and is often of interest and value. On the fourteen Books of Questions and Answers Canon Venables,[^contents-and-character-of-the-extant-works-110] quoting Ceillier, remarks that the whole form a literary and historical commentary of great service for the right comprehension of the text, characterized by honesty and common sense, and seldom straining or evading the meaning to avoid dangerous conclusions.
+
+(b) On the Psalms and the rest of the Books of the Old Testament the Commentary is no longer in the catechetical form, but is styled Interpretation.[^contents-and-character-of-the-extant-works-111]
+
+The Psalmist, Theodoret observes,[^contents-and-character-of-the-extant-works-112] in many places predicts the passion and resurrection of our Lord, and to attentive readers causes real delight by the variety of his prophesying. In view of some recent discussions concerning the authorship of certain Psalms it is interesting to find the enthusiast for orthodoxy in the 5th century writing “It has been contended by some critics that the Psalms are not all the work of David, but are to be ascribed in some cases to other writers. Accordingly, from the titles, some have been attributed to Idithum, some to Etham, some to the sons of Core, some to Asaph, by men who have learned from the Chronicles that these writers were prophets.[^contents-and-character-of-the-extant-works-113] On this point I make no positive statement. What difference indeed does it make to me whether all the Psalms are David’s, or some were the composition of others, when it is clear that all were written by the active operation of the Holy Spirit?”
+
+The importance of the commentary on the Psalms may be estimated by the fact that it is longer than all the catechetical commentary on the preceding Books combined.
+
+The interpretation on the Canticles follows spiritual, as distinguished from literal, lines. The lover is Jesus Christ;—the bride, the Church. From the prologue it appears that Theodoret held all the Old Testament to have been re-written, under divine inspiration, by Ezra. This is regarded as the earliest of the exegetical works.
+
+The original commentary on Isaiah has been lost. The only existing portions are passages collected from the Greek catenæ by Sirmond and edited in his edition, but the opinion has been entertained[^contents-and-character-of-the-extant-works-114] that these passages should be referred to Theodore of Mopsuestia who also commented on Isaiah, and who is sometimes confused with Theodoret by the compilers of the Greek catenæ.
+
+The commentary on Jeremiah includes Baruch and the Lamentations.[^contents-and-character-of-the-extant-works-115]
+
+(c) The epistles of St. Paul, among which Theodoret reckons the Epistle to the Hebrews, are the only portions of the New Testament on which we possess our author’s commentaries. On them the late Bishop Lightfoot writes, “Theodoret’s commentaries on St. Paul are superior to his other exegetical writings, and have been assigned the palm over all patristic expositions of Scripture. See Schröckh xviii. p. 398. sqq., Simon, p. 314 sqq. Rosenmüller iv. p. 93 sqq., and the monograph of Richter, de Theodoreto Epist. Paulin, interprete (Lips. 1822.) For appreciation, terseness of expression and good sense, they are perhaps unsurpassed, and, if the absence of faults were a just standard of merit, they would deserve the first place; but they have little claim to originality, and he who has read Chrysostom and Theodore of Mopsuestia will find scarcely anything in Theodoret which he has not seen before. It is right to add however that Theodoret modestly disclaims any such merit. In his preface he apologises for attempting to interpret St. Paul after two such men who are ‘luminaries of the world:’ and he professes nothing more than to gather his stores ‘from the blessed fathers.’ In these expressions he alludes doubtless to Chrysostom and Theodore.”[^contents-and-character-of-the-extant-works-116]
+
+As a specimen of the mode of treatment of a crucial passage, of interest in view of the writer’s relations to the Nestorian and Eutychian controversies, the notes on I. Cor. xv. 27, 28 may be quoted. “This is a passage which Arians and Eunomians have been wont to be constantly adducing with the notion that they are thereby belittling the dignity of the only-begotten. They ought to have perceived that the divine apostle has written nothing in this passage about the Godhead of the only-begotten. He is exhorting us to believe in the resurrection of the flesh, and endeavours to prove the resurrection of the flesh by the resurrection of the Lord. It is obvious that like is conformed to like. On this account he calls Him ‘the first fruits of them that have fallen asleep,’ and styles Him ‘Man,’ and by comparison with Adam proves that by Him the general resurrection will come to pass, with the object of persuading objectors, by shewing the resurrection of one of like nature, to believe that all mankind will share His resurrection. It must therefore be recognised that the natures of the Lord are two: and that divine Scripture names Him sometimes from the human, and sometimes from the divine. If it speaks of God, it does not deny the manhood: if it mentions man it at the same time confesses the Godhead. It is impossible always to speak of Him in terms of sublimity, on account of the nature which He received from us, for if even when lowly terms are employed some men deny the assumption of the flesh, clearly still more would have been found infected with this unsoundness, had no lowly terms been used. What then is the meaning of ‘then is subjected’? This expression is applicable to sovereigns exercising sovereignty now, for if He then is subjected He is not yet subjected. So they are all in error who blaspheme and try to make subject Him who has not yet submitted to the limits of subjection. We must wait, and learn the mode of the subjection. But we have gone through long discussions on these points in our contests with them. It is enough now to indicate briefly the Apostle’s aim. He is writing to the Corinthians who have only just been set free from the fables of heathendom. Their fables are full of violence and iniquity. Not to name others, and pollute my lips, they worship parricide gods, and say that sons revolted against their fathers, drove them from their realm, and seized their sovereignty. So after saying great things of Christ, in that He shall destroy all rule and authority and power, and shall put an end to death, and hath subdued all things under his feet; lest starting from those fables of theirs they should expect Him to treat His father like the Dæmons whom they adore; after mentioning, as was necessary, the subjugation of all things the apostle adds ‘The Son Himself shall be subject to Him that did put all things under Him.’ For not only shall He not subject the Father to Himself, but shall Himself accept the subjection becoming to a son. So the divine apostle, suspecting the mischief arising from the pagan mythology, uses expressions of lowliness because such terms are helpful. But let objectors tell us the form of that subjection. If they are willing to consider the truth, He shewed obedience when He was made man, and wrought out our salvation. How then shall He then be subjected, and how shall He then deliver the kingdom to God the Father? If the case be viewed in this way, it will appear that God the Father does not hold the kingdom now. So full of absurdity are their arguments. But He makes what is ours His own, since we are called His body, and He is called our Head. ‘He took our iniquities and bore our diseases.’[^contents-and-character-of-the-extant-works-117] So He says in the Psalm ‘my God, my God, look upon me, why hast Thou forsaken me. The words of my transgressions are far from my health.’[^contents-and-character-of-the-extant-works-118] And yet He did no sin, neither was guile found in His mouth. But a mouth is made of our nature, in that He was made the first fruits of the nature. So He appropriates our frequent disobedience and the then subjection, and, when we are subjected after our delivery from corruption He is said to be subjected. What follows leads us on to this sense. For after the words ‘then shall the son be subject to Him that did put all things under Him,’ the Apostle adds ‘that God may be all in all.’ He is everywhere now in accordance with His essence, for His nature is uncircumscribed, as says the divine apostle, ‘in Him we live and move and have our being.’[^contents-and-character-of-the-extant-works-119] But, as regards His good pleasure, He is not in all, for ‘the Lord taketh pleasure in them that fear Him, in those that hope in his mercy.’[^contents-and-character-of-the-extant-works-120] But in these He is not wholly. For no one is pure of uncleanness, and In thy sight shall no man living be justified[^contents-and-character-of-the-extant-works-121] and ‘If thou Lord shouldst mark iniquities O Lord who shall stand?’ Therefore the Lord taketh pleasure wherein they do right and taketh not pleasure wherein they err. But in the life to come where corruption ceases and immortality is given passions have no place; and after these have been quite driven out no kind of sin is committed for the future. Thus hereafter God shall be all in all, when all have been released from sin and turned to Him and are incapable of any inclination to the worse. And what in this place the divine Apostle has said of God in another passage he has laid down of Christ. His words are these. ‘Where there is neither Jew nor Greek, circumcision nor uncircumcision, barbarian, Scythian…but Christ is all and in all.’[^contents-and-character-of-the-extant-works-122] He would not have applied to the Son what is attributable to the Father had he not of divine grace learnt that He is of equal honour with Him.’[^contents-and-character-of-the-extant-works-123]
+
+On the meaning of the passage about them that are baptized for the dead it is curious to find only one interpretation curtly proffered in apparent unconsciousness of any other being known or possible. Theodoret’s words are “He, says the apostle, who is baptized is buried with the Lord, that as he has been sharer in the death so he may be sharer in the resurrection. But if the body is dead and does not rise why then is he baptized?” The dead for which a man is baptized seems to be regarded as his own dead body i.e., dead in trespasses and sin and subject to corruption.[^contents-and-character-of-the-extant-works-124]
+
+(d) Of the historical works, (i) the Ecclesiastical History needs less description, in that a translation in extenso is given in the text. Its style and spirit speak for themselves. Photius[^contents-and-character-of-the-extant-works-125] well describes it as “clear, lofty, and concise.”
+
+Gibbon,[^contents-and-character-of-the-extant-works-126] referring to the three ecclesiastical historians of this period speaks of “Socrates, the more curious Sozomen, and the learned Theodoret.” Of learning, industry, and veracity the proofs are patent in the book itself. The chief fault of the work is its want of chronological arrangement.[^contents-and-character-of-the-extant-works-127] A minor shortcoming is what may be called a lack of perspective; a fulness of detail is sometimes conceded to mere episode and parenthesis, while characters and events of high and crucial importance would scarcely be known to be so, were we dependent for our estimation of them on Theodoret alone. Valesius inclines to the opinion that his opening words about supplying things omitted[^contents-and-character-of-the-extant-works-128] refer to Socrates and Sozomen, and compares him in his composition of a history after those writers (there is just a possibility that he might have completed the parallel by referring to a third predecessor—Rufinus) to St. John filling up the gaps left by the synoptists.[^contents-and-character-of-the-extant-works-129] But this view is open to question. Theodoret names no previous writers but Eusebius. A special importance attaches to his account of such events and persons as his local knowledge enables him to give with completeness of detail, as for instance, all that relates to Antioch and its bishops. Garnerius is of opinion that the work might with propriety be entitled A History of the Arian Heresy; all other matter introduced he views as merely episodic.[^contents-and-character-of-the-extant-works-130] He also quotes the letter[^contents-and-character-of-the-extant-works-131] of Gregory the great in which the Roman bishop states that “the apostolic see refuses to receive the History of ‘Sozomenus’ (sic) inasmuch as it abounds with lies, and praises Theodore of Mopsuestia, maintaining that he was up to the day of his death, a great Doctor.” “Sozomen” is supposed to be a slip of the pen, or of the memory, for “Theodoret.” But, if this be so, “multa mentitur” is an unfair description of the errors of the historian. Fallible he was, and exhibits failure in accuracy, especially in chronology, but his truthfulness of aim is plain.[^contents-and-character-of-the-extant-works-132]
+
+(ii) The Religious History, several times referred to in the Ecclesiastical History, and therefore an earlier composition, contains the lives of thirty-three famous ascetics, of whom three were women. The “curious intellectual problem”[^contents-and-character-of-the-extant-works-133] of the readiness with which Theodoret, a disciple of the “prosaic and critical” school of Antioch, accepts and repeats marvellous tales of the miracles of his contemporary hermits, has been invested with fresh interest in our own time by the apparent sympathy and similar belief of Dr. Newman, who asks “What made him drink in with such relish what we reject with such disgust? Was it that, at least, some miracles were brought home so absolutely to his sensible experience that he had no reason for doubting the others which came to him second-hand? This certainly will explain what to most of us is sure to seem the stupid credulity of so well-read, so intellectual an author.”[^contents-and-character-of-the-extant-works-134] Cardinal Newman evidently implies that the evidence was irresistible, even to a keen and trained intelligence. Probably in many cases the explanation is to be found, as has been already suggested in the remarks on Theodoret’s birth, in the ready acceptance of the current views of the age and place as to cause and effect. Theodoret believed in the marvels of his monks. Matthew Hale believed in witchcraft. Neither, that is, was some centuries removed from his own age. Neither need be accused of stupid credulity. The enthusiasm which led him to reckon on finding the noble army of martyrs a very present help in time of trouble because he had a little bottle of their oil, probably that burned at their graves, slung over his bed; and his assurance that the old cloak of Jacobus, folded for his pillow, was a more than adamantine bulwark against the wiles of the devil, indicate no more than an exaggerated reliance on the power of material memorials to affect the imagination.[^contents-and-character-of-the-extant-works-135] And it is curious to remark that with all this acceptance of the cures effected by ascetics, Theodoret made a provision of medical skill for his flock at Cyrus.[^contents-and-character-of-the-extant-works-136]
+
+(e) The works reckoned as theological, as distinct from the controversial, are three: (i) The twelve discourses entitled ῾Ελληνικῶν θεραπευτικὴ παθημάτων, or “*Græcarum affectionum curatio, seu evangelicæ veritatis ex gentilium philospohia cognitio.*’ They contain an elaborate apology for Christian philosophy, with a refutation of the attacks of paganism against the doctrines of the gospel, and may have been designed, as Garnerius conjectures, to serve as an antidote against whatever might still survive of the influence of Julian and his writings. Here we see at once our author’s “genius and erudition” (Mosheim). In these orations he exhibits a wide acquaintance with Greek literature, and we find cited, or referred to, among other writers, Homer, Hesiod, Alcman, Theognis, Xenophanes, Pindar, Heraclitus, Zeno, Parmenides, Empedocles, Euripides, Herodotus, Xenophon, Plato, Aristotle, Demosthenes, Diodorus Siculus, Plutarch, and Porphyry. Homer and Plato are largely quoted. Basnage,[^contents-and-character-of-the-extant-works-137] indeed, contested their genuineness, but without weakening their position among Theodoret’s accepted works. They have seemed to some to encourage undue honour to and invocation of saints and martyrs[^contents-and-character-of-the-extant-works-138] but their author seems to anticipate later exaggeration of their reverence by the distinction, “We ascribe Godhead to nothing visible. Them that have been distinguished in virtue we honour as excellent men, but we worship none but the God and Father of all, His Word, and the Holy Spirit.”[^contents-and-character-of-the-extant-works-139] (ii). The Discourses against paganism were followed by ten on Divine Providence, a work justly eulogized as exhibiting Theodoret’s literary power in its highest form. Of it Garnerius, who is by no means disposed to bestow indiscriminate laudation on the writer, remarks that nothing was ever published on this subject more eloquent or more admirable, either by Theodoret, or by any other.[^contents-and-character-of-the-extant-works-140] The discourses may not improbably have been delivered in public at Antioch, and have been the occasion of the enthusiastic admiration described as shewn by the patriarch John.[^contents-and-character-of-the-extant-works-141] In them he presses the argument of the divine guidance of the world from the constitution of the visible creation, and specially of the body of man. The preacher draws many illustrations from the animal world and shews himself to be an intelligent observer. The pursuit of righteousness is proved not to be vain, even though the achieved result is not seen until the resurrection, and it is argued that from the beginning God has not cared for one chosen race alone but for all mankind. The crowning evidence of divine providence is in the incarnation. “I have taught you”—so the great orations conclude—“the universal providence of God. You behold His unfathomable loving kindness;—His boundless mercy; cease then to strive against Him that made you; learn to do honour to your benefactor, and requite his mighty benefits with grateful utterance. Offer to God the sacrifice of praise; defile not your tongue with blasphemy, but make it the instrument of worship for which it was designed. Such divine dispensations as are plain, reverence; about such as are hidden make no ado, but wait for knowledge in the time to come. When we shall put off the senses, then we shall win perfect knowledge. Imitate not Adam who dared to pluck the forbidden fruit; lay not hold of hidden things, but leave the knowledge of them to their own fit season. Obey the words of the wise man—say not What is this? For what purpose is this! ‘For all things were made for good.’[^contents-and-character-of-the-extant-works-142] Gathering then from every source occasion for praise, and mingling one melody, offer it with me to the Creator, the giver of good, and Christ the Saviour, our very God. To them be glory and worship and honour for endless age on age. Amen.”
+
+(iii) The Discourse on Divine Love. This love, says Theodoret, is the source of the holy life of the ascetics. For his own part he would not accept the kingdom of heaven without it, or with it, were such a thing possible, shrink from the pains of hell. It was really love, he says, which led to Peter’s denial; he need not have denied if he could have borne to keep aloof, but love goaded him to be near his Lord.
+
+(f.) The controversial works are
+
+(i.) The “Eranistes,” or Dialogues, of which the translation is included in the text. They contain a complete refutation of the Eutychian position, and the quotations in them are in several cases valuable as giving portions of the writing of Fathers not elsewhere preserved. They are supposed to have been written shortly after the death of Cyril in 444, and are intended at once to vindicate Theodoret’s own orthodoxy, and to expose the errors of the party protected by Dioscorus.
+
+(ii.) The Hæreticarum Fabularum Compendium, (Αἱρετικῆς κακομυσιας ἐπιτομή) was composed at the request of Sporacius, one of the representatives of Marcian at Chalcedon, and is, as its title indicates, an account of past or present heresies. It is divided into five Books, which treat of the following heretics.
+
+I. Simon Magus, Menander, Saturnilus,[^contents-and-character-of-the-extant-works-143] Basilides, Isidorus, Carpocrates, Epiphanes, Prodicus, Valentinus, Secundus, Marcus the Wizard, the Ascodruti,[^contents-and-character-of-the-extant-works-144] the Colorbasii, the Barbelioti,[^contents-and-character-of-the-extant-works-145] the Ophites, the Cainites, the Antitacti, the Perati, Monoimus, Hermogenes, Tatianus, Severus, Bardesanes, Harmonius, Florinus, Cerdo, Marcion, Apelles, Potitus, Prepo, and Manes.
+
+II. The Ebionites, the Nazarenes, Cerinthus, Artemon, Theodotus, the Melchisedeciani, the Elkesites, Paul of Samosata, Sabellius, Marcellus, Photinus.
+
+III. The Nicolaitans, the Montanists, Noetus of Smyrna, the Tessarescædecatites (i.e. Quartodecimani) Novatus, Nepos.
+
+IV. Arius, Eudoxius, Eunomius, Aetius, the Psathyriani, the Macedoniani, the Donatists, the Meletians, Appollinarius, the Audiani, the Messaliani, Nestorius, Eutyches.
+
+V. The last book is an “Epitome of the Divine Decrees.”
+
+This catalogue, it has been remarked, does not include Origenism and Pelagianism.[^contents-and-character-of-the-extant-works-146] But though Theodoret did not sympathize with Origen’s school of scriptural interpretation, there was no reason why he should damn him as unsound in the faith. And the controversy between Jerome and Rufinus as to Origen was a distinctively western controversy. So was Pelagianism a western heresy, with which Theodoret was not brought into immediate contact.
+
+The fourth book is obviously the most important, as treating of heresies of which the writer would have contemporary knowledge. And special interest has attached to the chapter on Nestorius, who is condemned not merely for erroneous opinion on the incarnation and person of Christ, but as a timeserver and pretender, seeking rather to be thought, than to be, a Christian. Garnerius indeed doubts the genuineness of the chapter, and Schulze, in defending it, points out the similarity of its line of argument to that employed in the treatise “against Nestorius,” which is very generally regarded as spurious. It may have been added after Chalcedon, when the writer had been forced into the denunciation of his old friend. But the expressions used alike of the incarnation and of Nestorius seem somewhat in contrast with other writings of Theodoret. Schröckh[^contents-and-character-of-the-extant-works-147] inclines to the view in which Ceillier concurs, that this damning account of Nestorius was really written by his old champion, and accounts for the harshness of condemnation by the influence of the clamours of Chalcedon and the induration which old age sometimes brings on tender spirits. It can only be said that if this is Theodoret, it is Theodoret at his worst.
+
+The heads of the Epitome of Divine Decrees are the following twenty-nine: Of the Father; of the Son; of the Holy Ghost; of Creation; of Matter; of Æons; of Angels; of Dæmons; of Man; of Providence; of the Incarnation of the Saviour; that the Lord took a body; that He took a soul as well as His body; that the human nature which He took was perfect; that He raised the nature which He took; that He is good and just; that He gave the Old and the New Testament; of Baptism; of Resurrection; of Judgment; of Promises; of the Second Advent (᾽Επιφάνεια) of the Saviour; of Antichrist; of Virginity; of Marriage; of Second Marriage; of Fornication; of Repentance; of Abstinence.
+
+The short chapter on the Incarnation has a special value in view of the author’s connection with the Nestorian Controversy. “It is worth while,” he writes in it, “to exhibit what we hold concerning the Incarnation, for this exposition proclaims more clearly the providence of the God of all. In his forged fables Valentinus maintained a distinction between the only-begotten and the Word, and further between the Christ within the pleroma and Jesus, and also the Christ who is without. He said that Jesus became man, by putting on the Christ that is without, and assuming a body of the substance of the soul; and that He made a passage only through the Virgin, having assumed nothing of the nature of man. Basilides in like manner distinguished between the only-begotten, the Word and the Wisdom. Cerdon, on the other hand, Marcion, and Manes, said that the Christ appeared as man, though he had nothing human. Cerinthus maintained that Jesus was generated of Joseph and Mary after the common manner of men, but that the Christ came down from on high on Jesus. The Ebionites, the Theodotians, the Artemonians, and Photinians said that the Christ was bare man born of the Virgin. Arius and Eunomius taught that He assumed a body, but that the Godhead discharged the function of the soul. Apollinarius held that the body of the Saviour had a soul,[^contents-and-character-of-the-extant-works-148] but had not the reasonable soul; for, according to his views, intelligence was superfluous, God the Word being present. I have stated the opinions taught by the majority of heresies with the wish of making plain the truth taught by the church. Now the church makes no distinction between (τὸν αὐτὸν ὀνομαζει) the Son, the only begotten, God the Word, the Lord the Saviour, and Jesus Christ. ‘Son,’ ‘only begotten,’ ‘God the Word,’ and ‘Lord,’ He was called before the Incarnation; and is so called also after the Incarnation; but after the Incarnation the same (Lord) was called Jesus Christ, deriving the titles from the facts. ‘Jesus’ is interpreted to mean the Saviour, whereof Gabriel is witness in his words to the Virgin ‘Thou shalt call His name Jesus, for He shall save His people from their sins.’[^contents-and-character-of-the-extant-works-149] But He was styled ‘Christ’ on account of the unction of the Spirit. So the Psalmist David says ‘Therefore God, thy God, hath anointed thee with the oil of gladness above thy fellows.’[^contents-and-character-of-the-extant-works-150] And through the Prophet Isaiah the Lord Himself says ‘The spirit of the Lord is upon me, because the Lord hath anointed me.’[^contents-and-character-of-the-extant-works-151] Thus the Lord Himself taught us to understand the prophecy, for when He had come into the synagogue, and opened the book of the Prophets, He read the passage quoted, and said to those present ‘This day is the Scripture fulfilled in your ears.’[^contents-and-character-of-the-extant-works-152] The great Peter, too, preached in terms harmonious with the prophets, for in his explanation of the mystery to Cornelius he said ‘That word ye know which was published throughout all Judæa, and began from Galilee after the Baptism which John preached; how God anointed Jesus Christ with the Holy Ghost and with power.’[^contents-and-character-of-the-extant-works-153] Hence it is clear that He is called Christ on account of the unction of the spirit. But he was anointed not as God, but as man. And as in His human nature He was anointed, after the Incarnation He was called also ‘Christ.’ But yet there is no distinction between God the Word and the Christ, for God the Word incarnate was named Christ Jesus. And He was incarnate that He might renew the nature corrupted by sin. The reason of His taking all the nature which had sinned was that He might heal all. For He did not take the nature of the body using it as a veil of His Godhead, according to the wild teaching of Arius and Eunomius; for it had been easy for Him even without a body to be made visible as He was seen of old by Abraham, Jacob and the rest of the saints. But he wished the very nature that had been worsted to beat down the enemy and win the victory. For this reason He took both a body and a reasonable soul. For Holy Scripture does not divide man in a threefold division, but states that this living being consists of a body and a soul.[^contents-and-character-of-the-extant-works-154] For God after forming the body out of the dust breathed into it the soul and shewed it to be two natures not three. And the same Lord in the Gospels says, ‘Fear not them which kill the body but are not able to kill the soul,’[^contents-and-character-of-the-extant-works-155] and many similar passages may be found in divine Scripture. And that He did not assume man’s nature in its perfection, contriving it as a veil for His Godhead, according to the heretics’ fables, but achieving victory by means of the first fruits for the whole race, is truly witnessed and accurately taught by the divine apostle, for in His Epistle to the Romans, when unveiling the mystery of the Incarnation, he writes ‘Wherefore as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned: for until the law sin was in the world: but sin is not imputed when there is no law. Nevertheless death reigned from Adam to Moses, even over them who had not sinned after the similitude of Adam’s transgression, who is the figure of Him that is to come.’[^contents-and-character-of-the-extant-works-156]
+
+(iii.) The refutations of the Twelve Chapters of Cyril are translated in the Prolegomena.[^contents-and-character-of-the-extant-works-157]
+
+In the Epistle of Cyril to Celestinus and the Commonitorium datum Posidonio[^contents-and-character-of-the-extant-works-158] Cyril shows what sense he wishes to fix on the utterances of Nestorius. “The faith, or rather the ‘cacodoxy’ of Nestorius, has this force; he says that God the Word, prescient that he who was to be born of the Holy Virgin would be holy and great, therefore chose him and arranged that he should be generated of the Virgin without a husband and conferred on him the privilege of being called by His own names, and raised him so that even though after the incarnation he is called the only begotten Word of God, he is said to have been made man because He was always with him as with a holy man born of the Virgin. And as He was with the prophets so, says Nestorius, was He by a greater conjunction (συνάφεια). On this account Nestorius always shrinks from using the word union (ἔνωσις) and speaks of ‘conjunction,’ as of some one without, and, as He says to Joshua ‘as I was with Moses so will I be with thee.’[^contents-and-character-of-the-extant-works-159] But, to conceal his impiety, Nestorius says that He was with him from the womb. Wherefore he does not say that Christ was very God, but that Christ was so called of God’s good pleasure; and, if he was called Lord, so again Nestorius understands him to be Lord because the divine Word conceded him the boon of being so named. Nor does he say as we do that the Son of God died and rose again on our behalf. The man died and the man rose, and this has nothing to do with God the Word. And in the mysteries what lies (i.e. on the Holy Table) (τὸ προκείμενον) is a man’s body; but we believe that it is flesh of the Word, having power to quicken because it is made flesh and blood of the Word that quickeneth all things.”
+
+Nestorius was not unnaturally indignant at this misrepresentation of his words, and complains of Cyril for leaving out important clauses and introducing additions of his own.[^contents-and-character-of-the-extant-works-160] Cyril succeeded in pressing upon Celestinus the idea that Nestorius, who had vigorously opposed the Pelagians, was really in sympathy with them, and so secured the condemnation of his opponent at Rome and at Alexandria, and published twelve anathemas to complete his own vindication. These were answered by Theodoret on behalf of the eastern church in 431. In 433 formal peace was made, so far as the theological, as apart from the personal, dispute was concerned, by the acceptance by both John of Antioch and Cyril of the formula, slightly modified, which Theodoret himself had drawn up at Ephesus two years before.[^contents-and-character-of-the-extant-works-161] It is as follows: “We confess our Lord Jesus Christ, the Son of God, the only begotten, to be perfect God and perfect man, of a reasonable soul and body, begotten before the ages of the Father, as touching His godhead, and in the last days on account of us and our salvation (born) of the Virgin Mary as touching His manhood; that He is of one substance with the Father as touching His godhead, of one substance with us as touching His manhood; for there is made an union of two natures; wherefore we confess one Christ, one Son, one Lord. According to this meaning of the unconfounded union we confess the holy Virgin to be ‘θεοτόκος’ on account of God the Word being made flesh and becoming man, and of this conception uniting to Himself the temple taken of her. We acknowledge that theologians use the words of evangelists and apostles about the Lord some in common, as of one person, and some distinctively, as of two natures, and deliver the divine as touching the Godhead of the Christ, and the lowly as touching His manhood.”[^contents-and-character-of-the-extant-works-162]
+
+This is substantially what Theodoret says again and again. This satisfied Cyril. This would probably have been accepted by Nestorius too.[^contents-and-character-of-the-extant-works-163] What then was it, apart from the odium theologicum, which kept Nestorius and Cyril apart? Below the apparent special pleading and word-jugglery on the surface of the controversy lay the principle that in the Christ God and man were one; the essence of the atonement or reconciliation lying in the complete union of the human and the divine in the one Person; the “I” in the “I am” of the Temple and the “I thirst” of the Cross being really the same. “God and man is one Christ.” The position which the Cyrillians viewed with alarm was a reduction of this unity to a mere partnership or alliance;—God dwelling in Jesus of Nazareth as He dwells in all good men, only to a greater degree;—the eternal Word being in close contact with the son of Mary (συνάφεια). So, whatever may have been the unhappy faction-fights with which the main issue was confused there was in truth a great crisis, a great question for decision; was Jesus of Nazareth an unique personality, or only one more in the goodly fellowship of prophets? Was He God, or was He not? There can be little doubt as to the answer Nestorius would have given. There can be none as to that of Theodoret. But on the part of Cyril there was the quite mistaken conviction that Theodoret was practically contending for two Christs. On the other hand Theodoret erroneously identified Cyril with the confusion of the substance and practical patripassianism which he scathes in the “Eranistes,” and which the common sense of Christendom has condemned in Eutyches.
+
+(g) To Nicephorus Callistus in the 15th century five hundred of Theodoret’s letters were known,[^contents-and-character-of-the-extant-works-164] and he is eloquent in their praise. Now, the collection, including several by other writers, comprises only one hundred and eighty one. The value of their contributions to the history of the times as well as of their writer will be evident on their study. The order in which they are published is preserved in the translation for the sake of reference. A chronological order would have obvious advantages, but this in many cases could only be conjectural. Where the indications of time are fairly plain the probable date is suggested in a note. The letters are divided into (a) dogmatic, (b) consolatory, (c) festal, (d) commendatory, (e) congratulatory, (f) commenting on passing events. Of them Schulze writes “Nihil eo in genere scribendi perfectius; nam quæ sunt epistolarum virtutes, brevitas, perspicuitas, elegantia, urbanitas, modestia, observantia decori, et ingeniosa prudensque ac erudita simplicitas, in epistolis Theodoreti admirabiliter ita elucent ut scribentibus exempla esse possint.” “They not only” says Schröckh,[^contents-and-character-of-the-extant-works-165] “vindicate the admiration of Nicephorus, but are specially attractive on account of their exhibition of the writer’s simplicity, modesty, and love of peace.”
+
+From the study of these letters “we rise,” writes Canon Venables,[^contents-and-character-of-the-extant-works-166] “with a heightened estimate of Theodoret himself, his intellectual power, his theological precision, his warm-hearted affection for his friends, and the Christian virtues with which, notwithstanding some weaknesses and an occasional bitterness for which, however distressing, his persecutions offered some palliation, his character was adorned.”
+
+The reputation of Theodoret in the Church is a growing reputation, and the practical canonization which he has won in the heart of Christendom is a testimony to the power and worth of character and conduct. Though never officially dignified by a higher ecclesiastical title than “Beatus” he is yet to Marcellinus “Episcopus sanctus Cyri”[^contents-and-character-of-the-extant-works-167] and to Photius[^contents-and-character-of-the-extant-works-168] “divinus vir.” His earnest, sometimes bitter, conflict with the great intellect and strong will of Cyril, and apparent discomfiture in the war which raged, often with dire confusion, up and down the long lines of definition, have not succeeded in robbing him of one of the highest places among the Fathers of whom the Church is proudest. He exhibits, each in a lofty and conspicuous form, all the qualities which mark a great and good churchman. His theological writings would have won high fame in a recluse. His administration of his diocese, as we learn it from his modest letters, would have gained him the character of an excellent bishop, even had he been no scholar. His temper in controversy, though occasionally breaking out into the fiery heat of the oriental, is for the most part in happy contrast with that of his opponents. His devotion to his duty is undeniable, and his industry astonishing. It is impossible not to feel as we read his writings that he is no self-seeker arguing for victory. He believes that the fate of the Church rests on the fidelity of Christians to the Nicene Confession, and in his championship of this creed, and his opposition to all that seems to him to threaten its adulteration or defeat, he knows no awe of prince or court. Owning but one Lord, he is true through evil and good report to Him, and his figure stands out large, bright, and gracious across the centuries, against a background of intrigue and controversy sometimes very dark, as of a patient and faithful soldier and servant of Christ.[^contents-and-character-of-the-extant-works-169] If his shortcomings were those of his own age,—and in an age of virulent strife and of denial of all mercy to opponents his memory rises as a comparative monument of moderation,—his graces were the graces of all the ages.[^contents-and-character-of-the-extant-works-170] Were it customary, or even possible, in our own church and time to maintain the ancient custom of reciting before the Holy Table the names approved as of good men and true in the past history of the Holy Society, in the long catalogue of the faithful departed for whom worshippers bless the name of their common Lord, a place must indubitably be kept for Theodoretus, bishop of Cyrus.
+
+[^contents-and-character-of-the-extant-works-107]: cf. Gieseler i. 209, who refers to Münter in Staüdlins Archiv. für Kirchengesch. i. 1. 13.
+[^contents-and-character-of-the-extant-works-108]: vi., 3.
+[^contents-and-character-of-the-extant-works-109]: Matt. xxv. 34
+[^contents-and-character-of-the-extant-works-110]: Dict. Christ. Biog. iv. 916.
+[^contents-and-character-of-the-extant-works-111]: ἑρμηνεία
+[^contents-and-character-of-the-extant-works-112]: In Ps. Ed. Migne 604, 605.
+[^contents-and-character-of-the-extant-works-113]: cf. 1 Chron. vi. 44., xv. 17, 19, and Art. Jeduthun in Dict. Bib.
+[^contents-and-character-of-the-extant-works-114]: Garnerius. Theod. Ed. Migne 1, 274.
+[^contents-and-character-of-the-extant-works-115]: cf. note on page 327.
+[^contents-and-character-of-the-extant-works-116]: Lightfoot. Epist. Gal. ed. 1866, p. 226.
+[^contents-and-character-of-the-extant-works-117]: Is. liii. 4
+[^contents-and-character-of-the-extant-works-118]: Ps. xxii. 1
+[^contents-and-character-of-the-extant-works-119]: Acts xvii. 28
+[^contents-and-character-of-the-extant-works-120]: Ps. cxlvii. 11
+[^contents-and-character-of-the-extant-works-121]: Psalm cxliii. 2
+[^contents-and-character-of-the-extant-works-122]: Coloss. iii. 11
+[^contents-and-character-of-the-extant-works-123]: Theodor. Ed. Migne iii. 271. Seqq.
+[^contents-and-character-of-the-extant-works-124]: Here Theodoret agrees in the main with Chrysostom and Theophylact, vide Reff. in Alford ad loc.
+[^contents-and-character-of-the-extant-works-125]: “Unquestionably the right view of this controverted passage is that of the Greek Fathers, Chrysostom, Theophylact, Theodoret, and others. In reading their comments it is quite clear that they found no more difficulty in St. Paul’s elliptical use of the Greek υπέρ than we do in Shakespeare’s use of the English ‘for.’ They did not hesitate in their homilies to expound that the phrase ‘for the dead’ meant ‘with an interest in the resurrection of the dead,’ or that ‘for’ by itself meant even so much as ‘in expectation of the resurrection.’ Speaker’s Commentary, iii. 373.
+[^contents-and-character-of-the-extant-works-126]: Chap. xxi. n.
+[^contents-and-character-of-the-extant-works-127]: Ceillier (x. 42) repeats the charge of distinct errors in chronology in (a) the statement that Arius died in 325 instead of in 336; (b) the extension of the exile of Athanasius by four months; (c) the election of Ambrose at the beginning of the reign of Valentinian, instead of ten years later; (d) the troubles at Antioch placed after instead of before those at Thessalonica; (e) the siege of Nisibis in 350 confounded with that of 359. As to (a) the truth is that Theodoret is guilty rather of vagueness than of a misstatement. (Vide I. capp. xiii, xiv.) The objection to (b) the two years and four months exile of Athanasius is due to Valerius (obs. Ecc. i). Canon Bright (Dict. Christ. Biog. i. 187) agrees with Theodoret (cf. Newman Hist. Tracts xii and Hefele, Conciliengesch. i. 467.) In (c) Theodoret is vague, in (d) wrong. According to Valerius Volagesus, and not Jacobus, was bishop of Nisibis in 350.
+[^contents-and-character-of-the-extant-works-128]: τῆς ἐκκλησιαστικῆς ἱστορίας τὰ παραλειπόμενα
+[^contents-and-character-of-the-extant-works-129]: Valesii annotationes—Theod: Migne III. 1522. Valesius is the Latinized form of Henri de Valois, French historiographer royal, who edited Ammianus Marcellinus and the Greek Ecclesiastical historians. He died in 1692.
+[^contents-and-character-of-the-extant-works-130]: Theod. Ed. Migne. V. 282.
+[^contents-and-character-of-the-extant-works-131]: Ep. XXXIV.
+[^contents-and-character-of-the-extant-works-132]: “Baronius obviously approves of Gregory’s remark about Theodoret’s lies, that is his errors in the order of events, and out of Book iv. produces no less than fifteen blunders, to say nothing of those in iii and v.” Garner. loc. cit. 280, 281.
+[^contents-and-character-of-the-extant-works-133]: Canon Venables Dict. Christ. Biog. iv. 918.
+[^contents-and-character-of-the-extant-works-134]: *Historical Sketches* iii. 314.
+[^contents-and-character-of-the-extant-works-135]: Theod. Ed. Migne. iii. 1244. Schröckh. xviii. 362.
+[^contents-and-character-of-the-extant-works-136]: Ep. CXV.
+[^contents-and-character-of-the-extant-works-137]: *Histoire de l’Église*. II. 1225. Jacques de Beauval Basnage †1723.
+[^contents-and-character-of-the-extant-works-138]: Schröckh Kirchengesch., Vol. xviii. 410.
+[^contents-and-character-of-the-extant-works-139]: Græc. Cur. Aff. Ed. Migne 754.
+[^contents-and-character-of-the-extant-works-140]: *“On y voit toute la beauté du gènie de Théodoret; du choix dans les pensées, de la noblesse dans les expressions, de l’élégance et de la netteté dans le style, de la suite et de la force dans les raisonnements.”* Ceillier x. 88 (Remi Ceillier †1761. His “*Histoire Générale des auteurs sacrés*” was published in Paris 1729–1763.)
+[^contents-and-character-of-the-extant-works-141]: Ep. lxxxiii.
+[^contents-and-character-of-the-extant-works-142]: cf. Ecclus. xxxix. 27
+[^contents-and-character-of-the-extant-works-143]: Σατορνεῖλος or Σατορνῖλος in Hippolytus, Epiphanius, and Theodoret; but Σατορνῖνος (Saturninus) in Irenæus and Eusebius.
+[^contents-and-character-of-the-extant-works-144]: A Galatian sect. Jerome has “Ascodrobi,” Epiphanius (Hær. 416) identifies “Tascodrugitæ,” with Cataphrygians or Montanists, and says they were so called from the habit of putting their finger to their nose when praying.
+[^contents-and-character-of-the-extant-works-145]: In Epiphanius (i. 85, B) Barbelitæ. Barbelo was a mythologic personage; — The sect gnostic.
+[^contents-and-character-of-the-extant-works-146]: Ceillier x. 84.
+[^contents-and-character-of-the-extant-works-147]: xviii. 416.
+[^contents-and-character-of-the-extant-works-148]: ἔμψυχον
+[^contents-and-character-of-the-extant-works-149]: Matt. i. 21
+[^contents-and-character-of-the-extant-works-150]: Ps. xlv. 7
+[^contents-and-character-of-the-extant-works-151]: Is. lxi. 1
+[^contents-and-character-of-the-extant-works-152]: Luke iv. 21
+[^contents-and-character-of-the-extant-works-153]: Acts x. 37, 38
+[^contents-and-character-of-the-extant-works-154]: cf. note on pp. 132 and 194.
+[^contents-and-character-of-the-extant-works-155]: Matt. x. 28
+[^contents-and-character-of-the-extant-works-156]: Rom. v. 12, 13, 14
+[^contents-and-character-of-the-extant-works-157]: Page 26.
+[^contents-and-character-of-the-extant-works-158]: Mansi. T. IV. 1012 Seqq. Migne Pat. LXXVII. 85.
+[^contents-and-character-of-the-extant-works-159]: Jos. i. 5
+[^contents-and-character-of-the-extant-works-160]: Gieseler Vol. I. p. 231.
+[^contents-and-character-of-the-extant-works-161]: Gieseler i. 235.
+[^contents-and-character-of-the-extant-works-162]: Synod. c. 17. Mansi V. p. 773.
+[^contents-and-character-of-the-extant-works-163]: In Walch’s Hist. Ketz. V. 778, there is a good summary of Nestorius’ views: he thinks the dispute a mere logomachy. So also Luther, and after him Basnage, Dupin, Jablonski. Vide reff. in Gieseler i. 236.
+[^contents-and-character-of-the-extant-works-164]: Ecc. Hist. xiv. 54.
+[^contents-and-character-of-the-extant-works-165]: xviii. 427.
+[^contents-and-character-of-the-extant-works-166]: Dict. Christ. Biog. iv. 918.
+[^contents-and-character-of-the-extant-works-167]: Marc. 466. Ceiller x. 25.
+[^contents-and-character-of-the-extant-works-168]: Cod. xxiv., p. 527.
+[^contents-and-character-of-the-extant-works-169]: *La vie sainte et édifiante que Théodoret mena dès sa première jeunesse; les travaux apostoliques dont il honora son épiscopat; son zèle pour la conversion des ennemis de l’église; les persecutions qu’il souffrait pour le nom de Jésus Christ; son amour pour la solitude, pour la pauvreté et pour les pauvres; l’esprit de charité qu’il a fait paraitre dans toutes les occasions; la généreuse liberté dans la confession de la vérité; sa profonde humilité qui parait dans tous ses écrits; le succès dont Dieu bénit ses soins et ses mouvements pour le salut des hommes, l’ont rendu venerable dans l’église. Les anciens l’ont qualifié saint, et apellé un homme divin; mais la qualité qu’ils lui donnent ordinairement c’est celle de bienheureux.”* Ceillier. x. 25.
+[^contents-and-character-of-the-extant-works-170]: cf. Schröckh xviii. 356.
+
+## Manuscripts and Editions of Separate Works.
+
+The editions of the Ecclesiastical History are the most numerous, though of several others there are many. Of the collected works the following are the principal.
+
+(i) Editio princeps, of Paulus Manutius, Latin Version only. Rome 1556.
+
+(ii) J. Birckman, fol. 2 voll. Latin only Cologne 1573.
+
+(iii) J. Sirmond, 4 voll. fol. Greek and Latin, Paris 1642.
+
+To this the Auctarium of J. Garnier, with his dissertations was added in 1684.
+
+(iv) John Lewis Schulze, Greek and Latin, based upon the preceding, in 5 voll. Halle, 1774.
+
+(v) Migne’s edition of the foregoing. Paris 1860.
+
+(The last-named is the Edition used for the translation in this work.)
+
+The mss. authority for the works of Theodoret is strong. The afore-named editions are based on ms. in the libraries of Augsburg, Florence, Rome and Naples.
+
+To works on Theodoret mentioned in the notes may be added:—
+
+S. Küpper, Ausgew, Schriften des sel. Theodoret aus dem Urtext übers.
+
+E. Binder, Études sur Theodoret. Geneva, 1844.
+
+Specht, Theodor von Mopsuestia, und Theodoret von Cyrus. Munich, 1871.

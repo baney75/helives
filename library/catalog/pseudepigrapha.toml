@@ -1,0 +1,13 @@
+[[collection]]
+id = "pseudepigrapha"
+title = "Pseudepigrapha"
+order = 3
+summary = "Ancient Jewish and Christian writings, many issued under the name of a figure from the Old Testament, that are outside every Western canon. They are kept here for history and study: they show what Jews and early Christians read around the time of Christ. They are not Scripture. The Testaments of the Twelve Patriarchs are in the Ante-Nicene Fathers collection (ANF volume 8)."
+
+[authors.pseudepigrapha-anonymous]
+name = "Anonymous Jewish and Christian authors"
+dates = "3rd century BC to 2nd century AD"
+role = "Writers of the Pseudepigrapha"
+summary = "The authors of these books are unknown. Most wrote under the name of an ancient figure such as Enoch, Baruch or Isaiah. The English translations here are by R. H. Charles and his colleagues, published in the early twentieth century."
+portrait = ""
+source = "https://archive.org/details/bookofenoch0000unse"

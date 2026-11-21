@@ -1,0 +1,111 @@
+[work]
+id = "bsb-jonah"
+title = "Jonah"
+short_title = "Jonah"
+author = "bible"
+collection = "bible"
+order = 32
+language = "Hebrew, Aramaic"
+translator = "Berean Standard Bible"
+edition = "Berean Standard Bible (2023 public domain edition)"
+source_url = "https://bereanbible.com/bsb_usfm.zip"
+source_sha256 = "f0c56438eb89c98e8f62c5c00461e25cc35b098ad5b179bc350cede759ee5f87"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Dedicated to the public domain by the Berean Bible Translation Committee (2023)"
+testament = "OT"
+book_number = 32
+chapters = 4
+verses = 48
+words = 1253
+
+[[section]]
+id = "1"
+title = "Jonah 1"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "Jonah Flees from the LORD" },
+  { t = "ref", text = "(Nahum 1:1–15)" },
+  { t = "v", n = 1, p = true, text = "Now the word of the LORD came to Jonah son of Amittai, saying," },
+  { t = "v", n = 2, text = "“Get up! Go to the great city of Nineveh and preach against it, because its wickedness has come up before Me.”" },
+  { t = "v", n = 3, p = true, text = "Jonah, however, got up to flee to Tarshish, away from the presence of the LORD. He went down to Joppa and found a ship bound for Tarshish. So he paid the fare and went aboard to sail for Tarshish, away from the presence of the LORD." },
+  { t = "h", level = 2, text = "The Great Storm" },
+  { t = "ref", text = "(Acts 27:13–26)" },
+  { t = "v", n = 4, p = true, text = "Then the LORD hurled a great wind upon the sea, and such a violent storm arose that the ship was in danger of breaking apart." },
+  { t = "v", n = 5, text = "The sailors were afraid, and each cried out to his own god. And they threw the ship’s cargo into the sea to lighten the load. But Jonah had gone down to the lowest part of the vessel, where he lay down and fell into a deep sleep." },
+  { t = "v", n = 6, p = true, text = "The captain approached him and said, “How can you sleep? Get up and call upon your God. Perhaps this God will consider us, so that we may not perish.”" },
+  { t = "v", n = 7, p = true, text = "“Come!” said the sailors to one another. “Let us cast lots to find out who is responsible for this calamity that is upon us.” So they cast lots, and the lot fell on Jonah." },
+  { t = "v", n = 8, p = true, text = "“Tell us now,” they demanded, “who is to blame for this calamity that is upon us? What is your occupation, and where have you come from? What is your country, and who are your people?”" },
+  { t = "v", n = 9, p = true, text = "“I am a Hebrew,” replied Jonah. “I worship the LORD, the God of the heavens, who made the sea and the dry land.”" },
+  { t = "v", n = 10, p = true, text = "Then the men were even more afraid and said to him, “What have you done?” The men knew that he was fleeing from the presence of the LORD, because he had told them." },
+  { t = "h", level = 2, text = "Jonah Cast into the Sea" },
+  { t = "v", n = 11, p = true, text = "Now the sea was growing worse and worse, so they said to Jonah, “What must we do to you to calm this sea for us?”" },
+  { t = "v", n = 12, p = true, text = "“Pick me up,” he answered, “and cast me into the sea, so it may quiet down for you. For I know that I am to blame for this violent storm that has come upon you.”" },
+  { t = "v", n = 13, p = true, text = "Nevertheless, the men rowed hard[^a] to get back to dry land, but they could not, for the sea was raging against them more and more." },
+  { t = "v", n = 14, p = true, text = "So they cried out to the LORD: “Please, O LORD, do not let us perish on account of this man’s life! Do not charge us with innocent blood! For You, O LORD, have done as You pleased.”" },
+  { t = "v", n = 15, p = true, text = "Then they picked up Jonah and cast him into the sea, and the raging sea grew calm." },
+  { t = "v", n = 16, p = true, text = "Then the men feared the LORD greatly, and they offered a sacrifice to the LORD and made vows to Him." },
+  { t = "v", n = 17, p = true, text = "Now the LORD had appointed a great fish to swallow Jonah, and Jonah spent three days and three nights in the belly of the fish." },
+  { t = "note", id = "a", text = "Hebrew *the men dug in*" },
+]
+
+[[section]]
+id = "2"
+title = "Jonah 2"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "Jonah’s Prayer" },
+  { t = "v", n = 1, p = true, text = "From inside the fish, Jonah prayed to the LORD his God," },
+  { t = "v", n = 2, text = "saying: “In my distress I called to the LORD, and He answered me. From the belly of Sheol I called for help, and You heard my voice." },
+  { t = "v", n = 3, indent = 1, text = "For You cast me into the deep, into the heart of the seas, and the current swirled about me; all Your breakers and waves swept over me." },
+  { t = "v", n = 4, indent = 1, text = "At this, I said, ‘I have been banished from Your sight; yet I will look once more toward Your holy temple.’" },
+  { t = "v", n = 5, indent = 1, p = true, text = "The waters engulfed me to take my life; the watery depths closed around me; the seaweed wrapped around my head." },
+  { t = "v", n = 6, indent = 1, text = "To the roots of the mountains I descended; the earth beneath me barred me in forever! But You raised my life from the pit, O LORD my God!" },
+  { t = "v", n = 7, indent = 1, p = true, text = "As my life was fading away, I remembered the LORD. My prayer went up to You, to Your holy temple." },
+  { t = "v", n = 8, indent = 1, text = "Those who cling to worthless idols forsake His loving devotion.[^a]" },
+  { t = "v", n = 9, indent = 1, text = "But I, with the voice of thanksgiving, will sacrifice to You. I will fulfill what I have vowed. Salvation is from the LORD!”" },
+  { t = "v", n = 10, p = true, text = "And the LORD commanded the fish, and it vomited Jonah onto dry land." },
+  { t = "note", id = "a", text = "Forms of the Hebrew *chesed* are translated here and in most cases throughout the Scriptures as *loving devotion*; the range of meaning includes *love*, *goodness*, *kindness*, *faithfulness*, and *mercy*, as well as *loyalty to a covenant*." },
+]
+
+[[section]]
+id = "3"
+title = "Jonah 3"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "The Ninevites Repent" },
+  { t = "ref", text = "(Matthew 12:38–42; Luke 11:29–32)" },
+  { t = "v", n = 1, p = true, text = "Then the word of the LORD came to Jonah a second time:" },
+  { t = "v", n = 2, text = "“Get up! Go to the great city of Nineveh and proclaim to it the message that I give you.”" },
+  { t = "v", n = 3, p = true, text = "This time Jonah got up and went to Nineveh, in accordance with the word of the LORD. Now Nineveh was an exceedingly great city,[^a] requiring a three-day journey.[^b]" },
+  { t = "v", n = 4, text = "On the first day of his journey, Jonah set out into the city and proclaimed, “Forty more days and Nineveh will be overturned!”" },
+  { t = "v", n = 5, p = true, text = "And the Ninevites believed God. They proclaimed a fast and dressed in sackcloth, from the greatest of them to the least." },
+  { t = "v", n = 6, p = true, text = "When word reached the king of Nineveh, he got up from his throne, took off his royal robe, covered himself with sackcloth, and sat in ashes." },
+  { t = "v", n = 7, p = true, text = "Then he issued a proclamation in Nineveh: “By the decree of the king and his nobles: Let no man or beast, herd or flock, taste anything at all. They must not eat or drink." },
+  { t = "v", n = 8, text = "Furthermore, let both man and beast be covered with sackcloth, and have everyone call out earnestly to God. Let each one turn from his evil ways and from the violence in his hands." },
+  { t = "v", n = 9, text = "Who knows? God may turn and relent; He may turn from His fierce anger, so that we will not perish.”" },
+  { t = "v", n = 10, p = true, text = "When God saw their actions—that they had turned from their evil ways—He relented from the disaster He had threatened to bring upon them." },
+  { t = "note", id = "a", text = "Or *was a great city to God*" },
+  { t = "note", id = "b", text = "Literally *great city, a three-day journey*" },
+]
+
+[[section]]
+id = "4"
+title = "Jonah 4"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "Jonah’s Anger at the LORD’s Compassion" },
+  { t = "v", n = 1, p = true, text = "Jonah, however, was greatly displeased, and he became angry.[^a]" },
+  { t = "v", n = 2, text = "So he prayed to the LORD, saying, “O LORD, is this not what I said while I was still in my own country? This is why I was so quick to flee toward Tarshish. I knew that You are a gracious and compassionate God, slow to anger, abounding in loving devotion—One who relents from sending disaster." },
+  { t = "v", n = 3, text = "And now, O LORD, please take my life from me, for it is better for me to die than to live.”" },
+  { t = "v", n = 4, p = true, text = "But the LORD replied, “Have you any right to be angry?”" },
+  { t = "v", n = 5, p = true, text = "Then Jonah left the city and sat down east of it, where he made himself a shelter and sat in its shade to see what would happen to the city." },
+  { t = "v", n = 6, text = "So the LORD God appointed a vine,[^b] and it grew up to provide shade over Jonah’s head to ease his discomfort, and Jonah was greatly pleased with the plant." },
+  { t = "v", n = 7, p = true, text = "When dawn came the next day, God appointed a worm that attacked the plant so that it withered." },
+  { t = "v", n = 8, p = true, text = "As the sun was rising, God appointed a scorching east wind, and the sun beat down on Jonah’s head so that he grew faint and wished to die, saying, “It is better for me to die than to live.”" },
+  { t = "v", n = 9, p = true, text = "Then God asked Jonah, “Have you any right to be angry about the plant?” “I do,” he replied. “I am angry enough to die!”" },
+  { t = "v", n = 10, p = true, text = "But the LORD said, “You cared about the plant, which you neither tended nor made grow. It sprang up in a night and perished in a night." },
+  { t = "v", n = 11, text = "So should I not care about the great city of Nineveh, which has more than 120,000 people who cannot tell their right hand from their left, and many cattle as well?”" },
+  { t = "note", id = "a", text = "Or *It was exceedingly evil to Jonah, and he became angry*" },
+  { t = "note", id = "b", text = "Hebrew *qiqayon*; that is, possibly the castor oil plant; also in verses 7, 9, and 10" },
+]

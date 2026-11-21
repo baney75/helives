@@ -1,0 +1,162 @@
+---
+title: "Fragments of Caius"
+author: "caius"
+language: "Greek"
+translator: "Rev. S. D. F. Salmond"
+edition: "Ante-Nicene Fathers, Vol. 5 (1886), ed. Roberts, Donaldson and Coxe"
+source_url: "https://www.ccel.org/ccel/schaff/anf05.xml"
+license: "Public domain"
+license_basis: "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words: 3270
+---
+
+# Fragments of Caius
+
+## Introductory Notice to Caius, Presbyter of Rome.
+
+### to
+
+### Caius, Presbyter of Rome.
+
+[a.d. 180–217.] During the episcopate of Zephyrinus, Caius, one of his presbyters, acquired much credit by his refutation of Proclus, a Montanist. He became known as an eloquent and erudite doctor, and to him has often been ascribed the *Philosophumena* of Hippolytus, and also *The Labyrinth*. He wrote in Greek, and finally seems to have been promoted to an episcopal See, possibly among the Easterns.[^introductory-notice-to-caius-presbyter-of-rome-4950] To him also has been ascribed the celebrated “Muratorian Canon,” which is therefore given in this volume, with other fragments less dubiously associated with his name. He has been supposed by some to have been a pupil of Irenæus, but of this there is no conclusive evidence. If his reputation suffers somewhat from his supposed rejection of the Apocalypse, it is apologized for by Wordsworth, in a paragraph that deserves to be quoted entire: “Let it be remembered that the church of Rome was not eminent for learning at that time. It was induced, by fear of erroneous consequences, to surrender another canonical book,—the Epistle to the Hebrews. The learning of the Church was then mainly in the East. It was by the influence of the East, in the West, that the church of Rome was enabled to recover that epistle. It was also the influence of the Apocalyptic churches of Asia that preserved the Apocalypse as an inspired work of St. John to the church of Rome.” By the deference with which the author of the *Refutation* speaks of the Apocalypse, we are able, among other evidences, to decide that it is not the work of Caius.
+
+In an interesting chapter of his *Hippolytus*, Bishop Wordsworth considers the possibility of the authorship of that work as his, and discusses it with ability and learning. Nearly all that is known or conjectured concerning Caius is there condensed and elucidated. But Lardner devotes a yet more learned chapter to him; and to that the inquirer is referred, as a sufficient elucidation of all that was known or conjectured about him before the present century. He is quoted by Eusebius;[^introductory-notice-to-caius-presbyter-of-rome-4951] and the traveller is reminded, when he visits the gorgeous Church of St. Paul on the Ostian Road, that so early an author as Caius may be cited as evidence that it probably stands very near the spot where St. Paul fulfilled his prophecy, “I am now ready to be offered, and the time of my departure is at hand.” We can only conjecture the time of his birth by the age he must have attained in the time of Zephyrinus; but of his death, the secret is with the Master in whom he believed, as we may trust, until he fell asleep.
+
+Here follows, from the Edinburgh series, the learned editor’s Introductory Notice:—
+
+Eusebius states that Caius lived in the time of Zephyrinus.[^introductory-notice-to-caius-presbyter-of-rome-4952] He speaks of him as a member of the Catholic Church,[^introductory-notice-to-caius-presbyter-of-rome-4953] and as being most learned. And he mentions that a dialogue of his was extant in his time, in which he argued with Proclus, the leader of the Cataphrygian heresy; and that Caius in this dialogue spoke of only thirteen epistles of the Apostle Paul, “not counting the Epistle to the Hebrews with the rest.”[^introductory-notice-to-caius-presbyter-of-rome-4954]
+
+Eusebius mentions no other work of Caius. He makes extracts from a work against the heresy of Artemon in the fifth book of his *Ecclesiastical History*, but he states distinctly that the work was anonymous. He evidently did not know who was the author. Theodoret and Nicephorus affirm that the work from which Eusebius made these extracts bore the title of *The Little Labyrinth*. Photius has the following notice of Caius: “Read the work of Josephus on the universe, bearing in some manuscripts the inscription *On the Cause of the Universe*, and in others, *On the Substance of the Universe*.…But I found that this treatise is not the work of Josephus, but of one Gaius a presbyter, who lived in Rome, who they say composed *The Labyrinth* also, and whose dialogue with Proclus, the champion of the Montanistic heresy, is in circulation.…They say also that he composed another treatise specially directed against the heresy of Artemon.”[^introductory-notice-to-caius-presbyter-of-rome-4955] Photius here ascribes four works to Caius: 1. *On the Universe*; 2. *The Labyrinth*; 3. *The Dialogue between himself and Proclus*; 4. *The Treatise against the Heresy of Artemon*. He does not say that he read any of them but the first. This treatise is now assigned to Hippolytus. The information of Photius in regard to the other three, derived as it is from the statements of others, cannot be trusted.
+
+### Note by the American Editor.
+
+It is to be observed that the Fragment of *Muratori* proves that the *Apocalypse* was received in the church at Rome in the times of Pius, a.d. 160. It is quoted in *Hermas* freely. Also, see the Epistle of Roman clergy to Cyprian (p. 303, note 5, *supra*), about a.d. 250. But the *Fragment* aforesaid is the earliest direct evidence on the subject. Note, that its author says, “*We* receive the Apocalypse,” etc. “*Some amongst us* will not have,” etc. (see p. 602, *infra*). Thus, the comprovincials have a voice, as in the cases cited by Hippolytus. See (pp. 157, 159, *supra*) Elucidations VI. and XI. The Bishop of Rome seems, by this *Fragment*, to have received the *Apocalypse of Peter* (Eusebius, *H. E.*, book iii. cap. 25), but it was thrown out as spurious by the Church nevertheless.
+
+[^introductory-notice-to-caius-presbyter-of-rome-4950]: The ingenious conjecture of Wordsworth, who surmises that καὶ ἐθνῶν ἐπίσκοπον, in Photius, should be read καὶ ἑωθινῶν. *Hippolytus*, p. 30. Another conjecture is ᾽Αθηνῶν. For the originals of these Fragments and learned notes, see Routh, *Reliquæ Sacræ*, ii. p. 127.
+[^introductory-notice-to-caius-presbyter-of-rome-4951]: Eusebius quotes him in several places (book ii. cap. xxv., book iii. capp. xxviii. and xxxi.), and cites him in proof that St. Peter suffered on the Vatican, and St. Paul on the *Via Ostiensis*. See Lardner, *Credib*., vol. ii. pp. 394, 410.
+[^introductory-notice-to-caius-presbyter-of-rome-4952]: *Hist. Eccl*., ii. 25, vi. 20.
+[^introductory-notice-to-caius-presbyter-of-rome-4953]: ἐκκλησιαστικὸς ἀνήρ.
+[^introductory-notice-to-caius-presbyter-of-rome-4954]: *Hist. Eccl*., vi. 20.
+[^introductory-notice-to-caius-presbyter-of-rome-4955]: Cod. 48.
+
+## Section I. From a Dialogue or Disputation Against Proclus.
+
+### Fragments of Caius.
+
+I.—From a Dialogue or Disputation Against Proclus.[^section-1-4956]
+
+### I.
+
+### (Preserved in Eusebius’ *Eccles. Hist.*, ii. 25.)
+
+And I can show the trophies of the apostles.[^section-1-4957] For if you choose to go to the Vatican or to the Ostian Road,[^section-1-4958] you will find the trophies of those who founded this church.
+
+### II.
+
+### (In the same, iii. 28.)
+
+But Cerinthus, too, through revelations written, as he would have us believe, by a great apostle, brings before us marvellous things, which he pretends were shown him by angels; alleging that after the resurrection the kingdom of Christ is to be on earth, and that the flesh[^section-1-4959] dwelling in Jerusalem is again to be subject to desires and pleasures. And being an enemy to the Scriptures of God, wishing to deceive men, he says that there is to be a space of a thousand years for marriage festivals.
+
+### III.
+
+### (In the same, iii. 31.)
+
+And after this there were four prophetesses, daughters of Philip, at Hierapolis in Asia. Their tomb is there, and that, too, of their father.[^section-1-4960]
+
+[^section-1-4956]: A defender of the sect of the Cataphrygians.
+[^section-1-4957]: So Jerome, in the Epistle to Marcellus, says: “There, too, is a holy church; there are the trophies of the apostles and martyrs.”
+[^section-1-4958]: The mss. and the *Chronicon* of Georgius Syncellus read *Vasican*, Βασικανόν. The reference is to the Vatican as the traditional burial place of Peter, and to the Ostian Road as that of Paul.
+[^section-1-4959]: [Vol. i. pp. 351–352, 416.]
+[^section-1-4960]: This extract is taken from the Disputation of Caius, but the words are those of Proclus, as is shown by the citation in Eusebius.
+
+## Section II. Against the Heresy of Artemon.
+
+II.—Against the Heresy of Artemon.[^section-2-4961]
+
+### I.
+
+### (In Eusebius’ *Eccl. Hist*., v. 28.)
+
+For they say that all those of the first age, and the apostles themselves, both received and taught those things which these *men* now maintain; and that the truth of Gospel preaching was preserved until the times of Victor, who was the thirteenth bishop in Rome from Peter, and that from his successor Zephyrinus the truth was falsified. And perhaps what they allege might be credible, did not the Holy Scriptures, in the first place, contradict them. And then, besides, there are writings of certain brethren older than the times of Victor, which they wrote against the heathen in defence of the truth, and against the heresies of their time: I mean Justin and Miltiades, and Tatian and Clement, and many others, in all which divinity is ascribed to Christ. For who is ignorant of the books of Irenæus and Melito, and the rest, which declare Christ to be God and man? All the psalms, too, and hymns[^section-2-4962] of brethren, which have been written from the beginning by the faithful, celebrate Christ the Word of God, ascribing divinity to Him. Since the doctrine of the Church, then, has been proclaimed so many years ago, how is it possible that men have preached, up to the time of Victor, in the manner asserted by these? And how are they not ashamed to utter these calumnies against Victor, knowing well that Victor excommunicated Theodotus the tanner,[^section-2-4963] the leader and father of this God-denying apostasy, who first affirmed that Christ was a mere man? For if, as they allege, Victor entertained the very opinions which their blasphemy teaches, how should he have cast off Theodotus, the author of this heresy?
+
+### II.
+
+### (In Eusebius, as above.)
+
+I shall, at any rate, remind many of the brethren of an affair that took place in our own time,—an affair which, had it taken place in Sodom, might, I think, have been a warning even to them. There was a certain confessor, Natalius,[^section-2-4964] who lived not in distant times, but in our own day. He was deluded once by Asclepiodotus, and another Theodotus, a banker. And these were both disciples of Theodotus the tanner, the first who was cut off from communion on account of this sentiment, or rather senselessness, by Victor, as I said, the bishop of the time.[^section-2-4965] Now Natalius was persuaded by them to let himself be chosen[^section-2-4966] bishop of this heresy, on the understanding that he should receive from them a salary of a hundred and fifty *denarii* a month. Connecting himself, therefore, with them, he was on many occasions admonished by the Lord in visions. For our merciful God and Lord Jesus Christ was not willing that a witness of His own sufferings should perish, being without the Church. But as he gave little heed to the visions, being ensnared by the dignity of presiding among them, and by that sordid lust of gain which ruins very many, he was at last scourged by holy angels, and severely beaten through a whole night, so that he rose early in the morning, and threw himself, clothed with sackcloth and covered with ashes, before Zephyrinus the bishop, with great haste and many tears, rolling beneath the feet not only of the clergy, but even of the laity, and moving the pity of the compassionate Church of the merciful Christ by his weeping. And after trying many a prayer, and showing the weals left by the blows which he had received, he was at length with difficulty admitted to communion.
+
+### III.
+
+### (In Eusebius, as above)
+
+The sacred Scriptures they have boldly falsified, and the canons of the ancient faith[^section-2-4967] they have rejected, and Christ they have ignored, not inquiring what the sacred Scriptures say, but laboriously seeking to discover what form of syllogism might be contrived to establish their impiety.[^section-2-4968] And should any one lay before them a word of divine Scripture, they examine whether it will make a connected or disjoined form of syllogism;[^section-2-4969] and leaving the Holy Scriptures of God, they study geometry, as men who are of the earth, and speak of the earth, and are ignorant of Him who cometh from above. Euclid, indeed, is laboriously measured[^section-2-4970] by some of them, and Aristotle and Theophrastus are admired; and Galen,[^section-2-4971] forsooth, is perhaps even worshipped by some of them. But as to those men who abuse the arts of the unbelievers to establish their own heretical doctrine, and by the craft of the impious adulterate the simple faith of the divine Scriptures, what need is there to say that these are not near the faith? For this reason is it they have boldly laid their hands upon the divine Scriptures, alleging that they have corrected them. And that I do not state this against them falsely, any one who pleases may ascertain. For if any one should choose to collect and compare all their copies together, he would find many discrepancies among them. The copies of Asclepiades,[^section-2-4972] at any rate, will be found at variance with those of Theodotus. And many such copies are to be had, because their disciples were very zealous in inserting the corrections, as they call them, i.e., the corruptions made by each of them. And again, the copies of Hermophilus do not agree with these; and as for those of Apollonius,[^section-2-4973] they are not consistent even with themselves. For one may compare those which were formerly prepared by them[^section-2-4974] with those which have been afterwards corrupted with a special object, and many discrepancies will be found. And as to the great audacity implied in this offence, it is not likely that even they themselves can be ignorant of that. For either they do not believe that the divine Scriptures were dictated by the Holy Spirit, and are thus infidels; or they think themselves wiser than the Holy Spirit, and what are they then but demoniacs? Nor can they deny that the crime is theirs, when the copies have been written with their own hand; nor[^section-2-4975] did they receive such copies of the Scriptures from those by whom they were first instructed in the faith, and they cannot produce copies from which these were transcribed. And some of them did not even think it worth while to corrupt them; but simply denying the law and the prophets for the sake of their lawless and impious doctrine, under pretexts of grace, they sunk down to the lowest abyss of perdition.[^section-2-4976]
+
+[^section-2-4961]: Two fragments of an anonymous work ascribed by some to Caius. Artemon and his followers maintained that Christ was mere (ψιλόν) man.
+[^section-2-4962]: [Elucidation, I.]
+[^section-2-4963]: [See cap. xxiii. p. 114, *supra*, and Euseb., iii. cap. 28.]
+[^section-2-4964]: This *may*, perhaps, be the Cæcilius Natalis who appears in the *Octavius* of Minucius Felix, as maintaining the cause of paganism against Octavius Januarius, and becoming a convert to the truth through the discussion. Name, time, and profession at least suit. [A painful conjecture, and quite gratuitous. See the *Octavius*, cap. xvi. note 6, p. 181, vol. iv., this series.]
+[^section-2-4965]: [τοῦ τότε ἐπισκόπου, “the then bishop.” *Text of Routh.*]
+[^section-2-4966]: There is another reading—*named* (κληθῆναι) instead of *chosen* or *elected* (κληρωθῆναι).
+[^section-2-4967]: [Thus early, primitive canons are recognised as in force.]
+[^section-2-4968]: [Here we have an early foreshadowing of the schoolmen, whose rise was predicted by St. Bernard in his protest against Abelard. See Bernard, *Opp*., tom. i. p. 410, *et alibi*.]
+[^section-2-4969]: The connected form here is the *hypothetical*, as e.g., “If it is day, it is light.” The *disjoined* is the *disjunctive*, as e.g., “It is either day or night.” The words admit another rendering, viz., “Whether it, when connected or disjoined, will make the form of a syllogism.”
+[^section-2-4970]: There is a play in the original on the word *geometry*.
+[^section-2-4971]: Galen composed treaties on the figures of syllogisms, and on philosophy in general. This is also a notable testimony, as proceeding from a very ancient author, almost contemporary with Galen himself. And from a great number of other writers, as well as this one, it is evident that Galen was ranked as the equal of Aristotle, Theophrastus, and even Plato. [Galen died *circa* a.d. 200.]
+[^section-2-4972]: In Nicephorus it is *Asclepiodotus*, which is also the reading of Rufinus.
+[^section-2-4973]: It appears from Theodoret (*Hæret. Fab*., book ii. ch. v.), as well as from Nicephorus and Rufinus, that we should read *Apollonides* for Apollonius.
+[^section-2-4974]: There is another reading—*by him*.
+[^section-2-4975]: This paragraph, down to the word “transcribed,” is wanting in the Codex Regius.
+[^section-2-4976]: [Note the care and jealousy with which the integrity of the *codices* was guarded. Comp. *Uncan. and Apoc. Scriptures*, by Churton, London, 1884.]
+
+## Section III. Canon Muratorianus.
+
+III.—Canon Muratorianus.[^section-3-4977]
+
+### (In Muratori, *V. C. Antiq. Ital. Med. æv.*, vol. iii. col. 854.)
+
+I.…those things at which he was present he placed thus.[^section-3-4978] The third book of the Gospel, that according to Luke, the well-known physician Luke wrote in his own name[^section-3-4979] in order after the ascension of Christ, and when Paul had associated him with himself[^section-3-4980] as one studious of right.[^section-3-4981] Nor did he himself see the Lord in the flesh; and he, according as he was able to accomplish it, began[^section-3-4982] his narrative with the nativity of John. The fourth Gospel is that of John, one of the disciples. When his fellow-disciples and bishops entreated him, he said, “Fast ye now with me for the space of three days, and let us recount to each other whatever may be revealed to each of us.” On the same night it was revealed to Andrew, one of the apostles, that John should narrate all things in his own name as they called them to mind.[^section-3-4983] And hence, although different points[^section-3-4984] are taught us in the several books of the Gospels, there is no difference as regards the faith of believers, inasmuch as in all of them all things are related under one imperial Spirit,[^section-3-4985] which concern the *Lord’s* nativity, His passion, His resurrection, His conversation with His disciples, and His twofold advent,—the first in the humiliation of rejection, which is now past, and the second in the glory of royal power, which is yet in the future. What marvel is it, then, that John brings forward these several things[^section-3-4986] so constantly in his epistles also, saying in his own person, “What we have seen with our eyes, and heard with our ears, and our hands have handled, that have we written.”[^section-3-4987] For thus he professes himself to be not only the eye-witness, but also the hearer; and besides that, the historian of all the wondrous facts concerning the Lord in their order.
+
+2. Moreover, the Acts of all the Apostles are comprised by Luke in one book, and addressed to the most excellent Theophilus, because these different events took place when he was present himself; and he shows this clearly—i.e., that the principle on which he wrote was, to give only what fell under his own notice—by the omission[^section-3-4988] of the passion of Peter, and also of the journey of Paul, when he went from the city—Rome—to Spain.
+
+3. As to the epistles[^section-3-4989] of Paul, again, to those who will understand the matter, they indicate of themselves what they are, and from what place or with what object they were directed. He wrote first of all, and at considerable length, to the Corinthians, to check the schism of heresy; and then to the Galatians, to forbid circumcision; and then to the Romans on the rule of the *Old Testament* Scriptures, and also to show them that Christ is the first object[^section-3-4990] in these;—which it is needful for us to discuss severally,[^section-3-4991] as the blessed Apostle Paul, following the rule of his predecessor John, writes to no more than seven churches by name, in this order: the first to the Corinthians, the second to the Ephesians, the third to the Philippians, the fourth to the Colossians, the fifth to the Galatians, the sixth to the Thessalonians, the seventh to the Romans. Moreover, though he writes twice to the Corinthians and Thessalonians for their correction, it is yet shown—i.e., by this sevenfold writing—that there is one Church spread abroad through the whole world. And John too, indeed, in the Apocalypse, although he writes only to seven churches, yet addresses all. He wrote, besides these, one to Philemon, and one to Titus, and two to Timothy, in simple personal affection and love indeed; but yet these are hallowed in the esteem of the Catholic Church, *and* in the regulation of ecclesiastical discipline. There are also in circulation one to the Laodiceans, and another to the Alexandrians, forged under the name of Paul, *and* addressed against the heresy of Marcion; and there are also several others which cannot be received into the Catholic Church, for it is not suitable for gall to be mingled with honey.
+
+4. The Epistle of Jude, indeed,[^section-3-4992] and two belonging to the above-named John—or bearing the name of John—are reckoned among the Catholic *epistles*.[^section-3-4993] And the *book of* Wisdom, written by the friends of Solomon in his honour. We receive also the Apocalypse of John and *that of* Peter, though some amongst us will not have this latter read in the Church. The *Pastor*, moreover, did Hermas write very recently in our times in the city of Rome, while his brother bishop Pius sat in the chair of the Church of Rome. And therefore it also ought to be read; but it cannot be made public[^section-3-4994] in the Church to the people, nor *placed* among the prophets, as their number is complete, nor among the apostles to the end of time. Of *the writings of* Arsinous, called also Valentinus, or of Miltiades, we receive nothing at all. Those *are rejected* too who wrote the new *Book of Psalms* for Marcion, together with Basilides and the founder of the Asian Cataphrygians.[^section-3-4995]
+
+[^section-3-4977]: An acephalous fragment on the canon of the sacred Scriptures, ascribed by some to Caius. This very important fragment [vol. ii. pp. 4 and 56, this series] was discovered by Muratori in the Ambrosian Library at Milan, and published by him in his *Antiquitates Italicæ* in 1740. This manuscript belongs to the seventh or eighth century. Muratori ascribed it to Caius, Bunsen to Hegesippus; but there is no clue whatever to the authorship. From internal evidence the writer of the fragment is believed to belong to the latter half of the second century. The fragment has been much discussed. For a full account of it, see Westcott’s *General Survey of the History of the Canon of the New Testament*, 2d ed. p. 184 ff., and Tregelles’ *Canon Muratorianus*; [also Routh, *Rel.*, i. pp. 394–434].
+[^section-3-4978]: The text is, “quibus tamen interfuit et ita posuit.” Westcott omits the “et.” Bunsen proposes “*ipse non*interfuit.” The reference probably is to the statement of Papias (Euseb., *Histor. Eccles*., iii. 39) as to Mark’s Gospel being a narrative not of what he himself witnessed, but of what he heard from Peter.
+[^section-3-4979]: The text gives “numine suo ex opinione concriset,” for which we read “nomine suo ex ordine conscripsit” with Westcott.
+[^section-3-4980]: Reading “secum” for “secundum.”
+[^section-3-4981]: The text gives “quasi ut juris studiosum,” for which “quasi et virtutis studiosum,” ="as one devoted to virtue,” has been proposed. Bunsen reads “itineris socium” ="as his companion in the way.”
+[^section-3-4982]: “Incepit” for “incipet.”
+[^section-3-4983]: Or as they revised them, *recognoscentibus*.
+[^section-3-4984]: *Principia*.
+[^section-3-4985]: *Principali*, leading. [Note this theory of inspiration.]
+[^section-3-4986]: *Singula*.
+[^section-3-4987]: 1 John i. 1.
+[^section-3-4988]: The text is, “semote passionem Petri,” etc., for which Westcott reads “semotâ.” [A noteworthy statement.]
+[^section-3-4989]: Reading “epistolæ” and “directæ” instead of “epistola” and “directe,” and “volentibus” for “voluntatibus.”
+[^section-3-4990]: *Principium*.
+[^section-3-4991]: The text is, “de quibus singulis necesse est a nobis disputari cum,” etc. Bunsen reads, “de quibus non necesse est a nobis disputari cur” ="on which we need not discuss the reason why.”
+[^section-3-4992]: *Sane*.
+[^section-3-4993]: The text is “in catholica,” which may be “in the Catholic Church.” Bunsen, Westcott, etc., read “in catholicis.”
+[^section-3-4994]: Reading “sed publicari” for “se publicare.” [Vol. ii. p. 3.]
+[^section-3-4995]: [For remarks of my own on the *Muratorian Canon*, see vol. ii. p. 56, this series.]
+
+## Elucidations.
+
+### I.
+
+### (Psalms and hymns, p. 601.)
+
+I subjoin as an elucidation, to which I have suffixed references of my own, a valuable note of the Edinburgh editor,[^elucidations-4996] which is found on p. 156 of vol. ix. in that series: “From this it appears that it was a very ancient custom in the Church to compose hymns and psalms in honour of Christ. Pliny, in his letter to Trajan, also states that the Christians were accustomed to meet together and sing hymns to Christ.[^elucidations-4997] Hippolytus also may be understood to refer to these hymns and psalms towards the close of his oration on the end of the world,[^elucidations-4998] where he says: ‘Your mouth I made to give glory and praise, and to utter psalms and spiritual songs.’ A hymn of this kind in honour of Jesus Christ, composed by Clement of Alexandria, is extant at the end of his books entitled *Pædagogi*.”[^elucidations-4999]
+
+### II.
+
+### (The Dialogue between himself and Proclus, p. 600.)
+
+I have been unable to get a copy of the work of John de Soynes on *Montanism*, which possibly throws some light upon the *Dialogue with Proclus*, attributed to him by Photius. It is praised by Adolf Harnack, and highly spoken of by English critics. It was a Hulsean prize essay, published Cambridge, 1878.
+
+[^elucidations-4996]: The Rev. S. D. F. Salmond, M. A.
+[^elucidations-4997]: “Soliti essent *Christiani*, stato die, ante lucem convenire, *carmenque* Christo, quasi Deo, *dicere secum invicem*. Compare (Greek) Eph. v. 19 and Col. iii. 16. Lardner gives Pliny’s letter entire, vol. vii. p. 22.
+[^elucidations-4998]: Sec. xlvi. p. 254, *supra*.
+[^elucidations-4999]: Vol. ii. p. 295, this series.

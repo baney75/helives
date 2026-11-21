@@ -1,0 +1,120 @@
+[work]
+id = "athanasian-creed"
+title = "The Athanasian Creed (Quicunque Vult)"
+short_title = "Athanasian Creed"
+author = "church"
+collection = "creeds"
+order = 5
+date = "Late 5th to 6th century, Southern Gaul"
+language = "Latin"
+translator = "Philip Schaff"
+edition = "Philip Schaff, The Creeds of Christendom, Vol. II: The Greek and Latin Creeds, with Translations (New York: Harper & Brothers, 1877); text as reprinted in the sixth edition (1919), CCEL digitization"
+source_url = "https://www.ccel.org/ccel/schaff/creeds2.xml"
+source_sha256 = "412c952ff096d7e09a1f2d9e838e9652f0fedcbf7e8d6f3999c27e69ab69091e"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1877 in the United States (Harper & Brothers); the creed translations are unchanged from that edition"
+words = 1274
+summary = "The Western confession of the Trinity and the Incarnation named for its first words, Quicunque vult, in the old English translation as revised by Schaff, followed by the Latin."
+
+[[section]]
+id = "text"
+title = "The Athanasian Creed"
+level = 1
+blocks = [
+  { t = "p", text = "1. Whosoever will be saved: before all things it is necessary that he hold the Catholic Faith:" },
+  { t = "p", text = "2. Which Faith except every one do keep whole and undefiled: without doubt he shall perish everlastingly." },
+  { t = "p", text = "3. And the Catholic Faith is this: That we worship one God in Trinity, and Trinity in Unity;" },
+  { t = "p", text = "4. Neither confounding the Persons: nor dividing the Substance [Essence]." },
+  { t = "p", text = "5. For there is one Person of the Father: another of the Son: and another of the Holy Ghost." },
+  { t = "p", text = "6. But the Godhead of the Father, of the Son, and of the Holy Ghost, is all one: the Glory equal, the Majesty coeternal." },
+  { t = "p", text = "7. Such as the Father is: such is the Son: and such is the Holy Ghost." },
+  { t = "p", text = "8. The Father uncreate [uncreated]: the Son uncreate [uncreated]: and the Holy Ghost uncreate [uncreated]." },
+  { t = "p", text = "9. The Father incomprehensible [unlimited]: the Son incomprehensible [unlimited]: and the Holy Ghost incomprehensible [unlimited, or infinite]." },
+  { t = "p", text = "10. The Father eternal: the Son eternal: and the Holy Ghost eternal." },
+  { t = "p", text = "11. And yet they are not three eternals: but one eternal." },
+  { t = "p", text = "12. As also there are not three uncreated: nor three incomprehensibles [infinites], but one uncreated: and one incomprehensible [infinite]." },
+  { t = "p", text = "13. So likewise the Father is Almighty: the Son Almighty: and the Holy Ghost Almighty." },
+  { t = "p", text = "14. And yet they are not three Almighties: but one Almighty." },
+  { t = "p", text = "15. So the Father is God: the Son is God: and the Holy Ghost is God." },
+  { t = "p", text = "16. And yet they are not three Gods: but one God." },
+  { t = "p", text = "17. So likewise the Father is Lord: the Son Lord: and the Holy Ghost Lord." },
+  { t = "p", text = "18. And yet not three Lords: but one Lord." },
+  { t = "p", text = "19. For like as we are compelled by the Christian verity: to acknowledge every Person by himself to be God and Lord:" },
+  { t = "p", text = "20. So are we forbidden by the Catholic Religion: to say, There be [are] three Gods, or three Lords." },
+  { t = "p", text = "21. The Father is made of none: neither created, nor begotten." },
+  { t = "p", text = "22. The Son is of the Father alone: not made, nor created: but begotten." },
+  { t = "p", text = "23. The Holy Ghost is of the Father and of the Son: neither made, nor created, nor begotten: but proceeding." },
+  { t = "p", text = "24. So there is one Father, not three Fathers: one Son, not three Sons: one Holy Ghost, not three Holy Ghosts." },
+  { t = "p", text = "25. And in this Trinity none is afore, or after another: none is greater, or less than another [there is nothing before, or after: nothing greater or less]." },
+  { t = "p", text = "26. But the whole three Persons are coeternal, and coequal." },
+  { t = "p", text = "27. So that in all things, as aforesaid: the Unity in Trinity, and the Trinity in Unity, is to be worshiped." },
+  { t = "p", text = "28. He therefore that will be saved, must [let him] thus think of the Trinity." },
+  { t = "p", text = "29. Furthermore it is necessary to everlasting salvation: that he also believe rightly [faithfully] the Incarnation of our Lord Jesus Christ." },
+  { t = "p", text = "30. For the right Faith is, that we believe and confess: that our Lord Jesus Christ, the Son of God, is God and Man;" },
+  { t = "p", text = "31. God, of the Substance [Essence] of the Father; begotten before the worlds: and Man, of the Substance [Essence] of his Mother, born in the world." },
+  { t = "p", text = "32. Perfect God: and perfect Man, of a reasonable soul and human flesh subsisting." },
+  { t = "p", text = "33. Equal to the Father, as touching his Godhead: and inferior to the Father as touching his Manhood." },
+  { t = "p", text = "34. Who although he be [is] God and Man; yet he is not two, but one Christ." },
+  { t = "p", text = "35. One; not by conversion of the Godhead into flesh: but by taking [assumption] of the Manhood into God." },
+  { t = "p", text = "36. One altogether; not by confusion of Substance [Essence]: but by unity of Person." },
+  { t = "p", text = "37. For as the reasonable soul and flesh is one man: so God and Man is one Christ;" },
+  { t = "p", text = "38. Who suffered for our salvation: descended into hell [Hades, spirit-world]: rose again the third day from the dead." },
+  { t = "p", text = "39. He ascended into heaven, he sitteth on the right hand of the Father God [God the Father] Almighty." },
+  { t = "p", text = "40. From whence [thence] he shall come to judge the quick and the dead." },
+  { t = "p", text = "41. At whose coming all men shall rise again with their bodies;" },
+  { t = "p", text = "42. And shall give account for their own works." },
+  { t = "p", text = "43. And they that have done good shall go into life everlasting: and they that have done evil, into everlasting fire." },
+  { t = "p", text = "44. This is the Catholic Faith: which except a man believe faithfully [truly and firmly], he can not be saved." },
+]
+
+[[section]]
+id = "latin"
+title = "Latin Text"
+level = 1
+blocks = [
+  { t = "p", text = "1. Quicunque vult salvus esse: ante omnia opus est, ut teneat catholicam fidem." },
+  { t = "p", text = "2. Quam nisi quisque integram inviolatamque servaverit: absque dubio in æternum peribit." },
+  { t = "p", text = "3. Fides autem catholica hæc est: ut unum Deum in Trinitate, et Trinitatem in Unitate veneremur;" },
+  { t = "p", text = "4. Neque confundentes personas: neque substantiam separantes." },
+  { t = "p", text = "5. Alia est enim persona Patris: alia Filii: alia Spiritus Sancti." },
+  { t = "p", text = "6. Sed Patris et Filii et Spiritus Sancti una est divinitas: æqualis gloria, coæterna majestas." },
+  { t = "p", text = "7. Qualis Pater: talis Filius: talis [et] Spiritus Sanctus." },
+  { t = "p", text = "8. Increatus Pater: increatus Filius: increatus [et] Spiritus Sanctus." },
+  { t = "p", text = "9. Immensus Pater: immensus filius: immensus [et] Spiritus Sanctus." },
+  { t = "p", text = "10. Æternus Pater: æternus Filius: æternus [et] Spiritus Sanctus." },
+  { t = "p", text = "11. Et tamen non tres æterni: sed unus æternus." },
+  { t = "p", text = "12. Sicut non tres increati: nec tres immensi: sed unus increatus: et unus immensus." },
+  { t = "p", text = "13. Similiter omnipotens Pater: omnipotens Filius: omnipotens [et] Spiritus Sanctus." },
+  { t = "p", text = "14. Et tamen non tres omnipotentes: sed unus omnipotens." },
+  { t = "p", text = "15. Ita deus Pater: deus Filius: deus [et] Spiritus Sanctus." },
+  { t = "p", text = "16. Et tamen non tres dii: sed unus est Deus." },
+  { t = "p", text = "17. Ita dominus Pater: dominus Filius: dominus [et] Spiritus Sanctus." },
+  { t = "p", text = "18. Et tamen non tres domini: sed unus [est] Dominus." },
+  { t = "p", text = "19. Quia sicut singulatim unamquamque personam Deum ac Dominum confiteri, Christiana veritate compellimur:" },
+  { t = "p", text = "20. Ita tres deos, aut [tres] dominos dicere, catholica religione prohibemur." },
+  { t = "p", text = "21. Pater a nullo est factus: nec creatus, nec genitus." },
+  { t = "p", text = "22. Filius a Patre solo est: non factus, nec creatus: sed genitus." },
+  { t = "p", text = "23. Spiritus Sanctus a Patre et filio: non factus, nec creatus, nec genitus: sed procedens." },
+  { t = "p", text = "24. Unus ergo Pater, non tres patres: unus Filius, non tres filii: unus Spiritus Sanctus, non tres spiritus sancti." },
+  { t = "p", text = "25. Et in hac Trinitate nihil prius, aut posterius: nihil majus, aut minus." },
+  { t = "p", text = "26. Sed totæ tres personæ coæternæ sibi sunt, et coæquales." },
+  { t = "p", text = "27. Ita, ut per omnia, sicut jam supra dictum est: et Unitas in Trinitate, et Trinitas in Unitate, venerenda sit." },
+  { t = "p", text = "28. Qui vult ergo salvus esse, ita de Trinitate sentiat." },
+  { t = "p", text = "29. Sed necessarium est ad æternam salutem: ut incarnationem quoque Domini nostri Jesu Christi fideliter credat." },
+  { t = "p", text = "30. Est ergo fides recta, ut credamus et confiteamur: quod Dominus noster Jesus Christus Dei Filius, Deus [pariter] et homo est;" },
+  { t = "p", text = "31. Deus [est] ex substantia Patris, ante secula genitus: et homo ex substantia matris, in seculo natus." },
+  { t = "p", text = "32. Perfectus Deus: perfectus homo, ex anima rationali et humana carne subsistens." },
+  { t = "p", text = "33. Aequalis Patri secundum divinitatem: minor Patre secundum humanitatem." },
+  { t = "p", text = "34. Qui licet Deus sit et homo; non duo tamen, sed unus est Christus." },
+  { t = "p", text = "35. Unus autem, non conversione divinitatis in carnem: sed assumptione humanitatis in Deum." },
+  { t = "p", text = "36. Unus omnino; non confusione substantiæ: sed unitate personæ." },
+  { t = "p", text = "37. Nam sicut anima rationalis et caro unus est homo: ita Deus et homo unus est Christus." },
+  { t = "p", text = "38. Qui passus est pro nostra salute: descendit ad inferos: tertia die resurrexit a mortuis." },
+  { t = "p", text = "39. Ascendit ad [in] cœlos: sedet ad dexteram [Dei] Patris [omnipotentis]." },
+  { t = "p", text = "40. Inde venturus [est] judicare vivos et mortuos." },
+  { t = "p", text = "41. Ad cujus adventum omnes homines resurgere habent cum corporibus suis;" },
+  { t = "p", text = "42. Et reddituri sunt de factis propriis rationem." },
+  { t = "p", text = "43. Et qui bona egerunt, ibunt in vitam æternam: qui vero mala, in ignem æternum." },
+  { t = "p", text = "44. Hæc est fides catholica: quam nisi quisque fideliter firmiterque crediderit, salvus esse non poterit." },
+]

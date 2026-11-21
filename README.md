@@ -1,45 +1,122 @@
 # He Lives
 
-[helives.dev](https://helives.dev) is a scripture-centered site. One King James passage is shown each hour. Words of Christ are in red. **Explore more** opens that hour on Bible Gateway.
+[helives.dev](https://helives.dev) is a free library of Holy Scripture and the writings of the church, made to be easy to read, hear, print and keep. Every text on it is in the public domain.
 
-Genesis 1–3 is a visual meditation. The Scriptures page names the whole Protestant canon. The Faith page is the confession.
+## What is in it
 
-The King James Version is public domain in the United States.
+- **Holy Scripture**: the Berean Standard Bible, all 66 books, with its headings, footnotes and cross-references.
+- **The Apostolic Fathers**: Clement, Ignatius, Polycarp, the Didache, the Shepherd of Hermas and more.
+- **Ante-Nicene Fathers** and **Nicene and Post-Nicene Fathers**: the Schaff editions, including Irenaeus, Tertullian, Athanasius, Chrysostom and Augustine (the Confessions, the City of God and more).
+- **The Apocrypha**: the fourteen books of the 1611 King James Apocrypha, from the 1769 Oxford text.
+- **The Pseudepigrapha**: 1 Enoch in R. H. Charles's 1917 translation, labeled as outside the canon.
+- **Josephus and Philo**: Whiston's Josephus and Yonge's Philo, for the history and thought around the New Testament.
+- **Thomas Aquinas**: the Summa Theologica.
+- **The Reformation and After**: the Augsburg, Belgic, Westminster and Heidelberg confessions and catechisms, the Canons of Dort, the Thirty-Nine Articles, Luther, Calvin's Institutes and The Pilgrim's Progress.
+- **The Creeds**: the Apostles', Nicene, Niceno-Constantinopolitan and Athanasian creeds and the Chalcedonian Definition.
+- **Gnostic texts**: historical documents the early church examined and rejected, labeled as such and never presented as Scripture.
+- **Papal encyclicals**: a searchable index linked to vatican.va, with full text hosted only where the English translation is public domain.
+- **Art, maps and video**: public domain art and maps, and curated YouTube videos that load only when you press play.
+- **Search** across everything, and Bible references like `John 3:16` or `ps 23` that open the passage.
 
-This is not a church, not a sacrament, and not a claim that God endorsed the software.
+## Made for readers who need it calm
 
-## Visit
+The reading settings are built for people with ADHD, OCD, dyslexia, visual snow (VSS) or light sensitivity. They stay on your device and nothing is sent anywhere.
 
-- Home — one passage each hour
-- [The Scriptures](https://helives.dev/scriptures)
-- [Genesis](https://helives.dev/genesis)
-- [Faith](https://helives.dev/faith)
+- **Focus bold** bolds the start of each word so the eye lands on it. On, Light, Strong or Off.
+- **Calm themes**: Night, Dusk (low contrast, no pure black or white), Paper, Sepia, High contrast, or match your device.
+- **No motion**: nothing animates, and smooth scrolling is off when your device asks for reduced motion.
+- **Reading ruler**: a soft band that follows your pointer or tap, or dims everything else.
+- **Fonts**: a serif, Atkinson Hyperlegible Next, or OpenDyslexic.
+- Text size, line spacing, letter and word spacing, line length, verse numbers, footnotes, and one verse per line.
+- **Background sound**: brown, pink or white noise, rain, a stream, a fireplace or wind, with a stop timer. Sounds are made in your browser; nothing is downloaded.
+- **Listen**: audiobook narration on sections that have it, with the verse or paragraph being read highlighted.
+- Keyboard: left and right arrows change pages, `/` searches, `R` opens reading settings.
+- Pages work without JavaScript, and the site remembers where you stopped reading.
 
-## Run locally
+## Download the texts
+
+Every work can be downloaded from its page or from [helives.dev/downloads](https://helives.dev/downloads/):
+
+- `https://helives.dev/dl/<work-id>.md`: Markdown, for any text editor or notes app.
+- `https://helives.dev/dl/<work-id>.toml`: structured data for programs (format in [library/SCHEMA.md](library/SCHEMA.md)).
+- `https://helives.dev/dl/bsb-complete.md` and `bsb-complete.toml`: the whole Bible in one file.
+- Every work has a print page that holds the whole text. Choose "Save as PDF" in the print dialog for a PDF.
+
+The same files live in this repository under [`library/`](library/).
+
+## Sources and licenses
+
+| Texts | Edition | Digital source | Why it is public domain |
+| --- | --- | --- | --- |
+| Berean Standard Bible | BSB (2023) | [bereanbible.com](https://bereanbible.com) | Dedicated to the public domain by the Berean Bible Translation Committee (2023) |
+| Apostolic, Ante-Nicene and Nicene and Post-Nicene Fathers | Schaff, Roberts and Donaldson editions (1885 to 1900) | [Christian Classics Ethereal Library](https://www.ccel.org) | Published in the United States, 1885 to 1900 |
+| Summa Theologica | Fathers of the English Dominican Province, Benziger Bros. (1947) | [Christian Classics Ethereal Library](https://www.ccel.org/ccel/aquinas/summa.xml) | First published 1911 to 1925; the CCEL text is marked public domain |
+| The Creeds | Philip Schaff, The Creeds of Christendom (1877) | [Christian Classics Ethereal Library](https://www.ccel.org) | Published 1877 in the United States |
+| KJV Apocrypha | Oxford standard text (1769) | [eBible.org](https://ebible.org/Scriptures/eng-kjv_usfm.zip) | Published 1611 and 1769 |
+| 1 Enoch | R. H. Charles, SPCK (1917) | [sacred-texts.com](https://archive.sacred-texts.com/bib/boe/index.htm), checked against the 1917 scan | Published before 1931 |
+| Josephus | William Whiston (1737) | [Project Gutenberg](https://www.gutenberg.org/ebooks/2849) | Published 1737 |
+| Philo | C. D. Yonge, H. G. Bohn (1854 to 1855) | [Christian Classics Ethereal Library](https://www.ccel.org/ccel/p/philo/works.xml), checked against the Bohn scans | Published 1854 to 1855 |
+| Reformation confessions and catechisms | Schaff, The Creeds of Christendom, Vol. III (1877) | [Christian Classics Ethereal Library](https://www.ccel.org/ccel/schaff/creeds3.xml) | Published 1877 in the United States |
+| Luther, Calvin, Bunyan | Wace and Buchheim (1883), Bente and Dau (1921), Beveridge (1845), Bunyan (1678) | [Christian Classics Ethereal Library](https://www.ccel.org), [Project Gutenberg](https://www.gutenberg.org/ebooks/131) | Published before 1931 |
+| Pistis Sophia | G. R. S. Mead, revised edition (1921) | [gnosis.org](http://gnosis.org/library/pistis-sophia/index.htm) | Published before 1931 |
+| Hymn of the Pearl | G. R. S. Mead, Echoes from the Gnosis, Vol. X (1908) | [Internet Archive](https://archive.org/details/MeadGRSEchoesFromTheGnosisVolXTheHymnOfTheRobeOfGlory1908) | Published before 1931 |
+| Papal encyclicals | Index of every encyclical | [vatican.va](https://www.vatican.va) | Linked, not hosted, unless an English translation printed before 1931 exists |
+| Art and maps | 19th and early 20th century works | [Wikimedia Commons](https://commons.wikimedia.org) | Public domain; each image credits its source page |
+| Videos | Curated YouTube videos | [YouTube](https://www.youtube.com) | Not hosted; embedded from youtube-nocookie.com and owned by their makers |
+
+Each work's TOML records its exact `edition`, `source_url`, `source_sha256`, `retrieved` date and `license_basis`. The site lists them all at [helives.dev/about](https://helives.dev/about/).
+
+## Build and run locally
+
+You need Node with pnpm, and Python 3.11 or newer for the pipeline.
 
 ```bash
 pnpm install
-pnpm dev
+pnpm test && pnpm typecheck && pnpm lint && pnpm build
+pnpm exec wrangler dev --port 8841
 ```
 
-Then open [http://localhost:5173/](http://localhost:5173/).
+Then open http://localhost:8841. Word search needs the full-text index in the local database. Build and load it once:
 
 ```bash
-pnpm test
-pnpm typecheck
-pnpm lint
-pnpm build
+node site/search-index.mjs
+pnpm exec wrangler d1 execute helives-library --local --file build/search.sql
 ```
 
-## Brand
+Bible references like `John 3:16` work without it.
 
-Night `#07060a`, gold `#e8b86d`, parchment `#ece6d8`, dawn `#fff4d6`.
-Wordmark: Cormorant Garamond. Body: Source Serif 4.
-Mark: a Latin cross with a point of light.
+To check the interactive parts in a browser:
+
+```bash
+node scripts/check-ui.mjs http://localhost:8841
+```
+
+## Layout
+
+```
+library/        one TOML per work (canonical) plus generated Markdown
+pipeline/       Python ingest, validate.py, render_md.py
+media/          videos, art, maps and articles catalogs
+data/           the encyclicals index
+site/           static generator (build.mjs, lib/) and browser assets (assets/)
+worker/         Cloudflare Worker: assets, /api/search, /audio/*, security headers
+audio/          audiobook renderer and publishing scripts
+scripts/        browser checks and screenshots
+public/         fonts, icons and images copied into the build
+```
+
+## Contributing
+
+Issues and pull requests are welcome. Before you open one:
+
+- Every text must be in the public domain, with the reason written in `license_basis`.
+- Run `pnpm validate` after any change to `library/`, then `pnpm md` to regenerate the Markdown.
+- Run `pnpm test && pnpm typecheck && pnpm lint && pnpm build`.
+- For visible changes, include screenshots at 390 and 1280 pixels wide (`node scripts/shots.mjs`).
 
 ## License
 
-Quoted Scripture is KJV, public domain in the United States. Site code is in this repository.
+The site's code is MIT licensed; see [LICENSE](LICENSE). The texts are public domain.
 
 ## Sponsors
 

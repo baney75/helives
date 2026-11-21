@@ -1,0 +1,1396 @@
+---
+title: "General Prolegomena: Constantine the Great"
+author: "ernest-cushing-richardson"
+language: "English"
+edition: "Nicene and Post-Nicene Fathers, Series 2, Vol. 1 (1890), ed. Philip Schaff and Henry Wace"
+source_url: "https://www.ccel.org/ccel/schaff/npnf201.xml"
+license: "Public domain"
+license_basis: "Published 1890 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words: 39490
+---
+
+# General Prolegomena: Constantine the Great
+
+## Preface.
+
+In accordance with the instruction of the editor-in-chief the following work consists of a revision of the Bagster translation of Eusebius’ “Life of Constantine,” Constantine’s “Oration to the Saints,” and Eusebius’ “Oration in Praise of Constantine,” with somewhat extended Prolegomena and limited notes, especial attention being given in the Prolegomena to a study of the *Character* of Constantine. In the work of revision care has been taken so far as possible not to destroy the style of the original translator, which though somewhat inflated and verbose, represents perhaps all the better, the corresponding styles of both Eusebius and Constantine, but the number of changes really required has been considerable, and has caused here and there a break in style in the translation, whose chief merit is that it presents in smooth, well-rounded phrase the generalized idea of a sentence. The work on the Prolegomena has been done as thoroughly and originally as circumstances would permit, and has aimed to present material in such way that the general student might get a survey of the man Constantine; and the various problems and discussions of which he is center. It is impossible to return special thanks to all who have given special facilities for work, but the peculiar kindness of various helpers in the *Bibliothèque de la Ville* at Lyons demands at least the recognition of individualized thanksgiving.
+
+E.C.R.
+
+Hartford, Conn., April 15, 1890.
+
+## Chapter I. Life.
+
+### Section 1. Early Years.
+
+### Prolegomena.
+
+### I.—Constantine the Great.
+
+### Chapter I
+
+Life.[^chapter-1-2991]
+
+### §1. *Early Years*
+
+The Emperor Flavius Valerius Constantinus, surnamed the Great,[^chapter-1-2992] born February 27, 272 or 274,[^chapter-1-2993] at Naïssus,[^chapter-1-2994] was son of Constantius Chlorus, afterwards Emperor,[^chapter-1-2995] and Helena his wife.[^chapter-1-2996] He was brought up at Drepanum, his mother’s home,[^chapter-1-2997] where he remained until his father became Cæsar (a.d. 292 acc. to Clinton) and divorced Helena (Anon. Vales. p. 471). He was then sent to the court of Diocletian, nominally to be educated (Praxagoras, in Müller, *Fragm.* 4 (1868); Zonar. 13. 1, &c.), but really as hostage,[^chapter-1-2998] and remained with Diocletian, or Galerius, until the year 306.[^chapter-1-2999] During this time he took part in various campaigns, including the famous Egyptian expedition of Diocletian in 296 (Euseb. *V. C.* 1. 19; Anon. Metroph., Theoph. p. 10).[^chapter-1-3000] Shortly after joining the emperor he contracted (296 or 297) his alliance with Minervina,[^chapter-1-3001] by whom he had a son, Crispus.[^chapter-1-3002] He was at Nicomedia when Diocletian’s palace was struck by lightning (Const. *Orat.* 35), and was present at the abdication of Diocletian and Maximinus in 305 (Lact. *De M. P.* c. 18 sq.). This last event proved a crisis for Constantine. He had grown to be a man of fine physique (Lact. c. 18; Euseb. *V. C.* 1. 19), of proved courage and military skill (cf. remarks on physical characteristics under *Character*), and a general favorite (Lact. l.c.). He had already “long before” (Lact. c. 18) been created Tribune of the first order. It was both natural and fitting that at this time he should become Cæsar in the place of his father, who became Augustus. Every one supposed he would be chosen (c. 19), and Diocletian urged it (c. 18), but the princely youth was too able and illustrious to please Galerius, and Constantine was set aside for obscure and incompetent men (cf. Lact.). His position was far from easy before. His brilliant parts naturally aroused the jealousy and suspicions of the emperors. They, or at least Galerius, even sought his death, it is said, by tempting him to fight wild beasts (a lion, Praxag. p. 3; cf. Zonaras 2, p. 623), or exposing him to special danger in battle (cf. Philistog. 1. 6; Lact. c. 24; Anon. Vales. p. 471; Theophanes p. 10–12, &c.). The situation, hard enough before, now became, we may well believe, intolerable. He was humiliated, handicapped, and even in danger of his life. He was practically a prisoner. The problem was, how to get away. Several times Constantius asked that his son might be allowed to join him, but in vain (Lact. c. 24; Anon. Vales. p. 471). Finally, however, Constantine gained a grudging permission to go. It was given at night, and the emperor intended to take it back in the morning (Lact. c. 24). But in the morning it was too late. Constantine had left at once to join his father. He lost no time either in starting or making the journey. Each relay of post horses which he left was maimed to baffle pursuit (Anon. Vales., Vict. *Epit.* p. 49; cf. Lact. c. 24, Praxag. p. 3). The rage of the emperor when he learned of the flight was great but vain. Constantine was already out of reach, and soon joined his father at Bononia (Boulogne, Anon. Vales.; cf. Eumen. *Paneg.* (310), c. 7),[^chapter-1-3003] just in time to accompany him on his final expeditions to Britain (Eumen. *Paneg*. (310) c. 7; cf. Anon. Vales. l.c.). Constantius died shortly after at York (Anon. Vales. p. 471; Eutrop. 10. 1), having named Constantine as his successor (Euseb. *V. C.* 1. 21; Eumen. *Paneg.* (310) c. 7.; Lact. c. 24).
+
+[^chapter-1-2991]: This sketch of the life of Constantine is intended to give the thread of events, and briefly to supplement, especially for the earlier part of his reign, the life by Eusebius, which is distinctly confined to his religious acts and life.
+[^chapter-1-2992]: “Imperator Cæsar Augustus Consul Proconsul Pontifex Maximus, Magnus, Maximus, Pius, Felix, Fidelis, Mansuetus, Benificus, Clementissimus, Victor, Invictus, Triumphator, Salus Reip. Beticus, Alemanicus, Gothicus, Sarmarticus, Germanicus, Britannicus, Hunnicus, Gallicanus,” is a portion of his title, as gathered from coins, inscriptions, and various documents.
+[^chapter-1-2993]: Calendarium Rom. in Petavius Uranal. p. 113. The date varies by a year or two, according to way of reckoning, but 274 is the date usually given. (Cf. Burckhardt, Manso, Keim, De Broglie, Wordsworth, etc.) Eutropius and Hieronymus say he died in his sixty-sixth year, Theophanes says he was sixty-five years old, and Socrates and Sozomen say substantially the same, while Victor, *Epit.* has sixty-three, and Victor, *Cæs*. sixty-two. Eusebius says he lived twice the length of his reign, i.e. 63 +. Manso chose 274, because it agreed best with the representations of the two Victors as over against the “later church historians.” But the two Victors say, one that he lived sixty-two years and reigned thirty-two, and the other that he lived sixty-three and reigned thirty; while Eutropius, secretary to Constantine, gives length of reign correctly, and so establishes a slight presumption in favor of his other statement. Moreover, it is supported by Hieronymus, whose testimony is not of the highest quality, to be sure, and is quite likely taken from Eutropius, and Theophanes, who puts the same fact in another form, and who certainly chose that figure for a reason. The statement of Eusebius is a very elastic generalization, and is the only support of Victor, *Epit*. Socrates, who, according to Wordsworth, says he was in his sixty-fifth year, uses the idiom “mounting upon” (ἐπιβ€ς) sixty-five years, which at the least must mean nearly sixty-five years old, and unless there is some well-established usage to the contrary, seems to mean having lived already sixty-five years. In the interpretation of Sozomen (also given in *translation* “in his sixty-fifth year”) he was “about” sixty-five years old. Now if he died in May, his following birthday would not have been as “about,” and he must have been a little over sixty-five. This would make a strong consensus against Victor, against whom Eutropius alone would have a presumption of accuracy. On the whole it may be said that in the evidence, so far as cited by Manso, Wordsworth, Clinton, and the run of historians, there is no critical justification for the choice of the later date and the shorter life.
+[^chapter-1-2994]: Anon. Vales. p. 471. Const. Porphyr. (*De themat.* 2. 9), Stephanus Byzant. art. Ναϊσσός (ed. 1502, H. iii.), “Firmicus 1. 4.” According to some it was Tarsus (“Julius Firmic. 1. 2”), or Drepanum (Niceph. Callist.), or in Britain (the English chroniclers, Voragine, and others, the mistake arising from one of the panegyrists (c. 4) speaking of his taking his origin thence), or Trèves (Voragine). Compare Vogt, who adds Rome (“Petr. de Natalibus”), or Roba (“Eutychius”), or Gaul (“Meursius”). Compare also monographs by Janus and by Schoepflin under *Literature.*
+[^chapter-1-2995]: For characterization of Constantius compare *V. C.* 1. 13 sq.
+[^chapter-1-2996]: It has been a much discussed question, whether Helena was legitimate wife or not. Some (Zosimus 2. 8; Niceph. Callist. 7. 18) have asserted that Helena was a woman “indifferent honest,” and the birth of Constantine illegitimate. This view is simply psychologically impossible regarding a woman of so much and such strength of character. That she stood in the relation of legitimate concubinage (cf. Smith and Cheetham, *Dict.* 1. 422) is not improbable, since many (Hieron. Orosius, Zosimus 2.8; Chron. Pasch. p. 516, and others) assert this lesser relationship. This would have been not unlike a modern morganatic marriage. The facts are: 1. That she is often spoken of as concubine (cf. above). 2. That she is distinctly called wife, and that by some of the most competent authorities (Eutrop. 10. 2; Anon. Vales. p. 471; Euseb. *H. E.* 8. 13; Ephraem p. 21, etc.), also in various inscriptions (compare collected inscriptions in Clinton 2. 81). 3. That she was divorced (Anon. Vales. p. 47). The weight of testimony is clearly in favor of the word “wife,” though with divorce so easy it seems to have been a name only. The view that she was married in the full legal sense, but only after the birth of Constantine, is plausible enough, and has a support more apparent than real, in the fact that he “first established that natural children should be made legitimate by the subsequent marriage of their parents” (Sandars *Inst. Just.* (1865) 113; cf. Cod. Just. V. xxvii. 1 and 5 ed. Krueger 2 (1877) 216). Of course the story of her violation by and subsequent marriage to Constantius (Inc. auct. ed. Heydenreich) is purely legendary, and the same may be said of the somewhat circumstantial account of her relation as concubine, given by Nicephorus Callistus 7, 18. For farther account of Helena, compare the *V. C.* 3. 42 and notes.
+[^chapter-1-2997]: Helena was born probably at Drepanum, afterwards called Helenopolis, in her honor, by Constantine (Procopius *De ædif.* V. 2, p. 311, Chron. Pasch. etc.).
+[^chapter-1-2998]: This appears from the disregard of his father’s repeated requests that he be sent back to him (Lact., Anon. Vales. p. 471), and the whole story of his final flight. So also it is said by Anon. Vales. p. 471, and the two Victors (*Cæs.* p. 156, *Epit.* p. 49). Zonaras (12. 33, ed. Migne 1091), gives both reasons for sending, and is likely right. Nicephorus Callistus (7. 18) suggests that he was sent there for education, since Constantius could not take him himself on account of Theodora.
+[^chapter-1-2999]: He was with Diocletian still in 305 (cf. Lact. and note, below), and was with his father early in 306.
+[^chapter-1-3000]: Eusebius, who saw him on his way to Egypt in 296, gives the impression which he made on him at that time (l.c.). According to some he was also with Galerius in his Persian war, and this is possible (cf. Clinton 1. 338–40). Theophanes describes him as “already eminent in war” (p. 10), Anon. Vales. p. 471, as conducting himself “bravely.”
+[^chapter-1-3001]: This was probably a morganatic marriage or concubinate (Victor, *Epit.* 41, Zosimus 2. 20; Zonaras 13. 2, &c.). “The improbability that Constantine should have marked out an illegitimate son as his successor” which Ramsay (Smith, *Dict.* 2. 1090) mentions as the only argument against, is reduced to a minimum in view of Constantine’s law for the legitimization of natural children by rescript (Cod. Just. V. xxvii. ed. Krueger 2 (1877), 216–17; cf. notes of Sandars in his *Inst. Just.* (1865) 113). It would be uncritical, as in the case before mentioned, to lay stress on this as positive evidence, but over against a simple “improbability” it has a certain suggestiveness at least. The panegyrical praises of Constantine’s continence hardly justify Clinton’s claim that she was lawful wife; for to have a regular concubine would not have been considered in any sense immoral, and it would not have been particularly pertinent in a wedding oration to have introduced even a former wife. For what little is known of Minervina, compare Ramsay, in Smith *Dict.* 2. 1090, “Tillemont, *Hist. Emp.* IV. iv. p. 84,” and Clinton, *Fasti Rom.* 2. (1850) 86, note *k.*
+[^chapter-1-3002]: Crispus was “already a young man” when made Cæsar in 317 (Zos. 2. 30).
+[^chapter-1-3003]: According to some (e.g. Victor, *Cæs.* p. 156; Victor, *Epit.* p. 51; Zos. 2. 8) his father was already in Britain.
+
+### Section 2. The First Five Years of Reign.
+
+The will of the father was promptly ratified by the soldiers, who at once proclaimed Constantine Augustus.[^chapter-1-section-2-3004] Supported by them, and also by Erocus, king of the Allemanni (Vict. *Epit.* p. 49–50), he sent his portrait to Galerius, claiming the title of Augustus. This the emperor refused to grant, but, much against his will, allowed him to have the title of Cæsar (Lact. c. 25). Constantine did not insist on his right to the greater title, but waited his time, and in the interim contented himself with the lesser,—as the coins show.[^chapter-1-section-2-3005] There was enough to do. After his father’s death he waged war against the Francs, and later against the Bructeri and others (Eutrop. 10. 3; *Paneg.* (307) c. 4; Eumen. *Paneg.* (310) cc. 10–12; Nazar. *Paneg.* (321) 18; Euseb. *V. C.* 1. 25, &c.; cf. Inscr. ap. Clinton 2. 93), and celebrated his victories by exposing his captives to the wild beasts (Eutrop. 10. 3; Eumen. *Paneg.* (310) c. 12; *Paneg.* (313) c. 23; cf. Nazar. *Paneg.* (321) c. 16).
+
+Meanwhile affairs were marching at Rome, too. The same year (306) that Constantine was elected Augustus by the soldiers, Maxentius at Rome was proclaimed emperor by the Pretorian Guards (Eutrop. 10. 2; Vict. *Cæs.* p. 156; Anon. Vales. p. 472; Zos. 2. 9; Socr. 1. 2; Oros. c. 26, &c.; Lact. c. 26). He persuaded the willing (Eutrop. 10. 2) Maximian to resume the imperial purple (Lact. c. 26; Zos. 2. 10), but soon quarreled with him (Socr. 1. 2; Eutrop. 10. 3; Zos. 2. 11; Lact. c. 28).[^chapter-1-section-2-3006] In 307 Constantine and Maximinus were named “sons of the emperors,” and the following year were reluctantly acknowledged as emperors by Galerius. Maximian, after he had quarreled with his son, betook himself to Gaul and made alliance with Constantine by giving his daughter Fausta in marriage (307). He proved an uncomfortable relative. The much-abused mother-in-law of fiction is not to be compared with this choice father-in-law of history. First he tried to supersede Constantine by corrupting his soldiers. At his persuasion Constantine had left behind the bulk of his army while he made a campaign on the frontier. As soon as he was supposably out of the way, the soldiers were won by largesses, and Maximian assumed the purple again. But he had reckoned without his host. Constantine acted with decisive promptness, returned by such rapid marches that he caught Maximian entirely unprepared (Lact. c. 29) and drove him into Marseilles, where the latter cursed him vigorously from the walls (Lact. c. 29), but was able to offer no more tangible resistance. The gates were thrown open (Lact. c. 29), and Maximian was in the power of Constantine, who this time spared his precious father-in-law.[^chapter-1-section-2-3007] Grateful for this mildness, Maximian then plotted to murder him. The plan was for Fausta to leave her husband’s door open and for Maximian to enter and kill Constantine with his own hands. Fausta pretended to agree, but told her husband (Zos. 2. 11; Joh. Ant. p. 603; Oros. c. 28), who put a slave in his own place (but apparently did not “put himself in the place of” the slave), had the program been carried out, and catching Maximian in the act, granted him that supreme ancient mercy,—the right to choose how he would die (Lact. c. 30).[^chapter-1-section-2-3008]
+
+Though in the midst of wars and plots, and liable at any time to have to run from one end of his province to the other to put down some insurrection, Constantine kept steadily at the work of internal improvement, organizing the interior, fortifying the boundaries, building bridges, restoring cities, building up educational institutions, &c.[^chapter-1-section-2-3009] At the end of five years’ reign (July 24, 311) he had reduced the turbulent tribes, organized his affairs, and endeared himself to his people, especially to the Christians, whom he had favored from the first (Lact. c. 24), and who could hardly fail in those days of persecution to rejoice in a policy such as is indicated in his letter to Maximinus Daza in behalf of persecuted Christians (Lact, c. 37).
+
+[^chapter-1-section-2-3004]: So Eusebius *H. E.* 8. 13; Lact. c. 25; Julian *Orat.* 1. p. 13. Eumenius (*Paneg.* 310, c. 7) says that he was elected “imperator,” but in cc. 8–9 speaks of him as having become Cæsar. Eutropius (10. 2) also uses the word “imperator.” Zosimus, on the other hand (2. 9), and Anonymus Vales. say he was elected “Augustus,” but was only confirmed “Cæsar” by Galerius (see below). The elevation was in Britain (cf. Eutrop. 10. 2; Eumen. *Paneg.* (310) c. 9; Soz. 1. 5, &c.).
+[^chapter-1-section-2-3005]: See coins in Eckhel 8, p. 72, under the year. It is also expressly stated by *Paneg.* (307) c. 5.
+[^chapter-1-section-2-3006]: It is said by many that the quarrel was a feigned one, and that it was wholly for the purpose of getting rid of Constantine in behalf of Maxentius that he betook himself to Gaul. That he went to Gaul with this purpose, at least, is mentioned by many (cf. Lact. c. 29; Oros. c. 28; Eutrop. 10. 2, “on a planned stratagem”). It seems curious, if he had attempted to supersede Maxentius by raising a mutiny (Eutrop. 10. 3), that he should now be working for him and planning to rejoin him (Eutrop. 10. 2), but it is no inconsistency in this man, who was consistent only in his unceasing effort to destroy others for his own advantage.
+[^chapter-1-section-2-3007]: Compare on all this Lact. c. 29; Eumen. *Paneg* c. 14.
+[^chapter-1-section-2-3008]: Socrates (1. 2) with many others (e.g. Zos. 2. 11) says he died at Tarsus, confusing him thus with Maximinus.
+[^chapter-1-section-2-3009]: Notably at Autun. The city had been almost destroyed. Eumenius, whose oration of thanks in behalf of the people of Autun is extant, praises Constantine as the restorer, almost the founder. The work had been undertaken by Constantius, indeed, but was carried on by his son. Constantine’s work of internal improvement was in many ways distinctly a continuation of the work begun by Constantius. Compare Eumen. *Paneg.* (especially c. 13, 22, &c.) and *Grat. act.*
+
+### Section 3. State of Affairs in 311.
+
+In the meantime, while the extreme west of the empire was enjoying the mild rule of Constantine, the other corners of the now quadrangular and now hexagonal world, over which during this time Maximinus, Galerius, Licinius, Maximian, and Maxentius had tried to reign, had had a much less comfortable time. Every emperor wanted a corner to himself, and, having his corner, wanted that of some one else or feared that some one else wanted his. In order clearly to understand Constantine, a glimpse of the state of affairs in these other parts of the empire, together with some idea of the kind of men with whom he had to deal is essential, and may be gotten from a brief view of (1) The rulers, (2) Characters of the rulers, (3) Condition of the ruled.
+
+#### I. The Rulers.
+
+The intricate process of evolution and devolution of emperors, mysterious to the uninitiated as a Chinese puzzle, is briefly as follows: In 305 Diocletian and Maximian had abdicated (Lact. c. 18; Eutrop. 9. 27; Vict. *Cæs*.), Galerius and Constantius succeeding as Augusti and Severus, Maximinus Daza succeeding them as Cæsars (Lact. c. 19). In 306 Constantius died, Constantine was proclaimed Augustus by his army, Maxentius by the Pretorian Guards (cf. above), and Severus by Galerius (Lact. c. 25), while Maximian resumed the purple (see above)—four emperors, Galerius, Severus, Maximian, and Maxentius, with two Cæsars, Constantine and Maximinus, one with a pretty definite claim to the purple, and the other bound not to be left out in the cold. In 307 Licinius was appointed Augustus by Galerius (Lact. c. 29; Vict. *Cæs.;* Zos. 2. 11; Anon. Vales.; Eutrop. 10. 4), who also threw a sop to Cerberus by naming Constantine and Maximin “sons of emperors” (Lact. c. 32; Coins in Eckhel 8 (1838) 52. 3). Constantine was given title of Augustus by Maximianus (?), and Maximinus about this time was forced, as he said, by his army to assume the title. Meantime the growing procession of emperors was reduced by one. Severus, sent against Maxentius, was deserted by his soldiers, captured, and slain in 307 (Lact. c. 26; Zos. 2. 10; Anon. Vales.; Eutrop. 10. 2; Vict. *Cæs*. &c. &c.), leaving still six emperors or claimants,—Galerius, Licinius, Maxentius, Maximian, Maximinus, and Constantine. In 308, making the best of a bad matter, Galerius appointed Constantine and Maximin Augusti (see above), leaving the situation unchanged, and so it remained until the death of Maximian in 310 (see above), and of Galerius in May, 311 (Lact. c. 33; Vict. *Cæs.,* Vict. *Epit*.; Zos. 2. 11) reduced the number to four.
+
+#### II. Characters of the Rulers.
+
+Constantine’s own character has been hinted at and will be studied later. Severus was the least significant of the others, having a brief reign and being little mentioned by historians. Diocletian’s characterization of him was, according to Lactantius (c. 18), as ejaculated to Galerius, “That dancing, carousing drunkard who turns night into day and day into night.” The average character of the other emperors was that of the prisoners for life in our modern state prisons. Galerius, “that pernicious wild beast” (Lact. c. 25), was uneducated, drunken (Anon. Vales. p. 472); fond of boasting himself to be the illegitimate son of a dragon (Lact. 9; Vict. *Epit.* p. 49), and sanguinary and ferocious to an extraordinary degree (Lact. c. 9. 21, 22, &c.). Licinius, characterized by “ingratitude” and “cold-blooded ferocity,” was “not only totally indifferent to human life and suffering, and regardless of any principle of law or justice which might interfere with the gratification of his passions, but he was systematically treacherous and cruel, possessed of not one redeeming quality save physical courage and military skill” (Ramsay, in Smith *Dict.* 2, p. 784; compare Euseb. *H. E.* 10. 8; *V. C.* 1. 49–56), and “in avaricious cupidity worst of all” (Vict. *Epit.* p. 51). Maximinus’ character “stands forth as pre-eminent for brutal licentiousness and ferocious cruelty—‘lust hard by hate’” (Plumptre, in Smith & W. 3, p. 872), and according to Lactantius, c. 38, “that which distinguished his character and in which he transcended all former emperors was his desire of debauching women.” He was cruel, superstitious, gluttonous, rapacious, and “so addicted to intoxication that in his drunken frolics he was frequently deranged and deprived of his reason like a madman” (Euseb. *H. E.* 8. 14). Maximianus has been thought to be on the whole the least outrageous, and his somewhat defective moral sense respecting treachery and murder has been noted (cf. above). He has been described as “thoroughly unprincipled…base and cruel” (Ramsay, in Smith *Dict.* 2, p. 981). He is described by Victor, (*Epit.* p. 48) as “ferus natura, ardens libidine,” being addicted to extraordinary and unnatural lust (Lact. c. 8). Truly a choice “best” in this rogues’ gallery. Of Maxentius it is said (Tyrwhitt, in Smith & W. 3, p. 865): “His wickedness seems to have transcended description, and to have been absolutely unredeemed by any saving feature.” He “left no impurity or licentiousness untouched” (Euseb. *H. E.* 8. 14; cf. Eutrop. 10. 4; Lact. 9). He was marked by “impiety,” “cruelty,” “lust,” and tyranny (*Paneg.* [313] c. 4). He was the most disreputable of all,—unmitigatedly disreputable. With all due allowance for the prejudice of Christian historians, from whom such strong statements are mainly drawn, yet enough of the details are confirmed by Victor, *Epit.,* the Panegyrists, Eutropius, and other non-Christian writers to verify the substantial facts of the ferocity, drunkenness, lust, covetousness, and oppression of this precious galaxy of rulers.
+
+#### III. Condition of the Ruled.
+
+Under such rulers there was a reign of terror during this period which contrasted strangely with the state of things under Constantine. Galerius was “driving the empire wild with his taxations” (cf. Lact. c. 23 and 26), affording in this also a marked contrast with the course of Constantine in Gaul. Maxentius led in the unbridled exercise of passion (Euseb. *H. E.* 8. 14; cf. Lact. c. 18), but in this he differed from the others little except in degree (compare Euseb. *V. C.* 1. 55 on Licinius), and according to Lactantius (c. 28) he was surpassed by Maximin. In brief, all did according to their own sweet wills, and the people had to stand it as best they could. The worst was that the oppression did not end with the emperors nor the friends and officials to whom they delegated power to satisfy their desires at the expense of the helpless. Their armies were necessary to them. The soldiers had to be conciliated and exactions made to meet their demands. They followed the examples of their royal leaders in all manner of excesses and oppressions. No property or life or honor was safe.
+
+The persecution of the Christians reached a climax of horror in this period. The beginning of the tenth persecution was, to be sure, a little before this (303), but its main terror was in this time. Galerius and Maximian are said indeed to have persecuted less during this period, and Maxentius not at all; but Galerius was the real author and sanguinary promoter of the persecution which is ascribed to Diocletian (Lact. c. 11), while Maximian was, in 304, the author of the celebrated “Fourth Edict” which made death the penalty of Christianity, and Maxentius was only better because impartial—he persecuted both Christian and heathen (Euseb. *V. C.* 1. 33–6; *H. E.* 8. 14; Eutrop. 10. 4).[^chapter-1-section-3-3010] The persecution under Maximin was of peculiar atrocity (Euseb. *H. E.* 8. 17; 9. 6, &c.; Lact. c. 26–27), so that the whole of this period in the East, excepting a slight breathing space in 308, was a terror to Christians, and it is said that “these two years were the most prolific of bloodshed of any in the whole history of Roman persecutions” (Marriott, in Smith & W. 2, p. 594). It was not until the very end of this period[^chapter-1-section-3-3011] that Galerius, in terror of death, issued the famous first edict of toleration.[^chapter-1-section-3-3012] Such was the condition of things in July, 311. The deaths of Severus in 307, Maximian in 310, and Galerius in 311, had cleared the stage so far as to leave but four Augusti, Licinius and Maximin in the East, Constantine and Maxentius in the West. The only well-ordered and contented section of the world was that of Constantine. In all the others there was oppression, excess, and discontent, the state of things at Rome being on the whole the most outrageous.
+
+[^chapter-1-section-3-3010]: “Raging against the nobles with every kind of destruction,” Eutrop. 10. 4.
+[^chapter-1-section-3-3011]: Edict of toleration was April 30; Constantine’s anniversary, July 24.
+[^chapter-1-section-3-3012]: This edict was signed by Constantine and Licinius as well as by Galerius. The Latin text is found in Lactantius, *de mort. pers.* c. 24, and the Greek translation in Eusebius, *H. E.* 8. 17.
+
+### Section 4. Second Five Years.
+
+This period was most momentous for the world’s history. Maxentius, seeking an excuse for war against Constantine, found it in a pretended desire to avenge his father (Zos. 2. 14), and prepared for war.[^chapter-1-section-4-3013] Like his father before him, however, he did not know his man. Constantine’s mind was prepared. He was alert and ready to act. He gathered all the forces, German, Gallic, and British (Zos. 2. 15) that he could muster, left a portion for the protection of the Rhine, entered Italy by way of the Alps (*Paneg.*), and marched to meet the much more numerous forces of Maxentius,—Romans, Italians, Tuscans, Carthagenians, and Sicilians (Zos. 2. 15).[^chapter-1-section-4-3014] First Sigusium was taken by storm (Naz. *Paneg.* [321] c. 17 and 21; *Paneg.* [313] c. 5); then the cavalry of Maxentius was defeated at Turin (Naz. *Paneg.* [321] c. 22; *Paneg.* [313] c. 6). After a few days’ rest in Milan (*Paneg.* [313] c. 7) he continued his triumphant march, defeating the enemy again in a cavalry engagement at Brescia (Naz. *Paneg.* c. 25), and taking the strongly fortified Verona after a hard-fought battle before the walls (Anon. Vales. p. 473; *Paneg.* [313]; Naz. *Paneg.* c. 25–26). This had taken him out of his way a little; but now there were no enemies in the rear, and he was free to push on to Rome, on his way whither, if not earlier, he had his famous vision of the cross.[^chapter-1-section-4-3015] He reached the Tiber October 26. Maxentius, tempted by a dubious oracle[^chapter-1-section-4-3016] issued from Rome, crossed the Tiber, and joined battle. His apparently unwise action in staking so much on a pitched battle has its explanation, if we could believe Zosimus (2. 15), Eusebius (*V. C.* 1. 38), Praxagoras, and others. His object was, it is said, by a feigned retreat to tempt Constantine across the bridge of boats which he had built in such a way that it could be broken, and the enemy let into the river.[^chapter-1-section-4-3017] If it was a trick, he at least fell into his own pit. The dissipated soldiers of Maxentius gave way before the hardy followers of Constantine, fired by his own energy and the sight of the cross. The defeat was a rout. The bridge broke. Maxentius, caught in the jam, was cast headlong into the river (Anon. Val. p. 473; Lact. c. 44; Chron. Pasch. p. 521, &c.); and after a vain attempt to climb out on the steep bank opposite (*Paneg.* [313] c. 17), was swept away by the stream. The next day his body was found, the head cut off (Praxag.; Anon. Vales. p. 473), and carried into the city (Anon. Vales. p. 473) on the point of a spear (*Paneg.* [313] c. 18; Zos. 2. 17; Praxag. p. 1). Constantine entered the city in triumph amid rejoicings of the people,[^chapter-1-section-4-3018] exacted penalties from a few of those most intimate with Maxentius (Zos. 2. 17),[^chapter-1-section-4-3019] disbanded the Prætorian Guards (Vict. *Cæs.* p. 159; Zos. 2. 17), raised a statue to himself, and did many other things which are recorded; and if he did as many things which are not recorded as there are recorded things which he did not do, he must have been very busy in the short time he remained there.[^chapter-1-section-4-3020]
+
+Constantine was now sole emperor in the West, and the emperors were reduced to three. History was making fast. After a very brief stay in Rome he returned to Milan (Lact. c. 45), where Licinius met him (Anon. Vales. p. 473; Lact. c. 25; Vict. *Epit.* p. 50; Zos. 2. 17, &c.). It had become of mutual advantage to these emperors to join alliance. So a betrothal had been made, and now the marriage of Licinius to the sister of Constantine was celebrated (cf. refs. above Lact.; Vict.; Zos.; Anon. Vales.). At the same time the famous Second Edict or Edict of Milan was drawn up by the two emperors (Euseb. *H. E.* 10. 5; Lact. c. 48), and probably proclaimed.[^chapter-1-section-4-3021] Constantine then returned to Gaul (Anon. Vales. p. 473; Zos. 11. 17), where he was forced into another sort of strenuous warfare—the ecclesiastical, taking a hand somewhat against his will in trying to settle the famous Donatist schism.[^chapter-1-section-4-3022]
+
+Licinius had a more critical problem to meet. Maximin thought it a good time to strike while Licinius was off in Milan engaged in festivities (Lact. c. 45); but the latter, hastily gathering his troops and pushing on by forced marches, met near Heraclea and utterly defeated him (Lact. c. 46). Maximin fled precipitately, escaping the sword only to die a more terrible death that same summer (Lact. c. 49; Euseb. *V. C.* 1. 58; cf. Zos. 2. 17).[^chapter-1-section-4-3023] The death of Maximin cleared the field still farther. Through progressive subtractions the number of emperors had been reduced to two,—one in the East and one in the West.
+
+They, too, promptly fell out. The next year they were at war. Causes and pretexts were various; but the pretext, if not the cause, was in general that Licinius proved an accomplice after the fact, at least, to a plot against Constantine.[^chapter-1-section-4-3024] Whatever the immediate cause, it was one of the inevitabilities of fate. Another vigorous campaign followed, characterized by the same decisive action and personal courage on the part of Constantine which he had already shown, and which supplied his lack of soldiers.[^chapter-1-section-4-3025] First at Cibalis in Pannonia (Oct. 8),[^chapter-1-section-4-3026] then in a desperate battle at Mardia, Licinius was defeated and forced to make peace (Anon. Vales. p. 474; Zos. 2. 19–20). The world was re-divided between the affectionate brothers-in-law, and Constantine took Illyrium to his other possessions.[^chapter-1-section-4-3027] After this battle and the re-division there was a truce between the emperors for some years, during the early part of which (in 316 or 315) the Decennalia of Constantine were celebrated (Euseb. *V. C.* 1. 48).
+
+[^chapter-1-section-4-3013]: Eusebius represents the occasion of Constantine’s movement as a philanthropic compassion for the people of Rome (*V. C.* 1. 26; *H. E.* 9. 9). Praxagoras (ed. Müller, p. 1) says distinctly that it was to avenge those who suffered under the tyrannical rule of Maxentius and Nazarius (*Paneg.* c. 19), that it was “for liberating Italy.” So, too, Nazarius (*Paneg.* [321] c. 27), Zonaras (13. 1), Cedrenus, and Ephraem (p. 22) speak of a legation of the Romans petitioning him to go. Undoubtedly he did pity them, and as to the legation, every Roman who found his way to Trèves must have been an informal ambassador asking help. The fact seems to be that he had long suspected Maxentius (Zos. 2. 15), and now, learning of his preparations for war, saw that his suspicions were well grounded. Whatever underlying motive of personal ambition there may have been, it is probable that the philanthropic motive was his justification and pretext to his own conscience for the attempt to rid himself of this suspected and dangerous neighbor. Zosimus being Zosimus, it is probable that Maxentius was the aggressor if he says so.
+[^chapter-1-section-4-3014]: Constantine numbered, according to Zosimus, 90,000 foot, 8,000 horse; and Maxentius, 170,000 foot, and 18,000 horse. According to Panegyr. (313) c. 3, he left the major part of his army to guard the Rhine and went to meet a force of 100,000 men with less than 40,000 (c. 5).
+[^chapter-1-section-4-3015]: See note on Bk. I. c. 28.
+[^chapter-1-section-4-3016]: That “on the same day the enemy of the Romans should perish” (Lact. c. 44.).
+[^chapter-1-section-4-3017]: The circumstance pronounced by Wordsworth “almost incredible” is witnessed to by Eusebius (*V. C.* 1. 38), Zosimus (2. 15), Praxagoras (ed. Müller, p. 1). The bridge certainly broke as mentioned by Lactantius (c. 44) and as represented on the triumphal arch, but whether the “plot” was an *ex post facto* notion or not is unclear.
+[^chapter-1-section-4-3018]: “Senate and people rejoiced with incredible rejoicing” (Vict. *Cæs*. p. 159). Cf. Euseb. *V. C*. 1. 39; *Paneg.* [313] c. 19; Naz. *Paneg.* c. 30; *Chron. Pasch.* p. 521, &c.
+[^chapter-1-section-4-3019]: It is said he put to death Romulus, son of Maxentius, but it lacks evidence, and the fact that Romulus was consul for two years (208–9) with Maxentius, and then Maxentius appears alone, seems to indicate that he died in 209 or 210 (cf. Clinton, under the years 208 and 209).
+[^chapter-1-section-4-3020]: For the churches he is said to have founded, compare note on Bk. I. ch. 42. The curious patchwork triumphal arch which still stands in a state of respectable dilapidation near the Coliseum at Rome, was erected in honor of this victory. It is to be hoped that it was erected after Constantine had gone, and that his æsthetic character is not to be charged with this crime. It was an arch to Trajan made over for the occasion,—by itself and piecemeal of great interest. Apart from the mutilation made for the glory of Constantine, it is a noble piece of work. The changes made were artistic disfigurements; but art’s loss is science’s gain, and for the historian it is most interesting. The phrase “*instinctu divinitatis*” has its value in the “*Hoc signo*” discussion (cf. notes to the *V. C.*); and the sculptures are most suggestive.
+[^chapter-1-section-4-3021]: It has been maintained that there were three edicts of Constantine up to this time: 1. Galerius, Constantine, and Licinius in 311; 2. Constantine and Licinius in 312 (lost); 3. Constantine and Licinius in 313 (cf. Keim, p. 16 and 81–84; Zahn, p. 33). So Gass in Herzog, p. 201, Wordsworth (*Ch. Hist.*), and others. But, like most certain things, it seems to have been disproved. The “harder edict” seems to have been a product of Eusebius’ rather slovenly historical method, and to refer to the first, or Galerian edict.
+[^chapter-1-section-4-3022]: The appeal of the Donatists to Constantine was first met by the appointment of a “court of enquiry,” held at Rome, Oct. 2, 313. The result was unsatisfactory, and Constantine ordered an examination on the spot, which took place at Carthage, Feb. 15, 314 (Phillott). The Donatists still urging, the Council of Arles was called, Aug. 1, 314, and some progress seemed to be made, but progress more satisfactory to the orthodox than to the schismatics, who urged again that Constantine hear the matter himself, as he finally did, November, 316 (Wordsworth; cf. Augustine, *Ep.* 43, ¶20). He confirmed the previous findings, and took vigorous but ineffective measures to suppress the Donatists, measures which he saw afterwards could not be carried out, and perhaps saw to be unjust. Compare Augustine, *Ep.* 43, ch. 2, and elsewhere, also various documents from Augustine, Lactantius, Eusebius, Optatus, &c., collected in Migne, *Patrol. Lat.* 8 (1844), 673–784. Compare also Fuller, *Donatism,* Phillott, *Felix,*—articles in Smith and W. *Dict.* &c.; and for general sources and literature, cf. *Donatist Schism,* Hartranft, in Schaff, *Nicene and Post-Nicene Fathers,* 4 (1887), 369–72; Völter, *Ursprung des Donatismus,* 1883; and Seeck in Brieger’s *Zeitschrift f. Kirchengeschichte,* 10 (1889), 505–508.
+[^chapter-1-section-4-3023]: According to Lactantius (c. 49), an attempt at suicide by poison was followed by a wretched disease, bringing to a lingering and most painful death.
+[^chapter-1-section-4-3024]: Bassianus, who had married Anastasia, sister of Constantine, was incited by his brother, who was an adherent of Licinius, to revolt against Constantine. The attempt was nipped in the bud, and Constantine demanded from Licinius the author of the plot. His refusal, together with the throwing down of the statues of Constantine, was the direct occasion of the war (Anon. Vales. p. 473). Compare Eusebius, *V. C.* 1. 50–51, and Socr. 1. 3, where Licinius is charged with repeated treachery, perjury, and hypocrisy. Zosimus, on the other hand (2. 18), distinctly says that Licinius was not to blame, but that Constantine, with characteristic faithlessness to their agreement, tried to alienate some of Licinius’ provinces. Here, however, notice that Zosimus would not count any movement *in behalf of Christians* as a proper motive, and sympathy for them was undoubtedly one of the underlying reasons.
+[^chapter-1-section-4-3025]: Constantine at Cibalis had 20,000 Licinius 35,000 (Anon. Vales. p. 473).
+[^chapter-1-section-4-3026]: Zos. 2. 18; “by a sudden attack” (Eutrop. 10. 4); “by night” (Vict. *Epit.* p. 50). Cf. Orosius, c. 28.
+[^chapter-1-section-4-3027]: After the battle of Cibalis the Greeks and the Macedonians, the inhabitants of the banks of the Danube, of Achaia, and the whole nation of Illyrica became subject to Constantine (Soz. 1. 6; cf. Anon. Vales. p. 474; Zos. 2. 20; Oros. c. 28, &c.).
+
+### Section 5. Third Five Years.
+
+About the time of his decennial celebration,[^chapter-1-section-5-3028] his sons Crispus and Constantine, and Licinius, son of Licinius, were made Cæsars. The peace between the emperors continued during the whole of this period. There was more or less fighting with the frontier tribes, Crispus, e.g., defeating the Franks in 320 (Naz. *Paneg.* c. 3. 17?), but the main interest of the period does not lie in its wars. It was a period of legislation and internal improvement (cf. Laws of 319, 320, 321, collected in Clinton, 1, p. 9; also De Broglie, I. 1, 296–97). Early in the period he was at Milan, where the Donatist matter, which had been dragging along since 311, came up for final settlement (cf. note, above). He was also at one time or another at Arles and at Rome, but the latter and greater part of the period was spent mainly in Dacia and Pannonia (cf. Laws, as above). The close of his fifteen years was celebrated somewhat prematurely at Rome, in the absence of Constantine, by the oration of Nazarius (cf. Naz. *Paneg.*).
+
+[^chapter-1-section-5-3028]: Perhaps earlier and perhaps later. It is generally placed in 317 (cf. Clinton, p. 370).
+
+### Section 6. Fourth Five Years.
+
+If the third period was relatively quiet the fourth was absolutely stirring. There had undoubtedly been more or less fighting along the Danube frontier during the preceding years, but early in this period there was a most important campaign against the Sarmatians, in which they were defeated and their king taken prisoner.[^chapter-1-section-6-3029] In honor of this victory coins were struck (Eckhel, *Doct. Num. Vet.* 8 (1827) 87). But this was only skirmishing; afterwards came the tug of war. Nine years of peace proved the utmost limit of mutual patience, and Constantine and Licinius came to words, and from words to blows. For a long time Constantine had been vexed at the persecution of the Christians by Licinius (cf. Euseb. *H. E.* 10. 8, 9), persecutions waged perhaps with the express purpose of aggravating him.[^chapter-1-section-6-3030] Licinius, on the other hand, naturally chagrined over the previous loss of territory, knowing of Constantine’s indignation over his persecutions, and perhaps suspecting him of further designs, was naturally suspicious when Constantine passed within his boundaries in pursuing the Sarmatians (Anon. Vales. p. 474). Mutual recriminations and aggravations followed. Licinius would not let the Sarmatian coins pass current and had them melted down (Anon. Contin. Dio. Cass., in Müller, *Fragm. Hist*. Gr. 4 [1868] 199). Altogether they soon came to blows. The steps were short, sharp, decisive. Constantine defeated Licinius by land (July 3, 323), and through Crispus, by sea (Soz. 1. 7; Anon. Vales. p. 474–5; Zos. 2. 22–3). After the defeat at Adrianople, Licinius retreated to Byzantium (Zos. 2. 23–5; Vict. *Epit*. p. 50), and then to Chalcedon (Anon. Vales. p. 475, Zos. 2. 25–6). Two months after the first victory (Sept. 18) a final and decisive battle was fought at Chrysopolis[^chapter-1-section-6-3031] (Anon. Vales. p. 475; Socr. 1. 4). Licinius surrendered on condition that his life should be spared (Zos. 2. 28), or rather Constantia secured from her brother the promise that his life should be spared (Anon. Vales. p. 475; Vict. *Epit.* p. 50; Pseudo-Leo, p. 85, &c.). He retired to Nicomedia, residing at Thessalonica (Soz. 1. 7; Pseudo-Leo, &c.), but was put to death the following year.[^chapter-1-section-6-3032] Constantine was now sole emperor. His first act (Soz. 1. 8) was to issue a proclamation in favor of the Christians (Soz. *l.c.*; *V. C.* 2. 24- , and 48- ). This was followed by many other acts in their favor,—building of churches, &c. (cf. Euseb. *V. C.,* and notes). From this time on he was much identified with Christian affairs, and the main events are given *in extenso* by Eusebius (see various notes). In 325 (June 19-Aug. 25) the Council of Nicæa was held (cf. Euseb. *V. C.* 3. 6, and notes), and Constantine took an active part in its proceedings. The same year his Vicennalia were celebrated at Nicomedia (Euseb. *V. C.* 1. 1; Hieron.; Cassiod.) and the following year at Rome also (Hieron., Cassiod., Prosper, Idat.), Constantine being present at both celebrations,[^chapter-1-section-6-3033] being thus at Rome in July, and passing during the year as far as Arles, apparently spending some time at Milan (cf. the various laws in Clinton, v. 2, p. 92).
+
+[^chapter-1-section-6-3029]: Zos. 2. 21. An exhaustive discussion of this is that by Bessell, *Gothen,* in Ersch u. Gruber, *Encykl.* I. 75 (Leipz. 1862), 132–33. The same article (p. 133–35) discusses various relations of Goths and Sarmatians with Constantine.
+[^chapter-1-section-6-3030]: According to Sozomen, Licinius withdrew his favor from Christians and persecuted them, because “He was deeply incensed against the Christians on account of his disagreement with Constantine, and thought to wound him by their sufferings; and, besides, he suspected that they earnestly desired that Constantine should enjoy the sovereign rule” (1. 7). In this view of the case, it is easy to see how and why affairs marched as they did. Eusebius (*H. E.* 10. 9) makes this, like the war against Maxentius, a real crusade in behalf of the persecuted Christians.
+[^chapter-1-section-6-3031]: According to Zos. 2. 27, the final siege and surrender was at Nicomedia.
+[^chapter-1-section-6-3032]: Compare note on Bk. II. ch. 18.
+[^chapter-1-section-6-3033]: For his presence at Rome at this time, compare authorities above, and also law dated July, 326, given in Clinton (p. 380).
+
+### Section 7. Fifth Five Years.
+
+The beginning of this period was the beginning of the series of acts which have taken most from the reputation of Constantine. Sometime in 326, perhaps while at Rome, he ordered the death of his son Crispus.[^chapter-1-section-7-3034] The same year (Hieron. *Chron.*) the Cæsar Licinius, his sister’s son, was put to death (Eutrop. 10. 6; Hieron.; Prosper.), and shortly after[^chapter-1-section-7-3035] his wife Fausta died or was put to death.[^chapter-1-section-7-3036] But apart from this shadow, the period was hardly less brilliant, in its way, than preceding ones. It was a time of gigantic and, as some said, extravagant internal improvements. Among various enterprises was the refounding, in 327, of Drepanum, his mother’s city, as Helenopolis (Hieron. An. 2343; *Chron. Pasch.* p. 283(?); Socr. *H. E.* 1. 18; Soz. 2. 2; Theoph. p. 41), and greatest of all, the transformation of the insignificant Byzantium into the magnificent Constantinople,[^chapter-1-section-7-3037] which was dedicated in 330 (Idatius; *Chron. Pasch.* p. 285; Hesych. §42; Hieron.; cf. Clinton).[^chapter-1-section-7-3038] It was probably during this period, too, that the work of improvement in Jerusalem was undertaken, and Helena made her famous visit thither (Euseb. *V. C.* 3. 42; Soz. 21; Socr. 1. 17; Ephraem. p. 24: Theoph. 37–8, &c.).
+
+[^chapter-1-section-7-3034]: Crispus was alive and in power March 1, 326, as appears from coins (cf. Eckhel, 8, p. 101–2). Whether he was put to death before the Vicennalia does not appear, but that he was is not probable. For death of Crispus and its date, compare Zos. 2. 29; Vict. *Cæs*.; Soz. 1. 5; Vict. *Epit.* p. 50; *Chron. Pasch.;* Eutrop. 10. 6, &c., and discussion under *Character.*
+[^chapter-1-section-7-3035]: The same year according to Greg. Tur. (1. 34). Cf. Eutrop. and Sidon. 327, and even 328, is the date given by some (cf. Clinton, v. 1, p. 382, and Wordsworth).
+[^chapter-1-section-7-3036]: Disputed, but generally allowed. On this series of deaths, compare the somewhat opposite views of Görres and Seeck in the articles mentioned under *Literature* for latest views.
+[^chapter-1-section-7-3037]: The date of the beginning of the work is curiously uncertain. Socrates (1. 6) puts it directly after the Council of Nicæa, and Philostorgius in 334, while there is almost equal variety among the modern historians. Burckhardt says Nov. 4, 326; De Broglie, 328 or 329; Wordsworth as early as 325. It is possible that the strangeness which he felt in visiting Rome in 326, and the hostility with which he was met there (Zos. 2. 29, 30), may have been a moving cause in the foundation of this “New Rome,” and that it was begun soon after his visit there. He first began to build his capital near the site of Ilium (Soz. 2. 3; Zos. 2. 30), but “led by the hand of God” (Soz.), he changed his plan to that city whose site he so much admired (Soz.).
+[^chapter-1-section-7-3038]: For accounts of the founding of Constantinople, see Soz. 2. 3; Philostorgius, 2. 9; Malalas, 13. 5; Glycas, p. 462–64; Cedrenus, p. 495–98; Theoph. 41–42. Compare Zosimus, 2. 30; Anon. Vales. p. 475–76; Socrates, 1. 16; Orosius, c. 28; Praxagoras, Zononas, Codinus, Nicephoras Callistus, &c.
+
+### Section 8. Sixth Five Years.
+
+The main event of the last full five-year period of this reign was the Gothic war (Hieron. An. 2347; Idat.; Oros. c. 28; Anon. Vales. p. 476; Eutrop. 10. 7; Vict. *Cæs.* p. 352; cf. Soz. 1. 26), undertaken in behalf of the Sarmatians (Anon. Vales. *l.c.*), carried on by Constantine II., and brought to an end April 20, 332 (cf. Clinton). The following year (333) Constans was made consul (Idat.; Hieron.; Prosper has 332; cf. Zos. 2. 35; Vict. *Cæs.* p. 161, &c.), and in 334 the remarkable (Anon. Vales.) incorporation of 300,000 Sarmatians into the empire (Anon. Vales. p. 476; Idat.; Hieron.; cf. Ammian. 17. 12, 18; 17. 13; 19. 12; *V. C.* 4. 6). This same year Calocærus revolted in Crete and was defeated (Anon. Vales. p. 476; Vict. *Cæs.* p. 161; Oros. c. 28; Hieron.). The following year (335) Constantine celebrated his tricennalia, and Dalmatius was made Cæsar (Idat.; Hieron. An. 340; Vict. *Cæs.* p. 161; Anon. Vales. p. 476; Chron. Pasch. p. 532; Vict. *Epit.* p. 51; Oros. c. 28), making now four Cæsars and a nondescript (cf. Anon. Vales. p. 476),—Constantine II, Constantius, Constans, Dalmatius, and Hannibalianus, among whom the world was now partitioned (Anon. Vales. p. 476; Zos. 2. 39; Vict. *Epit.* p. 52).
+
+### Section 9. Last Years.
+
+Later in this year, Constantine is known to have been at Jerusalem, where he dedicated a church (*V. C.* 4. 40; Chron. Pasch., but wrong year). It was also the year of the Synods of Tyre (Athanas. *c. Ar.* 1. p. 788; *V. C.* 4. 41; Theod. 1. 28). The same year, or early in the following one, Eusebius pronounced his tricennial oration (see *Special Prolegomena*). In 337 the Great Emperor died at Ancyrona, near Nicomedia, just as he was preparing for an expedition against the Persians, and was buried in the Church of the Apostles, at Constantinople (cf. notes on Eusebius’ Life of Constantine).[^chapter-1-section-9-3039]
+
+[^chapter-1-section-9-3039]: The events and dates of these later periods have to do mainly with theological matters,—the “religious” activity of Constantine, to which Eusebius devotes his attention so fully,—and are treated in the *V. C.*
+
+## Chapter II. Character
+
+### Section 1. Introduction
+
+### Chapter II
+
+### Character.
+
+### §1. *Introduction*
+
+A man’s character consists of an inherited personality enlarged, modified, or disfigured by his own repeated voluntary acts. A sufficiently exhaustive survey of such character may be made under the rubrics of: 1. Inherited characteristics. 2. Physical characteristics. 3. Mental characteristics. 4. Moral characteristics. 5. Religious characteristics.
+
+The character of Constantine has been so endlessly treated, with such utter lack of agreement, that it seems hopeless to try to reach any clear results in a study of it. “Who shall decide when doctors disagree?” “How shall I go about it to find what sort of a man Constantine really was?” Certainly nothing can be gained by that method which chooses a few acts or characteristics to which shifting tests of various philosophies are applied. Nor can any haphazard selection and stringing together of traits give what is by its nature a synthesis of them all. Like any other scientific study, the first condition of method is that it be systematic. Then, a character generalization is worth just so much, no more, as the grounds on which it is based. To get a man’s character from secondary sources, from other men’s generalizations, is a hopelessly will-of-the-wisp effort. Again, another vice of characterization as usually practised is the interpretation of the whole by a part rather than the part by the whole. The individual act is thus made the standard of character. To get at what this personality called Constantine was therefore requires a systematic survey of the primary sources with a view to getting the *ensemble* that the eccentric may be judged by the normal. In such survey the main thing is the body of analyzed and grouped facts. The editor’s summary, like any summary, is worth only what the facts are worth. This method, however imperfectly carried out, is at least better than rambling observations of incoherent phenomena; and has therefore been adopted in this attempt to find out what sort of a man this Constantine was; Physically, Mentally, Morally, Spiritually.
+
+### Section 2. Inherited Characteristics.
+
+The fact of the inheritance of character, virtues or vices as the case may be, curiously recognized in various nations and ancient philosophies (cf. Ribot. *Heredity,* N.Y. 1875, p. 375–6), and even in the ten commandments, has received the clearer exposition of modern science. In view of it, a scientific study of character considers antecedent generations. Biography rests properly on genealogy. Constantine’s father, Constantius Chlorus, was a man of great mildness, self-possession, and philosophic virtue, just, and a Neo-Platonist of the best type, a monotheist and philanthropist (cf. Sinclair, in Smith & W. 1. 661–2). Constantine is said to have inherited his father’s strength, courage, personal appearance (Eumen. *Paneg.* c. 4), piety (Pseud.-Leo, p. 83; cf. Const. and Euseb. in *V. C.* 2. 49), and general virtues. The slur of Zosimus on the character of Constantine’s mother seems to have been quite gratuitous. Her relation to Constantius was in nowise incompatible with virtue, and the honor afterwards paid her, along with the indisputable good early training of Constantine which was with her, indicate a woman of unusual character. The later enterprise and activity with the honors and responsibilities given her show her to have been of very considerable energy and ability.
+
+### Section 3. Physical Characteristics.
+
+A graphic picture of his personal appearance is drawn by Cedrenus (p. 472–3). “Constantinus Magnus was of medium height, broad-shouldered, thick-necked, whence his epithet Bull-necked. His complexion was ruddy, his hair neither thick nor crisp curling, his beard scanty and not growing in many places, his nose slightly hooked, and his eyes like the eyes of a lion. He was joyous of heart and most cheery of countenance.”[^chapter-2-section-3-3040] Many points in this description are confirmed by others, some apparently contradicted. Taken in detail, his *Height* was probably above medium. Over against this statement of Cedrenus (p. 472) that he was of middle height is that of the earlier Malalas (13. 1), who, while confirming the ruddiness of complexion, characterizes him as tall, and the explicit testimony of Eusebius, that among those with Diocletian “there was no one comparable with him for height” (*V. C.* 1. 19), and likewise among those present at Nicæa (*V. C*. 3- 10). But a “thick-necked” form hardly belongs to the strictly “tall” man, and a thick neck and broad shoulders would hardly belong to a form of “distinguished comeliness,” if it were short (Lact. c. 18). It may be supposed therefore that he can be described as above medium height. Moreover, there would naturally have been more mention of height by Lactantius and Panegyrists if it had been very extraordinary. In respect of *Countenance* he was undoubtedly handsome. The “majestic beauty of his face” mentioned by Theophanes (p. 29; cf. *V. C.* 1. 19; 3. 10) is confirmed by suggestions in the Panegyrists (e.g. Eumen. c. 17; Naz. c. 24), and all general testimony, and not belied by the coins. His *Complexion* was ruddy; “reddish” in the expression of Cedrenus (p. 272), “fiery” in that of Malalas (13.1). His *Hair,* rather thin and straight, scanty *Beard,* and “slightly hooked” *Nose* are shown also by the coins, where the nose varies from a pronounced Roman or ungraceful eagle’s beak to a very proportionate, slightly aquiline member. His *Eyes* were lion-like (Cedren.), piercingly bright (Paneg. 313, c. 19; also Eumen.). His *Expression* was bright and joyous (Cedren.), characterized by “noble gravity mingled with hilarity” (Naz. *Paneg.* c. 24), by “serenity” and “cheerfulness” (cf. Euseb. *V. C.* 3. 11). In brief, he seems to have been a type of the sanguine temperament.
+
+Added to his beauty of face was an unquestioned beauty of form. His distinguished comeliness of *Figure* (Lact. c. 18) is a favorite theme with his enthusiastic friend Eusebius, who says, “No one was comparable with him for grace and beauty of person” (cf. Eumen. c. 17; *V. C.* 1. 19; 3. 10), and that his figure was “manly and vigorous” (1. 20). The broad *Shoulders* and thick *Neck* prepare one for the testimony to his great bodily *Strength.* The feats of personal valor in combat with the Sarmatian champions and the wild beasts (cf. above), his personal energy in battle (e.g. before Verona; cf. above), much special testimony (e.g. Eumen. *Paneg.* c. 4) and all the general testimony, show that the superlative language of Eusebius is well grounded, and interpreted with conservative imagination is to be taken as fact. According to him, “he so far surpassed his compeers in personal strength as to be a terror to them” (*V. C.* 1. 19), and in respect of *Vigor* of body was such that at the Council of Nicæa his very bearing showed that he surpassed all present in “invincible strength and vigor”; while at the age of sixty or upwards, “he still possessed a sound and vigorous body, free from all blemish and of more than youthful vivacity; a noble mien and strength equal to any exertion, so that he was able to join in martial exercises, to ride, endure the fatigues of travel, engage in battle,” &c. (Vict. 4. 53). In *Bearing* he was “manly” (*V. C.* 1. 20), self-possessed, calm (*V. C.* 3. 11), dignified (“noble gravity,” Naz. c. 24; of. Eumen. &c.), with “majestic dignity of mien” (*V. C.* 3. 10) and serenity (*V. C.* 3. 10). In *Manners* he was “suave” (ἐπιεικής) (*V. C.* 3. 10) and “affable to all” (*V. C.* 3. 13). This singular affability was such, according to Lactantius (c. 18), as to endear him greatly to his soldiers. Over against this, however, must be set the statement of Victor, *Epit*. that he was “a scoffer [*irrisor*] rather than suave [*blandus*]” (Vict. *Epit*. 51). But this seems founded on a false exegesis (cf. above) and withal there is no absolute contradiction. Moreover, all his intercourse with bishops, deputies, soldiers, citizens, barbarians, seems to have generally made a favorable impression, and such success without affability of manner would have been marvelous. In *Dress* his taste, late in life at least, became somewhat gorgeous. If he were reigning to-day, the comic papers would undoubtedly represent him, like some other good and great men, with exaggerated red neckties and figured waistcoats. He “always wore a diadem,” according to Victor, *Epit.* (p. 51), and according to many (Malal. 13. 7–8; Cedren.; Pseudo-Leo, &c.) “none of the emperors before him” wore the diadem at all. Eusebius’ description of his appearance at the Council of Nicæa would do credit to a Washington reporter on wedding-toilets; he was “clothed in raiment which glittered, as it were, with rays of light, reflecting the glowing radiance of a purple robe, and adorned with the brilliant splendor of gold and precious stones” (*V. C.* 3. 10).
+
+[^chapter-2-section-3-3040]: Cf. Vict. *Epit.* p. 51, where “bull-necked” is rendered as equal to “scoffer,” “such according to physiognomical writers being the character of stout men,” Liddell and Scott, *Lex.* p. 1569. But the very proverb on which Victor bases this interpretation would seem to make it refer to energy and obstinate force of character, which is altogether better fitting the word and the physiognomical characteristic.
+
+### Section 4. Mental Characteristics.
+
+According to his biographer-friend, Constantine was even more conspicuous for the excellence of his psychical qualities than his physical (*V. C.* 1. 19). Among these qualities are natural intelligence (*V. C.* 1. 19), sound judgment (*V. C.* 1. 19), well-disciplined power of thought (Theoph. p. 29), and peculiarly, as might be expected from his eye and general energy, penetration (Theoph. p. 29). In respect of *Education,* it is said on the one hand that he “reaped the advantages of a liberal education” (*V. C.* 1. 19), and particularly that he was thoroughly trained in the art of reasoning (*V. C.*); but according to Anonymous Vales. (p. 471), and also Cedrenus (p. 473), his literary education was scanty. If there was early lack, he made up for it afterwards with characteristic energy, for he attained very considerable erudition (of a sort) for an emperor, as is shown in his *Oration.* According to Eutropius he was devoted to liberal studies. According to Lydus he was skilled both in the science of letters and the science of arms; for “if he had not excelled in both sciences, he would not have been made emperor of the Romans” (Lydus, *de Magist.* 3. 33),—a somewhat subjective ground. Such was his devotion to study that, according to Eusebius (*V. C.* 4. 29), “he sometimes passed sleepless nights in furnishing his mind with divine knowledge.” The measure of his thoroughness may be gathered from the fact that his knowledge of Greek even, does not seem to have been very extensive—“with which he was not altogether unacquainted” (*V. C.* 3. 13). His learning, as shown in his orations, is the learning of a man of affairs, and has many elements of crudity and consequent pretentiousness; but he is no worse than many authors—much better than most royal authors.
+
+His learning had at least the excellent quality that it was radiated with reference to expression, as all sound learning must be. According to Eusebius, much of his time was spent in composing discourses, many of which he delivered in public (*V. C.* 4. 29), and he continued to the last to compose discourses and to deliver frequent orations in public.
+
+The description by Eusebius of the character of his orations (*V. C.* 4. 24) seems to forbid any assumption of pure vanity as his motive. It is the most natural thing in the world that an emperor should make speeches, and that he should speak on scholastic or religious themes, and with the use of classical philosophy, mythology, and literature, should be no surprise in the days of President Harrison, Mr. Gladstone, and the Emperor William. There is no doubt he wrote and spoke vigorously and effectively to his soldiers, and on political and judicial matters (witness his laws), and his learned literary production is very fair amateur work, considering. In the *Delivery* of his speeches he seems to have had self-possession and modesty of manner, as e.g. at the Council of Nicæa, where “he looked serenely around on the assembly with a cheerful aspect, and having collected his thoughts in a calm and gentle tone…proceeded to speak” (*V. C.* 3. 11). His *Literary style* was somewhat inflated and verbose, but for this, compare *Special Prolegomena.* His *Patronage of learning* showed his interest in it. Following his father’s example and continuing his work, he encouraged the schools in Gaul (cf. above). Hosius and Eusebius were his friends and counselors. He made Lactantius tutor to Crispus (Hieron. Chron.). He had copies of the Scriptures made and distributed (*V. C.* 3. 1). In short, he especially “encouraged the study of letters” (Vict. *Epit.* 51) in every way.
+
+### Section 5. Moral Characteristics.
+
+(a) *In relations with events, things, or persons.* First of all, Constantine excelled in *Energy,* that fundamental of all developed character. He was pre-eminent for masculine strength of character (Theoph. p. 29), a man of energy (*vir ingens,* Eutrop. 10. 1). This was manifested at every turn, in his successful military activity under Diocletian, in the decisive acts at the time of leaving him, in the prosecution of campaigns against Maximian, Maxentius, Licinius, in the wholesale way in which he pushed internal improvements, the building of Constantinople, the multiplication of Christian houses of worship, in his studies, in his law-making; in short, in everything he touched there was the same teeming, resistless energy of the man. His *Determination* was “bent on effecting whatever he had settled in his mind” (Eutrop. 10. 5). His *Rapidity of action* when he rejoined his father is described by Lactantius as incredible (Lact. c. 24). He showed the same alacrity in his quick return and surprise of Maximian, in his first entry into Italy, and in his campaign against Licinius. This energy and activity rose to positive *Impetuosity,* which led him at Verona, before Rome, and at Cibalis to plunge into the midst of battle, communicating his own resistless, indomitable, alert will to do, to his soldiers. Closely linked with these qualities was that personal *Courage and Valor,* inherited from his father (Paneg. 307, c. 3), mentioned by Eusebius (*V. C.* 1. 11), and explicitly or implicitly by almost every one. This most indubitable of all his qualities was witnessed to even by the scoffing Julian as “inexpressibly” great (*Orat.* p. 13), and mentioned even in the work whose chief aim seems, almost, to detract from Constantine (*Cæs.* p. 23). United with all these characteristics of greatness was a far-reaching *Ambition*. This on the one hand is represented to be an ambition for power and glory. He was “exceedingly ambitious of military glory” (Eutrop. 10. 7); “aspiring to the sovereignty of the whole world” (Eutrop. 10. 5). According to Zosimus, at the time of the appointment of Severus and Maximin, already having his mind set on attaining royalty he was roused to a greater desire by the honor conferred on Severus and Maximin, and this eager desire of power was already well known to many. On the other hand, this ambition is represented to be a burning zeal for righting wrongs; his wars against Maxentius and Licinius real crusades, and his actual objective in all things the reform to be effected. If the fruit proves the motive, this was so; for he consistently used or tried to use his power for what he thought public good. This he did in Gaul, after his victories, in his legislation, and in his internal improvements.
+
+In view of all this powerfulness of personality, it may be said of all successes of this “man of power” (Eutrop. 10. 5) what Eutropius says of his success in war, that it was great, “but not more than proportioned to his exertions” (Eutrop.). With all this energy of personality, however, he was far from being headstrong. On the contrary, he showed marked *Prudence,* resembling his father in this also (Paneg. 307, c. 3). Sustaining so long the delicate position at the court of Diocletian, all his provision for guarding the frontiers, his long-suffering in waiting to be confirmed Cæsar, in waiting his opportunity to meet Maxentius, in waiting and getting everything in hand before meeting Licinius, his wise moderation in demand on the conquered, and the not pressing forward until he had everything well arranged, show this, and a high degree of *Patience* withal. This latter virtue was peculiarly characteristic whether exercised in respect of things or plans or people, and his great patience in listening to complaints (Naz. c. 24) is only a part of the whole. As he was patient, so he was distinguished for *Perseverance,* and “firm and unshaken” (Theoph. p. 29) *Steadfastness.* So great energy united with these other qualities barely needs testimony to suggest great *Faithfulness* to his tasks in hand, as in that “strict attention to his military duties” which Lactantius says (c. 18) characterized him as a young man. In brief, his whole personality was a marked example of that balance of power and the measuring of remote ends which is included under the word *Self-control,* in the use of the philosophy of which he, as well as his father, was a disciple. In this exercise of his great energy towards himself he was recognized to be remarkable. This self-control was manifested especially in his unusual *Chastity.* As a young man he was marked by correct moral habits (*probis moribus,* Lact. c. 18). The specific testimony of Eusebius to this (*V. C.*) would have comparatively little weight on a point like this, and the same might be said, in a measure, of the testimony of the Panegyrists (Naz. c. 24; 307, c. 4; 313, c. 4), who mention this virtue. But panegyrical art would forbid the laudation of what was conspicuously lacking; rather it would not be mentioned, and the general testimony goes to show at least a contemporary reputation for extraordinary continence, considering his time and environment. His relationship with Minervina hardly touches this reputation, whether she was wife or only legitimate concubine. The accusations and innuendoes of Julian, *Cæsars,* have, in any fairly critical estimate, hardly more than the weight of some malignant gossip whose backbiting is from his own heart. “Honi soit qui mat y pense.” Like Licinius, he seems to have been unable to understand that purity of heart which permitted the free companionship of women in social or religious life. Julian’s general charge of luxuriousness and sensuousness (p. 43, 306, 25, 38, 42, &c.) must be regarded largely in the same light; for this delight in soft garments, precious gems, games, and festivities was, if we can judge aright, in no sense “enervating pleasure and voluptuous indulgence”: for he was indefatigable in studies and works of all sorts, although it is perhaps to be referred to the vanity and love of display of which he is accused, and of which more later.
+
+(b) *In relations with people.* In general he was *Amiable,*—popular with the soldiers, popular even with his subdued enemies (Eutrop. 10. 7). Diocletian reminded Galerius (Lact. c. 18) that he was “amiable,” and he must have been so; for he was “loved by soldiers” (Eumen. c. 16), and so “endeared to the troops” that in the appointment of Cæsar he was “the choice of every individual” (Lact. c. 18). This popularity he indeed “sought by every kind of liberality and obligingness” (Eutr. 10. 7.), but what he sought he found.
+
+A very large element in this popularity was the universal *Mildness, Mercifulness,* and *Forbearance* which he showed. In these is found a class of characteristics which stand alongside his energy of character as peculiarly characteristic and great. “He whose familiar habit it was to save men’s lives” (*V. C.* 4. 6), as a young man promised, in the opinion of Diocletian (Lact. c. 18), to be “milder and more merciful than his father.” Even in the opinion of Julian he was “far more humane (πραότερον), and in very many other respects superior to others, as I would demonstrate if there were opportunity” (Julian, *Orat.* p. 15); and he again (p. 96) speaks of him in laudatory terms as contrasted with the other emperors. Eusebius, as might be expected, is still stronger in expression, and sets Constantine “in contrast with tyrants who were stained with blood of countless numbers,” saying that in Constantine’s reign “the sword of justice lay idle,” and men were “rather constrained by a paternal authority than governed by the stringent power of the laws” (*V. C.* 3. 1). This mercifulness he manifested on every occasion. “When Sigusium was on fire,” he directed greater effort towards saving it than he had to capturing it (Naz. *Paneg.* c. 21). At the taking of Rome he punished a certain few only of those most intimate with Maxentius (Zos.), and even Zosimus notes the great joy and relief of people at the exchange of Constantine for Maxentius. It is noticeable that in the inscriptions the epithet “clementissimus,” most rare of other emperors, is found a considerable number of times of him. So great was this mildness of conduct that he was “generally blamed for his clemency” (*V. C.* 4. 31), on the ground that crimes were not visited with their proper penalties. The testimony to this humaneness of character is almost unlimited and conclusive, but there is more or less evidence which is urged in qualification or contradiction. It is rather a common thing to say that he was at first mild, but later pride of prosperity caused him greatly to depart from this former agreeable mildness of temper (Eutrop.). Then the execution of the various members of his own family (cf. discussion below), the exposure of prisoners to the wild beasts (Eumen. *Paneg.* c. 12), his severe decree against those who should conceal copies of the works of Arius (Socr. 1. 9), his treatment of the Jews (Greg. Niceph., or at least his laws), and the severe penalties of some of his laws are among the points brought against him. But the remark of Eutropius is to be interpreted by the “former agreeable mildness of temper,” to which he himself witnesses, and the fact that this latter period was that where the points of view of the two men had widely diverged. The exposure of prisoners to wild beasts was no evidence of cruelty in itself; for under the customs then prevailing it might have been cruelty to his subjects not to have done this, and his treatment of the barbarian enemies is rather to be interpreted in the light of the testimony of Eutropius that he “left on the minds of the barbarians [Goths] a strong remembrance of his kindness” (10. 7). His treatment of his family is discussed elsewhere, but whatever its bearings may be, there is no just historico-psychological ground whatever for the use of the word which is so freely bandied,—cruelty. Cruel he was not in any sense. Even the extreme of the Panegyrist who says to him, “you are such by inheritance and destiny that you cannot be cruel” (Eumen. *Paneg.* c. 14), is nearer the truth. The penalties of his laws lay him open in a degree to a charge of growing severity; but it was great, if sometimes mistaken and overzealous, regard for what he deemed the public welfare, and on quite a different plane from anything which we express as cruelty. Though with the growing conservatism of a man who finds his purposes of mercy continually perverted and his indulgences abused, he yet remained to the end of his life most merciful and mild compared with those who went before and who followed.
+
+This fact becomes more clear in seeing how he excelled in kindred virtues. The *Patience* already mentioned, distinguished forbearance, and undoubted benevolence, or at least generosity, are traits which group with mercy and have no fellowship with cruelty. And these he had. He showed distinguished *Forbearance,* and that oftentimes, as in a disturbance at Antioch, where he “applied with much forbearance the remedy of persuasion” (*V. C.* 3. 59). The outrageous conduct of those who, in the Arian disturbances, dared “even to insult the statues of the emperor…had little power to excite his anger, but rather caused in him sorrow of spirit” (*V. C.* 3. 4), “and he endured with patience men who were exasperated against himself.” These words are by Eusebius, to be sure; but his conduct with Donatists, Arians, Maximinianus, and Licinius, in individual and on the whole, show that in fact he did habitually exercise great forbearance. To this was added much activity of positive *Kindness.* On first accession he “visited with much considerate kindness all those provinces” (*V. C.* p. 23). This kindness was shown throughout his reign, and brightly illustrated in his treatment of the persecuted Christians from the beginning,—in his acts in Gaul, in his famous toleration edict, in his letter to Maximin, and in his acts throughout. After his victory over Maxentius came the edict that those wrongfully deprived of their estates should be permitted to enjoy them again,…unjustly exiled were recalled and freed from imprisonment (Euseb. *V. C.* 1. 41). After the victory over Licinius he recalled Christian exiles, ordered restitution of property, released from labor in mines, from the solitude of islands, from toil in public works, &c., those who had been oppressed in these ways (*V. C.* p. 70–71). There is strong concensus of testimony to a very lovable habitual exercise of this trait in his “readiness to grant hearing,” “patience in listening,” and “kindness of response” to those whose complaints he had patiently listened to (Naz. 24). He was most excellent (*commodissimus*) to hear embassies and complaints of provinces (Vict. *Epit.* p. 51),—a testimony which is borne out by the facts. His *Generosity* is equally undoubted. His magnificent gifts and largesses to the army were still remembered in the time of Julian (*Orat.* p. 13). His constant and lavish giving to the Christians is Eusebius’ unending theme: but it was not to the churches alone; for we read of his munificence to heathen tribes (*V. C.* 2. 22), his liberality to the poor (*V. C.* 1. 43) in giving money for clothing, provision for orphans and widows, marriage portions for virgins, compensation to losers in law suits (*V. C.* 4. 4). It was “scarcely possible to be near him without benefit” (*V. C.* 1. 43; cf. *V. C.* 3. 16; 3. 22; 4. 44).
+
+Though slow to serve some friends through suspicion (i.e. *dubius* thus explained), he was “exceedingly generous towards others, neglecting no opportunity to add to their riches and honors” (Eutrop. 10. 7). “With royal magnificence he unlocked all his treasures and distributed his gifts with rich and high-souled liberality” (*V. C.* 3. 1). He seems to have carried it rather to excess, even on the showing of Eusebius. “No one could request a favor of the emperor, and fail of obtaining what he sought.…He devised new dignities, that he might invest a larger number with the tokens of his favor” (*V. C.* 4. 2). It is worth giving the account by Eusebius of this conduct in full here. He says (*V. C.* 4. 54) that this “was a virtue, however, which subjected him to censure from many, in consequence of the baseness of wicked men, who ascribed their own crimes to the emperor’s forbearance. In truth, I can myself bear testimony to the grievous evils which prevailed during those times: I mean the violence of rapacious and unprincipled men, who preyed on all classes of society alike, and the scandalous hypocrisy of those who crept into the church.…His own benevolence and goodness of heart, the genuineness of his own faith, and his truthfulness of character induced the emperor to credit the professions of those reputed Christians who craftily preserved the semblance of sincere affection for his person. The confidence he reposed in such men sometimes forced him into conduct *unworthy of himself,* of which envy took advantage to cloud in this respect the luster of his character.” There seems, therefore, some ground for the charge of *Prodigality,* that he “wasted public money in many useless buildings, some of which he shortly after destroyed because they were not built to stand” (Zos.), and (Zos. p. 104) “gave great largesses to ill-deserving persons, mistaking profusion for munificence” (τὴν γὰρ ἀσωτίαν ἡγεῖτο φιλοτιμίαν). Zosimus adds that to do this, he “imposed severe taxes on all, so severe that fathers were obliged to prostitute their daughters to raise the money, that tortures were employed, and in consequence whole villages depopulated.” This testimony is, however, by one bitterly prejudiced, who regarded money spent on Christian houses of worship as worse than wasted, and indicates only what appears from Eusebius as well, that expenditures for cities, schools, and churches built, and for other matters, must have been enormous. But so, too, they were enormous under other emperors, and Constantine, at least, instead of spending on debauchery, seems to have had something to show for it. As to taxes, Zosimus would undoubtedly sympathize with the Kentucky moonshiners in their “oppression” by revenue officers, if he were here now and Constantine were President, and would fulminate in the daily papers against the wicked party which by its wicked tariff compels men to marry their daughters to rich husbands in order to get their taxes paid,—and incidental luxuries supplied. But that does not say that an exorbitant tariff, to supply “jobs” which shall furnish rich “spoils” for those who have “pulls” out of the pockets of the many, is good; yet this, in modern phrase, is about what Constantine did. Constantine’s trust in his friends and generosity to the unworthy, with its consequences on the tax-payers, reminds strikingly of some of our own soldier-presidents, whom we love and admire without approving all their acts. And yet, on the other hand, much of the expenditure was for solid improvement, and could only be criticised by those who now oppose expenditures for navy, for improved postal service, public buildings, subsidies, &c.; though yet, again, his wholesale way of doing things also reminds one of the large generosity of some modern politicians in their race for popularity, with their Pension, Education, River and Harbor, and what not liberalities out of the pockets of the people. But whatever unwisdom may have been mingled, all this profusion shows in him a generosity of character which was at least amiable, and in the main genuine. His generosity took also the form of *Hospitality,* as shown by his entertainings at the Council of Nicæa (*V. C.* 4. 49). With all these qualities of amiable popularity there seems to have been joined a yet more fundamental element, of permanent influence among men, in a spirit of *Justice* so marked that the claim of the Panegyrist is hardly too sweeping when he says that “all who took refuge with him for whatever cause he treated justly and liberally” (Paneg. 307. 5)—if there is added “up to his light and ability.” Closely linked with this again is that “Unbending righteousness” of which Theophanes (p. 29) speaks. And to all these qualities was added that synthesis of qualities,—a remarkable *Tact* in his intercourse with men, a trait typically exemplified in his conduct at the Council of Nicæa, where “the emperor gave patient audience to all alike, and reviewed every proposition with steadfast attention, and by occasionally assisting the arguments of each party in turn, he gradually disposed even the most vehement disputants to a reconciliation,…persuading some, convincing others by his reasonings, praising those who spoke well, and urging all to unity of sentiment, until at last he succeeded in bringing them to one mind and judgment respecting every disputed question” (*V. C.* 3. 13).
+
+But success with men and popularity seem to have opened that pitfall of success,—*Vanity,*—and it is charged that he fell thereinto, although there is testimony to the exact contrary. According to Victor (*Epit.* p. 51) he was “immeasurably greedy of praise.” This agrees with, and is at the same time modified by Eutropius’ testimony to his ambition for glory and for honorable popularity (10. 7), and his apparently complacent reception of the outrageous flattery of Optatian (cf. his letter), seems at least to show some weakness in this direction. So again his tendency toward *Magnificence,* as shown in his assuming the diadem and his dress in general (cf. above), in the splendor of banquets as witnessed by his approving friend (*V. C.* 3. 15), his desire to do on a large scale whatever he did, whether in the building of cities or splendid houses of worship, or in book-binding ornamentations of pearls and gems. And yet again it is shown in what seems at this distance his *Conceit,* sublime in its unconsciousness in reckoning himself a sort of thirteenth, but, it would seem, a facile princeps apostle, in the disposition for his burial, “anticipating with extraordinary fervor of faith that his body would share their title with the apostles themselves.…He accordingly caused twelve coffins to be set up in this church, like sacred pillars, in honor and memory of the apostolic number, in the centre of which his own was placed, having six of theirs on either side of it” (*V. C.* 4. 60). One can seem to read in this a whole history of unblushing flattery, and it reminds that Eunapius (*Vic. ædes.* p. 41) has spoken of his pleasure in the stimulant of “intoxicating flattery.” Still it is not to be supposed that this was a peculiarly weak vanity or an absorbing one. The testimony to his *Modesty* (*V. C.* 3. 10), though by Eusebius, is too circumstantial to be wholly unreal, and the testimony to his Humility in his “indignation at excessive praise” (*V. C.* 4. 48), and the records of Eusebius that he “was not rendered arrogant by these plaudits nor uplifted by the praises” (Euseb. *V. C.* 1. 39), and of the Chronicon Paschale (p. 521) that “he was not at all puffed up by the acclamations,” evidently represent a genuine thing. This mixed character is too frequently met with to be incomprehensible. Real power, recognizing its own success, glad of the recognition of others, not at bottom because of cold vanity, but from warm appreciation of human friendliness, became through success in carrying out what seemed to him, and were, divine plans, fired with the thought that he was the especial and necessary minister of God, that his thoughts and will were directly touched by the Divine Will and thus that whatever he thought or willed was infallible. He is not unlike some modern rulers. The spirit, though one of real vanity, or egotism at least, has an element of nobleness in it, and in most of its manifestations commands respect along with the smile. The accusation of Zosimus of *Arrogance* “when he had attained to the sole authority,” and that he “gave himself up to the unrestrained exercise of his power,” must be interpreted like those of other un-Christian witnesses, in the light of the fact that his actions worked relative hardships to the non-Christians, and that very justice to the Christians would seem injustice to them, and if Constantine was more than just, his generosity was at some one’s expense. His energy of execution and constant success, with his dominating idea of a Divine mission, would naturally engender this faith in his own infallibility; for what is arrogance but this vanity joined with power? His action toward schismatics—Donatists, Arians, or orthodox troublers of his peace—was such as to suggest some degree of this vice. Yet his success in keeping the followers of the old religion fairly mollified, and his generally successful tact, showed that this was in no sense a dominating and unrelieved characteristic. Two other weaknesses closely allied with these are also imputed to Constantine: *Jealousy,* as illustrated by the statement that “wishing to minimize the deeds of his predecessors, he took pains to tarnish their virtues by giving them jocose epithets” (Dion. Cont. 2 [Müller, p. 199 ]; cf. Vict. *Epit.* p. 51), and *Suspiciousness* (Eutrop. 10. 7); for which latter, a man who had survived as many plots as he had, might well be excused. Again and again and again he trusted men, and they deceived him. His conduct with Maximian shows that at least in the beginning, before he had had so much experience of untrustworthiness, he was remarkably free from this. A much more serious charge is that of *Faithlessness* preferred by Zosimus, who says (2. 28), “in violation of his oaths (for this was customary with him)” and twice repeats the charge. Eusebius, on the other hand, tells what great pains Constantine took not to be the one to break peace with Licinius (*V. C.*). One is worth as little as the other. The charge seems to rest mainly or wholly on his conduct towards Licinius, in beginning war and in putting him to death. A small boy once held a smaller boy in a firm grip, but agreed to spare him the cuffing he deserved because he was smaller. The smaller small boy promptly set his teeth in the leg of the larger small boy, and was properly cuffed for it. Thereupon the smaller small boy’s big brother was filled with indignation, which he manifested by seeking and finding the same fate. The indignation in behalf of Licinius seems to be in large measure big brother indignation—indignation with the wrong party. He appears to have been one of those who held a compact to be binding on the other party only. It wasn’t in the bargain that he should persecute the Christians, or in the other bargain that he should plot his benefactor’s overthrow. That king in Scripture who took back his promise to forgive a debt of ten thousand talents was not faithless.
+
+(c) *In relations with his family.* He was a filial *Son,* having the confidence of his father, as shown in his wish of succession, and showing his mother all honors when he came to power (cf. coins showing her position as empress, and *V.C.*). “And well may his character be styled blessed for his filial piety as well as on other grounds” (*V. C.* 3. 47).
+
+It is in this relation to his family, however, that the most serious attacks on the character of Constantine have been made. Eutropius says: “But the pride of prosperity caused Constantine greatly to depart from his former agreeable mildness of temper. Falling first upon his own relatives, he put to death his son, an excellent man; his sister’s son, a youth of amiable disposition; soon afterwards his wife; and subsequently many of his friends.” This has been a battle-ground of accusation or excusation in all the centuries. The testimony is very meagre and uncertain, but this much may be said: 1. That any jury would regard the fact of deaths as evidenced. It is witnessed by Eutrop. (10. 6), Zos., Vict., Hieron., &c. 2. That he was unjustifiable is not proven. In respect to the death of Fausta, at least, there was probably just cause; whether love intrigue or other intrigue, there seems to have been some real occasion. The death of Crispus, too, was from no mere suspicions, but on apparently definite grounds of distrust. It is historical assumption to say that he had no good grounds, whatever these may have been—illicit relationship with Fausta or more probably political intrigue. At the worst, he was put to death on false but, at the time, apparently true accusation: what has been done by judges and juries of the best intention.[^chapter-2-section-5-3041] Of Licinius, his sister’s son, it can hardly be said that he had the same reason, as he was still a boy. But remembering the inherited character of Licinius, and noticing the curious fact that the cordiality between Constantia and Constantine was peculiarly great to the end, it seems as if there must have been some mitigating circumstance.[^chapter-2-section-5-3042] In all historical candor it looks as if there had been some general intrigue against Constantine which had been met in this way; but the fairest verdict to enter is “causes unknown.”
+
+In estimating the characteristic value of the acts it must be noted, 1. That it has in no sense the character of private execution. The emperor was judge. Even if he mistook evidence and put to death an innocent man, it was as when a judge does the same. 2. That the relative moral character of punishments inflicted is conditioned by the custom of punishment. An English judge of the past was not as cruel in hanging a man for theft, as a modern one in applying the extreme penalty of the law to an offense with mitigating circumstances, would be. 3. That all law of evidence, all rhyme and reason, says that any man’s any act is to be interpreted in the light of his *general character.* Where evidence is lacking or doubtful, such evidence of general character has actual weight, and may be conclusive. In application to these acts note (*a*) The peculiar forbearance which Constantine exercised toward Maximian. (*b*) The conclusive universal testimony to the general mildness of his character and his habitual mercifulness. In view of this, it is to be judged that there was some real, or appearing, great ground of judicial wrath. 4. That Constantine had suffered from plots on the part of his own relatives over and over again, and spared, and been plotted against again, as in the cases of Maximian, Bassianus, and Licinius. 5. That they were not put to death “in a gust of passion” at once, but in successive acts. In view of these things it is fair and just to say that they were put to death on grounds which seemed just and for the welfare of society, and their deaths in no sense indicate cruelty or unnaturalness on the part of Constantine. Even the death of Licinius must be interpreted by the political ethics of the times and its circumstances. So long as sentimentalists continue to send bouquets to murderers and erect monuments to anarchists, they will regard execution, even legal execution, as *prima facie* evidence of cruelty, and the killing of a murderer in self-defense, or the hanging of a traitor, as crime. Constantine’s whole character ensures that if he thought he could have spared them, or any one, with safety, he would have done so.[^chapter-2-section-5-3043]
+
+In general he was a faithful *husband* as respects marital virtue, and a good *father.* He took care that his children should be well educated. Crispus was under Lactantius (Hieron.), and the others perhaps under Arborius (“Auson. de Prof. Burdig. 16”); at all events, he had the most accomplished teachers of secular learning to instruct in the art of war, and in political and legal science (*V. C.* 4. 51), and both by his own instruction and that of men of approved piety, took special pains with their religious training. He early appointed them to offices of authority, and distributed the empire among them.
+
+(d) *In relations with friends.* His general conduct toward his friends was marked by very great liberality (cf. above). Eutropius speaks emphatically of this even while he uses the expression which has been such a puzzle to all, that “toward some of his friends he was double” (or dangerous), a phrase which is interpreted by Johannes Ant. as meaning “to some of friends false (unsound, ὑπούλως) and unsafe (unwholesome, οὐχ ὑγιῶς)” (ed. Müller 4. p. 602–3). His uniform effort to please his friends has been discussed above.
+
+(e) *In relations with society.* 1. As *General* he seems to have been popular with his own soldiers (cf. above), inspiring them with enthusiasm and energy. Toward hostile soldiers he was merciful (cf. above), not following up an advantage further than was necessary, and toward conquered enemies unusually forbearing; e.g. at Sigusium, at Rome, with Maximian, with Licinius, and with the Goths (cf. above). His generalship is characterized by careful provision for the guarding of his rear, and by rapidity of movement and dash in actual conflict. 2. As *Legislator* he “enacted many laws, some good, but most of them superfluous, and some severe” (Eutrop. 10. 8). He seems to have had a weakness for law-making which, at all events, shows a characteristic respect for law little shared by his early contemporaries. Of course Eutropius would consider all laws in favor of Christians superfluous. Laws for the abolition of idolatrous practices, for the erection of Christian houses of worship, observance of the Lord’s Day (*V. C.* 4. 23), permitting cases to be tried before bishops (Soz. 1. 9; Euseb. *H. E.* 10. 7; Cod. Theod. Tit. de episc. 2) &c., would surely seem so. But even in other laws Constantine seems to have had at times an abnormal zeal for law-making, when his energies were not occupied in war or church-building. The laws were generally wise and, at the least, benevolently or righteously meant. Such were the abolition of crucifixion (Vict. *Cæs.*) and of gladiatorial shows (*V. C.* 4. 25; Socr. 1. 8; C. Theod. 15. 12. 1), the law that the families of slaves were not to be separated (C. Theod. 2.25), that forbidding the scourging of debtors (C. Theod. 7. 3), and that repressing calumny (Vict. *Epit.* 51). Among the “severe” laws were such as punished certain forms of illicit intercourse with death. 3. As *Statesman* his policy was broad and far-reaching. He fully organized and carefully established one section of his territory before he enlarged. He changed the whole constitution of the empire, both civil and military (cf. Wordsworth, in Smith & W.). He inaugurated reforms in finance, and especially was most assiduous in the matter of internal improvements, restoring and building from one end of the empire to the other. The great characteristic consummation of his reign was the union of Church and State, over which men are still divided as to whether it was a tremendous blessing or a tremendous curse. Tremendous it surely was in its shaping power on world history. (Compare numerous titles under *Literature.*) The general statement of Eutropius that “in the beginning of his reign he might have been compared to the best princes, in the latter part only to those of a middling character,” must be interpreted by the fact that during the latter part of his reign he was so associated with Christianity, in itself a falling away in the eyes of the old religionists. His reign was one of order and justice such as few were, and an order out of chaos, a reign in which it could be peculiarly said that “chastity was safe and marriage protected” (Naz. c. 38), where a man’s life and property were secure as under few of the Roman emperors. It is idle to refuse the title of Great to a man who, from the beginning, followed a consistent, though developing policy, organized the interior, and securely guarded the frontier of his empire at each enlargement, and finally unified the whole on such a basis as to secure large internal prosperity and development.
+
+[^chapter-2-section-5-3041]: It is hardly necessary to say that the various tales of the remorse of Constantine for the death of Crispus are mythical. The tale of Sopater has been mentioned. That of Codinus (*De signo Cp.* p. 62–63), also that, “in regret for death of Crispus, he erected a statue of pure silver with the inscription, ‘My unjustly treated son,’ and did penance besides,” falls into the same category.
+[^chapter-2-section-5-3042]: Seeck (*Ztschr. f. wiss. Theol.* 1890, p. 73) maintains that it is established (“urkundlich fest”) that Licinius was still living in 336, in which case he would have been more than twenty years old. He maintains also that he was not the son of Constantine, but the illegitimate son of Licinius by a slave woman.
+[^chapter-2-section-5-3043]: On this question compare especially monographs of Görres and Seeck. See under *Literature,* where other titles, e.g. Hug and Wegnerus, will also be found. In general, the remark of Ludermann (Lipsius, *Theol. Jahrb.* 1886, p. 108) is valid, “The arguments against Constantine’s Christianity, which are drawn from his moral character, have ever been the weakest.”
+
+### Section 6. Religious Characteristics.
+
+Was Constantine a Christian? This vain question has to be considered, hardly discussed. The interminable opinions, one way or the other, are for the most part wise-seeming, meaningless generalizations. Like any generalized statement, it is conditioned by the point of view of the author. When ten men answered the question “What is a Christian?” in ten different ways, who shall say what any one is? This has been the difficulty. One does not conceive of Christianity apart from baptismal regeneration. The question has then narrowed to one of baptism. Constantine was not a Christian until just before his death. Another has some other test. Another is not a Christian himself, and so on. A good Biblical, Protestant starting-point is to say he was a Christian as soon as he believed in Christ, and that the evidence of faith is in confession and action. Already, before his campaign into Italy, he seems to have been in intimate contact with the Christians. Hosius was probably already one of his advisers. The young emperor had inherited his father’s piety (Paneg. 307, c. 5), and was inclined to monotheism. The words of advisers must have made him think at least, and he seems to have made a sort of test of believing at the time of the famous “vision of the cross,” whatever that may have been. Judging from the way men think and feel their way to faith, it seems psychologically probable that, feeling his way along to that point, he tried faith and, having success, he substantially believed from that time on. Certainly from a very early period after this, the evidences begin to be clear and increasingly so as presumably his faith itself became more clear and fixed. The account in Eusebius of the process of thought by which he inclined toward Christianity has the greatest plausibility. He says that “considering the matter of Divine assistance, it occurred to him that those who had relied on idols had been deceived and destroyed, while his father…had honored the one Supreme God, had found him Saviour, &c.…he judged it folly to join in the idle worship of those who were no gods…and felt it incumbent on him to honor no other than the God of his father.” The nature of the vision of the cross, whether a miracle, a natural phenomenon, or only a dream, does not affect the probability of the account by Eusebius of what followed it (*V. C.* 1. 32). “At the time above specified, being struck with amazement at the extraordinary vision, and resolving to worship no other God save him who had appeared to him, he sent for those who were acquainted with the mysteries of his doctrines, and inquired also what God was.…They affirmed that he was God, the only begotten Son of the one and only God,” and he thereupon “made the priests of God his counsellors and deemed it incumbent on him to honor the God who had appeared to him, with all devotion.” According to Sozomen, “it is universally admitted Constantine embraced the religion of the Christians previous to his war with Maxentius and prior to his return to Rome and Italy; and this is evidenced by the dates of the laws which he enacted in favor of religion” (Soz. 1. 5; cf. 1. 3). Philostorgius (1. 6), “in conformity with all other writers,” ascribes to the victory over Maxentius (Photius. *Epit.*). This is confirmed, too, by the remark of the Panegyrist (313, c. 4; cf. c. 2 and c. 11), that he conducted the war by Divine instruction, and the famous inscription on the triumphal arch, *“instinctu Divinitatis.”* According to Augustine he was at the time of the petition of the Donatists, “mindful of the hope which he maintained in Christ” (August. *contra litt. Petil.* Bk. II. c. 92, p. 205).
+
+The tales of his baptism at this time, or by Sylvester at all, are pure fables (cf. under *The Mythical Constantine*), but it appears from antecedent probability, from testimony, and from his early subsequent identification with the Christians that he became fairly convinced at this time. His letters concerning the council at Arles, to be sure, have little direct evidence, but enough to show that he regarded the Christian religion as the worship of that one supreme God, and in them Hosius was already his trusted adviser. But in his letters to Chrestus (314) he speaks of those who are “forgetful of their own salvation and the reverence due to the most holy faith,” and if his letter to the bishops after the council at Arles—a letter full of expressions like “Christ the Saviour,” “brethren beloved,” “I who myself await the judgment of Christ,” “our Saviour”[^chapter-2-section-6-3044]—be genuine, Constantine was well advanced in his commitment in 314; but whether it is or not, the fact of his Christian advisers, of his laws in behalf of Christians, and various substantial favors to them, his recognition of their God as his one God, makes it almost idle to discuss the question. Was Constantine a Christian in 314? What is a Christian? He seems to have been. The type was that of many a business-man church-member of to-day—Christians, but neither over-well-instructed, nor dangerously zealous in the exercise of his faith. It must be remembered that during these earlier years his confession of his faith and identification of himself with the Christians was conditioned by his relation to the old religion. Such a change was a radical novelty. His position was not yet secure. He had to use his utmost tact to keep all elements in hand. He was conditioned just as a modern Christian emperor or president, a majority of whose political advisers and subjects or electors are non-religious. He had great problems of political organization to effect, and was immersed in these. The only matter of surprise is that he grew so rapidly. There is no ground whatever for supposing that he dissembled to the end, or even at all. To say that his retaining the title of pontifex maximus, or making concessions respecting the old worship, or allowing soothsayers to be consulted, or even the postponement of his baptism, indicate this, is critical absurdity in the face of evidence.[^chapter-2-section-6-3045] Testimony, both heathen and Christian, to the openness of his action is complete, and the testimony of his acts—such, e.g., as the law for the observance of Sunday—conclusive. Later, at least, he “most openly destroyed temple worship and built Christian houses of worship” (Eunap. *Vita Ædes.* 37, ed. Boiss. p. 20). From the defeat of Licinius on, edicts, letters, speeches, acts of all sorts, testify to a most unequivocal adoption of the Christian religion. Eusebius hardly overstates in saying that “he maintained a continual testimony to his Christianity, with all boldness and before all men, and so far was he from shrinking from an open profession of the Christian name, that he rather desired to make it manifest to all that he regarded this as his highest honor” (*V. C.* 3. 2). Really the question whether he considered himself, or was considered, a Christian at and after the time of the Council of Nicæa is too idle even to mention, if it had not been gravely discussed. In the opinion of the bishops there he was “most pious” and “dear to God” (*Ep. synod.* in Socr. 1. 9; Theodoret, 1. 8). On his part, letters are full of pious expression and usually begin or end or both with “beloved brethren.” To the council itself he describes himself as “fellow-servant” of “Him who is our common Lord and Saviour.” Another more considerable position is that all that indisputable external connection with Christianity was pure political expediency, that he was a shrewd politician who saw which way the wind was blowing, and had skill to take advantage of it. That Constantine was not a Christian in the strict sense even to the end of his life was the position of Keim. Burckhardt regards him as a pure politician, without a touch of Christian life. Brieger (1880) says we have not grounds to decide either way, whether he was “a godless egoistic fatalist or had a more or less warm religious or even Christian interest,” but that the fixed fact is, that it was not because of his inner belief in the Christian religion that he showed favor to the Christians. In a brief attempt to get some basis in the sources, the enthusiastic testimony of Eusebius and other writers, explicit as it is, may be quite disregarded, even the testimony to facts, such as his practice of giving thanks (*V. C.* 1. 39), of invoking Divine aid (Euseb. *V. C.* 2, 4, 6, 13; Soz. 2. 34), of his erecting a place of prayer in his palace (Soz. 1. 8), of his fasting (*V. C.* 2. 41), of his having a stated hour of prayer (*V. C.* 4. 22), although all these are interesting. The documents, however, unless by supremely uncritical rejection, can be regarded as fundamental sources. A brief analysis of these, even though imperfect, will furnish grounds on the basis of which those who apply various tests may apply them. Starting from his faith in Christ, surely the center of Christianity, he believed Christ to be Son of God, “God and the Son of God the author of every blessing” *(S. C.),* the revealer of the Father, who has “revealed a pure light in the person of Thy Son…and hast thus given testimony concerning Thyself” (*S. C.* 1), proceeding from the Father *(S. C.),* and incarnate, his incarnation having been predicted also by the prophets. He believed this Son of God to be his Saviour (*Ad Tyr., Ad Ant., Ad Euseb.,* &c.) “our common Lord and Saviour” *(Ad Euseb.)*, “our Saviour, our hope, and our life” *(Ad eccl. Al.).* He believed in his miraculous birth *(S. C.)* and in his death for our deliverance (*Ad Nic.;* cf. *Ad Mac.* &c.), “the path which leads to everlasting life” (*S. C.* 1), “a precious and toilsome” work *(Ad Euseb.),* and in his ascension into heaven (*S. C.* 1). He believed in “God the Father” (*Ad Euseb.* 2), “Almighty” *(Ad Euseb.),* Lord of all (*Ad Euseb.* 2), and the Holy Ghost (*Ad eccl. Al.;* cf. *S. C.*). He believed in “Divine Providence” (*Ad Eccl. Al.; Ad Alex. et Ar.; Ad. Euseb.* 1), God the preserver of all men *(Ad Alex. et Ar.),* who sees all things *(Ad Syn. Nic.),* who is near us and the observer of all our actions *(S. C.),* and “under the guidance of whose Almighty hand” he is *(Ad Prov. Pal.),* that all things are regulated by the determination of his will *(Ad Euseb.).* He believed in the existence of a personal devil *(Ad Eccl. Al.).* He believed in the future life *(Ad Prov. Pal.),* “the only true life” (*S. C.* 12), the “strife for immortality” *(Ad Euseb.),* to which those may aspire who know Him (*S. C.* 12). He believed in future rewards and punishments (*Ad Prov. Pal.; S. C.* 23). He believed in the inspiration of the Scriptures *(Ad Eccl. Al.).* He loved God (*Ad Euseb. 2; V. C.* 2. 55), and considered it his chief work in life to glorify Christ *(S. C.).* He loved his fellow-men, being disposed “to love you with an enduring affection” (*Ad Ant.; V. C.* 3. 60, &c.), and recognized it as virtue in others (8, c. 11). To him, God, in general, is the source of all blessings (*Ad Prov. Pal.; S. C.,* &c.). “I am most certainly persuaded,” he says, “that I myself owe my life, my every breath, in short, my very inmost and secret thoughts to the favor of the Supreme God” *(Ad Prov. Pal.).* He recognizes contrition as a requisite for pardon *(Ad. Prov. Pal),* and that it is the power of God which removes guilt *(Ad Euseb.).* In the conduct of life. “Our Saviour’s words and precepts are a model, as it were, of what our life should be” (*Ad. Ant.; V. C.* 3. 60).
+
+Expositions of his doctrinal and ethical positions might be multiplied almost without end from the many and fruitful sources, but a few specimens in his own expression will best show the spirit of his religious life. A most suggestive and beautiful sketch of Christ’s ministry on earth too long to quote here may be found in his *Oration* (ch. 15), but the following selections will give the idea:
+
+*A description of the inner Christian life.* “For the only power in man which can be elevated to a comparison with that of God is sincere and guiltless service and devotion of heart to Himself, with the contemplation and study of whatever pleases Him, the raising our affections above the things of earth, and directing our thoughts, as far as we may, to high and heavenly objects” (*S. C*. 14).
+
+*A description of the outer Christian life.* “Compare our religion with your own. Is there not with us genuine concord, and unwearied love of others? If we reprove a fault, is not our object to admonish, not to destroy; our correction for safety, not for cruelty? Do we not exercise not only sincere faith toward God, but fidelity in the relations of social life? Do we not pity the unfortunate? Is not ours a life of simplicity which disdains to cover evil beneath the mask of fraud and hypocrisy?” (*S. C.* 23).
+
+*A prayer.* “Not without cause, O holy God, do I prefer this prayer to Thee, the Lord of all. Under Thy guidance have I devised and accomplished measures fraught with blessing: preceded by Thy sacred sign, I have led Thy armies to victory: and still on each occasion of public danger, I follow the same symbol of Thy perfections while advancing to meet the foe. Therefore have I dedicated to Thy service a soul duly attempered by love and fear. For Thy name I truly love, while I regard with reverence that power of which Thou hast given abundant proofs, to the confirmation and increase of my faith” *(Ad prov. Or.).*
+
+*A confession of faith in God and in Christ.* “This God I confess that I hold in unceasing honor and remembrance; this God I delight to contemplate with pure and guileless thoughts in the height of his glory.” “His pleasure is in works of moderation and gentleness. He loves the meek and hates the turbulent spirit, delighting in faith. He chastises unbelief” *(Ad Sap.).* “He is the supreme judge of all things, the prince of immortality, the giver of everlasting life” (*S. C.* 36).
+
+Was Constantine a Christian? Let each one apply his own test.
+
+[^chapter-2-section-6-3044]: It seems to have been frequently accepted as such—in the collections of councils, by the editor of Optatus, Ceillier, &c. It first appeared in the edition of Optatus, among the monuments relating to the Donatists gathered by him. These monuments are from one single though tolerably ancient ms. and no source for this is quoted, though the sources of others are given. In itself considered it is a surprise to find it at this stage of Constantine’s life. Still, it is not unlike his later productions, and it is not impossible to think of its having been written in the enthusiasm of a successfully ended enterprise. It would seem (unless there be some confirmatory study of the letter, not now at hand) that a cautious criticism would base nothing on this letter alone.
+[^chapter-2-section-6-3045]: His saying before baptism is discussed in the *V. C.* 4. 2, notes.
+
+### Section 7. General Characterization.
+
+Before trying to gather into continuous statement the traits of character which have been examined, a few general characterizations must be mentioned at least. Beginning at the bottom, the unfriendly, or hostile, or at the least unsympathetic, heathen testimonies generalize him as at least relatively and on the whole both great and good. The general tendency of heathen testimony is to represent him as admirable in the early part of his reign, but execrable, or less admirable, in the latter part; that of Christian writers is to represent a growth of excellence, which raises him to saintship at the end. This is most natural. Favoring Christianity was itself a moral fall to a heathen, and bestowing money on Christians would be robbery. The turning of his character was with his changing face towards Christianity, and culminated in the overthrow of Licinius. Licinius fought really as the champion of heathenism. The adherents of a lost cause are characterizing their victor. It is like an ex-Confederate characterizing Lincoln or Grant. The point of view is different. Honest and true men in the South thought Lincoln a curse, and often in popular verdict his character was “black.” The popular proverb quoted by Victor (*Epit.* p. 51), “Bull-necked for ten years, for twelve a freebooter, and for ten a spendthrift (immature child),” has just the value of a Southern popular opinion of Lincoln, or a rural Northerner’s of “Jeff Davis.” Indeed, the first might summarize at times the Southern popular verdict of Grant; the second, a frequently expressed estimate of Lincoln’s conduct in the emancipation of slaves; and the third, their view of the enormous expenditure for pensions of Union soldiers, even as it was fifteen years ago. But even the rather severe Victor, who reports this proverb, finds Constantine “most excellent *(commodissimus)* in many respects,”—in respect of certain laws, in his patronage of the arts, especially that of letters, as scholar, as author, in the hearing of delegations and complaints (p. 51). Again, “Praxagoras, though a heathen, says that in all sorts of virtue and personal excellence and good fortune, Constantine outshone all the emperors who preceded him” (Photius, *Cod.* 62, ed. Müller, p. 1). And finally, the heathen Eutropius, who characterizes from his standpoint so admirably,[^chapter-2-section-7-3046] though he naturally finds that “in the beginning of his reign he might have been compared to the best princes; in the latter part, only to those of middling character,” nevertheless records “that innumerable good qualities of mind and body were present in him,” and that he was “deservedly enrolled among the gods,”—using the *meruit* which he uses also of Aurelian, but not generally, and not even of Constantius. On purely heathen testimony, therefore, Constantine, taken by and large, was comparatively remarkable and admirable. A moderate Christian characterization is that of Theophanes (p. 29): “Pre-eminent for masculine strength of character, penetration of mind, well-disciplined power of thought; for unbending righteousness, ready benevolence, thorough majestic beauty of countenance, mighty and successful in war, great in wars with the barbarians, invincible in domestic wars, and so firm and unshaken in faith that through prayer he obtained the victory in all his battles.” Remembering, therefore, that in order to understand a character in past centuries one must project himself into his time; remembering again the circumstances of his time and its practice, we shall, without forgetting any of the acts on which he has been judged, find him on indisputable testimony superior to most of the other emperors in character, and as much above the circumstances of his times as would characterize a man of to-day as of peculiarly high moral character. In view of this, it is uncritical, and a violence to historical evidence, to approach one whom, at death, the heathen thought worthy to be enrolled among the gods, and the Christians canonized as saint (in the Greek calendar), as other than one who, taken all in all, was of unusual excellence of character. As in any synthesis, any organization, subordinate facts must be viewed in their relation to their center and whole, as by any law of criminal procedure acts must be judged in the light of general character, so any rational, legal, scientific, historical estimate of Constantine must be in view of this fact.
+
+[^chapter-2-section-7-3046]: Constantine, being a man of great energy, bent upon effecting whatever he had settled in his mind.…But the pride of prosperity caused Constantine greatly to depart from his former agreeable mildness of temper. Falling first upon his own relatives, he put to death his son, an excellent man; his sister’s son, a youth of amiable disposition; soon afterwards his wife; and subsequently many of his friends.” “He was a man who, in the beginning of his reign, might have been compared to the best princes; in the latter part of it, only to those of middling character. Innumerable good qualities of mind and body were apparent in him; he was exceedingly ambitious of military glory, and had great success in his wars; a success, however, not more than proportioned to his exertions. After he had terminated the Civil War, he also overthrew the Goths on various occasions, granting them at last peace, and leaving on the minds of the barbarians a strong remembrance of his kindness. He was attached to the arts of peace and to liberal studies, and was ambitious of honorable popularity, which he, indeed, sought by every kind of liberality and obligingness. Though he was slow, from suspicion, to serve some of his friends, yet he was exceedingly generous towards others, neglecting no opportunity to add to their riches and honors. He enacted many laws, some good and equitable, but most of them superfluous, and some severe.”
+
+### Section 8. Summary.
+
+With this as center of perspective, we have a picture of Constantine with lights and shadows, to be sure, but in the main true in its drawing and coloring. He was a man of rather more than medium height, strongly built, with broad shoulders, thick neck, and generally athletic and well-formed figure. His piercing eye, slightly aquiline nose, scanty reddish beard, and florid complexion, together with his bright expression, made a countenance striking and even handsome. Of great physical strength and vigor, he carried himself in a manly, self-possessed, dignified, and serene manner, uniting a dignity which might rise at times even to *hauteur,* or even incipient arrogance, with a general and customary affability. His dress, like his complexion, was somewhat florid. His mind was active, alert, intense without being somber, penetrating, sound, fairly cultivated, and well exercised in expression by pen or word. He was animated, habile, and attentive in conversation, self-possessed, steady, and calm in formal address. He was pre-eminently a man of energy, intense and resistless, with a determination to accomplish whatever he attempted, which rose under opposition to irresistible impetuosity, and wrought a courage which, in action, was absolutely fearless. His ambition was limitless, but not wholly or even mainly selfish.
+
+With his energy and ambition were united the ballast of marked prudence, patience, perseverance, faithfulness to details, steadfastness, and supreme self-control. He was amiable and tactful, popular with his soldiers, and careful to please. Toward those who came into his power he showed habitual mildness and forbearance,—a mildness so great that he was generally blamed for it; and toward all he showed great kindness, justice, and a generosity which verged on the lavish. He was open to the charge of over-generosity, almost of prodigality, a good measure of real vanity, some over-insistence on his own will and thought as the final standard of right, and by no means free from mistakes or human weaknesses. He was a good son, husband, father, a remarkably successful general, a tolerable legislator, and a clear-sighted, firm-willed statesman. In his religious life he abounded in creed and confession—believing in the Trinity, the Divinity of Christ, the Atonement, the Resurrection, and Eternal Life, in Repentance and Faith, in love to God, and love to man. He preached his faith on all occasions; he practiced thanksgiving and prayer abundantly. He regarded everything that he had or was as from God. The editor’s brief judgment is that Constantine, for his time, made an astonishingly temperate, wise, and, on the whole, benevolent use of absolute power, and in morality, kindly qualities, and, at last, in real Christian character, greatly surpassed most nineteenth century politicians—standing to modern statesmen as Athanasius to modern theologians.
+
+## Chapter III. Writings.
+
+### Section 1. Introduction.
+
+### Chapter III
+
+### Writings.
+
+### §1. *Introduction*
+
+Quite a number of works by this emperor-author are extant.[^chapter-3-3047] They may be grouped under, I. Oratorical writings; 2. Letters and decrees; 3. Laws; 4. Various.
+
+[^chapter-3-3047]: It is curious that there should be no critical edition of the collected works of so considerable a writer. A large portion of his works are, to be sure, included in Migne’s *Patrologia Latina,* vol. 84, Paris, 1844; but this *Opera Universa* is neither wholly complete nor in any sense critical, and this seems to be the only attempt at a collection. The works enumerated here are mostly in the edition of Migne, but not all.
+
+### Section 2. Oratorical Writings.
+
+According to Eusebius (*V. C.* 4. 29; cf. 4. 55) these were very numerous, and it may well be believed. He seems to have done much of everything he undertook at all—fighting, or learning, or building temples, or making laws, he was nothing if not incessant. He had a habit of inflicting his orations on his court, and undoubtedly had plenty of enthusiastic hearers, as any emperor would, and as Eusebius says he did. They seem to have been generally philosophical with as much religion as possible worked in (*V. C.* 4. 9). Not many are extant, but we have some account of the few following:
+
+1. *Oration to the saints (Oratio ad sanctum cœtum,* S. C.). For this see the following translation and Special Prolegomena.
+
+2. *Address to the Council of Nicæa in praise of peace (Ad Syn. Nic.),* in Euseb. *V. C.* 3. 12. Address of welcome. He rejoices in the assembly, and exhorts them to be united, that they may thereby please God and do a favor to their emperor.
+
+3. *Oration to the Council of Nicæa, in Gelasius, Hist. Coun. Nic.* 1. 7. Begins with rhetorical comparison of the Church to a temple, and ends with injunctions to observe peace and to search the Scriptures as the authority in all points of doctrine. Appears dubiously authentic.
+
+4. *Address to the bishops on their departure from Nicæa.* Abstract in Euseb. *V. C.* 32. 1. Exhorts them to keep peace, cautions against jealousy, &c.
+
+5. *Funeral oration.* A description in Euseb. *V. C.* 4. 55. Dwells on the immortality of the soul, the blessings laid up for those who love God, and the ruin of the ungodly.
+
+His method of composition is spoken of by Eusebius (*V. C.* 4. 29), and his manner of delivery may be gathered from Eusebius’ description of his speech at the opening of the Council of Nicæa (*V. C.* 3. 11). For the style of his oratorical discourses, compare remarks on the Oration to the Saints in the Special Prolegomena.
+
+### Section 3. Letters and Edicts.
+
+It is hard to separate between letters, edicts, and laws. A substantial autocrat, the form of address was much the same, and the force. The extant letters are quite numerous, and those of which we have definite or general mention, many. He seems to have been a most industrious letter-writer. Of the extant letters a majority are undoubtedly or probably genuine. Some, however, need more critical study than seems to have been given to them.[^chapter-3-section-3-3048] Following is the roughly chronological list, the works being grouped by years. The dating is taken mainly from the Migne edition, Ceillier, and Valesius with slight original study. The descriptions are of course from the documents themselves.
+
+1. (313 a.d.) *Edict of Constantine and Licinius for the restoration of the Church.* In Lact. *De M. P.* c. 48, and also in Euseb. *H. E.* 10. 5 (Op. Const. ed. Migne, 105–110). The second edict of toleration. The first edict (Euseb. 8. 17; Lact. *De M. P.* 34) can hardly be classed among the “writings” of Constantine. This famous second edict grants full religious liberty to the Christians and restoration of their property. Compare section on *Acts of Toleration* in Wordworth’s *Constantinus.*
+
+2. (313.) *First letter of Constantine and Licinius to Anulinus.* In Euseb. *H. E.* 10. 5 (Op. Const. ed. Migne, 479–480). Restores goods to the Catholic Christians; written about the same time as the edict of toleration, according to Ceillier.
+
+3. (313.) *Second Letter of Constantine to Anulinus.* In Euseb. *H. E.* 10. 7 (Op. Const. 481–2). Ordering that the Catholic clergy be free from public service, that they might not be disturbed in their worship of God.
+
+4. (313.) *Letter of Constantine to Cæcilianus.* In Euseb. *H. E.* 10. 6 (Op. Const. 481–4). Presents money—three thousand purses (folles)—to be distributed according to direction of Hosius.
+
+5. (313.) *Letter of Constantine to Melchiades (or Miltiades).* In Euseb. *H. E.* 10. 5 (Op. Const. 477- ). Having received various letters from Anulinus regarding Cæcilian and the Donatists, he summons a council at Rome to consider the matter.
+
+6. (314.) *Letter of Constantine to Ablavius (or Ælafius).* In Optat. *Mon. vet*. p. 283–4 (Op. Const. 483–6). The result of the council at Rome not having proved final, he summons the Council of Arles.
+
+7. (314.) *Letter of Constantine to Chrestus (Crescentius), bishop of Syracuse.* In Euseb. *H. E.* 10. 5 (Op. Const. 485–8). Invites to the Council of Arles.
+
+8. (314.) *Letter of Constantine to the Bishops after the Council of Arles.* In Optat. *Mon. vet.* p. 287–8 (Op. Const. 487–90). Contains gratulations, reprobations of obstinate schismatists, and exhortations to patience with such obstinateness. It is full of religious expressions, and if genuine, is a most interesting exhibition of Constantine’s religious position at this time, but it looks suspicious, and probably is not genuine.
+
+9. (314) *Letter of Constantine and Licinius to Probianus, the Proconsul of Africa.* In Augustine, *Ep.* 88 (ed. Migne 33 [1865] 3045), and also in *Contr. Cresc*. (43 [1861] 540, also in Op. Const. and tr. Engl. in Schaff, *Nicene and Post-Nicene Fathers,* 1, p. 370). Orders that the Donatist Ingentius be brought to his court. One text adds Maximianus or Maximus in place of Maximus as epithet of Constantine.
+
+10. (314 or 315.) *Letter of Constantine to the Donatist Bishops.* In Optat. *Mon. vet.* p. 290 (Op. Const. ed. Migne [1844] 490). As the Donatists were not yet satisfied, he summons them to meet Cæcilian, and promises if they convict him in one particular, it shall be as if in all.
+
+11. (315.) *Letter of Constantine to Celsus.* In Optat. *Mon. vet* p. 291 (Op. Const. 489–90). In reply to letter mentioning disturbances of the Donatists, he hints that he expects to go shortly to Africa and settle things summarily.
+
+12. (315.) *Fragment of a Letter of Constantine to Eumalius Vicarius.* In Augustine’s *Contr. Crest*. 3. 71 (ed. Migne 43 [1861] 541; also Op. Const. 491–2). An extract of six lines, in which he says Cæcilianus was entirely innocent.
+
+13. (316 or 317.) *Letter of Constantine to the bishops and people of Africa.* Optat. *Mon. vet.* p. 294 (Op. Const. 491–2). He has tried every way to settle the Donatist disturbances in vain, and now leaves them to God and advises patience.
+
+14. (323.) *First Letter of Constantine to Eusebius.* In Euseb. *V. C.* 2. 46; Theodoret, 1. 14; Socr. 1. 9 (Op. Const. 491–4). Empowers the repairing, enlarging of old, and building of new churches.
+
+15. (323 a.d.) *Law of Constantine respecting piety toward God and the Christian Religion* (Ad prov. Pal.). In Euseb. *V. C*. 2. 24–42; abstr. in Soz. 1. 8 (Op. Const. 253–282). This long edict, addressed to the inhabitants of Palestine, contains an exposition of the prosperity which attends the righteous and the adversity which comes to the wicked, followed by edict for the restitution of confiscated property, the recall of exiles, and various other rectifications of injustices. This is the copy, “or letter,” sent to the heathen population of the empire.
+
+16. (324.) *Constantine’s edict to the people of the eastern provinces concerning the error of polytheism,* &c. (Ad. prov. Or). In Euseb. *V. C*. 48– . This letter, written in Latin and translated by Eusebius, begins with “some general remarks on virtue and vice,” touches on the persecutions and the fate of the persecutors, expresses the wish that all would become Christians, praises God, and exhorts concord.
+
+17. (323 or 324.) *Letter of Constantine to Alexander the Bishop and Arius the Presbyter.* In Euseb. *V. C*. 2. 64–72; Gelas. 2. 4; Socr. 1. 7 (Op. Const. 493–502). Expresses his desire for peace, his hope that they might have helped him in the Donatist troubles, his distress at finding that they, too, were in a broil, his opinion that the matters under discussion are of little moment, and what he thinks they are. He exhorts to unanimity, repeats his opinion that the matters are of little moment, mentions his “copious and constant tears,” and finally gets through.
+
+18. (324–5.) *Letter to Porphyrius* (Optatian). In Migne, *Patrol. Lat.* 19 [1846] 393–394 and in various editions of Optatian. This letter to Porphyrius or Optatian was on the occasion of the sending of a poem by the latter for his vicennalia. It expresses his pleasure and his disposition to encourage the cultivation of *belles lettres.* Compare note on Optatian under sources.
+
+19. (325.) *Letter of Constantine the King, summoning the bishops to Nicæa.* In Cowper, *Syriac Misc.,* Lond. 1841, p. 5–6. This is translated from a Syriac ms. in the British Museum, written in 501. Gives as reason for the choice of Nicæa the convenience for the European bishops and “the excellent temperature of the air.” This, if genuine, is the letter mentioned by Eusebius, *V. C*., but it looks suspicious.
+
+20. (325.) *Letter of Constantine to the churches after the Council of Nicæa.* In Euseb. *V. C*. 3. 17–20; Socr. 1. 9 (Op. Const. 501–506). Dwells on the harmonious result, especially respecting the Easter controversy, and commends to the bishops to observe what the Council has decreed.
+
+21. (325.) *Letter of Constantine to the church of Alexandria*. In Socr. 1. 9 (Op. Const. 507–510). Expresses great horror of the blasphemy of Arius, and admiration for the wisdom of the more than three hundred bishops who condemned him.
+
+22. (325.) *Letter of Constantine to Arius and the Arians.* In “Conc. 2. 269.” A long and rather railing address against Arius.
+
+23. (325.) *Letter of Constantine to the churches.* In Socr. *H. E.* 1. 9. A translation of a Syriac translation of this, written in 501, in Cowper, *Syriac Misc*., Lond. 1861, p. 6–7. Against Arius and the Porphyrians, and threatens that any one who conceals a work of Arius shall be punished with death.
+
+24. (325.) *Letter of Constantine to the Nicomedians against Eusebius and Theognis.* In Gelas. 3. 2; Theodoret, 1. 20; Soz. 1. 21 (Op. Const. 519–524). A theological discussion partly of the relation of Father and Son, and an attack on Eusebius of Nicomedia.
+
+25. (325.) *Letter to Theodotus.* In Gelas. 3. 3 (Op. Const. 523–524). Counsels him to take warning by what has happened to Eusebius (of Nicomedia) and Theognis, i.e. banishment, and get rid of such evil influence, if any, as they may have had on him.
+
+26. (325.) *Letter of Constantine to Macarius*. In Euseb. *V. C.* 3. 30–32; Theodoret, 1. 16. Directs the erection of a peculiarly magnificent church at the Holy Sepulcher in Jerusalem.
+
+27. (330.) *Letter of Constantine to the Numidian Bishops*. In Optat. *Mon. vet.* p. 295 (Op. Const. 531–532). Concerns a church taken possession of by schismatists.
+
+28. (332.) *Letter of Constantine to the Antiochians*. In Euseb. *V. C.* 3. 60 (Op. Const. 533- ). Exhorts them not to persist in their effort to call Eusebius from Cæsarea to Antioch.
+
+29. (332 a.d.) *Letter of Constantine to the Synod of Tyre deprecating the removal of Eusebius from Cæsarea*. In Euseb. *V. C.* 362; Theodoret, 1. 27 (Op. Const. 543–546).
+
+30. (332.) *Second Letter of Constantine to Eusebius*. In Euseb. *V. C.* 3. 61 (Op. Const. 537–540). Commends Eusebius for having declined the call to Antioch.
+
+31. (332.) *Second Letter of Constantine to Macarius and the rest of the Bishops in Palestine (to Eusebius)*. In Euseb. *V. C*. 3. 52–53 (Op. Const. 539–544). Directs the suppression of idolatrous worship at Mamre.
+
+32. (332.?) *Edict against the heretics*. In Euseb. *V. C*. 3. 64–5. Against Novatians, Valentinians, Marcionites, Paulians, Cataphrygians who are forbidden to assemble and whose houses of worship are to be given to the Catholic party.
+
+33. (333.) *Letter of Constantine to Sapor, King of the Persians*. In Euseb. 4. 9–13; Theodoret, 1. 24 (Op. Const. 545–552). Is mainly a confession of faith commending the Persian Christians to the special care of their king.
+
+34. (333.) *Letters of Constantine to Antonius, the monk, and of Antonius to him* are mentioned in Athanasius, 1. 855 (Op. Const. 551–552). Constantine and his sons write as to a father. Antony grudgingly replies with some good advice for them to remember the day of judgment, regard Christ as the only emperor, and have a care for justice and the poor.
+
+35. (333.) *Letter of Constantine to Eusebius in praise of his discourse concerning Easter*. Eusebius, *V. C.* 4. 35 (Op. Const. 551–554) praises the discourse and asks for more.
+
+36. (333.) *Letter of Constantine to Eusebius on the preparation of the copies of the Scriptures*. In Euseb. *V. C*. 4. 36; Theod. 1. 15; Socr. 1. 9 (Op. Const. 553–554). Orders fifty copies with directions as to style.
+
+37. (335.) *Fragment of the first letter of Constantine to Athanasius*. In Athan. *Apol*.; Socr. 1. 27 (Op. Const. 553–556; Tr. Engl. in Athan. *Hist. Tracts*, Oxf. 1843, p. 89). The letter summoning to the Council of Tyre, but only a half-dozen lines remain. This bids him admit all who wish to enter the church.
+
+38. (335.) *Letter of Constantine to the people of the Alexandrian Church*. In Athan. *Apol. c. Ar*. c. 61 (Op. Const. 559–562; abstract in Soz. 2. 31; Tr. Engl. in Athan. *Hist. Tracts*, Oxf. 1850, p. 90–92). Is a general lamentation over the dissensions of the Church, with expression of confidence in Athanasius.
+
+39. (335.) *Second Letter of Constantine to Athanasius*. Athan. *Apol*. (Op. Const. 555–558). Expresses his reprobation of the false accusations of the Meletians against Athanasius.
+
+40. (335.) *Letter of Constantine to Joannes the Meletian*. Athan. *Apol*. (Op. Const. 557–560). Congratulates on his reconciliation with Athanasius.
+
+41. (335.) *Letter of Constantine to Arius*. In Socr. 1. 25 (Op. Const. 561–562). Invites Arius to visit him—the famous visit where he presented a confession of faith claimed to be in conformity with that of Nicæa.
+
+42. (335.) *A Letter to Dalmatius* is mentioned by Athanasius, *Apol*. 5. 13, but not preserved (Op. Const. 563–564; Tr. Engl. in Athan. *Hist. Tracts*, Oxf. 1850, p. 94). It required him to make judicial enquiry respecting the charge against Athanasius of the murder of Arsenius.
+
+43. (335.) *Celebrated Letter of Constantine concerning the Synod of Tyre*. In Euseb. *V. C*. 3. 42 (Op. Const. 561–564). Exhorts the bishops to give zeal to fulfilling the purpose of the synod in the restitution of peace to the Church.
+
+44. (335.) *Letter to the Bishops assembled at Tyre*. In Socr. *H. E*. 1. 34, and in Soz. *H. E*. 2. 28. Summons them to come to him at Constantinople and give account of their proceedings.
+
+Besides these there are the clearly spurious:
+
+1. *Letter of Helena to Constantine* (Op. Const. 529–530).
+
+2. *Letter of Constantine in response to Helena* (Op. Const. 529–532).
+
+3. *Treaty of peace between Constantine, Sylvester and Tiridates* (Op. Const. 579–582). On Tiridates compare various sources in Langlois *Col. des historiens de…l’Armènie*, and for literature respecting their authenticity, his note on p. 103.
+
+4. *Edict of Constantine to Pope Silvester* (Op. Const. 567–578). The famous Donation which first appeared in Pseudo-Isidore, and for which see under *The Mythical Constantine*, p. 442–3.
+
+There are also quite a large number of letters mentioned with more or less description, and a “multitude of letters” (*V. C.* 3. 24) of which there is no specific knowledge. Of the former may be mentioned that *to the inhabitants of Heliopolis*, one to Valerius (or Valerianus or Verinus) (Augustine, *Ad Donat. p. c*. c. 33); one *to the Council of Tyre*, asking them to hasten to Jerusalem (*V. C*. 4. 43; Soz. 2. 26); and one acknowledging the copies of the Scriptures prepared at his order, through Eusebius (*V. C*. 4. 37).
+
+[^chapter-3-section-3-3048]: There is of course more or less critical treatment of various letters in critical works on Donatism or Arianism or other special topics. Since writing the above, the exceedingly interesting analysis of sources for early Donatist history, by Seeck, in Briegers’ *Ztschr. f. Kirchenges.,* 1889, has been examined. He has, like Völter and Deutsch before him, admirable critical studies of certain letters. But a systematic critical study of the Constantinian letters as a whole seem to be still lacking.
+
+### Section 4. Laws.
+
+The numerous laws are collected in the edition of Migne (*Patrol. Lat.* 8. p. 93–400), mainly from the Theodosian code. They are in the opinion of Eutropius (10. 8) “many,” “some good and equitable, but most of them superfluous, and some severe” (cf. under *Character*). Many of them show the author’s tendency to declamation, but taken all in all they are businesslike and do credit, in the main, to their author’s heart, and even, though less conspicuously, to his head. For more specific account, compare the laws themselves as collected in Migne, the relating passages in Wordsworth and Ceillier, standard and annotated editions of the codes, and special treatises, such as Balduin, *De leg. eccl. et civ*. 1737.
+
+### Section 5. Various.
+
+Besides the more formal works mentioned above, various conversations, sayings, bon mots, prayers, &c., are preserved, among which may be mentioned:
+
+1. *Memoirs of himself*, of which no portion is extant. Writings of Constantine are mentioned by Lydus (p. 194, 226), but whether the writings referred to deserve the title given by Burckhardt it is hard to say.
+
+2. *A form of prayer* given by Constantine to his soldiers (*V. C*. 4. 20).
+
+3. *His address* when the memorials of contendents, at Council of Nicæa, were brought to him (Soz. 1. 17).
+
+4. *The conversation with Acesius*, for which Socrates vouches, closing, “O Acesius, set up a ladder, and do you alone climb up to heaven.”
+
+5. *His rebuke to the courtier* concerning covetousness (*V. C.* 4. 30).
+
+6. *His answer* when told his statues had been stoned, “Strange, but I feel no wound” (“Chrysost. *Ad Pop. Ant*.”).
+
+7. *His appeal to the bishops*, requesting them to confer upon him the rite of baptism (*V. C*. 4. 62).
+
+8. *His Thanksgiving* after baptism *and testimony* (*V. C*. 4. 63).
+
+In general, his writings were composed in Latin, and translated into Greek by those appointed for this special purpose (*V. C*. 4. 32). His general style is rhetorical, rather profuse, and declamatory, abounding in pious allusion and exhortation, as well as philosophical quotation and reflection. His works are interesting to study and not without a touch here and there of genuine literary interest. A remark on friendship, for example, unless it be a product of his habit of borrowing the thoughts of other men more or less directly, is delightful and most quotable. “For it often happens,” he says, “that when a reconciliation is effected by the removal of the causes of enmity, friendship becomes even sweeter than it was before” (Const. to Alex. and Ar. in *V. C*. 2. 71).
+
+## Chapter IV. The Mythical Constantine.
+
+### Introduction.
+
+### Chapter Iv
+
+### The Mythical Constantine.
+
+The many legends which have attached themselves to the name of Constantine are valuable chiefly as curiosities, and can be treated here only in specimens. A few of the more interesting and important are the following:
+
+### Section 1. Constantine and his Mother Helena.
+
+A little anonymous work of some thirty pages, edited by Heydenreich from a fourteenth-century manuscript, was published under this title in 1879, and has drawn forth an astonishing amount of literature for so slight a thing. It has little value except as an illustration of mediæval romance, though Coen seems to think the honor of having introduced it into literature enough to warrant the expenditure of a good deal of pains in vindicating his claim to it. The story is written with tolerable art, and runs, abbreviated, something as follows:
+
+Helena, daughter of a noble family of Trèves, came on a pious journey to Rome. The Emperor Constantius, crossing a bridge of the Tiber, saw Helena among other pilgrims. Struck with her beauty, he arranged that she should be detained by force at the inn where she stayed, when her fellow-pilgrims returned to Gaul. The emperor then constrained her by force, but, seeing the great grief which his act had caused, gave her a certain ornament of precious stones and his ring, as a sort of pledge, and went away. She did not venture to return to her country, but remained at Rome with the son who was born to her, representing that her Gallic husband was dead. This son, Constantine, grew up pleasing, handsome, and versatile. Certain merchants, seeing his excellent quality, formed a scheme of making money by palming him off on the emperor of the Greeks as a son-in-law, representing him to be a son of the Roman emperor.
+
+The scheme was carried out, and the merchants after some time embarked again for Rome, with the Constantine and the princess, and much treasure. Toward the end of their journey they stopped over night at a little island. In the morning the young people awoke to find they had been deserted by the merchants, and Constantine in great grief confessed the deception which had been practiced. To this the princess replied that she cared little who he was or his family, since he was himself and her husband. After a few days of short rations they were taken by passing voyagers to Rome, where they joined Helena, and having purchased a house with the proceeds from the sale of certain valuables which the princess had kept with her, they went to hotel-keeping. Constantine took naturally to military life, and at tournaments surpassed everyone else so far as to arouse astonishment and inquiry. The emperor would not believe him a poor and friendless man, and had his mother called. After much vigorous evasion the truth came out, confirmed by the ring which the emperor had given Helena. Constantius first had the merchants put to death, and gave all their property to Constantine. Then a treaty was made with the emperor of the East, and Constantine was recognized as heir to the empire.
+
+A more wildly unhistorical historical novel could hardly have been written even by a Muhlbach. For further account, see under *Literature* especially articles by Heydenreich and by Coen.
+
+### Section 2. Constantine the Son of a British Princess.
+
+Duke Coel of Colchester, say the old chronicles, by an insurrection became king. The Senate, rejoiced at the overthrow of an enemy, sent Constantius to Britain. Coel, fearing, sent ambassadors to meet him, gave hostages, and shortly died. Constantius was crowned, married Helena, daughter of Coel, the most beautiful, cultivated, and educated woman of her time. By her he had a son, Constantine, afterwards called the Great. This is in substance the account of Geoffrey of Monmouth (5. 6) and Pierre de Langloft (1, p. 66–7). The story is mentioned by Henry of Huntington (Bk. I. 37), who perhaps wrote before Geoffrey (in 1137 [?]), and Richard of Cirencester (2. 1. 33). Waurin (Vol. I. Bk. 2. 43) makes “Choel” Count of Leicester, but in general is identical with Geoffrey. The famous Brut of Layamon (ed. Madden, 2 [1847] p. 35) is translated with amplifications from Wace’s Brut, and this in turn from Geoffrey. This makes Coel Earl of Gloucester. The Eulogium Hist. calls Helena (1. 337) daughter of a British king, but also concubine, though elsewhere (2, p. 267) she is wife according to the conventional story. It is also mentioned by many others; e.g. Voragine, *Golden Legend*. It is interesting that this legendary father of Helena is supposed (Hayden, Index to Eulogium, p. 45, and Giles, note on Geoffrey, p. 162) to be the same as “Old King Cole, the merry old soul,” making Constantine thus the grandson of the Mother Goose hero.
+
+### Section 3. Constantine's Leprosy; Healing and Baptism by Silvester.
+
+This tale is one of the most frequently found. The earliest account is said to be that of the Acts of Silvester. Some of the many who repeat it are Ephraem, Cedrenus, Zonaras. The following account is mainly from Glycas, p. 461–462.
+
+When Constantine was fighting against Maxentius, after he had seen the sign of the cross, he was victorious. Then, forgetting, he was conquered, and grieving, he fell asleep and had a vision in which the blow of a switch on his nostrils brought blood which flowed down on his linen tunic in the form of a cross. Seeing this, he was filled with penitence, and became again victorious. Being led away a second time into idolatry through his wife Fausta, he was divinely afflicted with leprosy. The priests prescribed a bath in the blood of infants, and it was ordered; but when he heard the lamentations of the mothers, he said it was better to suffer than that so many infants should perish. Therefore the apostles, Peter and Paul as some say, appeared to him and told him Silvester would cure him, as he did. There are many varieties of the story and various details as to baptism, but in general the whole series of stories regarding his baptism at Rome centers in this story, and gratitude for this cure is the supposed occasion of the famous donation of Constantine. In this the circumstances of the miracle are given at length,—the words of the apostles, Silvester’s identification of them as apostles by portraits, the immersion, and subsequent instruction.
+
+### Section 4. Donation of Constantine.
+
+This most remarkable of forgeries for its practical effect on world-history has been the subject of endless discussion. It is, in brief, a supposed grant to the Pope of Rome, Silvester, of certain sweeping privileges in recognition of the miracle he has wrought. The edict gives a long confession of faith followed by an account of the miracle and mention of the churches he has built. Then follow the grants to Silvester, sovereign Pontiff and Pope of Rome, and all his successors until the end of the world,—the Lateran palace, the diadem, phryginus, the purple mantle and scarlet robe, imperial scepters, insignia, banners and the whole imperial paraphernalia, as well as various clerical privileges and pretty much the whole world to govern. It is impossible here even to represent in outline the history of this extraordinary fiction. Composed not earlier than the latter part of the eighth century (Martens et alt. 9 cent.; Grauert, 840–850; Hauck, Bonneau, 752–757; Langen, 778, &c.; Friedrich acc. to Seeberg, divides into an earlier [653] and a later [753] portion), it early came to be general, though not unquestioned, authority. In 1229–1230 a couple of unfortunates who ventured to doubt its authenticity were burned alive at Strasburg (Documents communicated by Ristelhuber to Bonneau p. 57–58). Not many years after, Dante seems (*Inf*. 19. 115) to have taken its authenticity for granted; and although there is a possible doubting (*De Monarch*. 4. 10), he does not venture to dispute this. He denies, however, Constantine’s power or right to give, if he did give. In modern times the fictitious character of the document is recognized by Protestants and Catholics alike, and the discussion, so vigorous formerly, over this authenticity has narrowed itself chiefly to a discussion of the place (France or Rome) and date (653–753, ninth century) and possible author. The discussion over these points has been lately renewed and is being carried on with animation. Among the later monographs are those of Martens (1889) and Friedrich (1889, not at hand). The latest treatise at hand is that of Seeberg in the Theol. Literaturbl. of Jan. 17. 24. 31 of the current year. For farther select literature, compare *Verzeichniss* in Martens; for sources, the chapters of Martens and Preface of Bonneau; for older literature, Muensch. p. 96–97, and in general the *Literature* of Constantine, in this volume, although no attempt has been made to exhaust the literature of this sub-topic there. Treatises on the Donation will be found under the names of Albani, Altus, Arrhenius, Bachmann, Bayet, Bonneau, Brunner, Chaulnes, Colombier, Cusa, Friedrich, Genelin, Grauert, Hauck, Hildebrand, Jacobatius, Kaufman, Krüger, Martens, Muench, Rallaye, Scheffer-Boichorst, Seeberg, Steuchus, Tacut, Valla, Walther, Wieland, Zeumer.
+
+### Section 5. Dream concerning the Founding of Constantinople.
+
+“As Constantine was sleeping in this city [Byzantium], he imagined that there stood before him an old woman whose forehead was furrowed with age; but that presently, clad in an imperial robe, she became transformed into a beautiful girl, and so fascinated his eyes by the elegance of her youthful charms that he could not refrain from kissing her; that Helena, his mother, being present, then said, ‘She shall be yours forever; nor shall she die till the end of time.’ The solution of this dream, when he awoke, the emperor extorted from heaven, by fasting and alms-giving. And behold, within eight days, being cast again into a deep sleep, he thought he saw Pope Silvester, who died some little time before, regarding his convert with complacency, and saying, ‘You have acted with your customary prudence in waiting for a solution from God of that enigma which was beyond the comprehension of man. The old woman you saw is this city, worn down by age, whose time-struck walls, menacing approaching ruin, require a restorer. But you, renewing its walls, and its affluence, shall signalize it also with your name; and here shall the imperial progeny reign forever’” (William of Malmesbury, Chronicle, tr. English. Lond. 1847, p. 372–3. The final section, which instructs Constantine how to lay out the city, is omitted). This is taken by the Chronicler from Aldhelm’s (d. 709) *de laudibus virginitatis* (c. 52, ed. Giles, 1844, p. 28–29), where, however, instead of kissing her, he much more appropriately “clothes her with his mantle, and puts his diadem adorned with pure gold and brilliant gems on her head.” It is given also by Ralph de Diceto (ed. Stubbs, Lond. 1876), 74–75, and probably by many others.
+
+### Section 6. Voyage of Helena.
+
+A matter-of-fact account of things which are not so, given in Hakluyt’s *Voyages*, 2 (1810), p. 34, is worth giving in the words of the translator:
+
+“Helena Flavia Augusta, the heire and onely daughter of Cœlus, sometime the most excellent king of Britaine, by reason of her singular beautie, faith, religion, goodnesse, and godly Maiestie (according to the testimonie of Eusebius) was famous in all the world. Amongst all the women of her time there was none either in the liberall arts more learned, or in the instruments of musike more skilfull, or in the divers languages of nations more abundant than herselfe. She had a naturall quicknesse of wit, eloquence of speech, and a most notable grace in all her behaviour. She was seene in the Hebrew, Greeke, and Latin tongues. Her father (as Virumnius reporteth) had no other childe,…had by her a sonne called Constantine the great, while hee remained in Britaine…peace was granted to the Christian churches by her good meanes. After the light and knowledge of the Gospel, she grew so skilfull in divinity that she wrote and composed divers bookes and certaine Greeke verses also, which (as Ponticus reporteth) are yet extant…went to Jerusalem…lived to the age of fourscore years, and then died at Rome the fifteenth day of August, in the yeere of oure redemption 337…Her body is to this day very carefully preserved at Venice.”
+
+### Section 7. The Finding of the Cross.
+
+It is said in a certain “tolerably authentic chronicle,” according to Voragine, that Constantine sent his mother Helena to Jerusalem to try to find the cross on which our Lord was crucified. When she arrived, she bade all the Jewish Rabbis of the whole land gather to meet her. Great was their fear. They suspected that she sought the wood of the cross, a secret which they had promised not to reveal even under torture, because it would mean the end of Jewish supremacy. When they met her, sure enough, she asked for the place of the crucifixion. When they would not tell, she ordered them all to be burned. Frightened, they delivered up Judas, their leader and instigator, saying that he could tell. She gave him his choice of telling or dying by starvation. At first he was obstinate, but six days of total abstinence from food brought him to terms, and on the seventh he promised. He was conducted to the place indicated, and in response to prayer, there was a sort of earthquake, and a perfume filled the air which converted Judas. There was a temple of Venus on the spot. This the queen had destroyed. Then Judas set to digging vigorously, and at the depth of twenty feet, found three crosses, which he brought to Helena. The true cross was tested by its causing a man to rise from the dead, or according to others, by healing a woman, or according to others, by finding the inscription of Pilate. After an exceedingly vigorous conversation between the devil and Judas, the latter was baptized and became Bishop Cyriacus. Then Helena set him hunting for the nails of the cross. He found them shining like gold and brought them to the queen, who departed, taking them and a portion of the wood of the cross. She brought the nails to Constantine, who put them on his bridle and helmet, or according to another account, two were used in this way, and one was thrown into the Adriatic Sea.
+
+It is interesting to trace the melancholy consequences of this particular enterprise of Constantine’s in the sad death of St. Cyriacus née Judas. The Emperor Julian, the apostate, “invited” him to sacrifice to idols. When he refused, melted lead was poured into his mouth; then an iron bedstead was brought, on which he was stretched, while a fire was built underneath and the body of the martyr larded with salt and fat. The saint did not budge, and Julian had a deep well dug, which was filled with venomous serpents. But contact with the saint killed the serpents, and a cauldron of boiling oil succeeded. Julian was so angry at the alacrity and cheerfulness of the saint’s preparations for this bath, that he killed him with a blow of his sword. There is some consolation in the thought of this premature death, in the fact that, unless his claim that he was nephew to Stephen, the Proto-martyr, be disallowed, he had reached a ripe old age of two hundred and fifty years or thereabouts.
+
+The literature on this legend is very great. The finding of the cross is mentioned as early as Cyril of Jerusalem (ab. 347–350), within twenty-five years of the visit of Helena recorded by Eusebius (*V. C*. 3. 26), and with great frequency afterwards. The failure of any mention by Eusebius seems, however, conclusive against any finding, or pretended finding, at the time of Helena’s famous visit, though the contrary is acutely argued by Newman. The finding and use of the nails is often separated from the other, and is found in many of the sources on Constantine. But even those who believe in the miracle of the finding of the cross will hardly vouch for the story in the above form, which is substantially that of Voragine.
+
+Compare Sinker’s article, *Cross, Finding of*, in Smith and Cheetham, *Dict*. 1 (1880), 503–506; Jameson, *Hist. of Our Lord*, 2 (1872) 385–391; Newman, *Essays on Miracles* (Lond. 1875) 287–326; and especially Voragine, whom see under Sources. Under the article Helena, in Smith & W. is a sub-article by Argles on the *Invention of the Cross*, which gives an admirable abstract of the sources in order.
+
+These examples of the stories which have gathered around the name of Constantine do not begin to exhaust the list. The interesting tales of the sword of Constantine presented to Athelstan (*Reg. Malms*. 1, 1879, p. 55, 468; *Eul. Hist*. 3, 1863, p. 12), his conversion through remorse, and the whole series of allusions and stories in mediæval fiction and poetry must be passed here. If any one has the curiosity to follow them up, he will find the references in the articles of Heydenreich a good guide to literature. A few stories, like that of Constantine and Tiridates, one hesitates to class among the wholly fictitious (compare, under *Sources*, Agathangelos, Zenobius, and Faustus).
+
+## Chapter V. Sources and Literature.
+
+### Section 1. Introduction
+
+### Chapter V
+
+### Sources and Literature.
+
+### §1. *Introduction*
+
+The insertion in such a work as this of what seems almost technical in its character has this twofold purpose: first, to give a glimpse of the grounds of our knowledge of Constantine, with a view of how far and in what directions it has been worked out through literature; second, to serve the expressed purpose of this series, of encouraging farther study in its lines. The very knowledge of what the sources are, and their character, apart from any special study of them, gives a width of horizon and definiteness of conception to the general student, which can hardly be gotten in any other way; while for any one who plans farther study in any line, it is of first importance to find the what and where of his material.
+
+### Section 2. Sources.
+
+Remembering the class of students for which the series is chiefly intended, effort has been made to refer to translations of sources where they are at hand, and to refer to the best accessible English authorities on them. But the plan has been to refer to the source itself in the edition actually used, and for literature on them to choose the best for ready reference. Both editions and authorities on sources are therefore selections, usually from many, of such as seem most directly useful. The intention has been to guide to all frequently mentioned sources, whether they were of great value or not, since a useless one costs often quite as much trouble to hunt up and find useless, as a good one to use. It is hardly to be hoped that all the sources often referred to have been gathered, but the following list represents pretty much all that are worth mentioning, and some which are not.
+
+#### 1. *Inscriptions, coins, medals, &c.*
+
+In some sense these are the most reliable of sources, in spite of counterfeits. A large number will be found collected in Clinton. For farther critical study, compare the collections, great and small; for which, with the matter of inscriptions in general, see Hicks, E. L., and Hübner, E., in the *Encyclopædia Britannica*, 13 (1881) 121–133; and Babington, in Smith and Cheetham, 1 (1880) 841–862. Monographs on those relating to Constantine will be found under the names, Cavedoni, Cigola, Eltz, Freherus, Garucci, Harduin, Penon, Revellot, Valois, Westphalen, Werveke, in the *Literature* of this volume.
+
+#### 2. *Laws*.
+
+These, with their dates, their official nature, their fullness and variety, are primary, and are the only sources recognized by some. They are embodied in the Theodosian and Justinian Codes, and collected from these are edited in Migne, *Patrol*. *Latina*, Vol. 8. See under *Writings* of Constantine, above.
+
+#### 3. *Other Writings by Constantine*.
+
+See under *Writings*, above, p. 436. With this might perhaps be included also writings *to* Constantine, like that of Anulinus in Augustinus, *Ep*. 88.
+
+#### 4. *General Literary Sources*.
+
+Taking in general chronological order, without attempting the impossibility of fixing the exact chronological place, the first group of contemporary sources is that of the Panegyrists (for collected editions, see Engelmann). It was a serious mistake, now recognized, to pass them by as worthless. Like all authentic documents, they have a minimum residuum of undoubted material, which is larger or smaller according to the critical acumen of the investigator. In the case of these, however inflated or eulogistic they may be, the circumstances under which they were spoken give a considerable value.
+
+(1) *Incerti auctoris Panegyricus Maximiano et Constantino dictus* (*Paneg*. 307). In Migne, *Patrol. Lat*. 8 (1844), 609–620. Pronounced at celebration of marriage of Constantine and Fausta, a.d. 307. Besides having the great value of being contemporary evidence, the author shows a certain ingenuity in enlarging on the virtues of the young Constantine, who had few deeds to show, and on the deeds of Maximian, who had few virtues, and has therefore a certain discernible modicum of truth.
+
+Compare the *Monitum* in Migne, Ramsay’s article on *Drepanius*, in Smith, Dict. 1073–4, and references under Eumenius.
+
+(2) Eumenius (310–311). *(a) Panegyric (Panegyricus Constantino Augusto*). In Migne, *Patrol. Lat*. 8 (1884), 619–640. (*b*) *Thanksgiving Oration (Gratiarum Actio Constantino Augusto*). In Migne, *Patrol. Lat*. 8 (1844), 641–654. Eumenius flourished during the reigns of Constantius, with whom he was in high favor, and Constantine. He was head of the school at Autun. The *Panegyric* was delivered at Treves, in 310. The authorship of Eumenius has been unwarrantably questioned, on the ground that the flattery and exaggeration of the work are not consistent with his taste and sense; but it would seem that both his exaggeration and his taste have been themselves exaggerated. His praise is hardly more “outrageous” than panegyrics were wont to be,—or are, for that matter; and so far from being “worthless,” there is a peculiar deal of interesting, unquestionable, and primary historical evidence. Still, his taste and veracity are not much above that of modern eulogists of living or dead emperors and politicians. The *Gratiarum Actio* is the official oration of thanks to Constantine in behalf of the citizens of Autun, on account of favors shown them. It was pronounced at Treves in 311.
+
+Compare Ramsay, in Smith, *Dict*. 2 (1859), 92; the Proœmium, in ed. Migne, 619–622; also for editions, Ramsay, article *Drepanius*, in Smith, *Dict*. 1. 1073–4; and for literature, Chevalier. For general account of the Panegyrists, see this article on Drepanius.
+
+(3) *Incerti Panegyricus Constantino Augusto* (Paneg. 313). In Migne, *Patrol. Lat*. 8 (1844), 653– . This is usually ascribed to Nazarius, on the ground of style. It was spoken at Treves in 313, and relates mainly to the war with Maxentius. Various details relating to this are of such nature and form as to suggest again that the author is the same as that of the 321 Paneg.,—Nazarius.
+
+Compare Ramsay, in Smith, *Dict*. 2 (1859), 1145; the Proœmium in ed. Migne, &c., and literature as under Eumenius, above.
+
+(4) Nazarius. (321) *Panegyric* (*Panegyricus Constantino Augusto dictus*). In ed. Migne, *Patrol. Lat*. 8 (1844), 581–608. Nazarius is mentioned by Jerome as a distinguished rhetorician. This oration was delivered at Rome in 321. Constantine was not present. It is superlatively eulogistic, but like the related panegyrics contains many historical facts of greatest value.
+
+Compare Ramsay, in Smith, *Dict*. 2 (1859), 1145, the *Monitum*, in Migne, and references under Eumenius.
+
+In the midst of the period which these cover comes one of the two great Christian sources, and he is followed by a considerable row of great and small Christians during the century.
+
+(5) Lactantius (ab. 313–314). *On the Deaths of the Persecutors (De M. P.*). Ed. Fritsche (Lips. 1842), 248–286; ed. Migne, *Patrol. Lat*. 7 (Par. 1844), 157–276; tr. in *T. & T. Clark Library*, 22 (Edinb. 1871), 164–211, and in Ante-Nicene Fathers (Buffalo and N.Y.), 300–326 [Lord Hailes’ translation]. There are many editions in collected works, and about a dozen separate, and many translations,—in all a hundred or more editions and translations. There has been much controversy regarding the author of this work, but there is little doubt that it was Lactantius. Ebert (*Gesch. chr. Lat. Lit*. 1. 83) claims to have demonstrated the fact, and most of the later writers agree. The work was composed after the edict of Constantine and Licinius, and before the break between the two, i.e. 313–314. It was written thus in the midst of things, and has the peculiar historical value of a contemporary document, unprejudiced by later events. It is a sort of psalm of triumph, colored by the passionate rejoicing of one persecuted over the Divine vengeance which has come upon the persecutors. “In the use of the work the historian must employ great critical discernment” (Ebert, in Herzog, 8 [1881], 365). But granted all his prejudice, the facts he witnesses are of first value.
+
+Compare Ffoulkes, in Smith and Wace, 3 (1882), 613–617; Teuffel, *Hist. Rom. Lit*. 2 (1873), 334; Ebert, in Herzog, *Encyk*. 8 (1881), 364–366, and *Gesch. chr. Lat. Lit*. 1 (1874), 83; and for farther literature, *Bibliog, Synops*. in*Ante-Nicene Fathers Suppl*. (1887), 77–81.
+
+(6) Eusebius (ab. 260–340). I. *Ecclesiastical History*. 2. *Constantine*. 3. *Chronicle*.
+
+For 1 and 3 compare Prolegomena of Dr. McGiffert at the beginning of this volume, and for 2, *Special Prolegomena*, p. 466.
+
+(7) Optatian (fl. ab. 326). *Panegyric*, in Migne, *Patrol. Lat*. 19 (1846), 395–432; Letter to Constantine, do. 391–392. Optatian, Porfirius, or Porphyrius, as he is variously called, is dubiously Christian, composed this poem, or series of poems, while in exile, on the occasion of the Vicennalia of Constantine. It dates, therefore, from 325 or 326. It is a most extraordinary aggregation of acrostics, pattern poems, and every possible device of useless, mechanical variety of form, of little value, excepting as a sort of dime-museum exhibition of patience and ingenuity. It consists mainly in calling Constantine flattering names, but contains here and there an historical suggestion. It was accompanied by a letter to Constantine, and drew one from him, and a pardon as well (Hieronymus, *Chron.*).
+
+Compare Wilson, article *Porfirius,* in Smith & W. 4 (1887), 440; article *Porphyrius,* in Smith, *Dict.* 3 (1859), 502; and for editions and literature, Engelmann.
+
+(8) Athanasius (296–373). *Apology against the Arians,* and various works, ed. Bened. (1698), 2 v. in 3, fo; ed. Migne, *Patrol. Gr.* 25–28 (1857), 4 v.; translated in part in Newman, *Library of the Fathers,* and in Schaff-Wace, *Nicene and Post-Nicene Fathers* (announced). The works of Athanasius contain various letters of Constantine (see under *Works*) and much of primary historical value for the latter part of Constantine’s reign. So far as it goes, the matter is almost equal to official documents as source.
+
+Compare Bright, in Smith & W. 1 (1877), 179–203; Schaff, *Hist. of Church,* 23 (1884), 884–893; and for extensive literature and editions, Chevalier and Graesse.
+
+(9) Cyril of Jerusalem (ab. 315–386). *Catechetical Lectures.* In Migne, *Patrol Gr.* 33 (1857), especially 830. English translations in Newman, *Library of Fathers,* 2 (1838), one ref. p. 178. *Letter to Constantine II. concerning the sign of the cross seen at Jerusalem,* c 3. In Migne, *Patrol. Gr.* 33 (1857), 1165–1176, ref. on 1167–1168. Two or three references only to excavation of the cross and building of churches, &c., at Jerusalem. They take significance only in the fact that Cyril is so near the time (the letter was 351 [?], or not many years later), and delivered his lectures in the very church which Constantine had built (sect. 14, 22).
+
+Compare Schaff, *Hist. of Church,* 3 (1884) 923–925; Venables, in Smith & W. 1 (1887), 760–763; and literature in Chevalier Schaff, &c.; also editions in Graesse, Hoffmann, &c.
+
+(10) Ambrosius of Milan (ab. 340–397). *Oration on the Death of Theodosius.* In Migne, *Patrol. Lat.* 16 (1866), portion relating to Constantine especially, 1462–1465. Relates chiefly to the Finding of the Cross.
+
+Compare Davies, in Smith & W. 1 (1877), 91–99; also Chevalier, Engelmann, Schoenemann, &c.
+
+(11) Hieronymus (Jerome) (331–420). *Chronicle.* In Migne, *Patrol. Lat.* 27 (1866). Part relating to Constantine, 493 (497)–500. A translation and continuation of the *Chronicle* of Eusebius, who ends with the death of Licinius. An indispensable but aggravating authority.
+
+Compare Salmon, *Eusebius, Chronicle of,* in Smith & W. 2 (1880), 348–355.
+
+(12) Augustinus (354–430). *Ep.* 43, ed. Migne, 33 (1865), 159– , §§4, 5, 20, &c. He gives account of the various Donatist hearings, and speaks of having read aloud from various original documents, including the petition to Constantine, the proconsular acts, the proceedings of the court at Rome, and the letters of Constantine. He speaks of the hearing at Milan. *Ep.* 88, ed. Migne, *Patrol. Lat.* 33 (1865), 302–309. This has the text of letter of Anulinus to Constantine and Constantine to Probianus. *Eps.* 76. 2; 93. 13–14, 16 (which contains account of decree of Constantine that property of obstinate Donatists should be confiscated); 105. 9, 10 (not translated); 141. 8–10 (not translated), in ed. Migne, and tr. English ed. Schaff, contain various matter on the Donatist acts of Constantine. *Ad Donatistas post collationem,* c. 33, §56; ed. Migne, 43 (1861), 687 (important for *dates* given). *Contra litt. Petil.* Bk. II. ch. 92, §205; ed. Migne, 45 (1861), 326. Tr. in Schaff, *Nicene and Post-Nicene Fathers,* 4 (1887), 580–581. *Contr. Epist. Parmen.* Bk. I. chs. 5–6, §10–11; ed. Migne, 43 (1841), 40–41. Augustine as a source is of primary value, because of the otherwise unknown sources which he uses and quotes.
+
+Compare Schaff, *Hist. of Church,* 3 (1884), 988–1028; Maclear, in Smith & W. *Dict.* 1 (1877), 216–228. For literature see Schaff, Chevalier, Engelmann, and for particular literature of the Donatist portions, Hartranft, in Schaff, *Nicene and Post-Nicene Fathers,* 4 (1887), 369–372; and for editions, see Schoenemann, Graesse, Brunet, Engelmann, Schaff, Hartranft, &c.
+
+The equally numerous series of non-Christian writers is headed, in value at least, though not in time, by Constantine’s secretary.
+
+(13) Eutropius (4th cent.). *Abridgment of Roman History,* Bk. 10. Multitudes of editions and translations; the ones used are: (Paris, 1539), 63–68; transl. by Watson, (Bohn, 1853), 527–535. Eutropius was secretary to Constantine, and afterwards the intimate of Julian. His testimony, though brief, is of peculiar weight from his position for knowing and from a certain flavor of fairness. It was early remarked (Nicephorus Gregoras) that his praise of Constantine had peculiar force, coming from a heathen and friend of Julian. His dispraise, on the other hand, is conditioned by the fact that he applies it only to the period after Constantine began peculiarly to favor the Christians. He seems to be a cool, level-headed man of the world, unsympathetic with Constantine’s religion and, writing *from this standpoint,* presents a just, candid, reliable account of him.
+
+Compare Ramsay, in Smith, *Dict.* 2 (1859), 126–127; Watson, *Notice,* in his translations; also for multitudinous editions and translations, and relatively scanty though considerable literature, Chevalier, Engelmann, Graesse.
+
+(14) Scriptores Historiæ Augustæ (? 2–324). Ed. Jordan and Eyssenhardt, Berol. 1864, 2 v. Contains a few dedications to and mentions of Constantine, for which see Index.
+
+Compare Teuffel, *Hist. of Rom. Lit.* tr. Wagner, 2 (Lond. 1873), 320–324.
+
+(15) Victor, Sextus Aurelius (fl. 350–400). *Cæsars*. In ed. Schottius, Antv. Plantin, 1579, p. 97–167. Section on Constantine chiefly, 157–162. *Epitome,* Antv. 1579. Section on Constantine, p. 49–52. These works, by different authors, have been associated since the time of the above edition with the name of Victor. The former is by him, the latter probably by a slightly later Victor. They use the same sources with Zosimus, but supplement him (Wordsworth). Both are interesting and important, and in Manso’s judgment, final where they agree.
+
+Compare Ramsay, in Smith, *Dict.* 3 (1859), 1256–1257; Thomas, article *Aurelius,* in *Biog. Dict.* (1886), 228; Manso, *Leben Const.* p. 215; and scanty references in Chevalier. For editions and farther literature, see Engelmann.
+
+(16) Praxagoras Atheniensis (4th cent). In Photius, *Cod.* 62; Ed. Bekker, p. 20; ed. Müller, *Fragm.* 4 (1868), 2–3. Lived in reign of Constantine (Müller, p. 2). Although a heathen (Photius, *Cod,* 62), he lauds Constantine above all his predecessors. He wrote various works in the Ionic dialect, among others a “history of the deeds of Constantine the Great, in two books,” composed at the age of twenty-two. The fragments or *resumé* are preserved by Photius, as above. Though brief (three columns), it is a concise mass of testimony.
+
+Compare Smith, *Dict.* 3. 517; also for literature, Chevalier; and for editions, the various editions of Photius in Graesse, Hofmann, Engelmann, &c.
+
+(17) Calendarium Romanum Constantini Magni (350). In Petavius, *Uranologium* (1630), 112–119. Written after 337, and in or before 355, probably in 355. It is authority for the birthday of Constantine, Constantius, &c.
+
+Compare Greswell, *Origines Kalendariæ Italicæ*, 4 (Oxf. 1854), 388–392.
+
+(18) Julian the Apostate (331–363). *Cæsars. Orations on Constantius and Constantinus, et pass.* Ed. Paris, 1630, p. 12–96, 422; Vol. 2, 1–54, *passim.* Compare also ed. Hertlein, Lips. 1875–76, 2 v. 8vo. Editions and translations are very numerous. (Compare arts. of Wordsworth and Graves; also Engelmann, Graesse, &c. The orations which are panegyrical were delivered (Wordsworth) 355 and 358, and the *Cæsars* dates from shortly after his accession (in 361). The latter is a satire which has found literary favor, the substantial purpose of which is thought to be a suggestion that he (Julian) is much superior to all the great emperors; but which if one were to venture a guess at its real motive is quite as much a systematic effort to minimize by ridicule the lauded Constantine. The laudatory words of Julian himself in his orations are quite overshadowed by the bitter sarcasms of the Cæsars. As a matter of estimate of the value of this source, there is to be remembered the bitterness of Julian’s hostility to Christianity. What to Eusebius was a virtue would to Julian be a vice. In view of his prejudice, everything which he concedes is of primary weight, while his ill-natured gossip carries a presumption of slanderousness.
+
+Compare Schaff, *Hist. of Church,* 2. 40–59; Wordsworth, in Smith & W. 3. 484–525; Graves, in Smith, *Dict.* 644–655. Compare for endless literature, Wordsworth, Chevalier, Engelmann, 1 (1880), 476–477.
+
+(19) Libanius, (314 or 316–391 +). *Orations.* Ed. Morellus, Par. 1606–1627. Contain a few allusions of more or less interest and historical value, for which, see ed. Morellus, Index volume 2, fol. Qqqvb.
+
+Compare Schmitz, in Smith, *Dict.* 2 (1859), 774–776; and for editions and literature, Chevalier, Engelmann, &c.
+
+(21) Ammianus Marcellinus (d. ab. 395). *Histories.* There are many editions, for which compare Engelmann, Graesse, and Wordsworth. Among editions are ed. Valesius (1636) and ed. Eyssenhardt, Berol. 1871. The work was a continuation of Tacitus, but the first thirteen books (including Constantine’s period) are best. He says (Bk. 15, ed. Valesius, 1636, p. 56–57) that Constantine investigated the Manichæans and like sects through Musonius, and gives account of the bringing of his obelisk to Rome, perhaps by Constantine (Bk. 17, p. 92–93; compare Parker, *Twelve Egypt. Obelisks in Rome,* Oxf. 1879, p. 1), and makes other mention, for which see Index to ed. Eyssenhardt, p. 566.
+
+Compare Wordsworth, in Smith & W. 1 (1879, 99–101, and for literature, Chevalier (scanty) and Engelmann, 2 (1882), 43–45 (Rich).
+
+(22) Eunapius (Anti-Christian) (ab. 347–414). *Lives of the Philosophers and Sophists; Ædesius.* Ed. Boissonade (Amst. 1822), 19–46 *passim.* Eunapius was born at Sardis about 347, and died after 414 a.d. (cf. Müller, *Fragm.* 87). He was a teacher of rhetoric, and besides this work wrote a continuation of the history of Dexippus, extending from 270–404 a.d. Fragments of this are preserved, but none relating to Constantine. Photius (*Cod.* 77) says that he calumniated the Christians, especially Constantine. With the fragments in Müller, *Fragm.* 4 (1868), 11–56, is included also (14–15) a fragment from the *Vita Ædes*., relating to Sopater. The death of Sopater and the relation of Ablavius to it is given more fully in the *Vita Ædes*. with various suggestive allusions. Much of his history is supposed to be incorporated in Zosimus, and this gives importance to his name, weight to Zosimus, and light on the hostile position of Zosimus towards Constantine.
+
+Cf. Photius, *Cod.* 77; Müller, *Fragm.* 4 (1868), 7–9; Mozley, in Smith & W. 2 (1880), 285–286; Schmitz, in Smith, *Dict.* 2 (1859), 93; also for further literature and editions, Chevalier and Engelmann.
+
+(23) Bemarchius (4th cent.) was of Cæsarea in Cappadocia; wrote the *Acts of Constantine* in ten books (Suidas, s.v. Βήμαρχιος; cf. Zonaras, p. 386). No portion is preserved. Wrote under Constantius, on whom he is said (Libanius, *Orat.* ed. Reiske, p. 24) to have delivered a panegyric.
+
+Cf. Müller, *Fragm.* 4 (1868), 3; Smith, *Dict.* 1 (1859), 482, &c.
+
+An early but as yet valueless group is that of Syriac and Armenian sources on the (apocryphal) treaty of Constantine with Tiridates.
+
+(24) Zenobius of Klag (fl. ab. 324). *History of Daron.* French translation from Armenian in Langlois, *Coll. Hist. Arm.* 1 (1867), 353–355. Like the works of the other Armenian historians, the text of this writer has suffered more or less from corruption. He has two mentions (p. 344 and 351) of Constantine, the latter being an account of the treaty with Tiridates.
+
+Compare introduction of Langlois, and literature in Chevalier.
+
+(25) Agathangelus (ab. 330). *History of the Reign of Tiridates and of the Preaching of St. Gregory the Illuminator,* c. 125–127, §163–169; in *Acta SS. Boll.* Sept. VIII. 320– ; also with French translation from Armenian in Langlois *Coll. d. hist. de l’Arm.* p. 97– . The work extends for 226–330 a.d. The author was secretary to Tiridates, but the work as we have it is a redaction made, however, not long after, as it was used by Moses of Khorene. This was in turn later (seventh century?) retouched by some Greek hagiographer. This Greek form is extant in mss. at Florence and Paris (cf. editions above), and there is reason to suppose that the extant Armenian is a version from this Greek form. But with its additions of arrantly apocryphal matter, it is hard to tell what is what, and so all considerable mention of the relation of Constantine and Tiridates has been left out of the account of Constantine’s life. Yet we must hesitate to put it all down under the mythical; for Tiridates certainly had intercourse with the Romans, and the original form of this life was certainly by a competent hand, and the matter relating to Constantine is in part soberly historical enough.
+
+For farther information, compare Davidson on Gregorius Illuminator, in Smith & W., *Dict.* 2. 737–739; Introduction, Langlois, p. 99–103.
+
+(26) Faustus of Byzantium (320–392). *Historical Library.* French translation from the Armenian in Langlois, *Coll. d. hist. Arm.* 1. 201–310. There are mentions of Constantine and Tiridates in Bk. 3, chaps. 10 and 21. The work is open to some suspicions of having been tampered with, but Langlois inclines to give it a fairly good character. If genuine, the mention of the treaty with Tiridates would nearly establish it as historical fact.
+
+Compare Beauvois *Nouv. biog. gén.* 17 (1856), 203, and Introduction of Langlois; also, literature in Chevalier.
+
+The writers of the following centuries are for the most part Christian, uncertain or religiously unknown, excepting the very pronounced non-Christian who heads the list.
+
+(27) Zosimus (fl. ab. 400–450). *History.* Ed. Bekker (Bonn, 1837), 8vo. Section on Constantine occupying Bk. 2. 8– , p. 72–106. The date of this writer has been put as early as the fourth century and as late as the end of the fifth. It will be safe to divide extremes. He is a heathen who, on the period of Constantine, draws from an anti-Christian and anti-Constantinian source, and who regards the introduction of Christianity as a chief cause of the decline of the Roman Empire (cf. various passages cited by Milligan). He is prejudiced against Christianity with the bitter prejudice of one who finds himself in a steadily narrowing minority, and he is occasionally credulous. But he wrote in a clear, interesting style, without intentional falsifications, and was quite as moderate as the Christian writer (Evagrius 3. 41) who calls Zosimus himself a “fiend of hell.” His extended account is therefore of great value among the sources, and especially as it is probably drawn in large measure from the earlier lost work of Eunapius.
+
+Compare Milligan, in Smith & W., 4 (1887), 1225–1227: Mason, in Smith, *Dict.* 3 (1859), 1334–1335; also, for literature, Chevalier and Engelmann, and for editions, Engelmann.
+
+Anonymus Valesianus (fifth century). Ed. Valesius (Paris, 1636), p. 471–476. This fragment, first published by Valesius in the above editions of Ammianus, is of the highest value for the life of Constantine. It is evidently drawn from various sources, many of which are now lost. The compiler or writer shows a judiciousness and soberness which commends his statements as peculiarly trustworthy.
+
+Compare the exhaustive examination by Ohnesorge, *Der Anonymus Valesii de Constantino.* Kiel, 1885. 8vo.
+
+(27) Stephen of Byzantium (ab. 400). *Greek Cities.* Venet. Aldus, 1502, fol. H. iii. s.v. Ναϊσσὸς. The work is a dictionary of geography, and the fact in these few lines is of first value.
+
+Compare Smith, in Smith, *Dict.* 3 (1859), 904–906. Chevalier, Hoffmann, etc.
+
+(28) Sozomen (b. ab. 400). *Ecclesiastical History.* Ed. Hussey, English translation, London, Bohn, 1855; newly edited by Hartranft in Schaff, *Nicene and Post-Nicene Fathers,* 2 (1890) [in press]. This history covers the period 323–423 (not 439). He draws largely from Eusebius. He has been described rightly (Dowling, *Study of Eccl. Hist.* p. 31) as relatively inaccurate, rhetorical and credulous. But he works from sources, though mainly from exact ones. For farther discussion, compare Hartranft in volume 2 of this series.
+
+Compare also Milligan, in Smith & W. 4 (1887), 722–723, and literature in Chevalier.
+
+(29) Socrates (b. ab. 408). *Ecclesiastical History*. Ed. Hussey, reprinted with Introduction by Bright, Oxf. 1878. English translation London, Bohn, newly edited by Zenos in volume 2 of this series [in press]. This history covers the period 306–439. It is written with general good judgment, but for Constantine adds little to Eusebius of which it professes to be a continuation.
+
+For farther description and discussion, compare Zenos, Milligan, in Smith & W. 4 (1887), 709–711, and literature in Chevalier.
+
+(30) Theodoret (b. ab. 393?–457?). *Ecclesiastical History*. In Migne, *Patrol. Gr*. 82 (1859), 879–1280. English translation, London, Bohn, 1854. The birth of Theodoret has been placed at various dates, 386, 387, 393, &c., and the exact time of his death (453–458) is equally uncertain. This work reaches from 324 to 429, and is generally regarded as learned and impartial. It gives much concerning Constantine’s relations to the Arian controversy and incorporates many documents, which appear to be taken mainly from Eusebius’ *Life of Constantine*. A chief value is, it would seem, for the text of Eusebius. But his very use of documents shows care and gives value.
+
+Compare Venables, in Smith & W. 4 (1887), 904–919; Newman, *Hist. Sketches*, 2 (1876), 303–362; Schaff, *Hist. of Church*, 3 (1884), 881–882; and literature in Chevalier; also for editions, Graesse and Hoffmann.
+
+(31) Orosius, Paulus (ab. 417). *Histories*, Bk. 7, chaps. 26–28. Ed. Migne *Patrol. Lat*. 31 (1846), 635–1174; section relating to Constantine occupies 1128–1137. For many editions and mss. compare Schoenemann, *Bibl. Patr. Lat*. 2 (1794), 481–507, and Engelmann, 2 (1882), 441– . It is said (Manso) that Orosius adds nothing to existing material. This is only in part true. At all events, his value as corroboratory evidence is considerable, brief as the work is.
+
+Compare Phillott, in Smith & W, 4 (1887), 157–158; Ebert, *Gesch. d. chr. Lat. Lit*. 1 (1874), 323–330, and literature in Chevalier and Engelmann.
+
+(32) Prosper Aquitanus (403–463+). *Chronicle*. Ed. Migne, *Patrol. Lat*. 51 (1861), 535–606 (8). Portion relating to Constantine, 574–576. The *Chronicle* extends to 444 or 455. To 326 he depends mainly on Eusebius’ *Chronicle*, and for the rest of our period on the continuation of Hieronymus.
+
+Compare Phillott, in Smith & W. 3 (1882), 492–497; Teuffel, *Hist. of Rom. Lit*. 2 (Lond. 1873), 482–484; and for literature, editions, &c., Chevalier, Engelmann, &c.
+
+(33) Idatius (468+). *List of Consuls* (Fasti Idatiani). In Migne, *Patrol. Lat*. 51 (1861), 891–914; portion relating to Constantine, 907–908. Idatius lived until after 469. This work, which is not generally acknowledged to be his, although quoted under his name, ends in 468. It contains brief statements of some events under the most significant years.
+
+Compare Ramsay, in Smith, *Dict*. 2 (1859), and literature under “Idace de Lamego,” in Chevalier.
+
+(34) Gelasius of Cyzicus (ab. 450– ). *History of the Council of Nicæa*. In Labbe, *Concilia*, 2 (1671), 103–286. There is also an abstract in Photius, *Bibl. Cod*. 88, ed. Migne, *Patrol. Gr*. 103 (1860), 293–296. Venables is probably just when he says: “His work is little more than a compilation from the ecclesiastical histories of Eusebius, Socrates, Sozomen, and Theodoret, to which he has added little but what is very doubtful or manifestly untrue.” There is a little on Constantine not in those sources, but to try to fix on any of it as authoritative quite baffles one. Still, it is not wholly clear that he did not use sources, as well as his own imagination, in adding to the other sources. It may be said to be “of doubtful value,” as source. It is not easy to see what Venables means in saying that the third hook, as we have it, gives only three letters of Constantine. This is true; but the second book, “as we have it,” gives several more.
+
+Compare Venables, in Smith & W. 2 (1880), 621–623.
+
+(35) Jacobus of Sarug (452–521). *Homily on the Baptism of Constantine*. Ed. Frothingham, Roma, 1882. For further information consult the extended study of Frothingham.
+
+(25) Philostorgius (b. ab. 468). English translation by Walford (Lond. Bohn, 1855), 425–528. The original work covered the period between 300 and 425. The fragments preserved contain several interesting facts, or fictions, relating to Constantine, some not found elsewhere. Photius and all the orthodox have always called him untrustworthy or worse, and a very unorthodox critic (Gibbon) finds him passionate, prejudiced, and ignorant; but it seems to be agreed that he used some sources not availed of by others.
+
+Compare Milligan, in Smith & W. 4 (1587), 390; Dowling, *Study of Eccl. Hist*. p. 26–27; and literature in Chevalier.
+
+(26) Hesychius Milesius (ab. 500?– ). *Origins of Constantinople*. In Müller, *Fragm*. 4 (1868), 146–155; also in ed. Orelli (Lips. 1820), 59–73. Hesychius, surnamed Illustris, of Miletus lived in the early part of the sixth century. This work contains several allusions to the founding of the city of Constantine. It seems to have been taken almost word for word in parts by Codinus.
+
+Compare Venables, in Smith & W. 3 (1882), 12–13; Means, in Smith, *Dict*. 2 (1859), 447–448; Müller, *Fragm*. 4 (1868), 143–145; also literature in Chevalier, and editions and literature in Engelmann.
+
+(27) Cassiodorus (ab. 468–561+). *Tripartite History.* In Opera, ed. Garetius, 1 (Rotom. 1679, fol.), b 1–b 372. On Constantine, especially p. 207–243. (Same ed. in Migne, *Patrol. Lat.* 69 [1865], 879–1214.) Cassiodorus was born about 468 and lived to be more than ninety-three years old. This work is an epitome of Socrates, Sozomen, and Theodoret, and has no additional value as source. A work on the Goths has been preserved to us only in an epitome by Jordanes. See Jordanes.
+
+Compare Young, in Smith & W. 1 (1877), 416–418, or (better for this work) Ramsay, in Smith, 1 (1859), 623–625; and for literature and editions, Chevalier, Engelmann, Graesse, etc.
+
+(28) Lydus, Joannes (Laurentius) (490–550+). *De Mensibus; De Magistratibus; De Ostentis, passim.* Ed. Bekker, in *Corp. Hist. Byz.* (1837). Other editions of the various works may be found noticed in Graesse, *Trésor,* 4 (1863), 122; Brunet, *Manuel,* 3 (1862), 880; Engelmann, *Bibl. scr. class.* 1 (1880), 478–479; Hoffmann, *Lex*. He was born at Philadelphia in 490, and lived some time after 550. He was a heathen, but respectful toward Christianity (Photius, Cod. 180). He mentions Constantine ten or a dozen times; e.g. his foundation of Constantinople (*De O.* 21. 5), Constantine’s learning and military skill (*De mag.* 3. 53), and quotes (*De magistr.* 3. 33, ed. Bonn., p. 226), Constantine’s own writings.
+
+Compare Photius, Cod. 180; Means, in Smith, *Dict.* 2 (1859), 600; Hase, Pref. and in ed. Bekker; Joubert, in *Nouv. biog. gén.* (Hoefer), 32 (1860), 388–391; and for farther literature, Chevalier and the article of Joubert, and Engelmann, *Bibl. scr. class.* 1 (1880), 479.
+
+(29) Jordanes (or Jornandes) ( –551?). *History of the Goths, (De Getarum origine et rebus gestis).* In Cassiodorus, Opera, ed. Garetius, 1 (Rotom. 1679), 397–425; same ed. in Migne, *Patrol. Lat.* 69 (1865), 1251–1296. This work on the Goths is said by its author to be an epitome of the work of Cassiodorus. It says (p. 406–407) that Constantine employed Goths in his campaign against Licinius, and also in the building of Constantinople. It was composed in 551 or 552 (cf. Wattenbach, *Deutschland’s Geschichtsq.* 1 [1877], 66).
+
+Compare Hodgkin, in *Encycl. Brit.* 13 (1881), 747–749; Acland, in Smith & W. 3 (1882), 431–438 (exhaustive); and abundant literature in Chevalier, Engelmann, Wattenbach, &c.; also editions in Engelmann, “Potthast. *Bibl. hist. med. æv.* 1862, p. 102,” &c.
+
+(30) Anonymous, qui Dionis Cassii historias continuavit (sixth century?). 14. Licinius (18 lines); 15. Constantinus (9 lines). In Müller, *Fragm.* 4 (1868), 199; of especially Introd. in Müller, p. 191–192. These were first published by Ang. Mai in *Script. Vet. Nov. Call.* 2, 135–, 527–, and are found also in various editions of Dion Cassius; e.g. ed. Sturz. 9 (Spz. 1843). Mai strongly inclines to suspect that Johannes Antiochenus is the author, but this Müller (p. 191) argues to be impossible. They are sometimes referred to as Excerpta Vaticana. Petrus Patricius and various others have been suggested as authors, but all that is affirmed with any assurance is that the author was a Christian. This is on the ground of Diocletianus, 1 (p. 198). The fragments are very brief, but contain several little facts and turns not found elsewhere.
+
+(31) Evagrius (536?–594+). *Ecclesiastical History,* 3. 40–41. English translation (1709), 472–474. A violent invective against and disproval of the charges of Zosimus against Constantine and adds nothing to historical facts.
+
+Compare Milligan, in Smith & W. 2 (1880), 423–424.
+
+(32) Procopius Cæsariensis (fl. 547–565). *Histories.* Ed. Dindorf, Bonn, 1833–1838, 3 v. Two or three slight mentions, of which the nearest to any account is the division of the empire by Constantine, and the founding of Constantinople (*De bel. Vand,* 1. 1). He flourished from about 547 to 565. Whether he was Christian or heathen is uncertain. He is characterized by peculiar truthfulness (cf. his *De ædif.* 1; Praf. ed. Bonn, v. 3, 170–, and Milligan).
+
+Compare Milligan, in Smith & W. 4 (1887), 487–488; Plate, in Smith, *Dict.* 3, 538–540; also for literature, Chevalier and Engelmann, 1. 655; and for editions, Milligan, Plate, and the various bibliographies.
+
+(33) Petrus Patricius (fl. 550–562). *Fragments.* In Müller, *Fragm.* 4 (1868), 189. Gives account of an embassy of Licinius to Constantine.
+
+Compare Means, in Smith, *Dict.* 3 (1859), 226–227; also Chevalier and Hoffmann.
+
+(34) Gregory of Tours (ab. 573–594). *History of the Franks,* 1. 34. Ed. Ruinart (Paris, 1699), 27, &c. (?) *History of the Seven Sleepers,* do. 1272–1273, &c. *Liber miraculorum,* do. 725–729. The edition of Ruinart is reprinted in Migne, *Patrol. Lat.* vol. 71 (1867). In the first of these he quotes as authorities, Eusebius and Junius; the latter are full of legendary matter.
+
+Compare Buchanan, in Smith & W. 2 (1880), 771–776; also for editions and literature, Engelmann, Chevalier, and Graesse.
+
+(35) Chronicon Paschale (ab. 630 a.d.) Ed. Dindorf, Bonn, 1832, 2 v.; section relating to Constantine occupies vol. 1, p. 516–533. Ed. Migne, *Patrol. Gr.* 92 (Paris, 1865). The work is a chronicle of the world from the creation until 630. It has been thought, but on insufficient grounds (cf. Salmon), that the first part ended with a.d. 354 and was written about that time. It is really a homogeneous work and written probably not long after 630 a.d. (Salmon). It is frequently quoted, unfortunately, as Alexandrian Chronicle (e.g. M’Clintock and Strong Cycl.). The chief value is the chronological, but the author has used good sources and presumably some not now extant. It has something the value of a primary source of second rate.
+
+Compare Salmon, In Smith & W. 1. (1877), 509–513; Clinton, *Fasti. Rom.* 2 (1850), 169; Ideler, *Handb. d. Chron.* 2 (1826), 350–351, 462–463; and for literature and editions, Salmon.
+
+(36) *Anonymous Acts of Metrophanes and Alexander* (seventh century?), “in which is contained also a life of the emperor Constantine the Great.” In Photius, Cod. 256; ed. Migne, *Patrol. Gr.* 104 (1860), 105–120. A more complete recession of this anonymous piece was edited by Combefis, who regards it as the work of a contemporary, written therefore in the middle of the fourth century (cf. his *Hist. Mon.* p. 573, teste Fabricius). The authentic details can be traced word for word, according to Tillemont, in other historians, while impossible statements show it to be not the work of a contemporary. It seems to fall under the class of works where “What is true is not new, and what is new is not true,” but it can hardly be regarded as sufficiently determined whether or no it is worthless.
+
+Compare Tillemont, *Mém.* 7 (1732), 657; Fabricius, *Bibl. Gr.* 9 (1737), 124 and 498; *Acta. SS*. Nov. 1.
+
+(37) Johannes Antiochenus (fl. 610–650). *Chronological History.* Fragments in Müller, 4 (1868), 535 (8)–622; *Fragm.* 168–169, on Constantius and Galerius, and 170–171a, on Constantine, p. 602–603. This writer is to be distinguished from Johannes Malalas, also known as Johannes Antiochenus. He flourished somewhere between 610–650 (Müller, p. 536). The sections relating to Constantine are in the main exactly correspondent to Eutropius. It has been conjectured (Müller, p. 1538) that Eutropius and Johannes copied from a common Greek source; but the curious error in the section on Constantine (p. 603), by which “commodæ” is converted into a proper name, and becomes the name of the sister whose son Constantine put to death, shows it to have been translated from the Latin. The work of Johannes has, however, some interesting suggestions and additions; e.g. its paraphrase of the word “dubius” in the characterization of Constantine’s conduct towards his friends.
+
+Compare Müller, p. 535–538; Means, in Smith, *Dict.* 2 (1859), 587; also article of Stokes, and other literature under Malalas.
+
+(38) Malalas (= John of Antioch) (ab. 700). *Chronography,* Bk. 13, 1–11. Ed. Dindorf (Bonnæ, 1831); in *Corp. scr. hist. Byz.* (section on Constantine, p. 316–324); also in Migne, *Patrol. Gr.* 97 (Par. 1865), 1–70. Earlier editions are, Oxf. 1691, 8o; Venice, 1733, fol. [reprint of 1691, “quite useless”]. Lived about 700 (Müller, *Fragm.* 4 [1868], 536), or about 650 (Chevalier, 1205). He has been placed as late as ninth century (Hody), and as early as 601 (Cave). Noting is known of his personal history. He is to be distinguished from the John of Antioch in Müller’s *Fragm.* who is earlier than Malalas. He is very credulous and inaccurate and the section on Constantine is no exception to the rule.
+
+Compare Prolegomena of Hody and Dindorf; Stokes, in Smith & W. 3 (1882), 787–788, &c.; and farther literature in Chevalier, *Rép*. 1205; Hoefer, *Nouv. biog. gén.* 32 (1060), 1007, and the article of Stokes.
+
+(39) Pseudo-Isidore (eighth cent.?). *Decretals.* In Migne, *Patrol. Lat.* 130 (1853), 245–252. The famous “Donation of Constantion,” which appears here for the first time. See under *The Mythical Constantine.*
+
+Compare Schaff, *Hist. of Church,* 4 (1885), 268–733; and for literature, Chevalier under Isidore Mercator; also the literature of the *Donation.*
+
+(40) Theophanes (758–818). *Chronography.* Ed. Classen, Bonn. 1839–41, 2 v. Section on Constantine occupying vol. 1, p. 10–51; also in Migne, *Patrol. Gr.* 108 (186). This work “is justly regarded as one of the most important in the whole series of Byzantine historians” (Dowling, p. 69). Theophanes was friend of Georgius Syncellus; and at his request (Prœm. p. 5) took up the latter work at the point where he left off (Diocletian), extending it to 811. He is an authority of judgment and weight for matters relating to his own times, and on quite a different level of historical character from Cedrenus and Zonaras. Although of very much less value for Constantine, he shows even here a certain historical judgment and discrimination. His book is an intelligent work from various sources, one of which is Eusebius. He says that he has diligently examined many works, and reports nothing on his own authority, but on the authority of ancient historiographers and “logographers” (Prœm. p. 5).
+
+Compare Dowling *Introd.* (Lond. 1838), 69–70; Smith, in Smith, *Dict.* 3. 1082–1083; Gass, in Herzog, *Real Enc.* 15 (1885), 536–537; *Acta sanctorum Boll.* March 12; and for (extensive) literature, Chevalier.
+
+(41) Anastasius Bibliothecarius (d. 879). *Lives of the Roman Pontiffs.* In Migne, *Patrol. Lat.* 127–128 (1852). 34. S. Silvester, vol. 127, 1511–1527. Small use.
+
+Compare Schaff, *Hist. of the Church,* 4 (1885), 774–776; and for literature and editions, Chevalier and Graesse.
+
+(42) Photius (ninth cent.). *Bibliotheca.* In Migne, *Patrol. Gr.* vols. 103–104 (1860). Contains excerpts from and comments on Praxagoras, Eunapius, Gelasius, Anon. Metroph., and Eusebius, which see.
+
+Compare Schaff, *Hist. of Church,* 4 (1885), 636–642; Means, in Smith, *Dict.* 3 (1859), 347–355.
+
+(43) Constantinus Porphyrogenitus (c. VII.) (fl. 911–959). *De thematibus.* Ed. Bekker (Bonn. 1840), 1–64, in *Corp. scr. hist. Byz.;* and in ed. Migne, *Patrol. Gr.* 113 (1864), 63–140. Gives (2. 8, ed. Bonn. p. 57–58) account of division of the empire among his sons by Constantine. He also mentions in his *De cer. aul. Byz.* (ed. Reiske, Bonn. 1829; ed. Migne, *Patrol. Gr.* 112); e.g. the “cross of Constantine” several times mentioned, and gives a few facts of archæological interest. Constantinus VII was emperor 911–959.
+
+Compare Plate, in Smith, *Dict*. 1. 349–351; Ceillier, 12 (1862), 811–813; and for farther literature, Chevalier and Engelmann, 1 (1880), 249; also for editions, Plate, who has admirable survey.
+
+(44) Leo Diaconus (tenth century). *Histories*, 5. 9 and 8. 8. In ed. Hase (Bonn. 1828), p. 91 and 138. Mentions the foundation of a city, the vision of the cross, the Scythian wars, and burial in the Church of the Apostles at Constantinople, and characterizes him as “among emperors the one renowned in story” (8. 8). For other editions, compare Brunet, Graesse, Hoffmann, and Engelmann. He lived from about 950 to at least 993. He was used by Scylitzes (cf. Cedrenus) and perhaps Zonaras. “Style vicious,” and “knowledge…of ancient history is slight” (Means).
+
+Compare Means, in Smith, *Dict.* 2 (1859), 743–744; M’Clintock and Strong, *Encycl*. 5 (1875), 351; Hase, Præf.; and for literature, Chevalier.
+
+It is by some stretching of the term that many of those dating before the year 1000 are admitted as sources. Some contribute hardly a single fact not in other sources. This is still more true of the period following, but this period is especially rich in sources of historical fictions—and these must be considered. So the Byzantine historians to the invention of printing are given, and some Western writings, which contain relevant matter.
+
+(45) Zonaras, Johannes (1042–1130?). *Chronicle*. Ed. Migne, *Patrol. Gr*. 134–135 (Par. 1864). The section relating to Constantine occupies Vol. I. 1097–1118, Bk. 13, chs. 1–4; cf. also end of Bk. 12. The ed. Pinder, Bonn. 1841–1844, 2 v., is unfinished, containing only twelve books. It has since been edited by Dindorf, Lips. 1868–1875, 6 v. Bk. 13 is in Vol. 3 (1870). This work consists of eighteen books extending from the beginning of the world until 1118. Zonaras draws, for Christian period, from Eusebius, Philostorgius, &c., with some discernment, and so deserves a tolerably high place among the Byzantine historians (Zöckler). He incorporates a choice variety of fables, but gives more or less facts which seem to be facts. He actually adds almost nothing to the sources of Constantine, though there are certain facts over which one lingers a little before relegating to the great class of “interesting, if true.”
+
+Compare Smith, *Dict*. 3. 1331; (Zöckler), in Herzog, *Real Enc*. 17 (1886), 555–556; and for (rich) literature, Zöckler, Chevalier, and Engelmann, 1 (1880), 798.
+
+(46) Cedrenus, Georgius (ab. 1057). *Compendium of History*. Ed. Bekker, Bonn. 1838–1839, 2 v., the section relating to Constantine occupying Vol. I, p. 472–520 *et pass*. Also in Migne, *Patrol. Gr*. 121–122 (Par. 1864). Nothing is known of his personal history. The work is a chronicle from the beginning of the world until 1057 a.d. He mentions as his chief sources Georgius Syncellus, “until the time of Maximianus and Maximinus,” and from this point Theophanes, Siculus, Psellus, and others (cf. p. 4; cf. also Glycas. *Chron.,* ed. Bonn. p. 457), and claims to have collected facts not in these sources. He mentions the work of Joannes Thracesius, or Curopalates, who is probably Scylitzes, whose work corresponds so exactly with that of Cedrenus in parts as to suggest the one or the other a better copier than compiler. The statement of Ceillier is that Cedrenus copied the work of Scylitzes for the period 811–1057, and that Scylitzes afterwards continued his work to 1081; i.e. there was a double edition of the work of Scylitzes, and Cedrenus wrote between. But Means (p. 760) thinks otherwise, and gives good reasons, making one edition and placing Cedrenus’ work later, i.e. after 1081. The “additional facts” are few, the compilation is uncritical and credulous; but the work is recognized as a source to be consulted, though with greatest critical care.
+
+Compare Plate, in Smith, *Dict*. 1. 658; Ceillier, 13 (1863), 560; Means, *Scylitzes*, in Smith, *Dict*. 3. 759–762; and for literature, Chevalier, under the words *Cedrene* and *Scylitzes*.
+
+(47) Pseudo-Leo. *Chronography*, under *Constantius Chlorus* and *Constantinus Magnus*. Ed. Bekker (Bonn. 1842), p. 83–90. In *Corp. scr. hist. Byz*. from Cramer, *Anecd. gr. bibl. reg. Par*. 2 (1839), 243–379. It is published as the first part of the *Chronography* of Leo Grammaticus, because assigned to him by the catalogues of the ms. at Paris. It is thought by Cramer, however, not to be by him, but to be “compiled from various writers,—Cedrenus, Joannes Antiochenus, *Chronicon Paschali*, and perhaps others which are lost” (cf. Cramer, *Anecd. gr.* 2. 243–379, quoted by Bekker, Præf. iii.–iv.). In this section the author quotes Socrates and Eusebius, but uses other and some unusual sources. While one hesitates to lay much weight on an author of such unknown age and personality, and which contains obvious errors, yet it carries the conviction of a certain moderate weight. Many passages are identical, almost word for word, with Cedrenus. In one of these passages the author refers to Socrates as his authority, while there is no such mention in Cedrenus. They may have taken from the same source. At all events, this work appears on its face much more like sober history than do Cedrenus and Zonaras. Its absolute value as source is very slight.
+
+Compare Preface of Bekker.
+
+(48) Attaliata, Michael (ab. 1072). *History*. Ed. De Presle and Bekker, Bonn. 1853. 8°. He mentions (p. 217, also p. 222) half a dozen things relating to Constantine; that he was reckoned among the apostles, the sign of the cross, &c., but nothing of value, unless (p. 222) the transposition of a colony from Iberia to Assyria (?).
+
+Compare Præf. of De Presle, also Graves, in Smith, *Dict*. 1. 409, who, however, does not mention this work; and for literature, Chevalier and De Presle, p. 7–8.
+
+(49) Anna Comnena. *Alexias*. Ed. Schopen-Reifferscheid, Bonn. 1839–1878. Mentions among two or three other deeds, a statue which this “father and lord of the city” had made over for him (12. 4), and that he has been counted among the apostles (14. 8).
+
+Compare Plate, in Smith, *Dict*. 1. 179; Klippel, in Herzog, 1 (1877), 427–429, &c.
+
+(50) Glycas, Mich (after 1118). *Chronicle* (or *Annals*). Ed. Bekker, Bonn. 1836; the section relating to Constantine occupies p. 460–468, ed. Migne, 158 (Par. 1866), 1–958. This work of Glycas extends from the beginning of the world to a.d. 1118. Though “justly placed among the better Byzantine historians” (Plate), for the period of Constantine he is one of the worst. His critical judgment seems to incline to the selection of the most unhistoric. He gives at end of preceding section a description of the work of Scylitzes (cf. Cedrenus), and quotes in it a work of Alexander on the Invention of the Cross.
+
+Compare Plate, in Smith, *Dict*. 2. 277; Joubert. in *Nouv. biog. gén*. (Hoefer), 20 (1857), 845–846; and for literature, Chevalier; also for editions, Hoffmann.
+
+(51) Nicetas Choniatas (Acominatus) (1150–1216+). *History*. Ed. Bekker, in *Corp. scr. hist. Byz*. Bonn. 1835, 8°; ed. Migne, *Patrol. Gr*. 139 (1865), 282–1088 (=Mai, *Bibl. nov. patr.* 6. ?). *Thesaurus*, in Migne, *Patrol. Gr*. 139–140 (1865), 1087–1443, 1–282 (=Mai, *Spicil. Rom.* v. 4). Born about 1150, and lived until 1216 at least. Gives in his *History* two or three things which relate to “the first and mightiest among Christian emperors” (*De Is. Aug*. 3. 7, ed. Bonn. p. 583); e.g. the tale of the nails from the cross (do. p. 584), and the despoiling of his tomb (*De Al. Is. Aug.* 1. 7, p. 632); also a few in the *Thesauri*, e.g. his conciliation to Arianism through his sister and her friend, the Arian presbyter (6. 3 and 6), and various matters relating to the Arian controversy (mainly in Bk. 5), where he uses the familiar sources,—Eusebius, Socrates, Sozomen, Theodoret, Philostorgius, &c, but also some other less familiar ones.
+
+Compare Worman, in M’Clintock and Strong, *Cyclop*. 7 (1877), 54–55; Plate, in Smith, *Dict*. 2. 1182–1183; Ullmann, in *Stud. u. Krit*. (1833), 674–700; Gass, in Herzog, 10 (1882), 540–541, and abridged in Schaff-Herz. 2. 1652. Compare for literature, the above and Chevalier; and for editions, Worman, Plate, Brunet, Graesse, Hoffmann, &c.
+
+(52) Gregoras, Nicephoras (1295–1359). *Byzantine History*, Bks. 1–37. Ed. Shopen (v. 1–2) and Bekker (v. 3), Bonn. 1829, 1830, and 1855. In *Corp. scr. hist. Byz.*; ed. Migne, *Patrol. Lat*. 148–149 (1865). Mentions incidentally half a dozen facts relating to foundation of Constantinople (10.1; 14. 3, &c.), his destruction of idolatry (19. 1), treatment of the Jews (26. 15), and enlargement of empire (26. 37). He was born 1295, and died after 1359. Was more learned but less judicious than Cantacuzenus (Plate).
+
+Compare Plate, in Smith, *Dict*. 2. 304–306; Joubert, in *Nouv. biog. gén*. 21 (1857), 889–891; also for literature, Chevalier, and for editions, Plate and Joubert.
+
+(53) Ephræmius (fourteenth century). *Cæsars* (?). Constantinus. Ed. Bekker, Bonn. 1840, 8°; section on Constantine occupies p. 21–25; ed. Migne, 143 (Par. 1865), 1–380. It was first edited by Mai, *Scr. vet. nov. coll*. 3 (1828), 1–225 (Dowl.). This metrical chronicle introduces one or two fables, but is in the main at least semi-historical, but its additional facts give no impression of having special sources,—in brief, it is scarcely a source, rather literature.
+
+Compare Smith, *Dict.* 2. 28; Bonneau, in *Nouv. biog. gén*. (Hoefer) 16 (1856), 127; Mai, *Præf*. in ed. Bekker, also ed. Migne. Compare for literature, Chevalier.
+
+(54) Cantacuzenus, Joannes. Angelus Comnenus Palæologus (d. 1375+). *Histories*. Ed. Schopen, Bonn. 1828–1832, 3 v.; also in Migne, *Patrol. Gr*. 153–154 (Dowl. 1866). Speaks of Constantine as a model of clemency (4. 2; ed. Bonn. v. 3, p. 18) worthy to be compared with the apostles (3. 92), and as led by the spirit of God like David (4. 48; ed. Bonn. v. 3, p. 351), and mentions the time (in May) when his memory is celebrated (4. 4; 3. 92), but has hardly a half-dozen mentions and fewer facts of interest or value. He reigned 1342–1355, abdicated, and lived until after 1375.
+
+Compare Plate, in Smith, *Dict*. 579–581; and for farther literature, Chevalier and Engelmann, also for editions.
+
+(55) Nicephorus Callistus (d. ab. 1450). *Ecclesiastical History*, 7. 17–18, 55. In Migne, *Patrol. Gr.* 145–147. Bk. 7 is in 145, and Bk. 8 in 146. This late history, not so bad as some in style, but full of legendary matter, was compiled from the standard existing historians, and perhaps some others. The portions on Constantine are taken almost wholly from Eusebius, Socrates, Sozomen, and other existing historians.
+
+Compare Schaff, *Church Hist*. 3 (1884), 883–884; Plate, in Smith, *Dict*. 2 (1859), 1180–1181; Dowling, *Introd*.(1838), 91–93.
+
+(56) *Monody on the Younger Constantine* (ab. 1450). Ed. Frotscher, *Anon. Græci oratio funebris*, Freiberg i. S., 1855. This work has not been seen, but according to Seeck (*Ztschr. f. Wiss. Theol.* 1890, p. 64) and Wordsworth (p. 630) this edition contains the result of a study by Wesseling, which shows that this work, referring to an anonymous emperor, does not refer to Constantine II. at all, but to some ruler who belongs in the fifteenth century.
+
+Compare Seeck and Wordsworth for editions.
+
+(57) Codinus (d. ab. 1453?). *Excerpts on the origins of Constantinople*. Ed. Bekker (Bonn. 1843). For other editions, compare articles of Plate and the *Nouv. biog. gén*. Contains considerable relating to Constantine, especially respecting the founding of Constantinople, and the buildings and statues in it. Mainly compilation, or compilation from compilation, but is from partly lost sources and far from unnecessary. He died about 1453 (?).
+
+Compare Plate, in Smith, *Dict*. 1 (1859), 810–811; *Nouv. biog. gén*. 11 (1855), 24–25; and for literature, Chevalier.
+
+(58) Ducas (fl. 1450–1460 a.d.) gives “From the incarnation until Constantine the Great, 318 years,” and speaks of a church restored by him. Ed. Bekker, in *Corp. scr. hist. Byz*. (1834), p. 13 and 48.
+
+(59) Geoffrey of Monmouth (d. 1154). *British History*. English translation (Lond. Bohn, 1848), 162– . The passage relating to Constantine covers a number of pages, and is ninety-five per cent fiction, five per cent fact.
+
+Compare Tedder, in Stephen, *Dict. of Nat. Biog.* 21 (1890), 133–135.
+
+Various of the old chronicles are only translations or paraphrases of this; e.g. the *Chronicle* of Pierre de Langtoft (ed. Wright, Lond. 1866, p. 76–78), various Welsh, Anglo-Saxon, and French chronicles, Waurin’s *Recueil des Chroniques* (ed. Hardy, Lond. 1864), although Hardy maintains that neither Waurin or any of the other versions are real translations, but says there is some lost common source.
+
+(60) Henry of Huntingdon (1135). *History of the English.* Ed. Arnold, Lond. 1879, 8°, p. 29–31. Engl. translation, Lond. Bohn, 1853, p. 28–29. This is written from generally good sources, notably Eutropius, and means to be historical; but its mythical details—e.g. Helena, a British princess, Constantine cured of leprosy—make it useless.
+
+Compare Forester, Preface to translation; Wright, *Biog. Brit. Lit.* 2 (1846), 167–173.
+
+(61) William of Malmesbury (1137). *Chronicle of England*. English translation, Giles (Lond. Bohn, 1847), 6. Mentioned as a source because often quoted in literature. He ascribes to Constantine the introduction of the British settlement in France.
+
+Compare Wright, *Biog. Brit. Lit.* 2 (1846), 134–142.
+
+(62) Diceto, Ralph de (d. 1202?). *Abbreviated Chronicles*. Ed. Stubbs, Lond. 1876; section on Constantine, p. 73–76. This work was composed before 1188. It consists in the main of abstracts from Eutropius, Eusebius, Jerome, and Rufinus, with various mythical details from William of Malmesbury and other sources.
+
+Compare Poole, in Stephen, *Dict. of Nat. Biog*. 15 (1888), 12–14. This is taken from Stubbs, Introduction, q.v.
+
+(63) *Eulogium Historiarum* (ab. 1366). Ed. Haydon, Lond. 1858, 3 v.; section on Constantine, 1. 337–339; 2. 267–268, 332–333; 3. 12, 265. This was probably written by Peter, a monk of Malmesbury (Haydon), about 1366. Compiled from various sources, has familiar facts, but is of no value except for legends.
+
+Compare Preface of Haydon.
+
+(64) Voragine (1230–1298). *Golden Legend. Legend concerning the Invention of the Cross.* Ed. Graesse (Lips. 1846, repr. Vratisl. 1890). French translation by Brunet, 2 (1843), 118–116. Early English translation printed by Caxton. A curious mixture of fact and fable, in which legendary is gathered, but all facts are expressed with a curious conscientiousness, or pretended conscientiousness, in quoting authorities. But on Constantine, however, his authorities do not always come to the test of containing what he quotes from them.
+
+Compare article *Varaggio*, in M’Clintock and Strong, *Cyclop*. 10 (1881), 719, Brunet’s *Preface* and the Proceedings of the American Soc. of Ch. Hist. for 1889.
+
+Besides the above-mentioned sources there are many mentions which may be found in the various collections of mediæval documents, such, e.g., as Pertz, *Monumenta Germaniæ Historica*, which has various interesting chronicles covering the period of Constantine.
+
+### Section 3. Literature.
+
+In making the following thread to the rich literature on Constantine the plan has been to confine almost wholly to *Monographs*, since to refer to all histories, encyclopædias, and the like which treat of him would be endless. Only such few analyzed references are introduced as have special reasons. Even with this limit it cannot be at all hoped that the list is exhaustive. Considerable pains has been taken, however, to make it full, as there is no really extended modern list of works on Constantine, excepting, perhaps, Chevalier (*Rép. des sources hist. du Moyen Age*). The effort was made to see each work referred to personally, but the libraries of London, Oxford, Berlin, Paris, could not supply them, and after a good deal of search in other libraries and more or less successful effort to purchase, there is still a considerable portion which has not been seen. The editor has tried in vain to decide in various instances whether præses or respondent is author in certain dissertations. Following is the list:
+
+Albani, Jo. Hier. *Liber pro oppugnata R. pontif. dignitate & Constantini donatione*. Colon. Agrip. 1535, fol.; Romæ, 1547, 4°; Venetiis, 1584, fol.
+
+Alexander, Natalis. *Hist. eccles.* IV. (1778), 345–351 (=Zaccaria, Thes. theolog. VII. 886–900), 431–451.
+
+Alford, Mich. *Brittania illustrata, s. liber de Lucii, Helenæ, et Constantini patria et fide*. Antwerpiæ, 1641. 4°.
+
+Altus, Henricus. *Donatio Constantini imperatoris facto (ut aiunt) Sylvestro papæ (prœs. Joach. Hildebrando)*. Helmstadii, 1661. 4° (p. 56). *Not* Hildebrand?
+
+Alzog, J. *Manual of Universal Church History*. Tr. Pabisch and Byrne. Cincinnati, O., 1874. 3 v. 8°, p. 462–476. Relations of Constantine the Great to the Catholic Church. Very Roman Catholic.
+
+Andlau, Fr. von. *Die byz. Kaiser. Hist.-stud.* Mainz, 1865, 8°.
+
+Antoniades, Crysanthos. *Kaiser Licinius, eine historische Untersuchung nach dem bestern alten und neueren Quellen*. München, 1884. 8°. Unfortunately not at hand, but often mentioned with greatest respect by Görres and others.
+
+Arbellot. *Mémoire sur Ies statues équestres de Constantin placées dans Ies églises de l’ouest de la France.* Limoges, 1885. 8°, 34 pp. (Cf. Audiat, Louis, in Bull. soc. arch. Saintonge, 1885. II. v. 186–193, 280–292.) Contains a history of the long archaeological discussion on the subject of the equestrian statue on the facades of various churches in the west of France. Some say it represents Charles Martel, Charlemagne, the *founder* of the church, the rider who appeared to Heliodorus, Rider of the Apocalypse, St. Martin, St. George or the Church Triumphant. Consult for many titles on the discussion, which it is not worth while to give here. Arrives at the result that the “*greater part*” represent Constantine.
+
+Arendt. *Ueber Constantin und sein Verhältniss zum Christenthum*. In Theolog. Quartalschr. Tübing. 1834. III. 387.
+
+Arrhenius, Laur. *Dissertatio historica de Constantino Magno*. Upsal. 1719. 4°.
+
+—— —— *Refutatio commenti de donatione Constantini Magni*. Upsal. 1729. 8°.
+
+Aubé, B. *De Constantino imperatore, pontifice maximo dissertatio*. Lutetiæ, 1861. 8°, 108 pp. Examines Constantine’s attitude toward (1) Pagans, (2) Christians; concludes that, as a matter of fact, he exercised the office of Pontifex Maximus over both.
+
+Audiat, Louis. *Les statues au portail des églises*. In Bull. de la soc. des arch. de la Saintogne. 5 (1884–1885) (1885), 186, 193. Starts out from Arbellot. Gives ten various theories. Mentions various works. This with Arbellot a sufficient apparatus for this topic.
+
+Bachmann, P. *Wider die Natterzungen*,…*Dabey ein Antwort auff Constantini Donation, welche der Luther spöttlich nennet den Hohen Artickel des allerheyligisten Bebstlichen glaubens* (Dresden), 1538, 4°, (45). p. Examines whether the Donation is “ein Teuffelische lügen und Gottes lasterung (wie sie der Luther nennet).”
+
+Baier, Joh. Dav. *Disputatio de erroribus quibusdam politicis Constantino Magno imputatis*. Jenæ, 1705, 4°.
+
+Balduinus, Franc. *Constantinus Magnus, sive de Constantini imperatoris Iegibus ecclesiasticis atque civilibus commentariorum libri* 2. Basileæ, 1556, 8°; Argent, 1612, 8°; præf. Nic. Hier. Gundling, Lipsiæ-Halæ, 1727, 8°, 235 (23) pp.
+
+Bang, A. Chrs. *Kirchen og Romerstaten indtil Constantin den Stre*. Christiana, 1879, 8°.
+
+Baring, Nicol. *Dissertatio epistolica de crucis signo a Constantino Magno conspecto*. Hannov. 1645, 8°.
+
+Baronius. *Annales* (1590), 306, 16–18, 3–25; 307, 3–15; 312, 7–337, 37; 358, 27. Cf. Pagi, *Crit*. (1689), 306, 5–307, 14; 311, 9–337, 6; 547, 12.
+
+Bartolini, Domenico. *Come Costantini Augusti imperatore innalzasse in Roma i primi sacri edifici del culto cristiano*. Dissertezione in Atti Accad. Rom. archeol. 12 (1852) 1. 281–308. Opposes the idea that these belong to a period not before Honorius. Separately printed. “Dissertazione…letta nell’ Adunanza tenuta. il di 16 di marzo, 1843.” pp. 30 (1).
+
+Baudot. *Dissertation critique sur la famille de Constantin, & en particulier sur Constantin le Jeune*. In Magas. encyclop. 6 (1812), 241–274. Under head of *Numismatique*opposes Valois in Acad. Inscr. 1740. The medals do refer to Constantine. Includes a discussion of Constantine’s family.
+
+Baune, J. de la. *Vita Constantini Magni, herausgegeben von A. Jäger*. Norimb. 1779, 8°.
+
+Bayet, C. *La fausse donation de Constantini, examen de quelques théories récentes*. In Ann. fac. lett. Lyon, 1884, 1. 3 (1884), 12–44. The donation belongs in second half of eighth century, or first half of ninth.
+
+Berthelé, Jos. In Bibl. ec. des Chartes, 46 (1885), 330–331. [Review of Arbellot.] Gives brief analysis, and mentions one statue omitted by Arbellot.
+
+Beuste, Joach. V. *Oratio de Constantino Magno*. Witteb. 1569, 8°. “Extat Tom VI. Orationum Vitemburgensium.”
+
+βίος καὶ πολιτεία τῶν ἁγίων θεοστέπτων μεγ€λων βασιλέων καὶ ἰσαποστόλων Κωνσταντίνου καὶ ῾Ελενης [Mnemeia hagiologica, p. 164 ] Βενετία, 1884, la. 8°.
+
+Boehringer. *Athanasius u. Arius*. 1874, p. 1–53.
+
+Boissier. *Essais d’histoire religieuse, I. un dernier mot sur les persecutions; II. la conversion de Constantin.* In Rev. d. deux mondes (Feb. 1886), p. 790–818, (July) p. 51–72.
+
+Bonneau, Alcide. *Étude historique*. In his edition-translation of Valla’s Donation of Constantine. Interesting, and gathers much of what one wants to know first about the Donation.
+
+Bonnetty, A. *De la donation de Constantin et de la protection qu’il accorda au christianisme*. In Annal de Philos. chrèt. (1831), 125–136. Personal conversion a secondary question. It is sufficient to have proved that it was no longer possible for paganism to occupy the throne of the world.
+
+Borchmann, Jac. Frid. *Dissertatio historico-critica de labaro Constantini Magni*. Hafniæ, 1700. 4o.
+
+Bott, Theod. *Constantin le Grand et sa position entre le paganisme et le christianisme, essai historico-critique*. Colmar, 1874. 8o, 51 pp.
+
+Brieger, Theod. *Constantine der Grosse als Religions-politicker. Kirchengeschichtlicher Beitrag*. Gotha, 1880. 8o, 48 pp. Cf. Grisar, in Zeitschr. kath. Theol. 1882, vi. 554–562.
+
+Bridges, Matth. *Roman Empire under Constantine the Great*. London, 1828. 8o, 467 pp.
+
+Broglie, A. de. *L’Eglise et L’Empire Romaine au IV. siècle. I. Régne de Constantin*. Paris, 1856. 8o. One of the best and most frequently cited.
+
+Brunner, H. In the Festgabe für R. v. Gneist, Berlin, 1888, p. 5 (1)–35. Donation.
+
+Buchholz, Sam. *Constantin der Grosse in seiner wahren Grösse wirderhergestellt*. Berlin, 1772. 4o.
+
+Buddeus. *Observ. sel. liter*. I. (1700), 370–440.
+
+Burckhardt, Jak. *Die Zeit Constantin’s des Grossen*. Basel, 1853. 8o, 222 pp. Leipzig, 1880. 8o. For a long time the standard work on Constantine. Unsympathetic, and in a measure unjust.
+
+De Burigney. *Hist. des Revolutions de l’empire le Constantinople depuis le fondation*.…Paris, 1750; tr. German, Hamb. 1754.
+
+Busæus, Joh. *Disputatio theolog. de baptismo Constantini Magni*. 4o. Moguntiæ, 1589.
+
+Canonici, Matt. Alois. *Proposizioni storico-critiche intorno alla vita dell’ imperatore Costantino*.…4o. Parma, 1760. Compare Cigola, Vincenzo.
+
+Castelli, Ign. *Intorno al battesimo di Costantino imper. dissertazione*. In La scienza e la fede. 11 (Nap. 1870), 201–219.
+
+Caussin, Nicolas. *Eques christianus, s. Constantius Magnus*. Trad. du franç. par Henri Lamormain. Vienn. 1637, 8o.
+
+Cave. *Scr. Eccl*. I. (1741), 183–185.
+
+Cavedoni, C. *Disamina della nuova edizione della Numismatica Costantiniana del P. Raffaele Garrucci d. C. d. G*. 19 pp. Extr. dalla Rivista della Numismatica (Olivieri), 2 (1864).
+
+Cavedoni. “*Recherches critique sur les médailles de Constantin le Grand et de son fils ornées de types et de symboles chrétiens*.” Modena, 1858.
+
+Ceillier. *Histoire des auteurs sac. et eccl*. 3 (1865), 118–148.
+
+Chaulnes, Gabriel de. In Ann. philos. chrét. 5 ser. E. XVI. (1867), 261–271. On the donation of Constantine.
+
+Chauner. *Influence of Christianity upon the Legislation of Constantine*. 1874, 8o.
+
+Chiffletus, Petr. Franc. *Dissert.…De loco, tempore & cæteris adjunctis conversionis magni Constantini ad fidem christianam*.…Paris, 1676, 8o.
+
+*Church Policy of Constantine the Great*. In North British Rev. 1870, LII. 1.
+
+Ciampini, Joan. *De sacris ædificiis a Constantino Magno constructis synopsis historica*. Romæ, 1693, la. 4o (or fol.), 8 f.–218 p.
+
+Cigola, Vincenzo. *Proposizioni storico-critiche intorno alla vita dell’ Imperatore Costantino (praes. Madama Isabella di Spagna) Vincenzo Cigola Bresciano Convittore nel Regio-Ducal ecclegio de’ Nobili ei Parma*. Parma, 1760, 4o, 44 pp. Three plates of coins and medals of Constantine and (2) various theses. At end sixteen pages of inscriptions, and three pages of coins and medals (60 pages in all).
+
+*Civilità Cattolica*. Ser. 5, Vol. 10 (1864), 601–609. 1. La frase *instinctu Divinitatis* nell’ arco trionfale di Costantino. 2. Le monete di Costantino, posteriori alla vittoria sopra Massenzio.
+
+Clinton, H. F. *Fasti Romani*, 1 (Oxf. 1845), 348–397; 2 (1850), 86–94. This is a most convenient massing of sources, including groupings of laws and inscriptions. One of the most thoroughly useful of works.
+
+Coen, Ach. *Di una leggenda relativa alla nascità e alla gioventù di Costantino Magno*. In Arch. soc. Romana stor. patria, 1880–1882, IV. 1–55, 293–316, 535–561; V. 33–66, 489–541. Roma, 1882. 8o, 191 pp.
+
+Cf. Rev. d. Quest. hist. 33. 682; Vesselofsky, A. in Romania, 14 (1885), 137–143.
+
+Colombier, H. M. *La donation de Constantin*. In Études relig. hist litt. (1877), 31 year, 5 ser. Vol. II. 801–829. Is worth looking over, as it gathers many of the facts which bear on date. Thinks he has “exact date.” “L’origine Romaine n’est guère douteuse” “vers l’an 687,” by “clecs mécontents du pape.”
+
+Combes, Francois. *Les liberateurs des nations*. Paris, 1874. 8o, p. 208–229. *Constantin Liberateur des Chrétiens*.
+
+*Considérations générales sur le christianisme* (iv. s.). *L’empereur Constantin*. St. Etiénne, 1884. 16o, 136 pp.
+
+*Constantin Imp. Byzantini Numismatis argentei Expositio*, 1600.
+
+*Die Constantinische Schenkungsurkunde*. I. Brunner, H. *Das Constitutum Constantini*. II. Zeumer, K. *Der älteste Text*. Berlin, Springer, 1888. 8o, 60 pp. “Aus Festgabe f. Rud. v. Gneist.”
+
+*Constantinus Magnus Romanorum imperator Joanne Reuchline Phorcensi interprete*. Tubingæ, 1513. 4o, 23 pp.
+
+*Contin. Monthly*, 6 (1864), 161 (Schaff?).
+
+Crackenthorpe, Richard. *The Defense of Constantine: with a treatise of the Popes temporall monarchie, Wherein, besides divers passages, touching other Counsels, both General and Proviciall, the second Roman Synod, under Sylvester, is declared to be a meere Fiction and Forgery*. London, 1621. 4o, pp. (16), 283 (1). Ch. 1–7. Seven reasons proving the Synod to be a forgery. Ch. 8. That Constantine made no such donation, and Gretser refuted. Ch. 9. Three reasons to prove that Constantine never made donation. Ch. 10–15. Seven witnesses, four popes, sixteen other witnesses, thrity lawyers, and eight emperors alleged by Marta as witnesses of Constantine’s donation examined; also four reasons brought by Marta and Albanus. Consult for older literature relating to the Donation.
+
+*La crueldad, y Sinrazon* | *La venuce auxilio y valor, Maxencio y Constantino* (coloph.). Barcelona per Carlo Gilbert y Tuto, Impressor y Librerio. Historical drama. Introduces character of Constantine, the younger Constantine, Fausta, &c.
+
+Curton, A. de. In Nouv. biog. gén. 11 (1855), 581–595.
+
+Cusa, Nicolaus de. *De Concordantia Catholica. Judicium de donatione Constantini*. Basil, 1568.
+
+Cutts, Edw. L. *Constantine the Great, the union of the State and the Church*. London and New York, 1881. 12o, XIV. 422 pp. For general, not especially scholarly use.
+
+Dalhus. *Dissertatio de baptismo Constantini Magni*. Hafniæ, 1696 (1698, Vogt.).
+
+Demetriades, Kalliop. *Die christliche Regierung und Orthodoxie Kaiser Constantin d. Grossen, eine histor. Studie*. München, 1878. 8o, IV. 47 pp.
+
+Dieze, Joh. Andr. *Dissertatio de forma imperii Romani Constantino Magno recte atque sapienter mutata*. Lipsiæ, 1752, 4o, 34 pp.
+
+Döllinger, J. v. *Die Papst-Fabeln des Mittelalters*. 1863. Cf. Civiltà cattol., ser. 5, v. 10 (1864), 303–330; tr. Ger. Mainz, 1867. gr. 8o, 34 pp.
+
+Döllinger. In Münchener Hist. Jahrb. (1865), 337–.
+
+Dudley, Dean. *History of the First Council of Nice: A world’s Christian convention, A.D. 325; with a life of Constantine*. Boston, Dean Dudley & Co., 1879, 120 pp.
+
+Duerr, Joan Frid. *Dissertatio historica de Constantino Magno*. Jenæ, 1684, 4o.
+
+Du Pin. *Nov. Bibl. Aut. Eccl*. 2, p. 16–.
+
+Duruy, Vict. *Les premières années du règne de Constantin* (305–323). In Compte rendu acad. scien. mor. polit. (1881). F. XVI. 737–765. Speaks of his “cold cruelty.” He was convinced that “the future was victory to Christians, and political wisdom counselled to go with them.”
+
+—— —— *La politique religieuse de Constantin* (312–337). In Compte rendu acad. scien. mor. polit. (1882), XVII. 185–227. Orleans, 1882, 8o, 47 pp. = Rev. archæolog., 1882, B. XLIII. 96–110, pl. 155–175. Cf. Allard, P., in Lettres chrét. (1882), V. 244–249. “Fragment de son Histoire des Romains.” Treats: I. La vision miraculeuse. II. Le lavarum. III. Popularité croissante du culte du Soleil. IV. Constantin à Rome en 312: son arc de triomphe. V. L’édit de Milan (313). VI. Mesures pour l’éxecution de l’édit de Milan. VIII. Monnaies de Constantin; Constantinople. IX. Resumé.
+
+—— —— *Les conditions sociales au temps de Constantin*. In Compte rendu acad. scien. mor. polit. (1882), XVIII. 729–772. Treats: La cour, La noblesse, La bourgeoisie, La plèbe, Les corporations réglementées, L’armée.
+
+Du Voisin, J. B. *Dissertation critique sur la vision de Constantin*. Paris, 1774. 12o, 331 pp. Cf. Journ. d. sçavans (1774), 452–459.
+
+Eckhel. *Doctrina numorum veterum*. 8 (Vindob. 1828), 71–95.
+
+Eltz, H. In Public. hist. Inst. Luxembourg (1874–1875), XXIX. 225–236. In this paper, p. 215–236, p. 225–235, are occupied with coins of Constantine and his sons.
+
+Ewyck, Florentius ob. *Oratio in laudem Constantini Magni habitu a…Tempore Exanimis Huberni Gandæ a. d. XII. Cal. Januar. MDCXCIII*. Gandæ, 1692, pp. 11 (1). Draws nice little moral of the “good example” from Constantine.
+
+Fabricius, Joan. Alb. *Dissertatio de cruce Constantini Magni qua probatur eam fuisse phænomenon in halone solari, quo Deus usus, sit ad Constantini Magni animum promovendum*. Hamburgi, 1706. 40 (or Woltereck, who is resp.?). Cf. “Bibl. gr. VI. (1714–1749), 1–29; IX. 68 (2a, IV. 882; VI. 693–718).”
+
+Farlati. *Illyric. sac*. VIII. (1819), 25–27.
+
+Fletcher, Jos. *Life of Constantine the Great*. London, 1852. 12mo.
+
+Freherus. “Diss. Const. Imp. Numis.” 1600. Evidently = *Const. Imp. Byz. Numism*. cf. above.
+
+Finckius, Casp. *De disput. de Baptismo*. T.V. p. 313, disp. XIII.
+
+Frick, Joh. *Dissertatio de fide Constantini Magni haud dubie christiana*. Ulmæ, 1713. 4o. Not Frick (who is præses), but Miller (?).
+
+Friedrich, J. *Die Konstantinische Schenkung*. Nördlingen, 1889. 8o. VII. 197 pp. Reviewed in Theol. Literaturblatt, 1890, Nos. 3–5; in Evang. Kirch-ztng, No. 18 (1889); by Schultze, in Theol. Litt. Ber. 1889; Liter. Centralblatt, 1889, No. 33; by Bloch, in Mttlgn. a. d. histor. Litt. (1890), No. 1; by Löwenfeld, in Deutsche Ltzng. (1890), No. 3.
+
+Frimelius, Joannis. *De Constantini Magni Religione, Baptismo & rerum sacrarum apparatu*. Mentioned by Kunardus, in a “Disputationum Catalogus,” p. (8).
+
+Frommann, E. A. *De codicibus s. jussu Constantini ab Eusebio curatis*. Coburgi, 1761. 4o.
+
+Frothingham, Arthur. Compare edition of Jacobus of Sarug.
+
+Fuhrmann, Matthias. *Historia sacra de baptismo Constantino Max. Augusti*. I. Romæ, 1742; II. Viennæ in Austria, 1747, 4o, fig.
+
+Garrucci, Raff. *Esame critico e cronologico della numismatica Costantiniana portante segni di cristianesimo*. Roma, 1858, 8o, 72 pp.
+
+—— —— In Vetri cimit. crist. Roma (1884), append. 1858. Croce greca sulle monete di Costantino e sua famigla, 89, 90, 91. Croce latina sulle…Costantino padre e figlio e di Costanzo, 95. Vario modo di figuriale ai tempi di Costantino, 103.
+
+—— —— *Verres ornés de figures en or, trouvés dans les Catacombes Romaines*. 2d ed. 1864. Has at end discussion of symbols of Constantine. Compare Anal. Jur. Pout. 1873.
+
+Gasparin, Ag. de. *Innocent III., le siècle apostolique, Constantin*. Paris, 1873, 12o, p. 75–193.
+
+—— —— *Constantin*. In *Le christianisme au quatrième siècle*. Genéve, 1858, 8o, p. 1–139. The question of church and state. The present problem of the churches is to undo the work of Constantine. Lectures to Y.M.C.A. of Geneva.
+
+Genelin. *Das Schenkungsversprechen und die Schenkung Pippins*. Wien und Leipzig. 1880.
+
+Gengel, Georg. *De Constantino Magno, primo Christianorum imperatore, dissertatio*…Calissii, 1726, 8o, 14–89–6 pp.
+
+Gibbon. *Decline and Fall of the Roman Empire*. Many editions. Furnishes later historians of Constantine with almost unlimited material for adoring quotation.
+
+Girault, Cl. Xav. *Dissertation histor. & critique sur le lieu où la croix miraculeuse apparut à Constantin & à son armée*. In Magas. encyclop. Paris, 1810, 8o.
+
+Görres, Franz. *Die Verwandtenmorde Constantin’s des Grossen*. In Ztschr. f. wiss. Theol. 30 (1887), 343–377. Reaches, with Hilgenfeld, the rather severe judgment that, on the whole, the bloodguiltiness of Licinius is less than that of Constantine. There are also various other interesting reviews or treatises by Görres.
+
+Graetz, H. *Die Herrschaft des Christenthums durch Constantin’s Bekehrung*. In Monatsschrift f. gesch. u. wiss. Judenthum (1887), 416–421.
+
+Grauert, Herm. *Die Konstantinische Schenkung*. In Görres-Ges. Histor. Jahrb. 1882–84, III. p. 3–30; IV. (1883), 45–95, 525–617, 674–680; V. 117–120. Reaches result that it arose not in Rome, but in France, from the cloister of St. Denis, shortly before or at the same time with the Pseudo-Isidore, and shortly after 840. (Weiland, p. 142.)
+
+Gretser. *De sancta cruce*. In Opera, v. 2. Ratisbonæ, 1734, fol.
+
+Grisar, Hartm. *Die vorgeblichen Beweise gegen die Christlichkeit Constantins des Grossen*. In Zeitschr. f. kathol. Theolog. VI. (1882), 585–607. Cf. La Controverse, 1882, III. 693–702.
+
+Grossius, Matth. *Dissertatio de donatione Constantini Magni*. Lipsiæ, 1620. 4o.
+
+Gualtherius. See Walther.
+
+Guidi, Ign. *Il battesimo di Costantino imperatore*. In Nuova Antologia, B. XLI. (1883), 41–52. Starts from Frothingham’s work. Consult for list of authors who repeat the story. Mentions some who still believe in the fable.
+
+Gusta, Franc. *Vita di Costantino il grande, 1o imperat. christiano*. Foligno, 1786; 2 v. 4o. ediz. 2, rev. ricorr. ed. accresc. 1790; ed. 3. 2 v. 320 and 282 pp. 8o. 1816. 2 v. 332 and 296 pp. 8o. In Zaccaria, *Raccolta di dissertazioni*, 13. (1795), 172–189.
+
+Haenisius, Gottlieb. *Dissertatio de Constantino Magno non ex rationibus politicis christiano. Vulgo Ob Constantinus Magnus ohngeachtet seiner späten Tauffe, ein wahrer Christ zu nennen*. (Praes. Gott. Chr. Lentnerus.) 1714, Lipsiæ. p. 76. Usually referred to under Lentner, but B.M. correctly gives Haenisius (?)
+
+Hakluyt. *Voyages*, 2 (1810), 34–35. 1. The voyage of Helena. Latin and English. The author of Latin not given. He quotes as authorities, *Eusebius, Virumnius*, and *Ponticus*. 2. The voyage of Constantine the Great, emperor and king of Britaine, to Greece, Ægypt, Persia, and Asia, Anno 339. Latin and English. Rather phenomenal energy on the part of a man two years dead.
+
+Hallern (Heller?), Godofredus (Vratisl.). *Disputatio theologio quanta de religione Constantini Magni.…Jodoci Kedii*…(Praes. And. Kunardo [19 Maji, A.O.K. MDLIIX.], Wittenbergæ [1658]. 4o, p. 123–172. Kunardus?)
+
+Halloix, Petr. *Epistola de baptismo Constantini*. In Morin, *Antiq. eccl. orient*. (1682).
+
+Harduin, J. *Chronologia sæculi Constantiniani ex solis numis antiquis*. In his *Op. sel*. p. 442–.
+
+Hartmann, J. A. *Dissertatio historica de Helena, Constantini Magni matre*. Marb. 1723. 4o.
+
+Hauck, A. *Zur donatio Constantini*. In Ztschr. f. kirchl. Wissensch. u. kirchl. Leben (1888), 201–207.
+
+Hebenstreit, G. E. (=Hofmann, C. F.). *Histoire de Constantin le Grand*. Limoges, 1866. 12o. 148 pp.
+
+Heckenhoek, Adr. *Oratio in laudem Constantini Magni primi christianorum imperatoris*. (viii. Aprilis MDCCXVI.), Dordrechti. (4) 23 pp.
+
+Helmke. *De Constantini Magni ita moribus et legibus penitus ex fontibus repetita disputatio*. Pars 1, Progr-Stargard, 1827. 4o.
+
+Hesse, Joann. Christianus. *Dissertatio Historico-Pragmatica qua Constantinum Magnum ex rationibus politicis Christianum*. (Præs. B. G. Struvius ) [“autor respondens,” Hesse]. May, MDCCXIII. Jenæ, (4)76 pp. *Not* Struve? Pref. is by Struve, to be sure, but seems to be congratulatory letter to Hesse on his work? But Haenisius(?) (1714), the following year, ascribes to Struve.
+
+Heumann, Chph. A. *De cruce cœlesti a Constantino Magno conspecta*. In his *Poecile*, 2. 50–.
+
+Heydenreich, Eduard. *Ueber einen neu gefundenen Roman von der Jugendgeschichte Constantins des Grossen und von der Kaiserin Helena*. In Verhandll. d. Philologenversammlung in Trier, p. 177 ff.; Repr. in d. Berliner Zeitschr. f. d. Gymnasialwesen, 34 (1880), 271–.
+
+—— —— *Der libellus de Constantino Magno ejusque matre Helena und die übrigen Berichte über Constantins des Grossen Geburt und Jugend. Eine kritische Untersuchung von*…In Archiv für Litteraturgeschichte hrsg. Fr. Schnorr. Carolsfeld. X (1881), 319–363.
+
+Hildebrand, Joach. *Dissertatio de donatione Constantini Magni*. Helmstad, 1661, 4o; 1703; 1739; 1761. Altus or Hildebrand?
+
+Hofmann, Car. Frid. et Hebenstreit, Geo. Ern. *Disputatio Historico-Critica de Constantini Magni sepulchro*. Lipsiæ, 1759, 4o, 48 pp.
+
+Hojer, J. C. *Quæ Constantino Magno favoris in Christian. fuerunt caussæ*. Jenæ, 1758, 16 pp.
+
+Haute, Theodorus van der. *Oratio prior de Constantino Magno,* dicta a…Delfis. Apud Joannem. Speyers, Bibliopolam, 1702, 14 pp. Spoken at the same time with Rouille’s Oration. Cf. Rouille for estimate.
+
+[Hug] *Denkschrift zur Ehrenrettung Constantin’s des Grossen*. In Zeitschrift Geistlichkeit Erzbisth. Freiburg, III. Heft. (Freib. 1829.) 1–104. Treats various charges. The death of Crispus a plot of Fausta for the sake of her children, she causing it to seem to Constantine that Crispus and his nephew were plotting against the empire.
+
+Hunckler. *Constantin le Grand et son règne*. Limoges, 1843 and 1846. 12o. (“1843, 12o; do. 1846, 12o.”)
+
+Hynitzsch, Adolf. *Die Taufe Constantins des Grossen nach Geschichte und Sage*. 1870. Progr. des Gymnasium in Stendel.
+
+*Incerti auctoris de Constantino Magno ejusque matre Helena libellus. E codicibus primus edidit* Eduardus-Heydenreich. Lips., Teubner, 1879. 12o. p. vii. [1], 30. See under *The Mythical Constantine*.
+
+Jacobatius. *De concilio tractatus*. Romæ, 1538, lib. X. art. 8, p. 780–783. *De donatione Constantini*.
+
+Jacobus of Sarug. *L’omilia di Giacomo di Sarúg sul Battesimo di Costantino imperatore*, trad. ed. annot. da Arthur L. Frothingham, Jr. Roma, 1882. Fol. (From Reale Accad. dei Lincei. CCLXXIX [1881–82].) Consult for various sources and writers where story is found.
+
+Jacutius, Matth. *Syntagma quo ad parentis magno Constantino crucis historia complexa est universa*.…Romæ, 1755. 4o.
+
+Janus, Joh. W. *Schediasma historicum de patria Constantini Magni*. Witteb. 1716. 4o.
+
+“Janus.” *Der Pabst und das Concil*. Leipzig, 1869. 8o, xix, 451 pp.
+
+Jeep, Ludw. *Zur Gesch. Constantins*. Festschrift f. E. Curtius. (Berlin, 1884. 8o.) p. 79.
+
+*Journal des Sçavants*. (1774), p. 451–459. Review and analysis of Du Voisin.
+
+Kaufmann, Georg. *Eine neue Theorie über die Entstehung u. Tendenz der angeblichen Schenkung Constantins*. In Allgem. Zeitung (1884), 194–196, 211–212. Valuable. Weiland, p. 146–147.
+
+Kedd, Jod. *Constantinus Magnus Romano-catholicus, ecclesia catholicus, s. Stephanus & primi Hungariæ reges Romano catholici*…Viennæ Austriæ, 1655. 4o, 145 pp.
+
+Keim. *Die röm Toleranz-Edickte*. In “Theol. Jahrb. 1852 II.”
+
+Keim, Theodor. *Der Uebertritt Constantins des Grossen zum Christenthum*, academ. Vortrag…Zürich, 1862, 8o. viij.–106 pp. “A Christian in its strict sense Constantine was certainly not, even up to the end of his life,” and yet he was inwardly touched by Christianity.
+
+Keri, Francisc. Borg. *Imperatores orientes…a Constantio Magno ad Constantini ultimum*.…Tyrnaviæ…, 1774. Fol.
+
+Kist, N. C. *De commutatione quam, Constantino auctore societas subiit christiana*. Trajecti ad Rh. 1818, 120 pp. 8o.
+
+Kormart, Chrph. *Dissertatio politica de Constantino Magno*. Lipsiæ, 1665. 4o.
+
+Krug. *Byz. Chron*. St. Petersb. 1810. 8o.
+
+Krüger, G. *Zur Frage nach der Entstehungszeit der Konstantinschen Schenkung*. In Theol. Literaturzeitung, 14 (1889), 429–435, 455–460.
+
+Kunadus, And. *Constantinus Magnus Evangelicus Constantino Romano-Catholico Jodoci Keddii Jesuitæ oppositus*. Ed. second, Witteb. 1666. 4o, p. (8) 224.
+
+Landucci. *Una celebre costituzione dell’ imperatore Costantino, saggio esegetico*. Padova, 1886. 8o, 30 pp.
+
+Langen, Henricus. *Constantinus Magnus Intentu Utriusque Maximiani, et Herculii et Galerii in regimine confirmatus*. (Præs. J. J. Weidner.) 8 Sept. 1703. Rostochii (p. 48). (By Langen, not *Weidner*?)
+
+Langen, J. *Entstehung und Tendenz der Konstantinischen Schenkungsurkunde*. In Sybel, Hist. Zeitschr. (1883), p. 413–435. “Erweitete Ausfürhung e. Aufsatze in deutschen Merkur, 1881, Nr. 34.”
+
+Langen. In *Geschichte d. römischen Kirche*. Bonn, 1885, p. 726–.
+
+La Salle. In Biografia universale, XIII. (Venezia, 1823), 363–370.
+
+Le Beau. *Hist. du Bas-Emp. en commenç. a Constantin*. T. 1–21, Par. 1757–1781, Cont. par (H.P.) Ameiltron. T. 22–26, Par. 1781–1807. T. 2711.2 do. 1811. 8o (28 vols.). Nouv. ed. ed. St. Martin. T. 1–13, Par. 1824–1832. Cont. Brosset, T. 14–21, Par. 1833–1836. 8o.
+
+(Lefort de la Morinière, Adrien Claude.) *Histoire abrégée du règne de Constantin empereur d’Orient et d’Occident*. Par. 1756. 12o.
+
+Lentner, Gottfr. Christ. *Dissertatio de Constantino Magno non ex rationibus politicis christiano*. 4o. Lipsiæ, 1714. Cf. note under Haenisius. Yet the author regards the *præses* of a preceding dissertation as author, and the *præses* here is printed in capitals, so *Lentner* is real author?
+
+*Life of Constantine the Great*. In Christ. Rev. 4 (1839), 201.
+
+*Literary and Theological Review* (1839), 541.
+
+Lupi, Ant. Mar. *Theses historicæ, chronolog., cricticæ, philolog., &c., ad vitam s. Constantini Magni imper. aug*. Panormi, 1736. 4o.
+
+—— —— *Dissertaz. lett. ed. alt. oper*. 1 (1785), 267–292, in Gori, Symbolæ litter. IX. (Florent. 1752), 133–176.
+
+Mabrun. *Constantinus Magnus sive idolatria debellata*. Par. 1658. 4o. Latin poem.
+
+Mamachi, Thom. Mar. *De cruce Constantino visa & de evangelica chronotaxi*. Florentiæ, 1738. 8o.
+
+Manso, Joh. Casp. Frdr. *Leben Constantins des Grossen, nebst einigen Abhandlungen geschichtlichen Inhalts*. Breslau, 1817, 8o; Wien, 1819. 8o.
+
+Marçay, De. *Histoire de Constantin le Grand*. Limoges, 1873, 8o, 126 pp.
+
+Martens. *Die falsche General-Konzession Konstantins*. München (Leipzig), 1889, 8o. Contains especially convenient reprint, with commentary.
+
+——. *Die römische Frage unter Pipin und Karl dem Grossen*, p. 327 sq. Says donation arose after 800, in last years of Charlemagne or beginning of Louis. *Wieland*, p. 141.
+
+——. *Die drei unechten Kapitel der Vita Hadrian*. In Tübingen Theol. Quartalschrift (1886), 601.
+
+——. *Heinrich IV. und Gregor VII. nach der Schilderung von Ranke’s Weltgeschichte*. Kritische Betrachtungen. Danzig, 1887.
+
+Martini, E. D. A. *Ueber die Einführung der christlichen Religion als Staatsreligion im römischen Reiche durch den Kaiser Constantin*. München, 1813. 4o, 48 pp.
+
+Mas, Auguste. *L’empereur d’Arles*. In Mém. de l’acad. de Vaucluse, IV. (1885), 197–213. Rev. of Alex. Mouzin’s “drama in verse.” Treats early events. Very full description and analysis of poem.
+
+*Mercersburg Review*, 12 (1850), 173.
+
+Meyer, P. In Festschrift d. Gymn. Adolfinum zu Moers. Bonn, 1882. 4o. So noted; but the editor’s copy of this Festschrift contains nothing by Meyer, while the separately printed *De Vita Constantini Eusebiana*, by Meyer, paged 23–28, which is at hand, has no indication of its origin and may be from Program.
+
+Millerus, Joann. Martinus. *De fide Constantini Magni haud dubie christiana*. Dissertatio (præs. Jo. Frickii) e fontibus genuinis…Ulmæ (1613), 4o, p. (4) 62. (*Not* Frick?)
+
+Molinet, Cl. In Ephemer, erudit. Parisien. (1681), Eph. XI. Dissertatio de veritate Crucis a Constantino visæ ex numis antiquis confirmata.
+
+Moller, Dan. Guil. *Disputatio de labaro Constantiniano*. Altorf, 1696. 4o.
+
+Monod, Paul. *La politique religieuse de Constantin*. Montaubon, 1886. 8o.
+
+Morin, Jean. *Histoire de la déliverance de l’église chrétienne par l’empereur Constantin et de la grandeur et souveraineté temporelle donnée à l’église Romaine par les roys de France*. Par. 1630. Fol. A translation of Eusebius’ Life of Constantine.
+
+Mouzin, Alex. Cf. Mas, Aug., in Mém, acad. Vaucluse, 1885, IV. 197–213.
+
+Mühlbacher, E. In Mitth. Inst. öster. Geschforsch (1881), 2. 115–116.
+
+Münch, Ernst. Jos. Herm. *Uber die Schenkung Constantin’s, beitrag zur Literatur u. Kritik der Quellen des kanonischen Rechts u. der Kirchengeschichte*. Freiburg im Breisgau, 1824. 8o, 102 pp. Also in *Vermischte Schriften*, Ludwigsburg, 1828, p. 185–.
+
+Musset, Georges. *Encore les statues équestres au portail des églises*. In Rev. Poitev. et Saint. (1886), 71–76. Thinks Arbellot has not solved the question.
+
+Nestius, Jacob. *Apologia pro Constantino Magno*. In Miscell. Lipsien. nova (1716), II. 471–476.
+
+Nève, Felix. *Constantin et Théodose devant les églises orientales, étude tirée des sources grecques et arméniennes*, in Rev. catholiq. E. III. (1857), 356–364, 401–414, 507–521. Louvain, 1857. 8o.
+
+Nicolai, Joan. *De Constantini baptismo, ubi, quando et a quo fuerit celebratus, historica dissertatio*. Paris, 1680. 12o, 266 pp. (1690, Vogt.)
+
+Ohnesorge, W. *Der Anonymus Valesii de Constantino*. 1885. 8o, 112 pp. Reviewed at length by Fr. Görres, in Ztschr. f. wiss. Theol. 29 (1886), 504–512. It is, in fact, a most interesting and exhaustive study of the document.
+
+Ongaroni, Franc. *Dissertationes III. de moribus et religione Constantini Magni, de Juliani religione et gestis, deque templi Hierosolymitani instauratione ab eodem Juliano attentata et divinitus impedita*. Mediolani, 1778. 4o.
+
+Oordt, J. W. G. Van. *Constantijn de Groote en zijne voorgangers, eine studie over den Romeinschen keizertijde*. I Deel. Haarlem, 1868. 8o, x, 383 pp. This first part takes only to Antoninus Pius.
+
+*Origine della Donazione di Costantino secundo il Döllinger*. In Civilità cattolica, Ser. 5, v. 10 (1864), 303–330.
+
+Papebrochius. *Comment histor*. In Acta s. s. Bolland. Maii V. (1685), 12–27 pl. Cf. Jun. p. 16–.
+
+Penon. *Des monnaies de Constantin-le-Grand relatives à la Provence*. In Rep. Trav. soc. statist. Marseille. 28 (1866), 176–182. Such as relate to coinage at Arles.
+
+Pfahler. Trad fr. *Histoire de Constantin le Grand et de son siècle*. 1862. 8o, 202 pp.
+
+(Pilati, C. Ant.) *Gesch. d. Veränderungen in d. Regierungu d. Gesetzen u. d. menschl. Geiste von Constantins Bekehrung an bis auf d. Untergang d. weström–Reichs*. A. d. Franz. Leipz. 1784.
+
+Plate, W. *Constantinus I*. In Smith, Dict. of Gr. and Rom. Biog. 1 (1859), 831–837.
+
+Polus, Regin. …*De baptismo Constantini Magni imper*.…Romæ, Paul Manut, 1562, 4o; Dilingæ, 1562, 8o; Venet. 1563, 4o; Lovanii, 1567, fol.
+
+*Prologue and epilogue to the last new play, Constan the Great* [by N. Lee]. s. e. (1683), one leaf, fol.
+
+Rallaye, Léonce de la. *De la donation de Constantin d’après le Dr. Doellinger* [i.e. *Papst leg*.]. In Le Monde (1864), Juillet, 3, p. 3–4; Juillet, 7, p. 3–4. Review, but has value of an original article. Origin in France.
+
+*La rappresentatione di Costantino imperatore et di San Silvestro Papa, et di Santa Elena Imperatrice*. Stampata in Siena, con licenza de’ superiori, et ristampata in Orvieto. [1550?? B. M. Catal.; Fierenze, 1562, 4o; do. 1588. 4o.]
+
+*Reign of Constantine the Great*. In Dublin Rev. 1857. XLII. 490.
+
+Reiskius, Joannes. (Program.) 1681. 4o.
+
+Reumont, Alfred von. *Constantin der Grosse*. In his Gesch. d. Stadt Rom, 1 (Berlin, 1867), B. 3, Abschn. 2=p. 595–646. p. 859–860 has a *Chronological table* of reign of Constantine.
+
+Revellat, J. P. *Notice sur une remarquable particularité que présente toute une série de milliaires de Constantin le Grand*. In Rev. archéolog. 1883, c. 11. 39–48, 69–78, 148–155; Par. 188–. 8o. Cf. Thédenat, H. in Bull. critiq. 1885, vi. 69–73. The name of Maximian removed.
+
+Richardson, Samuel. *The necessity of toleration in matters of religion…Here also is the copy of the Edict of the Emperors Constantine and Licinius*. Lond. 1647, p. (2) 21 (1). Edict, p. 1–3.
+
+Richter, Heinrich. *Das weströmische Reich*. Berlin, 1865. 8o, p. 31–101, “Die römischen Kaiser und die christliche Kirche von Diocletian bis zum Tode Constantins I.”
+
+Romane, Alfred. *Essai sur Constantin et ses rapports avec l’église chrétienne*. Thèse présentée à la Faculté de théologie protestante de Strasbourg. Strasbourg, 1867. 8o, p. (2) 114. Study of relation of church and state in fourth century. Does not find one solitary evidence of regenerate life in Constantine. He had no religion but his policy.
+
+Rossignol, Jean. Pierre. *Virgile et Constantin le Grand*. 1e p. Paris, 1845. 8o. Première partie, p. (2) xxxvi, 351 (1). Examines Eclogue of Virgil found in C.’s Oration and arrives at conclusion that “beyond a doubt” Constantine did not write the oration, but Eusebius “le coupable c’est Eusèbe.”
+
+Rouille, Joannes Ludovicus du. *Orat. posterior de Constantino Magno dicta*…III. Nonas. Februarii, No. c/o, iocii. Delfis.…4o, 14 pp. Brief, rhetorical, eulogistic, worthless.
+
+Royon, Jas. C. *Hist. du Bas-Empire depuis Constantin*. v. 1–4. Paris, xii–1803. 8o.
+
+Sagittarius, Joh. Christfried. *Dissertatio histor. de Constantino Magno*. Jenæ, 1650. 4o.
+
+Sandinus, Ant. *Disput. histor*. (1742), 135–149.
+
+St. Victor, Léonard de. *Fondation de Constantinople*. In Anal. Jur. Pontif. XII. (1873), col. 402–414.
+
+—— ——. *Apparition de la croix à l’emper. Constantin*. In Anal. juris pontif. XII. (1873), 389–401. Moyen d’accorder Lactance avec Eusèbe. Written middle of last century; mss. in Bibl. Nat.
+
+Schaff, P. *Constantine the Great and the Downfall of Paganism in the Roman Empire*. In Biblioth. Sac. 1863; XX. 778. Review of Burckhardt, Keim, and Stanley’s Eastern Church.
+
+Scheffer-Boichorst, P. *Neuere Forsuchungen über die konstantinische Schenkung*. In Mtthlgn. des Inst. f. oesterreich. Geschichtsforschg. 10 (1889), 302–325.
+
+Schelstrate, Emanuel. *Antiq. illust. circa Concil Gen., etc., et præcipua tr. Hist. Eccles. Cog*. Antv. 1678, p. 11, diss III. c. VI. De baptismo Constantini num Romæ a S. Silvestro num Nicomediæ ab Eusebio collatus fuit, an potius et Romæ et Nicomediæ.
+
+*Die Schenkung Constantin’s*. Mainz, 1866. 8o. Translated from Civilità Cattolica.
+
+Schmidius, Jo. Andr. In hist. Ser. IV. fabulis Variorum, etc. Helmst. 1712. 4o. (Conradus resp.).
+
+Schmidt, O. *Zur Beurtheilung Constantins des Grossen*. Duisberg, 1863. 4o. Progr.
+
+Schoepflin. *Constantinus Magnus non fuit britannus*. In Commentationes historicæ. Basil, 1741. 4o.
+
+Schroeckh, J. M. *Leben des Kaisers Constantin des Grossen*. In his Allgemeine Biographie. Cf. Num. 66.
+
+Schultze, Viktor. *Untersuchungen zur Geschichte Konstantin’s des Gr*. In Ztschr. f. Kirchengeschichte, 7 (1885), 343–371; 8 (1886), 517–542. 1. Die römische Bildsäule mit dem Kreuze. 2. Die Tempelbauten in Konstantinopel. 3. Die Inschrift von Hispellum. 4. Konstantin und die Haruspicen. 5. Der Staat und das Osferwesen. 6. Der Untergang des Licinius.
+
+Schurzfleisch, Conr. Sam. *Quæ sit vera origo imperii Rom. christiani*. In his Controverss, XXXV.
+
+—— ——. *Dissertatio de primo christianorum imperatore*. Wittebergæ, 1679. 4o, 52 pp. (præs. M. Difenbach).
+
+Schwarz. *Colleg. histor*. 8 (1737), 436–715.
+
+Scultetus, Abrah. *Confutatio Cæs. Baronii de baptismo Constantini Magni*. Neustadii, 1607. 4o.
+
+Seeberg. *Zur konstantinischen Schenkung*. In Theol. Literaturblatt, 1890, cols. 25–27, 33–36, 41–45. Rev. of Friedrich.
+
+Seeck, Otto. *Quellen und Urkunden über die Aufänge des Donatismus*. In Ztschr. f. Kirchenges 10 (1889), 505–568. A very systematic and interesting examination of sources.
+
+—— ——. *Die Verwandtenmorde Constantin’s des Grossen*. In Zeitschr. f. Wiss. Theol. 33 (1890), 63–77. While disclaiming any attempt to whitewash Constantine, he finds his conduct not incompatible with being a good Christian.
+
+Sevestre. *Dict. patrol*. I. (1861), 1137–1148.
+
+Simonides, Constant. *Panegyric of that holy and apostolic heaven-crowned King Constantine the Great*. London, 1854. 8o.
+
+Smith, W. Browning. *Constantine*. In Enc. Brit. 6 (1878), 298–301.
+
+Solikov, I. I. Moscow, 1810. In Russian.
+
+Stapfer, Edm. *Constantin I*. In Lichtenberger, Encycl. des. sciences rel. 3 (1878), 388–393.
+
+Steuchus, August. Contra Laurent Valla. *De falsa donatione Constantini*…Lugduni Bat. 1545, 8o; 1547, 4o.
+
+Streso, J. A. *Konstantijn de Groote en Karel de Groote*. Arnhem, 1836. 8o.
+
+Struve, Bern. Gotth. *Bibl. hist*. V. (1790), 1, 178–207.
+
+—— ——. *Dissertatio de Constantino Magno ex rationibus politicis christiano*. Jenæ, 1713. 4o. See Hesse.
+
+Suchier. *Disputationis de Zosimi et Eusebii, historiarum scriptorum in Constantini Magni imperatoris rebus exponendis fide et auctoritate, part I*. Hersfeld, 1856. 4o. 25 pp. Gymn. Progr.
+
+——. *Qualem Eusebius Constantinum Magnum imperatorem adumbraverat, paucis exponitur*. Hersfeld, 1857. 4o, 36 pp.
+
+Suhr, Balthus, Joachim. *Constantini Magni signo crucis Christi in nubibus viso, ad Christianismum inauguratus* (præs. J. J. Weidner). Rostochii, 1703. (Suhr, *not* Weidner?)
+
+Tacut, Gulielmus. *Oratio in Donationem Constantini Magni nomine falso jactatam*. Delphis, 1726. 4o. Do. Rom. 1755. No use.
+
+Tentzel, Guil, Ern. *Examen fabulæ Romanæ de duplici baptismo Constantini Magni*. Witteberge, 1683. 4o.
+
+Thielmann. *Ueber Sprache und Kritik des libellus de Constantino Magno ejusque matre Helena*. In Blätter f. d. bayerische Gymnasialwesen, 16 (1880), 124– .
+
+Theirry, Amadée. *Constantin en Gaule*. In Acad. d. sciences mor. et polit., 9 (1846), 349–364. Pleasantly written resumé of the period, with not very exact characterization of Constantine in very attractive style.
+
+—— ——. XI. (1847), 374–387. *Fragment d’histoire sur la politique chrètienne de Constantin*. Takes the heathen side. Neat rhetorically.
+
+Thomasius, Christ. *De fide scriptorum Constantini Magni*. In Observatt Hallens. XXII. I. Treats especially Zosimus. Cf. Vogt. p. 15–16.
+
+—— ——. *In fabulas de parentibus Constantini Magni*. In Obs. Hall. T. 1, n. 23, p. 377–388.
+
+Tillemont. *Histoire des empereurs*, 4 (1697), 76–381, 613–664.
+
+Tiraboschi. *Stor. lett. Ital*. II. (1806), 373–377, 457.
+
+Tobler, Adolf. *Kaiser Constantinus als betrogner Ehemann*. In Jahrb. Roman. Engl. Lit. 13 (=N.F.I.) (1874), 104–108. Various allusions in old French poetry.
+
+Toderini, Giambatt. *La Costantiniana apparizione della croce difesa contro…G. A. Fabrico*. Venezia, 1773. 4o.
+
+Trescho, Leb. F. *Beitr. üb. einige Vorwürfe wider d. Ksr. Constantin d. Gr*. In his Brr. üb. d. neueste theol. Literat. II. 360–.
+
+Unger, Friedrich Wilhelm. *Die Bauten Constantin’s des Grossen am heiligen Grabe zu Jerusalem*. Göttingen, 1866. 8o. iv, 128 pp. Abdruck aus Benfey, Th., Orient. u. Occid. II. 177–232, 385–466. He thinks to demonstrate that a part of the *Haram* in Jerusalem has indisputable evidences of Constantinian origin. He seems to build dangerously much on Fergusson (Lond. 1847).
+
+Valentini. *Il codice di Eusebio della Biblioteca Queriniana di Brescia illustrato*. In Commentari dell’ Ateneo di Brescia, 1885, p. 20–32 (?).
+
+Valla, Laurentius. *De falso credita et ementita donatione Constantini*. For various editions, see Graesse, vol. 6. 2, p. 249, and the Étude of Bonneau. The edition of 1520 is usually cited as princeps, for the first edition was published clandestinely by Ulrich von Hutten in 1517. A convenient one is that with translation by Bonneau, Paris, 1879. It was written in the middle of the fifteenth century, and for venturing to deny the authority of the Donation, the author was obliged to flee in disguise from Rome.
+
+Varenne, Bernard de. *Histoire de Constantin le Grand, 1er empereur chrétien*. Par. 1728. 4o.
+
+Valois, Charles de. *Discours dans lequel on prétend faire voir que les médailles qui portent pour légende: F. Cl. Constantinus Jun N. C. n’apartiennent point à Constantin le jeune fils de Constantin le Grand*. In Soc. Trav. Acad. inscr. et belles let. 4o. V. 3. Maintains that all such medals belong to a brother of Constantine, and not to his son.
+
+Vedelius, Nicolaus. *De episcopatu Constantini Magni seu de potestate magistratuum Reformatorum circa res Ecclesiasticas dissertatio*. Repetita cum responsione ad interrogata quædam. Franekenæ, Apud Uldericum Balck, 1642. p. (48) 143. Nature indicated by sub-title. Takes as text Constantine’s remark that he, too, was a bishop. (V. c. 4, 24.)
+
+Vincentius Belvacensis. *Spec. hist*. XIV. 1, 43–44, 47–58, 102.
+
+Visconti. *Sopra la cristianità di Costantino Magno, dimonstrata co monumenti e con le medaglie*.…In Atti Accad. Rom. Archeol. VI. (1835), 207–228. “Sopra il nimbo usato ne’ ritiatti di esso imperatore.”
+
+Vogt, Joh. *Historia litteraria Constantini Magni, plus centum et quinquaginta rerum Constantinianarum Scriptores sistens*. Hamburgi, Apud Viduam B. Schilleri & J. C. Kisnerum, 1720.
+
+Compare for older literature on Constantine. There is long account of literature by topics.
+
+Voigt, Gottfr. Vita Constantini Magni disputatione historica descripta. Rostochii, 1675. 4o.
+
+Voigt, Moritz. *Drei epigraphische Constitutionen Constantin’s des Grossen und ein epigraphisches Rescript des præf. Præt. Ablavius*.…Leipzig, 1860. 8o. ix. (1) 242. The documents occupy to p. 42. The remainder of the work taken up with an essay on the Pagi and Vici of the Roman Empire.
+
+Walch, Chr. Guil. Franc. *De* τοις εισω της εκκλησιας *et* τοις εκτος *Constantini Magni Commentatio*. D. II. August, MCCDLXXXIII. lecta. In Comment. Soc. Reg. Sci. Gotting. vi. 2, 1783–84 (Got. 1785), 81–106. Separate title-page to part 2, dated 1784. Is a discussion of Constantin’s famous saying. Gives *passim* many references to writers who have discussed the question.
+
+Walther, Balthas. *Diatribe elenchetica de imperatoris Constantini Magni baptismo, donatione et legatione ad concilium Nicænum*. Jenæ, 1816. 12o.
+
+Wegnerus, Joh. Ernestus. *Constantinus Magnus Imperator, Maximorum postulatus criminum, sed potiori parte absolutus ex Judiciali Gen*. (Præs. Georgi Casp. Kirchmaieri.) Wittenbergæ, 1698, 16 pp. Note title.
+
+Weidner, Johan. Joach. (resp. Johannes Goethe). *Dissertatio historica de Constantino Magno qua illum honeste & ex legitimo matrimonio natum contra G. Arnoldum vindicatur ac defenditur*. Rostochii, 1702. 4o, p. (2) 34. Weidner is *præses*. The dedication is by Goethe to his father, and Goethe is called author by the British Museum Catalogue.
+
+—— ——. *Constantinus Magnus superatis juventæ discriminibus legitimus tandem patris Constantii successor*. 1702; ib. 1703, p. (4) 40. Accorded to Weidner by *Vogt*. “Burck” is respondant, and seems by preface to be author, but?
+
+—— ——. *Dissertatio de Constantino Magno Signo crucis Christi in nubibus viso ad Christianismum inaugurato*. ib. 1703. 4o.
+
+Weiland, L. *Die constantinische Schenkung*. In Ztschr. f. Kirchenrecht, 221 (1887), 137–160; 222 (1888), 185–210. Origin was between 813 and 875 and was by contemporary of Hadian I.
+
+Wernsdorf, Jo. Chr. *D. de visu Constantini Magni locus Eumenii Rhetoris capite xxi. Panegyrici Constantini dictus explicatus*. In Stosch. Ferd., Museum Crit. II11. (Lemgoviae, 1778), 131–187. Shows that the “appearance related by Eumenius (as taking place in Gaul) is the same as that referred to by Eusebius.”
+
+Wernsdorf, E. F. *De Constantini Magni religione Paschali ad Euseb. de vita Const. M. b. iv. c. 22*. Wittebergæ, 1758. 4o, pp. 24. Constantine’s piety exemplified in his paschal observance.
+
+Werveke, N. van. *Trouvaille d’Ermsdorf. Médailles romaines de l’époque de Constantin*. p. 440–498. Descriptive catalogue of coins and medals found at Emsdorf in 1880, intermingled with discussion. Large number. Interesting. Also something “In Public. hist. Instit. Luxembourg (1881–1882), XXXV. 450–476”?
+
+Wesselofsky, Alex. *Le dit de l’empereur Constant*. In Romania, 6 (Paris, 1877), 161–198 (cf. G. Paris, 588–596, VII. 331. Poem from ms. in Copenhagen. Records three redactions of the story.
+
+Westphalen, Comte de. *La date de l’avènement au trône de Constantin le Grand, d’après Eusèbe et les médailles*. In Revue numismatique (1877), 26–42.
+
+Weytingh, Joannes Henricus Arnoldus. *Disquisitio historica de Constantino Magno*. Daventriæ, 1826. 8o. (4) 74 (2). Treats: 1. State of empire to death of Augustus; 2. State of empire to death of Constantius Chlorus; 3. Constantine and his acts; 4. Critical estimate of Constantine.
+
+Withof, Frid. Theod. *Dissertatio histor. de ficta Constantini Magni lepra*. Lingen, 1767. 4o.
+
+Wolff, Joh. Chrtph. *Disputatio de visione crucis Constantino Magno in cœlo oblatæ*. Witteb. 1706. 4o. “1707” (*Danz*); “also in *Oelrichs* German liter. opusce, II. 303–” (*Danz*).
+
+Woltereck, Chr. *Exercitatio critica qua disputatur crucem quam in cœlis vidisse se juravit Constantinus Magnus Imperator, fuisse naturalem, in Halone Solari*. (Praes J. A. Fabricius.) Hamburgi, 1706, pp. 32 and plate. (*Not* Fabricus?)
+
+Wordsworth. *Constantine the Great and his sons: Constantinus* I. In Smith & Wace. *Dict*. 1 (1877), 624–649. Treats Authorities, Life, in three periods, Legislation and Policy, Character and Writings, Vision of the Cross, and Coins.
+
+Zahn, Thdr. *Constantin der Grosse und die Kirche*. Hannover, 1876. Gr. 8o, 35 pp.
+
+Zeumer, K. *Der älteste Text des Constitutum Constantini*. Berlin, 1888. In Festgabe für Gneist.
+
+Note 1.–The number of works which have suggested themselves as really necessary to complete a working list for the student of Constantine is very great. Some works like Hefele’s *Conciliengeschichte* seem indispensable, others like Harnack’s article in Herzog, *Encykl*. on the *Konstantinopolitanisches Symbol* have a very important correlative bearing, and ought really to be especially mentioned because the general student would not readily find them out. Several works on the historical value of Eusebius’ Life of Constantine, also should really have been inserted. The latest of these is:
+
+Crivellucci, A. *Della fede storica di Eusebio nella vita di Costantino*: appendice al volume I. della Storia delle relazioni tra lo stato e la chiesa. Livorno, tip. di Raffaelo Giusti edit. 1888. 8o, 145 pp. Reviewed in Nuova Antologia, Ser. 3, vol. 21, 1 Maggio, 1889; by F. Görres, in Ztschr. f. wiss. Theol. 33. 1 (1890); by V. Schultze, Theol. Litbl. (1889), Nos. 9, 10. Says that the life of Constantine is no better than a historical novel.
+
+For farther literature on special points compare references in the notes.
+
+Note 2.—The attempt to secure accuracy in the above list has proved one of great difficulty. All references could not be verified, and as “conjectural emendation” is even more dangerous in bibliography than in textual criticism, readings have not generally been changed excepting on what seemed actual evidence. The only way to avoid laying oneself open to criticism in making a bibliography is not to make it. The editor can only say for this that a great deal of pains has been expended on improving accuracy as well as in gathering titles and anotating. The difficulty is shown in the fact that the work quoted on the double authority of Oettinger and of Chevalier as by Janus, proves on securing the work itself, after the list is in plate, to be really by Vogt and dedicated to Janus.

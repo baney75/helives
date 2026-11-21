@@ -1,0 +1,39 @@
+[work]
+id = "pantaenus-fragments"
+title = "Pantænus, the Alexandrian Philosopher"
+author = "pantaenus"
+collection = "ante-nicene"
+order = 2290
+language = "Greek"
+translator = "Rev. B. P. Pratten"
+edition = "Ante-Nicene Fathers, Vol. 8 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf08.xml"
+source_sha256 = "2e18deb94f36104f63186b4247f01bc2610f76452b02d885341360664aba57fe"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 598
+
+[[section]]
+id = "pantnus-the-alexandrian-philosopher"
+title = "Pantænus, the Alexandrian Philosopher."
+level = 1
+blocks = [
+  { t = "p", text = "[^3811] [a.d. 182–192–212.] The world owes more to Pantænus than to all the other Stoics put together. His mind discovered that true philosophy is found, not in the Porch, but in Nazareth, in Gethsemane, in Gabbatha, in Golgotha; and he set himself to make it known to the world. We are already acquainted with the great master of Clement,[^3812] “the Sicilian bee,” that forsook the flowers of Enna, to enrich Alexandria with what is “sweeter than honey and the honey-comb;” and we remember that he became a zealous missionary to the Oriental Ethiopia, and found there the traces of St. Matthias’ labours, and those also of St. Bartholomew. From this mission he seems to have returned about a.d. 192. Possibly he was master of the Alexandrian school before he went to India, and came back to his chair when that mission was finished. There he sat till about a.d. 212, and under him this Christian academy became famous. It had existed as a catechetical school from the Apostles’ time, according to St. Jerome. I have elsewhere noted some reasons for supposing that its founder may have been Apollos.[^3813] All the learning of Christendom may be traced to this source; and blessed be the name of one of whom all we know is ennobling to the Church, and whose unselfish career was a track of light “shining more and more unto the perfect day.”" },
+  { t = "note", id = "3811", text = "Vol. ii. p. 342; Westcott, *Canon*, pp. 90, 381; Routh, *R. S*., vol. i. pp. 375–379." },
+  { t = "note", id = "3812", text = "Vol. ii. pp. 165, etc., and p. 301, note 9; also p. 342, Elucid. II., this series." },
+  { t = "note", id = "3813", text = "Vol. vi. p. 236. St. Luke, in the company of Apollos, may have met a *catechumen* of his in that “excellent Theophilus” of his writings (St. Luke i. 4, Greek), whose history shows that catechetical teaching was already part of the Christian system." },
+  { t = "h", text = "I.[^3814]" },
+  { t = "note", id = "3814", text = "In *Extracts from the Prophets*, written probably by Theodotus, and collected by Clement of Alexandria or some other writer." },
+  { t = "p", text = "“In the sun hath He set His tent.”[^3815] Some affirm that the reference is to the Lord’s body, which He Himself places in the sun;[^3816] Hermogenes, for instance. As to His body, some say it is His tent, others the Church of the faithful. But our Pantænus said: “The language employed by prophecy is for the most part indefinite, the present tense being used for the future, and again the present for the past.”" },
+  { t = "note", id = "3815", text = "Ps. xix. 4." },
+  { t = "note", id = "3816", text = "Φασὶ τὸ σῶμα τοῦ Κυρίου ἐν τῷ ἡλίῳ αὐτὸν ἀποτίθεσθαι." },
+  { t = "h", text = "II.[^3817]" },
+  { t = "note", id = "3817", text = "In the Scholia of Maximus on St. Gregory the Divine." },
+  { t = "p", text = "This mode of speaking Saint Dionysius the Areopagite declares to be used in Scripture to denote predeterminations and expressions of the divine will.[^3818] In like manner also the followers of Pantænus,[^3819] who became the preceptor of the great Clement the Stromatist, affirm that they are commonly used in Scripture for expressions of the divine will. Accordingly, when asked by some who prided themselves on the outside learning,[^3820] in what way the Christians supposed God to become acquainted with the universe,[^3821] their own opinion being that He obtains His knowledge of it *in different ways*,—of things falling within the province of the understanding by means of the understanding, and of those within the region of the senses by means of the senses,—they replied: “Neither *does He gain acquaintance with* sensible things by the senses, nor with things within the sphere of the understanding by the understanding: for it is not possible that He who is above all existing things should apprehend them by means of existing things. We assert, on the contrary, that He is acquainted with existing things as the products of His own volition.”[^3822] They added, by way of showing the reasonableness of their view: “If He has made all things by an act of His will (and no argument will be adduced to gainsay this), and if it is ever a matter of piety and rectitude to say that God is acquainted with His own will, and if He has voluntarily made every several thing that has come into existence, then surely God must be acquainted with all existing things as the products of His own will, seeing that it was in the exercise of that will that He made them.”" },
+  { t = "note", id = "3818", text = "Θελήματα." },
+  { t = "note", id = "3819", text = "Οἱ περὶ Πάνταινον. [Vol. ii. pp. 165–167, this series.]" },
+  { t = "note", id = "3820", text = "Τὴν ἔξω παίδευσιν." },
+  { t = "note", id = "3821", text = "Τὰ ὄντα." },
+  { t = "note", id = "3822", text = "῾Ως ἴδια θελήματα." },
+]

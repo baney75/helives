@@ -3,7 +3,9 @@ export const CSP = [
   // Cloudflare Web Analytics: the edge inserts its beacon script and it reports here. Nothing broader.
   "script-src 'self' https://static.cloudflareinsights.com",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:",
+  "img-src 'self' data: blob: https://i.ytimg.com",
+  // Videos load from YouTube's privacy-enhanced domain, and only after the reader presses play.
+  "frame-src https://www.youtube-nocookie.com",
   "font-src 'self'",
   "connect-src 'self' https://cloudflareinsights.com",
   "media-src 'self'",
@@ -11,7 +13,7 @@ export const CSP = [
   "child-src 'self' blob:",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'none'",
+  "form-action 'self'",
   "frame-ancestors 'none'",
   "upgrade-insecure-requests",
 ].join('; ')
@@ -41,14 +43,6 @@ export function isBlockedPath(pathname: string): boolean {
   const path = pathname.toLowerCase()
   if (path.includes('..')) return true
   return BLOCKED_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
-}
-
-/** SPA fallback must not impersonate missing narration files. */
-export function isMissingStaticAsset(pathname: string, contentType: string | null): boolean {
-  const path = pathname.toLowerCase()
-  if (!path.startsWith('/audio/') || !path.endsWith('.mp3')) return false
-  const type = contentType ?? ''
-  return type.includes('text/html')
 }
 
 export function withSecurityHeaders(response: Response): Response {

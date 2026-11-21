@@ -1,0 +1,99 @@
+[work]
+id = "bsb-nahum"
+title = "Nahum"
+short_title = "Nah"
+author = "bible"
+collection = "bible"
+order = 34
+language = "Hebrew, Aramaic"
+translator = "Berean Standard Bible"
+edition = "Berean Standard Bible (2023 public domain edition)"
+source_url = "https://bereanbible.com/bsb_usfm.zip"
+source_sha256 = "f0c56438eb89c98e8f62c5c00461e25cc35b098ad5b179bc350cede759ee5f87"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Dedicated to the public domain by the Berean Bible Translation Committee (2023)"
+testament = "OT"
+book_number = 34
+chapters = 3
+verses = 47
+words = 1154
+
+[[section]]
+id = "1"
+title = "Nahum 1"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "The Burden against Nineveh" },
+  { t = "ref", text = "(Jonah 1:1–3)" },
+  { t = "v", n = 1, p = true, text = "This is the burden against Nineveh, the book of the vision of Nahum the Elkoshite:" },
+  { t = "v", n = 2, indent = 1, p = true, text = "The LORD is a jealous and avenging God; the LORD is avenging and full of wrath. The LORD takes vengeance on His foes and reserves wrath for His enemies." },
+  { t = "v", n = 3, indent = 1, text = "The LORD is slow to anger and great in power; the LORD will by no means leave the guilty unpunished. His path is in the whirlwind and storm, and clouds are the dust beneath His feet." },
+  { t = "v", n = 4, indent = 1, text = "He rebukes the sea and dries it up; He makes all the rivers run dry. Bashan and Carmel wither, and the flower of Lebanon wilts." },
+  { t = "v", n = 5, indent = 1, text = "The mountains quake before Him, and the hills melt away; the earth trembles at His presence—the world and all its dwellers." },
+  { t = "v", n = 6, indent = 1, text = "Who can withstand His indignation? Who can endure His burning anger? His wrath is poured out like fire; even rocks are shattered before Him." },
+  { t = "v", n = 7, indent = 1, p = true, text = "The LORD is good, a stronghold in the day of distress; He cares for those who trust in Him." },
+  { t = "v", n = 8, indent = 1, text = "But with an overwhelming flood He will make an end of Nineveh[^a] and pursue His enemies into darkness." },
+  { t = "v", n = 9, indent = 1, p = true, text = "Whatever you plot against the LORD, He will bring to an end. Affliction will not rise up a second time." },
+  { t = "v", n = 10, indent = 1, text = "For they will be entangled as with thorns and consumed like the drink of a drunkard—like stubble that is fully dry." },
+  { t = "v", n = 11, indent = 1, text = "From you, O Nineveh, comes forth a plotter of evil against the LORD, a counselor of wickedness." },
+  { t = "v", n = 12, p = true, text = "This is what the LORD says: “Though they are allied and numerous, yet they will be cut down and pass away. Though I have afflicted you, O Judah, I will afflict you no longer." },
+  { t = "v", n = 13, indent = 1, text = "For I will now break their yoke from your neck and tear away your shackles.”" },
+  { t = "v", n = 14, p = true, text = "The LORD has issued a command concerning you, O Nineveh: “There will be no descendants to carry on your name. I will cut off the carved image and cast idol from the house of your gods; I will prepare your grave, for you are contemptible.”" },
+  { t = "v", n = 15, indent = 1, p = true, text = "Look to the mountains—the feet of one who brings good news, who proclaims peace! Celebrate your feasts, O Judah; fulfill your vows. For the wicked will never again march through you; they will be utterly cut off." },
+  { t = "note", id = "a", text = "Literally *of her place*" },
+]
+
+[[section]]
+id = "2"
+title = "Nahum 2"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "The Overthrow of Nineveh" },
+  { t = "v", n = 1, indent = 1, p = true, text = "One who scatters advances against you, O Nineveh. Guard the fortress! Watch the road! Brace yourselves![^a] Summon all your strength!" },
+  { t = "v", n = 2, indent = 1, p = true, text = "For the LORD will restore the splendor of Jacob like the splendor of Israel, though destroyers have laid them waste and ruined the branches of their vine." },
+  { t = "v", n = 3, indent = 1, p = true, text = "The shields of his mighty men are red; the valiant warriors are dressed in scarlet. The fittings of the chariots flash like fire on the day they are prepared, and the spears of cypress have been brandished.[^b]" },
+  { t = "v", n = 4, indent = 1, text = "The chariots dash through the streets; they rush around the plazas, appearing like torches, darting about like lightning." },
+  { t = "v", n = 5, indent = 1, text = "He summons his nobles; they stumble as they advance. They race to its wall; the protective shield is set in place." },
+  { t = "v", n = 6, indent = 1, text = "The river gates are thrown open and the palace collapses." },
+  { t = "v", n = 7, indent = 1, p = true, text = "It is decreed that the city be exiled and carried away; her maidservants moan like doves, and beat upon their breasts." },
+  { t = "v", n = 8, indent = 1, text = "Nineveh has been like a pool of water throughout her days, but now it is draining away. “Stop! Stop!” they cry, but no one turns back." },
+  { t = "v", n = 9, indent = 1, text = "“Plunder the silver! Plunder the gold!” There is no end to the treasure, an abundance of every precious thing." },
+  { t = "v", n = 10, indent = 1, text = "She is emptied! Yes, she is desolate and laid waste! Hearts melt, knees knock, bodies tremble, and every face grows pale!" },
+  { t = "v", n = 11, indent = 1, p = true, text = "Where is the lions’ lair or the feeding ground of the young lions, where the lion and lioness prowled with their cubs, with nothing to frighten them away?" },
+  { t = "v", n = 12, indent = 1, text = "The lion mauled enough for its cubs and strangled prey for the lioness. It filled its dens with the kill, and its lairs with mauled prey." },
+  { t = "v", n = 13, indent = 1, p = true, text = "“Behold, I am against you,” declares the LORD of Hosts. “I will reduce your chariots to cinders, and the sword will devour your young lions. I will cut off your prey from the earth, and the voices of your messengers will no longer be heard.”" },
+  { t = "note", id = "a", text = "Hebrew *Strengthen your loins!*" },
+  { t = "note", id = "b", text = "Hebrew; alternately, the spears may be of *pine* or *juniper* or *fir*; LXX and Syriac *they are prepared, and the horsemen rush to and fro.*" },
+]
+
+[[section]]
+id = "3"
+title = "Nahum 3"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "Judgment on Nineveh" },
+  { t = "v", n = 1, indent = 1, p = true, text = "Woe to the city of blood, full of lies, full of plunder, never without prey." },
+  { t = "v", n = 2, indent = 1, text = "The crack of the whip, the rumble of the wheel, galloping horse and bounding chariot!" },
+  { t = "v", n = 3, indent = 1, text = "Charging horseman, flashing sword, shining spear; heaps of slain, mounds of corpses, dead bodies without end—they stumble over their dead—" },
+  { t = "v", n = 4, indent = 1, text = "because of the many harlotries of the harlot, the seductive mistress of sorcery, who betrays nations by her prostitution and clans by her witchcraft." },
+  { t = "v", n = 5, indent = 1, p = true, text = "“Behold, I am against you,” declares the LORD of Hosts. “I will lift your skirts over your face. I will show your nakedness to the nations and your shame to the kingdoms." },
+  { t = "v", n = 6, indent = 1, text = "I will pelt you with filth and treat you with contempt; I will make a spectacle of you." },
+  { t = "v", n = 7, indent = 1, text = "Then all who see you will recoil from you and say, ‘Nineveh is devastated; who will grieve for her?’ Where can I find comforters for you?”" },
+  { t = "v", n = 8, indent = 1, p = true, text = "Are you better than Thebes,[^a] stationed by the Nile with water around her, whose rampart was the sea, whose wall was the water?" },
+  { t = "v", n = 9, indent = 1, text = "Cush[^b] and Egypt were her boundless strength; Put and Libya were her allies." },
+  { t = "v", n = 10, indent = 1, text = "Yet she became an exile; she went into captivity. Her infants were dashed to pieces at the head of every street. They cast lots for her dignitaries, and all her nobles were bound in chains." },
+  { t = "v", n = 11, indent = 1, text = "You too will become drunk; you will go into hiding and seek refuge from the enemy." },
+  { t = "v", n = 12, indent = 1, p = true, text = "All your fortresses are fig trees with the first ripe figs; when shaken, they fall into the mouth of the eater!" },
+  { t = "v", n = 13, indent = 1, p = true, text = "Look at your troops—they are like your women! The gates of your land are wide open to your enemies; fire consumes their bars." },
+  { t = "v", n = 14, indent = 1, p = true, text = "Draw your water for the siege; strengthen your fortresses. Work the clay and tread the mortar; repair the brick kiln!" },
+  { t = "v", n = 15, indent = 1, text = "There the fire will devour you; the sword will cut you down and consume you like a young locust. Make yourself many like the young locust; make yourself many like the swarming locust!" },
+  { t = "v", n = 16, indent = 1, text = "You have multiplied your merchants more than the stars of the sky. The young locust strips the land and flies away." },
+  { t = "v", n = 17, indent = 1, text = "Your guards[^c] are like the swarming locust, and your scribes[^d] like clouds of locusts that settle on the walls on a cold day. When the sun rises, they fly away, and no one knows where." },
+  { t = "v", n = 18, indent = 1, p = true, text = "O king of Assyria, your shepherds slumber; your officers sleep. Your people are scattered on the mountains with no one to gather them." },
+  { t = "v", n = 19, indent = 1, text = "There is no healing for your injury; your wound is severe. All who hear the news of you applaud your downfall, for who has not experienced your constant cruelty?" },
+  { t = "note", id = "a", text = "Hebrew *No-amon*" },
+  { t = "note", id = "b", text = "That is, the upper Nile region" },
+  { t = "note", id = "c", text = "Or *princes*" },
+  { t = "note", id = "d", text = "Or *marshals*" },
+]

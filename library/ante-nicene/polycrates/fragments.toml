@@ -1,0 +1,45 @@
+[work]
+id = "polycrates-fragments"
+title = "Polycrates, Bishop of Ephesus"
+author = "polycrates"
+collection = "ante-nicene"
+order = 2250
+language = "Greek"
+translator = "Rev. B. P. Pratten"
+edition = "Ante-Nicene Fathers, Vol. 8 (1886), ed. Roberts, Donaldson and Coxe"
+source_url = "https://www.ccel.org/ccel/schaff/anf08.xml"
+source_sha256 = "2e18deb94f36104f63186b4247f01bc2610f76452b02d885341360664aba57fe"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Published 1886 in the United States; ThML edition from the Christian Classics Ethereal Library"
+words = 830
+
+[[section]]
+id = "polycrates-bishop-of-ephesus"
+title = "Polycrates, Bishop of Ephesus."
+level = 1
+blocks = [
+  { t = "p", text = "[^3767] [a.d. 130–196.] This author[^3768] comes in as an appendix to the stories of Polycarp and Irenæus and good Anicetus, and his writings also bear upon the contrast presented by the less creditable history of Victor. If, as I suppose, the appearance of our Lord to St. John on “the Lord’s day” was on the Paschal Sunday, it may at first seem surprising that this Apostle can be claimed by Polycrates in behalf of the Eastern custom to keep Easter, with the Jews, on the fourteenth day of the moon. But to the Jews the Apostles became “as Jews” in all things tolerable, so long as the Temple stood, and while the bishops of Jerusalem were labouring to identify the Paschal Lamb with their Passover. The long survival of St. John among Jewish Christians led them to prolong this usage, no doubt, as sanctioned by his example. He foreknew it would quietly pass away. The wise and truly Christian spirit of Irenæus prepared the way for the ultimate unanimity of the Church in a matter which lies at the base of “the Christian Sabbath,” and of our own observance of the first day of the week as a weekly Easter. Those who in our own times have revived the observance of the Jewish Sabbath, show us how much may be said on their side,[^3769] and elucidate the tenacity of the Easterns in resisting the abolition of the Mosaic ordinance as to the Paschal, although they agreed to keep it “not with the old leaven.”" },
+  { t = "note", id = "3767", text = "Westcott, *Canon*, p. 432, note 1; Lightfoot, *Ap. Fathers*, pp. 379, etc., 494." },
+  { t = "note", id = "3768", text = "See Lardner, *Credib*., vol. ii. cap. 23, p. 259." },
+  { t = "note", id = "3769", text = "They cannot be satisfactorily answered, it seems to me, save by the appeal to John xx. 19, 26, Acts xx. 7, 1 Cor. xvi. 2, and Rev. i. 10, for “the Lord’s day,” and to the Council of Jerusalem (Acts xv. 28; Col. ii. 16) for the repeal of Sabbatical ordinances; and to the great laws (Matt. xvi. 19; John xiv. 26; Matt. xxviii. 20) of plenary authority given by Christ Himself to His Apostles." },
+  { t = "p", text = "Our author belonged to a family in which he was the eighth Christian bishop; and he presided over the church of Ephesus, in which the traditions of St. John were yet fresh in men’s minds at the date of his birth. He had doubtless known Polycarp, and Irenæus also. He seems to have presided over a synod of Asiatic bishops (a.d. 196) which came together to consider this matter of the Paschal feast. It is surely noteworthy that nobody doubted that it was kept by a Christian and Apostolic ordinance. So St. Paul argues from its Christian observance, in his rebuke of the Corinthians.[^3770] They were keeping it “unleavened” ceremonially, and he urges a spiritual unleavening as more important. The Christian hallowing of Pentecost connects with the Paschal argument.[^3771] The Christian Sabbath hinges on these points." },
+  { t = "note", id = "3770", text = "1 Cor. v. 7, 8, and margin of Revised Version; also Acts xii. 4 and 12." },
+  { t = "note", id = "3771", text = "Acts ii. 1, xx. 16; 1 Cor. xvi. 8." },
+  { t = "p", text = "From His Epistle to Victor and the Roman Church Concerning the Day of Keeping the Passover.[^3772]" },
+  { t = "note", id = "3772", text = "In Eusebius, *Hist. Eccl*., v. 24." },
+  { t = "p", text = "As for us, then, we scrupulously observe the exact day,[^3773] neither adding nor taking away. For in Asia great luminaries[^3774] have gone to their rest, who shall rise again in the day of the coming of the Lord, when He cometh with glory from heaven and shall raise again all the saints. *I speak of* Philip, one of the twelve apostles,[^3775] who is laid to rest at Hierapolis; and his two daughters, who arrived at old age unmarried;[^3776] his other daughter also, who passed her life[^3777] under the influence of the Holy Spirit, and reposes at Ephesus; John, moreover, who reclined on the Lord’s bosom, and who became a priest wearing the mitre,[^3778] and a witness and a teacher—he rests at Ephesus. Then there is Polycarp, both bishop and martyr at Smyrna; and Thraseas from Eumenia, both bishop and martyr, who rests at Smyrna. Why should I speak of Sagaris, bishop and martyr, who rests at Laodicea? of the blessed Papirius, moreover? and of Melito the eunuch,[^3779] who performed all his actions under the influence of the Holy Spirit, and lies at Sardis, awaiting the visitation[^3780] from heaven, when he shall rise again from the dead? These all kept the passover on the fourteenth. day *of the month*, in accordance with the Gospel, without ever deviating from it, but keeping to the rule of faith." },
+  { t = "note", id = "3773", text = "᾽Αῤῥαδιούργητον ἄγομεν τὴν ἡμέραν." },
+  { t = "note", id = "3774", text = "Στοιχεῖα." },
+  { t = "note", id = "3775", text = "[See vol. vii. p. 500, n. 6. Great confusions adhere to this name.]" },
+  { t = "note", id = "3776", text = "Δύο θυγατέρες αὐτοῦ γεγηρακυῖαι παρθένοι." },
+  { t = "note", id = "3777", text = "Πολιτευσαμένη. [Phil. iii. 20, *Greek*.]" },
+  { t = "note", id = "3778", text = "Πέταλον. [Probably the ornament of the high priest; Exod. xxviii. 35, 36.]" },
+  { t = "note", id = "3779", text = "[i.e., spiritually; embracing a chaste celibacy in deference to Christ. Matt. xix. 12.]" },
+  { t = "note", id = "3780", text = "᾽Επισκοπην." },
+  { t = "p", text = "Moreover I also, Polycrates, who am the least of you all, in accordance with the tradition of my relatives, some of whom I have succeeded—seven of my relatives were bishops, and I am the eighth, and my relatives always observed the day when the people put away[^3781] the leaven—I myself, brethren, I say, who am sixty-five years old in the Lord, and have fallen in with the brethren in all parts of the world, and have read through all Holy Scripture, am not frightened at the things which are said to terrify us. For those who are greater than I have said, “We ought to obey God rather than men.”[^3782]…" },
+  { t = "note", id = "3781", text = "̓́῞Ηρνυε. Some read ἠρτυε." },
+  { t = "note", id = "3782", text = "Acts v. 29." },
+  { t = "p", text = "I might also have made mention of the bishops associated with me, whom it was your own desire to have called together by me, and I called them together: whose names, if I were to write them down, would amount to a great number. These *bishops*, on coming to see me, unworthy as I am,[^3783] signified their united approval of the letter, knowing that I wore *these* grey hairs not in vain, but have always regulated my conduct in *obedience* to the Lord Jesus." },
+  { t = "note", id = "3783", text = "Τον μικρόν." },
+]

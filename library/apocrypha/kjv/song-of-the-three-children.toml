@@ -1,0 +1,95 @@
+[work]
+id = "kjv-song-of-the-three-children"
+title = "The Song of the Three Holy Children"
+short_title = "Song of the Three Children"
+author = "apocrypha-anonymous"
+collection = "apocrypha"
+order = 9
+date = "2nd or 1st century BC"
+language = "Hebrew or Aramaic (the KJV follows the Greek)"
+translator = "The King James translators (1611), standard text of 1769"
+edition = "The Holy Bible, King James Version, with the Apocrypha: the Oxford standard text of 1769 (Benjamin Blayney), from the eBible.org USFM edition (eng-kjv, source dated 15 November 2026)"
+source_url = "https://ebible.org/Scriptures/eng-kjv_usfm.zip"
+source_sha256 = "9d37aa78180ceefd5e4aeeaedceccf16f21484e5eb17d5662e8beff31bc3d8a5"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "The King James Version was published in London by Robert Barker in 1611 and the standard text by the Oxford University Press in 1769; it is in the public domain in the United States because it was published before 1931. (The Crown's letters patent restrict printing only inside the United Kingdom.)"
+chapters = 1
+verses = 68
+words = 1406
+summary = "The prayer of Azarias and the hymn of the three young men in the furnace, which the Greek text of Daniel places after Daniel 3:23. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture."
+
+[[section]]
+id = "1"
+title = "Song of the Three Children 1"
+level = 1
+blocks = [
+  { t = "v", n = 1, p = true, text = "And they walked in the midst of the fire, praising God, and blessing the Lord." },
+  { t = "v", n = 2, p = true, text = "Then Azarias stood up, and prayed on this manner; and opening his mouth in the midst of the fire said," },
+  { t = "v", n = 3, p = true, text = "Blessed art thou, O Lord God of our fathers: thy name is worthy to be praised and glorified for evermore:" },
+  { t = "v", n = 4, p = true, text = "For thou art righteous in all the things that thou hast done to us: yea, true are all thy works, thy ways are right, and all thy judgments truth." },
+  { t = "v", n = 5, p = true, text = "In all the things that thou hast brought upon us, and upon the holy city of our fathers, even Jerusalem, thou hast executed true judgment: for according to truth and judgment didst thou bring all these things upon us because of our sins." },
+  { t = "v", n = 6, p = true, text = "For we have sinned and committed iniquity, departing from thee." },
+  { t = "v", n = 7, p = true, text = "In all things have we trespassed, and not obeyed thy commandments, nor kept them, neither done as thou hast commanded us, that it might go well with us." },
+  { t = "v", n = 8, p = true, text = "Wherefore all that thou hast brought upon us, and every thing that thou hast done to us, thou hast done in true judgment." },
+  { t = "v", n = 9, p = true, text = "And thou didst deliver us into the hands of lawless enemies, most hateful forsakers of God, and to an unjust king, and the most wicked in all the world." },
+  { t = "v", n = 10, p = true, text = "And now we cannot open our mouths, we are become a shame and reproach to thy servants; and to them that worship thee." },
+  { t = "v", n = 11, p = true, text = "Yet deliver us not up wholly, for thy name’s sake, neither disannul thou thy covenant:" },
+  { t = "v", n = 12, p = true, text = "And cause not thy mercy to depart from us, for thy beloved Abraham’s sake, for thy servant Issac’s sake, and for thy holy Israel’s sake;" },
+  { t = "v", n = 13, p = true, text = "To whom thou hast spoken and promised, that thou wouldest multiply their seed as the stars of heaven, and as the sand that lieth upon the seashore." },
+  { t = "v", n = 14, p = true, text = "For we, O Lord, are become less than any nation, and be kept under this day in all the world because of our sins." },
+  { t = "v", n = 15, p = true, text = "Neither is there at this time prince, or prophet, or leader, or burnt offering, or sacrifice, or oblation, or incense, or place to sacrifice before thee, and to find mercy." },
+  { t = "v", n = 16, p = true, text = "Nevertheless in a contrite heart and an humble spirit let us be accepted." },
+  { t = "v", n = 17, p = true, text = "Like as in the burnt offerings of rams and bullocks, and like as in ten thousands of fat lambs: so let our sacrifice be in thy sight this day, and grant that we may wholly go after thee: for they shall not be confounded that put their trust in thee." },
+  { t = "v", n = 18, p = true, text = "And now we follow thee with all our heart, we fear thee, and seek thy face." },
+  { t = "v", n = 19, p = true, text = "Put us not to shame: but deal with us after thy lovingkindness, and according to the multitude of thy mercies." },
+  { t = "v", n = 20, p = true, text = "Deliver us also according to thy marvellous works, and give glory to thy name, O Lord: and let all them that do thy servants hurt be ashamed;" },
+  { t = "v", n = 21, p = true, text = "And let them be confounded in all their power and might, and let their strength be broken;" },
+  { t = "v", n = 22, p = true, text = "And let them know that thou art God, the only God, and glorious over the whole world." },
+  { t = "v", n = 23, p = true, text = "And the king’s servants, that put them in, ceased not to make the oven hot with rosin, pitch, tow, and small wood;" },
+  { t = "v", n = 24, p = true, text = "So that the flame streamed forth above the furnace forty and nine cubits." },
+  { t = "v", n = 25, p = true, text = "And it passed through, and burned those Chaldeans it found about the furnace." },
+  { t = "v", n = 26, p = true, text = "But the angel of the Lord came down into the oven together with Azarias and his fellows, and smote the flame of the fire out of the oven;" },
+  { t = "v", n = 27, p = true, text = "And made the midst of the furnace as it had been a moist whistling wind, so that the fire touched them not at all, neither hurt nor troubled them." },
+  { t = "v", n = 28, p = true, text = "Then the three, as out of one mouth, praised, glorified, and blessed, God in the furnace, saying," },
+  { t = "v", n = 29, p = true, text = "Blessed art thou, O Lord God of our fathers: and to be praised and exalted above all for ever." },
+  { t = "v", n = 30, p = true, text = "And blessed is thy glorious and holy name: and to be praised and exalted above all for ever." },
+  { t = "v", n = 31, p = true, text = "Blessed art thou in the temple of thine holy glory: and to be praised and glorified above all for ever." },
+  { t = "v", n = 32, p = true, text = "Blessed art thou that beholdest the depths, and sittest upon the cherubims: and to be praised and exalted above all for ever." },
+  { t = "v", n = 33, p = true, text = "Blessed art thou on the glorious throne of thy kingdom: and to be praised and glorified above all for ever." },
+  { t = "v", n = 34, p = true, text = "Blessed art thou in the firmament of heaven: and above all to be praised and glorified for ever." },
+  { t = "v", n = 35, p = true, text = "O all ye works of the Lord, bless ye the Lord: praise and exalt him above all for ever," },
+  { t = "v", n = 36, p = true, text = "O ye heavens, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 37, p = true, text = "O ye angels of the Lord, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 38, p = true, text = "O all ye waters that be above the heaven, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 39, p = true, text = "O all ye powers of the Lord, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 40, p = true, text = "O ye sun and moon, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 41, p = true, text = "O ye stars of heaven, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 42, p = true, text = "O every shower and dew, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 43, p = true, text = "O all ye winds, bless ye the Lord: praise and exalt him above all for ever," },
+  { t = "v", n = 44, p = true, text = "O ye fire and heat, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 45, p = true, text = "O ye winter and summer, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 46, p = true, text = "O ye dews and storms of snow, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 47, p = true, text = "O ye nights and days, bless ye the Lord: bless and exalt him above all for ever." },
+  { t = "v", n = 48, p = true, text = "O ye light and darkness, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 49, p = true, text = "O ye ice and cold, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 50, p = true, text = "O ye frost and snow, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 51, p = true, text = "O ye lightnings and clouds, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 52, p = true, text = "O let the earth bless the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 53, p = true, text = "O ye mountains and little hills, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 54, p = true, text = "O all ye things that grow in the earth, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 55, p = true, text = "O ye mountains, bless ye the Lord: Praise and exalt him above all for ever." },
+  { t = "v", n = 56, p = true, text = "O ye seas and rivers, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 57, p = true, text = "O ye whales, and all that move in the waters, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 58, p = true, text = "O all ye fowls of the air, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 59, p = true, text = "O all ye beasts and cattle, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 60, p = true, text = "O ye children of men, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 61, p = true, text = "O Israel, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 62, p = true, text = "O ye priests of the Lord, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 63, p = true, text = "O ye servants of the Lord, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 64, p = true, text = "O ye spirits and souls of the righteous, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 65, p = true, text = "O ye holy and humble men of heart, bless ye the Lord: praise and exalt him above all for ever." },
+  { t = "v", n = 66, p = true, text = "O Ananias, Azarias, and Misael, bless ye the Lord: praise and exalt him above all for ever: for he hath delivered us from hell, and saved us from the hand of death, and delivered us out of the midst of the furnace and burning flame: even out of the midst of the fire hath he delivered us." },
+  { t = "v", n = 67, p = true, text = "O give thanks unto the Lord, because he is gracious: for his mercy endureth for ever." },
+  { t = "v", n = 68, p = true, text = "O all ye that worship the Lord, bless the God of gods, praise him, and give him thanks: for his mercy endureth for ever." },
+]

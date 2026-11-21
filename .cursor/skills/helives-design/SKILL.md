@@ -1,47 +1,51 @@
 ---
 name: helives-design
 description: >
-  He Lives overlay on gs-design: night/gold tokens, Cormorant, Scriptures index,
-  no card-grid home. Use when changing helives.dev UI, brand, type, favicon, og,
-  or later-book chrome.
+  He Lives library design bar: night and gold tokens, Cormorant and Source Serif,
+  calm reading pages, focus bold, themes, phone-first layout, no motion. Use when
+  changing helives.dev pages, CSS, reading settings, brand, favicon or og image.
 ---
 
 # He Lives Design
 
-Canonical design skill: **`~/.cursor/skills/gs-design/SKILL.md`**. Then **`DESIGN.md`** at the repo root. This overlay is the ministry-site delta, not a second token system.
+Read `DESIGN.md` at the repo root first. It holds the real values. This skill is the bar a change must meet.
 
-Copy: `communication-writing` + `gs-content`. No slop.
+## Before you edit
+- Tokens live only in the `:root` and `[data-theme]` blocks at the top of `site/assets/site.css`.
+- Page markup comes from `site/lib/layout.mjs` and `site/lib/pages.mjs`. Reading HTML comes from `site/lib/render.mjs`.
+- Reading settings: defaults in `site/assets/prefs.js`, controls in `site/lib/layout.mjs`, behavior in `site/assets/app.js`.
+- Never edit `dist/`. Run `pnpm build`.
 
-## Brand first
+## The bar for reading pages
+- The text is the product. Nothing on a reading page competes with it: no badges, tiles, cards or decorative icons.
+- Design for 390px first. The phone dock keeps Back, Listen, Reading, Sound and Next in thumb reach.
+- Every control is at least 44px tall and has a visible label or an `aria-label`.
+- Focus shows a 3px `--focus` outline. Never remove an outline without a replacement.
+- The page reads fully without JavaScript.
+- Every theme (Night, Dusk, Paper, Sepia, High contrast) keeps text and links at WCAG AA on `--bg`.
+- Dusk stays low contrast with no pure black or white. Do not "fix" it toward Night.
+- Focus bold stays a build-time `<b>` prefix. Change its weight only through `data-fx` and `--fx-weight`.
+- No motion: no `transition`, `animation` or `@keyframes`. Highlights are a still `--mark` band.
+- Background sound stays generated in `site/assets/sounds.js`. No audio files, no sudden loud events.
+- Print pages hide all chrome and print black on white.
+- Gnostic and other non-canonical texts carry their label on the collection and reader pages.
 
-Tokens in `src/index.css`. Mark in `src/site/BrandMark.tsx`. If the first viewport could be another ministry after removing the nav, branding is too weak.
-
-- Void `#07060a`, fire `#e8b86d`, ink `#ece6d8`, dawn `#fff4d6`
-- Display: Cormorant Garamond. Body: Source Serif 4
-- Mark: Latin cross + dawn point of light. Same SVG as favicon
-
-## Layout rules
-
-- Home is one 100svh lamp (100vh fallback), not a card grid and not a scrollable document. Brand, this hour’s KJV (words of Christ in red), an authored one-line motif beside the verse (not Lucide), Explore more, new scripture every hour, footer. No page scroll. No clipped footer. Genesis is not the primary CTA. No church button on the lamp.
-- `/scriptures` is a typographic canon index (`canon-division` / `canon-book`). Forthcoming books are named rows, not disabled cards.
-- Docs (Faith, afterword) are a narrow reading column.
-- Primary button is fire on ground. Quiet button is hairline. 44px min height.
-- Focus: 2px fire outline, 3px offset. Never `outline: none` without a replacement.
+## Rules
+- Use `var(--...)` for every color. No raw hex outside the token blocks.
+- Display face is Cormorant Garamond, text is Source Serif 4, controls are system-ui. Fonts are self-hosted; no font CDN.
+- One gold accent. No second palette for a section.
+- Change the mark only in `brandMark()` (`site/lib/icons.mjs`) and `public/favicon.svg`, then run `node scripts/render-brand.mjs`.
+- Copy is plain and short. No slogans.
 
 ## Do not
+- Card grids, stat strips, pill clusters or feature icon rows.
+- Inter, Roboto or system-ui as the reading face.
+- Purple gradients, glass panels, stock crosses or doves.
+- Empty shelves or "coming soon" entries.
 
-- Inter / system-ui as the face
-- shadcn card grids, stat strips, pill clusters on home
-- A second palette “for the next book”
-- Stock religious clipart
-- Empty routes for unbuilt books
-
-## Favicon / og
-
-Change the mark only in BrandMark + `public/favicon.svg`, then `pnpm brand`. og.png stays 1200×630 night+mark, not a HUD screenshot.
-
-## Proof
-
-`device-verification` at 375 and 1280. Console 0. Contrast AA for ink and fire on void. Reduced-motion: no essential info in motion only.
-
-The implementer does not approve its own UI. After screenshots exist, spawn an independent visual critic (`helives-gauntlet`). Same agent writing then rubber-stamping is forbidden.
+## Done
+Done means all of these passed, not that the page looks right to you:
+- `pnpm test && pnpm typecheck && pnpm lint && pnpm build` exits 0.
+- `node scripts/check-ui.mjs http://localhost:8841` against `pnpm exec wrangler dev --port 8841` exits 0.
+- `node scripts/shots.mjs` at 390 and 1280, light and `SCHEME=dark`, reports no console errors and no sideways scroll.
+- An independent critic passes the screenshots (`helives-gauntlet`). You do not approve your own UI.

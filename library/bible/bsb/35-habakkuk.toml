@@ -1,0 +1,117 @@
+[work]
+id = "bsb-habakkuk"
+title = "Habakkuk"
+short_title = "Hab"
+author = "bible"
+collection = "bible"
+order = 35
+language = "Hebrew, Aramaic"
+translator = "Berean Standard Bible"
+edition = "Berean Standard Bible (2023 public domain edition)"
+source_url = "https://bereanbible.com/bsb_usfm.zip"
+source_sha256 = "f0c56438eb89c98e8f62c5c00461e25cc35b098ad5b179bc350cede759ee5f87"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Dedicated to the public domain by the Berean Bible Translation Committee (2023)"
+testament = "OT"
+book_number = 35
+chapters = 3
+verses = 56
+words = 1371
+
+[[section]]
+id = "1"
+title = "Habakkuk 1"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "Habakkuk’s First Complaint" },
+  { t = "v", n = 1, p = true, text = "This is the burden that Habakkuk the prophet received in a vision:" },
+  { t = "v", n = 2, indent = 1, p = true, text = "How long, O LORD, must I call for help but You do not hear, or cry out to You, “Violence!” but You do not save?" },
+  { t = "v", n = 3, indent = 1, text = "Why do You make me see iniquity? Why do You tolerate wrongdoing? Destruction and violence are before me. Strife is ongoing, and conflict abounds." },
+  { t = "v", n = 4, indent = 1, text = "Therefore the law is paralyzed, and justice never goes forth. For the wicked hem in the righteous, so that justice is perverted." },
+  { t = "h", level = 2, text = "The LORD’s Answer" },
+  { t = "v", n = 5, indent = 1, p = true, text = "“Look at the nations and observe—be utterly astounded![^a] For I am doing a work in your days that you would never believe even if someone told you.[^b]" },
+  { t = "v", n = 6, indent = 1, text = "For behold, I am raising up the Chaldeans[^c]—that ruthless and impetuous nation which marches through the breadth of the earth to seize dwellings not their own." },
+  { t = "v", n = 7, indent = 1, text = "They are dreaded and feared; from themselves they derive justice and sovereignty." },
+  { t = "v", n = 8, indent = 1, text = "Their horses are swifter than leopards, fiercer than wolves of the night. Their horsemen charge ahead, and their cavalry comes from afar. They fly like a vulture, swooping down to devour." },
+  { t = "v", n = 9, indent = 1, text = "All of them come bent on violence; their hordes advance like the east wind; they gather prisoners like sand." },
+  { t = "v", n = 10, indent = 1, text = "They scoff at kings and make rulers an object of scorn. They laugh at every fortress and build up siege ramps to seize it." },
+  { t = "v", n = 11, indent = 1, text = "Then they sweep by like the wind and pass through. They are guilty; their own strength is their god.”" },
+  { t = "h", level = 2, text = "Habakkuk’s Second Complaint" },
+  { t = "ref", text = "(Psalm 11:1–7)" },
+  { t = "v", n = 12, indent = 1, p = true, text = "Are You not from everlasting, O LORD, my God, my Holy One? We will not die. O LORD, You have appointed them to execute judgment; O Rock, You have established them for correction." },
+  { t = "v", n = 13, indent = 1, text = "Your eyes are too pure to look upon evil, and You cannot tolerate wrongdoing. So why do You tolerate the faithless? Why are You silent while the wicked swallow up those more righteous than themselves?" },
+  { t = "v", n = 14, indent = 1, text = "You have made men like the fish of the sea, like creeping things that have no ruler." },
+  { t = "v", n = 15, indent = 1, text = "The foe pulls all of them up[^d] with a hook; he catches them in his dragnet, and gathers them in his fishing net; so he rejoices gladly." },
+  { t = "v", n = 16, indent = 1, text = "Therefore he sacrifices to his dragnet and burns incense to his fishing net, for by these things his portion is sumptuous and his food is rich." },
+  { t = "v", n = 17, indent = 1, text = "Will he, therefore, empty his net and continue to slay nations without mercy?" },
+  { t = "note", id = "a", text = "LXX *Look, you scoffers, wonder and perish!*" },
+  { t = "note", id = "b", text = "Cited in Acts 13:41" },
+  { t = "note", id = "c", text = "That is, the Babylonians" },
+  { t = "note", id = "d", text = "Literally *He pulls all of them up*" },
+]
+
+[[section]]
+id = "2"
+title = "Habakkuk 2"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "The LORD Answers Again" },
+  { t = "v", n = 1, indent = 1, p = true, text = "I will stand at my guard post and station myself on the ramparts. I will watch to see what He will say to me, and how I should answer when corrected." },
+  { t = "v", n = 2, p = true, text = "Then the LORD answered me: “Write down this vision and clearly inscribe it on tablets, so that a herald may run with it." },
+  { t = "v", n = 3, indent = 1, text = "For the vision awaits an appointed time; it testifies of the end and does not lie. Though it lingers, wait for it, since it will surely come and will not delay.[^a]" },
+  { t = "v", n = 4, indent = 1, text = "Look at the proud one; his soul is not upright[^b]—but the righteous will live by faith[^c]—" },
+  { t = "v", n = 5, indent = 1, text = "and wealth[^d] indeed betrays him. He is an arrogant man never at rest. He enlarges his appetite like Sheol, and like Death, he is never satisfied. He gathers all the nations to himself and collects all the peoples as his own." },
+  { t = "h", level = 2, text = "Woe to the Chaldeans" },
+  { t = "v", n = 6, indent = 1, p = true, text = "Will not all of these take up a taunt against him, speaking with mockery and derision: ‘Woe to him who amasses what is not his and makes himself rich with many loans! How long will this go on?’" },
+  { t = "v", n = 7, indent = 1, text = "Will not your creditors suddenly arise and those who disturb you awaken? Then you will become their prey." },
+  { t = "v", n = 8, indent = 1, text = "Because you have plundered many nations, the remnant of the people will plunder you—because of your bloodshed against man and your violence against the land, the city, and all their dwellers." },
+  { t = "v", n = 9, indent = 1, p = true, text = "Woe to him who builds his house by unjust gain, to place his nest on high and escape the hand of disaster!" },
+  { t = "v", n = 10, indent = 1, text = "You have plotted shame for your house by cutting off many peoples and forfeiting your life.[^e]" },
+  { t = "v", n = 11, indent = 1, text = "For the stones will cry out from the wall, and the rafters will echo it from the woodwork." },
+  { t = "v", n = 12, indent = 1, p = true, text = "Woe to him who builds a city with bloodshed and establishes a town by iniquity!" },
+  { t = "v", n = 13, indent = 1, text = "Is it not indeed from the LORD of Hosts that the labor of the people only feeds the fire, and the nations weary themselves in vain?" },
+  { t = "v", n = 14, indent = 1, text = "For the earth will be filled with the knowledge of the glory of the LORD as the waters cover the sea." },
+  { t = "v", n = 15, indent = 1, p = true, text = "Woe to him who gives drink to his neighbors, pouring it from the wineskin until they are drunk, in order to gaze at their nakedness!" },
+  { t = "v", n = 16, indent = 1, text = "You will be filled with shame instead of glory. You too must drink and expose your uncircumcision![^f] The cup in the LORD’s right hand will come around to you, and utter disgrace will cover your glory." },
+  { t = "v", n = 17, indent = 1, text = "For your violence against Lebanon will overwhelm you, and the destruction of animals will terrify you, because of your bloodshed against men and your violence against the land, the city, and all their dwellers." },
+  { t = "v", n = 18, indent = 1, p = true, text = "What use is an idol, that a craftsman should carve it—or an image, a teacher of lies? For its maker trusts in his own creation; he makes idols that cannot speak." },
+  { t = "v", n = 19, indent = 1, text = "Woe to him who says to wood, ‘Awake!’ or to silent stone, ‘Arise!’ Can it give guidance? Behold, it is overlaid with gold and silver, yet there is no breath in it at all.”" },
+  { t = "v", n = 20, indent = 1, p = true, text = "But the LORD is in His holy temple; let all the earth be silent before Him." },
+  { t = "note", id = "a", text = "Or *Though He lingers, wait for Him, since He will surely come and will not delay*; see also LXX; cited in Hebrews 10:37." },
+  { t = "note", id = "b", text = "LXX *If he should draw back, My soul has no pleasure in him*" },
+  { t = "note", id = "c", text = "Or *faithfulness*; cited in Romans 1:17, Galatians 3:11, and Hebrews 10:38" },
+  { t = "note", id = "d", text = "DSS; MT *wine*" },
+  { t = "note", id = "e", text = "Literally *sinning against your soul*" },
+  { t = "note", id = "f", text = "DSS, LXX, and Syriac *and stagger*" },
+]
+
+[[section]]
+id = "3"
+title = "Habakkuk 3"
+level = 1
+blocks = [
+  { t = "h", level = 2, text = "Habakkuk’s Prayer" },
+  { t = "v", n = 1, p = true, text = "This is a prayer of Habakkuk the prophet, according to Shigionoth:[^a]" },
+  { t = "v", n = 2, indent = 1, p = true, text = "O LORD, I have heard the report of You; I stand in awe, O LORD, of Your deeds. Revive them in these years; make them known in these years. In Your wrath, remember mercy!" },
+  { t = "v", n = 3, indent = 1, p = true, text = "God came from Teman, and the Holy One from Mount Paran. Selah[^b] His glory covered the heavens, and His praise filled the earth." },
+  { t = "v", n = 4, indent = 1, text = "His radiance was like the sunlight; rays flashed from His hand, where His power is hidden." },
+  { t = "v", n = 5, indent = 1, text = "Plague went before Him, and fever followed in His steps." },
+  { t = "v", n = 6, indent = 1, text = "He stood and measured the earth; He looked and startled the nations; the ancient mountains crumbled; the perpetual hills collapsed. His ways are everlasting." },
+  { t = "v", n = 7, indent = 1, p = true, text = "I saw the tents of Cushan in distress; the curtains of Midian were trembling." },
+  { t = "v", n = 8, indent = 1, text = "Were You angry at the rivers, O LORD? Was Your wrath against the streams? Did You rage against the sea when You rode on Your horses, on Your chariots of salvation?" },
+  { t = "v", n = 9, indent = 1, text = "You brandished Your bow; You called for many arrows. Selah You split the earth with rivers." },
+  { t = "v", n = 10, indent = 1, text = "The mountains saw You and quaked; torrents of water swept by. The deep roared with its voice and lifted its hands on high." },
+  { t = "v", n = 11, indent = 1, text = "Sun and moon stood still in their places at the flash of Your flying arrows, at the brightness of Your shining spear." },
+  { t = "v", n = 12, indent = 1, text = "You marched across the earth with fury; You threshed the nations in wrath." },
+  { t = "v", n = 13, indent = 1, text = "You went forth for the salvation of Your people, to save Your anointed. You crushed the head of the house of the wicked and stripped him from head to toe. Selah" },
+  { t = "v", n = 14, indent = 1, text = "With his own spear You pierced his head, when his warriors stormed out to scatter us, gloating as though ready to secretly devour the weak." },
+  { t = "v", n = 15, indent = 1, text = "You trampled the sea with Your horses, churning the great waters." },
+  { t = "v", n = 16, indent = 1, p = true, text = "I heard and trembled within; my lips quivered at the sound. Decay entered my bones; I trembled where I stood. Yet I must wait patiently for the day of distress to come upon the people who invade us." },
+  { t = "h", level = 2, text = "Habakkuk Rejoices" },
+  { t = "v", n = 17, indent = 1, p = true, text = "Though the fig tree does not bud and no fruit is on the vines, though the olive crop fails and the fields produce no food, though the sheep are cut off from the fold and no cattle are in the stalls," },
+  { t = "v", n = 18, indent = 1, text = "yet I will exult in the LORD; I will rejoice in the God of my salvation!" },
+  { t = "v", n = 19, indent = 1, text = "GOD the Lord is my strength; He makes my feet like those of a deer; He makes me walk upon the heights! For the choirmaster. With stringed instruments." },
+  { t = "note", id = "a", text = "*Shigionoth* is probably a musical term indicating the setting for the prayer." },
+  { t = "note", id = "b", text = "*Selah* or *Interlude* is probably a musical or literary term; also in verses 9 and 13." },
+]
