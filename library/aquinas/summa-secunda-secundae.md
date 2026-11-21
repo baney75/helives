@@ -14,8 +14,6 @@ words: 707519
 
 ## Treatise on the Theological Virtues (QQ. 1-46)
 
-### Treatise on the Theological Virtues (QQ. 1-46)
-
 ### Question 1. Of Faith (Ten Articles)
 
 Having to treat now of the theological virtues, we shall begin with Faith, secondly we shall speak of Hope, and thirdly, of Charity.
@@ -6327,8 +6325,6 @@ This suffices for the Reply to the First Objection.
 **Reply to Objection 3:** Anger by reason of its keenness, as stated above (FS, Q[48] , AA[2],3,4), produces a great change in the nature of the body, wherefore it conduces very much to the folly which results from a bodily impediment. On the other hand the folly which is caused by a spiritual impediment, viz. by the mind being plunged into earthly things, arises chiefly from lust, as stated above.
 
 ## Treatise on the Cardinal Virtues (QQ. 47-122)
-
-### Treatise on the Cardinal Virtues (QQ. 47-122)
 
 ### Question 47. Of Prudence, Considered In Itself (Sixteen Articles)
 
@@ -15231,8 +15227,6 @@ Again, corporal works, not pertaining to the spiritual worship of God, are said 
 
 ## Treatise on Fortitude and Temperance (QQ. 123-170)
 
-### Treatise on Fortitude and Temperance (QQ. 123-170)
-
 ### Question 123. Of Fortitude (Twelve Articles)
 
 After considering justice we must in due sequence consider fortitude. We must (1) consider the virtue itself of fortitude; (2) its parts; (3) the gift corresponding thereto; (4) the precepts that pertain to it.
@@ -20237,8 +20231,6 @@ We must next consider the precepts of temperance:
 
 ## Treatise on Gratuitous Graces (QQ. 171-182)
 
-### Treatise on Gratuitous Graces (QQ. 171-182)
-
 ### Question 171. Of Prophecy (Six Articles)
 
 After treating individually of all the virtues and vices that pertain to men of all conditions and estates, we must now consider those things which pertain especially to certain men. Now there is a triple difference between men as regards things connected with the soul's habits and acts. First, in reference to the various gratuitous graces, according to 1 Cor. 12:4, 7: "There are diversities of graces . . . and to one . . . by the Spirit is given the word of wisdom, to another the word of knowledge," etc. Another difference arises from the diversities of life, namely the active and the contemplative life, which correspond to diverse purposes of operation, wherefore it is stated (1 Cor. 12:4, 7) that "there are diversities of operations." For the purpose of operation in Martha, who "was busy about much serving," which pertains to the active life, differed from the purpose of operation in Mary, "who sitting . . . at the Lord's feet, heard His word" (Lk. 10:39,40), which pertains to the contemplative life. A third difference corresponds to the various duties and states of life, as expressed in Eph. 4:11, "And He gave some apostles; and some prophets; and other some evangelists; and other some pastors and doctors": and this pertains to diversity of ministries, of which it is written (1 Cor. 12:5): "There are diversities of ministries."
@@ -21647,8 +21639,6 @@ From this it is also evident that the active precedes the contemplative life, as
 **Reply to Objection 3:** He that is prone to yield to his passions on account of his impulse to action is simply more apt for the active life by reason of his restless spirit. Hence Gregory says (Moral. vi, 37) that "there be some so restless that when they are free from labor they labor all the more, because the more leisure they have for thought, the worse interior turmoil they have to bear." Others, on the contrary, have the mind naturally pure and restful, so that they are apt for contemplation, and if they were to apply themselves wholly to action, this would be detrimental to them. Wherefore Gregory says (Moral. vi, 37) that "some are so slothful of mind that if they chance to have any hard work to do they give way at the very outset." Yet, as he adds further on, "often . . . love stimulates slothful souls to work, and fear restrains souls that are disturbed in contemplation." Consequently those who are more adapted to the active life can prepare themselves for the contemplative by the practice of the active life; while none the less, those who are more adapted to the contemplative life can take upon themselves the works of the active life, so as to become yet more apt for contemplation.
 
 ## Treatise on the States of Life (QQ. 183-189)
-
-### Treatise on the States of Life (QQ. 183-189)
 
 ### Question 183. Of Man's Various Duties and States in General (Four Articles)
 

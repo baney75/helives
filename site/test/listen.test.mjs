@@ -30,3 +30,12 @@ test('verses of several chapters on one page have unique ids, scoped to their ch
   assert.equal(new Set(ids).size, ids.length, `duplicate ids: ${ids.join(' ')}`)
   assert.match(html, /id="2-v1" data-s="2" data-v="1"/)
 })
+
+test('a Book section whose only block repeats its title shows the title once', () => {
+  const sec = { id: 'book-1', title: 'Book I', level: 1, blocks: [{ t: 'h', text: 'Book I' }] }
+  const { html } = renderSections([sec, { id: 'c1', title: 'Chapter 1', level: 2, blocks: [{ t: 'h', text: 'Chapter 1' }, { t: 'p', text: 'Text.' }] }], { fx: false })
+  assert.equal(html.split('Book I').length - 1, 1)
+  assert.equal(html.split('Chapter 1').length - 1, 1)
+  const hidden = renderSections([sec], { fx: false, showTitles: false }).html
+  assert.match(hidden, /Book I/) // with section titles hidden the block is the only title, so it stays
+})
