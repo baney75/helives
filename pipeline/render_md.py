@@ -38,7 +38,9 @@ def render(doc: dict) -> str:
         para: list[str] = []
         notes: list[str] = []
 
-        def flush():
+        def flush(gap=True):
+            if gap and out and out[-1].endswith("  "):
+                out.append("")
             if para:
                 out.append(" ".join(para))
                 out.append("")
@@ -50,12 +52,14 @@ def render(doc: dict) -> str:
             b = dict(b, text=NOTE_REF.sub(lambda m: f"[^{sid}-{m.group(1)}]", b["text"]))
             if t == "v":
                 if b.get("p") or b.get("indent"):
-                    flush()
+                    flush(gap=not b.get("indent"))
                 prefix = " " * int(b.get("indent", 0))
-                piece = f"{prefix}<sup>{b['n']}</sup> {b['text']}"
+                piece = f"{prefix}{b['text']}" if b.get("cont") else f"{prefix}<sup>{b['n']}</sup> {b['text']}"
                 if b.get("indent"):
+                    flush(gap=False)
                     out.append(piece + "  ")
                 else:
+                    flush(gap=True) if out and out[-1].endswith("  ") and not para else None
                     para.append(piece)
             elif t == "h":
                 flush()
@@ -65,7 +69,7 @@ def render(doc: dict) -> str:
                 flush()
                 out += [b["text"], ""]
             elif t == "q":
-                flush()
+                flush(gap=False)
                 out.append(" " * int(b.get("indent", 0)) + b["text"] + "  ")
             elif t == "bq":
                 flush()
@@ -85,7 +89,10 @@ def render(doc: dict) -> str:
 
 
 def main(argv: list[str]) -> int:
-    paths = [Path(a) for a in argv] or sorted(LIBRARY.rglob("*.toml"))
+    paths = []
+    for a in argv or [str(LIBRARY)]:
+        pa = Path(a)
+        paths += sorted(pa.rglob("*.toml")) if pa.is_dir() else [pa]
     n = 0
     for p in paths:
         if p.parent.name in ("catalog", "media"):

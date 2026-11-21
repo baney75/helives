@@ -1,0 +1,26 @@
+[work]
+id = "bsb-psalms"
+title = "Psalms"
+author = "bible"
+collection = "bible"
+license = "Public domain"
+translator = "Berean Standard Bible"
+source_url = "https://bereanbible.com/bsb.txt"
+retrieved = "2026-11-21"
+testament = "OT"
+book_number = 19
+chapters = 150
+
+[[section]]
+id = "23"
+title = "Psalm 23"
+level = 1
+blocks = [
+  { t = "h", text = "The LORD Is My Shepherd" },
+  { t = "v", n = 1, p = true, text = "A Psalm of David. The LORD is my shepherd; I shall not want." },
+  { t = "v", n = 2, text = "He makes me lie down in green pastures; He leads me beside quiet waters." },
+  { t = "v", n = 3, text = "He restores my soul; He guides me in the paths of righteousness for the sake of His name." },
+  { t = "v", n = 4, text = "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me." },
+  { t = "v", n = 5, text = "You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows." },
+  { t = "v", n = 6, text = "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever." },
+]

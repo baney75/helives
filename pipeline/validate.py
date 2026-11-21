@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from libtoml import LIBRARY, count_words  # noqa: E402
 
-COLLECTIONS = {"bible", "creeds", "apostolic", "ante-nicene", "nicene", "aquinas", "gnostic", "encyclicals"}
+COLLECTIONS = {"bible", "apocrypha", "pseudepigrapha", "jewish", "reformation", "creeds", "apostolic", "ante-nicene", "nicene", "medieval", "aquinas", "gnostic", "encyclicals"}
 REQUIRED = ["id", "title", "author", "collection", "order", "edition", "source_url", "retrieved", "license", "license_basis", "words"]
 BLOCK_TYPES = {"h", "p", "q", "v", "bq", "note", "ref"}
 SLUG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
@@ -108,7 +108,10 @@ def check_file(path: Path, ids: dict[str, Path]) -> list[str]:
 
 
 def main(argv: list[str]) -> int:
-    paths = [Path(a) for a in argv] or sorted(LIBRARY.rglob("*.toml"))
+    paths = []
+    for a in argv or [str(LIBRARY)]:
+        pa = Path(a)
+        paths += sorted(pa.rglob("*.toml")) if pa.is_dir() else [pa]
     paths = [p for p in paths if p.parent.name not in ("catalog", "media")]
     ids: dict[str, Path] = {}
     errs: list[str] = []

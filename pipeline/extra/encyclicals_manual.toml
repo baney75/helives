@@ -1,0 +1,71 @@
+# Subjects for letters with no Wikipedia list row, from the subtitle printed on the vatican.va page (url).
+
+[[encyclical]]
+url = "https://www.vatican.va/content/pius-ix/it/documents/epistola-encyclica-ubi-prima-11-martii-1871.html"
+english_title = "On the Armenian Catholic Church"
+subject = "Pope Pius IX writes to the Armenian Catholic patriarch, bishops and faithful."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/pius-ix/it/documents/enciclica-in-magnis-illis-27-dicembre-1873.html"
+english_title = "On the Catholic Church in Holland"
+subject = "Pope Pius IX writes to the Archbishop of Utrecht and the Catholics of Holland."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/pius-xi/la/encyclicals/documents/hf_p-xi_enc_19300420_ad-salutem-humani.html"
+english_title = "On St. Augustine"
+subject = "Pope Pius XI writes on St. Augustine."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_06081964_ecclesiam.html"
+english_title = "On the Church"
+subject = "Pope Paul VI writes on the Church."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_29041965_mense-maio.html"
+english_title = "On Prayers During May for Preservation of Peace"
+subject = "Pope Paul VI writes on prayers during May for the preservation of peace."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_03091965_mysterium.html"
+english_title = "On the Holy Eucharist"
+subject = "Pope Paul VI writes on the Holy Eucharist."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_15091966_christi-matri.html"
+english_title = "On Prayers for Peace During October"
+subject = "Pope Paul VI writes on prayers for peace during October."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_26031967_populorum.html"
+english_title = "On the Development of Peoples"
+subject = "Pope Paul VI writes on the development of peoples."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_24061967_sacerdotalis.html"
+english_title = "On the Celibacy of the Priest"
+subject = "Pope Paul VI writes on the celibacy of the priest."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html"
+english_title = "On the Regulation of Birth"
+subject = "Pope Paul VI writes on the regulation of birth."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html"
+english_title = "On Christian Love"
+subject = "Pope Benedict XVI writes on Christian love."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html"
+english_title = "On Christian Hope"
+subject = "Pope Benedict XVI writes on Christian hope."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20090629_caritas-in-veritate.html"
+english_title = "On Integral Human Development in Charity and Truth"
+subject = "Pope Benedict XVI writes on integral human development in charity and truth."
+
+[[encyclical]]
+url = "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"
+english_title = "On Safeguarding the Human Person in the Time of Artificial Intelligence"
+subject = "Pope Leo XIV writes on safeguarding the human person in the time of artificial intelligence."

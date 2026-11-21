@@ -1,0 +1,60 @@
+# The daily gate's prayers (site/assets/gate.js PARTS), in the library schema, so the audiobook
+# renderer reads them with the library narrator. One `p` block per line shown on the gate:
+# block i of a section is line i of that part, and its timing anchor is b<i>.
+# site/test/gate.test.mjs fails if these lines and gate.js ever differ.
+
+[work]
+id = "gate"
+title = "Prayers before reading"
+author = "book-of-common-prayer"
+collection = "creeds"
+order = 0
+date = "1928"
+language = "English"
+edition = "Book of Common Prayer (1928); Psalm 119:18 from the Berean Standard Bible"
+retrieved = "2026-11-21"
+license = "Public domain"
+license_basis = "Book of Common Prayer published 1928 in the United States; Berean Standard Bible dedicated to the public domain"
+words = 272
+
+[[section]]
+id = "lords-prayer"
+title = "The Lord’s Prayer"
+level = 1
+blocks = [
+  { t = "p", text = "Our Father, who art in heaven, hallowed be thy Name." },
+  { t = "p", text = "Thy kingdom come. Thy will be done, on earth as it is in heaven." },
+  { t = "p", text = "Give us this day our daily bread." },
+  { t = "p", text = "And forgive us our trespasses, as we forgive those who trespass against us." },
+  { t = "p", text = "And lead us not into temptation, but deliver us from evil." },
+  { t = "p", text = "For thine is the kingdom, and the power, and the glory, for ever and ever. Amen." },
+]
+
+[[section]]
+id = "apostles-creed"
+title = "The Apostles’ Creed"
+level = 1
+blocks = [
+  { t = "p", text = "I believe in God the Father Almighty, Maker of heaven and earth:" },
+  { t = "p", text = "And in Jesus Christ his only Son our Lord:" },
+  { t = "p", text = "Who was conceived by the Holy Ghost, Born of the Virgin Mary:" },
+  { t = "p", text = "Suffered under Pontius Pilate, Was crucified, dead, and buried:" },
+  { t = "p", text = "He descended into hell; The third day he rose again from the dead:" },
+  { t = "p", text = "He ascended into heaven, And sitteth on the right hand of God the Father Almighty:" },
+  { t = "p", text = "From thence he shall come to judge the quick and the dead." },
+  { t = "p", text = "I believe in the Holy Ghost: The holy Catholic Church; The Communion of Saints:" },
+  { t = "p", text = "The Forgiveness of sins: The Resurrection of the body: And the Life everlasting. Amen." },
+]
+
+[[section]]
+id = "illumination"
+title = "A prayer for illumination"
+level = 1
+blocks = [
+  { t = "p", text = "Open my eyes that I may see wondrous things from Your law." },
+  { t = "p", text = "Blessed Lord, who hast caused all holy Scriptures to be written for our learning:" },
+  { t = "p", text = "Grant that we may in such wise hear them, read, mark, learn, and inwardly digest them,", run_on = true },
+  { t = "p", text = "that by patience and comfort of thy holy Word, we may embrace, and ever hold fast,", run_on = true },
+  { t = "p", text = "the blessed hope of everlasting life, which thou hast given us in our Saviour Jesus Christ." },
+  { t = "p", text = "Come, Holy Spirit. Guide me into all truth, and make me a doer of the word. Amen." },
+]

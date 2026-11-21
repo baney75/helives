@@ -1,0 +1,23 @@
+# Synthetic test fixture shaped like an NPNF work; the opening sentences are from the
+# public domain Pilkington translation (1886), the rest exercises normalization rules.
+[work]
+id = "augustine-confessions"
+title = "The Confessions"
+author = "augustine"
+collection = "nicene"
+license = "Public domain"
+
+[[section]]
+id = "book-1"
+title = "Book I"
+level = 1
+blocks = [
+  { t = "h", text = "Chapter I.—He Proclaims the Greatness of God" },
+  { t = "p", text = "Great art Thou, O Lord, and greatly to be praised;[^1] great is Thy power, and of Thy wisdom there is no end.[^2] And man, being a part of Thy creation, desires to praise Thee.[^3]" },
+  { t = "note", id = "1", text = "Ps. 145:3." },
+  { t = "note", id = "2", text = "Ps. cxlvii. 5." },
+  { t = "note", id = "3", text = "See note." },
+  { t = "p", text = "As it is written in Rom. v. 8, and cf. 1 Cor. 13:4–7, the word λόγος [Word] is used, i.e. the Son; viz. the same who, A.D. 397, was confessed at the 3rd council. [See Note 4.] Ἰησοῦς Χριστός. Blessed be שָׁלוֹם God—who made us—forever." },
+  { t = "q", text = "O God, Creator of all things," },
+  { t = "q", text = "Who rulest the heavens", indent = 1 },
+]

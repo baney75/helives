@@ -1,0 +1,186 @@
+# Pronunciation lexicon for the He Lives audiobooks.
+#
+# Each [[name]] lists a biblical or patristic name. Two uses:
+#   respell   text the TTS model reads instead of `word`. Leave it empty unless a listening test
+#             or the ASR check shows the model mispronounces the name; respellings change the
+#             reading voice for every occurrence, so add them only with evidence (note it below).
+#   variants  spellings Whisper may write for a correct reading; the WER check maps them to `word`
+#             so a correctly spoken name is not counted as an error.
+#
+# Changing a respelling changes chunk text, so affected chunks re-render on the next batch.
+
+[[name]]
+word = "Melchizedek"
+respell = ""
+variants = ["Melchisedek", "Melchisedec", "Melchizedec", "Melkizedek"]
+
+[[name]]
+word = "Habakkuk"
+respell = ""
+variants = ["Habbakuk", "Habacuc", "Habakuk"]
+
+[[name]]
+word = "Nebuchadnezzar"
+respell = ""
+variants = ["Nebuchadrezzar", "Nebucadnezzar"]
+
+[[name]]
+word = "Ignatius"
+respell = ""
+variants = []
+
+[[name]]
+word = "Chrysostom"
+respell = ""
+variants = ["Chrysostum", "Chrisostom"]
+
+[[name]]
+word = "Nazianzus"
+respell = ""
+variants = ["Nazianzen", "Nazianzos", "Nazienzus"]
+
+[[name]]
+word = "Polycarp"
+respell = ""
+variants = ["Polycarpe"]
+
+[[name]]
+word = "Irenaeus"
+respell = ""
+variants = ["Irenaus", "Ireneus", "Irenæus"]
+
+[[name]]
+word = "Tertullian"
+respell = ""
+variants = []
+
+[[name]]
+word = "Athanasius"
+respell = ""
+variants = []
+
+[[name]]
+word = "Smyrnaeans"
+respell = ""
+variants = ["Smyrneans", "Smyrnæans"]
+
+[[name]]
+word = "Ephesians"
+respell = ""
+variants = []
+
+[[name]]
+word = "Zerubbabel"
+respell = ""
+variants = ["Zerubabel"]
+
+[[name]]
+word = "Mephibosheth"
+respell = ""
+variants = ["Mephiboseth"]
+
+[[name]]
+word = "Jehoshaphat"
+respell = ""
+variants = ["Josaphat", "Jehosaphat"]
+
+[[name]]
+word = "Ahasuerus"
+respell = ""
+variants = ["Ahasueris"]
+
+[[name]]
+word = "Artaxerxes"
+respell = ""
+variants = []
+
+[[name]]
+word = "Methuselah"
+respell = ""
+variants = ["Methusela"]
+
+[[name]]
+word = "Elohim"
+respell = ""
+variants = []
+
+[[name]]
+word = "Selah"
+respell = ""
+variants = ["Sela"]
+
+[[name]]
+word = "Gethsemane"
+respell = ""
+variants = ["Gethsemani"]
+
+[[name]]
+word = "Nicodemus"
+respell = ""
+variants = []
+
+[[name]]
+word = "Bethesda"
+respell = ""
+variants = ["Bethzatha"]
+
+[[name]]
+word = "Cyprian"
+respell = ""
+variants = []
+
+[[name]]
+word = "Origen"
+respell = ""
+variants = []
+
+[[name]]
+word = "Eusebius"
+respell = ""
+variants = []
+
+[[name]]
+word = "Ambrose"
+respell = ""
+variants = []
+
+[[name]]
+word = "Hippo"
+respell = ""
+variants = []
+
+[[name]]
+word = "Manichaeans"
+respell = ""
+variants = ["Manicheans", "Manichæans"]
+
+# British spellings in the 19th-century translations vs. the American spellings Whisper writes.
+[spelling]
+honour = "honor"
+saviour = "savior"
+labour = "labor"
+favour = "favor"
+colour = "color"
+neighbour = "neighbor"
+behaviour = "behavior"
+splendour = "splendor"
+fervour = "fervor"
+vigour = "vigor"
+ardour = "ardor"
+rumour = "rumor"
+harbour = "harbor"
+endeavour = "endeavor"
+labours = "labors"
+honours = "honors"
+neighbours = "neighbors"
+honoured = "honored"
+favoured = "favored"
+laboured = "labored"
+judgement = "judgment"
+centre = "center"
+theatre = "theater"
+sepulchre = "sepulcher"
+defence = "defense"
+offence = "offense"
+grey = "gray"
+oh = "o"

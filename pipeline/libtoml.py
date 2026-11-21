@@ -19,7 +19,7 @@ WORK_FIELD_ORDER = [
     "translator", "edition", "source_url", "source_sha256", "retrieved", "license",
     "license_basis", "testament", "book_number", "chapters", "verses", "words", "summary",
 ]
-BLOCK_FIELD_ORDER = ["t", "n", "id", "level", "indent", "p", "text"]
+BLOCK_FIELD_ORDER = ["t", "n", "id", "level", "indent", "p", "cont", "text"]
 
 
 def slugify(s: str) -> str:

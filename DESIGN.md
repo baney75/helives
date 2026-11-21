@@ -1,114 +1,135 @@
 # He Lives design
 
-Visual thesis for [helives.dev](https://helives.dev). Brand locked at SHA `eebc74f` (Latin cross with a point of light, whole-canon Scriptures index). Tokens live in `src/index.css`. In Cursor, load `gs-design`, then `.cursor/skills/helives-design`.
-
-This is a ministry site. Rams still applies: useful, honest, as little design as possible. It does not apply as “look like Linear.” Do not import SaaS card grids, pill clusters, or Inter.
+The design of the library at [helives.dev](https://helives.dev). Every value here comes from `site/assets/site.css`, `site/assets/prefs.js` and `site/lib/layout.mjs`. If this file and the code disagree, the code wins; fix this file.
 
 ## Thesis
 
-**Light in darkness.** Night field, one gold, one dawn spark. The first viewport is brand + one verse + one sentence + two actions. The 3D canvas is the later Genesis room, not a decorative blob behind the home copy.
+**Light in darkness, made for long reading.** A night field, parchment text, one gold accent. The text is the product. Chrome stays quiet, small and out of the way. Rams applies: useful, honest, as little design as possible.
 
-Mood: reverent, quiet, specific. Not cute. Not cinematic-trailer chrome on the marketing pages. Not a dashboard.
+Mood: reverent, quiet, specific. Not a dashboard, not a SaaS landing page, not a card grid.
 
-## Tokens (do not freelance)
+## Tokens
 
-| Token | Value | Use |
-|-------|-------|-----|
-| `--void` | `#07060a` | Page, canvas fog, favicon ground |
-| `--ink` | `#ece6d8` | Primary text (parchment, not pure white) |
-| `--muted` | `#9a9184` | Secondary text |
-| `--fire` | `#e8b86d` | Accent, links, live book titles, mark, primary button |
-| `--dawn` | `#fff4d6` | Point of light in the mark; set-apart words |
-| `--speech` | `#d06050` | Words of Christ (red letter) |
-| `--speech-lit` | `#e07a6a` | Set-apart words inside speech |
-| `--ground` | `#1a1008` | Text on gold buttons |
-| `--glass` | `rgba(7, 6, 10, 0.62)` | HUD readouts only |
-| `--line` | `rgba(236, 230, 216, 0.14)` | Hairline rules |
-| `--display` | Cormorant Garamond 500/600 | Wordmark, H1, book titles |
-| `--serif` | Source Serif 4 400/400i/600 | Body |
-| `--mono` | ui-monospace | Kickers, quality readouts |
-| Spacing | 4 / 8 / 12 / 16 / 24 / 32 / 48 | `--space-1` … `--space-7` |
+All colors are theme variables set in the `:root` block and the `[data-theme]` blocks at the top of `site.css`. Components use `var(--...)` only. No raw hex anywhere else in the CSS, except the `@media print` override.
 
-Two families. Gold is the only chrome accent. Liturgical red is reserved for the words of Christ. Self-hosted woffs in `public/fonts/` (OFL). Do not call Google Fonts.
+Night (the brand, and the `:root` default):
 
-Do not install Canvas UI (`npx shadcn add @canvas-ui/*`). Experimental HTML-in-canvas, Commons Clause. Take pause-offscreen and reduced-motion discipline only.
+| Token | Night | Use |
+| --- | --- | --- |
+| `--bg` | `#07060a` | Page ground |
+| `--surface` | `#121016` | Sheets, inputs, image placeholders |
+| `--ink` | `#ece6d8` | Text (parchment, not pure white) |
+| `--muted` | `#a39a8c` | Secondary text, meta, verse numbers |
+| `--accent` | `#e8b86d` | Gold: links, kickers, primary button, the mark |
+| `--accent-ink` | `#1a1008` | Text on gold |
+| `--line` | `rgba(236, 230, 216, 0.14)` | Hairline rules and borders |
+| `--dawn` | `#fff4d6` | The point of light in the mark |
+| `--mark` | `rgba(232, 184, 109, 0.16)` | Soft highlight: target verse, read aloud, ruler, chosen option |
+| `--focus` | `#e8b86d` | Focus outline |
 
-Contrast: ink on void, fire on void, and `--speech` on void must stay WCAG AA. Do not drop body to `--muted` at small sizes on busy 3D.
-
-## Mark
-
-Latin cross with a point of light at the crossing: empty tomb / resurrection, not a stock lucide cross.
-
-- Geometry: `src/site/BrandMark.tsx` and `/favicon.svg` (16×16, gold bars, dawn square at the joint).
-- Nav: 22px framed. Home hero: 48px framed.
-- Framed = void fill + gold stroke. Unframed = `currentColor` (fire in nav).
-- Do not replace with an icon font, emoji, or a different cross.
+Spacing: `--s1` to `--s8` are 4, 8, 12, 16, 24, 32, 48 and 64 px. Radii: `--r1` 6px, `--r2` 10px.
 
 ## Type
 
-- Home H1 is the brand name at display size (`clamp(64px, 14vw, 120px)`), not a slogan that overpowers it.
-- Verse under the name: Cormorant italic (hosted 500/600 italic woffs, not a faux oblique). Citation in muted kicker case.
-- Body 17–18px, line-height ~1.55–1.65, measure ~42em on docs, ~52rem site column, ~68rem on `/scriptures`.
-- Kickers: uppercase, wide tracking, `--fire`, 10–11px. One kicker per section.
-- If deleting 30% of the copy improves the page, keep deleting.
+| Token | Face | Use |
+| --- | --- | --- |
+| `--display` | Cormorant Garamond 500 and 600 | Wordmark, h1 to h3, headings inside the text |
+| `--serif` | Source Serif 4 (variable) | Body and the default reading font |
+| `--sans` | Atkinson Hyperlegible Next (variable) | The "Hyperlegible" reading font |
+| `--dyslexic` | OpenDyslexic 400 and 700 | The "OpenDyslexic" reading font |
+| `--ui` | system-ui | Controls, meta, crumbs, notes |
+| `--mono` | ui-monospace | `kbd` only |
 
-## Surfaces
+- Fonts are self-hosted in `/fonts/` (OFL). Never call Google Fonts or another font CDN.
+- `h1` is `clamp(40px, 7vw, 64px)`; the home hero is `clamp(56px, 12vw, 104px)`; reader page titles are `clamp(36px, 6vw, 56px)`.
+- Kickers: 12px, uppercase, 0.12em tracking, gold. One per section.
+- Reading text uses `--read-font`, `--fs`, `--lh`, `--ls`, `--ws` and `--measure`, all set by the reader's settings.
 
-| Surface | Pattern |
-|---------|---------|
-| Home | One 100svh lamp (100vh fallback): mark, He Lives, this hour’s KJV (words of Christ in red), an authored one-line motif, Explore more, new scripture every hour, He Lives · NeoRome and the KJV public-domain line. No page scroll. No clipped footer. No Lucide furniture. No cards. No wash. No church button. |
-| Scriptures | Typographic index: testament → division → book row (title + status). Live titles are fire links. Forthcoming is named, not a grey card. |
-| Faith / afterword | Narrow `doc`. Headings in Cormorant. Sources as a list, not tiles. |
-| Genesis HUD | Fixed canvas `z-index: 0`. HUD `z-index: 10`. Gradients keep text readable. Transport 44px targets. |
-| Cinematic | Captions only. Locked camera. Brand stays Cormorant. |
+## Themes
 
-No card-grid home. No “feature” icon row. No floating badges on the hero.
+Set as `data-theme` on `<html>` by `prefs.js` before first paint, so there is no flash.
 
-## 3D inheritance
+| Theme | Ground | Purpose |
+| --- | --- | --- |
+| Match device (default) | Night when the device is dark, Paper when it is light | Follows `prefers-color-scheme` |
+| Night | `#07060a` | The brand |
+| Dusk | `#1d1b20` | Low contrast, no pure black or white, for light sensitivity and visual snow |
+| Paper | `#f7f2e8` | Light reading |
+| Sepia | `#eadcc2` | Warm light reading |
+| High contrast | `#000`, text `#fff`, accent `#ffd34d` | Low vision |
 
-Canvas background is `--void`. Light is warm (`#ffd28a` / fire / dawn), not neon purple. Fog is void.
+Every theme defines the full token set. Keep text and links at WCAG AA or better on `--bg` in every theme.
 
-Garden and Fall are the quality bar for later narrative scenes: readable as *those* scenes, not generic trees and a squiggle. Instanced primitives are allowed as a blockout. Shipping a later book still as icosahedron canopies and capsule people is a known debt, not a style.
+## Focus bold
 
-Later books inherit this night/gold grammar. A Gospel night can be quieter. Revelation may use more fire. Do not invent a second palette (no maroon-from-another-project, no corporate blue).
+- The build wraps the first part of every word in `<b>` (`fixate()` in `site/lib/html.mjs`): 1 letter for words of up to 3, 2 for words of 4 or 5, 40% rounded up for longer words.
+- It is done at build time, so there is no flash and no script cost.
+- The setting only changes weight through `data-fx`: On 600, Light 520, Strong 720, Off inherits the normal weight.
+- Headings and verse numbers keep their own weight.
 
-Motion: slow auto-rotate off cinematic; respect `prefers-reduced-motion`; 2–3 motions max on site pages (none required on Faith). Bloom only on medium/high Genesis quality.
+## Reading settings
 
-## Favicon and share
+Defaults live in `site/assets/prefs.js` and are stored in `localStorage` under `hl:prefs`. Nothing leaves the device.
 
-| File | Rule |
-|------|------|
-| `/favicon.svg` | Same geometry as BrandMark. Void ground, fire cross, dawn joint. |
-| `/favicon-32.png` | Raster of the SVG. Regenerate with `pnpm brand` after mark changes. |
-| `/apple-touch-icon.png` | Same mark, larger. |
-| `/mask-icon.svg` | Monochrome; `color="#e8b86d"` in `index.html`. |
-| `/og.png` | 1200×630. Night field, mark, “He Lives”, no screenshot of the HUD, no fake UI chrome. |
-| theme-color | `#07060a` |
+| Setting | Values | Default |
+| --- | --- | --- |
+| Focus bold | On, Light, Strong, Off | On |
+| Theme | Match device, Night, Dusk, Paper, Sepia, High contrast | Match device |
+| Font | Serif, Hyperlegible, OpenDyslexic | Serif |
+| Text size | 15 to 30 px | 19 px |
+| Line spacing | 1.4 to 2.4 | 1.7 |
+| Letter spacing | 0 to 0.12 em | 0 |
+| Word spacing | 0 to 0.4 em | 0 |
+| Line length | 26 to 48 rem | 38 rem |
+| Bible layout | Paragraphs, one verse per line | Paragraphs |
+| Verse numbers | Show, Hide | Show |
+| Footnotes | Show, Hide | Show |
+| Reading ruler | Off, highlight band, dim the rest | Off |
 
-Do not point og:image at a CDN or a generated Imagine file. Public share art is a designed still, committed and compressed.
+The settings sheet shows a live sample line. "Reset to defaults" clears them.
 
-## Anti-slop
+Background sound lives in its own sheet: brown, pink and white noise, rain, stream, fireplace and wind, with volume and a 15, 30 or 60 minute timer. `site/assets/sounds.js` makes them with the Web Audio API from generated noise. No audio files. Changes are slow and gentle, never sudden or loud.
 
-- No Inter, Roboto, system-ui as the face of the site.
-- No purple gradients, glassmorphism on marketing pages, or “AI SaaS” cards.
-- No stock crosses, doves, or sunrise photographs as the brand.
-- No “unlock your potential” ministry slogans. Invitation is: go to church, hear the Word, live for Jesus Christ.
-- No fake 66-book library of empty tiles.
-- Particle fields and bloom never win over the verse. Hour transitions leave no wash, card, or leftover motion.
+## Layout
 
-## Later books
+Design for a 390px phone first, then check 1280.
 
-When Exodus (or any book) ships:
+- Header: sticky, 56px minimum, max width 90rem. Brand, breadcrumbs, then Search, Sound and Reading. At 640px and below the tool labels and the wordmark text hide; icons stay.
+- Index pages: `.wrap` at 72rem; `.narrow` at 44rem for About and similar.
+- Library shelves and the Bible's two testaments: one column, two at 860px and up.
+- Reader under 1100px: one column, text at `--measure`, and a fixed bottom dock with Back, Listen (when audio exists), Reading, Sound and Next in thumb reach.
+- Reader at 1100px and up: contents (15rem) | text (`--measure`) | rail for art, maps, video and downloads (18rem). Contents and rail are sticky. The dock hides; Listen and Print sit under the title.
+- Every control is at least 44px tall; dock buttons 52px.
+- No sideways scroll at any width. `scripts/shots.mjs` fails on it.
 
-1. Keep tokens. Do not theme-switch the chrome.
-2. Home stays He Lives. The book lives at `/{slug}`.
-3. Scriptures row flips to live (fire link) only when the route works.
-4. Interactive books follow Genesis: canvas + HUD + KJV + voice. Reading books may be type-first; they still use this type, this night, this mark.
-5. Prove with 375 and 1280 screenshots against `docs/targets/` if a still exists.
-6. Visual ship requires an independent visual judge (not the implementer). See AGENTS.md critics and `.cursor/skills/helives-gauntlet`.
+## Motion
+
+- No animations and no transitions. Do not add `@keyframes`, `transition` or `animation`.
+- Smooth scrolling is on only under `prefers-reduced-motion: no-preference`. The audio player's scroll follows the same rule.
+- Highlights (target verse, the verse being read, the ruler) are a still `--mark` band. They never pulse, fade or slide.
+- Videos load only when the reader presses play.
+
+## Print
+
+- Every work has a print page (`/bible/<book>/print/`, `/read/<id>/print/`) with the whole text; `?print=1` opens the print dialog once fonts load.
+- `@media print` sets black on white, hides the header, dock, contents, rail, pager, footer, ruler and dialogs, and sets text to 11.5pt with 18mm by 16mm margins.
+- Headings never end a page; paragraphs keep 3 lines for orphans and widows.
+
+## The mark and share images
+
+- The mark is a Latin cross with a point of light at the crossing: gold bars, a `--dawn` square at the joint. Source: `brandMark()` in `site/lib/icons.mjs` and `public/favicon.svg`.
+- After changing the mark, run `node scripts/render-brand.mjs` to redraw the favicon PNG, apple touch icon and `og.png`.
+- `og.png` stays 1200 by 630: night field, mark, "He Lives". No screenshots or fake UI.
+- `theme-color` is `#07060a`.
+
+## Do not
+
+- Card grids, stat tiles, badges or icon rows for decoration.
+- Inter, Roboto or system-ui as the face of the reading text.
+- Purple gradients, glass panels, a second palette for one section.
+- Stock crosses, doves or sunrise photos as the brand.
+- Empty shelves or "coming soon" entries for works that are not in `library/`.
 
 ## Proof
 
-`device-verification`: 375 and 1280, console 0. Home must still read as He Lives with the nav removed. Scriptures must remain a list, not a grid of cards.
-
-The implementer captures screenshots as evidence. The **visual critic** (separate subagent, different model when available, no implementer chat) compares them to this thesis and to `docs/targets/`. “Looks good to me” from the agent that designed the page is not proof.
+Screenshots at 390 and 1280, light and dark, from `scripts/shots.mjs`, and `scripts/check-ui.mjs` passing. The agent that made the change does not judge them; an independent critic does. See `.cursor/skills/helives-gauntlet/SKILL.md`.

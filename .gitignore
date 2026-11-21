@@ -42,3 +42,4 @@ __pycache__/
 pipeline/cache/
 __pycache__/
 *.toml.tmp
+build/
