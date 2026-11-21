@@ -173,7 +173,8 @@ FAILED_CHECK = {
     "iii.xxv": "On the Life of Moses, Book 1: 'vast number of bodies' (Bohn: 'vast numbers of bodies')",
     "iii.xl": "On Providence, Fragment 2: 'as an act of relentless' (Bohn: 'as the act of relentless')",
 }
-# These ten are now included: the full two-scan correction (correct()) restores the Bohn readings.
+# Held out until a two-scan correction restores the Bohn readings: their CCEL text carries 1993 wording.
+HELD = {_did: TREATISES.pop(_did) for _did in FAILED_CHECK}
 
 TREATISES["iii.xli"] = (
     "on-the-embassy-to-gaius", "On the Embassy to Gaius", "Embassy to Gaius",
