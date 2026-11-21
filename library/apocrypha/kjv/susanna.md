@@ -13,7 +13,7 @@ words: 1470
 
 # The History of Susanna
 
-> The story of Susanna, falsely accused by two elders and saved by the young Daniel, which the Greek text adds to Daniel. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
+> The story of Susanna, falsely accused by two elders and saved by the young Daniel, which the Greek text adds to Daniel. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
 
 ## Susanna 1
 

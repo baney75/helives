@@ -37,12 +37,6 @@ class Chunker(unittest.TestCase):
             self.assertNotIn(gone, body)
         self.assertIn("morning, the first day.", body)           # em dash -> comma pause
 
-    def test_book_title_read_once(self):
-        w = {"id": "w", "title": "W", "collection": "medieval", "sections": []}
-        s = {"id": "book-1", "title": "Book One", "level": 1, "blocks": [{"t": "h", "text": "Book One"}]}
-        p = prep.plan_section(w, s, prep.Lexicon.load())
-        self.assertEqual(" ".join(c.ref_text for c in p.chunks).count("Book One"), 1)
-
     def test_limits_and_whole_sentences(self):
         for path in (FIX / "bible/bsb/01-genesis.toml", FIX / "bible/bsb/19-psalms.toml"):
             _, p = plan(path)

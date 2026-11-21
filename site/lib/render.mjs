@@ -43,14 +43,6 @@ export function pageLabel(w, p) {
   return `${shortTitle(tops[0].title)} to ${shortTitle(tops[tops.length - 1].title)}`
 }
 
-// A section with no text of its own (a Book or Part heading) carries its title as its only block so the
-// data stays valid. The title is already shown and read, so that block is skipped. Returns its index or -1.
-export function titleEcho(s) {
-  const i = s.blocks.findIndex((b) => b.t !== 'note')
-  const b = s.blocks[i]
-  return b && b.t === 'h' && String(b.text).trim() === String(s.title).trim() ? i : -1
-}
-
 export function renderSections(sections, { bible = false, showTitles = true, fx = true, firstLevel = 1 } = {}) {
   const out = []
   const notes = []
@@ -66,9 +58,7 @@ export function renderSections(sections, { bible = false, showTitles = true, fx 
       if (openP) out.push('</p>')
       openP = false
     }
-    const echo = showTitles ? titleEcho(s) : -1
     for (const [i, b] of s.blocks.entries()) {
-      if (i === echo) continue
       const bid = `${esc(sid)}:${i}` // matches the audio timing anchors b<i> of section sid
       switch (b.t) {
         case 'v': {

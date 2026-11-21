@@ -437,13 +437,9 @@ def _paragraphs(work: dict, section: dict, bible: bool):
     prev_t = None
     heading_break = False
     run_on = False
-    blocks = section.get("blocks", [])
-    first = next((j for j, x in enumerate(blocks) if x["t"] != "note"), -1)
-    # A Book or Part section repeats its title as its only heading; the title is already read.
-    echo = first if first >= 0 and blocks[first]["t"] == "h" and blocks[first]["text"].strip() == str(section.get("title", "")).strip() else -1
-    for i, b in enumerate(blocks):
+    for i, b in enumerate(section.get("blocks", [])):
         t = b["t"]
-        if t in ("note", "ref") or i == echo:
+        if t in ("note", "ref"):
             continue
         if t == "h" and bible:
             heading_break = True  # BSB headings are editorial: not read, but end the paragraph

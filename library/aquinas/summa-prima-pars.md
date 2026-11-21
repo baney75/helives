@@ -14,6 +14,8 @@ words: 490129
 
 ## Treatise on Sacred Doctrine (Q. 1)
 
+### Treatise on Sacred Doctrine (Q. 1)
+
 ### Question 1. The Nature and Extent of Sacred Doctrine (Ten Articles)
 
 To place our purpose within proper limits, we first endeavor to investigate the nature and extent of this sacred doctrine. Concerning this there are ten points of inquiry:
@@ -187,6 +189,8 @@ To place our purpose within proper limits, we first endeavor to investigate the 
 **Reply to Objection 3:** The parabolical sense is contained in the literal, for by words things are signified properly and figuratively. Nor is the figure itself, but that which is figured, the literal sense. When Scripture speaks of God's arm, the literal sense is not that God has such a member, but only what is signified by this member, namely operative power. Hence it is plain that nothing false can ever underlie the literal sense of Holy Writ.
 
 ## Treatise on the One God (QQ. 2-26)
+
+### Treatise on the One God (QQ. 2-26)
 
 ### Question 2. The Existence of God (Three Articles)
 
@@ -3640,6 +3644,8 @@ We have now spoken enough concerning what pertains to the unity of the divine es
 
 ## Treatise on the Most Holy Trinity (QQ. 27-43)
 
+### Treatise on the Most Holy Trinity (QQ. 27-43)
+
 ### Question 27. The Procession of the Divine Persons (Five Articles)
 
 Having considered what belongs to the unity of the divine essence, it remains to treat of what belongs to the Trinity of the persons in God. And because the divine Persons are distinguished from each other according to the relations of origin, the order of the doctrine leads us to consider firstly, the question of origin or procession; secondly, the relations of origin; thirdly, the persons.
@@ -5585,6 +5591,8 @@ The answers to the objections appear from the above.
 
 ## Treatise on the Creation (QQ. 44-46)
 
+### Treatise on the Creation (QQ. 44-46)
+
 ### Question 44. The Procession of Creatures From God, and of the First Cause of all Things (Four Articles)
 
 After treating of the procession of the divine persons, we must consider the procession of creatures from God. This consideration will be threefold: (1) of the production of creatures; (2) of the distinction between them; (3) of their preservation and government. Concerning the first point there are three things to be considered: (1) the first cause of beings; (2) the mode of procession of creatures from the first cause; (3) the principle of the duration of things.
@@ -5989,6 +5997,8 @@ Hence this reason which is given by Aristotle (De Coelo i, text 120) does not pr
 
 ## Treatise on the Distinction of Things in General (Q. 47)
 
+### Treatise on the Distinction of Things in General (Q. 47)
+
 ### Question 47. Of The Distinctionn of Things In General (Three Articles)
 
 #### OF THE DISTINCTION OF THINGS IN GENERAL (THREE ARTICLES)
@@ -6070,6 +6080,8 @@ Therefore it must be said that as the wisdom of God is the cause of the distinct
 **Reply to Objection 3:** The world is composed of the whole of its matter. For it is not possible for there to be another earth than this one, since every earth would naturally be carried to this central one, wherever it was. The same applies to the other bodies which are part of the world.
 
 ## Treatise on the Distinction of Good and Evil (QQ. 48-49)
+
+### Treatise on the Distinction of Good and Evil (QQ. 48-49)
 
 ### Question 48. The Distinction of Things in Particular (Six Articles)
 
@@ -6328,6 +6340,8 @@ Likewise, because they found two contrary particular causes of two contrary part
 **Reply to Objection 6:** In the causes of evil we do not proceed to infinity, but reduce all evils to some good cause, whence evil follows accidentally.
 
 ## Treatise on the Angels (QQ. 50-64)
+
+### Treatise on the Angels (QQ. 50-64)
 
 ### Question 50. Of The Substance of The Angels Absolutely Considered (Five Articles)
 
@@ -8061,6 +8075,8 @@ Consequently, it must be said that, although a heavenly place belongs to the glo
 
 ## Treatise on the Work of the Six Days (QQ. 65-74)
 
+### Treatise on the Work of the Six Days (QQ. 65-74)
+
 ### Question 65. The Work of Creation of Corporeal Creatures (Four Articles)
 
 From the consideration of spiritual creatures we proceed to that of corporeal creatures, in the production of which, as Holy Scripture makes mention, three works are found, namely, the work of creation, as given in the words, "In the beginning God created heaven and earth"; the work of distinction as given in the words, "He divided the light from the darkness, and the waters that are above the firmament from the waters that are under the firmament"; and the work of adornment, expressed thus, "Let there be lights in the firmament."
@@ -8887,6 +8903,8 @@ If, however, these two explanations are looked at as referring to the mode of pr
 [^q74-a3-1]: Perplex. ii.
 
 ## Treatise on Man (QQ. 75-102)
+
+### Treatise on Man (QQ. 75-102)
 
 ### Question 75. Of Man Who is Composed of a Spiritual and a Corporeal Substance: And in the First Place, Concerning What Belongs to the Essence of the Soul (Seven Articles)
 
@@ -12324,6 +12342,8 @@ In the same way I reply to the second objection, for those places befit those an
 **Reply to Objection 3:** Woman was made in paradise, not by reason of her own dignity, but on account of the dignity of the principle from which her body was formed. For the same reason the children would have been born in paradise, where their parents were already.
 
 ## Treatise on the Conservation and Government of Creatures (QQ. 103-119)
+
+### Treatise on the Conservation and Government of Creatures (QQ. 103-119)
 
 ### Question 103. Of the Government of Things in General (Eight Articles)
 

@@ -13,7 +13,7 @@ words: 5091
 
 # Baruch
 
-> A book attributed to Baruch, Jeremiah's scribe, with a confession of sin, a poem on wisdom and words of comfort for Jerusalem; chapter 6 is the Epistle of Jeremy, a warning against idols. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
+> A book attributed to Baruch, Jeremiah's scribe, with a confession of sin, a poem on wisdom and words of comfort for Jerusalem; chapter 6 is the Epistle of Jeremy, a warning against idols. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
 
 ## Baruch 1
 

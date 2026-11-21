@@ -13,7 +13,7 @@ words: 20432
 
 # The Second Book of Esdras
 
-> A Jewish apocalypse (chapters 3 to 14) in which Ezra questions an angel about the suffering of Israel after the fall of Jerusalem, framed by later Christian chapters. It is not in the Catholic canon (it stands in an appendix to the Vulgate) or the Greek Orthodox canon, and it is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
+> A Jewish apocalypse (chapters 3 to 14) in which Ezra questions an angel about the suffering of Israel after the fall of Jerusalem, framed by later Christian chapters. It is not in the Catholic canon (it stands in an appendix to the Vulgate) or the Greek Orthodox canon, and it is outside the Protestant canon.
 
 ## 2 Esdras 1
 

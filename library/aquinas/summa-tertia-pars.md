@@ -22,6 +22,8 @@ Concerning the first, a double consideration occurs: the first, about the myster
 
 ## Treatise on the Incarnation (QQ. 1-59)
 
+### Treatise on the Incarnation (QQ. 1-59)
+
 ### Question 1. Of the Fitness of the Incarnation (Six Articles)
 
 Concerning the first, three things occur to be considered: first, the fitness of the Incarnation; secondly, the mode of union of the Word Incarnate; thirdly, what follows this union.
@@ -8113,6 +8115,8 @@ Let what has been said of the Mystery of His Incarnation suffice for the present
 [^q59-a6-1]: The words "subject namely to Christ" are from a gloss
 
 ## Treatise on the Sacraments (QQ. 60-90)
+
+### Treatise on the Sacraments (QQ. 60-90)
 
 ### Question 60. What Is a Sacrament? (Eight Articles)
 

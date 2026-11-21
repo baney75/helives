@@ -99,6 +99,8 @@ Therefore we shall now take up the abovementioned articles one by one and in the
 
 ## Part First. The Ten Commandments
 
+### Part First. The Ten Commandments
+
 ### The First Commandment
 
 *Thou shalt have no other gods before Me.*

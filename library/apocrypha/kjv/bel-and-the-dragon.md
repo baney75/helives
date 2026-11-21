@@ -13,7 +13,7 @@ words: 1089
 
 # The History of the Destruction of Bel and the Dragon
 
-> Two stories, added to Daniel in the Greek text, in which Daniel exposes the priests of the idol Bel and slays the dragon worshipped in Babylon. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
+> Two stories, added to Daniel in the Greek text, in which Daniel exposes the priests of the idol Bel and slays the dragon worshipped in Babylon. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
 
 ## Bel and the Dragon 1
 

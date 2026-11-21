@@ -13,7 +13,7 @@ words: 28827
 
 # The Wisdom of Jesus the Son of Sirach, or Ecclesiasticus
 
-> Proverbs and instruction by Jesus the son of Sirach of Jerusalem, translated into Greek by his grandson, ending with the praise of famous men. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
+> Proverbs and instruction by Jesus the son of Sirach of Jerusalem, translated into Greek by his grandson, ending with the praise of famous men. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
 
 ## Ecclesiasticus 1
 

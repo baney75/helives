@@ -13,7 +13,7 @@ words: 1406
 
 # The Song of the Three Holy Children
 
-> The prayer of Azarias and the hymn of the three young men in the furnace, which the Greek text of Daniel places after Daniel 3:23. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
+> The prayer of Azarias and the hymn of the three young men in the furnace, which the Greek text of Daniel places after Daniel 3:23. It is received as deuterocanonical by the Catholic and Orthodox churches and is outside the Protestant canon.
 
 ## Song of the Three Children 1
 

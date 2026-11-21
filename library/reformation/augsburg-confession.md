@@ -37,6 +37,8 @@ In the event, therefore, that in this matter of religion the differences between
 
 ## Part First. Chief Articles of Faith
 
+### Part First. Chief Articles of Faith
+
 ### Articles I-XIX
 
 #### Art. I.—Of God
