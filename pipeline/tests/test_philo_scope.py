@@ -3,12 +3,14 @@ corrects every treatise word by word against two Bohn scans, compares the result
 and holds any treatise with a difference left that is not OCR noise (pipeline/extra3/philo-gate.tsv)."""
 from __future__ import annotations
 
+import collections
 import csv
 import sys
 import tempfile
 import tomllib
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "pipeline" / "extra3"))
@@ -62,6 +64,7 @@ class PhiloScopeTest(unittest.TestCase):
             self.assertEqual(ingest_philo.refuse([old], [new], [False], vocab, agreed=False), why, (old, new))
         self.assertEqual(ingest_philo.refuse(["these"], ["fhese"], [False], vocab, agreed=True), "not a word")
 
+    @mock.patch.object(ingest_philo, "HOLD_ALL", "")  # the residual check itself, with the blanket hold off
     def test_a_treatise_with_an_unexplained_residual_is_held(self) -> None:
         bohn = ("Now these things being so, we must consider the nature of the soul with great care, "
                 "and those who love wisdom will follow the argument to its end and rejoice in it. ")
@@ -89,8 +92,8 @@ class PhiloScopeTest(unittest.TestCase):
             st, rows = ingest_philo.residual(changed, a, c, vocab)
             self.assertEqual((st["unexplained"], st["scans disagree"]), (0, 1))
 
+    @mock.patch.object(ingest_philo, "HOLD_ALL", "")  # the residual check itself, with the blanket hold off
     def test_gate_too_much_uncompared_text_is_held(self) -> None:
-        import collections
         st = collections.Counter(words=1000, unanchored=int(1000 * ingest_philo.UNANCHORED_MAX) + 1)
         self.assertIn("not compared", ingest_philo.gate(st))
         st["unanchored"] = int(1000 * ingest_philo.UNANCHORED_MAX)
@@ -117,6 +120,13 @@ class PhiloScopeTest(unittest.TestCase):
                 self.assertNotIn(slug, written, f"{slug} is held but still written")
                 self.assertNotIn(title, catalog, f"catalog summary lists held {title}")
         self.assertEqual(written, {r["slug"] for r in rows.values() if r["status"] == "published"})
+
+    def test_hold_all_publishes_no_philo(self) -> None:
+        # Until a hand review settles philo-residual.tsv, no treatise may pass the gate, even a clean one.
+        self.assertTrue(ingest_philo.HOLD_ALL)
+        self.assertIn(ingest_philo.HOLD_ALL, ingest_philo.gate(collections.Counter(words=1000)))
+        self.assertEqual(list(PHILO.glob("*.toml")), [])
+        self.assertEqual({r["status"] for r in gate_rows().values()}, {"held"})
 
     def test_dropped_treatises_are_not_written(self) -> None:
         self.assertEqual(set(ingest_philo.DROPPED) & set(ingest_philo.TREATISES), set())

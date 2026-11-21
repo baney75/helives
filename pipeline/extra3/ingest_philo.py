@@ -719,9 +719,14 @@ GATE = HERE / "philo-gate.tsv"  # every treatise: residual counts and published 
 RESIDUAL = HERE / "philo-residual.tsv"  # every unexplained difference, for review by hand
 
 
+# Review of #14, round 2: this residual check can miss 1993 wording (scans that disagree with each other, and
+# added text that never anchors). Every treatise is held until a hand review settles philo-residual.tsv.
+HOLD_ALL = "held for hand review: the residual check can miss 1993 wording"
+
+
 def gate(st: collections.Counter) -> str:
     """Why a treatise is held from publication, or "" when it may be published."""
-    why = []
+    why = [HOLD_ALL] if HOLD_ALL else []
     if st["unexplained"]:
         why.append(f"{st['unexplained']} unexplained difference(s) from both Bohn scans")
     share = st["unanchored"] / max(1, st["words"])
