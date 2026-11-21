@@ -24,7 +24,7 @@
     if (t) { e.preventDefault(); openSheet(t.getAttribute('data-open')); return }
     var c = e.target.closest('[data-close]')
     if (c) { c.closest('dialog').close(); return }
-    if (e.target.tagName === 'DIALOG') e.target.close() // backdrop click
+    if (e.target.tagName === 'DIALOG' && e.target.id !== 'gate') e.target.close() // backdrop click; the gate stays
   })
 
   // ---------- reading settings ----------
@@ -293,7 +293,6 @@
 
   // ---------- the daily gate ----------
   if (document.documentElement.getAttribute('data-gate') === 'due') {
-    window.HLGateShown = true
     import('/assets/gate.js?v=' + V).then(function (m) { m.show() }).catch(function () { document.documentElement.removeAttribute('data-gate') })
   }
 

@@ -68,6 +68,7 @@ function pass() {
 }
 
 export function show() {
+  window.HLGateShown = true // prefs.js reveals the page after 5 s only if the gate never showed
   const root = document.documentElement
   const words = PARTS.reduce((n, p) => n + p.lines.join(' ').split(/\s+/).length, 0)
   const d = document.createElement('dialog')
@@ -90,6 +91,8 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
   document.body.appendChild(d)
   let passed = false
   d.addEventListener('cancel', (e) => e.preventDefault()) // the gate does not close with Escape
+  // A canceled Escape keydown makes no close request at all, so the gate never closes even for a frame.
+  d.addEventListener('keydown', (e) => { if (e.key === 'Escape') e.preventDefault() })
   // Chromium lets a second Escape with no click between close a modal despite preventDefault: reopen it.
   d.addEventListener('close', () => { if (!passed && d.isConnected) d.showModal() })
   d.showModal()
