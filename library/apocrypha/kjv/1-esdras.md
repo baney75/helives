@@ -13,7 +13,7 @@ words: 11778
 
 # The First Book of Esdras
 
-> A Greek retelling of the history from Josiah's Passover to Ezra's reading of the Law, parallel to 2 Chronicles 35 and 36, Ezra and part of Nehemiah, with the added story of the three guardsmen. It is canonical in the Eastern Orthodox churches but not in the Catholic canon, where it stands in an appendix to the Vulgate, and it is outside the Protestant canon.
+> A Greek retelling of the history from Josiah's Passover to Ezra's reading of the Law, parallel to 2 Chronicles 35 and 36, Ezra and part of Nehemiah, with the added story of the three guardsmen. It is canonical in the Eastern Orthodox churches but not in the Catholic canon, where it stands in an appendix to the Vulgate, and it is outside the Protestant canon. It is kept here for reading and study, not presented as Scripture.
 
 ## 1 Esdras 1
 
