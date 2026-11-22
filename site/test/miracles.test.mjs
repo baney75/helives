@@ -1,6 +1,8 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { GRADES, loadMiracles } from '../lib/load.mjs'
+import { readdirSync } from 'node:fs'
+import { join } from 'node:path'
+import { GRADES, LIB, loadMiracles, readToml } from '../lib/load.mjs'
 
 const m = loadMiracles()
 const DASH = /[–—]/
@@ -38,4 +40,23 @@ test('the record covers both good and evil and admits the null studies', () => {
   const kinds = new Set(m.cases.map((c) => c.kind))
   assert.ok(kinds.has('good') && kinds.has('evil') && kinds.has('study'))
   assert.ok(m.cases.some((c) => c.grade === 'negative'), 'a study that found no effect is shown')
+})
+
+test('every Scripture test quotes the shipped BSB word for word', () => {
+  const dir = join(LIB, 'bible', 'bsb')
+  const files = readdirSync(dir).filter((f) => f.endsWith('.toml'))
+  for (const t of m.tests) {
+    const [, slug, ch, v] = /^\/bible\/([\w-]+)\/(\d+)\/#v(\d+)$/.exec(t.href)
+    const range = /:(\d+)(?: to (\d+))?$/.exec(t.ref)
+    assert.equal(range[1], v, `${t.ref}: href verse`)
+    const last = Number(range[2] || range[1])
+    const file = files.find((f) => f.replace(/^\d+-/, '').replace(/\.toml$/, '') === slug)
+    assert.ok(file, `${t.ref}: no BSB file for ${slug}`)
+    const sec = readToml(join(dir, file)).section.find((s) => s.id === ch)
+    const text = sec.blocks
+      .filter((b) => b.t === 'v' && b.n >= Number(v) && b.n <= last)
+      .map((b) => b.text.replace(/\[\^\w+\]/g, ''))
+      .join(' ')
+    assert.equal(t.text, text, t.ref)
+  }
 })
