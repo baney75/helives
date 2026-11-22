@@ -137,7 +137,7 @@ export function loadLibrary() {
   }
   const byOrder = (a, b) => (a.order ?? 0) - (b.order ?? 0) || a.title.localeCompare(b.title)
   works.sort(byOrder)
-  return { collections, authors, external, works, media: loadMedia(), encyclicals: loadEncyclicals(), audio: loadAudio() }
+  return { collections, authors, external, works, media: loadMedia(), encyclicals: loadEncyclicals(), miracles: loadMiracles(), audio: loadAudio() }
 }
 
 export function loadMedia() {
@@ -162,6 +162,15 @@ export function ytId(url) {
 function loadEncyclicals() {
   const p = join(ROOT, 'data', 'encyclicals.toml')
   return existsSync(p) ? readToml(p).encyclical || [] : []
+}
+
+// Signs and wonders: hand-written cases, each with sources, an objection and a grade.
+export const GRADES = ['strong', 'disputed', 'testimony', 'negative']
+export function loadMiracles() {
+  const p = join(ROOT, 'data', 'miracles.toml')
+  if (!existsSync(p)) return null
+  const d = readToml(p)
+  return { intro: d.intro, tests: d.test || [], groups: d.group || [], cases: d.case || [], further: d.further || [] }
 }
 
 // Audio fails closed: only files listed in the manifest are offered.

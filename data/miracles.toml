@@ -1,0 +1,255 @@
+# Signs and wonders: the record. Hand-written; every case names its sources and its strongest objection.
+# grade: "strong" (a careful record exists and the facts recorded are not in doubt, though their meaning may be),
+#        "disputed" (a real record, with serious unresolved objections),
+#        "testimony" (eyewitness or secondhand report, not independently checked),
+#        "negative" (studied with care and no effect was found).
+# kind: "good" (a reported work of God), "evil" (reported activity of evil spirits), "study" (research on prayer or death).
+# site/test/miracles.test.mjs checks every case has a grade, a kind, an objection and at least one https source.
+
+intro = "Christians have always reported that God still heals and still answers, and that evil spirits are real. This page gathers the reported signs with the best records we could find, says how strong each record is, and gives the strongest objection to each. None of them is beyond dispute. Scripture itself warns that signs can deceive, so read them by its tests, below."
+
+[[test]]
+ref = "Deuteronomy 13:1 to 3"
+href = "/bible/deuteronomy/13/#v1"
+text = "If a prophet or dreamer of dreams arises among you and proclaims a sign or wonder to you, and if the sign or wonder he has spoken to you comes about, but he says, “Let us follow other gods (which you have not known) and let us worship them,” you must not listen to the words of that prophet or dreamer. For the LORD your God is testing you to find out whether you love Him with all your heart and with all your soul."
+
+[[test]]
+ref = "Matthew 24:24"
+href = "/bible/matthew/24/#v24"
+text = "For false Christs and false prophets will appear and perform great signs and wonders to deceive even the elect, if that were possible."
+
+[[test]]
+ref = "2 Thessalonians 2:9"
+href = "/bible/2-thessalonians/2/#v9"
+text = "The coming of the lawless one will be accompanied by the working of Satan, with every kind of power, sign, and false wonder,"
+
+[[test]]
+ref = "1 John 4:1"
+href = "/bible/1-john/4/#v1"
+text = "Beloved, do not believe every spirit, but test the spirits to see whether they are from God. For many false prophets have gone out into the world."
+
+[[test]]
+ref = "1 Thessalonians 5:21"
+href = "/bible/1-thessalonians/5/#v21"
+text = "but test all things. Hold fast to what is good."
+
+[[group]]
+id = "healings"
+title = "Healings examined by physicians"
+
+[[group]]
+id = "public"
+title = "Signs seen by crowds"
+
+[[group]]
+id = "body"
+title = "Signs in the body"
+
+[[group]]
+id = "prayer"
+title = "Studies of prayer for the sick"
+
+[[group]]
+id = "death"
+title = "Awareness at the edge of death"
+
+[[group]]
+id = "evil"
+title = "Evil spirits and deliverance"
+
+[[case]]
+id = "lourdes"
+group = "healings"
+kind = "good"
+grade = "strong"
+title = "Lourdes: 72 recognized cures"
+when = "1858 to the present"
+where = "Lourdes, France"
+summary = "Since the apparitions to Bernadette Soubirous in 1858, people healed at Lourdes have been examined first by the sanctuary's Medical Bureau and then by an International Medical Committee of physicians. The committee asks whether a serious illness was cured completely, suddenly and lastingly, without a treatment that explains it, and whether medicine can account for it. Only after that does a bishop decide whether to call it a miracle. Thousands of cures have been reported; 72 have been recognized, the 70th in 2018 (Sr. Bernadette Moriau), the 71st in 2024 (John Traynor) and the 72nd in 2025 (Antonia Raco)."
+evidence = "Medical files, examinations before and after, years of follow-up, and a published judgment for each recognized case."
+objection = "Medical historians note that early records were thin and follow-up was often missing, and that 'unexplained by current medicine' is not the same as proven supernatural. Recognitions became rare once the standards tightened in the twentieth century."
+sources = [
+  ["Sanctuary of Lourdes: the miraculous healings", "https://www.lourdes-france.com/en/miraculous-healings/"],
+  ["Sanctuary of Lourdes: how a miracle is recognized", "https://www.lourdes-france.org/en/recognition-miracle/"],
+  ["François, Sternberg and Fee, The Lourdes medical cures revisited (J. Hist. Med., via PMC)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3854941/"],
+]
+
+[[case]]
+id = "consulta"
+group = "healings"
+kind = "good"
+grade = "strong"
+title = "Healings judged for canonization"
+when = "1588 to the present"
+where = "The Vatican's Dicastery for the Causes of Saints"
+summary = "Before most canonizations, a healing attributed to the saint's prayers goes to the Consulta Medica, a board of seven physicians who give a diagnosis, a prognosis, the treatment and whether the cure has a medical explanation; five of seven must agree before theologians take it up. The hematologist Jacalyn Duffin studied about 1,400 of these miracles from 1588 to 1999 in the Vatican's records and found the great majority were healings, carefully documented with medical testimony. She was herself asked to read bone marrow slides in the cause of Marguerite d'Youville without knowing why, and testified that the patient's acute leukemia had relapsed and then gone into a remission she could not explain; d'Youville was canonized in 1990."
+evidence = "Sworn medical testimony, records and the board's written votes, preserved in the Vatican's archives; Duffin's study, published by Oxford University Press."
+objection = "The board says only that a cure has no current medical explanation; the word miracle is a theological judgment made afterward. Remissions do occur rarely in serious disease."
+sources = [
+  ["Regulations of the Consulta Medica", "https://www.causesanti.va/it/documenti/regolamento-della-consulta-medica-english.html"],
+  ["Duffin, Medical Miracles (Oxford University Press, 2009)", "https://global.oup.com/academic/product/medical-miracles-9780195336504"],
+  ["Duffin interview: Religion, medicine and miracles", "https://inters.org/religion-medicine-and-miracles"],
+]
+
+[[case]]
+id = "fatima"
+group = "public"
+kind = "good"
+grade = "disputed"
+title = "Fatima: the sun on 13 October 1917"
+when = "13 October 1917"
+where = "Cova da Iria, Fatima, Portugal"
+summary = "Three shepherd children had said a sign would be given that day. A crowd of tens of thousands, estimates run from about 30,000 to 70,000, gathered in the rain, and many afterward described the sun turning, changing color and seeming to plunge toward the earth. Avelino de Almeida, a reporter for the secular and anticlerical Lisbon paper O Século, described what the crowd saw in the edition of 15 October without declaring it a miracle. The Catholic Church approved the apparitions in 1930."
+evidence = "Contemporary newspaper reports, including a hostile secular paper, and many signed eyewitness statements gathered afterward."
+objection = "Accounts differ, many in the crowd saw nothing unusual, and observatories recorded nothing. Proposed explanations include after-images on the eye from looking at the sun, atmospheric dust, and the expectation of a crowd that had been told to look for a sign."
+sources = [
+  ["O Século, 15 October 1917 (English translation)", "https://docslib.org/doc/6737201/newspaper-o-s%C3%A9culo-the-facts-that-unfolded-along-with-everything-curious-and-elucidating-that-was-connected-to-them"],
+  ["Miracle of the Sun: accounts and explanations", "https://en.wikipedia.org/wiki/Miracle_of_the_Sun"],
+]
+
+[[case]]
+id = "zeitoun"
+group = "public"
+kind = "good"
+grade = "disputed"
+title = "Zeitoun: lights over a Coptic church"
+when = "From 2 April 1968, for many months"
+where = "Church of St. Mary, Zeitoun, Cairo, Egypt"
+summary = "Workers across the street first reported a figure of light on the domes of a Coptic church. Over the following months very large crowds, Christian and Muslim, reported seeing a luminous figure they took to be the Virgin Mary, and photographs were taken. The Coptic Patriarchate under Pope Kyrillos VI issued a statement on 4 May 1968 affirming the apparitions."
+evidence = "Many eyewitnesses of different faiths over months, a statement by the Coptic Patriarchate, and photographs."
+objection = "The photographs are of uncertain origin and many are blurred or retouched. Skeptics proposed lights from the street or from seismic strain, and pointed to the political mood in Egypt after the 1967 war."
+sources = [
+  ["Our Lady of Zeitoun", "https://en.wikipedia.org/wiki/Our_Lady_of_Zeitoun"],
+  ["Weight of Evidence: Zeitoun 1968", "https://weightofevidence.org/cases/zeitoun-1968"],
+]
+
+[[case]]
+id = "padre-pio"
+group = "body"
+kind = "good"
+grade = "disputed"
+title = "The wounds of Padre Pio"
+when = "1918 to 1968"
+where = "San Giovanni Rotondo, Italy"
+summary = "The Capuchin friar Pio of Pietrelcina bore wounds in his hands, feet and side for fifty years. Physicians examined them from 1919 onward and disagreed: some described wounds that neither healed nor became infected, and one thought them kept open by a chemical. He was canonized in 2002, for his life and for healings attributed to his prayers."
+evidence = "Written reports by physicians who examined the wounds, from 1919 into the 1950s."
+objection = "The Holy Office found in 1923 that a supernatural cause was not established, and church inquiries reported suspicions that the wounds were self-inflicted. His canonization was not a judgment on the wounds."
+sources = [
+  ["Ignis: the stigmata of Padre Pio and their medical examinations", "https://ignismission.com/en/ignispedia/les-stigmates-de-padre-pio"],
+  ["Padre Pio", "https://en.wikipedia.org/wiki/Padre_Pio"],
+]
+
+[[case]]
+id = "stepp"
+group = "prayer"
+kind = "study"
+grade = "disputed"
+title = "Laying on of hands in Mozambique"
+when = "2010"
+where = "Rural Mozambique"
+summary = "Researchers led by Candy Gunther Brown tested the hearing and sight of 24 people before and after Pentecostal ministers prayed for them in person, with touch. Hearing and vision both improved on the measures used, by more than chance would explain, and some changes were large."
+evidence = "Before and after measurements with an audiometer and eye charts, published in the Southern Medical Journal."
+objection = "A small study with no control group, run by researchers sympathetic to the prayer; suggestion and testing conditions could explain part of it. The authors called for further study."
+sources = [
+  ["Brown et al., Southern Medical Journal 103(9):864-869 (2010)", "https://doi.org/10.1097/SMJ.0b013e3181e73fea"],
+]
+
+[[case]]
+id = "step"
+group = "prayer"
+kind = "study"
+grade = "negative"
+title = "Prayer by strangers for heart patients"
+when = "2006"
+where = "Six hospitals in the United States"
+summary = "The largest trial of distant prayer, led by Herbert Benson, followed 1,802 patients having heart bypass surgery. Prayer groups who did not know the patients prayed for some of them. Complications came in 52 percent of those prayed for and 51 percent of those not prayed for, no difference. Patients told for certain they were being prayed for did slightly worse (59 percent)."
+evidence = "A randomized trial published in the American Heart Journal. A Cochrane review of ten such trials with 7,646 patients found the results equivocal and could not recommend for or against."
+objection = "Christians answer that God is not a treatment to be tested on demand (Deuteronomy 6:16), and that prayer assigned to strangers by a study is not the prayer of faith Scripture describes. The trial still shows that prayer does not work like a drug."
+sources = [
+  ["Benson et al., American Heart Journal 151:934-942 (2006)", "https://doi.org/10.1016/j.ahj.2005.05.028"],
+  ["Cochrane review: intercessory prayer for the alleviation of ill health", "https://www.cochrane.org/evidence/CD000368_intercessory-prayer-alleviation-ill-health"],
+]
+
+[[case]]
+id = "aware"
+group = "death"
+kind = "study"
+grade = "disputed"
+title = "Awareness during cardiac arrest"
+when = "2014 and 2023"
+where = "Hospitals in the United States and Britain"
+summary = "Sam Parnia's AWARE studies interviewed survivors of cardiac arrest. In the first, of 2,060 arrests, a small share of survivors recalled seeing and hearing things during resuscitation, and one man's account of events in the room was checked and matched what happened while his heart had stopped. In AWARE II, of 567 arrests, 28 survivors were interviewed; 11 recalled some awareness, and one identified a sound played through headphones during resuscitation. No one identified the hidden images."
+evidence = "Prospective hospital studies with hidden visual targets and audio cues, published in Resuscitation."
+objection = "Very few survivors, one verified case, and no hit on the hidden images. Brain activity during resuscitation may explain the memories. These studies are about the mind at death, not a sign from God."
+sources = [
+  ["Parnia et al., AWARE, Resuscitation (2014)", "https://doi.org/10.1016/j.resuscitation.2014.09.004"],
+  ["Parnia et al., AWARE II, Resuscitation (2023)", "https://doi.org/10.1016/j.resuscitation.2023.109903"],
+]
+
+[[case]]
+id = "ritual"
+group = "evil"
+kind = "evil"
+grade = "strong"
+title = "The church's signs of possession"
+when = "1614"
+where = "The Roman Ritual"
+summary = "The Rituale Romanum of 1614 tells the exorcist not to believe readily that someone is possessed, and to tell possession apart from melancholy and illness. The signs it names are speaking or understanding an unknown language at length, revealing distant or hidden things, and strength beyond the person's age or condition. Exorcists today still use these signs and ask for medical and psychiatric evaluation first."
+evidence = "The text of the Ritual itself, used for four centuries."
+objection = "The Ritual records what the church looks for, not proof that any given case met it."
+sources = [
+  ["Rituale Romanum (1614), De exorcizandis obsessis", "https://www.maranatha.it/MobileEdition/T20-Exorcism/ENTRA.htm"],
+]
+
+[[case]]
+id = "gallagher"
+group = "evil"
+kind = "evil"
+grade = "testimony"
+title = "A psychiatrist who consults on exorcisms"
+when = "2016 and 2020"
+where = "New York"
+summary = "Richard Gallagher, a board-certified psychiatrist on the faculty of New York Medical College, has for decades evaluated people for Catholic exorcists. He writes that most turn out to be ill and need treatment, but that a few showed signs medicine could not explain, such as knowing hidden things about the people around them. He described his cases in the Washington Post in 2016 and in his book Demonic Foes (HarperOne, 2020)."
+evidence = "The firsthand testimony of a trained physician, and his written case accounts."
+objection = "His cases are not published with the identities or records others could check, and skeptics answer that cold reading, illness and expectation explain them."
+sources = [
+  ["Gallagher, As a psychiatrist, I diagnose mental illness. Also, I help spot demonic possession (Washington Post, 2016)", "https://www.washingtonpost.com/posteverything/wp/2016/07/01/as-a-psychiatrist-i-diagnose-mental-illness-and-sometimes-demonic-possession/"],
+  ["McKay, Ammirati and Lilienfeld, Superstition masquerading as science (Skeptical Inquirer, 2017)", "https://skepticalinquirer.org/2017/02/superstition-masquerading-as-science/"],
+]
+
+[[case]]
+id = "st-louis"
+group = "evil"
+kind = "evil"
+grade = "testimony"
+title = "The 1949 exorcism in Maryland and St. Louis"
+when = "1949"
+where = "Maryland and St. Louis, Missouri"
+summary = "Jesuit priests in St. Louis carried out a long exorcism of a 13-year-old boy. One of them, Fr. Raymond Bishop, S.J., kept a diary describing shaking beds, scratches that formed words on the boy's skin, and violent reactions to holy things. The case later inspired a famous novel and film."
+evidence = "A contemporary diary kept by a priest present at the rite, preserved by Saint Louis University."
+objection = "No physician's or outside record confirms the events, and researchers who traced the case concluded the boy may have been a troubled or clever child whose story grew with retelling."
+sources = [
+  ["Saint Louis University: the St. Louis exorcism", "https://www.slu.edu/news/legends-and-lore/st-louis-exorcism.php"],
+  ["Exorcism of Roland Doe", "https://en.wikipedia.org/wiki/Exorcism_of_Roland_Doe"],
+]
+
+[[case]]
+id = "michel"
+group = "evil"
+kind = "evil"
+grade = "strong"
+title = "Anneliese Michel: a warning"
+when = "1975 to 1976"
+where = "Klingenberg am Main, Germany"
+summary = "A young woman with a diagnosis of epilepsy and severe depression underwent 67 rites of exorcism over ten months and stopped eating. She died on 1 July 1976 weighing about 30 kilograms. In 1978 a German court convicted the two priests and her parents of negligent homicide for failing to get her medical care, and gave suspended sentences."
+evidence = "An autopsy and a criminal trial with a court verdict."
+objection = "Whatever the spiritual reality, this case shows the danger the Ritual warns of: treating illness as possession, and withholding care. Deliverance prayer never replaces a doctor."
+sources = [
+  ["Anneliese Michel", "https://en.wikipedia.org/wiki/Anneliese_Michel"],
+  ["The State Prosecutor v. Anna and Josef Michel, Ernst Alt and Arnold Renz", "https://recordoflaw.in/the-state-prosecutor-v-anna-josef-michel-ernst-alt-arnold-renz/"],
+]
+
+[[further]]
+title = "Craig S. Keener, Miracles: The Credibility of the New Testament Accounts (Baker Academic, 2011)"
+note = "Two volumes, 1,172 pages, of miracle reports from many countries, with the arguments for and against. Most are eyewitness reports rather than medical records."
+url = "https://archive.org/details/miraclescredibil0002keen"
