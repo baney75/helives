@@ -160,7 +160,7 @@ export function homePage(ctx) {
 <li><a href="/videos/">Videos</a><span class="meta">${number(ctx.media.videos.length)} lectures and overviews</span></li>
 <li><a href="/maps/">Maps</a><span class="meta">${number(ctx.media.maps.length)} maps</span></li>
 <li><a href="/art/">Art</a><span class="meta">${number(ctx.media.images.length)} works of art</span></li>
-<li><a href="/miracles/">Signs and wonders</a><span class="meta">Healings, signs and evil spirits, with the evidence and the objections</span></li>
+<li><a href="/miracles/">Signs and wonders</a><span class="meta">${number(ctx.miracles?.cases.length || 0)} cases, each graded</span></li>
 <li><a href="/articles/">Articles</a><span class="meta">${number(ctx.media.articles.length)} for further reading</span></li>
 <li><a href="/downloads/">Downloads</a><span class="meta">Markdown, TOML and print</span></li>
 <li><a href="/accessibility/">Reading for focus and comfort</a><span class="meta">Focus bold, themes, sounds</span></li>

@@ -118,6 +118,7 @@ section + section { margin-top: var(--s7); }
 .list > li { display: flex; gap: var(--s4); align-items: baseline; justify-content: space-between; padding: var(--s3) 0; border-bottom: 1px solid var(--line); }
 .list > li > :first-child { min-width: 0; }
 .list .meta { white-space: nowrap; }
+@media (max-width: 640px) { .list > li { flex-wrap: wrap; row-gap: var(--s1); } .list .meta { white-space: normal; } }
 .list .sub { display: block; font-size: 15px; color: var(--muted); margin-top: 2px; }
 
 /* Bible index and chapter grid */
