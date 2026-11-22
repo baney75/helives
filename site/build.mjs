@@ -73,7 +73,7 @@ function main() {
   const lib = loadLibrary()
   // The gate's recordings, only when all three parts are published. Their list joins the asset
   // version so gate.js fetches a fresh copy (/assets/gate-audio.json?v=) when recordings change.
-  // Until then the file lists no parts, so the gate's request never 404s and the device voice reads.
+  // Until then the file lists no parts, so the gate's request never 404s and the visitor reads alone.
   const gate = gateAudio(lib.audio)
   const gateBody = JSON.stringify(gate || { parts: [] })
   writeFileSync(join(DIST, 'assets', 'gate-audio.json'), gateBody)

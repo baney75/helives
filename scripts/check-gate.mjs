@@ -22,23 +22,26 @@ check(await p.locator('#gate').getByText('Our Father, who art in heaven').isVisi
 check(await p.locator('#gate').getByText('I believe in God the Father Almighty').isVisible(), 'Apostles’ Creed is on the gate')
 check(await p.locator('#gate').getByText('Come, Holy Spirit').isVisible(), 'prayer for illumination is on the gate')
 check(await p.locator('[data-gate-enter]').isDisabled(), 'Enter is locked before the prayers are read')
+check(await p.evaluate(() => document.querySelector('[data-gate-read]').hidden), 'with no recordings published there is no device voice to begin')
 // At every scroll position where the button is fully on screen, a tap on it must reach it.
 const uncovered = async () => p.evaluate(() => {
   const d = document.querySelector('dialog#gate')
-  const b = d.querySelector('[data-gate-read]')
-  let ok = true
+  const buttons = [...d.querySelectorAll('button')].filter((el) => !el.hidden)
+  let ok = buttons.length > 0
   for (let y = 0; y <= d.scrollHeight; y += 40) {
     d.scrollTop = y
-    const r = b.getBoundingClientRect()
-    if (r.top < 0 || r.bottom > innerHeight) continue
-    if (document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2) !== b) ok = false
+    for (const b of buttons) {
+      const r = b.getBoundingClientRect()
+      if (r.top < 0 || r.bottom > innerHeight) continue
+      if (document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2) !== b) ok = false
+    }
   }
   d.scrollTop = 0
   return ok
 })
 for (const [w, h] of [[1280, 900], [390, 844]]) {
   await p.setViewportSize({ width: w, height: h })
-  check(await uncovered(), `nothing covers Begin the prayers at ${w}px`)
+  check(await uncovered(), `nothing covers the gate's buttons at ${w}px`)
 }
 await p.setViewportSize({ width: 390, height: 844 })
 if (shots) await p.screenshot({ path: `${shots}/gate-390.png` })
@@ -71,7 +74,7 @@ await ctx.close()
 // ---------- the narrator's recordings ----------
 // No real audio: the browser is served generated tones (a beep per line) and timing files through
 // routes, in the shape the build and assemble.py write. Device speech is replaced by a recorder so
-// the fallback can be seen.
+// any use of it would be seen: the gate must never speak with the device voice.
 const SECTIONS = ['lords-prayer', 'apostles-creed', 'illumination']
 const LINES = [6, 9, 6]
 const LEAD = 0.4
@@ -155,9 +158,9 @@ const loaded = (page) => page.waitForResponse((r) => r.url().endsWith('/audio/ga
   await fp.click('[data-gate-read]')
   check(await litLine(fp, '0-0'), 'with one recording missing, the first part still plays')
   await fp.waitForFunction(() => window.__spoken.length > 0, null, { timeout: 8000 }).catch(() => {})
-  check(await fp.evaluate(() => window.__spoken[0]) === 'I believe in God the Father Almighty, Maker of heaven and earth:', 'a 404 recording hands over to device speech at that part’s first line')
-  await fp.waitForFunction(() => !document.querySelector('[data-gate-enter]').disabled, null, { timeout: 8000 }).catch(() => {})
-  check(await fp.locator('[data-gate-enter]').isEnabled() && await fp.evaluate(() => window.__spoken.length === 15), 'device speech reads the rest and unlocks Enter')
+  await fp.waitForFunction(() => document.querySelector('[data-gate-read]').hidden, null, { timeout: 8000 }).catch(() => {})
+  check(await fp.evaluate(() => document.querySelector('[data-gate-read]').hidden && !document.querySelector('#gate .reading')), 'a 404 recording stops the reading and hides the button')
+  check(await fp.evaluate(() => window.__spoken.length === 0), 'a 404 recording never hands over to device speech')
   await fc.close()
 }
 {
@@ -166,9 +169,9 @@ const loaded = (page) => page.waitForResponse((r) => r.url().endsWith('/audio/ga
   await np.goto(`${base}/bible/john/3/`)
   await np.waitForSelector('dialog#gate[open]', { timeout: 5000 }).catch(() => {})
   await np.waitForTimeout(500)
-  await np.click('[data-gate-read]')
-  await np.waitForFunction(() => !document.querySelector('[data-gate-enter]').disabled, null, { timeout: 8000 }).catch(() => {})
-  check(await np.evaluate(() => window.__spoken.length === 21 && window.__spoken[0].startsWith('Our Father') && !document.querySelector('#gate audio')), 'with no gate-audio.json the device speaks every line, as before')
+  check(await np.evaluate(() => document.querySelector('[data-gate-read]').hidden), 'with no gate-audio.json there is no Begin button')
+  check((await np.textContent('.gate-how')).startsWith('Read the prayers below'), 'with no gate-audio.json the gate asks the visitor to read aloud')
+  check(await np.evaluate(() => window.__spoken.length === 0 && !document.querySelector('#gate audio')), 'with no gate-audio.json the device voice never speaks')
   await nc.close()
 }
 
