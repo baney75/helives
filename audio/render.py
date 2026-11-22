@@ -200,6 +200,8 @@ class Engine:
                                                   temperature=temperature, subtalker_temperature=temperature)
         torch.cuda.synchronize()
         audio = np.asarray(wavs[0], dtype=np.float32).reshape(-1)
+        del wavs
+        torch.cuda.empty_cache()
         if not len(audio) or not np.isfinite(audio).all():
             raise RuntimeError("model returned empty or non-finite audio")
         return audio, sr, time.monotonic() - t0
@@ -208,8 +210,11 @@ class Engine:
         import librosa
         t0 = time.monotonic()
         a16 = librosa.resample(audio, orig_sr=sr, target_sr=16000) if sr != 16000 else audio
+        # The GPU holds the voice model too (11.6 GiB in all on Parish1): free its cache first and decode
+        # greedily, as Whisper's beam search ran the card out of memory on the first real batch.
+        self.torch.cuda.empty_cache()
         out = self.asr({"raw": a16, "sampling_rate": 16000}, return_timestamps="word", chunk_length_s=30,
-                       generate_kwargs={"language": "english", "task": "transcribe"})
+                       generate_kwargs={"language": "english", "task": "transcribe", "num_beams": 1})
         words = []
         for ch in out.get("chunks", []):
             s, e = ch.get("timestamp") or (None, None)
