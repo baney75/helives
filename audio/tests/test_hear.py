@@ -85,6 +85,11 @@ class Timing(unittest.TestCase):
         t = hear.anchor_times("a b c d", [["v2", 2]], [], 4.0, LEX)
         self.assertEqual(t["v2"], 2.0)
 
+    def test_hassed_counts_as_hast_but_has_does_not(self):
+        ref = "Blessed Lord, who hast caused all holy Scriptures to be written for our learning:"
+        self.assertEqual(wer(ref, "Blessed Lord who hassed caused all holy scriptures to be written for our learning")["wer"], 0.0)
+        self.assertGreater(wer(ref, "Blessed Lord who has caused all holy scriptures to be written for our learning")["wer"], 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()

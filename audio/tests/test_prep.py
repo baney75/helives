@@ -187,6 +187,10 @@ class Normalize(unittest.TestCase):
         self.assertIn("Habakkuk", p.chunks[1].ref_text)
         self.assertEqual(p.chunks[0].text, "Huh-BACK-uk, chapter one.")
 
+    def test_hast_is_respelled_so_it_cannot_be_read_as_has(self):
+        lex = prep.Lexicon.load()
+        self.assertEqual(lex.apply("Blessed Lord, who hast caused"), "Blessed Lord, who hassed caused")
+
 
 if __name__ == "__main__":
     unittest.main()

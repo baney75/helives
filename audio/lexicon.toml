@@ -155,6 +155,14 @@ respell = ""
 variants = ["Manicheans", "Manichæans"]
 
 # British spellings in the 19th-century translations vs. the American spellings Whisper writes.
+# Evidence (2026-11-22): Ryan read "who hast caused" in the gate's prayer for illumination as
+# "who has caused" in all four takes; Whisper large-v3 and small.en both heard "has". "hassed"
+# sounds the same as "hast" and cannot be modernized.
+[[name]]
+word = "hast"
+respell = "hassed"
+variants = ["hassed"]
+
 [spelling]
 honour = "honor"
 saviour = "savior"
