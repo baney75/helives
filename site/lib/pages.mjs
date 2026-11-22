@@ -160,6 +160,7 @@ export function homePage(ctx) {
 <li><a href="/videos/">Videos</a><span class="meta">${number(ctx.media.videos.length)} lectures and overviews</span></li>
 <li><a href="/maps/">Maps</a><span class="meta">${number(ctx.media.maps.length)} maps</span></li>
 <li><a href="/art/">Art</a><span class="meta">${number(ctx.media.images.length)} works of art</span></li>
+<li><a href="/miracles/">Signs and wonders</a><span class="meta">Healings, signs and evil spirits, with the evidence and the objections</span></li>
 <li><a href="/articles/">Articles</a><span class="meta">${number(ctx.media.articles.length)} for further reading</span></li>
 <li><a href="/downloads/">Downloads</a><span class="meta">Markdown, TOML and print</span></li>
 <li><a href="/accessibility/">Reading for focus and comfort</a><span class="meta">Focus bold, themes, sounds</span></li>
@@ -372,6 +373,47 @@ export function articlesPage(ctx) {
 <ul class="list" style="margin-top:var(--s4)">${arts.map((a) => html`<li data-text="${[a.title, a.publisher, a.author, a.description, ...(a.tags || [])].join(' ').toLowerCase()}"><span><a href="${a.url}" rel="noopener">${a.title}</a><span class="sub">${a.publisher}${a.author ? html` · ${a.author}` : ''}${a.description ? html`. ${a.description}` : ''}</span></span></li>`)}</ul>
 <p class="meta" data-empty hidden>No articles match.</p></div>`
   return page({ title: 'Articles', path: '/articles/', trail: [HOME, { title: 'Articles' }], body })
+}
+
+const GRADE_TEXT = {
+  strong: 'Strong record',
+  disputed: 'Disputed',
+  testimony: 'Testimony',
+  negative: 'No effect found',
+}
+
+const caseHtml = (c) => html`<article class="case" id="${c.id}">
+<h3>${c.title}</h3>
+<p class="meta">${c.when} · ${c.where} · <strong>${GRADE_TEXT[c.grade]}</strong></p>
+<p>${c.summary}</p>
+<dl>
+<dt>Evidence</dt><dd>${c.evidence}</dd>
+<dt>Strongest objection</dt><dd>${c.objection}</dd>
+<dt>Sources</dt><dd><ul>${c.sources.map(([t, u]) => html`<li><a href="${u}" rel="noopener">${t}</a></li>`)}</ul></dd>
+</dl></article>`
+
+export function miraclesPage(ctx) {
+  const m = ctx.miracles
+  const groups = m.groups.map((g) => ({ ...g, cases: m.cases.filter((c) => c.group === g.id) })).filter((g) => g.cases.length)
+  const body = html`<div class="wrap narrow miracles"><p class="kicker">Explore</p><h1>Signs and wonders</h1>
+<p class="lede">${m.intro}</p>
+<nav class="notice" aria-label="On this page"><a href="#tests">Scripture's tests</a> · <a href="#grades">How to read the grades</a> · ${groups.map((g, i) => html`${i ? ' · ' : ''}<a href="#${g.id}">${g.title}</a>`)} · <a href="#further">Further reading</a></nav>
+<section id="tests" aria-labelledby="tests-h"><div class="sec-head"><h2 id="tests-h">Scripture's tests</h2></div>
+${m.tests.map((t) => html`<blockquote><p>${t.text}</p><footer class="meta"><a href="${t.href}">${t.ref}</a></footer></blockquote>`)}
+<p>A sign is weighed by whether it leads to the true God and agrees with His word, not by how wonderful it seems. Ask a doctor first, and test every spirit.</p></section>
+<section id="grades" aria-labelledby="grades-h"><div class="sec-head"><h2 id="grades-h">How to read the grades</h2></div>
+<dl class="grades">
+<dt>Strong record</dt><dd>A careful record exists and the facts recorded are not in doubt, though what they mean may be.</dd>
+<dt>Disputed</dt><dd>A real record, with serious objections that remain unanswered.</dd>
+<dt>Testimony</dt><dd>An eyewitness or secondhand report that no one outside has checked.</dd>
+<dt>No effect found</dt><dd>Studied with care, and no effect was found.</dd>
+</dl>
+<p class="meta">No case here is beyond dispute. Each one names its sources and the strongest objection, so you can weigh it yourself.</p></section>
+${groups.map((g) => html`<section id="${g.id}" aria-labelledby="${g.id}-h"><div class="sec-head"><h2 id="${g.id}-h">${g.title}</h2></div>${g.cases.map(caseHtml)}</section>`)}
+<section id="further" aria-labelledby="further-h"><div class="sec-head"><h2 id="further-h">Further reading</h2></div>
+<ul class="list">${m.further.map((f) => html`<li><span><a href="${f.url}" rel="noopener">${f.title}</a><span class="sub">${f.note}</span></span></li>`)}</ul></section>
+</div>`
+  return page({ title: 'Signs and wonders', path: '/miracles/', trail: [HOME, { title: 'Signs and wonders' }], body, description: 'Reported miracles, healings and evil spirits with the best records we could find, graded, with sources and the strongest objection to each, tested by Scripture.' })
 }
 
 export function galleryPage(ctx, kind) {

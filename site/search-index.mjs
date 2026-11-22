@@ -59,6 +59,8 @@ for (const e of lib.encyclicals) {
   add(e.title, [e.english_title, e.subject, e.pope, String(e.date).slice(0, 4)].filter(Boolean).join(' · '), local ? workUrl(local) : e.url, `Encyclical · ${e.pope}, ${String(e.date).slice(0, 4)}`, 'encyclicals', 1.1)
 }
 
+if (lib.miracles) for (const c of lib.miracles.cases) add(c.title, [c.summary, c.where, c.when].join(' · '), `/miracles/#${c.id}`, 'Signs and wonders', 'media', 1)
+
 assertClean(rows)
 const head = [
   'DROP TABLE IF EXISTS doc;',

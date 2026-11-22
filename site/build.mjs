@@ -136,6 +136,7 @@ function main() {
   for (const a of Object.values(lib.authors)) if (ctx.worksByAuthor.get(a.id)?.length && a.id !== 'bible') out(`/authors/${a.id}/`, P.authorPage(ctx, a))
   out('/videos/', P.videosPage(ctx))
   out('/articles/', P.articlesPage(ctx))
+  if (ctx.miracles) out('/miracles/', P.miraclesPage(ctx))
   out('/maps/', P.galleryPage(ctx, 'maps'))
   out('/art/', P.galleryPage(ctx, 'art'))
   out('/search/', P.searchPage(ctx))
