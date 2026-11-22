@@ -3,7 +3,7 @@
 // prefs.js marks the page data-gate="due"; this module shows the gate and clears the mark.
 // Texts: Book of Common Prayer (1928, public domain); Scripture: Berean Standard Bible (public domain).
 // When the library narrator's recordings exist (/assets/gate-audio.json, written by the build from
-// audio/manifest.json), they are played; otherwise the device's own speech reads the lines.
+// audio/manifest.json), they are played; otherwise the visitor reads them; the device's speech voice is never used.
 // audio/gate.toml holds the same lines for the renderer; site/test/gate.test.mjs keeps them equal.
 
 const V = new URL(import.meta.url).searchParams.get('v') || '1'
@@ -80,8 +80,8 @@ export function show() {
 <h1 id="gate-h">Pray, then read</h1>
 <p class="gate-lede">These pages hold the Word of God and the witness of His church. Do not read them by your own light. Scripture is not a private possession to be bent to what you already think. Ask the Holy Spirit to open your eyes, and resolve now to obey what He shows you.</p>
 <div class="gate-scripture">${WARNING.map(([t, r]) => `<blockquote><p>${esc(t)}</p><cite>${esc(r)}</cite></blockquote>`).join('')}</div>
-<p class="gate-how">Listen and read along. The prayers will be read to you, one line at a time.</p>
-<div class="gate-actions"><button class="btn" type="button" data-gate-read>Begin the prayers</button></div>
+<p class="gate-how">Read the prayers below slowly, aloud if you can.</p>
+<div class="gate-actions"><button class="btn" type="button" data-gate-read hidden>Begin the prayers</button></div>
 ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p class="meta">${esc(p.source)}</p><div class="gate-lines">${p.lines.map((l, j) => `<p data-line="${i}-${j}">${esc(l)}</p>`).join('')}</div></section>`).join('')}
 <div class="gate-actions gate-end">
 <button class="btn" type="button" data-gate-enter disabled>Amen. Enter the library</button>
@@ -101,7 +101,6 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
   const enter = d.querySelector('[data-gate-enter]')
   const status = d.querySelector('[data-gate-status]')
   const readBtn = d.querySelector('[data-gate-read]')
-  const lines = [...d.querySelectorAll('[data-line]')]
   const unlock = (msg) => {
     enter.disabled = false
     status.textContent = msg
@@ -111,18 +110,17 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
   const silentMs = Math.round((words / 220) * 60000)
   let silentTimer = setTimeout(() => unlock('Amen. You may enter.'), silentMs)
 
+  // Only the narrator's recordings read the prayers aloud. The device's built-in speech voice is
+  // never used: it sounds robotic. With no recordings the visitor reads the prayers themself.
   const how = d.querySelector('.gate-how')
-  const howText = how.textContent
-  const hasSpeech = !!window.speechSynthesis && typeof SpeechSynthesisUtterance !== 'undefined'
-  const synth = hasSpeech ? window.speechSynthesis : null
+  const listenText = 'Listen and read along. The prayers will be read to you, one line at a time.'
   const noVoice = () => {
     readBtn.hidden = true
     how.textContent = 'Read the prayers below slowly, aloud if you can.'
   }
-  if (!synth) noVoice()
 
   // The narrator's recordings: [{section, src, timing}] in reading order, each with its timing items
-  // ({id: "b<j>" | "title", start}) loaded up front. Any missing file means the device speaks instead.
+  // ({id: "b<j>" | "title", start}) loaded up front. Any missing file means no recording is offered.
   let recordings = null
   fetch(`/assets/gate-audio.json?v=${V}`)
     .then((r) => (r.ok ? r.json() : null))
@@ -135,7 +133,7 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
       if (!list) return
       recordings = list
       readBtn.hidden = false
-      how.textContent = howText
+      how.textContent = listenText
     })
     .catch(() => { recordings = null })
   let lit = null
@@ -145,11 +143,6 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
     if (!el) return
     el.classList.add('reading')
     el.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
-  }
-  const pickVoice = () => {
-    const vs = synth.getVoices().filter((v) => /^en(-|_|$)/i.test(v.lang))
-    const good = /premium|enhanced|natural|neural|siri/i
-    return vs.find((v) => good.test(v.name) && /en-US/i.test(v.lang)) || vs.find((v) => good.test(v.name)) || vs.find((v) => /en-US/i.test(v.lang) && v.localService) || vs[0] || null
   }
   let speaking = false
   const finish = () => {
@@ -165,33 +158,18 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
     light(null)
     readBtn.textContent = 'Begin the prayers'
   }
-  const speakFrom = (i) => {
-    if (i >= lines.length) return finish()
-    const u = new SpeechSynthesisUtterance(lines[i].textContent)
-    const v = pickVoice()
-    if (v) u.voice = v
-    u.lang = (v && v.lang) || 'en-US'
-    u.rate = 0.88
-    u.onstart = () => light(lines[i])
-    u.onend = () => { if (speaking) speakFrom(i + 1) }
-    u.onerror = () => reset()
-    synth.speak(u)
-  }
-
   // Playing the recordings: one <audio> element, part by part, lighting [data-line="i-j"] from the
   // timing item b<j> of part i, the same way the library's Listen lights data-b.
   let audio = null
   let part = -1
   const lineFor = (i, id) => (/^b\d+$/.test(id) ? d.querySelector(`[data-line="${i}-${id.slice(1)}"]`) : null)
-  // A recording that will not load or play: the device's speech takes over from that part's first line.
+  // A recording that will not load or play: stop and let the visitor read the rest themself.
   const fallBack = () => {
     if (!speaking || !recordings) return
     recordings = null
     if (audio) { audio.pause(); audio.removeAttribute('src') }
-    if (!synth) { reset(); noVoice(); return }
-    const first = lines.findIndex((el) => el.getAttribute('data-line').startsWith(`${Math.max(part, 0)}-`))
-    synth.cancel()
-    speakFrom(Math.max(first, 0))
+    reset()
+    noVoice()
   }
   const playPart = (i) => {
     if (i >= recordings.length) return finish()
@@ -220,7 +198,6 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
   }
   const stopAll = () => {
     if (audio) audio.pause()
-    if (synth) synth.cancel()
   }
   readBtn.addEventListener('click', () => {
     if (speaking) {
@@ -234,10 +211,9 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
     if (recordings) {
       ensureAudio()
       playPart(0)
-    } else if (synth) {
-      speakFrom(0)
     } else {
       reset()
+      noVoice()
     }
   })
   enter.addEventListener('click', () => {
