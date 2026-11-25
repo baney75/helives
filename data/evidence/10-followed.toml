@@ -7,7 +7,7 @@ intro = "Growth does not prove that a faith is true. But something set this goin
 [verse]
 ref = "Matthew 16:18"
 href = "/bible/matthew/16/#v18"
-text = "on this rock I will build My church, and the gates of Hades will not prevail against it."
+text = "And I tell you that you are Peter, and on this rock I will build My church, and the gates of Hades will not prevail against it."
 
 [[exhibit]]
 id = "growth"
@@ -57,10 +57,10 @@ id = "children"
 title = "They did not throw away children"
 when = "First and second century"
 grade = "strong"
-summary = "Leaving unwanted babies to die was common and legal in the Roman world. Christians refused."
+summary = "Leaving unwanted babies to die was common and legal in the Roman world. Christian teaching forbade it."
 quote = { text = "They marry, as do all [others]; they beget children; but they do not destroy their offspring.", by = "The Epistle to Diognetus 5", work = "epistle-to-diognetus", sec = "chapter-5" }
 shows = "They believed their Maker had become a child, and from an early date their rule was to keep children."
-objection = "Jews refused as well, and before them, and a few pagans such as Musonius Rufus spoke against it."
+objection = "These texts give the rule and cannot show how well it was kept. Jews refused as well, and before them, and a few pagans such as Musonius Rufus spoke against it."
 sources = [["The Didache, chapter 2", "/read/didache/"], ["Infant exposure, Wikipedia", "https://en.wikipedia.org/wiki/Infant_exposure"], ["Josephus, Against Apion 2", "/read/josephus-against-apion/"], ["Musonius Rufus, Internet Encyclopedia of Philosophy", "https://iep.utm.edu/musonius/"]]
 
 [[exhibit]]

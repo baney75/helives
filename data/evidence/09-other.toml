@@ -17,16 +17,16 @@ title = "The disciples stole the body"
 when = "From the first century"
 summary = "The oldest rival. The disciples took the body and lied. Almost no historian now holds it."
 quote = { text = "This is He whom His disciples secretly stole away, that it might be said He had risen again, or the gardener abstracted", by = "Tertullian, mocking the charge, De Spectaculis 30", work = "tertullian-de-spectaculis", sec = "chapter-30" }
-shows = "It makes them knowing liars who were arrested and flogged for a story that paid them nothing. It leaves James and Paul unexplained, since neither was in on it."
-objection = "Someone else might have moved the body without the disciples knowing. Only Acts tells of the arrests and floggings in Jerusalem."
+shows = "It makes them knowing liars who, by Acts' account, were arrested and flogged for it. It leaves Paul unexplained, since he was their enemy."
+objection = "A separate form of the theory has someone else move the body without the disciples knowing, which needs no lie. Only Acts tells of the arrests and floggings in Jerusalem."
 sources = [["Matthew 28:13", "/bible/matthew/28/#v13"], ["Acts 5:40", "/bible/acts/5/#v40"], ["Habermas, Explaining away Jesus' resurrection", "https://garyhabermas.com/articles/crj_explainingaway/crj_explainingaway.htm"]]
 
 [[exhibit]]
 id = "swoon"
 title = "He did not really die"
 when = "Popular about 1780 to 1835"
-summary = "Jesus fainted on the cross, came to in the cool of the tomb, and walked out. David Friedrich Strauss, who did not believe in the resurrection either, attacked the idea in 1835 and again in 1865, in the words below. Historians no longer hold it."
-quote = { text = "It is impossible that a being who had stolen half-dead out of the sepulchre, who crept about weak and ill, wanting medical treatment, who required bandaging, strengthening and indulgence, and who still, at last, yielded to his sufferings, could have given to the disciples the impression that he was a Conqueror over death and the grave, the Prince of Life", by = "D. F. Strauss, A New Life of Jesus, 1865", href = "https://archive.org/details/anewlifejesus06stragoog" }
+summary = "Jesus fainted on the cross, came to in the cool of the tomb, and walked out. David Friedrich Strauss, who did not believe in the resurrection either, attacked the idea in 1835 and again in 1864, in the words below. Historians no longer hold it."
+quote = { text = "It is impossible that a being who had stolen half-dead out of the sepulchre, who crept about weak and ill, wanting medical treatment, who required bandaging, strengthening and indulgence, and who still, at last, yielded to his sufferings, could have given to the disciples the impression that he was a Conqueror over death and the grave, the Prince of Life", by = "D. F. Strauss, A New Life of Jesus, English translation, 1865", href = "https://archive.org/details/anewlifejesus06stragoog" }
 shows = "A man barely alive would have needed a doctor. He would not have started a faith in victory over death."
 objection = "One man is known to have lived. Josephus had three acquaintances taken down from crosses and given the greatest care. Two of them died, and the third recovered."
 sources = [["Josephus, Life, sections 66 to 76", "/read/josephus-life/"], ["Swoon hypothesis, Wikipedia", "https://en.wikipedia.org/wiki/Swoon_hypothesis"], ["Strauss, A New Life of Jesus, volume 1", "https://archive.org/details/anewlifejesus06stragoog"]]
@@ -46,7 +46,7 @@ id = "hallucination"
 title = "They saw visions"
 when = "From Celsus to today"
 summary = "The most common view among skeptical scholars now. Grief, guilt and longing produced visions of Jesus, which spread from one follower to another. Gerd Lüdemann gave it its best-known modern form."
-shows = "It has to cover the reports of groups as well as single people, and also James and Paul. Paul was not grieving, and in Philippians 3 he looks back on his old life with no sign of guilt. By itself it does not empty a tomb, and a vision of a dead friend normally tells people that he is dead."
+shows = "It has to cover the reports of groups as well as single people, and also Paul, who was not grieving and in Philippians 3 looks back on his old life with no sign of guilt. By itself it does not empty a tomb."
 objection = "Visions of the dead are common among the bereaved. Lüdemann argued that Paul's guilt was hidden even from himself. Some doubt that there were group appearances, and only Paul's account is first-hand. And if no one knew what became of the body, as Crossan and Ehrman think, there was no known tomb to empty."
 sources = [["Philippians 3:4 to 6", "/bible/philippians/3/#v4"], ["Vision theory of Jesus' appearances, Wikipedia", "https://en.wikipedia.org/wiki/Vision_theory_of_Jesus%27_appearances"], ["Habermas, Explaining away Jesus' resurrection", "https://garyhabermas.com/articles/crj_explainingaway/crj_explainingaway.htm"], ["Craig, a critique of Lüdemann's account", "https://www.reasonablefaith.org/writings/scholarly-writings/historical-jesus/visions-of-jesus-a-critical-assessment-of-gerd-ludemanns-hallucination-hypo"], ["Burial of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Burial_of_Jesus"]]
 
@@ -62,7 +62,7 @@ sources = [["1 Corinthians 15:3", "/bible/1-corinthians/15/#v3"], ["Resurrection
 [[exhibit]]
 id = "dying-gods"
 title = "It was copied from pagan myths"
-when = "From the 1890s"
+when = "Made popular by Frazer from 1890"
 summary = "Osiris, Adonis and others are said to have died and risen, and Christians to have borrowed the plot."
 shows = "Many of these figures belong to the yearly round of the crops, and not to a date, a governor and a list of witnesses. Osiris stayed in the land of the dead. The first believers were Jews, who had no love for such cults."
 objection = "Tryggve Mettinger, after a full study, holds that a few such gods were thought to die and return before Christ. He does not argue from that to the story of Jesus. Justin Martyr himself pointed out likenesses, in First Apology 21."
@@ -75,7 +75,7 @@ when = "From Celsus to today"
 summary = "The Gospels differ over which women came, how many angels were there and where Jesus appeared first."
 shows = "They agree on the heart of it: the women, the first day, the stone, the empty tomb. John's account differs so much from the rest that some scholars think it independent."
 objection = "Most scholars think Matthew and Luke used Mark, so their agreement is partly copying, and many think John knew Mark or the others too. Where Jesus appeared, in Galilee or Jerusalem, is hard to fit together, and Mark's earliest ending has the women tell no one."
-sources = [["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Lake, The Historical Evidence for the Resurrection, 1907", "https://archive.org/details/historicaleviden00lakeuoft"]]
+sources = [["Matthew 28", "/bible/matthew/28/"], ["Mark 16", "/bible/mark/16/"], ["Luke 24", "/bible/luke/24/"], ["John 20", "/bible/john/20/"], ["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Lake, The Historical Evidence for the Resurrection, 1907", "https://archive.org/details/historicaleviden00lakeuoft"]]
 
 [[exhibit]]
 id = "hume"
