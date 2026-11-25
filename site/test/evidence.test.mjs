@@ -71,11 +71,16 @@ test('every link inside the library leads to a page that is there', () => {
   const lib = library()
   const ids = new Set(lib.works.map((w) => w.id))
   for (const e of exhibits) for (const [, u] of e.sources) {
-    const [, kind, slug, ch] = /^\/(bible|read)\/([\w-]+)\/(\w+)?/.exec(u) || []
-    if (!kind) continue
+    if (!u.startsWith('/')) continue
+    const [, kind, slug, ch, n] = /^\/(bible|read)\/([\w-]+)\/(?:(\d+)\/(?:#v(\d+))?)?$/.exec(u) || []
+    assert.ok(kind, `${e.id}: ${u}`)
     const id = kind === 'bible' ? `bsb-${slug}` : slug
     assert.ok(ids.has(id), `${e.id}: ${u}`)
-    if (kind === 'bible') assert.ok(lib.works.find((w) => w.id === id).chapters >= Number(ch), `${e.id}: ${u}`)
+    if (kind === 'read') assert.equal(ch, undefined, `${e.id}: ${u} names a work, not a section`)
+    else {
+      const sec = readToml(lib.works.find((w) => w.id === id).path).section.find((s) => s.id === ch)
+      assert.ok(sec && (!n || sec.blocks.some((b) => b.t === 'v' && b.n === Number(n))), `${e.id}: ${u}`)
+    }
   }
 })
 

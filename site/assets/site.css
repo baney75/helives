@@ -346,6 +346,7 @@ dialog.gate::backdrop { background: var(--bg); }
 .evidence .exhibit { margin-top: var(--s7); padding-top: var(--s5); border-top: 1px solid var(--line); scroll-margin-top: 5rem; }
 .evidence .exhibit h2 { margin-bottom: var(--s2); }
 .evidence .notice ul, .evidence dd ul { margin: 0; padding-left: 1.2em; } .evidence .notice p { margin: 0; }
+@media print { .evidence .prose, .ev-quote p { font-size: 11.5pt; line-height: 1.5; } .evidence .notice { display: none; } }
 .evidence .notice a { display: inline-flex; padding: 11px 0; font-size: max(15px, calc(var(--fs) * 0.78)); }
 .evidence dl { margin: var(--s4) 0 0; }
 .evidence .exhibit > .meta { font-size: max(14px, calc(var(--fs) * 0.75)); }

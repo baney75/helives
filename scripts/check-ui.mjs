@@ -83,6 +83,15 @@ for (const path of ['/art/', '/maps/']) {
   check(bad.n > 40 && bad.bad.length === 0, `${path} images all load (${bad.n}${bad.bad.length ? `; broken: ${bad.bad.join(', ')}` : ''})`)
 }
 
+// 10. A jump link lands under the header, though the pictures above it load on the way.
+await p.emulateMedia({ reducedMotion: 'no-preference' })
+await p.goto(`${base}/evidence/stones-and-places/`)
+const last = await p.locator('.exhibit').last().getAttribute('id')
+await p.click(`.notice a[href="#${last}"]`)
+await p.waitForTimeout(4000)
+const y = Math.round(await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, last))
+check(y >= 60 && y <= 100, `evidence jump link lands under the header (${y})`)
+
 await b.close()
 console.log(problems.length ? `\n${problems.length} problem(s):\n${problems.join('\n')}` : '\nall interactive checks passed')
 process.exit(problems.length ? 1 : 0)

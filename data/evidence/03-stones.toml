@@ -1,0 +1,144 @@
+id = "stones-and-places"
+title = "Stones and places"
+short = "The ground keeps giving back the people and places the Gospels name."
+image = "caiaphas-ossuary"
+intro = "Archaeology cannot dig up a miracle. It can show whether the writers knew the country, the officials and the customs they describe. Finds that are too doubtful to build on are listed at the end, with the reason."
+
+[verse]
+ref = "Luke 1:3 to 4"
+href = "/bible/luke/1/#v3"
+text = "having carefully investigated everything from the beginning, it seemed good also to me to write an orderly account for you, most excellent Theophilus, so that you may know the certainty of the things you have been taught."
+
+[[exhibit]]
+id = "pilate-stone"
+title = "The Pilate stone"
+when = "AD 26 to 36, found in 1961"
+grade = "settled"
+image = "pilate-stone"
+summary = "Italian archaeologists at Caesarea turned over a step in the theater and found Pilate's name on it. The block had been reused. It gives his title as prefect of Judaea."
+shows = "The judge of Jesus was a real governor of Judaea under Tiberius. The stone gives his title as prefect, where Tacitus later wrote procurator."
+objection = "It confirms the judge and says nothing of the trial. Part of the first line is restored."
+sources = [["Pontius Pilate's Tiberium inscription, COJS", "https://cojs.org/pontius_pilate-s_tiberium_inscription-_26-36_ce/"], ["Pilate stone, Wikipedia", "https://en.wikipedia.org/wiki/Pilate_stone"]]
+
+[[exhibit]]
+id = "caiaphas-ossuary"
+title = "The Caiaphas ossuary"
+when = "First century, found in 1990"
+grade = "strong"
+summary = "Workers in south Jerusalem broke into a family tomb. The finest bone box in it carries the name Yehosef bar Qayafa, Joseph son of Caiaphas. Josephus gives the full name of the high priest as Joseph Caiaphas."
+shows = "The family tomb of the high priest who handed Jesus to Pilate has probably been found. The box held six people, and a man of about sixty among them may be Caiaphas himself."
+objection = "The box does not give the title of high priest, the tomb is plain, and some scholars read the name another way."
+sources = [["Biblical Archaeology Review on the Caiaphas tomb", "https://library.biblicalarchaeology.org/?p=10105"], ["Caiaphas ossuary, Wikipedia", "https://en.wikipedia.org/wiki/Caiaphas_ossuary"]]
+
+[[exhibit]]
+id = "crucified-man"
+title = "The nailed heel bone"
+when = "First century, found in 1968"
+grade = "settled"
+image = "crucified-heel-bone"
+summary = "A bone box from a Jerusalem tomb held a man named Yehohanan. An iron nail was still through his heel, bent at the point so that it could not be pulled out."
+shows = "Romans nailed men to crosses in Jerusalem in that century, and at least one crucified man was given back to his family and buried in a rock tomb."
+objection = "It is one case, and an unusual one. How he was fixed to the cross has been argued over since the first report was corrected in 1985."
+sources = [["Biblical Archaeology Society, A tomb in Jerusalem reveals the history of crucifixion", "https://www.biblicalarchaeology.org/daily/biblical-topics/crucifixion/a-tomb-in-jerusalem-reveals-the-history-of-crucifixion-and-roman-crucifixion-methods/"], ["Rethinking the crucified man from Givat ha-Mivtar", "https://biblearchaeology.org/research-articles/rethinking-the-crucified-man-from-givat-hamivtar/"]]
+
+[[exhibit]]
+id = "bethesda"
+title = "The pool with five porches"
+when = "In use in the time of Jesus, dug from the 1880s on"
+grade = "strong"
+image = "bethesda-pool"
+summary = "John 5:2 describes a pool by the Sheep Gate with five covered colonnades. Critics once took it for a symbol. The dig found two pools side by side with a wall between them: four sides and a middle, which makes five."
+shows = "Whoever wrote this knew Jerusalem as it was before the Romans destroyed it in AD 70."
+objection = "The pool is real, and that does not verify the healing. Some questions about the phases of the site remain."
+sources = [["Urban von Wahlde, The Pool of Bethesda, BAR 2011", "https://www.biblosfoundation.org/wp-content/uploads/2016/06/BAR.Article.Bethesda.pdf"], ["John 5:2", "/bible/john/5/#v2"]]
+
+[[exhibit]]
+id = "siloam"
+title = "The pool of Siloam"
+when = "First century, found in 2004"
+grade = "strong"
+summary = "A sewer repair in Jerusalem uncovered stone steps. Ronny Reich and Eli Shukron recognized the edge of the pool where, in John 9:7, a blind man was sent to wash."
+shows = "The place in the story exists, at the spot where the old city's water comes out."
+objection = "Later digging has revised how large the pool was and how it was used."
+sources = [["Biblical Archaeology Society on the Siloam pool", "https://www.biblicalarchaeology.org/daily/biblical-sites-places/biblical-archaeology-sites/the-siloam-pool-where-jesus-healed-the-blind-man/"], ["Excavations at the Pilgrimage Road and the Pool of Siloam", "https://biblearchaeology.org/research-articles/extraordinary-excavations-the-pilgrimage-road-and-the-pool-of-siloam/"], ["John 9:7", "/bible/john/9/#v7"]]
+
+[[exhibit]]
+id = "gallio"
+title = "The Gallio inscription"
+when = "About AD 52"
+grade = "settled"
+summary = "Nine pieces of stone from Delphi hold a letter of the emperor Claudius that mentions Gallio, governor of Achaia. Acts 18:12 says Paul was brought before that same man in Corinth."
+shows = "It ties Acts to the calendar. Paul was in Corinth around AD 51, and the dates of his letters are reckoned from there."
+objection = "The stone never mentions Paul, and the exact year of Gallio's term is debated within a year or so."
+sources = [["Bruce Winter, Rehabilitating Gallio, Tyndale Bulletin", "https://www.tyndalebulletin.org/article/29221-rehabilitating-gallio-and-his-judgement-in-acts-18-14-15.pdf"], ["Delphi inscription, Wikipedia", "https://en.wikipedia.org/wiki/Delphi_Inscription"]]
+
+[[exhibit]]
+id = "holy-sepulchre"
+title = "The Church of the Holy Sepulchre"
+when = "First century ground, shrine of the 300s"
+grade = "argued"
+summary = "Beneath the church lie an old quarry and first-century tombs, and recent digging found signs of a garden. The spot was outside the wall when Jesus died. Mortar from the tomb itself was dated to about AD 345."
+shows = "The oldest tradition points to a place that fits the Gospels: outside the city, near a garden, among rock tombs."
+objection = "Nothing can prove that one particular tomb was His, and the tradition in writing begins in the fourth century."
+sources = [["Dating of the Holy Aedicule, Journal of Archaeological Science Reports", "https://doi.org/10.1016/j.jasrep.2018.02.024"], ["New date for the Holy Sepulchre, 2017", "https://www.archaeology.wiki/blog/2017/12/04/new-date-holy-sepulchre-jerusalem-given-researchers-national-technical-university-athens/"], ["Jerusalem Post on the garden, 2025", "https://www.jpost.com/archaeology/archaeology-around-the-world/article-851319"]]
+
+[[exhibit]]
+id = "alexamenos"
+title = "A mocker's drawing"
+when = "About AD 200, found in 1857"
+grade = "strong"
+image = "alexamenos-graffito"
+summary = "Scratched into plaster on the Palatine hill in Rome, a man raises his arm to a crucified figure with the head of a donkey. The Greek beside it says that Alexamenos worships his god."
+shows = "One of the oldest pictures of the crucifixion was drawn by someone making fun of it. Worship of the crucified One was well enough known to be a joke."
+objection = "The date is approximate, and a few have proposed other readings."
+sources = [["Parco archeologico del Colosseo", "https://colosseo.it/en/opere/scratched-graffito-with-blasphemous-crucifix/"], ["Study of the graffito, RUDN Journal of World History", "https://journals.rudn.ru/world-history/article/view/52859/en_US"]]
+
+[[exhibit]]
+id = "megiddo"
+title = "The Megiddo floor"
+when = "About AD 230, found in 2005"
+grade = "strong"
+summary = "Under a prison in Israel lay the mosaic floor of a Christian meeting hall. One inscription records that Akeptous gave the table to God Jesus Christ as a memorial."
+shows = "A public dedication calls Jesus God about a century before the Council of Nicaea."
+objection = "Some date the floor later, after 325."
+sources = [["Akeptous inscription, COJS", "https://cojs.org/akeptous_inscription-_3-4th_century_ce/"], ["The Megiddo prison mosaic inscriptions", "https://biblearchaeology.org/research-articles/the-megiddo-prison-mosaic-inscriptions/"]]
+
+[[exhibit]]
+id = "frankfurt"
+title = "The Frankfurt silver"
+when = "About AD 230 to 270, announced in 2024"
+grade = "argued"
+summary = "A silver amulet from a grave near Frankfurt holds a rolled sheet that was read by scanning it unopened. It calls on Jesus Christ, Son of God, with words close to the hymn of Philippians 2."
+shows = "If the reading and date hold, it is among the earliest signs of Christian faith north of the Alps."
+objection = "It is a charm as well as a confession, several words are uncertain, and study of it has only begun."
+sources = [["Biblical Archaeology Society, Evidence of early Christianity in northern Europe", "https://www.biblicalarchaeology.org/daily/ancient-cultures/ancient-rome/evidence-early-christianity-northern-europe/"], ["Santiago Guijarro, The amulet of Frankfurt, Isidorianum", "https://doi.org/10.46543/isid.2534.1004"]]
+
+[[exhibit]]
+id = "shroud"
+title = "The Shroud of Turin"
+when = "Dated in 1988 to AD 1260 to 1390"
+grade = "set_aside"
+summary = "Three laboratories dated the linen to the Middle Ages. The earliest written notices are medieval too, and a newly published one calls it a fraud."
+shows = "If a future test overturned the date, it would matter a great deal. Today it cannot carry weight."
+objection = "Defenders say the sample was a repair, and a 2022 X-ray study proposed an older date. Others have answered both."
+sources = [["Radiocarbon dating of the Shroud of Turin, Nature 1989", "https://doi.org/10.1038/337611a0"], ["De Caro and others, Heritage 2022", "https://doi.org/10.3390/heritage5020047"], ["Medieval scholar called the shroud a fake", "https://www.medievalists.net/2025/08/medieval-scholar-shroud-of-turin-fake/"]]
+
+[[exhibit]]
+id = "james-ossuary"
+title = "The James ossuary"
+when = "First-century box, shown in 2002"
+grade = "set_aside"
+summary = "A bone box reads James son of Joseph, brother of Jesus. It came from the antiquities market, so no one knows where it was found."
+shows = "The box is old. Whether the whole inscription is, no one can now settle."
+objection = "The Israel Antiquities Authority judged part of the line a forgery in 2003. Its owner was acquitted in 2012, and the court did not rule that the words are genuine."
+sources = [["James Ossuary, Wikipedia", "https://en.wikipedia.org/wiki/James_Ossuary"], ["Biblical Archaeology Society on the verdict", "https://www.biblicalarchaeology.org/daily/biblical-artifacts/artifacts-and-the-bible/oded-golan-speaks-out-on-forgery-trial-verdict/"]]
+
+[[exhibit]]
+id = "nazareth-inscription"
+title = "The Nazareth inscription"
+when = "About the first century, found before 1878"
+grade = "set_aside"
+summary = "A marble slab threatens death for moving bodies from tombs. It was long said to be Rome's answer to the empty tomb."
+shows = "It shows that grave robbing was a crime taken seriously, and no more."
+objection = "In 2020 the marble was traced to the island of Kos, which points to a local ruler's affair and away from Galilee."
+sources = [["Harper and others, Journal of Archaeological Science Reports 2020", "https://doi.org/10.1016/j.jasrep.2020.102228"], ["Nazareth Inscription, Wikipedia", "https://en.wikipedia.org/wiki/Nazareth_Inscription"]]
