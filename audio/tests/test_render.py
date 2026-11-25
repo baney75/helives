@@ -226,16 +226,59 @@ class StateMachine(Base):
         self.assertEqual(json.loads(takes[0]["problems"]), ["repeat"])
         self.assertEqual([t["accepted"] for t in takes], [0, 1])
 
-    def test_flagged_after_four_attempts_goes_to_review(self):
+    def test_flagged_after_every_attempt_goes_to_review(self):
         text = self.chunk_rows()[2]["text"]
         render.batch(self.args, lambda: FakeEngine(bad={text: "always"}), self.guard, self.st)
         r = self.chunk_rows()[2]
-        self.assertEqual((r["status"], r["attempts"]), ("flagged", 4))
+        self.assertEqual((r["status"], r["attempts"]), ("flagged", render.MAX_ATTEMPTS))
         self.assertIsNotNone(r["best_take"])
         self.assertTrue(Path(self.st.take(r["best_take"])["path"]).exists())
         review = render.REVIEW.read_text().splitlines()
         self.assertEqual(len(review), 2)
-        self.assertIn("bsb-psalms\t23\t2\t4", review[1])
+        self.assertIn(f"bsb-psalms\t23\t2\t{render.MAX_ATTEMPTS}", review[1])
+
+    def flag_chunk_2(self, limit):
+        real, render.MAX_ATTEMPTS = render.MAX_ATTEMPTS, limit
+        try:
+            text = self.chunk_rows()[2]["text"]
+            render.batch(self.args, lambda: FakeEngine(bad={text: "always"}), self.guard, self.st)
+        finally:
+            render.MAX_ATTEMPTS = real
+        render.assemble_ready(self.st)
+        self.assertEqual(self.chunk_rows()[2]["status"], "flagged")
+
+    def section_status(self):
+        return self.st.db.execute("SELECT status FROM sections WHERE work_id='bsb-psalms'").fetchone()[0]
+
+    def test_retry_requeues_with_new_seeds_and_assembles_again(self):
+        self.flag_chunk_2(limit=4)
+        self.assertEqual(self.section_status(), "assembled")
+        self.assertEqual(render.retry_flagged(self.st, prep.Lexicon.load()),
+                         {"accepted": 0, "requeued": 1, "still_flagged": 0})
+        self.assertEqual(self.section_status(), "pending")
+        eng = FakeEngine()
+        render.batch(self.args, lambda: eng, self.guard, self.st)
+        self.assertEqual(self.chunk_rows()[2]["attempts"], 5)
+        old = {t["seed"] for t in self.st.takes_for(self.chunk_rows()[2])[:4]}
+        self.assertNotIn(eng.calls[0][2], old)
+        self.assertEqual(render.assemble_ready(self.st), 1)
+        self.assertEqual(json.loads((render.OUT / "bsb-psalms" / "23.json").read_text())["flagged_chunks"], 0)
+
+    def test_retry_accepts_a_stored_take_the_new_lexicon_clears(self):
+        self.flag_chunk_2(limit=4)
+        c = self.chunk_rows()[2]
+        t = self.st.takes_for(c)[0]
+        heard = [{"word": w, "start": 0.0, "end": 0.1} for w in c["ref_text"].replace("goodness", "gudness").split()]
+        self.st.db.execute("UPDATE takes SET asr_words=? WHERE id=?", (json.dumps(heard), t["id"]))
+        self.assertEqual(render.retry_flagged(self.st, prep.Lexicon(variants={"gudness": "goodness"}))["accepted"], 1)
+        self.assertEqual((self.chunk_rows()[2]["status"], self.chunk_rows()[2]["best_take"]), ("done", t["id"]))
+        self.assertEqual(self.section_status(), "pending")
+
+    def test_retry_leaves_a_misreading_flagged_when_attempts_are_spent(self):
+        self.flag_chunk_2(limit=render.MAX_ATTEMPTS)
+        self.assertEqual(render.retry_flagged(self.st, prep.Lexicon.load()),
+                         {"accepted": 0, "requeued": 0, "still_flagged": 1})
+        self.assertEqual(self.section_status(), "assembled")
 
     def test_ac_drop_stops_before_next_chunk_and_resumes(self):
         g = self.guard

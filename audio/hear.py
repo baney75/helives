@@ -55,6 +55,11 @@ def norm_words(words: list[str], lexicon: Lexicon | None = None,
             part = re.sub(r"[’'`]", "", part)
             part = re.sub(r"[^\w]", " ", part)
             out.extend(part.split())
+        k = 0
+        while k < len(out) - 1:            # a variant Whisper wrote with a hyphen: "hand-breaths"
+            if out[k] + out[k + 1] in variants:
+                out[k:k + 2] = [out[k] + out[k + 1]]
+            k += 1
         for t in out:
             t = variants.get(t, t)
             toks.extend(t.split())

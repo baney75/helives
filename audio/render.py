@@ -5,6 +5,7 @@
     render.py once [--only W/S]   one guarded batch now (for tests and first renders), then exit
     render.py sync                prep the library queue into state.db (CPU only)
     render.py assemble            assemble finished sections (CPU only)
+    render.py retry               re-score flagged chunks with the current lexicon, requeue the rest (CPU only)
     render.py set-voice NAME      change the narrator (re-renders everything; asks for --yes)
 
 The supervisor never imports torch. When parish-media's own readiness check passes and its GPU
@@ -45,7 +46,7 @@ REVIEW = DATA / "review.tsv"
 
 BATCH_MINUTES = float(os.environ.get("HELIVES_BATCH_MINUTES", "30"))
 WAIT_MIN_S, WAIT_MAX_S = 120, 300
-MAX_ATTEMPTS = 4                     # first take plus 3 re-renders with new seeds
+MAX_ATTEMPTS = 8                     # first take plus 7 re-renders with new seeds
 WER_MAX = float(os.environ.get("HELIVES_WER_MAX", "0.03"))
 MIN_FREE_GB = 30
 # Whisper keeps the attention maps of every decoded token for word times, beside the voice model. A
@@ -157,6 +158,36 @@ def write_review(st: State) -> int:
                 r["best_path"], r["ref_text"], r["best_asr"])) + "\n")
     os.replace(tmp, REVIEW)
     return len(rows)
+
+
+def retry_flagged(st: State, lexicon) -> dict:
+    """After a lexicon or attempt-limit change: accept a flagged chunk whose stored take now passes,
+    and requeue one that still has attempts left. Uses the stored transcripts, so no GPU."""
+    import hear
+    out = {"accepted": 0, "requeued": 0, "still_flagged": 0}
+    for c in st.flagged():
+        good = None
+        for t in st.takes_for(c):
+            if not t["path"] or not Path(t["path"]).exists() or not json.loads(t["asr_words"] or "[]"):
+                continue
+            sc = hear.score(c["ref_text"], [w["word"] for w in json.loads(t["asr_words"])], lexicon)
+            problems = [p for p in json.loads(t["problems"]) if p not in ("wer", "repeat")]
+            if sc["wer"] > WER_MAX:
+                problems.append("wer")
+            if sc["repeats"]:
+                problems.append("repeat")
+            if not problems and (good is None or sc["wer"] < good[1]):
+                good = (t["id"], sc["wer"])
+        if good:
+            st.accept_take(c, *good)
+            out["accepted"] += 1
+        elif c["attempts"] < MAX_ATTEMPTS:
+            st.requeue(c)
+            out["requeued"] += 1
+        else:
+            out["still_flagged"] += 1
+    write_review(st)
+    return out
 
 
 # ====================================================================== GPU batch (child process)
@@ -555,6 +586,7 @@ def main(argv: list[str]) -> int:
     b.add_argument("--only", action="append")
     sub.add_parser("sync")
     sub.add_parser("assemble")
+    sub.add_parser("retry")
     v = sub.add_parser("set-voice")
     v.add_argument("speaker", choices=SPEAKERS)
     v.add_argument("--yes", action="store_true")
@@ -571,6 +603,10 @@ def main(argv: list[str]) -> int:
         return 0
     if args.cmd == "assemble":
         print(assemble_ready(st), "sections assembled")
+        return 0
+    if args.cmd == "retry":
+        sync_queue(st, quiet=True)            # a new respelling requeues its chunks first
+        print(json.dumps(retry_flagged(st, prep.Lexicon.load())))
         return 0
     if args.cmd == "set-voice":
         if not args.yes:

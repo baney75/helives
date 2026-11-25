@@ -163,7 +163,34 @@ word = "hast"
 respell = "hassed"
 variants = ["hassed"]
 
+# Evidence (2026-11-25): Ryan read "choirmaster" in four Psalms as "time master", "tri-master" or
+# "quiet master"; spelled as two words, both test seeds were heard as "choir master".
+[[name]]
+word = "choirmaster"
+respell = "choir master"
+variants = []
+
+# Evidence (2026-11-25): read the same way in every take, spelled by ear.
+[[name]]
+word = "Miktam"
+respell = ""
+variants = ["mictum", "mictam", "miktum"]
+
+[[name]]
+word = "Maskil"
+respell = ""
+variants = ["maskell", "mascal", "maskol"]
+
+# The d in "breadths" is silent in ordinary speech; heard as "hand-breaths" in all four takes.
+[[name]]
+word = "handbreadths"
+respell = ""
+variants = ["handbreaths"]
+
 [spelling]
+# Exact homophones.
+chord = "cord"
+chords = "cords"
 honour = "honor"
 saviour = "savior"
 labour = "labor"

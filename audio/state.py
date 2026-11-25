@@ -228,6 +228,23 @@ class State:
     def take(self, take_id: int) -> sqlite3.Row:
         return self.db.execute("SELECT * FROM takes WHERE id=?", (take_id,)).fetchone()
 
+    def _set_chunk(self, chunk, status: str, best: int | None) -> None:
+        key = (chunk["work_id"], chunk["section_id"])
+        self.db.execute("UPDATE chunks SET status=?, best_take=?, updated=? WHERE work_id=? AND section_id=? AND idx=?",
+                        (status, best, time.time(), *key, chunk["idx"]))
+        # The assembled audio holds the flagged take: assemble the section again.
+        self.db.execute("UPDATE sections SET status='pending' WHERE work_id=? AND section_id=?", key)
+
+    def accept_take(self, chunk, take_id: int, wer: float) -> None:
+        with self.tx():
+            self.db.execute("UPDATE takes SET wer=?, problems='[]', accepted=1 WHERE id=?", (wer, take_id))
+            self._set_chunk(chunk, "done", take_id)
+
+    def requeue(self, chunk) -> None:
+        """Back to pending with its attempt count kept, so the next take uses a new seed."""
+        with self.tx():
+            self._set_chunk(chunk, "pending", None)
+
     # -------------------------------------------------------------- assembly
     def sections_ready(self) -> list[sqlite3.Row]:
         """Sections whose chunks are all done or flagged and that are not assembled at this plan."""
