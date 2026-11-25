@@ -22,6 +22,13 @@ class GateVoice(unittest.TestCase):
         with self.assertRaises(ValueError):
             gate_voice.timing("lords-prayer", LINES, heard("I believe in God the Father Almighty"), 12.0)
 
+    def test_a_skipped_short_line_is_refused(self):
+        long = [" ".join(f"{w}{k}" for w in ("alpha", "beta", "gamma", "delta") * 5) for k in "abc"]
+        lines = long[:2] + ["he descended into hell."] + long[2:]
+        self.assertEqual(len(gate_voice.timing("apostles-creed", lines, heard(" ".join(lines)), 60.0)["items"]), 4)
+        with self.assertRaisesRegex(ValueError, "he descended into hell"):
+            gate_voice.timing("apostles-creed", lines, heard(" ".join(long)), 60.0)
+
 
 if __name__ == "__main__":
     unittest.main()

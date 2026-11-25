@@ -16,6 +16,7 @@ import hear  # noqa: E402
 
 MODEL = "large-v3-turbo"
 WER_MAX = 0.10   # above this the recording is probably the wrong prayer, or cut short
+LINE_MIN = 0.5   # each line needs at least this share of its words heard, so no line is skipped
 
 
 def anchors(lines: list[str]) -> list[list]:
@@ -33,6 +34,14 @@ def timing(section: str, lines: list[str], words: list[dict], duration: float) -
     wer = hear.score(ref, [w["word"] for w in words])["wer"]
     if wer > WER_MAX:
         raise ValueError(f"{section}: {wer:.0%} of the words differ from the gate's text")
+    ref_words, src = hear.norm_words(ref.split())
+    hyp = hear.norm_words([w["word"] for w in words])[0]
+    hit = [j is not None and hyp[j] == t for t, j in zip(ref_words, hear.align(ref_words, hyp).ref_to_hyp)]
+    ends = [at for _, at in anchors(lines)][1:] + [len(ref.split())]
+    for (_, at), end, line in zip(anchors(lines), ends, lines):
+        got = [h for h, k in zip(hit, src) if at <= k < end]
+        if sum(got) < LINE_MIN * len(got):
+            raise ValueError(f"{section}: the line {line!r} was not heard")
     starts = hear.anchor_times(ref, anchors(lines), words, duration)
     items = [{"id": a, "kind": "block", "start": max(0.0, round(starts[a] - 0.15, 3))} for a, _ in anchors(lines)]
     return {"section": section, "duration": round(duration, 3), "wer": round(wer, 4), "items": items}
@@ -43,6 +52,8 @@ def main(src: Path, lines_json: Path, out: Path) -> None:
     import tempfile
 
     import assemble
+    if src.resolve() == out.resolve():
+        raise SystemExit("the output folder must not be the recordings folder")
     parts = json.loads(lines_json.read_text(encoding="utf-8"))
     files = {}
     for p in parts:
@@ -55,7 +66,7 @@ def main(src: Path, lines_json: Path, out: Path) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             wav = Path(tmp) / "in.wav"
             subprocess.run([assemble.FFMPEG, "-nostdin", "-v", "error", "-i", str(files[p["section"]]),
-                            "-ac", "1", "-ar", "48000", str(wav)], check=True)
+                            "-map_metadata", "-1", "-ac", "1", "-ar", "48000", str(wav)], check=True)
             subprocess.run(["whisper", str(wav), "--model", MODEL, "--language", "en", "--word_timestamps", "True",
                             "--output_format", "json", "--output_dir", tmp, "--verbose", "False"], check=True)
             heard = json.loads((Path(tmp) / "in.json").read_text(encoding="utf-8"))

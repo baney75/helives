@@ -104,7 +104,7 @@ Cost: the R2 free tier stores 10 GB. Check the total first (`python3 -c 'import 
 
 ### The daily gate's prayers (Donovan's own voice)
 
-The gate never uses the narrator. Three recordings named `lords-prayer`, `apostles-creed` and `illumination` (Voice Memos `.m4a` is fine) go through `audio/gate_voice.py`, which evens the loudness and times each line, then into `public/gate-voice/`. With any part missing the gate has no Listen button.
+The gate never uses the narrator. Three recordings named `lords-prayer`, `apostles-creed` and `illumination` (Voice Memos `.m4a` is fine) go through `audio/gate_voice.py`, which removes the file's tags (a Voice Memo can name a place), evens the loudness and times each line, then into `public/gate-voice/`. With any part missing the gate has no Listen button. Run it on the Mac, with `whisper` and `ffmpeg` on the PATH.
 
 ```bash
 mkdir -p build && node scripts/gate-lines.mjs > build/gate-lines.json
