@@ -6,8 +6,6 @@ const base = process.argv[2] || 'http://localhost:8841'
 const b = await chromium.launch({ channel: 'chrome', args: ['--autoplay-policy=no-user-gesture-required'] })
 const p = await b.newPage()
 const problems = []
-// A returning visitor who already passed today's gate (scripts/check-gate.mjs covers the gate itself).
-await p.addInitScript(() => { const d = new Date(); localStorage.setItem('hl:gate', `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`) })
 p.on('pageerror', (e) => problems.push(`page error: ${e.message}`))
 p.on('response', (r) => { if (r.status() >= 400) problems.push(`${r.status()} ${r.url()}`) })
 const check = (ok, what) => { console.log(`${ok ? 'ok  ' : 'FAIL'} ${what}`); if (!ok) problems.push(what) }

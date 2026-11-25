@@ -19,18 +19,4 @@
     return s
   }
   window.HL = { defaults: D, prefs: p, apply: apply, current: apply(p) }
-  // The daily gate (assets/gate.js). Due once per calendar day on this device; crawlers pass.
-  // If the gate script never loads, the page shows anyway after 5 s so no one is locked out.
-  try {
-    var d = new Date()
-    var day = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2)
-    var seen = null
-    try { seen = localStorage.getItem('hl:gate') } catch {}
-    if (!seen) { var m = document.cookie.match(/(?:^|; )hl_gate=([^;]+)/); seen = m && m[1] }
-    var bot = /bot|crawl|spider|slurp|bingpreview|lighthouse/i.test(navigator.userAgent)
-    if (seen !== day && !bot && location.search.indexOf('print=1') < 0) {
-      root.setAttribute('data-gate', 'due')
-      setTimeout(function () { if (!window.HLGateShown) root.removeAttribute('data-gate') }, 5000)
-    }
-  } catch {}
 })()

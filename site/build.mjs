@@ -5,7 +5,6 @@ import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync,
 import { dirname, join } from 'node:path'
 import { collectionBundles } from './lib/bundles.mjs'
 import { evidenceHub, evidencePart, partUrl } from './lib/evidence.mjs'
-import { gateAudio } from './lib/gate-audio.mjs'
 import { ASSET_VERSION, SITE } from './lib/layout.mjs'
 import { COLLECTIONS, ROOT, loadLibrary, readToml, tagIndex } from './lib/load.mjs'
 import * as P from './lib/pages.mjs'
@@ -72,13 +71,6 @@ function main() {
   if (existsSync(join(ROOT, 'media', 'files'))) cpSync(join(ROOT, 'media', 'files'), join(DIST, 'media'), { recursive: true })
 
   const lib = loadLibrary()
-  // The gate's recordings, only when all three parts are committed. Their list joins the asset
-  // version so gate.js fetches a fresh copy (/assets/gate-audio.json?v=) when recordings change.
-  // Until then the file lists no parts, so the gate's request never 404s.
-  const gate = gateAudio(join(ROOT, 'public', 'gate-voice'))
-  const gateBody = JSON.stringify(gate || { parts: [] })
-  writeFileSync(join(DIST, 'assets', 'gate-audio.json'), gateBody)
-  if (gate) ASSET_VERSION.v = createHash('sha256').update(ASSET_VERSION.v).update(gateBody).digest('hex').slice(0, 10)
   const ctx = {
     ...lib,
     byId: new Map(lib.works.map((w) => [w.id, w])),
