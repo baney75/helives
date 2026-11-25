@@ -1,7 +1,7 @@
 """Public-domain art and artifacts for the evidence pages (/evidence/).
 
 Paintings and icons are public domain by age. The artifact photographs are either public domain or
-CC0, a public domain dedication by the photographer, and are credited to the photographer. Each
+CC0, a public domain dedication; a CC0 photograph is credited to its photographer. Each
 entry: id, Commons file, title, artist, year, tags. Alt text lives in alt_text.py.
 """
 from __future__ import annotations
@@ -28,7 +28,7 @@ P = [
     ("hunt-light-of-the-world", "File:Hunt-light-of-the-world.jpeg",
      "The Light of the World", "William Holman Hunt", "1851-1853", ["bible:revelation:3"]),
     ("gerome-martyrs-prayer", "File:Jean-Léon Gérôme - The Christian Martyrs' Last Prayer - Walters 37113.jpg",
-     "The Christian Martyrs' Last Prayer", "Jean-Léon Gérôme", "1863-1883", ["collection:fathers"]),
+     "The Christian Martyrs' Last Prayer", "Jean-Léon Gérôme", "1863-1883", ["work:martyrdom-of-polycarp"]),
     ("papyrus-52", "File:Manchester, John Rylands Library Ms Greek P 457 (Papyrus 52) recto John 18, 31-33.jpg",
      "Papyrus 52, John 18:31-33, John Rylands Library", "Unknown scribe", "2nd century", ["bible:john:18"]),
     ("papyrus-46", "File:Ann Arbor, University of Michigan P.Mich.inv. 6238 (Papyrus 46) fol. 142r - 2 Corinthians 11,33-12,9.jpg",

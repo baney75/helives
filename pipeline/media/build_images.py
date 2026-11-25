@@ -4,8 +4,8 @@ Usage: python3 pipeline/media/build_images.py [images|maps] [--shard I/N]
        python3 pipeline/media/build_images.py merge [images|maps]
 --shard runs every Nth spec (offset I) and records new results in built_<kind>.partI.json, so
 several shards can run at once; `merge` folds the part files into built_<kind>.json.
-Reads specs from dore.py + portraits.py (images) or maps.py (maps). Every source must be stated as
-public domain by Commons extmetadata (LicenseShortName "Public domain", Copyrighted "False", or CC0);
+Reads specs from dore.py + portraits.py + evidence.py (images) or maps.py (maps). Every source must be stated as
+public domain by Commons extmetadata (LicenseShortName "Public domain", Copyrighted "False", or LicenseShortName "CC0");
 anything else is rejected and logged. Output: public/media/<kind>/<id>.webp and
 pipeline/cache/media/built_<kind>.json.
 """
@@ -48,6 +48,8 @@ def credit_for(spec: dict, ii: dict) -> str:
         inst = "Scan: The Metropolitan Museum of Art. "
     if is_cc0(ii):
         who = strip_html(em.get("Artist", {}).get("value", ""))
+        if not who or who in spec["artist"]:
+            raise ValueError(f"{spec['id']}: a CC0 file here must be a photograph with a named photographer")
         return f"“{spec['title']}” ({spec['year']}). Photograph by {who}, CC0, a public domain dedication. Via Wikimedia Commons."
     return f"{spec['artist']}, “{spec['title']}” ({spec['year']}). Public domain. {inst}Via Wikimedia Commons."
 
