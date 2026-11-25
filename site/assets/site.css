@@ -277,7 +277,10 @@ kbd { font: 600 0.85em var(--mono); border: 1px solid var(--line); border-radius
 html[data-gate='due'] body > *:not(dialog) { visibility: hidden; }
 dialog.gate { border: 0; padding: 0; margin: 0; width: 100vw; max-width: none; height: 100dvh; max-height: none; background: var(--bg); color: var(--ink); overflow: hidden; }
 dialog.gate[open] { display: flex; flex-direction: column; }
-.gate-scroll { flex: 1; min-height: 0; overflow-y: auto; outline: none; }
+.gate-scroll { flex: 1; min-height: 0; overflow-y: auto; }
+.gate-scroll:focus-visible { outline-offset: -3px; } /* inside the edge, so it shows */
+.gate-scroll.first:focus-visible { outline: none; }
+html:has(dialog.gate[open]) { overflow: hidden; } /* paging never moves the page behind */
 dialog.gate::backdrop { background: var(--bg); }
 .gate-in { max-width: 38rem; margin: 0 auto; padding: var(--s7) var(--s4) var(--s5); font: var(--fs)/var(--lh) var(--read-font); }
 .gate-in h1 { font: 600 clamp(36px, 8vw, 52px)/1.1 var(--display); margin: var(--s2) 0 var(--s5); }

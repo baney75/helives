@@ -73,7 +73,7 @@ export function show() {
   d.id = 'gate'
   d.className = 'gate'
   d.setAttribute('aria-labelledby', 'gate-h')
-  d.innerHTML = `<div class="gate-scroll" tabindex="-1"><div class="gate-in">
+  d.innerHTML = `<div class="gate-scroll" tabindex="0" role="region" aria-labelledby="gate-h"><div class="gate-in">
 <p class="kicker">Before you enter</p>
 <h1 id="gate-h">Pray, then read</h1>
 <p class="gate-lede">These pages hold the Word of God and the witness of His church. Do not read them by your own light. Scripture is not a private possession to be bent to what you already think. Ask the Holy Spirit to open your eyes, and resolve now to obey what He shows you.</p>
@@ -83,7 +83,10 @@ ${PARTS.map((p, i) => `<section class="gate-part"><h2>${esc(p.title)}</h2><p cla
 <div class="gate-end"><div class="gate-bar"><button class="btn" type="button" data-gate-read hidden>Listen</button><button class="btn" type="button" data-gate-enter>Amen. Enter the library</button></div></div>`
   document.body.appendChild(d)
   d.showModal()
-  d.querySelector('.gate-scroll').focus() // the prayers, so it opens at the top and the keyboard scrolls them
+  const prayers = d.querySelector('.gate-scroll')
+  prayers.classList.add('first') // no focus ring around the prayers until the reader has moved away once
+  prayers.addEventListener('blur', () => prayers.classList.remove('first'), { once: true })
+  prayers.focus() // so it opens at the top and the keyboard scrolls them
   document.documentElement.removeAttribute('data-gate') // the page behind stays inert under the modal
 
   const readBtn = d.querySelector('[data-gate-read]')
