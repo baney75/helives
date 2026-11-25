@@ -1,41 +1,36 @@
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { test } from 'node:test'
-import { parse } from 'smol-toml'
 import { PARTS } from '../assets/gate.js'
 import { GATE_SECTIONS, gateAudio } from '../lib/gate-audio.mjs'
 
-const toml = parse(readFileSync(new URL('../../audio/gate.toml', import.meta.url), 'utf8'))
+const root = new URL('../../', import.meta.url)
+const src = readFileSync(new URL('site/assets/gate.js', root), 'utf8')
 
-// The narrator reads audio/gate.toml; the gate shows PARTS. Block j of section i is lit as data-line="i-j",
-// so the two must hold the same lines in the same order, one p block per line.
-test('audio/gate.toml holds exactly the lines gate.js shows', () => {
-  assert.equal(toml.work.id, 'gate')
-  assert.deepEqual(toml.section.map((s) => s.id), GATE_SECTIONS)
-  assert.equal(toml.section.length, PARTS.length)
-  PARTS.forEach((part, i) => {
-    const s = toml.section[i]
-    assert.equal(s.title, part.title, `section ${s.id} title`)
-    assert.ok(s.blocks.every((b) => b.t === 'p'), `section ${s.id} has only p blocks`)
-    assert.deepEqual(s.blocks.map((b) => b.text), part.lines, `section ${s.id} lines`)
-  })
+test('nothing on the gate is locked', () => {
+  assert.ok(!/\bdisabled\b/.test(src), 'no disabled Enter button')
+  assert.ok(!/preventDefault/.test(src), 'Escape is not blocked')
+  assert.ok(!/setTimeout/.test(src), 'no waiting time')
 })
 
-const item = (section) => ({ work: 'gate', section, url: `/audio/gate/${section}.m4a`, timing: `/audio/gate/${section}.json` })
+test('one part on the gate for each recording', () => assert.equal(PARTS.length, GATE_SECTIONS.length))
 
-test('gate-audio lists the three recordings in order when all are published', () => {
-  const audio = new Map(GATE_SECTIONS.map((s) => [`gate/${s}`, item(s)]))
-  audio.set('bsb-psalms/23', { work: 'bsb-psalms', section: '23', url: '/audio/bsb-psalms/23.m4a', timing: '/audio/bsb-psalms/23.json' })
-  assert.deepEqual(gateAudio(audio), {
-    parts: [
-      { section: 'lords-prayer', src: '/audio/gate/lords-prayer.m4a', timing: '/audio/gate/lords-prayer.json' },
-      { section: 'apostles-creed', src: '/audio/gate/apostles-creed.m4a', timing: '/audio/gate/apostles-creed.json' },
-      { section: 'illumination', src: '/audio/gate/illumination.m4a', timing: '/audio/gate/illumination.json' },
-    ],
-  })
+test('the narrator does not render the gate, and device speech is never used', () => {
+  assert.ok(!existsSync(new URL('audio/gate.toml', root)))
+  assert.ok(!/speechSynthesis/.test(src))
 })
 
-test('gate-audio is nothing until every part is published', () => {
-  assert.equal(gateAudio(new Map()), null)
-  assert.equal(gateAudio(new Map(GATE_SECTIONS.slice(0, 2).map((s) => [`gate/${s}`, item(s)]))), null)
+test('gate-audio offers the recordings only when all three parts and their timing are there', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'gate-'))
+  assert.equal(gateAudio(dir), null)
+  for (const s of GATE_SECTIONS) writeFileSync(join(dir, `${s}.m4a`), s)
+  assert.equal(gateAudio(dir), null, 'no timing yet')
+  for (const s of GATE_SECTIONS) writeFileSync(join(dir, `${s}.json`), '{}')
+  const { parts } = gateAudio(dir)
+  assert.deepEqual(parts.map((p) => p.section), GATE_SECTIONS)
+  assert.match(parts[0].src, /^\/gate-voice\/lords-prayer\.m4a\?v=[0-9a-f]{10}$/)
+  writeFileSync(join(dir, 'lords-prayer.m4a'), 'a new reading')
+  assert.notEqual(gateAudio(dir).parts[0].src, parts[0].src, 'a new reading gets a new URL')
 })

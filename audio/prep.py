@@ -436,7 +436,6 @@ def _paragraphs(work: dict, section: dict, bible: bool):
     pflags: set[str] = set()
     prev_t = None
     heading_break = False
-    run_on = False
     blocks = section.get("blocks", [])
     first = next((j for j, x in enumerate(blocks) if x["t"] != "note"), -1)
     # A Book or Part section repeats its title as its only heading; the title is already read.
@@ -467,8 +466,6 @@ def _paragraphs(work: dict, section: dict, bible: bool):
         if t == "v" and b.get("cont"):
             anchor = None         # same verse resumes after a heading: one sentence, no new anchor
             new_para = False
-        elif run_on:
-            new_para = False      # the previous line ran on (run_on = true): one spoken sentence, own anchor
         else:
             new_para = ((t == "v" and (b.get("p") or heading_break)) or t in ("p", "bq")
                         or (t == "q" and prev_t != "q"))
@@ -479,7 +476,6 @@ def _paragraphs(work: dict, section: dict, bible: bool):
         para.append((anchor, text))
         pflags |= bflags
         prev_t = t
-        run_on = t == "p" and bool(b.get("run_on"))
     if para:
         yield "body", para, pflags
 
@@ -571,17 +567,13 @@ def plan_work(path: Path, lexicon: Lexicon | None = None) -> list[SectionPlan]:
 
 PRIORITY_BOOKS = [19, 43, 1]          # Psalms, John, Genesis
 COLLECTION_ORDER = ["apostolic", "creeds", "ante-nicene", "nicene", "medieval", "aquinas", "reformation", "apocrypha", "pseudepigrapha", "jewish"]
-GATE = HERE / "gate.toml"                 # the daily gate: Lord's Prayer, Apostles' Creed, illumination
-GATE_PRIORITY = -1
 
 
 def queue(library: Path) -> list[tuple[int, Path]]:
     """Work files in render priority order: (priority, path). Lower renders first.
-    Gnostic texts and encyclicals are not in the audiobook queue. The daily gate's prayers
-    (audio/gate.toml, beside this file) render first, before Psalms."""
+    Gnostic texts and encyclicals are not in the audiobook queue. Neither are the daily gate's
+    prayers: Donovan reads those himself (public/gate-voice/)."""
     out: list[tuple[int, Path]] = []
-    if GATE.exists():
-        out.append((GATE_PRIORITY, GATE))
     bible = sorted((library / "bible" / "bsb").glob("*.toml"))
     for p in bible:
         m = re.match(r"(\d+)-", p.name)
