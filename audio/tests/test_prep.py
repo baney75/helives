@@ -191,6 +191,9 @@ class Normalize(unittest.TestCase):
         lex = prep.Lexicon.load()
         self.assertEqual(lex.apply("Blessed Lord, who hast caused"), "Blessed Lord, who hassed caused")
 
+    def test_choirmaster_is_read_as_two_words(self):
+        self.assertEqual(prep.Lexicon.load().apply("For the choirmaster."), "For the choir master.")
+
 
 if __name__ == "__main__":
     unittest.main()

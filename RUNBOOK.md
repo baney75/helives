@@ -60,7 +60,7 @@ If `/IAM/` is not 200, stop and roll back with `pnpm exec wrangler rollback`, th
 
 The audiobooks are rendered on Parish1 by the user service `helives-audio`. It is opportunistic: it waits for the parish-media GPU guard and its lock (AC power, idle GPU, no game), renders in 30-minute batches, and releases the GPU between them. It never kills another process.
 
-- Voice: Qwen3-TTS (CustomVoice). Every take is transcribed by Whisper large-v3 and rejected if the word error rate is above 3% or if it stutters or doubles a word. A chunk gets up to 4 takes; failures go to `review.tsv`.
+- Voice: Qwen3-TTS (CustomVoice). Every take is transcribed by Whisper large-v3 and rejected if the word error rate is above 3% or if it stutters or doubles a word. A chunk gets up to 8 takes; failures go to `review.tsv` and hold their section back. After a lexicon change, stop `helives-audio`, run `audio/sync.sh` and `render.py retry` (with the unit's environment), and start it again: `retry` re-scores the stored takes and requeues the rest.
 - Data on Parish1: `/srv/magnus-data/media/helives-audio` (`state.db`, `out/`, `review.tsv`).
 - Output per section: `<work>/<section>.m4a` and a timing file `{items: [{id: "v16" | "b4" | "title", start}]}`. `v<n>` is verse n; `b<i>` is block i of the section. Pages carry `data-v` on verses and `data-b="<section>:<block index>"` on prose blocks, so the player can light what is being read. A page plays all its sections with audio in order.
 
