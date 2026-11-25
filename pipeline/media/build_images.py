@@ -4,8 +4,8 @@ Usage: python3 pipeline/media/build_images.py [images|maps] [--shard I/N]
        python3 pipeline/media/build_images.py merge [images|maps]
 --shard runs every Nth spec (offset I) and records new results in built_<kind>.partI.json, so
 several shards can run at once; `merge` folds the part files into built_<kind>.json.
-Reads specs from dore.py + portraits.py (images) or maps.py (maps). Every source must be stated as
-public domain by Commons extmetadata (LicenseShortName "Public domain", Copyrighted "False");
+Reads specs from dore.py + portraits.py + evidence.py (images) or maps.py (maps). Every source must be stated as
+public domain by Commons extmetadata (LicenseShortName "Public domain", Copyrighted "False", or LicenseShortName "CC0");
 anything else is rejected and logged. Output: public/media/<kind>/<id>.webp and
 pipeline/cache/media/built_<kind>.json.
 """
@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 from common import (CACHE, PUBLIC, crop_plate, fetch, ia_leaf_url, ia_page_url, ia_public_domain, imageinfo,
-                    is_public_domain, strip_html, to_webp)
+                    is_cc0, is_public_domain, strip_html, to_webp)
 
 BUCKETS = [960, 1280, 1920, 3840]
 LIMITS = {"images": (1600, 350_000), "maps": (2400, 900_000)}
@@ -46,6 +46,11 @@ def credit_for(spec: dict, ii: dict) -> str:
         inst = "Scan: National Library of Poland (Polona). "
     elif "Metropolitan" in src:
         inst = "Scan: The Metropolitan Museum of Art. "
+    if is_cc0(ii):
+        who = strip_html(em.get("Artist", {}).get("value", ""))
+        if not who or who in spec["artist"]:
+            raise ValueError(f"{spec['id']}: a CC0 file here must be a photograph with a named photographer")
+        return f"“{spec['title']}” ({spec['year']}). Photograph by {who}, CC0, a public domain dedication. Via Wikimedia Commons."
     return f"{spec['artist']}, “{spec['title']}” ({spec['year']}). Public domain. {inst}Via Wikimedia Commons."
 
 
@@ -117,9 +122,10 @@ def build(kind: str, specs: list[dict], part: str = "") -> tuple[dict, list[str]
 
 def image_specs() -> tuple[list[dict], list[str]]:
     import dore
+    import evidence
     import portraits
     d, rej = dore.specs()
-    return d + portraits.specs(), rej
+    return d + portraits.specs() + evidence.specs(), rej
 
 
 def merge(kind: str) -> None:

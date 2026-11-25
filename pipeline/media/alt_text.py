@@ -290,6 +290,27 @@ ALT = {
     "cyril-jerusalem-bartolozzi": "Engraving of Cyril of Jerusalem standing in a bishop's vestments, one finger raised, holding a book, his name in Greek above.",
     "cyril-jerusalem-fresco": "Fresco medallion of Cyril of Jerusalem as a white-bearded bishop raising his right hand in blessing and holding a book, named in Church Slavonic.",
     "john-cassian-icon": "Russian icon of John Cassian standing in a monk's habit at the center, framed by small scenes of his life, with the Virgin and Child and angels above.",
+    # Evidence: paintings, icons, manuscripts and finds
+    "burnand-disciples": "Two men hurry left across open country at sunrise: young John in white with clasped hands, and gray-bearded Peter in a dark cloak with one hand on his chest.",
+    "sinai-pantocrator": "An ancient painted icon of Christ with dark hair and beard and a gold halo, his right hand raised in blessing and a jeweled Gospel book in his left.",
+    "grunewald-resurrection": "Christ rises from the open tomb into a great disc of light against a night sky, hands raised to show the wounds, while soldiers fall to the ground below.",
+    "angelico-noli-me-tangere": "In a garden, Mary Magdalene kneels in a rose robe with her hands out toward the risen Christ in white, who steps aside with a hoe on his shoulder; the dark tomb stands open behind her.",
+    "caravaggio-thomas": "Christ draws back his robe and guides Thomas's finger into the wound in his side as two other disciples lean in, their faces close together in the light.",
+    "caravaggio-emmaus": "At a table set with bread and fruit, the young, beardless Christ raises his hand in blessing; one disciple starts up from his chair and the other flings his arms wide.",
+    "caravaggio-damascus": "Saul lies on his back on the ground with his arms flung up into the light, beneath a large horse held by an old groom.",
+    "ciseri-ecce-homo": "From a high balcony between columns, Pilate leans out and gestures to the crowd below, showing them Jesus, bound, crowned with thorns and seen from behind; a woman on the right turns away.",
+    "velazquez-crucified": "Christ hangs on the cross against plain darkness, his head bowed with hair falling over half his face, and a faint light around it.",
+    "hunt-light-of-the-world": "At night Christ, crowned and carrying a lantern, knocks at an overgrown wooden door that has no handle on the outside.",
+    "gerome-martyrs-prayer": "In a packed Roman arena a small group of Christians kneels in prayer around an old man standing, while a lion walks out of a pit; others hang on crosses along the wall.",
+    "papyrus-52": "A small torn scrap of papyrus with seven short lines of Greek letters in dark ink, on a black ground.",
+    "papyrus-46": "A brown papyrus page, worn away at the right edge, filled with about twenty-five lines of neat Greek handwriting.",
+    "isaiah-scroll-53": "A column of Hebrew handwriting in black ink on tan leather, worn at the right edge, with a few corrections between the lines.",
+    "pilate-stone": "A worn block of limestone with part of a Latin inscription; the letters TIBERIEVM and, below them, TIVSPILATVS can be read.",
+    "caiaphas-ossuary": "A small limestone chest with a curved lid, its front carved with two circles of rosettes inside a leafy border.",
+    "crucified-heel-bone": "A heel bone on a museum mount with a long rusted iron nail driven through it from side to side.",
+    "bethesda-pool": "Deep stone ruins of a pool below the level of the city, with a tall arch, broken walls and steps, under a blue sky.",
+    "alexamenos-graffito": "A line drawing of a scratched picture: a man raises one hand toward a figure with a donkey's head on a cross, with Greek letters below.",
+    "tel-dan-stele": "A broken slab of dark stone covered with lines of carved Aramaic letters, joined from several pieces.",
 }
 
 MAP_ALT = {

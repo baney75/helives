@@ -421,7 +421,7 @@ export function galleryPage(ctx, kind) {
   const title = kind === 'maps' ? 'Maps' : 'Art'
   const lede = kind === 'maps'
     ? 'Maps of the lands of the Bible and the early church, from public domain atlases. Select a map to open it full size.'
-    : 'Public domain art: Gustave Doré’s Bible engravings and portraits of the fathers. Select one to open it full size.'
+    : 'Public domain art: Gustave Doré’s Bible engravings, portraits of the fathers, paintings of Christ, manuscripts and finds from the ground. Select one to open it full size.'
   const body = html`<div class="wrap"><p class="kicker">Explore</p><h1>${title}</h1><p class="lede">${lede}</p>
 <form class="searchbox" role="search" style="margin-top:var(--s5)" data-nosubmit><label class="vh" for="gf">Filter</label><input id="gf" type="search" placeholder="Filter by title or book" data-filter=".gallery > figure"></form>
 <div class="gallery${kind === 'maps' ? ' maps' : ''}" style="margin-top:var(--s5)">${items.map(
