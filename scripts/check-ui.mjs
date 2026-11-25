@@ -92,6 +92,17 @@ await p.waitForTimeout(4000)
 const y = Math.round(await p.evaluate((id) => document.getElementById(id).getBoundingClientRect().top, last))
 check(y >= 60 && y <= 100, `evidence jump link lands under the header (${y})`)
 
+// 11. A first visit straight to an exhibit lands under the header, though the fonts arrive late.
+for (const at of ['/evidence/the-other-explanations/#hume', '/evidence/the-man-in-history/#mara']) {
+  const first = await (await b.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'no-preference' })).newPage()
+  await first.route('**/fonts/**', async (route) => { await new Promise((r) => setTimeout(r, 700)); await route.continue() })
+  await first.goto(`${base}${at}`)
+  await first.waitForTimeout(4000)
+  const top = Math.round(await first.evaluate(() => document.querySelector(location.hash).getBoundingClientRect().top))
+  check(top >= 60 && top <= 100, `a first visit to ${at} lands under the header (${top})`)
+  await first.context().close()
+}
+
 await b.close()
 console.log(problems.length ? `\n${problems.length} problem(s):\n${problems.join('\n')}` : '\nall interactive checks passed')
 process.exit(problems.length ? 1 : 0)

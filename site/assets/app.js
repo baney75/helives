@@ -126,6 +126,18 @@
     else window.addEventListener('load', go)
   }
 
+  // ---------- jump links ----------
+  // Fonts that arrive after the jump reflow the page, so land again unless the reader has moved.
+  var nav = performance.getEntriesByType('navigation')[0]
+  var aim = location.hash !== '#listen' && nav && nav.type === 'navigate' && document.getElementById(location.hash.slice(1))
+  if (aim && document.fonts) {
+    var moved = false
+    ;['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(function (n) { window.addEventListener(n, function () { moved = true }, { once: true, passive: true }) })
+    var land = function () { document.fonts.ready.then(function () { if (!moved) aim.scrollIntoView() }) }
+    land()
+    window.addEventListener('load', land)
+  }
+
   // ---------- filters on list pages ----------
   $$('form[data-nosubmit]').forEach(function (f) { f.addEventListener('submit', function (e) { e.preventDefault() }) })
   $$('input[data-filter]').forEach(function (inp) {
