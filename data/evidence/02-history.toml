@@ -2,7 +2,7 @@ id = "the-man-in-history"
 title = "The man in history"
 short = "Almost no historian of the period doubts that Jesus of Nazareth lived and was crucified under Pontius Pilate. Writers outside the church recorded it."
 image = "ciseri-ecce-homo"
-intro = "Set the New Testament aside for a moment. These are the Roman, Jewish and Syrian writers who mention Jesus or His people, most of whom had no love for either."
+intro = "After a word on what historians hold, set the New Testament aside for a moment. These are the Roman, Jewish and Syrian writers who mention Jesus or His people, most of whom had no love for either."
 
 [verse]
 ref = "Acts 26:26"
@@ -59,7 +59,7 @@ when = "About AD 112"
 grade = "settled"
 summary = "Pliny governed Bithynia, in what is now Turkey. He wrote to the emperor Trajan to ask what to do with Christians. Those who confessed three times and would not give way he had already ordered to be punished. Those who cursed Christ he let go. The account of their worship comes from people who said they had once been Christians and had left."
 quote = { text = "they met on a stated day before it was light, and addressed a form of prayer to Christ, as to a divinity", by = "Pliny the Younger, Letters 10.96, translated by Melmoth", href = "https://archive.org/details/thelettersofplin02811gut" }
-shows = "Within about eighty years of the cross, far from Jerusalem, people of every rank were worshiping Christ as God. Pliny had heard that a real Christian could not be made to curse Him."
+shows = "Within about eighty years of the cross, far from Jerusalem, Christians were praying to Christ as to a divinity. Pliny had heard that a real Christian could not be made to curse Him."
 objection = "Pliny tells us what Christians did, from people who had left, and nothing new about the life of Jesus."
 sources = [["Pliny and Trajan, Fordham sourcebook", "https://sourcebooks.fordham.edu/ancient/pliny-trajan1.asp"], ["Pliny's letters, Loeb edition", "https://archive.org/stream/bwb_W9-CQC-375/bwb_W9-CQC-375_djvu.txt"]]
 
@@ -81,7 +81,7 @@ grade = "strong"
 summary = "The satirist Lucian laughs at Christians for believing they will live forever and for treating one another as brothers once they have taken up the faith."
 quote = { text = "worship the crucified sage, and live after his laws", by = "Lucian, The Death of Peregrine 13, translated by Fowler", href = "https://archive.org/stream/worksoflucianofs04luciuoft/worksoflucianofs04luciuoft_djvu.txt" }
 shows = "Even the joke depends on everyone knowing that Christians worshiped a crucified man."
-objection = "It is late and it is satire. Lucian names no one and need not have read anything."
+objection = "It is late and it is satire. Lucian does not name Jesus and need not have read anything."
 sources = [["The Works of Lucian, volume 4", "https://archive.org/stream/worksoflucianofs04luciuoft/worksoflucianofs04luciuoft_djvu.txt"]]
 
 [[exhibit]]
@@ -91,7 +91,7 @@ when = "Written down by about AD 500, from older tradition"
 grade = "argued"
 summary = "The Babylonian Talmud keeps hostile traditions about a Yeshu who was put to death on the eve of Passover for sorcery and for leading Israel astray."
 quote = { text = "On the eve of Pesah they hung Jeshu", by = "Sanhedrin 43a, translated by R. Travers Herford", href = "https://archive.org/stream/christianityinta00herf/christianityinta00herf_djvu.txt" }
-shows = "Opponents did not say He never lived or never did wonders. They said the power was the wrong kind, which is the charge the Gospels report too."
+shows = "If this Yeshu is Jesus, the tradition does not deny that He lived or did wonders. It says the power was the wrong kind, which is the charge the Gospels report too."
 objection = "It is centuries later. Herford himself called it only a very vague and confused recollection, and some doubt that every Yeshu is Jesus."
 sources = [["Herford, Christianity in Talmud and Midrash, 1903", "https://archive.org/stream/christianityinta00herf/christianityinta00herf_djvu.txt"]]
 

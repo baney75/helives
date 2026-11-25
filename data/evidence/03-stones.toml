@@ -97,9 +97,9 @@ sources = [["Parco archeologico del Colosseo", "https://colosseo.it/en/opere/scr
 id = "megiddo"
 title = "The Megiddo floor"
 when = "About AD 230, found in 2005"
-grade = "strong"
+grade = "argued"
 summary = "Under a prison in Israel lay the mosaic floor of a Christian meeting hall. One inscription records that Akeptous gave the table to God Jesus Christ as a memorial."
-shows = "A public dedication calls Jesus God about a century before the Council of Nicaea."
+shows = "If the early date holds, a dedication calls Jesus God about a century before the Council of Nicaea."
 objection = "Some date the floor later, after 325."
 sources = [["Akeptous inscription, COJS", "https://cojs.org/akeptous_inscription-_3-4th_century_ce/"], ["The Megiddo prison mosaic inscriptions", "https://biblearchaeology.org/research-articles/the-megiddo-prison-mosaic-inscriptions/"]]
 
