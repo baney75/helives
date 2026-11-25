@@ -2,7 +2,7 @@ id = "the-cross-and-the-empty-tomb"
 title = "The cross and the empty tomb"
 short = "He died, He was buried, and on the third day the tomb was empty."
 image = "velazquez-crucified"
-intro = "These are the events of three days in Jerusalem, taken in order, with what historians grant about each. Rome carried out the sentence under its own governor. Christians confess that He died for the sins of all, and no people may be blamed for it."
+intro = "These are the events of three days in Jerusalem, taken in order, and two things that followed, with what historians grant about each. Rome carried out the sentence under its own governor. Christians confess that He died for the sins of all, and no people may be blamed for it."
 
 [verse]
 ref = "Mark 15:39"
@@ -47,10 +47,10 @@ id = "empty-tomb"
 title = "The tomb was empty"
 when = "The third day"
 grade = "strong"
-summary = "Gary Habermas, who surveyed writing on the subject from 1975 on, reports that most scholars who write on it, between two thirds and three quarters, favor an empty tomb. Dale Allison, who weighs both sides at length, also argues for it."
+summary = "Gary Habermas, who surveyed writing on the subject from 1975 on, reports that most scholars who write on it, between two thirds and three quarters, favor an empty tomb. Dale Allison, who weighs both sides at length, cautiously favors it."
 shows = "The preaching began in the city where He was buried, where a known and occupied tomb would have been a strong answer to it."
 objection = "That is a count of publications and not a poll, those who write on it are often believers, and Habermas himself says it falls short of near-unanimous agreement. By Acts' own account the preaching began fifty days later. Ehrman points out that Paul never mentions the tomb, and some historians say the question cannot be answered."
-sources = [["Habermas, The minimal facts approach, 2012", "https://www.garyhabermas.com/articles/southeastern_theological_review/minimal-facts-methodology_08-02-2012.htm"], ["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Matthew 28:6", "/bible/matthew/28/#v6"]]
+sources = [["Habermas, The minimal facts approach, 2012", "https://www.garyhabermas.com/articles/southeastern_theological_review/minimal-facts-methodology_08-02-2012.htm"], ["Dale Allison, The Resurrection of Jesus, 2021", "https://doi.org/10.5040/9780567697608"], ["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Matthew 28:6", "/bible/matthew/28/#v6"]]
 
 [[exhibit]]
 id = "stolen-charge"
