@@ -1,0 +1,118 @@
+id = "the-man-in-history"
+title = "The man in history"
+short = "Almost no historian of the period doubts that Jesus of Nazareth lived and was crucified under Pontius Pilate. Writers outside the church recorded it."
+image = "ciseri-ecce-homo"
+intro = "Set the New Testament aside for a moment. These are the Roman, Jewish and Syrian writers who mention Jesus or His people, most of whom had no love for either."
+
+[verse]
+ref = "Acts 26:26"
+href = "/bible/acts/26/#v26"
+text = "I am confident that none of this has escaped his notice, because it was not done in a corner."
+
+[[exhibit]]
+id = "existence"
+title = "Historians agree that He lived"
+when = "Scholarship to today"
+grade = "settled"
+summary = "Virtually no historian of the period, believing or not, holds that Jesus never existed. Bart Ehrman, an agnostic, wrote a book against the idea. Two of his points: Paul knew James, whom he calls the Lord's brother, and no one would have invented a crucified Messiah."
+shows = "The story begins with a real man at a known time and place."
+objection = "A few writers still argue that Jesus began as a myth. And that He lived does not settle what He was."
+sources = [["NPR, Did Jesus Exist? Bart Ehrman interviewed, 2012", "https://www.npr.org/2012/04/01/149462376/did-jesus-exist-a-historian-"], ["Historical Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Historical_Jesus"]]
+
+[[exhibit]]
+id = "tacitus"
+title = "Tacitus, senator of Rome"
+when = "About AD 116"
+grade = "strong"
+summary = "Writing of the fire of Rome in AD 64, the best historian of the empire stops to explain whom Nero blamed for it. He despised Christians, and he says in whose reign and under which governor their founder died."
+quote = { text = "Christus, from whom the name had its origin, suffered the extreme penalty during the reign of Tiberius at the hands of one of our procurators, Pontius Pilatus", by = "Tacitus, Annals 15.44, translated by Church and Brodribb", href = "https://en.wikisource.org/wiki/The_Annals_(Tacitus)/Book_15" }
+shows = "A hostile Roman confirms the execution, the emperor and the judge, and that the movement broke out again afterward in Judaea and reached Rome."
+objection = "He may be repeating what Christians said. He calls Pilate a procurator, when the title in those years was prefect, and the passage survives in one medieval copy."
+sources = [["Tacitus, Annals, book 15", "https://en.wikisource.org/wiki/The_Annals_(Tacitus)/Book_15"], ["Tacitus on Christ, Wikipedia", "https://en.wikipedia.org/wiki/Tacitus_on_Christ"]]
+
+[[exhibit]]
+id = "josephus-james"
+title = "Josephus on James"
+when = "About AD 93, of events in AD 62"
+grade = "strong"
+summary = "The Jewish historian Josephus lived in Jerusalem in those years. He records how the high priest Ananus had James put to death and lost his office for it."
+quote = { text = "brought before them the brother of Jesus, who was called Christ, whose name was James, and some others", by = "Josephus, Antiquities, book 20, chapter 9", work = "josephus-antiquities", sec = "book-20-chapter-9" }
+shows = "Jesus is mentioned in passing, to say which James is meant. Nearly every scholar accepts the line as genuine."
+objection = "A few, such as Richard Carrier, think 'who was called Christ' was a copyist's note and that another Jesus in the chapter was meant."
+sources = [["Josephus, Antiquities 20.9, Perseus", "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D20%3Awhiston%20chapter%3D9"], ["Josephus on Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Josephus_on_Jesus"], ["Richard Carrier, Journal of Early Christian Studies 2012", "https://doi.org/10.1353/earl.2012.0029"]]
+
+[[exhibit]]
+id = "josephus-testimonium"
+title = "Josephus on Jesus"
+when = "About AD 93"
+grade = "argued"
+summary = "A famous paragraph in Josephus tells of Jesus, His works, His cross under Pilate and the followers who did not give Him up. As it stands it also calls Him the Christ, which Josephus did not believe."
+quote = { text = "And when Pilate, at the suggestion of the principal men amongst us, had condemned him to the cross, those that loved him at the first did not forsake him", by = "Josephus, Antiquities, book 18, chapter 3", work = "josephus-antiquities", sec = "book-18-chapter-3" }
+shows = "Most scholars hold that Josephus wrote a paragraph about Jesus and that Christians later added to it. The core still gives the cross and Pilate."
+objection = "Some hold the whole paragraph is Christian work. Louis Feldman suggested Eusebius wrote it. In 2025 T. C. Schmidt argued the other way, that nearly all of it is genuine."
+sources = [["Josephus, Antiquities 18.3, Perseus", "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0146%3Abook%3D18%3Awhiston%20chapter%3D3"], ["Josephus on Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Josephus_on_Jesus"], ["T. C. Schmidt, Josephus and Jesus, 2025", "https://doi.org/10.1093/9780191957697.001.0001"]]
+
+[[exhibit]]
+id = "pliny"
+title = "Pliny, the governor who executed them"
+when = "About AD 112"
+grade = "settled"
+summary = "Pliny governed Bithynia, in what is now Turkey. He wrote to the emperor Trajan to ask what to do with Christians. Those who confessed three times and would not give way he had already ordered to be punished. Those who cursed Christ he let go. The account of their worship comes from people who said they had once been Christians and had left."
+quote = { text = "they met on a stated day before it was light, and addressed a form of prayer to Christ, as to a divinity", by = "Pliny the Younger, Letters 10.96, translated by Melmoth", href = "https://archive.org/details/thelettersofplin02811gut" }
+shows = "Within about eighty years of the cross, far from Jerusalem, people of every rank were worshiping Christ as God. Pliny had heard that a real Christian could not be made to curse Him."
+objection = "Pliny tells us what Christians did, from people who had left, and nothing new about the life of Jesus."
+sources = [["Pliny and Trajan, Fordham sourcebook", "https://sourcebooks.fordham.edu/ancient/pliny-trajan1.asp"], ["Pliny's letters, Loeb edition", "https://archive.org/stream/bwb_W9-CQC-375/bwb_W9-CQC-375_djvu.txt"]]
+
+[[exhibit]]
+id = "suetonius"
+title = "Suetonius on Nero"
+when = "About AD 120"
+grade = "strong"
+summary = "The biographer of the Caesars lists among the acts of Nero that he punished the Christians, whom he calls followers of a new superstition. In his life of Claudius he says Jews were expelled from Rome over disturbances stirred up by one Chrestus."
+shows = "It stands alongside Tacitus: Christians were in Rome, and suffering there, about thirty years after the cross."
+objection = "Chrestus was a common name, and many doubt that Suetonius meant Christ. Only the line on Nero is firm."
+sources = [["Suetonius, Nero", "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Nero*.html"], ["Suetonius, Claudius", "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Claudius*.html"]]
+
+[[exhibit]]
+id = "lucian"
+title = "Lucian, who mocked them"
+when = "About AD 165"
+grade = "strong"
+summary = "The satirist Lucian laughs at Christians for believing they will live forever and for treating one another as brothers once they have taken up the faith."
+quote = { text = "worship the crucified sage, and live after his laws", by = "Lucian, The Death of Peregrine 13, translated by Fowler", href = "https://archive.org/stream/worksoflucianofs04luciuoft/worksoflucianofs04luciuoft_djvu.txt" }
+shows = "Even the joke depends on everyone knowing that Christians worshiped a crucified man."
+objection = "It is late and it is satire. Lucian names no one and need not have read anything."
+sources = [["The Works of Lucian, volume 4", "https://archive.org/stream/worksoflucianofs04luciuoft/worksoflucianofs04luciuoft_djvu.txt"]]
+
+[[exhibit]]
+id = "talmud"
+title = "The Talmud"
+when = "Written down by about AD 500, from older tradition"
+grade = "argued"
+summary = "The Babylonian Talmud keeps hostile traditions about a Yeshu who was put to death on the eve of Passover for sorcery and for leading Israel astray."
+quote = { text = "On the eve of Pesah they hung Jeshu", by = "Sanhedrin 43a, translated by R. Travers Herford", href = "https://archive.org/stream/christianityinta00herf/christianityinta00herf_djvu.txt" }
+shows = "Opponents did not say He never lived or never did wonders. They said the power was the wrong kind, which is the charge the Gospels report too."
+objection = "It is centuries later. Herford himself called it only a very vague and confused recollection, and some doubt that every Yeshu is Jesus."
+sources = [["Herford, Christianity in Talmud and Midrash, 1903", "https://archive.org/stream/christianityinta00herf/christianityinta00herf_djvu.txt"]]
+
+[[exhibit]]
+id = "celsus"
+title = "Celsus, the first great critic"
+when = "About AD 177"
+grade = "strong"
+summary = "Celsus wrote the first book against Christianity that we know. Origen answered it line by line, and so saved much of it. Celsus called much of the story invented, but his answer to the wonders was that they were sorcery."
+quote = { text = "it was by means of sorcery that He was able to accomplish the wonders which He performed", by = "Celsus, as reported by Origen, Against Celsus 1.6", work = "origen-against-celsus", sec = "i-chapter-6" }
+shows = "A learned enemy, writing to destroy the faith, thought the wonders needed an explanation and offered magic."
+objection = "He grants the wonders only for the sake of argument and elsewhere calls the Gospel stories fiction. His book survives only in the words of the man refuting him."
+sources = [["Origen, Against Celsus, book 1", "https://www.newadvent.org/fathers/04161.htm"]]
+
+[[exhibit]]
+id = "mara"
+title = "Mara bar Serapion"
+when = "Between the 70s and the 200s"
+grade = "argued"
+summary = "A Syrian writes to his son from prison. He compares three wise men killed by their own people, Socrates, Pythagoras and an unnamed king of the Jews."
+quote = { text = "Or the Jews by the death of their wise king, because from that same time their kingdom was taken away?", by = "Mara bar Serapion, Letter to his son, translated by Cureton, 1855", href = "https://archive.org/details/spicilegiumsyria00cureuoft" }
+shows = "If it is early, it is a pagan who honors Jesus as a wise king whose teaching outlived His death."
+objection = "Jesus is not named and the date is uncertain. Kathleen McVey argues that it is a later Christian exercise. Rome put Jesus to death, and the idea that the Jews lost their land as a punishment is the letter's own."
+sources = [["The whole letter, in another translation", "/read/mara-bar-serapion-letter-of-mara/"], ["Gorgias Encyclopedic Dictionary of the Syriac Heritage", "https://gedsh.bethmardutho.org/Mara-bar-Serapion-Letter-of"]]

@@ -1,0 +1,103 @@
+id = "the-record"
+title = "The record"
+short = "The New Testament is early, widely copied, and close to the people who were there."
+image = "papyrus-46"
+intro = "Do we still have what the apostles wrote, and were they close enough to know? These are the letters, the copies and the marks of memory inside the text."
+
+[verse]
+ref = "John 19:35"
+href = "/bible/john/19/#v35"
+text = "The one who saw it has testified to this, and his testimony is true. He knows that he is telling the truth, so that you also may believe."
+
+[[exhibit]]
+id = "paul"
+title = "The letters of Paul"
+when = "About AD 49 to 62"
+grade = "settled"
+summary = "Seven letters are accepted as Paul's by almost every scholar, believing or not: Romans, 1 and 2 Corinthians, Galatians, Philippians, 1 Thessalonians and Philemon. They are the earliest Christian writings we have."
+shows = "Within about twenty to thirty years of the cross, a man who knew Peter and James was writing that Jesus died, was buried and was raised."
+objection = "Paul says little about the life and teaching of Jesus, and he came to know of Him after the cross."
+sources = [["Bart Ehrman on the undisputed letters", "https://www.bartehrman.com/?p=19102"], ["Galatians 1:18 to 20", "/bible/galatians/1/#v18"]]
+
+[[exhibit]]
+id = "papyrus-46"
+title = "Papyrus 46"
+when = "About AD 200"
+grade = "settled"
+summary = "A book of Paul's letters on papyrus, bought in Egypt in the 1930s. Eighty-six leaves survive, 56 in Dublin and 30 in Michigan."
+shows = "We can read most of Paul's letters to churches in a copy made about a century and a half after he wrote them."
+objection = "A century and a half is still a gap, and the date is judged from handwriting."
+sources = [["University of Michigan, the discovery of P46", "https://apps.lib.umich.edu/files/collections/papyrus/k12/reading/Paul/discovery.html"], ["Papyrus 46, Wikipedia", "https://en.wikipedia.org/wiki/Papyrus_46"]]
+
+[[exhibit]]
+id = "papyrus-52"
+title = "Papyrus 52"
+when = "Second or third century"
+grade = "strong"
+image = "papyrus-52"
+summary = "A scrap the size of a playing card, bought in 1920 and recognized in 1935. Both sides hold lines from John 18, where Pilate questions Jesus."
+shows = "It is among the oldest pieces of any Gospel, and shows John being copied and read in Egypt early on."
+objection = "It is often dated to about AD 125. Brent Nongbri has shown that handwriting cannot fix it so closely, and it could be as late as the 200s."
+sources = [["John Rylands Library, Greek P. 457", "https://www.digitalcollections.manchester.ac.uk/view/MS-GREEK-P-00457"], ["Nongbri, New Testament Studies 2020", "https://doi.org/10.1017/s0028688520000089"]]
+
+[[exhibit]]
+id = "manuscripts"
+title = "Thousands of copies"
+when = "Second to sixteenth century"
+grade = "settled"
+summary = "The official list in Münster counted about 5,700 Greek New Testament manuscripts in 2023, or about 5,500 without those lost or destroyed. There are also early translations and quotations in the fathers."
+shows = "So many copies from so many places make it possible to see where scribes differed, and to recover the wording with confidence in the great majority of lines."
+objection = "Most of the copies are medieval, and many are fragments or service books. Variants are many, and a few passages, such as the end of Mark, remain in question."
+sources = [["Münster, How many Greek New Testament manuscripts are there really?", "https://ntvmr.uni-muenster.de/de/intfblog/-/blogs/how-many-greek-new-testament-manuscripts-are-there-really-the-latest-numbers"], ["Can we trust the text of the New Testament?", "https://www.psephizo.com/reviews/can-we-trust-the-text-of-the-new-testament/"]]
+
+[[exhibit]]
+id = "papias"
+title = "Papias on Mark"
+when = "About AD 110"
+grade = "argued"
+summary = "Papias, a bishop in Asia Minor, collected what he could from people who had known the apostles. His book is lost. Eusebius copied out what Papias had heard from an elder about Mark."
+quote = { text = "Mark, having become the interpreter of Peter, wrote down accurately, though not in order, whatsoever he remembered of the things said or done by Christ.", by = "The presbyter, as reported by Papias, in Eusebius, Church History 3.39", work = "eusebius-of-caesarea-church-history", sec = "book-3-chapter-39" }
+shows = "The oldest report we have of where a Gospel came from ties it to Peter's own preaching."
+objection = "Eusebius himself thought Papias a man of very limited understanding, and Bart Ehrman and others doubt that he means our Mark."
+sources = [["Eusebius, Church History, book 3", "https://www.newadvent.org/fathers/250103.htm"]]
+
+[[exhibit]]
+id = "quadratus"
+title = "Quadratus"
+when = "About AD 125"
+grade = "argued"
+summary = "Quadratus wrote a defense of the faith to the emperor Hadrian. Eusebius had the book and quotes him on the people Jesus healed and raised."
+quote = { text = "so that some of them lived even to our day", by = "Quadratus, in Eusebius, Church History 4.3", work = "eusebius-of-caesarea-church-history", sec = "book-4-chapter-3" }
+shows = "Early Christians pointed to living people who could be asked."
+objection = "It is one sentence kept by a later writer, and it names no one."
+sources = [["Eusebius, Church History, book 4", "https://www.newadvent.org/fathers/250104.htm"]]
+
+[[exhibit]]
+id = "luke"
+title = "Luke and the small facts"
+when = "First century"
+grade = "strong"
+summary = "Acts gets the local titles right across the empire. It calls the officials of Thessalonica politarchs, a word almost unknown from books, and a second-century inscription with it now stands in the British Museum."
+shows = "A writer careful about titles in a dozen cities is a writer who took trouble, or who had been there."
+objection = "Getting titles right does not prove the speeches or the miracles. Luke's date for the census under Quirinius is hard to fit with Josephus, and Acts and Galatians tell Paul's visits to Jerusalem differently."
+sources = [["British Museum, the politarch inscription", "https://www.britishmuseum.org/collection/object/G_1877-0511-1"], ["Politarch, Wikipedia", "https://en.wikipedia.org/wiki/Politarch"], ["Was Luke mistaken about the date of Jesus' birth?", "https://www.psephizo.com/biblical-studies/was-luke-mistaken-about-the-date-of-jesus-birth/"]]
+
+[[exhibit]]
+id = "names"
+title = "The right names"
+when = "Studied since 2002"
+grade = "argued"
+summary = "The personal names in the Gospels and Acts match the pattern of names known from Jewish Palestine at the time, and the commonest ones get a second name to tell them apart. Richard Bauckham argued it from bone boxes and documents."
+shows = "A writer far away or much later would have had a hard time getting the mix of names right."
+objection = "Kamil Gregor and Brian Blais argue that the sample is too small to prove it. Others have answered them, and the debate goes on."
+sources = [["Van de Weghe and Wilson, 2024", "https://arxiv.org/abs/2403.14883"], ["Gregor and Blais, Journal for the Study of the Historical Jesus", "https://doi.org/10.1163/17455197-bja10023"]]
+
+[[exhibit]]
+id = "coincidences"
+title = "Details that fit without trying"
+when = "Argued since 1790"
+grade = "argued"
+summary = "Sometimes one Gospel explains a loose detail in another. Mark says the five thousand sat on green grass. John mentions plenty of grass but not its color, and says it was near Passover, the season when the hills of Galilee are green."
+shows = "Fits like this are what you expect when several people remember one event."
+objection = "It is an old argument that few scholars use. Critics say such fits can be found by chance, or where one writer knew another's book."
+sources = [["Undesigned coincidences, Wikipedia", "https://en.wikipedia.org/wiki/Undesigned_coincidences"], ["Brian Blais, a skeptical reply", "https://bblais.github.io/posts/2022/Jul/11/why-undesigned-coincidences-are-not-compelling-to-me"], ["Mark 6:39", "/bible/mark/6/#v39"], ["John 6:4 and 10", "/bible/john/6/#v4"]]
