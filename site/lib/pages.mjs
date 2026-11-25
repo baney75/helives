@@ -21,8 +21,9 @@ function ytCard(v, { title = true } = {}) {
 <span class="play">${raw(icon('play', 14))} Play</span></button>${title ? html`<a class="vid-title" href="${v.url}" rel="noopener">${v.title}</a>` : ''}`
 }
 
-function figure(img, { big = false } = {}) {
-  return html`<figure class="figure"><a href="/${img.kind === 'map' ? 'maps' : 'art'}/#${img.id}"><img src="${img.file}" alt="${img.alt}" width="${img.width}" height="${img.height}" loading="lazy" decoding="async"></a>
+// capped: no taller than the stylesheet's --fig-max, with the space held before the picture loads, so jump links land right.
+export function figure(img, { big = false, eager = false, capped = false } = {}) {
+  return html`<figure class="figure"><a href="/${img.kind === 'map' ? 'maps' : 'art'}/#${img.id}"><img src="${img.file}" alt="${img.alt}" width="${img.width}" height="${img.height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${capped ? html` style="width:min(100%,${img.width}px,var(--fig-max)*${(img.width / img.height).toFixed(3)})"` : ''}></a>
 <figcaption>${img.title}${img.artist ? html`, ${img.artist}` : ''}${img.year ? html` (${img.year})` : ''}${big ? html`. <a href="${img.source_page}" rel="noopener">Source</a>` : ''}</figcaption></figure>`
 }
 
@@ -64,7 +65,7 @@ ${next ? html`<a class="tool" href="${next.href}" rel="next">${raw(icon('next'))
   return { desk, dock }
 }
 
-function pager(prev, next) {
+export function pager(prev, next) {
   return html`<nav class="pager no-print" aria-label="Previous and next">
 ${prev ? html`<a href="${prev.href}" rel="prev">${raw(icon('prev'))}<span>${prev.title}</span></a>` : ''}
 ${next ? html`<a class="next" href="${next.href}" rel="next"><span>${next.title}</span>${raw(icon('next'))}</a>` : ''}
@@ -160,6 +161,7 @@ export function homePage(ctx) {
 <li><a href="/videos/">Videos</a><span class="meta">${number(ctx.media.videos.length)} lectures and overviews</span></li>
 <li><a href="/maps/">Maps</a><span class="meta">${number(ctx.media.maps.length)} maps</span></li>
 <li><a href="/art/">Art</a><span class="meta">${number(ctx.media.images.length)} works of art</span></li>
+<li><a href="/evidence/">The evidence for Christ</a><span class="meta">${number(ctx.evidence?.parts.length || 0)} parts, with objections</span></li>
 <li><a href="/miracles/">Signs and wonders</a><span class="meta">${number(ctx.miracles?.cases.length || 0)} cases, each graded</span></li>
 <li><a href="/articles/">Articles</a><span class="meta">${number(ctx.media.articles.length)} for further reading</span></li>
 <li><a href="/downloads/">Downloads</a><span class="meta">Markdown, TOML and print</span></li>

@@ -4,6 +4,7 @@
 import { createHash } from 'node:crypto'
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { partUrl } from './lib/evidence.mjs'
 import { plain } from './lib/html.mjs'
 import { COLLECTION, ROOT, loadLibrary, readToml } from './lib/load.mjs'
 import { bookSlug, sectionUrl, shortTitle, workUrl } from './lib/render.mjs'
@@ -60,6 +61,7 @@ for (const e of lib.encyclicals) {
 }
 
 if (lib.miracles) for (const c of lib.miracles.cases) add(c.title, [c.summary, c.where, c.when].join(' · '), `/miracles/#${c.id}`, 'Signs and wonders', 'media', 1)
+if (lib.evidence) for (const p of lib.evidence.parts) for (const e of p.exhibits) add(e.title, [e.summary, e.shows].join(' '), `${partUrl(p)}#${e.id}`, `The evidence for Christ · ${p.title}`, 'media', 1.1)
 
 assertClean(rows)
 const head = [

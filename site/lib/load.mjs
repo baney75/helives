@@ -137,7 +137,7 @@ export function loadLibrary() {
   }
   const byOrder = (a, b) => (a.order ?? 0) - (b.order ?? 0) || a.title.localeCompare(b.title)
   works.sort(byOrder)
-  return { collections, authors, external, works, media: loadMedia(), encyclicals: loadEncyclicals(), miracles: loadMiracles(), audio: loadAudio() }
+  return { collections, authors, external, works, media: loadMedia(), encyclicals: loadEncyclicals(), miracles: loadMiracles(), evidence: loadEvidence(), audio: loadAudio() }
 }
 
 export function loadMedia() {
@@ -171,6 +171,18 @@ export function loadMiracles() {
   if (!existsSync(p)) return null
   const d = readToml(p)
   return { intro: d.intro, tests: d.test || [], groups: d.group || [], cases: d.case || [], further: d.further || [] }
+}
+
+// The evidence for Christ: index.toml plus one numbered file per part.
+export const EVIDENCE_GRADES = ['settled', 'strong', 'argued', 'set_aside']
+export function loadEvidence() {
+  const dir = join(ROOT, 'data', 'evidence')
+  if (!existsSync(dir)) return null
+  const parts = readdirSync(dir).filter((f) => /^\d+-[\w-]+\.toml$/.test(f)).sort().map((f) => {
+    const { exhibit, ...p } = readToml(join(dir, f))
+    return { ...p, exhibits: exhibit || [] }
+  })
+  return { ...readToml(join(dir, 'index.toml')), parts }
 }
 
 // Audio fails closed: only files listed in the manifest are offered.
