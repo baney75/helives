@@ -1,0 +1,51 @@
+id = "the-ground"
+title = "Is there a God?"
+short = "Before asking whether God raised Jesus, ask whether the world looks like it was made."
+image = "dore-the-creation-of-light"
+intro = "A miracle is only impossible if there is no one to do it. These four arguments do not prove the gospel. They ask whether a Maker is a reasonable thing to believe in before the story of Jesus begins."
+
+[verse]
+ref = "Romans 1:20"
+href = "/bible/romans/1/#v20"
+text = "For since the creation of the world God’s invisible qualities, His eternal power and divine nature, have been clearly seen, being understood from His workmanship, so that men are without excuse."
+
+[[exhibit]]
+id = "beginning"
+title = "The universe has an age"
+when = "Measured 2018"
+grade = "argued"
+summary = "Light left over from the early universe lets physicists date it. The Planck satellite's figure is about 13.8 billion years. A theorem by Borde, Guth and Vilenkin holds that a universe which has been expanding on average cannot be traced back forever."
+shows = "The expanding world we can measure has a past of about 13.8 billion years, and the simplest models of it do not run back forever. Whether that was an absolute beginning is open."
+objection = "An age is not proof of an absolute beginning. The theorem sets a limit on expansion and leaves open what came before, and physicists still work on models with no first moment."
+sources = [["Planck 2018 results, cosmological parameters", "https://arxiv.org/abs/1807.06209"], ["Borde, Guth and Vilenkin, Inflationary spacetimes are not past-complete", "https://arxiv.org/abs/gr-qc/0110012"], ["Mithani and Vilenkin, Did the universe have a beginning?", "https://arxiv.org/abs/1204.4658"]]
+
+[[exhibit]]
+id = "first-cause"
+title = "Why there is anything at all"
+when = "Argued since Aristotle; Aquinas, about 1266"
+grade = "argued"
+summary = "Everything we meet is moved and changed by something else. Thomas Aquinas argued that such a chain cannot hang from nothing, so there must be one first mover that nothing moves."
+shows = "Asking why the world exists is a fair question, and a list of earlier physical causes does not fully answer it."
+objection = "Bertrand Russell replied that the universe may simply exist, with no further reason. Others say that even if each thing has a cause, it does not follow that the whole does."
+quote = { text = "Therefore it is necessary to arrive at a first mover, put in motion by no other; and this everyone understands to be God.", by = "Thomas Aquinas, Summa Theologiae, first part, question 2, article 3", work = "thomas-aquinas-summa-prima-pars", sec = "q2-a3" }
+sources = [["Stanford Encyclopedia of Philosophy, Cosmological Argument", "https://plato.stanford.edu/entries/cosmological-argument/"]]
+
+[[exhibit]]
+id = "fine-tuning"
+title = "A world balanced for life"
+when = "Argued since the 1970s"
+grade = "argued"
+summary = "Several constants of physics sit within narrow ranges that allow chemistry, stars and life. Change some of them a little, with the rest held fixed, and nothing that lives could form. The physicist Luke Barnes reviews the cases in detail."
+shows = "The fit needs an explanation, and a Mind that meant for there to be life is one."
+objection = "There may be a vast number of universes, and we could only find ourselves in one that allows life. It is also hard to say how likely any value of a constant was to begin with."
+sources = [["Luke Barnes, The fine-tuning of the universe for intelligent life", "https://arxiv.org/abs/1112.4647"], ["Stanford Encyclopedia of Philosophy, Fine-Tuning", "https://plato.stanford.edu/entries/fine-tuning/"]]
+
+[[exhibit]]
+id = "moral-law"
+title = "The law written on the heart"
+when = "Aquinas; Kant, 1788"
+grade = "argued"
+summary = "People everywhere speak as if some things are wrong in themselves, whoever does them and whatever the law says. Torturing a child for fun is not merely out of fashion."
+shows = "If right and wrong are real and bind everyone, a good God is a natural home for them. Paul speaks of a law written on the heart in Romans 2:15."
+objection = "Sharon Street argues that evolution would have given us moral feelings whether or not any moral facts exist. Plato's Euthyphro asks whether God commands what is good because it is good already, which would leave it standing without Him."
+sources = [["Stanford Encyclopedia of Philosophy, Moral Arguments for the Existence of God", "https://plato.stanford.edu/entries/moral-arguments-god/"], ["Sharon Street, A Darwinian Dilemma for Realist Theories of Value", "https://doi.org/10.1007/s11098-005-1726-6"], ["Romans 2:15", "/bible/romans/2/#v15"]]

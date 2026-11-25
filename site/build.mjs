@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { collectionBundles } from './lib/bundles.mjs'
+import { evidenceHub, evidencePart, partUrl } from './lib/evidence.mjs'
 import { gateAudio } from './lib/gate-audio.mjs'
 import { ASSET_VERSION, SITE } from './lib/layout.mjs'
 import { COLLECTIONS, ROOT, loadLibrary, readToml, tagIndex } from './lib/load.mjs'
@@ -136,6 +137,10 @@ function main() {
   for (const a of Object.values(lib.authors)) if (ctx.worksByAuthor.get(a.id)?.length && a.id !== 'bible') out(`/authors/${a.id}/`, P.authorPage(ctx, a))
   out('/videos/', P.videosPage(ctx))
   out('/articles/', P.articlesPage(ctx))
+  if (ctx.evidence) {
+    out('/evidence/', evidenceHub(ctx))
+    ctx.evidence.parts.forEach((p, i) => out(partUrl(p), evidencePart(ctx, i)))
+  }
   if (ctx.miracles) out('/miracles/', P.miraclesPage(ctx))
   out('/maps/', P.galleryPage(ctx, 'maps'))
   out('/art/', P.galleryPage(ctx, 'art'))

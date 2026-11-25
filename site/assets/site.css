@@ -310,3 +310,54 @@ dialog.gate::backdrop { background: var(--bg); }
 .miracles dd { margin: var(--s1) 0 0; }
 .miracles dd ul { margin: 0; padding-left: 1.2em; }
 .miracles .grades dd { color: var(--muted); }
+
+/* The evidence for Christ */
+.evidence.narrow { max-width: 42rem; --fig-max: min(28rem, 60vh); }
+#grades { scroll-margin-top: 5rem; }
+.evidence .prose { font: var(--fs)/var(--lh) var(--read-font); letter-spacing: var(--ls); word-spacing: var(--ws); max-width: var(--measure); }
+.evidence .prose b, .ev-quote b { font-weight: var(--fx-weight); }
+.evidence .lede { color: var(--ink); margin-bottom: var(--s5); }
+.ev-grade { font: max(16px, calc(var(--fs) * 0.82))/1.5 var(--ui); margin: 0 0 var(--s3); color: var(--ink); }
+.ev-grade a { display: inline-block; padding: 10px 0; font-weight: 600; }
+.ev-short { max-width: 44rem; margin: var(--s6) 0 0; padding: var(--s4) var(--s5); border: 1px solid var(--line); border-radius: var(--r2); background: var(--surface); }
+.ev-short h2 { margin: 0 0 var(--s2); }
+.ev-short ol { margin: 0; padding-left: 1.4em; }
+.ev-short a { display: inline-flex; padding: 10px 0; }
+.ev-hero { display: block; width: 100%; height: auto; max-height: 56vh; object-fit: cover; object-position: 50% 30%; border-radius: var(--r1); background: var(--surface); }
+.ev-hero + .meta { margin: var(--s1) 0 var(--s6); }
+.evidence > h1 { text-wrap: balance; }
+.ev-hero ~ h1 { font-size: clamp(48px, 9vw, 96px); line-height: 1; }
+.ev-verse { margin: var(--s6) 0; padding: 0; max-width: 44rem; }
+.ev-verse p { font: 500 max(var(--fs), clamp(26px, 4vw, 38px))/1.25 var(--display); margin: 0 0 var(--s2); text-wrap: pretty; }
+.ev-verse footer, .ev-quote footer { font: max(15px, calc(var(--fs) * 0.75))/1.5 var(--ui); color: var(--muted); }
+.ev-quote { margin: var(--s4) 0; padding-left: var(--s4); border-left: 2px solid var(--accent); }
+.ev-quote p { font: calc(var(--fs) * 1.1)/var(--lh) var(--read-font); letter-spacing: var(--ls); word-spacing: var(--ws); margin: 0 0 var(--s1); }
+[data-font='sans'] .ev-verse p, [data-font='dyslexic'] .ev-verse p { font-family: var(--read-font); font-weight: 400; }
+.ev-parts { list-style: none; margin: var(--s7) 0; padding: 0; border-top: 1px solid var(--line); }
+.ev-row { position: relative; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) 15rem; gap: var(--s5); align-items: center; padding: var(--s5) 0; border-bottom: 1px solid var(--line); }
+.ev-row .n { font: 500 44px/1 var(--display); color: var(--accent); }
+.ev-row h2 a { color: inherit; text-decoration: none; }
+.ev-row h2 a::after { content: ''; position: absolute; inset: 0; }
+.ev-row:hover h2 a { text-decoration: underline; text-decoration-thickness: 1px; }
+.ev-row p.prose { margin: var(--s2) 0 0; color: var(--muted); max-width: 34rem; }
+.ev-row p.meta { margin: var(--s2) 0 0; }
+.ev-row img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 12%; border-radius: var(--r1); background: var(--surface); }
+.ev-close { display: grid; grid-template-columns: 20rem minmax(0, 1fr); gap: var(--s6); align-items: center; margin-top: var(--s8); }
+.evidence .exhibit { margin-top: var(--s7); padding-top: var(--s5); border-top: 1px solid var(--line); scroll-margin-top: 5rem; }
+.evidence .exhibit h2 { margin-bottom: var(--s2); }
+.evidence .notice ul, .evidence dd ul { margin: 0; padding-left: 1.2em; } .evidence .notice p { margin: 0; }
+.evidence .notice a { display: inline-flex; padding: 11px 0; font-size: max(15px, calc(var(--fs) * 0.78)); }
+.evidence dl { margin: var(--s4) 0 0; }
+.evidence .exhibit > .meta { font-size: max(14px, calc(var(--fs) * 0.75)); }
+.evidence dt { font: 600 max(14px, calc(var(--fs) * 0.78))/1.4 var(--ui); margin-top: var(--s3); }
+.evidence dd { margin: var(--s1) 0 0; }
+.evidence .grades dd { color: var(--muted); }
+.evidence .grades ~ p, .ev-close p { max-width: 40rem; }
+.ev-close .ev-verse { margin: var(--s5) 0 0; }
+.ev-close .ev-verse p { font-size: max(var(--fs), clamp(24px, 3vw, 30px)); max-width: none; }
+@media (max-width: 700px) {
+  .ev-row { grid-template-columns: 1fr; gap: var(--s3); }
+  .ev-row img { grid-row: 1; }
+  .ev-row .n { font-size: 36px; }
+  .ev-close { grid-template-columns: 1fr; gap: var(--s4); }
+}

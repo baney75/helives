@@ -1,0 +1,70 @@
+id = "what-he-claimed"
+title = "What He claimed"
+short = "He spoke as God speaks, and His first followers, Jews who worshiped one God, worshiped Him."
+image = "sinai-pantocrator"
+intro = "It is often said that Jesus was a teacher who was slowly made into a god. The oldest writings we have point the other way."
+
+[verse]
+ref = "Mark 14:61 to 62"
+href = "/bible/mark/14/#v61"
+text = "“Are You the Christ, the Son of the Blessed One?” “I am,” said Jesus, “and you will see the Son of Man sitting at the right hand of Power and coming with the clouds of heaven.”"
+
+[[exhibit]]
+id = "hymn"
+title = "The hymn in Philippians"
+when = "Written about AD 60, perhaps older"
+grade = "strong"
+summary = "Philippians 2:6 to 11 says that Christ existed in the form of God, humbled Himself to a cross, and now receives the bowed knee and the confession that Isaiah 45 gives to the LORD alone. Many scholars think Paul was quoting a hymn the church already sang."
+shows = "Within thirty years of the cross, and perhaps well before, Jews were giving Jesus the honor that belongs to God. Larry Hurtado describes it as a new turn within Jewish faith in one God, with Jesus honored alongside the Father."
+objection = "James Dunn read the hymn as a contrast with Adam more than a life in heaven before birth. Bart Ehrman thinks Paul saw Christ as a great angel who was raised higher still. Whether the passage is older than the letter is not certain."
+sources = [["Philippians 2:6", "/bible/philippians/2/#v6"], ["Larry Hurtado, Jesus in early Christian prayer", "https://larryhurtado.wordpress.com/2013/04/24/jesus-in-early-christian-prayer/"], ["Hurtado, Pre-70 Jewish opposition to Christ-devotion", "https://doi.org/10.1093/jts/50.1.35"], ["Philippians 2, history of interpretation, Wikipedia", "https://en.wikipedia.org/wiki/Philippians_2"], ["Ehrman, Christ as an angel in Paul", "https://ehrmanblog.org/christ-as-an-angel-in-paul/"]]
+
+[[exhibit]]
+id = "one-lord"
+title = "One God, one Lord"
+when = "About AD 55"
+grade = "strong"
+summary = "Devout Jews prayed the words of Deuteronomy 6:4: the LORD our God, the LORD is One. In 1 Corinthians 8:6 Paul restates it with Jesus inside it: one God, the Father, and one Lord, Jesus Christ, through whom all things came."
+shows = "Paul puts Christ on the Maker's side of creation, and does not stop to argue for it, as though his readers already agreed."
+objection = "Some read Lord here as a title of rank under God, and hold that Paul's words about creation are less direct than they sound."
+sources = [["1 Corinthians 8:6", "/bible/1-corinthians/8/#v6"], ["Deuteronomy 6:4", "/bible/deuteronomy/6/#v4"], ["Hurtado, Pre-70 Jewish opposition to Christ-devotion", "https://doi.org/10.1093/jts/50.1.35"]]
+
+[[exhibit]]
+id = "maranatha"
+title = "Our Lord, come"
+when = "In use before AD 55"
+grade = "strong"
+summary = "Paul ends 1 Corinthians, a Greek letter to Greek speakers, with an Aramaic word: maranatha. The BSB gives it as a prayer, Come, O Lord!"
+shows = "Aramaic was the language of the first believers in Judea and Galilee. The likeliest reading is that they were already praying to Jesus as Lord, so the practice did not begin among pagans."
+objection = "The letters can also be divided to mean our Lord has come, and the word for lord can be used of a human master. The phrase may also come from Aramaic speakers in Syria."
+sources = [["1 Corinthians 16:22", "/bible/1-corinthians/16/#v22"], ["Larry Hurtado, Jesus in early Christian prayer", "https://larryhurtado.wordpress.com/2013/04/24/jesus-in-early-christian-prayer/"]]
+
+[[exhibit]]
+id = "son-of-man"
+title = "Before the high priest"
+when = "Mark, about AD 65 to 70"
+grade = "argued"
+summary = "Asked under trial whether He is the Christ, Jesus joins two Scriptures: the one like a son of man who comes on the clouds to receive an everlasting kingdom, in Daniel 7, and the Lord who sits at God's right hand, in Psalm 110. The high priest tears his clothes."
+shows = "He claimed a share in the throne of God, and the judges understood Him."
+objection = "No follower of Jesus was in the room. Historians differ over whether the exchange is word for word or shaped by the early church, and over what Son of Man meant on His lips."
+sources = [["Mark 14:61", "/bible/mark/14/#v61"], ["Daniel 7:13", "/bible/daniel/7/#v13"], ["Son of man in Christianity, Wikipedia", "https://en.wikipedia.org/wiki/Son_of_man_(Christianity)"]]
+
+[[exhibit]]
+id = "i-am"
+title = "Before Abraham was born"
+when = "John, about AD 90"
+grade = "argued"
+summary = "In John 8:58 Jesus says that before Abraham was born, He is. His hearers pick up stones, the penalty for blasphemy."
+shows = "If He said it, He claimed to be before all things, with words that recall the name God gave Moses."
+objection = "Many scholars think the long speeches in John carry the faith of the church in its own words, because the other Gospels do not have this saying."
+sources = [["John 8:58", "/bible/john/8/#v58"], ["I am, biblical term, Wikipedia", "https://en.wikipedia.org/wiki/I_am_(biblical_term)"]]
+
+[[exhibit]]
+id = "trilemma"
+title = "Liar, lunatic or Lord"
+when = "Argued since the 1800s; C. S. Lewis, 1952"
+grade = "argued"
+summary = "Lewis argued that a man who said what Jesus said could not be only a great moral teacher. Either He was deceiving people, or He was out of His mind, or He was who He said."
+shows = "If the claims are His own, calling Him merely good is not one of the choices left."
+objection = "There are other choices: that the claims are legend, or that He claimed something less, such as Messiah, and was sincerely wrong. The argument leans on the exhibits above."
+sources = [["Stephen Davis, The Mad/Bad/God Trilemma", "https://doi.org/10.5840/faithphil200421438"], ["Daniel Howard-Snyder, Was Jesus Mad, Bad, or God? Or Merely Mistaken?", "https://doi.org/10.5840/faithphil200421440"], ["Lewis's trilemma, Wikipedia", "https://en.wikipedia.org/wiki/Lewis%27s_trilemma"]]

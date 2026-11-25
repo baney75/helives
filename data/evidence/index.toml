@@ -1,0 +1,25 @@
+title = "The evidence for Christ"
+image = "burnand-disciples"
+description = "The case that Jesus Christ lived, died and rose again: history, archaeology, manuscripts, prophecy, the empty tomb and the witnesses, each with its sources and the strongest objection."
+lede = "Christianity stands or falls on something that happened. Here is the case that it did: what Rome wrote down, what the ground has given back, what the prophets said, and what the witnesses said and suffered. Every piece comes with its sources and the strongest objection to it."
+grades_note = "Evidence can carry you to the door. Faith is trusting the One who stands there. We have tried not to overstate anything. When a famous proof turned out to be weak, we left it out or said so."
+
+[verse]
+ref = "1 Corinthians 15:14"
+href = "/bible/1-corinthians/15/#v14"
+text = "And if Christ has not been raised, our preaching is worthless, and so is your faith."
+
+[close]
+image = "hunt-light-of-the-world"
+title = "The last exhibit"
+text = "Thomas asked to see, and Jesus came and let him look. Then He turned to everyone who would hear about it later. If the case holds, it is not only a matter of history. He is alive, and He can be spoken to."
+
+[[close.verses]]
+ref = "Revelation 3:20"
+href = "/bible/revelation/3/#v20"
+text = "Behold, I stand at the door and knock. If anyone hears My voice and opens the door, I will come in and dine with him, and he with Me."
+
+[[close.verses]]
+ref = "John 20:31"
+href = "/bible/john/20/#v31"
+text = "But these are written so that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in His name."
