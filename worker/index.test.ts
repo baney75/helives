@@ -120,15 +120,3 @@ describe('audio ranges', () => {
     expect((await serveAudio(n, bucket(undefined, false), '/audio/a/1.m4a')).status).toBe(304)
   })
 })
-
-describe('gate recordings', () => {
-  const assets = { fetch: async () => new Response('0123456789', { headers: { 'content-type': 'audio/mp4' } }) } as unknown as Fetcher
-  const get = (path: string, range?: string) => worker.fetch(new Request(`https://helives.dev${path}`, { headers: range ? { range } : {} }), { ASSETS: assets })
-  it('answers byte ranges, which Safari needs to play them', async () => {
-    const r = await get('/gate-voice/lords-prayer.m4a?v=1', 'bytes=0-1')
-    expect([r.status, r.headers.get('content-range'), await r.text()]).toEqual([206, 'bytes 0-1/10', '01'])
-    expect(await (await get('/gate-voice/lords-prayer.m4a', 'bytes=7-')).text()).toBe('789')
-    expect((await get('/gate-voice/lords-prayer.m4a', 'bytes=50-')).status).toBe(416)
-    expect((await get('/gate-voice/lords-prayer.m4a')).status).toBe(200)
-  })
-})

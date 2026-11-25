@@ -571,8 +571,7 @@ COLLECTION_ORDER = ["apostolic", "creeds", "ante-nicene", "nicene", "medieval", 
 
 def queue(library: Path) -> list[tuple[int, Path]]:
     """Work files in render priority order: (priority, path). Lower renders first.
-    Gnostic texts and encyclicals are not in the audiobook queue. Neither are the daily gate's
-    prayers: Donovan reads those himself (public/gate-voice/)."""
+    Gnostic texts and encyclicals are not in the audiobook queue."""
     out: list[tuple[int, Path]] = []
     bible = sorted((library / "bible" / "bsb").glob("*.toml"))
     for p in bible:

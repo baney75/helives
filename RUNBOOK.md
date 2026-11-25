@@ -102,15 +102,6 @@ done
 
 Cost: the R2 free tier stores 10 GB. Check the total first (`python3 -c 'import json; print(sum(i["bytes"] for i in json.load(open("audio/manifest.json"))["items"])/1e9, "GB")'`). Ask the owner before an upload would take the bucket past 10 GB.
 
-### The daily gate's prayers (Donovan's own voice)
-
-The gate never uses the narrator. Three recordings named `lords-prayer`, `apostles-creed` and `illumination` (Voice Memos `.m4a` is fine) go through `audio/gate_voice.py`, which removes the file's tags (a Voice Memo can name a place), evens the loudness and times each line, then into `public/gate-voice/`. With any part missing the gate has no Listen button. Run it on the Mac, with `whisper` and `ffmpeg` on the PATH.
-
-```bash
-mkdir -p build && node scripts/gate-lines.mjs > build/gate-lines.json
-uv run --no-project --with numpy --with soundfile python audio/gate_voice.py <folder> build/gate-lines.json public/gate-voice
-```
-
 ## Add a new work
 
 1. Confirm the text is public domain and write down why. No basis, no ingest.

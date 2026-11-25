@@ -24,7 +24,7 @@
     if (t) { e.preventDefault(); openSheet(t.getAttribute('data-open')); return }
     var c = e.target.closest('[data-close]')
     if (c) { c.closest('dialog').close(); return }
-    if (e.target.tagName === 'DIALOG' && e.target.id !== 'gate') e.target.close() // backdrop click; the gate stays
+    if (e.target.tagName === 'DIALOG') e.target.close() // backdrop click
   })
 
   // ---------- reading settings ----------
@@ -301,11 +301,6 @@
       lb.click()
       setTimeout(function () { if (!audio || audio.paused) document.addEventListener('pointerdown', startOnGesture, true) }, 500)
     }
-  }
-
-  // ---------- the daily gate ----------
-  if (document.documentElement.getAttribute('data-gate') === 'due') {
-    import('/assets/gate.js?v=' + V).then(function (m) { m.show() }).catch(function () { document.documentElement.removeAttribute('data-gate') })
   }
 
   // ---------- search page ----------
