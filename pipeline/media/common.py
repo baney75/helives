@@ -172,11 +172,16 @@ def ia_public_domain(item: str, *, cache: bool = True) -> tuple[bool, str]:
     return True, f"published {year.group()}; Gustave Doré died 1883"
 
 
+def is_cc0(ii: dict) -> bool:
+    """CC0 is the photographer's public domain dedication; the photographer is still credited."""
+    return strip_html(ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")).upper() == "CC0"
+
+
 def is_public_domain(ii: dict) -> tuple[bool, str]:
     em = ii.get("extmetadata", {})
     lic = strip_html(em.get("LicenseShortName", {}).get("value", ""))
     copyrighted = strip_html(em.get("Copyrighted", {}).get("value", ""))
-    ok = lic.lower() in ("public domain", "pd") and copyrighted.lower() == "false"
+    ok = is_cc0(ii) or (lic.lower() in ("public domain", "pd") and copyrighted.lower() == "false")
     return ok, f"LicenseShortName={lic!r} Copyrighted={copyrighted!r}"
 
 
