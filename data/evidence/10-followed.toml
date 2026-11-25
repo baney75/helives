@@ -14,8 +14,8 @@ id = "growth"
 title = "From a room to an empire"
 when = "AD 30 to 313"
 grade = "strong"
-summary = "Keith Hopkins estimates that there were very few Christians in the Roman world until the end of the second century. They had no army and no power to compel anyone, and were at times punished with death. By 313 an emperor had taken their side."
-shows = "It spread by persuasion, at a cost, for almost three centuries."
+summary = "Keith Hopkins worked out what a steady rate of growth would look like: about 7,000 Christians in the year 100, a little over 200,000 in 200, and six million, a tenth of the empire, in 300. He stressed that these are rough projections and not counts. They had no army and no power to compel anyone, and were at times punished with death. By 313 an emperor had taken their side."
+shows = "Whatever the numbers, it grew for almost three centuries without the power to compel anyone."
 objection = "Other faiths have spread quickly too. Hopkins explains the growth through networks, numbers and social change."
 sources = [["Keith Hopkins, Christian number and its implications", "https://doi.org/10.1353/earl.1998.0035"]]
 
@@ -23,12 +23,12 @@ sources = [["Keith Hopkins, Christian number and its implications", "https://doi
 id = "polycarp"
 title = "Polycarp of Smyrna"
 when = "About AD 155"
-grade = "strong"
+grade = "argued"
 summary = "Polycarp, by early report a hearer of John, was an old man when the governor told him to curse Christ and go free. He was condemned to the fire, and the account says a dagger finished him."
 quote = { text = "Eighty and six years have I served Him, and He never did me any injury: how then can I blaspheme my King and my Saviour?", by = "The Martyrdom of Polycarp 9", work = "martyrdom-of-polycarp", sec = "chapter-9" }
-shows = "It is usually counted the oldest account of a martyr outside the New Testament, written by his own church."
+shows = "It presents itself as a letter from his own church, and is usually counted the oldest account of a martyr outside the New Testament."
 objection = "Candida Moss and others argue that the account was shaped to echo the Passion, and perhaps written later."
-sources = [["Candida Moss, On the Dating of Polycarp", "https://doi.org/10.1628/186870310793597051"]]
+sources = [["The Martyrdom of Polycarp", "/read/martyrdom-of-polycarp/"], ["Irenaeus, Against Heresies 3.3", "/read/irenaeus-against-heresies/"], ["Candida Moss, On the Dating of Polycarp", "https://doi.org/10.1628/186870310793597051"]]
 
 [[exhibit]]
 id = "lyons"
@@ -46,10 +46,10 @@ id = "julian"
 title = "Julian, the emperor who tried to end it"
 when = "AD 362"
 grade = "argued"
-summary = "Julian was raised a Christian, left the faith and set out to restore the old gods. He complained to one of his priests that Christians, whom he called Galilaeans, were shaming them."
+summary = "Julian was raised a Christian, left the faith and set out to restore the old gods. A letter under his name complains to one of his priests that Christians, whom it calls Galilaeans, were shaming them."
 quote = { text = "when no Jew ever has to beg, and the impious Galilaeans support not only their own poor but ours as well, all men see that our people lack aid from us.", by = "Julian, Letter 22, translated by Wright", href = "https://archive.org/details/worksofemperorj03juli" }
 shows = "If the letter is his, their most powerful enemy bore witness to how they loved."
-objection = "Peter Van Nuffelen argued in 2002 that a Christian forged this letter, and Jean Bouffartigue took the question up again in 2005. If it is Julian's, he was urging his own side on and had reason to paint the contrast strongly."
+objection = "Peter Van Nuffelen argued in 2002 that a Christian forged this letter, and Jean Bouffartigue answered in 2005 that it is prudent to keep it as genuine. If it is Julian's, he was urging his own side on and had reason to paint the contrast strongly."
 sources = [["The Works of the Emperor Julian, volume 3", "https://archive.org/details/worksofemperorj03juli"], ["Van Nuffelen, Deux fausses lettres de Julien l'Apostat, 2002", "https://doi.org/10.1163/15700720260190776"], ["Bouffartigue, on the authenticity of the letter, 2005", "https://doi.org/10.3917/phil.792.0231"]]
 
 [[exhibit]]
@@ -61,14 +61,14 @@ summary = "Leaving unwanted babies to die was common and legal in the Roman worl
 quote = { text = "They marry, as do all [others]; they beget children; but they do not destroy their offspring.", by = "The Epistle to Diognetus 5", work = "epistle-to-diognetus", sec = "chapter-5" }
 shows = "They believed their Maker had become a child, and from an early date their rule was to keep children."
 objection = "Jews refused as well, and before them, and a few pagans such as Musonius Rufus spoke against it."
-sources = [["The Didache, chapter 2", "/read/didache/"]]
+sources = [["The Didache, chapter 2", "/read/didache/"], ["Infant exposure, Wikipedia", "https://en.wikipedia.org/wiki/Infant_exposure"], ["Josephus, Against Apion 2", "/read/josephus-against-apion/"], ["Musonius Rufus, Internet Encyclopedia of Philosophy", "https://iep.utm.edu/musonius/"]]
 
 [[exhibit]]
 id = "today"
 title = "And still"
 when = "2026"
 grade = "settled"
-summary = "About 2.67 billion people, close to a third of everyone alive, are counted as Christians. Most of them now live in Africa, Asia and Latin America."
-shows = "Psalm 22 ends with all the ends of the earth turning to the Lord."
-objection = "Numbers do not decide truth. Counts depend on the method, and Pew's figure is lower."
-sources = [["Status of Global Christianity 2026, CSGC", "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"], ["Psalm 22:27", "/bible/psalms/22/#v27"]]
+summary = "More than two billion people are counted as Christians, and most of them now live in Africa, Asia and Latin America."
+shows = "Psalm 22 ends with all the ends of the earth turning to the Lord. Christians read this as that promise being kept."
+objection = "Numbers do not decide truth. Counts depend on the method: one puts the total at about 2.67 billion in 2026, and Pew puts it at 2.3 billion in 2020."
+sources = [["Status of Global Christianity 2026, CSGC", "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf"], ["Pew Research Center, 2010 to 2020", "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/"], ["Psalm 22:27", "/bible/psalms/22/#v27"]]
