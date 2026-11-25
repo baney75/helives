@@ -1,0 +1,88 @@
+id = "the-other-explanations"
+title = "The other explanations"
+short = "Every other account of Easter has been tried. Here is how each one fares."
+image = "caravaggio-thomas"
+intro = "A fair case hears the other side. Each of these was put forward by serious people. For each one, see where it struggles and what can still be said for it."
+ungraded = true
+labels = { shows = "Where it struggles", objection = "What can still be said for it" }
+
+[verse]
+ref = "John 20:27"
+href = "/bible/john/20/#v27"
+text = "Then Jesus said to Thomas, “Put your finger here and look at My hands. Reach out your hand and put it into My side. Stop doubting and believe.”"
+
+[[exhibit]]
+id = "theft"
+title = "The disciples stole the body"
+when = "From the first century"
+summary = "The oldest rival. The disciples took the body and lied."
+quote = { text = "This is He whom His disciples secretly stole away, that it might be said He had risen again, or the gardener abstracted", by = "Tertullian, mocking the charge, De Spectaculis 30", work = "tertullian-de-spectaculis", sec = "chapter-30" }
+shows = "It makes them knowing liars who gave up safety, and some of them life, for a story that paid them nothing. It leaves James and Paul unexplained, since neither was in on it."
+objection = "Someone else might have moved the body without the disciples knowing. Almost no historian now holds that they stole it."
+sources = [["Matthew 28:13", "/bible/matthew/28/#v13"], ["Habermas, Explaining away Jesus' resurrection", "https://garyhabermas.com/articles/crj_explainingaway/crj_explainingaway.htm"]]
+
+[[exhibit]]
+id = "swoon"
+title = "He did not really die"
+when = "Popular about 1780 to 1835"
+summary = "Jesus fainted on the cross, came to in the cool of the tomb, and walked out. The blow that ended it came from David Friedrich Strauss, who did not believe in the resurrection either."
+quote = { text = "It is impossible that a being who had stolen half-dead out of the sepulchre, who crept about weak and ill, wanting medical treatment, who required bandaging, strengthening and indulgence, and who still, at last, yielded to his sufferings, could have given to the disciples the impression that he was a Conqueror over death and the grave, the Prince of Life", by = "D. F. Strauss, A New Life of Jesus, 1865", href = "https://archive.org/details/anewlifejesus06stragoog" }
+shows = "A man barely alive would have needed a doctor. He would not have started a faith in victory over death."
+objection = "One man is known to have lived. Josephus had three acquaintances taken down from crosses and given the greatest care. Two of them died, and the third recovered. Historians no longer hold the theory."
+sources = [["Josephus, Life, sections 66 to 76", "/read/josephus-life/"], ["Swoon hypothesis, Wikipedia", "https://en.wikipedia.org/wiki/Swoon_hypothesis"], ["Strauss, A New Life of Jesus, volume 1", "https://archive.org/details/anewlifejesus06stragoog"]]
+
+[[exhibit]]
+id = "wrong-tomb"
+title = "They went to the wrong tomb"
+when = "Kirsopp Lake, 1907"
+summary = "The women lost their way in the half light, and a young man tried to tell them so."
+quote = { text = "These remarks are not to be taken as anything more than a suggestion of what might possibly have happened.", by = "Kirsopp Lake, The Historical Evidence for the Resurrection of Jesus Christ, 1907", href = "https://archive.org/details/historicaleviden00lakeuoft" }
+shows = "Lake himself would not press it. A mistake like that could be put right by a short walk, and a mistake about a tomb does not make anyone see the dead."
+objection = "It needs no fraud and no miracle. Almost no historian holds it now."
+sources = [["Lake, The Historical Evidence for the Resurrection, 1907", "https://archive.org/details/historicaleviden00lakeuoft"]]
+
+[[exhibit]]
+id = "hallucination"
+title = "They saw visions"
+when = "From Celsus to today"
+summary = "The most common view among skeptical scholars now. Grief and longing produced visions of Jesus, which spread from one follower to another."
+shows = "It has to cover groups as well as single people, over many days, and also Paul, who was not grieving, and James. It does nothing to empty the tomb, and a vision of a dead friend normally tells people that he is dead."
+objection = "Visions of the dead are common among the bereaved. Some psychologists allow that a group can share one, and a person may be more torn inside than he admits."
+sources = [["Habermas, Explaining away Jesus' resurrection", "https://garyhabermas.com/articles/crj_explainingaway/crj_explainingaway.htm"], ["Resurrection of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Resurrection_of_Jesus"]]
+
+[[exhibit]]
+id = "legend"
+title = "The story grew"
+when = "From the 1800s"
+summary = "Jesus died, and over decades the telling grew until He was said to be raised, with a tomb and angels."
+shows = "The core is too early. The creed in 1 Corinthians 15 was fixed within a few years, while Peter and James were alive to correct it."
+objection = "Details can still have grown around an early core, such as the guard at the tomb, which only Matthew has."
+sources = [["1 Corinthians 15:3", "/bible/1-corinthians/15/#v3"], ["Resurrection of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Resurrection_of_Jesus"]]
+
+[[exhibit]]
+id = "dying-gods"
+title = "It was copied from pagan myths"
+when = "From the 1890s"
+summary = "Osiris, Adonis and others are said to have died and risen, and Christians to have borrowed the plot."
+shows = "Many of these figures belong to the yearly round of the crops, and not to a date, a governor and a list of witnesses. Osiris stayed in the land of the dead. The first believers were Jews, who had no love for such cults."
+objection = "Tryggve Mettinger, after a full study, holds that a few such gods were thought to die and return before Christ. He does not argue from that to the story of Jesus. Justin Martyr himself pointed out likenesses, in First Apology 21."
+sources = [["Review of Mettinger, The Riddle of Resurrection", "https://bmcr.brynmawr.edu/2002/2002.09.07"]]
+
+[[exhibit]]
+id = "differences"
+title = "The accounts disagree"
+when = "From Celsus to today"
+summary = "The Gospels differ over which women came, how many angels were there and where Jesus appeared first."
+shows = "They agree on the heart of it: the women, the first day, the stone, the empty tomb. John's account differs so much from the rest that it is hard to call it a copy."
+objection = "Most scholars think Matthew and Luke used Mark, so their agreement is partly copying. Where Jesus appeared, in Galilee or Jerusalem, is hard to fit together, and Mark's earliest ending has the women tell no one."
+sources = [["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Lake, The Historical Evidence for the Resurrection, 1907", "https://archive.org/details/historicaleviden00lakeuoft"]]
+
+[[exhibit]]
+id = "hume"
+title = "Miracles cannot be proved"
+when = "David Hume, 1748"
+summary = "Hume said that testimony could establish a miracle only if its being false would be a greater miracle, and that no report he knew met that test."
+quote = { text = "no testimony is sufficient to establish a miracle, unless the testimony be of such a kind, that its falsehood would be more miraculous, than the fact, which it endeavours to establish", by = "David Hume, An Enquiry concerning Human Understanding, section 10", href = "https://davidhume.org/texts/e/10" }
+shows = "Charles Babbage, and later the philosopher John Earman, argued that enough independent witnesses can outweigh even a very unlikely event. And if there is a God, what nature does when left alone is not the whole story."
+objection = "Hume's rule is still good sense in ordinary life. Arif Ahmed replied in 2015 that witnesses are seldom independent, though he allows that this does not settle the matter as Hume hoped."
+sources = [["Hume, Of Miracles", "https://davidhume.org/texts/e/10"], ["Stanford Encyclopedia of Philosophy, Miracles", "https://plato.stanford.edu/entries/miracles/"]]
