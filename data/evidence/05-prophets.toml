@@ -24,7 +24,7 @@ id = "isaiah-53"
 title = "The suffering Servant"
 when = "Before the second century BC"
 grade = "argued"
-summary = "Isaiah 53 tells of a Servant who is despised, silent before His accusers, pierced for the sins of others, killed, and laid in a rich man's grave though He did no violence. Afterward He sees the light of life and makes many righteous."
+summary = "Isaiah 53 tells of a Servant who is despised, silent like a sheep before its shearers, pierced for the sins of others, killed, and assigned a grave with the wicked and with a rich man in His death, though He did no violence. Afterward He sees the light of life and makes many righteous."
 shows = "Read it through and ask who it describes. Christians know of no one else who fits the whole portrait."
 objection = "Isaiah 49:3 calls the Servant Israel, and many scholars, Jewish and Christian, hold that the chapter first spoke of Israel in exile or of the prophet himself. That reading is old: Origen met it in debate with Jewish scholars before AD 250. The ancient Targum calls the Servant the Messiah, but gives the sufferings to others. Critics also say the Gospels were written with the chapter in mind."
 quote = { text = "He was assigned a grave with the wicked, and with a rich man in His death, although He had done no violence, nor was any deceit in His mouth.", by = "Isaiah 53:9", work = "bsb-isaiah", sec = "53" }
@@ -56,7 +56,7 @@ title = "The king on a donkey, and the pierced one"
 when = "By the second century BC"
 grade = "argued"
 summary = "Zechariah 9:9 sees a humble king come to Jerusalem riding a donkey. Zechariah 12:10 sees the people look on one they have pierced, and mourn. The Talmud connects 9:9 with the Messiah, and one opinion in it connects 12:10 with a second figure, the Messiah son of Joseph."
-shows = "Jewish teachers who did not accept Jesus still heard the Messiah in these lines."
+shows = "Jewish teachers who did not accept Jesus heard the Messiah in 9:9, and one of them heard a Messiah son of Joseph in 12:10."
 objection = "A man who knew Zechariah could choose to ride a donkey. In 12:10 the Hebrew text is difficult, and the Talmud gives another view beside it."
 sources = [["Zechariah 9:9", "/bible/zechariah/9/#v9"], ["Zechariah 12:10", "/bible/zechariah/12/#v10"], ["Sukkah 52a, Sefaria", "https://www.sefaria.org/Sukkah.52a"], ["Sanhedrin 98a, Sefaria", "https://www.sefaria.org/Sanhedrin.98a"]]
 
@@ -66,8 +66,8 @@ title = "Out of Bethlehem"
 when = "Micah, eighth century BC by tradition"
 grade = "argued"
 summary = "Micah 5:2 names Bethlehem as the place from which Israel's ruler will come. In John 7:42 the crowd expects the Christ to come from there."
-shows = "The Messiah's town was known beforehand. Matthew and Luke, who differ so much in their telling, both place the birth there."
-objection = "Some hold that the Gospels placed the birth in Bethlehem because of Micah."
+shows = "Micah named the ruler's town centuries earlier, and John shows a crowd expecting the Christ from it. Matthew and Luke, who differ so much in their telling, both place the birth there."
+objection = "Some hold that the Gospels placed the birth in Bethlehem because of Micah. In John the crowd raises Bethlehem against Jesus, because He came from Galilee, and John does not say He was born there. Luke's census is hard to fit with Josephus."
 sources = [["Micah 5:2", "/bible/micah/5/#v2"], ["Micah 5:2, history of interpretation, Wikipedia", "https://en.wikipedia.org/wiki/Micah_5"], ["John 7:42", "/bible/john/7/#v42"]]
 
 [[exhibit]]
