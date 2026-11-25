@@ -105,6 +105,11 @@ respell = ""
 variants = []
 
 [[name]]
+word = "Zebah"
+respell = ""
+variants = ["Zeba"]
+
+[[name]]
 word = "Selah"
 respell = ""
 variants = ["Sela"]

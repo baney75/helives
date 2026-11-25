@@ -94,6 +94,7 @@ class Timing(unittest.TestCase):
         ok = [("A Miktam of David.", "A Mictum of David."), ("A Maskil of Asaph.", "A Mascal of Asaph."),
               ("The cords of Sheol", "The chords of Sheol"), ("my days as handbreadths", "my days as hand-breaths"),
               ("my days as handbreadths, and", "my days as hand -breaths, and"),      # Whisper's word list
+              ("like Zebah and Zalmunna", "like Zeba and Zalmunna"),
               ("For the choirmaster.", "For the Choir Master.")]
         for ref, heard in ok:
             self.assertEqual((wer(ref, heard)["wer"], wer(ref, heard)["repeats"]), (0.0, []), heard)
