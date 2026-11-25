@@ -1,0 +1,83 @@
+id = "the-risen-christ"
+title = "The risen Christ"
+short = "Friends, doubters and an enemy said they had seen Him alive, and some of them were put to death."
+image = "caravaggio-emmaus"
+intro = "An empty tomb can be explained in several ways. The claim of the first Christians was larger: that they met Him."
+
+[verse]
+ref = "Acts 2:32"
+href = "/bible/acts/2/#v32"
+text = "God has raised this Jesus to life, to which we are all witnesses."
+
+[[exhibit]]
+id = "creed"
+title = "The creed Paul was handed"
+when = "Within a few years of the cross"
+grade = "strong"
+summary = "In 1 Corinthians 15:3 to 7 Paul repeats what he received: that Christ died, was buried, was raised on the third day, and appeared to Peter, to the Twelve, to more than five hundred, to James, to all the apostles. The core of the wording is not his own style, and almost all scholars think it older than the letter. He had spent fifteen days with Peter about three years after his conversion."
+shows = "The report of the resurrection did not grow up over generations. Most scholars place the core of these words within a few years of the cross, probably in Jerusalem."
+objection = "The creed dates the belief, and not the event. It does not mention the empty tomb, and how many of the appearances belonged to its first form is debated. Gerd Lüdemann takes the appearances as visions in the mind."
+sources = [["1 Corinthians 15:3", "/bible/1-corinthians/15/#v3"], ["Galatians 1:18", "/bible/galatians/1/#v18"], ["Resurrection of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Resurrection_of_Jesus"]]
+
+[[exhibit]]
+id = "appearances"
+title = "They believed they had seen Him"
+when = "AD 30 to 33"
+grade = "settled"
+summary = "Historians who reject the resurrection still grant that followers of Jesus had experiences soon after His death that convinced them He was alive. Lüdemann and Ehrman both say so."
+shows = "Belief came from what people took to be meetings with Him, reported by single persons and by groups. The question is what those meetings were."
+objection = "The only first-hand account we have is Paul's, and some doubt that there were group appearances. Skeptics explain the rest as grief, guilt or visions. See the next part for how those explanations fare."
+sources = [["Resurrection of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Resurrection_of_Jesus"], ["Habermas, Explaining away Jesus' resurrection", "https://garyhabermas.com/articles/crj_explainingaway/crj_explainingaway.htm"]]
+
+[[exhibit]]
+id = "paul-convert"
+title = "Paul, the enemy"
+when = "About AD 33 to 36"
+grade = "settled"
+image = "caravaggio-damascus"
+summary = "Paul says himself that he hunted the church and tried to destroy it, and that he changed because he saw the risen Christ. He gained nothing by it but prison, beatings and, by early report, death."
+shows = "He was no mourner longing to see a friend. He was an opponent, and he said he had been stopped by the One he was fighting. In Philippians 3 he describes a man with a clear conscience and a fine career."
+objection = "Paul lists his own vision beside the others with the same word, so critics say they were all visions. Lüdemann suggests that hidden guilt lay behind his."
+sources = [["Galatians 1:13", "/bible/galatians/1/#v13"], ["Philippians 3:4", "/bible/philippians/3/#v4"], ["Habermas, Explaining away Jesus' resurrection", "https://garyhabermas.com/articles/crj_explainingaway/crj_explainingaway.htm"]]
+
+[[exhibit]]
+id = "james-brother"
+title = "James, the brother who did not believe"
+when = "AD 30 to 62"
+grade = "strong"
+summary = "John 7:5 says the brothers of Jesus did not believe in Him. Soon afterward James is leading the church in Jerusalem, and Josephus records that he was put to death. The creed says the risen Jesus appeared to him."
+shows = "It is hard to think what would persuade a man that someone of his own household, executed in public, was Lord."
+objection = "The appearance is a single line, and that James came to believe because of it is an inference. He may have come round earlier."
+sources = [["1 Corinthians 15:7", "/bible/1-corinthians/15/#v7"], ["John 7:5", "/bible/john/7/#v5"], ["Habermas, The minimal facts approach, 2012", "https://www.garyhabermas.com/articles/southeastern_theological_review/minimal-facts-methodology_08-02-2012.htm"]]
+
+[[exhibit]]
+id = "five-hundred"
+title = "More than five hundred at once"
+when = "Reported about AD 55"
+grade = "argued"
+summary = "Paul writes that Jesus appeared to more than five hundred people at one time, and that most of them are still living."
+shows = "He says most of them are still alive, as if it could be checked."
+objection = "No other source tells of it, and none of the five hundred is named. Corinth was a long sea journey from Judea."
+sources = [["1 Corinthians 15:6", "/bible/1-corinthians/15/#v6"]]
+
+[[exhibit]]
+id = "unexpected"
+title = "A resurrection no one expected"
+when = "First century"
+grade = "strong"
+image = "grunewald-resurrection"
+summary = "Many Jews looked for all the dead to rise at the end of the age. N. T. Wright argues that no one looked for a single man to be raised in the middle of history, least of all a Messiah whom Rome had crucified. The Orthodox Jewish scholar Pinchas Lapide came to hold that God really did raise Jesus, though not that He is Israel's Messiah or the Son of God."
+shows = "The disciples did not reach for a belief that lay ready to hand. Something pushed them to it."
+objection = "The idea was not wholly unknown. Herod thought John the Baptist had been raised, in Mark 6:16, and the prophets had raised the dead."
+sources = [["Time on Pinchas Lapide, May 7, 1979", "https://content.time.com/time/subscriber/article/0,33009,920335,00.html"], ["Resurrection of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Resurrection_of_Jesus"], ["Mark 6:16", "/bible/mark/6/#v16"]]
+
+[[exhibit]]
+id = "died-for-it"
+title = "They suffered for it"
+when = "AD 44 to the 60s"
+grade = "strong"
+summary = "The record is good for four: James the son of Zebedee, killed by Herod in Acts 12; James the brother of Jesus, in Josephus; and Peter and Paul, whose deaths Clement of Rome recalls about AD 96."
+quote = { text = "Peter, through unrighteous envy, endured not one or two, but numerous labours and when he had at length suffered martyrdom, departed to the place of glory due to him.", by = "First Clement 5", work = "first-clement", sec = "chapter-5" }
+shows = "People die for what is false when they think it true. These men were in a position to know whether they had made it up."
+objection = "No early source says these men were killed for preaching the resurrection, or could have saved themselves by taking it back, and the deaths of the other apostles are told only in late stories. Dying proves sincerity and not truth. Candida Moss argues that many martyr accounts were reshaped."
+sources = [["Acts 12:2", "/bible/acts/12/#v2"], ["Paul Middleton, review of Sean McDowell, The Fate of the Apostles", "https://www.cambridge.org/core/product/537224F6AC758A770672FF4A9A73E49B"], ["Candida Moss, Wikipedia", "https://en.wikipedia.org/wiki/Candida_Moss"]]

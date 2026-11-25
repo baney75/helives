@@ -35,7 +35,7 @@ title = "Papyrus 52"
 when = "Second or third century"
 grade = "strong"
 image = "papyrus-52"
-summary = "A scrap the size of a playing card, bought in 1920 and recognized in 1935. Both sides hold lines from John 18, where Pilate questions Jesus."
+summary = "A scrap the size of a playing card, bought in 1920 and published in 1935. Both sides hold lines from John 18, where Pilate questions Jesus."
 shows = "It is among the oldest pieces of any Gospel, and shows John being copied and read in Egypt early on."
 objection = "It is often dated to about AD 125. Brent Nongbri has shown that handwriting cannot fix it so closely, and it could be as late as the 200s."
 sources = [["John Rylands Library, Greek P. 457", "https://www.digitalcollections.manchester.ac.uk/view/MS-GREEK-P-00457"], ["Nongbri, New Testament Studies 2020", "https://doi.org/10.1017/s0028688520000089"]]
@@ -68,7 +68,7 @@ when = "About AD 125"
 grade = "argued"
 summary = "Quadratus wrote a defense of the faith to the emperor Hadrian. Eusebius had the book and quotes him on the people Jesus healed and raised."
 quote = { text = "so that some of them lived even to our day", by = "Quadratus, in Eusebius, Church History 4.3", work = "eusebius-of-caesarea-church-history", sec = "book-4-chapter-3" }
-shows = "Early Christians pointed to living people who could be asked."
+shows = "If he is right, some of the people Jesus healed and raised lived on into Quadratus's own lifetime."
 objection = "It is one sentence kept by a later writer, and it names no one."
 sources = [["Eusebius, Church History, book 4", "https://www.newadvent.org/fathers/250104.htm"]]
 

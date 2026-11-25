@@ -9,6 +9,16 @@ ref = "1 Corinthians 15:14"
 href = "/bible/1-corinthians/15/#v14"
 text = "And if Christ has not been raised, our preaching is worthless, and so is your faith."
 
+[short]
+title = "If you read only five"
+items = [
+  ["He was crucified and died.", "/evidence/the-cross-and-the-empty-tomb/#crucifixion"],
+  ["Within a few years His friends were handing on a creed that He rose.", "/evidence/the-risen-christ/#creed"],
+  ["Even historians who doubt it grant that His followers believed they had seen Him.", "/evidence/the-risen-christ/#appearances"],
+  ["So did Paul, who had been hunting them.", "/evidence/the-risen-christ/#paul-convert"],
+  ["The tomb was empty.", "/evidence/the-cross-and-the-empty-tomb/#empty-tomb"],
+]
+
 [close]
 image = "hunt-light-of-the-world"
 title = "The last exhibit"

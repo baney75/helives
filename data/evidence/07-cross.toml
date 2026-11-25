@@ -1,0 +1,75 @@
+id = "the-cross-and-the-empty-tomb"
+title = "The cross and the empty tomb"
+short = "He died, He was buried, and on the third day the tomb was empty."
+image = "velazquez-crucified"
+intro = "These are the events of three days in Jerusalem, taken in order, with what historians grant about each. Rome carried out the sentence under its own governor. Christians confess that He died for the sins of all, and no people may be blamed for it."
+
+[verse]
+ref = "Mark 15:39"
+href = "/bible/mark/15/#v39"
+text = "When the centurion standing there in front of Jesus saw how He had breathed His last, he said, “Truly this man was the Son of God!”"
+
+[[exhibit]]
+id = "crucifixion"
+title = "He was crucified and died"
+when = "About AD 30 or 33"
+grade = "settled"
+summary = "All four Gospels, Paul and Tacitus report it, and so does Josephus in a passage that Christians edited. John Dominic Crossan, who does not believe in a bodily resurrection, calls the crucifixion as sure as anything historical can ever be."
+shows = "The death is the firm ground under everything that follows. A Roman execution was almost never something its victims lived through."
+objection = "Among historians there is none to speak of. Some Gnostics in the second century denied it, and the Qur'an is usually read as denying it."
+sources = [["Tacitus, Annals, book 15", "https://en.wikisource.org/wiki/The_Annals_(Tacitus)/Book_15"], ["Josephus, Antiquities 18.3", "/read/josephus-antiquities/"], ["1 Corinthians 15:3", "/bible/1-corinthians/15/#v3"], ["Crucifixion of Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Crucifixion_of_Jesus"], ["Historical Jesus, Wikipedia", "https://en.wikipedia.org/wiki/Historical_Jesus"]]
+
+[[exhibit]]
+id = "burial"
+title = "He was buried"
+when = "The same evening"
+grade = "strong"
+summary = "Mark says Joseph of Arimathea, a member of the council that condemned Jesus, asked Pilate for the body and laid it in a rock tomb. Paul's creed says He was buried. Josephus says Jews took care to bury even the crucified before sunset."
+quote = { text = "they took down those that were condemned and crucified, and buried them before the going down of the sun.", by = "Josephus, Jewish War, book 4, chapter 5", work = "josephus-wars", sec = "book-4-chapter-5" }
+shows = "The place of the body was known. Jodi Magness, an archaeologist of the period, finds that the Gospel accounts fit Jewish burial custom of the time."
+objection = "Under Roman law the body was released by permission, and it could be refused. Crossan and Ehrman think Jesus was more likely left on the cross or put in a common grave."
+sources = [["Jodi Magness, What did Jesus' tomb look like?", "https://library.biblicalarchaeology.org/article/what-did-jesus-tomb-look-like/"], ["Craig Evans, Jewish burial traditions and the resurrection of Jesus", "https://doi.org/10.1177/1476869005058197"], ["Bart Ehrman, the other side", "https://ehrmanblog.org/did-romans-allow-decent-burials-for-crucified-criminals/"], ["Mark 15:43", "/bible/mark/15/#v43"]]
+
+[[exhibit]]
+id = "women"
+title = "Women found the tomb"
+when = "The third day"
+grade = "strong"
+image = "angelico-noli-me-tangere"
+summary = "In every Gospel women are first at the empty tomb, and Mary Magdalene is always among them. In that world a woman's word carried less weight in court."
+quote = { text = "But let not the testimony of women be admitted, on account of the levity and boldness of their sex", by = "Josephus, Antiquities, book 4, chapter 8", work = "josephus-antiquities", sec = "book-4-chapter-8" }
+shows = "Someone inventing the story would hardly have chosen these witnesses. The simplest reason they are in it is that they were there."
+objection = "A rule about courts is not a rule about stories, and women commonly saw to the dead. Mark may have had reasons of his own for telling it so."
+sources = [["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Mark 16:1", "/bible/mark/16/#v1"]]
+
+[[exhibit]]
+id = "empty-tomb"
+title = "The tomb was empty"
+when = "The third day"
+grade = "strong"
+summary = "Gary Habermas, who surveyed writing on the subject from 1975 on, reports that most scholars who write on it, between two thirds and three quarters, favor an empty tomb. Dale Allison, who weighs both sides at length, also argues for it."
+shows = "The preaching began in the city where He was buried, where a known and occupied tomb would have been a strong answer to it."
+objection = "That is a count of publications and not a poll, those who write on it are often believers, and Habermas himself says it falls short of near-unanimous agreement. By Acts' own account the preaching began fifty days later. Ehrman points out that Paul never mentions the tomb, and some historians say the question cannot be answered."
+sources = [["Habermas, The minimal facts approach, 2012", "https://www.garyhabermas.com/articles/southeastern_theological_review/minimal-facts-methodology_08-02-2012.htm"], ["Empty tomb, Wikipedia", "https://en.wikipedia.org/wiki/Empty_tomb"], ["Matthew 28:6", "/bible/matthew/28/#v6"]]
+
+[[exhibit]]
+id = "stolen-charge"
+title = "The answer His opponents gave"
+when = "First and second century"
+grade = "argued"
+summary = "Matthew says the story went around that the disciples stole the body. About AD 155 Justin reports that it was still being told, and Tertullian mocks it forty years later."
+quote = { text = "his disciples stole him by night from the tomb, where he was laid when unfastened from the cross", by = "Opponents, as reported by Justin Martyr, Dialogue with Trypho 108", work = "justin-martyr-dialogue-with-trypho", sec = "chapter-108" }
+shows = "The reply to the preaching was an explanation of why the tomb was empty. No source from the first three centuries reports anyone producing a body. A medieval parody, the Toledot Yeshu, does."
+objection = "All these reports come from Christians, and the later ones may depend on Matthew."
+sources = [["Matthew 28:13", "/bible/matthew/28/#v13"], ["Tertullian, De Spectaculis 30", "/read/tertullian-de-spectaculis/"], ["Toledot Yeshu, Wikipedia", "https://en.wikipedia.org/wiki/Toledot_Yeshu"]]
+
+[[exhibit]]
+id = "sunday"
+title = "The first day of the week"
+when = "From the 50s on"
+grade = "strong"
+summary = "Jews kept the seventh day. By the 50s Paul tells Christians to set aside their gifts on the first, and Acts 20:7 shows them gathered on that day to break bread."
+quote = { text = "Wherefore, also, we keep the eighth day with joyfulness, the day also on which Jesus rose again from the dead.", by = "The Epistle of Barnabas 15, written between about AD 70 and 132", work = "epistle-of-barnabas", sec = "chapter-15" }
+shows = "Jews who had kept the Sabbath all their lives began to honor the day after it, and the reason they gave was that Jesus rose on it."
+objection = "The earliest texts say little about why the day was chosen, and the reason is first spelled out in writings such as Barnabas and Justin. A custom shows what people believed, not that it was true."
+sources = [["1 Corinthians 16:2", "/bible/1-corinthians/16/#v2"], ["Acts 20:7", "/bible/acts/20/#v7"], ["The Didache, chapter 14", "/read/didache/"]]
