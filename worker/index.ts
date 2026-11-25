@@ -1,4 +1,4 @@
-import { serveAudio } from './audio.ts'
+import { serveAudio, withRange } from './audio.ts'
 import { isBlockedPath, withSecurityHeaders } from './headers.ts'
 import { search } from './search.ts'
 
@@ -28,6 +28,7 @@ export default {
     if (url.pathname.startsWith('/audio/')) {
       return withSecurityHeaders(await serveAudio(request, env.AUDIO, url.pathname))
     }
-    return withSecurityHeaders(await env.ASSETS.fetch(request))
+    const asset = await env.ASSETS.fetch(request)
+    return withSecurityHeaders(url.pathname.startsWith('/gate-voice/') ? await withRange(request, asset) : asset)
   },
 }

@@ -53,3 +53,17 @@ export async function serveAudio(request: Request, bucket: R2Bucket | undefined,
   headers.set('content-length', String(obj.size))
   return new Response(request.method === 'HEAD' ? null : obj.body, { status: 200, headers })
 }
+
+/** Static assets answer every request in full, and Safari plays media only from byte ranges: cut the range here. */
+export async function withRange(request: Request, res: Response): Promise<Response> {
+  const m = request.headers.get('range')?.match(/^bytes=(\d*)-(\d*)$/)
+  const headers = new Headers(res.headers)
+  headers.set('accept-ranges', 'bytes')
+  if (res.status !== 200 || !m || (!m[1] && !m[2])) return new Response(res.body, { status: res.status, headers })
+  const body = await res.arrayBuffer()
+  const span = byteSpan(m[1] ? { offset: Number(m[1]), length: m[2] ? Number(m[2]) - Number(m[1]) + 1 : undefined } : { suffix: Number(m[2]) }, body.byteLength)
+  if (!span) return new Response(null, { status: 416, headers: { 'content-range': `bytes */${body.byteLength}` } })
+  headers.set('content-range', `bytes ${span.start}-${span.end}/${body.byteLength}`)
+  headers.set('content-length', String(span.end - span.start + 1))
+  return new Response(request.method === 'HEAD' ? null : body.slice(span.start, span.end + 1), { status: 206, headers })
+}
