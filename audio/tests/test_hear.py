@@ -93,6 +93,7 @@ class Timing(unittest.TestCase):
     def test_names_spelled_by_ear_pass_and_misreadings_do_not(self):
         ok = [("A Miktam of David.", "A Mictum of David."), ("A Maskil of Asaph.", "A Mascal of Asaph."),
               ("The cords of Sheol", "The chords of Sheol"), ("my days as handbreadths", "my days as hand-breaths"),
+              ("my days as handbreadths, and", "my days as hand -breaths, and"),      # Whisper's word list
               ("For the choirmaster.", "For the Choir Master.")]
         for ref, heard in ok:
             self.assertEqual((wer(ref, heard)["wer"], wer(ref, heard)["repeats"]), (0.0, []), heard)

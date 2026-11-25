@@ -274,6 +274,14 @@ class StateMachine(Base):
         self.assertEqual((self.chunk_rows()[2]["status"], self.chunk_rows()[2]["best_take"]), ("done", t["id"]))
         self.assertEqual(self.section_status(), "pending")
 
+    def test_retry_never_accepts_a_take_with_an_audio_problem(self):
+        self.flag_chunk_2(limit=4)
+        c = self.chunk_rows()[2]
+        heard = [{"word": w, "start": 0.0, "end": 0.1} for w in c["ref_text"].split()]
+        self.st.db.execute("UPDATE takes SET asr_words=?, problems=? WHERE idx=2",
+                           (json.dumps(heard), json.dumps(["long-silence", "wer"])))
+        self.assertEqual(render.retry_flagged(self.st, prep.Lexicon())["accepted"], 0)
+
     def test_retry_leaves_a_misreading_flagged_when_attempts_are_spent(self):
         self.flag_chunk_2(limit=render.MAX_ATTEMPTS)
         self.assertEqual(render.retry_flagged(self.st, prep.Lexicon.load()),

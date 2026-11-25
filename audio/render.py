@@ -605,8 +605,14 @@ def main(argv: list[str]) -> int:
         print(assemble_ready(st), "sections assembled")
         return 0
     if args.cmd == "retry":
+        from guard import Guard
+        guard = Guard()
+        if not guard.acquire():               # a batch holds the old lexicon and the rows it is rendering
+            print("a GPU job is running; stop helives-audio first")
+            return 2
         sync_queue(st, quiet=True)            # a new respelling requeues its chunks first
         print(json.dumps(retry_flagged(st, prep.Lexicon.load())))
+        guard.release()
         return 0
     if args.cmd == "set-voice":
         if not args.yes:
