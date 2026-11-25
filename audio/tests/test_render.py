@@ -86,8 +86,9 @@ class FakeEngine:
     load_seconds = 0.01
     model_info = {"repo_id": "fake/tts", "revision": "0"}
 
-    def __init__(self, bad=None, explode_on=None, on_speak=None):
+    def __init__(self, bad=None, explode_on=None, on_speak=None, oom_on=None):
         self.bad = dict(bad or {})
+        self.oom_on = dict(oom_on or {})                # text -> how many takes run out of GPU memory
         self.explode_on = explode_on
         self.on_speak = on_speak
         self.calls = []
@@ -103,6 +104,9 @@ class FakeEngine:
         return word_audio(words, seed), SR, 0.5
 
     def transcribe(self, audio, sr):
+        if self.oom_on.get(self.current, 0) > 0:
+            self.oom_on[self.current] -= 1
+            raise render.GpuMemory("CUDA out of memory")
         words = self.current.split()
         left = self.bad.get(self.current, 0)
         if left == "always" or left > 0:
@@ -260,6 +264,20 @@ class StateMachine(Base):
         render.batch(self.args, lambda: eng, self.guard, st2)
         st2.close()
         self.assertEqual([c[0] for c in eng.calls], [rows[1]["text"], rows[2]["text"]])
+
+    def test_out_of_gpu_memory_counts_as_an_attempt_and_the_batch_goes_on(self):
+        text = self.chunk_rows()[1]["text"]
+        rc = render.batch(self.args, lambda: FakeEngine(oom_on={text: 1}), self.guard, self.st)
+        self.assertEqual(rc, 0)
+        self.assertEqual([(r["status"], r["attempts"]) for r in self.chunk_rows()],
+                         [("done", 1), ("done", 2), ("done", 1)])
+
+    def test_out_of_gpu_memory_on_every_take_flags_the_chunk(self):
+        text = self.chunk_rows()[1]["text"]
+        render.batch(self.args, lambda: FakeEngine(oom_on={text: 99}), self.guard, self.st)
+        rows = self.chunk_rows()
+        self.assertEqual([r["status"] for r in rows], ["done", "flagged", "done"])
+        self.assertIn("gpu-memory", json.loads(self.st.take(rows[1]["best_take"])["problems"]))
 
     def test_new_gpu_process_stops_batch(self):
         g = self.guard

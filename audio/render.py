@@ -48,6 +48,10 @@ WAIT_MIN_S, WAIT_MAX_S = 120, 300
 MAX_ATTEMPTS = 4                     # first take plus 3 re-renders with new seeds
 WER_MAX = float(os.environ.get("HELIVES_WER_MAX", "0.03"))
 MIN_FREE_GB = 30
+# Whisper keeps the attention maps of every decoded token for word times, beside the voice model. A
+# 30 s window of reading is under 180 tokens. Psalm 81 chunk 3 ran out of memory at the default 448
+# and decoded correctly at 224 (peak 10.9 of 11.6 GiB).
+ASR_MAX_TOKENS = 224
 SPEAKERS = ("Ryan", "Aiden")
 INSTRUCT = ("Read aloud like a reverent audiobook narrator reading Scripture: a warm, steady, unhurried "
             "voice, clear diction, calm even pace, natural pauses at commas and at the end of sentences.")
@@ -157,6 +161,10 @@ def write_review(st: State) -> int:
 
 # ====================================================================== GPU batch (child process)
 
+class GpuMemory(RuntimeError):
+    """The GPU ran out of memory while checking one take."""
+
+
 class Engine:
     """Qwen3-TTS CustomVoice + Whisper large-v3, loaded once per batch."""
 
@@ -213,8 +221,12 @@ class Engine:
         # The GPU holds the voice model too (11.6 GiB in all on Parish1): free its cache first and decode
         # greedily, as Whisper's beam search ran the card out of memory on the first real batch.
         self.torch.cuda.empty_cache()
-        out = self.asr({"raw": a16, "sampling_rate": 16000}, return_timestamps="word", chunk_length_s=30,
-                       generate_kwargs={"language": "english", "task": "transcribe", "num_beams": 1})
+        try:
+            out = self.asr({"raw": a16, "sampling_rate": 16000}, return_timestamps="word", chunk_length_s=30,
+                           generate_kwargs={"language": "english", "task": "transcribe", "num_beams": 1,
+                                            "max_new_tokens": ASR_MAX_TOKENS})
+        except self.torch.OutOfMemoryError as exc:
+            raise GpuMemory(str(exc).split(".")[0]) from None     # drop the traceback: it pins GPU tensors
         words = []
         for ch in out.get("chunks", []):
             s, e = ch.get("timestamp") or (None, None)
@@ -233,9 +245,18 @@ def render_take(eng: Engine, text: str, ref_text: str, words: int, speaker: str,
     raw, sr, gen_s = eng.speak(text, speaker, seed, words, temperature)
     info = takecheck.analyze(raw, sr, words)
     audio = takecheck.finish(raw, sr, info) if "empty" not in info["problems"] else raw
-    asr_text, asr_words, asr_s = eng.transcribe(audio, sr)
+    unheard = False
+    try:
+        asr_text, asr_words, asr_s = eng.transcribe(audio, sr)
+    except GpuMemory as exc:
+        # Seeds are fixed per attempt, so a crash here would repeat on every batch. Count the take as
+        # rejected and go on to the next seed.
+        log(f"take could not be checked: {exc}", "batch")
+        unheard, asr_text, asr_words, asr_s = True, "", [], 0.0
     sc = hear.score(ref_text, [w["word"] for w in asr_words] or asr_text.split(), lexicon)
     problems = list(info["problems"])
+    if unheard:
+        problems.append("gpu-memory")
     if sc["wer"] > WER_MAX:
         problems.append("wer")
     if sc["repeats"]:
